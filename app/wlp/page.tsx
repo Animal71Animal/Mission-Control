@@ -341,6 +341,7 @@ const syncLinks: LinkItem[] = [
 ];
 
 const businessDocs: DocItem[] = [
+  { emoji: "🎭", name: "DOE Pitch Deck", desc: "Director of Entertainment — live pitch site", href: "https://animal-talent-manager.surge.sh" },
   { emoji: "🏗️", name: "Org Structure", desc: "Entity, divisions, AI roster, decision flow", href: "/wlp-org" },
   { emoji: "💰", name: "Revenue Tracker", desc: "12-month tracker, P&L, KPIs, per-gig log", href: "/wlp-revenue" },
   { emoji: "📅", name: "90-Day Plan", desc: "Apr 12 – Jul 11 · 3 phases · hard dates", href: "/wlp-90day" },
@@ -353,7 +354,7 @@ const businessDocs: DocItem[] = [
 const djSoftwareDocs: DocItem[] = [
   { emoji: "📋", name: "Product Brief", desc: "Full product spec, features, roadmap", href: "/wlp-product" },
   { emoji: "⚔️", name: "Competitive Positioning", desc: "vs. CoverJock, BoothPoint & others", href: "/wlp-competitive" },
-  { emoji: "💼", name: "Investor Pitch (Live)", desc: "DOE pitch deck — live on the web", href: "https://animal-talent-manager.surge.sh" },
+  { emoji: "💼", name: "Investor Pitch", desc: "Seed round deck — formatted markdown", href: "/wlp-investor" },
 ];
 
 const djAutomationFeatures = [

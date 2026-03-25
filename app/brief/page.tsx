@@ -26,7 +26,7 @@ interface AnalysisResult {
   topic: string;
 }
 
-const NEWS_API_KEY = "167ccb3accaa4d58a357dc703cc2fbed";
+// News API key is now handled server-side for security
 
 function LoadingDots() {
   const [dots, setDots] = useState(".");
@@ -103,7 +103,7 @@ function NewsStoryCard({ story }: { story: NewsStory }) {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch("/api/brief-story", {
+      const res = await fetch("/api/unfiltered", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ topic: story.title }),
@@ -203,7 +203,7 @@ export default function BriefPage() {
 
   // Fetch weather on mount
   useEffect(() => {
-    fetch("https://api.open-meteo.com/v1/forecast?latitude=43.6166&longitude=-116.2008&current=temperature_2m,relative_humidity_2m,weather_code&daily=temperature_2m_max,temperature_2m_min&timezone=America/Denver")
+    fetch("https://api.open-meteo.com/v1/forecast?latitude=43.6166&longitude=-116.2008&current=temperature_2m,relative_humidity_2m,weather_code&daily=temperature_2m_max,temperature_2m_min&temperature_unit=fahrenheit&timezone=America/Boise")
       .then((r) => r.json())
       .then((data) => {
         const current = data.current;
@@ -224,43 +224,10 @@ export default function BriefPage() {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const [techRes, aiRes, musicRes] = await Promise.all([
-          fetch(`https://newsapi.org/v2/top-headlines?category=technology&pageSize=5&apiKey=${NEWS_API_KEY}`),
-          fetch(`https://newsapi.org/v2/everything?q=artificial+intelligence+OR+AI&pageSize=5&sortBy=publishedAt&apiKey=${NEWS_API_KEY}`),
-          fetch(`https://newsapi.org/v2/everything?q=music+industry+OR+music+production&pageSize=5&sortBy=publishedAt&apiKey=${NEWS_API_KEY}`),
-        ]);
-
-        const [techData, aiData, musicData] = await Promise.all([
-          techRes.json(),
-          aiRes.json(),
-          musicRes.json(),
-        ]);
-
-        const stories: NewsStory[] = [
-          ...(techData.articles || []).map((a: any) => ({
-            title: a.title,
-            summary: a.description || "No summary available",
-            source: a.source?.name || "Unknown",
-            url: a.url,
-            category: "Tech",
-          })),
-          ...(aiData.articles || []).map((a: any) => ({
-            title: a.title,
-            summary: a.description || "No summary available",
-            source: a.source?.name || "Unknown",
-            url: a.url,
-            category: "AI",
-          })),
-          ...(musicData.articles || []).map((a: any) => ({
-            title: a.title,
-            summary: a.description || "No summary available",
-            source: a.source?.name || "Unknown",
-            url: a.url,
-            category: "Music",
-          })),
-        ];
-
-        setNews(stories);
+        const res = await fetch("/api/news");
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        setNews(data.stories || []);
         setNewsLoading(false);
       } catch (e) {
         setNewsError("Failed to load news");
