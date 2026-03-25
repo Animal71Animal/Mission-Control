@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Morning Brief — March 16, 2026</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0d0d12; color: #e8e8f0; min-height: 100vh; padding: 2rem; }
+    .container { max-width: 860px; margin: 0 auto; }
+    .header { border-bottom: 1px solid #2a2a3a; padding-bottom: 1.2rem; margin-bottom: 2rem; }
+    .header h1 { font-size: 1.5rem; color: #b794f4; letter-spacing: 0.04em; }
+    .header .meta { font-size: 0.85rem; color: #888; margin-top: 0.3rem; }
+    .section { margin-bottom: 2rem; }
+    .section-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #888; margin-bottom: 0.9rem; }
+    .weather-card { background: #16161f; border: 1px solid #2a2a3a; border-radius: 10px; padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1.2rem; }
+    .weather-icon { font-size: 2.5rem; }
+    .weather-info h2 { font-size: 1.6rem; color: #f0e6ff; }
+    .weather-info p { font-size: 0.85rem; color: #aaa; margin-top: 0.2rem; }
+    .news-grid { display: grid; gap: 0.9rem; }
+    .news-card { background: #16161f; border: 1px solid #2a2a3a; border-radius: 10px; padding: 1rem 1.3rem; }
+    .news-card .tag { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.15rem 0.5rem; border-radius: 4px; display: inline-block; margin-bottom: 0.5rem; }
+    .tag-ai { background: #2d1f4a; color: #b794f4; }
+    .tag-tech { background: #1a2f3d; color: #63b3ed; }
+    .tag-world { background: #1f2d1f; color: #68d391; }
+    .news-card h3 { font-size: 0.95rem; line-height: 1.4; color: #e8e8f0; }
+    .news-card p { font-size: 0.82rem; color: #999; margin-top: 0.4rem; line-height: 1.5; }
+    .tasks-list { list-style: none; display: grid; gap: 0.7rem; }
+    .tasks-list li { background: #16161f; border: 1px solid #2a2a3a; border-radius: 8px; padding: 0.9rem 1.2rem; font-size: 0.9rem; display: flex; align-items: flex-start; gap: 0.8rem; }
+    .task-dot { width: 8px; height: 8px; border-radius: 50%; background: #b794f4; margin-top: 0.35rem; flex-shrink: 0; }
+    .footer { font-size: 0.78rem; color: #555; text-align: center; padding-top: 1.5rem; border-top: 1px solid #1a1a26; margin-top: 2rem; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>🦞 Morning Brief</h1>
+    <div class="meta">Monday, March 16, 2026 &nbsp;·&nbsp; 4:00 PM MDT &nbsp;·&nbsp; PriScylla</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🌤 Boise Weather</div>
+    <div class="weather-card">
+      <div class="weather-icon">⛅</div>
+      <div class="weather-info">
+        <h2>57°F (feels like 56°F)</h2>
+        <p>Partly cloudy &nbsp;·&nbsp; ↘ 6 mph wind &nbsp;·&nbsp; 33% humidity</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🤖 AI &amp; Tech</div>
+    <div class="news-grid">
+      <div class="news-card">
+        <span class="tag tag-ai">AI</span>
+        <h3>Nvidia GTC: Jensen Huang Pivots to Inference — The Next AI Battleground</h3>
+        <p>Nvidia's GTC conference is in full swing. CEO Jensen Huang is unveiling new inference chips and software, signaling the AI economy is shifting from training massive models to running them cheaply at scale. Inference is where AI gets commercialized — it determines cloud margins, app latency, and startup economics. Nvidia wants to own that too.</p>
+      </div>
+      <div class="news-card">
+        <span class="tag tag-ai">AI</span>
+        <h3>OpenAI Frontier Puts Enterprise Agents on Collision Course With SaaS Giants</h3>
+        <p>OpenAI's new "Frontier" platform wants to run the intelligence layer across the entire enterprise stack. Salesforce, ServiceNow, and Microsoft are repricing their entire AI agent strategies in response. Separately, OpenAI is reshuffling infrastructure leadership and leaning toward renting more cloud compute via Stargate rather than building it all out themselves.</p>
+      </div>
+      <div class="news-card">
+        <span class="tag tag-tech">Tech</span>
+        <h3>AI "RAMageddon" — Data Center Boom Is Squeezing Gaming Memory Supply</h3>
+        <p>The AI infrastructure buildout is vacuuming up global memory supply, creating shortages for gaming and consumer tech. Dubbed "RAMageddon," the crunch shows how the AI race creates second-order effects far beyond chipmakers — hitting device makers, gamers, and anyone competing for the same components as hyperscalers.</p>
+      </div>
+      <div class="news-card">
+        <span class="tag tag-tech">Tech</span>
+        <h3>North Korea Using AI Deepfakes to Infiltrate European Tech Companies as "Fake Workers"</h3>
+        <p>North Korean IT operatives are using AI-generated identities, deepfakes, and chatbot-assisted comms to pose as remote workers inside European companies. Already a serious U.S. threat, it's now spreading to Europe. Startups hiring fast remote talent are most vulnerable — this is a supply chain security issue hiding in your recruiting pipeline.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🌍 World &amp; Current Events</div>
+    <div class="news-grid">
+      <div class="news-card">
+        <span class="tag tag-world">World</span>
+        <h3>U.S.-Iran War: Cluster Munitions, Oil Above $100, Strait of Hormuz Threat</h3>
+        <p>The conflict is in its third week. Iran is deploying cluster munitions against Israel — the small bomblets bypass air defenses. Iran continues attacking Israel, UAE, and Saudi Arabia. Crude oil has crossed $100/barrel as Iran threatens to close the Strait of Hormuz. Trump is seeking coalition warships to keep the waterway open. Gas prices rising.</p>
+      </div>
+      <div class="news-card">
+        <span class="tag tag-world">World</span>
+        <h3>Iran's New Supreme Leader Mojtaba Khamenei — Status Unknown, May Be Incapacitated</h3>
+        <p>Iran's newly named supreme leader has made zero public appearances since being named. Israeli intelligence says he's in "low condition to function." Iranian FM claims excellent health. U.S. intelligence reports his own father didn't consider him qualified. Significant uncertainty about who is actually governing Iran right now.</p>
+      </div>
+      <div class="news-card">
+        <span class="tag tag-world">World</span>
+        <h3>Oscars 2026 — "Sinners" Sweeps; Michael B. Jordan Wins Best Actor</h3>
+        <p>Ryan Coogler's "Sinners" dominated the 98th Academy Awards. Michael B. Jordan won Best Actor for his dual role as twin brothers Smoke and Stack. Coogler took Best Original Screenplay. Autumn Durald Araqo made history as the first woman to win Best Cinematography. One of the cleaner Oscars nights in recent memory.</p>
+      </div>
+      <div class="news-card">
+        <span class="tag tag-world">World</span>
+        <h3>FCC Chair Threatens Broadcast Licenses Over Iran War Coverage</h3>
+        <p>FCC Chair Brendan Carr is threatening to pull broadcast licenses over coverage his office considers unfavorable to the administration's Iran war narrative. Senator Chris Murphy: "The federal government is telling news stations to provide favorable coverage or lose their licenses." Press freedom groups are calling it an unprecedented move.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">✅ Pending Tasks &amp; What PriScylla Can Move Today</div>
+    <ul class="tasks-list">
+      <li><span class="task-dot"></span><strong>Telegram @WLPAnimal Propagation Check</strong> — Channel username was unresolved last session due to propagation delay. Can test now and queue up a first news drop if it's live.</li>
+      <li><span class="task-dot"></span><strong>Mission Control Calendar Verification</strong> — Calendar subagent confirmation was pending. Can verify the calendar app and events.json are fully operational at localhost:3000.</li>
+      <li><span class="task-dot"></span><strong>Time Machine Setup Reminder</strong> — Cron fires Monday March 23rd at 2 PM. External drive exists but not configured. Can prep setup guide in advance so it's a clean 10-minute job.</li>
+      <li><span class="task-dot"></span><strong>Tailscale Setup</strong> — Cron reminder set for March 23rd. Can pre-research exact install steps for this Mac + Eero setup to make it turnkey when ready.</li>
+      <li><span class="task-dot"></span><strong>Tesla Charging Log</strong> — More sessions still pending from ANIMAL. Dashboard is ready. Just need the screenshots when he has them.</li>
+      <li><span class="task-dot"></span><strong>Model Cost Monitoring</strong> — Switched to Haiku 4.5 after $175 in 4 days. Watching pace. Model switcher is live in Mission Control if ANIMAL wants to change on the fly.</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    Compiled by PriScylla 🦞 &nbsp;·&nbsp; Monday, March 16, 2026 &nbsp;·&nbsp; 4:00 PM MDT
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ANIMAL — Command Center</title>
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --border: #1e1e2e;
+      --accent: #7f5af0;
+      --accent2: #2cb67d;
+      --accent3: #ff6b6b;
+      --accent4: #ffd166;
+      --text: #e0e0e0;
+      --muted: #6e6e8a;
+      --card: #16161f;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      padding: 32px 24px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 36px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      font-size: 2rem;
+    }
+
+    .logo-text h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .logo-text span {
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 1px;
+    }
+
+    #clock {
+      font-size: 1.1rem;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .card-header .icon {
+      font-size: 1.2rem;
+    }
+
+    .card-header h2 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .link-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .link-list a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.9rem;
+      padding: 8px 10px;
+      border-radius: 8px;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .link-list a:hover {
+      background: var(--border);
+      color: #fff;
+    }
+
+    .link-list a .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .dot-purple { background: var(--accent); }
+    .dot-green  { background: var(--accent2); }
+    .dot-red    { background: var(--accent3); }
+    .dot-yellow { background: var(--accent4); }
+    .dot-blue   { background: #4fc3f7; }
+    .dot-orange { background: #ff9800; }
+    .dot-pink   { background: #f06292; }
+    .dot-teal   { background: #26c6da; }
+    .dot-white  { background: #e0e0e0; }
+
+    /* Docs card is wider */
+    .card-wide {
+      grid-column: span 2;
+    }
+
+    @media (max-width: 640px) {
+      .card-wide { grid-column: span 1; }
+    }
+
+    .doc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    @media (max-width: 500px) {
+      .doc-grid { grid-template-columns: 1fr; }
+    }
+
+    .doc-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.88rem;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      transition: background 0.15s, border-color 0.15s;
+    }
+
+    .doc-link:hover {
+      background: var(--border);
+      border-color: var(--accent);
+    }
+
+    .doc-link .emoji {
+      font-size: 1.1rem;
+    }
+
+    .doc-link .doc-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .doc-link .doc-name {
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .doc-link .doc-desc {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .phase-banner {
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .phase-banner .phase-info h3 {
+      font-size: 0.8rem;
+      color: var(--accent);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .phase-banner .phase-info p {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .phase-banner .countdown {
+      text-align: right;
+    }
+
+    .phase-banner .countdown .days {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .phase-banner .countdown .label {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      padding: 2px 7px;
+      border-radius: 999px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-purple { background: #2d1f5e; color: var(--accent); }
+    .badge-green  { background: #0d2e22; color: var(--accent2); }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <div class="logo-icon">🦞</div>
+      <div class="logo-text">
+        <h1>ANIMAL</h1>
+        <span>Command Center — Managed by PriScylla</span>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;">
+      <a href="#dj-software" style="font-size:0.78rem;letter-spacing:1px;text-transform:uppercase;color:var(--accent);text-decoration:none;border:1px solid var(--accent);padding:5px 14px;border-radius:100px;opacity:0.85;transition:opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85">🎛️ DJ Software</a>
+      <div id="clock">--:-- --</div>
+    </div>
+  </header>
+
+  <!-- 90-Day Phase Banner -->
+  <div class="phase-banner">
+    <div class="phase-info">
+      <h3>🗓 Active 90-Day Plan</h3>
+      <p>Phase 1: Foundation &nbsp;<span class="badge badge-purple">April 12 – May 11, 2026</span></p>
+    </div>
+    <div class="countdown">
+      <div class="days" id="countdown-days">--</div>
+      <div class="label">days to kickoff</div>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <!-- Business Docs -->
+    <div class="card card-wide">
+      <div class="card-header">
+        <span class="icon">📁</span>
+        <h2>Business Documents</h2>
+      </div>
+      <div class="doc-grid">
+        <a class="doc-link" href="file:///Users/Priscylla/.openclaw/workspace/business/org-structure.md">
+          <span class="emoji">🏗️</span>
+          <div class="doc-info">
+            <span class="doc-name">Org Structure</span>
+            <span class="doc-desc">Entity, divisions, AI roster, decision flow</span>
+          </div>
+        </a>
+        <a class="doc-link" href="file:///Users/Priscylla/.openclaw/workspace/business/revenue-tracker.md">
+          <span class="emoji">💰</span>
+          <div class="doc-info">
+            <span class="doc-name">Revenue Tracker</span>
+            <span class="doc-desc">12-month tracker, P&L, KPIs, per-gig log</span>
+          </div>
+        </a>
+        <a class="doc-link" href="file:///Users/Priscylla/.openclaw/workspace/business/90-day-plan.md">
+          <span class="emoji">📅</span>
+          <div class="doc-info">
+            <span class="doc-name">90-Day Plan</span>
+            <span class="doc-desc">Apr 12 – Jul 11 · 3 phases · hard dates</span>
+          </div>
+        </a>
+        <a class="doc-link" href="file:///Users/Priscylla/.openclaw/workspace/business/release-pipeline.md">
+          <span class="emoji">🎵</span>
+          <div class="doc-info">
+            <span class="doc-name">Release Pipeline</span>
+            <span class="doc-desc">12-week checklist, distro, sync, calendar</span>
+          </div>
+        </a>
+        <a class="doc-link" href="file:///Users/Priscylla/.openclaw/workspace/business/ai-workflow.md">
+          <span class="emoji">🤖</span>
+          <div class="doc-info">
+            <span class="doc-name">AI Workflow</span>
+            <span class="doc-desc">Agent stack, tools, 25-prompt library</span>
+          </div>
+        </a>
+        <a class="doc-link" href="file:///Users/Priscylla/.openclaw/workspace/business/marketing-plan.md">
+          <span class="emoji">📣</span>
+          <div class="doc-info">
+            <span class="doc-name">Marketing Plan</span>
+            <span class="doc-desc">Brand USP, social, PR, ads, quick wins</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- AI Artists -->
+    <div class="card card-wide">
+      <div class="card-header">
+        <span class="icon">🎤</span>
+        <h2>AI Artists — WLP Roster</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+
+        <a href="file:///Users/Priscylla/.openclaw/workspace/artists/kade-rivers.md" style="text-decoration:none;color:inherit;">
+          <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--surface);transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+            <img src="./kade-rivers.jpg" alt="Kade Rivers" style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;display:block;" />
+            <div style="padding:10px 12px;">
+              <div style="font-weight:700;font-size:0.95rem;color:#fff;">Kade Rivers</div>
+              <div style="font-size:0.75rem;color:var(--muted);margin-top:2px;">Rock · Alt-Rock</div>
+              <div style="margin-top:6px;"><span style="font-size:0.68rem;background:#2d1f5e;color:var(--accent);padding:2px 8px;border-radius:999px;letter-spacing:0.5px;">ACTIVE</span></div>
+            </div>
+          </div>
+        </a>
+
+        <a href="file:///Users/Priscylla/.openclaw/workspace/artists/madison-blair.md" style="text-decoration:none;color:inherit;">
+          <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--surface);transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--accent2)'" onmouseout="this.style.borderColor='var(--border)'">
+            <img src="./madison-blair.jpg" alt="Madison Blair" style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;display:block;" />
+            <div style="padding:10px 12px;">
+              <div style="font-weight:700;font-size:0.95rem;color:#fff;">Madison Blair</div>
+              <div style="font-size:0.75rem;color:var(--muted);margin-top:2px;">Pop · Dance-Pop</div>
+              <div style="margin-top:6px;"><span style="font-size:0.68rem;background:#0d2e22;color:var(--accent2);padding:2px 8px;border-radius:999px;letter-spacing:0.5px;">RELEASING</span></div>
+            </div>
+          </div>
+        </a>
+
+        <a href="file:///Users/Priscylla/.openclaw/workspace/artists/aria-vale.md" style="text-decoration:none;color:inherit;">
+          <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--surface);transition:border-color 0.2s;" onmouseover="this.style.borderColor='#4fc3f7'" onmouseout="this.style.borderColor='var(--border)'">
+            <img src="./aria-vale.jpg" alt="Aria Vale" style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;display:block;" />
+            <div style="padding:10px 12px;">
+              <div style="font-weight:700;font-size:0.95rem;color:#fff;">Aria Vale</div>
+              <div style="font-size:0.75rem;color:var(--muted);margin-top:2px;">EDM · Melodic Techno</div>
+              <div style="margin-top:6px;"><span style="font-size:0.68rem;background:#0a1f2e;color:#4fc3f7;padding:2px 8px;border-radius:999px;letter-spacing:0.5px;">ACTIVE</span></div>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- DJ Automation Software -->
+    <div class="card card-wide" id="dj-software">
+      <div class="card-header">
+        <span class="icon">🎛️</span>
+        <h2>DJ Automation Software</h2>
+      </div>
+      <div class="doc-grid">
+        <a class="doc-link" href="file:///Users/Priscylla/.openclaw/workspace/business/dj-software/PRODUCT-BRIEF.md">
+          <span class="emoji">📋</span>
+          <div class="doc-info">
+            <span class="doc-name">Product Brief</span>
+            <span class="doc-desc">Full product spec, features, roadmap</span>
+          </div>
+        </a>
+        <a class="doc-link" href="file:///Users/Priscylla/.openclaw/workspace/business/dj-software/COMPETITIVE-POSITIONING.md">
+          <span class="emoji">⚔️</span>
+          <div class="doc-info">
+            <span class="doc-name">Competitive Positioning</span>
+            <span class="doc-desc">vs. CoverJock, BoothPoint & others</span>
+          </div>
+        </a>
+        <a class="doc-link" href="file:///Users/Priscylla/.openclaw/workspace/business/dj-software/INVESTOR-PITCH.md">
+          <span class="emoji">💼</span>
+          <div class="doc-info">
+            <span class="doc-name">Investor Pitch</span>
+            <span class="doc-desc">Deck, market size, ask, projections</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Streaming -->
+    <div class="card">
+      <div class="card-header">
+        <span class="icon">🎧</span>
+        <h2>Streaming & Distribution</h2>
+      </div>
+      <ul class="link-list">
+        <li><a href="https://artists.spotify.com" target="_blank"><span class="dot dot-green"></span>Spotify for Artists</a></li>
+        <li><a href="https://music.apple.com" target="_blank"><span class="dot dot-red"></span>Apple Music Connect</a></li>
+        <li><a href="https://www.beatport.com" target="_blank"><span class="dot dot-blue"></span>Beatport</a></li>
+        <li><a href="https://soundcloud.com" target="_blank"><span class="dot dot-orange"></span>SoundCloud</a></li>
+        <li><a href="https://www.distrokid.com" target="_blank"><span class="dot dot-purple"></span>DistroKid</a></li>
+        <li><a href="https://studio.youtube.com" target="_blank"><span class="dot dot-red"></span>YouTube Studio</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div class="card">
+      <div class="card-header">
+        <span class="icon">📱</span>
+        <h2>Social Media</h2>
+      </div>
+      <ul class="link-list">
+        <li><a href="https://instagram.com" target="_blank"><span class="dot dot-pink"></span>Instagram</a></li>
+        <li><a href="https://tiktok.com" target="_blank"><span class="dot dot-white"></span>TikTok</a></li>
+        <li><a href="https://twitter.com" target="_blank"><span class="dot dot-blue"></span>X / Twitter</a></li>
+        <li><a href="https://facebook.com" target="_blank"><span class="dot dot-blue"></span>Facebook</a></li>
+        <li><a href="https://mixcloud.com" target="_blank"><span class="dot dot-purple"></span>Mixcloud</a></li>
+        <li><a href="https://www.linkedin.com" target="_blank"><span class="dot dot-blue"></span>LinkedIn</a></li>
+      </ul>
+    </div>
+
+    <!-- Analytics -->
+    <div class="card">
+      <div class="card-header">
+        <span class="icon">📊</span>
+        <h2>Analytics & Tracking</h2>
+      </div>
+      <ul class="link-list">
+        <li><a href="https://app.chartmetric.com" target="_blank"><span class="dot dot-purple"></span>Chartmetric</a></li>
+        <li><a href="https://soundcharts.com" target="_blank"><span class="dot dot-green"></span>Soundcharts</a></li>
+        <li><a href="https://open.spotify.com/artist/" target="_blank"><span class="dot dot-green"></span>Spotify Artist Page</a></li>
+        <li><a href="https://analytics.google.com" target="_blank"><span class="dot dot-yellow"></span>Google Analytics</a></li>
+        <li><a href="https://www.tuneregistry.com" target="_blank"><span class="dot dot-blue"></span>Tune Registry</a></li>
+        <li><a href="https://www.soundscan.com" target="_blank"><span class="dot dot-orange"></span>Luminate / SoundScan</a></li>
+      </ul>
+    </div>
+
+    <!-- AI Tools -->
+    <div class="card">
+      <div class="card-header">
+        <span class="icon">🤖</span>
+        <h2>AI Tools</h2>
+      </div>
+      <ul class="link-list">
+        <li style="font-size:0.7rem;color:#888;padding:2px 0 4px;text-transform:uppercase;letter-spacing:1px;">🎵 Music Generation</li>
+        <li><a href="https://suno.com" target="_blank"><span class="dot dot-green"></span>Suno (Full Song AI)</a></li>
+        <li><a href="https://www.udio.com" target="_blank"><span class="dot dot-blue"></span>Udio (EDM / Electronic)</a></li>
+        <li style="font-size:0.7rem;color:#888;padding:6px 0 4px;text-transform:uppercase;letter-spacing:1px;">✂️ Stems & Audio</li>
+        <li><a href="https://www.lalal.ai" target="_blank"><span class="dot dot-teal"></span>Lalal.ai (Stem Separation)</a></li>
+        <li><a href="https://splice.com" target="_blank"><span class="dot dot-green"></span>Splice (Samples / Layer)</a></li>
+        <li><a href="https://www.landr.com" target="_blank"><span class="dot dot-purple"></span>LANDR (Mastering)</a></li>
+        <li><a href="https://elevenlabs.io" target="_blank"><span class="dot dot-yellow"></span>ElevenLabs (TTS / Voice)</a></li>
+        <li style="font-size:0.7rem;color:#888;padding:6px 0 4px;text-transform:uppercase;letter-spacing:1px;">🖼️ Image Generation</li>
+        <li><a href="https://www.midjourney.com" target="_blank"><span class="dot dot-purple"></span>Midjourney (Artwork)</a></li>
+        <li><a href="https://fal.ai/models/fal-ai/flux-pro" target="_blank"><span class="dot dot-orange"></span>Flux Pro (Photorealistic)</a></li>
+        <li><a href="https://ideogram.ai" target="_blank"><span class="dot dot-blue"></span>Ideogram (Posters / Text)</a></li>
+        <li><a href="https://firefly.adobe.com" target="_blank"><span class="dot dot-red"></span>Adobe Firefly (Brand-Safe)</a></li>
+        <li style="font-size:0.7rem;color:#888;padding:6px 0 4px;text-transform:uppercase;letter-spacing:1px;">🎬 Video Generation</li>
+        <li><a href="https://sora.com" target="_blank"><span class="dot dot-green"></span>Sora (Cinematic Video)</a></li>
+        <li><a href="https://klingai.com" target="_blank"><span class="dot dot-teal"></span>Kling AI (Realistic Motion)</a></li>
+        <li><a href="https://runwayml.com" target="_blank"><span class="dot dot-red"></span>Runway ML (Creative Clips)</a></li>
+        <li><a href="https://pika.art" target="_blank"><span class="dot dot-yellow"></span>Pika 2.0 (Quick Clips)</a></li>
+        <li><a href="https://lumalabs.ai/dream-machine" target="_blank"><span class="dot dot-purple"></span>Luma Dream Machine (Img→Vid)</a></li>
+        <li style="font-size:0.7rem;color:#888;padding:6px 0 4px;text-transform:uppercase;letter-spacing:1px;">✂️ Video Editing</li>
+        <li><a href="https://www.capcut.com" target="_blank"><span class="dot dot-blue"></span>CapCut AI (Reels / TikTok)</a></li>
+        <li><a href="https://www.descript.com" target="_blank"><span class="dot dot-orange"></span>Descript (Edit by Script)</a></li>
+      </ul>
+    </div>
+
+    <!-- Industry Resources -->
+    <div class="card">
+      <div class="card-header">
+        <span class="icon">🎯</span>
+        <h2>Industry & Press</h2>
+      </div>
+      <ul class="link-list">
+        <li><a href="https://www.dancincastronaut.com" target="_blank"><span class="dot dot-purple"></span>Dancing Astronaut</a></li>
+        <li><a href="https://www.magneticmag.com" target="_blank"><span class="dot dot-blue"></span>Magnetic Magazine</a></li>
+        <li><a href="https://youredm.com" target="_blank"><span class="dot dot-orange"></span>Your EDM</a></li>
+        <li><a href="https://www.djmag.com" target="_blank"><span class="dot dot-red"></span>DJ Mag</a></li>
+        <li><a href="https://www.residentadvisor.net" target="_blank"><span class="dot dot-white"></span>Resident Advisor</a></li>
+        <li><a href="https://www.bpmsupreme.com" target="_blank"><span class="dot dot-green"></span>BPM Supreme (Promo)</a></li>
+      </ul>
+    </div>
+
+    <!-- Sync & Licensing -->
+    <div class="card">
+      <div class="card-header">
+        <span class="icon">⚖️</span>
+        <h2>Sync & Licensing</h2>
+      </div>
+      <ul class="link-list">
+        <li><a href="https://www.musicbed.com" target="_blank"><span class="dot dot-purple"></span>Musicbed</a></li>
+        <li><a href="https://www.taxi.com" target="_blank"><span class="dot dot-yellow"></span>TAXI</a></li>
+        <li><a href="https://www.pond5.com" target="_blank"><span class="dot dot-blue"></span>Pond5</a></li>
+        <li><a href="https://artlist.io" target="_blank"><span class="dot dot-green"></span>Artlist</a></li>
+        <li><a href="https://www.ascap.com" target="_blank"><span class="dot dot-red"></span>ASCAP</a></li>
+        <li><a href="https://www.bmi.com" target="_blank"><span class="dot dot-orange"></span>BMI</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <footer>
+    🦞 PriScylla — ANIMAL's AI Manager &nbsp;·&nbsp; Built March 12, 2026 &nbsp;·&nbsp; Updated automatically
+  </footer>
+
+  <script>
+    // Live clock
+    function updateClock() {
+      const now = new Date();
+      const opts = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true, timeZone: 'America/Boise' };
+      document.getElementById('clock').textContent = now.toLocaleTimeString('en-US', opts) + ' MDT';
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+
+    // Countdown to April 12
+    function updateCountdown() {
+      const target = new Date('2026-04-12T00:00:00-06:00');
+      const now = new Date();
+      const diff = target - now;
+      if (diff > 0) {
+        const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+        document.getElementById('countdown-days').textContent = days;
+      } else {
+        document.getElementById('countdown-days').textContent = '🔥';
+        document.querySelector('.phase-banner .countdown .label').textContent = 'LIVE';
+      }
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 60000);
+  </script>
+
+</body>
+</html>

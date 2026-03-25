@@ -1,0 +1,3 @@
+:HL["/_next/static/chunks/5865ec7bee28e7a6.css","style"]
+:HL["/artists/kade-rivers.jpg","image"]
+0:{"buildId":"jAfjfWIPK_itPSWKIEceQ","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"artists","paramType":null,"paramKey":"artists","hasRuntimePrefetch":false,"slots":{"children":{"name":"kade-rivers","paramType":null,"paramKey":"kade-rivers","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

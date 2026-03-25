@@ -1,0 +1,923 @@
+<h1>Live PA Setup — ANIMAL</h1>
+<p><strong>Goal:</strong> Professional live PA set with real-time remixing, looping, sample firing, DJ-style performance</p>
+<p><strong>Current gear:</strong></p>
+<ul>
+<li>Ableton Live (version TBC)</li>
+<li>Push 2</li>
+<li>Mini mixer (brand/model TBC)</li>
+</ul>
+<hr>
+<h2>Core Setup: Ableton + Push 2 Live PA</h2>
+<p>This is already a legit professional rig. Plenty of touring artists run this exact combo. Here&#39;s how to dial it in properly.</p>
+<hr>
+<h2>1. Ableton Session View — Your Stage</h2>
+<p>Live PA lives in <strong>Session View</strong>, not Arrangement. Think of it as a grid of infinite possibilities.</p>
+<p><strong>Organize your set like this:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Column (Track)</th>
+<th>What goes there</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Drums / Beats</td>
+<td>Drum Racks with your core patterns</td>
+</tr>
+<tr>
+<td>Bass</td>
+<td>Bass loops, synth basslines</td>
+</tr>
+<tr>
+<td>Chords / Pads</td>
+<td>Chord progressions, atmospheric pads</td>
+</tr>
+<tr>
+<td>Melody / Lead</td>
+<td>Hooks, leads, melodies</td>
+</tr>
+<tr>
+<td>Vocals / Samples</td>
+<td>Vocal chops, one-shots, FX hits</td>
+</tr>
+<tr>
+<td>FX Bus</td>
+<td>Returns: reverb, delay, effects chain</td>
+</tr>
+<tr>
+<td>Master</td>
+<td>Limiter, EQ, meters</td>
+</tr>
+</tbody></table>
+<p><strong>Clip colors:</strong> Color-code by energy level (green = low/intro, yellow = mid, red = peak/drop). You&#39;ll navigate by feel in the dark.</p>
+<p><strong>Follow Actions:</strong> Set clips to auto-advance — great for building tension without having to manually launch every loop.</p>
+<hr>
+<h2>2. Push 2 — Your Instrument</h2>
+<p>Push 2 is the hands-on brain of the setup. Key modes to master:</p>
+<ul>
+<li><strong>Session Mode:</strong> Launch clips and scenes. Arm/disarm tracks. This is your main performance view.</li>
+<li><strong>Note Mode:</strong> Play melodic parts live on the pads. Great for improvised solos, fills.</li>
+<li><strong>Drum Rack Mode:</strong> Fire samples, one-shots, and drum patterns on the 4x4 pad grid.</li>
+<li><strong>Device Mode:</strong> Twist knobs to control macros, filters, effects in real-time. Map your most-used parameters here.</li>
+<li><strong>Loop Mode:</strong> Set and adjust loop start/end points on the fly.</li>
+</ul>
+<p><strong>Key workflow: Macro Mapping</strong>
+Set up macro knobs on your main tracks mapped to:</p>
+<ul>
+<li>Filter cutoff (for DJ-style filtering)</li>
+<li>Reverb send</li>
+<li>Delay send</li>
+<li>Pitch/transpose</li>
+<li>Volume/Gain</li>
+</ul>
+<p>You&#39;ll turn one knob on Push and the sound changes dramatically.</p>
+<hr>
+<h2>3. Looping Setup</h2>
+<p>For live looping into your set:</p>
+<p><strong>Option A: Ableton Looper (recommended)</strong></p>
+<ul>
+<li>Drop a Looper device on a dedicated track</li>
+<li>Map record/overdub/play/clear to Push 2 buttons</li>
+<li>Layer up to 8 loops live — bass, melody, vocals, whatever</li>
+<li>Sync to master tempo automatically</li>
+</ul>
+<p><strong>Option B: Clip recording in Session View</strong></p>
+<ul>
+<li>Arm a track → record a clip live → it loops automatically</li>
+<li>More flexible than Looper for multi-track live recording</li>
+</ul>
+<p><strong>Best practice:</strong> Set up 4–6 dedicated &quot;live loop&quot; tracks pre-armed and ready. During performance you just hit record on Push and play.</p>
+<hr>
+<h2>4. Sample Firing</h2>
+<p><strong>Drum Rack is your best friend:</strong></p>
+<ul>
+<li>Load one-shots, FX hits, vocal chops, risers, drops into Drum Rack</li>
+<li>Each pad on Push 2 fires a different sample</li>
+<li>Velocity sensitive — hit harder for louder/harder hits</li>
+<li>Chain multiple Drum Racks per genre/set section</li>
+</ul>
+<p><strong>Hot tips:</strong></p>
+<ul>
+<li>Keep a dedicated &quot;FX hits&quot; rack: white noise risers, downlifters, crowd noise, sirens, stabs</li>
+<li>One-shot samples don&#39;t need to be looped — set clip to &quot;trigger&quot; mode, not loop</li>
+<li>Color-code your pad grid by type (drums = red, vocals = blue, FX = yellow)</li>
+</ul>
+<hr>
+<h2>5. The Mini Mixer — Where It Fits</h2>
+<p>Depends on what you&#39;ve got:</p>
+<p><strong>If it&#39;s a DJ mixer (e.g., Pioneer DJM-S3, Rane, Allen &amp; Heath):</strong></p>
+<ul>
+<li>Route Ableton&#39;s main output into Channel 1</li>
+<li>Use the mixer EQ for live DJ-style cuts (kill the bass, sweep the filter)</li>
+<li>Crossfader if you want to blend between Ableton and external source (CDJ, phone, USB)</li>
+<li>Run a second source into Channel 2 for mixing in records/tracks on top of your live PA</li>
+</ul>
+<p><strong>If it&#39;s a compact audio mixer (e.g., Behringer Xenyx, Mackie Mix):</strong></p>
+<ul>
+<li>Use it mainly for summing outputs and sending to PA/monitors</li>
+<li>Less useful for performance — the EQ and routing is limited</li>
+<li>Consider upgrading to a proper DJ mixer for more performance options</li>
+</ul>
+<p><strong>Either way:</strong> Make sure your audio interface is in the signal chain properly — Ableton → interface → mixer → PA.</p>
+<hr>
+<h2>6. Audio Interface (Critical If You Don&#39;t Have One)</h2>
+<p>If your mini mixer doesn&#39;t have a built-in audio interface, you need one between the Mac and the mixer. Without it you&#39;re running through the Mac&#39;s built-in audio which is garbage for live performance.</p>
+<p><strong>Recommended:</strong></p>
+<ul>
+<li><strong>Focusrite Scarlett 2i2</strong> (~$120) — simple, reliable, 2 outputs + headphone monitoring</li>
+<li><strong>Audient iD4 mk2</strong> (~$130) — slightly better converters, same use case</li>
+<li><strong>Native Instruments Komplete Audio 6</strong> (~$150) — 6 outputs, great if you need multiple send channels</li>
+</ul>
+<p>Push 2 connects via USB — doesn&#39;t need the interface, goes straight to Mac.</p>
+<hr>
+<h2>7. Ableton Link — When to Use It</h2>
+<p>Ableton Link syncs tempo wirelessly between devices over WiFi. Use it when:</p>
+<ul>
+<li>Running a second Mac or iPad alongside Ableton</li>
+<li>Using iPad apps like Modstep, Koala Sampler, or GarageBand as a second instrument</li>
+<li>Syncing visuals (Resolume, TouchDesigner) to your music</li>
+<li>Jamming with another musician who also runs Ableton</li>
+</ul>
+<p>For a solo live PA, Link is optional — you&#39;re the only clock source. But if you ever play with visual artists or other producers, it&#39;s essential.</p>
+<hr>
+<h2>8. Signal Chain (The Right Order)</h2>
+<pre><code>Mac running Ableton Live
+    ↓ (USB)
+Push 2 ←→ Mac (bidirectional USB)
+    ↓
+Audio Interface (USB → Mac)
+    ↓
+Mini Mixer / DJ Mixer
+    ↓
+PA System / Monitors
+    ↓ (headphone out of mixer)
+Headphones (for monitoring)
+</code></pre>
+<hr>
+<h2>9. What to Add Down the Road</h2>
+<p><strong>Priority 1 — Push 3 ($800–$1,500)</strong>
+Push 3 has a built-in audio interface AND can run standalone (no Mac required). Run your entire live PA from Push 3 alone. Major upgrade for live performance reliability — nothing crashes if your Mac freezes.</p>
+<p><strong>Priority 2 — Better DJ Mixer (~$300–$600)</strong>
+Something with proper 3-band EQ kill switches, filter knob, and a clean crossfader. Allen &amp; Heath Xone:23 or Pioneer DJM-S3 are solid. This opens up actual DJ mixing technique on top of your live PA.</p>
+<p><strong>Priority 3 — MIDI Footswitch (~$60–$150)</strong>
+Leaves your hands free for Push while your feet control scene launches or looper record/stop. Keith McMillen SoftStep 2 or Behringer FCB1010 are popular.</p>
+<p><strong>Priority 4 — iPad as Second Controller (~$400+)</strong>
+Run TouchAble Pro or Lemur on an iPad connected to Ableton via Ableton Link or OSC. Second screen of knobs and faders you can customize for your set. Great for a more hands-on visual display while Push handles the pads.</p>
+<p><strong>Priority 5 — Hardware Synth (~$300–$700)</strong>
+Adding a hardware synth (Arturia MicroBrute, Roland JD-Xi, Korg Minilogue) gives you a physical instrument to play live. Route it into your mixer alongside Ableton. Changes the whole vibe — sounds rawer, more human.</p>
+<hr>
+<h2>10. Practice Workflow for a Live Set</h2>
+<ol>
+<li>Build your track library in Session View — at least 30–40 clips per set</li>
+<li>Group clips into &quot;scenes&quot; that represent set energy levels (warm-up, build, peak, drop, outro)</li>
+<li>Map your 8 macro knobs on Push before every show — filter, reverb, delay are essential</li>
+<li>Practice &quot;launching without looking&quot; — you should be able to navigate your set in the dark</li>
+<li>Always have a safety net: a pre-arranged backup set in Arrangement View for if things go sideways</li>
+<li>Soundcheck: verify audio interface clock, buffer size (use 256 samples for live, not 128 — less CPU stress), and check latency compensation</li>
+</ol>
+<hr>
+<h2>Quick Reference: Push 2 Shortcuts for Live PA</h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Push 2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Launch scene</td>
+<td>Scene button (right side)</td>
+</tr>
+<tr>
+<td>Fire single clip</td>
+<td>Clip pad</td>
+</tr>
+<tr>
+<td>Arm track for recording</td>
+<td>Record button on track</td>
+</tr>
+<tr>
+<td>Adjust loop length</td>
+<td>Loop button → encoder</td>
+</tr>
+<tr>
+<td>Access device parameters</td>
+<td>Device button → turn knobs</td>
+</tr>
+<tr>
+<td>Tap tempo</td>
+<td>Tap tempo button</td>
+</tr>
+<tr>
+<td>Undo last action</td>
+<td>Undo button</td>
+</tr>
+<tr>
+<td>Add effect to track</td>
+<td>Browse → find device → select</td>
+</tr>
+</tbody></table>
+<hr>
+<p><em>Created: March 14, 2026</em></p>
+<hr>
+<h2>Updated Signal Chain — Denon MCX8000 Specific</h2>
+<pre><code>Mac (Ableton) ──USB──► MCX8000 built-in audio interface
+                              ↓
+                    MCX8000 Channel 3 or 4
+                              ↓
+                    MCX8000 Master Out ──► PA System
+
+Virtual DJ ──────────► MCX8000 Channel 1 &amp; 2 (normal DJ decks)
+Push 2 ──USB──► Mac (controls Ableton)
+MIDI controller ──USB──► Mac (extra Ableton params)
+</code></pre>
+<ul>
+<li>Ableton = Channel 3 or 4 on the MCX8000, treated as a 3rd deck</li>
+<li>Blend Ableton in/out with channel fader or assign to crossfader curve</li>
+<li>Enable Ableton Link in both Ableton settings AND Virtual DJ prefs — tempo locks automatically</li>
+<li>MCX8000 standalone USB slots still work for backup tracks if laptop crashes</li>
+</ul>
+<hr>
+<h2>Best Controller Upgrade for This Setup (2025–2026)</h2>
+<h3>1. Denon SC Live 4 — ~$3,200 — TOP RECOMMENDATION</h3>
+<p>The most capable unit on the market right now for a hybrid live PA setup.</p>
+<p><strong>Why it&#39;s the best:</strong></p>
+<ul>
+<li>4 channels — full DJ set plus dedicated Ableton send channel(s)</li>
+<li><strong>Standalone</strong> — runs Engine OS without a laptop at all. If Ableton crashes mid-set, your DJ set keeps going</li>
+<li>Built-in WiFi streaming (Tidal, SoundCloud, Beatport Link)</li>
+<li>Large touchscreens on each deck — waveforms, library navigation, no laptop needed for DJ side</li>
+<li><strong>Ableton Link built in natively</strong> — lock to Ableton tempo with one button</li>
+<li>Works with Virtual DJ, Serato, and Engine OS — flexibility to switch software anytime</li>
+<li>Built-in audio interface (like the MCX8000 but more advanced)</li>
+</ul>
+<p><strong>The key upgrade over MCX8000:</strong> Standalone capability means your DJ set is completely independent from your Mac. Mac runs Ableton only. Nothing crashes together.</p>
+<hr>
+<h3>2. Pioneer DDJ-FLX10 — ~$1,200 — Best Value Option</h3>
+<p>Best pure controller under $1,500 for a hybrid setup.</p>
+<p><strong>Why it&#39;s good:</strong></p>
+<ul>
+<li>4 channels — same layout advantage as SC Live 4 for routing</li>
+<li>Works natively with Rekordbox AND Serato — most versatile Pioneer controller ever made</li>
+<li>Virtual DJ support (full mapping)</li>
+<li>Performance pads for sample firing if you want to ditch Push for certain things</li>
+<li>Built-in audio interface</li>
+<li>Ableton Link via Virtual DJ or Rekordbox</li>
+<li>More portable/lighter than SC Live 4</li>
+</ul>
+<p><strong>Downside vs SC Live 4:</strong> No standalone — still laptop dependent for DJ side. No screens on decks.</p>
+<hr>
+<h3>3. Pioneer XDJ-XZ — ~$2,400 — Club Standard Hybrid</h3>
+<p>4-channel standalone unit with CDJ-style jog wheels.</p>
+<p><strong>Why it&#39;s relevant:</strong></p>
+<ul>
+<li>Industry standard jog wheel feel (closest to actual CDJs)</li>
+<li>Standalone + controller modes</li>
+<li>2 USB ports (run full sets from USB, no laptop for DJ side)</li>
+<li>Works with Rekordbox and Virtual DJ</li>
+<li>Ableton Link via Virtual DJ</li>
+</ul>
+<p><strong>Downside:</strong> No Serato support. Less customizable than Denon.</p>
+<hr>
+<h3>Summary Table</h3>
+<table>
+<thead>
+<tr>
+<th>Controller</th>
+<th>Price</th>
+<th>Standalone</th>
+<th>Ableton Link</th>
+<th>Best Software</th>
+<th>Channels</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Denon SC Live 4</strong></td>
+<td>~$3,200</td>
+<td>✅ Yes</td>
+<td>✅ Native</td>
+<td>VDJ / Engine OS / Serato</td>
+<td>4</td>
+</tr>
+<tr>
+<td><strong>Pioneer DDJ-FLX10</strong></td>
+<td>~$1,200</td>
+<td>❌ No</td>
+<td>✅ Via software</td>
+<td>Rekordbox / Serato / VDJ</td>
+<td>4</td>
+</tr>
+<tr>
+<td><strong>Pioneer XDJ-XZ</strong></td>
+<td>~$2,400</td>
+<td>✅ Yes</td>
+<td>✅ Via software</td>
+<td>Rekordbox / VDJ</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Denon MCX8000 (current)</td>
+<td>(owned)</td>
+<td>✅ Partial</td>
+<td>✅ Via VDJ</td>
+<td>Serato / VDJ</td>
+<td>4</td>
+</tr>
+</tbody></table>
+<p><strong>Bottom line:</strong> If budget allows, SC Live 4 is the move. It future-proofs the entire setup — standalone DJ rig + Ableton Link + multi-software support in one unit. The MCX8000 is still solid for now though — no urgent need to replace it.</p>
+<p><em>Updated: March 14, 2026</em></p>
+<hr>
+<h2>Option C — The Dream Rig (No Budget Limit)</h2>
+<p>This is what a touring festival headliner would spec out. Every piece chosen for maximum performance, reliability, and wow factor.</p>
+<hr>
+<h3>DJ Core — ~$7,000</h3>
+<p><strong>2x Pioneer CDJ-3000</strong> (~$2,400 each = $4,800)
+The industry gold standard. Every major club and festival stage on earth has these. Playing CDJ-3000s means you can walk up to any club setup in the world and feel at home. 9-inch touchscreens, Hi-Res audio playback, real jog wheel feel, cloud library sync.</p>
+<p><strong>Pioneer DJM-A9</strong> (~$2,500)
+Pioneer&#39;s flagship 4-channel mixer. The cleanest analog path of any DJ mixer made. Built-in sound card, 4-band EQ with kill switches, flexible routing, send/return effects loop for hardware FX. This is what plays at Berghain, Fabric, and every A-list venue.</p>
+<hr>
+<h3>Live Production — ~$3,500</h3>
+<p><strong>Ableton Push 3 Standalone</strong> (~$1,500)
+Runs your entire Ableton set without a laptop. Built-in audio interface, MPE-capable pads, standalone mode means if your Mac dies the Push keeps going. This is the brain of your live PA.</p>
+<p><strong>Ableton Live Suite</strong> (~$750 if not already on it)
+Full plugin suite — Max for Live, all instruments and effects. No limits.</p>
+<p><strong>Roland SP-404 MK2</strong> (~$500)
+Hardware sampler for tactile, hands-on sample firing. Loaded with your FX hits, vocal chops, one-shots. No screen, no menus — just pads and knobs. Connects to your mixer via a dedicated channel. Sounds different from software samples — warmer, more physical.</p>
+<p><strong>Teenage Engineering OP-1 Field</strong> (~$1,800)
+The wildcard. Portable all-in-one synthesizer, sampler, tape recorder. Unique sounds you can&#39;t get anywhere else. Perfect for adding unexpected live moments — a melody, a texture, a sample grabbed from the room. Feeds into its own mixer channel.</p>
+<hr>
+<h3>Audio Interface — ~$3,000</h3>
+<p><strong>RME Fireface UFX+</strong> (~$3,000)
+The absolute best audio interface made for live performance. Rock solid drivers — never crashes, never glitches. 94 I/O channels, ultra-low latency, runs standalone with USB drive if the Mac dies. Overkill for most — perfect for you.</p>
+<hr>
+<h3>Effects Processing — ~$1,500</h3>
+<p><strong>Pioneer RMX-1000</strong> (~$700)
+Dedicated DJ performance effects unit. Connects to your DJM-A9 via send/return. Scene FX, Isolate FX, X-Pad for sweeping effects live. Completely separate from software — never crashes.</p>
+<p><strong>Eventide H9 Max</strong> (~$700)
+The best hardware effects unit made. 52 algorithms — reverb, delay, modulation, pitch shift, looping. MIDI-controlled from Ableton or Push. Adds warmth and depth no plugin can touch.</p>
+<hr>
+<h3>Control Surface — ~$1,500</h3>
+<p><strong>iPad Pro 13-inch + Apple Pencil</strong> (~$1,300)
+Running <strong>Lemur</strong> or <strong>TouchOSC</strong> — fully custom touchscreen control surface for Ableton. Design your own interface: faders, XY pads, buttons, anything. Second visual brain alongside Push 3.</p>
+<p><strong>Keith McMillen SoftStep 2</strong> (~$200)
+MIDI footswitch with 10 pressure-sensitive pads. Hands-free scene launching, looper control, effect bypass while both hands are on gear. Screws to the floor of your stage rig.</p>
+<hr>
+<h3>Visuals — ~$3,500</h3>
+<p><strong>Second MacBook Pro + Resolume Avenue</strong> (~$3,000 + $500 software)
+Dedicated visuals Mac running Resolume synced to Ableton Link. Real-time generative visuals that react to your music — beat-matched flashes, waveform animations, custom video loops. Outputs to LED wall or projection. This is what separates a live PA from a live show.</p>
+<hr>
+<h3>Monitoring — ~$1,500</h3>
+<p><strong>Beyerdynamic DT 1770 Pro</strong> (~$500)
+Best closed-back headphones for live DJ monitoring. Isolates stage noise, accurate, comfortable for 4-hour sets.</p>
+<p><strong>Yamaha HS8 Studio Monitors</strong> (~$1,000/pair)
+For your personal booth monitoring. Accurate, flat response. Hear exactly what the PA is doing.</p>
+<hr>
+<h3>Dream Rig Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2x Pioneer CDJ-3000</td>
+<td>$4,800</td>
+</tr>
+<tr>
+<td>Pioneer DJM-A9</td>
+<td>$2,500</td>
+</tr>
+<tr>
+<td>Ableton Push 3 Standalone</td>
+<td>$1,500</td>
+</tr>
+<tr>
+<td>Ableton Live Suite</td>
+<td>$750</td>
+</tr>
+<tr>
+<td>Roland SP-404 MK2</td>
+<td>$500</td>
+</tr>
+<tr>
+<td>Teenage Engineering OP-1 Field</td>
+<td>$1,800</td>
+</tr>
+<tr>
+<td>RME Fireface UFX+</td>
+<td>$3,000</td>
+</tr>
+<tr>
+<td>Pioneer RMX-1000</td>
+<td>$700</td>
+</tr>
+<tr>
+<td>Eventide H9 Max</td>
+<td>$700</td>
+</tr>
+<tr>
+<td>iPad Pro 13 + Lemur</td>
+<td>$1,300</td>
+</tr>
+<tr>
+<td>Keith McMillen SoftStep 2</td>
+<td>$200</td>
+</tr>
+<tr>
+<td>MacBook Pro + Resolume Avenue</td>
+<td>$3,500</td>
+</tr>
+<tr>
+<td>Beyerdynamic DT 1770 Pro</td>
+<td>$500</td>
+</tr>
+<tr>
+<td>Yamaha HS8 Monitors</td>
+<td>$1,000</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td><strong>~$22,750</strong></td>
+</tr>
+</tbody></table>
+<hr>
+<h3>How It All Connects</h3>
+<pre><code>CDJ-3000 (Deck 1) ──┐
+CDJ-3000 (Deck 2) ──┼──► DJM-A9 (Channels 1 &amp; 2)
+SP-404 MK2 ─────────┤
+OP-1 Field ──────────┤
+                     │
+Push 3 / Ableton ────┼──► RME Fireface UFX+ ──USB──► DJM-A9 (Channel 3 or 4)
+                     │
+RMX-1000 ────────────┼──► DJM-A9 Send/Return
+Eventide H9 Max ─────┘
+
+DJM-A9 Master Out ──► PA System
+DJM-A9 Booth Out ───► Yamaha HS8 Monitors
+DJM-A9 Headphone ───► Beyerdynamic DT 1770 Pro
+
+iPad Pro (Lemur) ─────────────────────► Ableton (OSC/MIDI over WiFi)
+SoftStep 2 (USB) ─────────────────────► Ableton
+Ableton Link (WiFi) ──────────────────► CDJ-3000 (tempo sync)
+
+MacBook Pro (Resolume) ──Ableton Link──► Synced visuals to PA/LED wall
+</code></pre>
+<h3>What Makes This Different</h3>
+<ul>
+<li><strong>Nothing depends on one device.</strong> CDJs run standalone. Push 3 runs standalone. If the Mac dies, the show continues.</li>
+<li><strong>Every sound source has its own channel.</strong> Ableton, SP-404, OP-1 — all independent, all blendable live.</li>
+<li><strong>Hardware effects</strong> on top of software effects — the RMX-1000 and H9 Max add warmth and physicality no plugin can replicate.</li>
+<li><strong>Visuals are live and reactive</strong> — not a pre-rendered loop, but generative art responding to your music in real time.</li>
+<li><strong>Full Ableton Link ecosystem</strong> — everything locked together. Change tempo on the CDJ, everything follows.</li>
+</ul>
+<p><em>Updated: March 14, 2026</em></p>
+<hr>
+<h2>Option D — The Smart Build (~$10,000–$11,000)</h2>
+<p>Same capabilities as the dream rig. Smart substitutions that cut price nearly in half without sacrificing performance.</p>
+<hr>
+<h3>Where the Money Goes</h3>
+<p><strong>Denon SC Live 4</strong> (<del>$3,200) — replaces the two CDJ-3000s + DJM-A9 (</del>$7,300)
+One unit does what three pieces did. Standalone, 4 channels, touchscreens on each deck, Ableton Link native, WiFi streaming. Honestly competes with the CDJ setup in most real-world performance scenarios. Saves ~$4,100.</p>
+<p><strong>Ableton Push 3 Standalone</strong> (~$1,500) — same as dream rig. Non-negotiable.</p>
+<p><strong>Roland SP-404 MK2</strong> (~$500) — same as dream rig. Keep it.</p>
+<p><strong>Ableton Live Suite</strong> (~$750) — same. Keep it.</p>
+<p><strong>RME Babyface Pro FS</strong> (<del>$800) — replaces RME Fireface UFX+ (</del>$3,000)
+Same legendary RME reliability and driver stability. Compact, USB, handles everything you need for a live PA at this level. The UFX+ is overkill for a solo live PA — the Babyface Pro FS is what you actually need. Saves ~$2,200.</p>
+<p><strong>Pioneer RMX-1000</strong> (~$700) — same as dream rig. Keep it. Plugs into SC Live 4 send/return.</p>
+<p><strong>iPad Pro 11-inch + Lemur</strong> (<del>$900) — replaces iPad Pro 13-inch (</del>$1,300)
+Same functionality, smaller footprint, easier to fit on stage. Saves ~$400.</p>
+<p><strong>Keith McMillen SoftStep 2</strong> (~$200) — same as dream rig. Keep it.</p>
+<p><strong>Use your existing Mac for Resolume</strong> — replaces second MacBook Pro (<del>$3,000)
+Run Resolume Avenue (</del>$500) on your current Mac alongside Ableton. Use a USB-C to HDMI adapter to output visuals to a second screen, projector, or LED wall. Tighter on CPU but totally manageable if your Mac is modern. Saves ~$3,000.</p>
+<p><strong>Beyerdynamic DT 770 Pro</strong> (<del>$150) — replaces DT 1770 Pro (</del>$500)
+Same Beyerdynamic build quality, slightly less accurate but still excellent for live monitoring. Saves ~$350.</p>
+<p><strong>Yamaha HS5 Monitors</strong> (<del>$400/pair) — replaces HS8 (</del>$1,000)
+Same Yamaha HS family, slightly smaller drivers. Plenty for booth monitoring. Saves ~$600.</p>
+<hr>
+<h3>Option D Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Option C</th>
+<th>Option D</th>
+<th>Savings</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>DJ Core</td>
+<td>CDJ-3000s + DJM-A9 ($7,300)</td>
+<td>SC Live 4 ($3,200)</td>
+<td>$4,100</td>
+</tr>
+<tr>
+<td>Push 3 Standalone</td>
+<td>$1,500</td>
+<td>$1,500</td>
+<td>—</td>
+</tr>
+<tr>
+<td>SP-404 MK2</td>
+<td>$500</td>
+<td>$500</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Ableton Suite</td>
+<td>$750</td>
+<td>$750</td>
+<td>—</td>
+</tr>
+<tr>
+<td>OP-1 Field</td>
+<td>$1,800</td>
+<td>Cut</td>
+<td>$1,800</td>
+</tr>
+<tr>
+<td>Audio Interface</td>
+<td>RME UFX+ ($3,000)</td>
+<td>RME Babyface Pro FS ($800)</td>
+<td>$2,200</td>
+</tr>
+<tr>
+<td>Pioneer RMX-1000</td>
+<td>$700</td>
+<td>$700</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Eventide H9 Max</td>
+<td>$700</td>
+<td>Cut</td>
+<td>$700</td>
+</tr>
+<tr>
+<td>iPad + Lemur</td>
+<td>$1,300</td>
+<td>iPad 11 + Lemur ($900)</td>
+<td>$400</td>
+</tr>
+<tr>
+<td>SoftStep 2</td>
+<td>$200</td>
+<td>$200</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Visuals Mac + Resolume</td>
+<td>$3,500</td>
+<td>Resolume on existing Mac ($500)</td>
+<td>$3,000</td>
+</tr>
+<tr>
+<td>Headphones</td>
+<td>DT 1770 ($500)</td>
+<td>DT 770 ($150)</td>
+<td>$350</td>
+</tr>
+<tr>
+<td>Monitors</td>
+<td>HS8 ($1,000)</td>
+<td>HS5 ($400)</td>
+<td>$600</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td><strong>~$22,750</strong></td>
+<td><strong>~$9,600</strong></td>
+<td><strong>$13,150</strong></td>
+</tr>
+</tbody></table>
+<hr>
+<h3>What You Give Up vs Option C</h3>
+<ul>
+<li>No CDJ-3000 feel — SC Live 4 jog wheels are good but not the same as CDJ</li>
+<li>No OP-1 Field — lose the wildcard instrument (add it later as a want)</li>
+<li>No Eventide H9 — lose hardware effects depth (software fills most of this gap)</li>
+<li>Tighter CPU headroom if running Ableton + Resolume on same Mac</li>
+<li>Slightly less accurate headphone monitoring</li>
+</ul>
+<h3>What You Keep</h3>
+<ul>
+<li>Full standalone capability (SC Live 4 + Push 3 both standalone)</li>
+<li>Ableton Link tempo sync across everything</li>
+<li>Hardware sample firing (SP-404)</li>
+<li>Real-time synced visuals (Resolume)</li>
+<li>RME reliability for audio</li>
+<li>Hands-free foot control (SoftStep)</li>
+<li>Custom iPad control surface (Lemur)</li>
+</ul>
+<h3>Best Add-Ons Later (in order of priority)</h3>
+<ol>
+<li>OP-1 Field (~$1,800) — when budget allows, adds the most unique capability</li>
+<li>Eventide H9 Max (~$700) — hardware effects depth</li>
+<li>Second MacBook for dedicated Resolume (~$2,000 refurb) — frees up CPU</li>
+<li>CDJ-3000 pair + DJM-A9 — if you ever need club-standard gear for touring</li>
+</ol>
+<p><em>Updated: March 14, 2026</em></p>
+<hr>
+<h2>Live PA Best Practices — SOPs from Pro Performers</h2>
+<p>Based on how touring artists like Porter Robinson, deadmau5, Flume, RL Grime, Four Tet, and mashup/open-format live performers structure their rigs and workflows.</p>
+<hr>
+<h3>1. The Golden Rules</h3>
+<ul>
+<li><strong>Never touch a mouse on stage.</strong> Everything you need must be mapped to a physical control. If you&#39;re clicking, you&#39;ve already lost.</li>
+<li><strong>Build redundancy into everything.</strong> Two of anything critical — laptop backup, audio interface backup, the full set on a USB if Ableton dies.</li>
+<li><strong>The set should run without you if needed.</strong> Follow Actions handle the transitions. You&#39;re adding to it, not holding it together.</li>
+<li><strong>Color everything.</strong> In a dark venue at 2 AM, you navigate by color, not by reading.</li>
+<li><strong>Warp every clip before show day.</strong> Never warp on stage.</li>
+</ul>
+<hr>
+<h3>2. Ableton Set Architecture — How the Pros Build It</h3>
+<p><strong>The Track Layout (left to right):</strong></p>
+<pre><code>[DRUMS] [PERC] [BASS] [CHORDS] [LEAD/MELODY] [VOCALS] [FX HITS] [LOOPS] [MASTER FX]
+</code></pre>
+<p>Each column is one sound type. Each row of clips = one &quot;moment&quot; or section of your set.</p>
+<p><strong>Color coding by energy (non-negotiable):</strong></p>
+<ul>
+<li>🟢 Green = intro / low energy / rebuild</li>
+<li>🟡 Yellow = mid energy / verse / groove</li>
+<li>🔴 Red = peak / drop / climax</li>
+<li>🔵 Blue = breakdown / emotional moment</li>
+<li>⚪ White = transitions / one-shots / stabs</li>
+</ul>
+<p>You scan the grid by color, not by reading text. In the dark, under pressure, this saves you.</p>
+<p><strong>Scene naming convention:</strong></p>
+<pre><code>01_INTRO
+02_BUILD_1
+03_DROP_A
+04_BREAKDOWN
+05_DROP_B_PEAK
+06_OUTRO
+</code></pre>
+<p>Number them. If you ever want to jump sections, you know exactly where you&#39;re going.</p>
+<hr>
+<h3>3. Sample Organization — Where Everything Lives</h3>
+<p><strong>Folder structure (do this before you build anything):</strong></p>
+<pre><code>/Live Set Samples/
+├── Drums/
+│   ├── Kicks/
+│   ├── Snares/
+│   ├── Hi-Hats/
+│   └── Full Loops/
+├── Bass/
+│   ├── Sub Bass/
+│   ├── Synth Bass/
+│   └── Bass Loops/
+├── Chords + Pads/
+├── Melodies + Leads/
+├── Vocals/
+│   ├── Full Phrases/
+│   ├── Chops/
+│   └── Ad-libs/
+├── FX/
+│   ├── Risers/
+│   ├── Downlifters/
+│   ├── Impacts/
+│   ├── White Noise/
+│   └── Crowd FX/
+├── Stabs + Hits/
+├── Mashup Elements/
+│   ├── By Song Title/
+│   └── Acapellas/
+└── Stems/
+    └── By Track Name/
+</code></pre>
+<p><strong>The key insight from top performers:</strong> Everything is pre-labeled with <strong>key and BPM</strong> in the filename.</p>
+<pre><code>kick_heavy_01.wav → kick_heavy_01_128bpm.wav
+vocal_chop_yeah_Gm.wav
+riser_white_8bar_130bpm.wav
+</code></pre>
+<p>You never have to guess if something will fit. You see it at a glance.</p>
+<hr>
+<h3>4. The Drum Rack Setup (SP-404 or Ableton)</h3>
+<p>Every pro live PA has a dedicated pad bank for performance hits. Organize it like this:</p>
+<p><strong>Pad layout (4x4 grid):</strong></p>
+<pre><code>[RISER 2bar] [RISER 4bar] [RISER 8bar] [IMPACT HIT]
+[DOWNLIFT]   [WHITE NOISE] [CROWD YEA] [AIRHORN]
+[VOCAL CHOP1][VOCAL CHOP2][VOCAL CHOP3][VOCAL STAB]
+[KICK SHOT]  [SNARE SHOT] [CLAP SHOT] [808 BOOM]
+</code></pre>
+<p>Top row = FX and transitions (reach for these on every drop)
+Second row = more FX hits
+Third row = vocal one-shots for mashup moments
+Bottom row = drum one-shots for fills and emphasis</p>
+<p><strong>Color code the pads to match the grid colors above.</strong> Red pads = big impacts. Blue pads = smooth/vocal. Green pads = transitions.</p>
+<hr>
+<h3>5. Macro Mapping — The Eight Knobs That Run Everything</h3>
+<p>Every Ableton Group Track gets 8 macros. Map them the same way on every track so muscle memory takes over:</p>
+<table>
+<thead>
+<tr>
+<th>Knob</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Filter Cutoff</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Filter Resonance</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Reverb Send</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Delay Send</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Volume</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Distortion / Drive</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Pitch / Transpose</td>
+</tr>
+<tr>
+<td>8</td>
+<td>LFO Rate / Chop Speed</td>
+</tr>
+</tbody></table>
+<p>Filter cutoff on Knob 1 is the DJ move — cut the bass out, sweep the filter up, bring it back. You&#39;ll use this constantly.</p>
+<hr>
+<h3>6. Live Loop Workflow (Looping on the Fly)</h3>
+<p>Set up 4–6 &quot;capture tracks&quot; — always armed, always ready.</p>
+<p><strong>How pros use them:</strong></p>
+<ol>
+<li>Pre-set loop length (4 bars, 8 bars) before the moment</li>
+<li>Hit record → play something live (on Push, on a synth, sing into a mic)</li>
+<li>Loop fires automatically in sync with the master clock</li>
+<li>Stack layers on top — bass loop, then melody loop, then vocal loop</li>
+<li>Clear them one by one for a dramatic strip-down breakdown</li>
+</ol>
+<p><strong>Key:</strong> Set Follow Actions on loop clips to &quot;loop again&quot; indefinitely. They keep going until you manually stop them. No babysitting.</p>
+<hr>
+<h3>7. Mashup-Specific Workflow (Your Lane)</h3>
+<p>For open-format mashup live PA (Girl Talk, Crooklyn Clan style), the workflow is different from pure electronic PA.</p>
+<p><strong>How it works:</strong></p>
+<ul>
+<li>Build &quot;blocks&quot; not full songs. Each block is 16–32 bars of a mashup moment.</li>
+<li>Stack the acapella of Song A over the instrumental of Song B — pre-built, pre-warped, in the clip grid.</li>
+<li>Launch blocks in real time. Transition with an FX hit or riser between them.</li>
+<li>Keep 3–4 blocks at the same energy level so you can extend a peak if the crowd is going nuts.</li>
+</ul>
+<p><strong>The secret weapon:</strong> Stems. Strip your tracks down to stems (drums, bass, top) instead of full mixes. Lets you swap drums from one song under the vocals of another live — real-time remixing nobody else in the room can do.</p>
+<p><strong>Stem tools:</strong> Moises, Spleeter, or the stems feature in Rekordbox/Virtual DJ.</p>
+<hr>
+<h3>8. Day-Of Show SOP (Run This Every Time)</h3>
+<p><strong>2 hours before:</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> Open set, verify all samples load (orange missing files = disaster)</li>
+<li><input disabled="" type="checkbox"> Check all MIDI mappings still assigned (they sometimes drift after updates)</li>
+<li><input disabled="" type="checkbox"> Verify audio routing — Ableton out to correct interface channels</li>
+<li><input disabled="" type="checkbox"> Load the same set on backup laptop</li>
+<li><input disabled="" type="checkbox"> Charge everything with a battery</li>
+</ul>
+<p><strong>Soundcheck:</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> Play a clip on every track, confirm it comes through PA correctly</li>
+<li><input disabled="" type="checkbox"> Check headphone mix — can you hear what you need to hear?</li>
+<li><input disabled="" type="checkbox"> Verify Ableton Link locked to Virtual DJ (if using both)</li>
+<li><input disabled="" type="checkbox"> Run through your opening 2 minutes cold — exactly what you&#39;ll do when you walk on</li>
+</ul>
+<p><strong>At the gig:</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> Buffer size: 256 samples minimum (512 if older Mac). Not 128 — too risky live.</li>
+<li><input disabled="" type="checkbox"> Turn off WiFi notifications, Do Not Disturb on</li>
+<li><input disabled="" type="checkbox"> Close every app except Ableton and Virtual DJ</li>
+<li><input disabled="" type="checkbox"> Set Mac to never sleep, screensaver off, display brightness down</li>
+</ul>
+<p><strong>Backup plan:</strong></p>
+<ul>
+<li>Full pre-arranged set in Arrangement View — if Session View falls apart, hit spacebar and it plays a complete set automatically. Nobody in the audience knows.</li>
+</ul>
+<hr>
+<h3>9. How the Rig Talks to Itself (Integration Map)</h3>
+<pre><code>Virtual DJ (tracks/DJ set)
+    ↓ Ableton Link (tempo)
+Ableton (live production, loops, samples)
+    ↓ MIDI
+Push 3 (performance control — clips, pads, knobs)
+    ↓ MIDI
+MIDI controller (channel levels, mutes, faders)
+    ↓ MIDI
+SoftStep (hands-free scene launch, looper)
+    ↓ OSC/WiFi
+iPad Lemur (visual macro control, custom faders)
+
+All audio ──► Audio Interface ──► DJ Mixer ──► PA
+Resolume ──► Ableton Link ──► Synced visuals
+</code></pre>
+<p>Everything is on one clock. Change tempo anywhere and it propagates everywhere. That&#39;s the whole game.</p>
+<hr>
+<h3>10. The Mental Model — How to Think About a Live Set</h3>
+<p><strong>Before the show:</strong> You&#39;re a programmer. Build blocks, warp samples, map controls. No improvisation here — this is prep work.</p>
+<p><strong>During the show:</strong> You&#39;re a musician AND a DJ. The structure is your safety net. Everything else is reaction — reading the room, extending peaks, dropping to a breakdown when people need to breathe.</p>
+<p><strong>The pro move:</strong> Build more than you&#39;ll use. 40 scenes for a 60-minute set. You&#39;ll use 25 of them. The other 15 are there if the crowd tells you to go somewhere you didn&#39;t plan.</p>
+<p><em>Updated: March 14, 2026</em></p>
+<hr>
+<h2>SICKICK Reference — Live PA Setup &amp; Workflow</h2>
+<p>SICKICK (Canadian DJ/producer) is one of the closest existing models to what ANIMAL is building — live remixing, mashups, original production layered over known tracks, all happening in real time in front of an audience.</p>
+<hr>
+<h3>Known Gear (from studio videos and live footage)</h3>
+<ul>
+<li><strong>MacBook Pro</strong> — main brain, runs Ableton</li>
+<li><strong>Ableton Live Suite</strong> — Session View, heavy macro use</li>
+<li><strong>Ableton Push 2</strong> — clip launching, pad performance, macro control</li>
+<li><strong>2x Pioneer CDJ-2000NXS2</strong> — track playback, acapellas, stems</li>
+<li><strong>Pioneer DJM-900NXS2</strong> — main mixer, where Ableton and CDJs meet</li>
+<li><strong>iPad</strong> — secondary control surface, custom layout</li>
+<li><strong>Additional MIDI controllers</strong> — varies by session/show</li>
+</ul>
+<hr>
+<h3>How He Structures a Performance</h3>
+<p><strong>The core concept:</strong> He doesn&#39;t play a pre-built set. He loads a well-known track (or its stems/acapella) and builds a live remix around it on the fly in front of the audience. The performance IS the production.</p>
+<p><strong>CDJs handle:</strong></p>
+<ul>
+<li>Full track playback</li>
+<li>Acapellas of the song being remixed</li>
+<li>Stems (when available)</li>
+</ul>
+<p><strong>Ableton handles:</strong></p>
+<ul>
+<li>His original drums, bass, synths, and loops</li>
+<li>Effects processing on the incoming CDJ signal</li>
+<li>Live clip launching and looping</li>
+<li>All production layers underneath the vocal/original</li>
+</ul>
+<p><strong>Pioneer mixer handles:</strong></p>
+<ul>
+<li>Blending CDJ and Ableton channels together</li>
+<li>EQ manipulation live (kill bass, sweep filter)</li>
+<li>Send/return effects</li>
+<li>The master output to PA</li>
+</ul>
+<hr>
+<h3>His Pre-Built Sound Library</h3>
+<p>This is the key to making it look effortless — he&#39;s not building from scratch on stage. Before every show:</p>
+<ul>
+<li><strong>Massive sample library organized by key and vibe</strong> — drums, bass hits, synth stabs, chord loops, FX</li>
+<li>All clips are pre-warped and key-tagged</li>
+<li>He knows his library cold — when he hears a vocal, he already knows which bass loop fits in that key</li>
+<li><strong>Pre-built production &quot;sketches&quot;</strong> — loose arrangements in Ableton that work across multiple songs in the same key/tempo range</li>
+</ul>
+<p>The live performance is assembly, not creation. The creation happened in the studio. On stage he&#39;s just snapping pieces together faster than the audience can track.</p>
+<hr>
+<h3>Macro Strategy</h3>
+<p>Push 2 macros mapped to:</p>
+<ul>
+<li>Filter cutoff on incoming CDJ channel (routed through Ableton)</li>
+<li>Reverb throw on vocals</li>
+<li>Delay feedback</li>
+<li>Pitch/transpose on loops</li>
+<li>Stutter/beat repeat rate</li>
+</ul>
+<p>He&#39;s constantly tweaking these — the filter sweeps, reverb throws, and stutter effects are what make it feel live and human rather than a playback set.</p>
+<hr>
+<h3>The Workflow Loop (What&#39;s Actually Happening)</h3>
+<pre><code>1. Load track/acapella on CDJ → play into mixer
+2. Identify key and tempo → match Ableton session
+3. Launch bass loop + drum loop on Push → blends under the acapella
+4. Add production layers one at a time (builds tension)
+5. Drop — big moment, everything hits together
+6. Strip layers back → let the original vocal breathe
+7. Transition into next track/acapella
+8. Repeat — each &quot;song&quot; is 2–4 minutes of live remix
+</code></pre>
+<hr>
+<h3>What You Can Steal From His Approach</h3>
+<ol>
+<li><strong>Build your library first.</strong> Before you perform, you need 500+ pre-warped, key-tagged clips. That library IS your instrument.</li>
+<li><strong>Learn 20 songs cold.</strong> Know exactly which of your elements fit over the 20 tracks you&#39;ll likely remix. No searching during the show.</li>
+<li><strong>The filter sweep IS the performance.</strong> Half of what makes his sets look impressive is just aggressive filter and reverb manipulation in real time. Master that one move and everything else follows.</li>
+<li><strong>Acapellas are gold.</strong> The more acapellas you have pre-warped and ready, the more live remix moments you can create on demand.</li>
+<li><strong>React to the room.</strong> He stays on a moment if the crowd responds — extends it, layers more. If something isn&#39;t landing, he moves. Read the room, not your setlist.</li>
+</ol>
+<hr>
+<h3>Where to Study His Setup</h3>
+<ul>
+<li><strong>YouTube: SICKICK channel</strong> — has multiple studio walkthrough and live session videos</li>
+<li>Look specifically for his &quot;remixing in the studio&quot; series — shows his actual Ableton layout and workflow</li>
+<li>Instagram Live sessions — raw, unedited, shows real-time decision making</li>
+</ul>
+<hr>
+<h3>The ANIMAL Advantage</h3>
+<p>SICKICK built his reputation on remixing other people&#39;s music live. You have everything he has PLUS:</p>
+<ul>
+<li>25+ years of actual DJ performance experience (reading crowds, timing, energy management)</li>
+<li>Crooklyn Clan mashup pedigree — you&#39;ve been doing the concept longer than it was called a live PA</li>
+<li>Your own original music catalog to pull from (Kade, Madison, Aria) — not just other people&#39;s tracks</li>
+<li>Deep genre versatility — EDM, hip-hop, pop, rock all in one set</li>
+</ul>
+<p>The setup is the same. The instincts are already there. It&#39;s just about getting the rig dialed in.</p>
+<p><em>Updated: March 14, 2026</em></p>

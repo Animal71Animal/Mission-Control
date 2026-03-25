@@ -1,0 +1,885 @@
+{
+  "project": "ANIMAL DJ Automation",
+  "calendar_start_date": "2026-03-25",
+  "accounts": [
+    {
+      "handle": "@ANIMAL",
+      "role": "Brand/Product",
+      "focus": "Features, updates, company culture",
+      "posting_schedule": "Daily"
+    },
+    {
+      "handle": "@KadeRivers",
+      "role": "Founder/Vision",
+      "focus": "Behind-the-scenes, product philosophy",
+      "posting_schedule": "3-4x/week"
+    },
+    {
+      "handle": "@AriaVale",
+      "role": "Head of Product",
+      "focus": "Educational, technical, industry authority",
+      "posting_schedule": "3-4x/week"
+    },
+    {
+      "handle": "@MadisonBlair",
+      "role": "Head of Growth",
+      "focus": "Marketing tips, growth hacks, brand voice",
+      "posting_schedule": "Daily"
+    }
+  ],
+  "phases": [
+    {
+      "name": "Warmup",
+      "days": "1-7",
+      "theme": "Establish presence, introduce characters, test formats",
+      "content_mix": {
+        "educational": 30,
+        "entertainment": 40,
+        "promotional": 10,
+        "behind_the_scenes": 20
+      }
+    },
+    {
+      "name": "Build",
+      "days": "8-21",
+      "theme": "Deepen engagement, launch story arcs, build authority",
+      "content_mix": {
+        "educational": 40,
+        "entertainment": 30,
+        "promotional": 15,
+        "behind_the_scenes": 15
+      }
+    },
+    {
+      "name": "Release",
+      "days": "22-30",
+      "theme": "Product announcement, conversion focus, momentum",
+      "content_mix": {
+        "educational": 20,
+        "entertainment": 20,
+        "promotional": 45,
+        "behind_the_scenes": 15
+      }
+    }
+  ],
+  "content_calendar": [
+    {
+      "day": 1,
+      "phase": "Warmup",
+      "posts": [
+        {
+          "account": "@ANIMAL",
+          "type": "intro",
+          "title": "We Are ANIMAL",
+          "hook": "Most DJ automation treats dancers like cogs in a machine. We built something different.",
+          "cta": "Follow the journey",
+          "format": "video",
+          "duration_sec": 15
+        },
+        {
+          "account": "@KadeRivers",
+          "type": "intro",
+          "title": "The Architect",
+          "hook": "I spent 3 years in my garage building software because I watched a club I loved go under.",
+          "cta": "Meet the team",
+          "format": "video",
+          "duration_sec": 30
+        },
+        {
+          "account": "@MadisonBlair",
+          "type": "intro",
+          "title": "The Voice",
+          "hook": "I turned a club's Instagram from 2K to 200K followers. Now I'm building a brand from zero.",
+          "cta": "Watch us grow",
+          "format": "video",
+          "duration_sec": 20
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "phase": "Warmup",
+      "posts": [
+        {
+          "account": "@AriaVale",
+          "type": "intro",
+          "title": "The Operator",
+          "hook": "I was supposed to be a concert pianist. Instead, I learned to read a room like sheet music.",
+          "cta": "Learn the craft",
+          "format": "video",
+          "duration_sec": 25
+        },
+        {
+          "account": "@ANIMAL",
+          "type": "educational",
+          "title": "The Problem with Automation",
+          "hook": "3 things every club owner learns the hard way about DJ software.",
+          "cta": "Save this post",
+          "format": "carousel",
+          "slides": 5
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "phase": "Warmup",
+      "posts": [
+        {
+          "account": "@KadeRivers",
+          "type": "behind_the_scenes",
+          "title": "The Garage Years - Part 1",
+          "hook": "The night I spilled coffee on the server and almost killed ANIMAL before it was born.",
+          "cta": "Part 2 tomorrow",
+          "format": "video",
+          "duration_sec": 45,
+          "arc": "The Garage Years"
+        },
+        {
+          "account": "@MadisonBlair",
+          "type": "educational",
+          "title": "Building in Public",
+          "hook": "Why we're sharing everything—including our failures.",
+          "cta": "Comment your thoughts",
+          "format": "video",
+          "duration_sec": 30
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "phase": "Warmup",
+      "posts": [
+        {
+          "account": "@AriaVale",
+          "type": "educational",
+          "title": "Room Reads 101",
+          "hook": "The 30-second rule most DJs break—and how to fix it.",
+          "cta": "Follow for more tips",
+          "format": "video",
+          "duration_sec": 45,
+          "arc": "Room Reads"
+        },
+        {
+          "account": "@ANIMAL",
+          "type": "entertainment",
+          "title": "POV: You're a dancer using outdated software",
+          "hook": "When the intro cuts off 10 seconds too early... every single time.",
+          "cta": "Relatable?",
+          "format": "video",
+          "duration_sec": 15
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "phase": "Warmup",
+      "posts": [
+        {
+          "account": "@KadeRivers",
+          "type": "behind_the_scenes",
+          "title": "The Garage Years - Part 2",
+          "hook": "The argument that convinced Aria to join—and why she ignored me for 3 weeks first.",
+          "cta": "Part 3 coming",
+          "format": "video",
+          "duration_sec": 50,
+          "arc": "The Garage Years"
+        },
+        {
+          "account": "@MadisonBlair",
+          "type": "educational",
+          "title": "The DM That Changed Everything",
+          "hook": "How to cold outreach without being creepy (featuring the message that got me hired).",
+          "cta": "Save this template",
+          "format": "carousel",
+          "slides": 4
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "phase": "Warmup",
+      "posts": [
+        {
+          "account": "@AriaVale",
+          "type": "educational",
+          "title": "Room Reads - Energy Mapping",
+          "hook": "How to visualize a room's energy before you even touch the decks.",
+          "cta": "Try this tonight",
+          "format": "video",
+          "duration_sec": 40,
+          "arc": "Room Reads"
+        },
+        {
+          "account": "@ANIMAL",
+          "type": "community",
+          "title": "Dancer Spotlight Preview",
+          "hook": "Meet Jasmine. She's been fighting her club's automation for 2 years. Tomorrow, her story.",
+          "cta": "Turn on notifications",
+          "format": "video",
+          "duration_sec": 20
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "phase": "Warmup",
+      "posts": [
+        {
+          "account": "@ANIMAL",
+          "type": "community",
+          "title": "The Dancer Portal - Jasmine's Story",
+          "hook": "The feature that finally gave her control over her own performance.",
+          "cta": "Tag a dancer who needs this",
+          "format": "video",
+          "duration_sec": 60,
+          "arc": "The Dancer Portal"
+        },
+        {
+          "account": "@KadeRivers",
+          "type": "philosophy",
+          "title": "The Jaguar Test",
+          "hook": "Every feature we build has to pass one question: does this help the dancer own the room?",
+          "cta": "Our philosophy",
+          "format": "video",
+          "duration_sec": 30
+        },
+        {
+          "account": "@MadisonBlair",
+          "type": "educational",
+          "title": "Week 1 Recap",
+          "hook": "What we learned from posting every day for 7 days.",
+          "cta": "Week 2 starts now",
+          "format": "carousel",
+          "slides": 6
+        }
+      ]
+    },
+    {
+      "day": 8,
+      "phase": "Build",
+      "posts": [
+        {
+          "account": "@AriaVale",
+          "type": "educational",
+          "title": "Room Reads - Transition Anatomy",
+          "hook": "Breaking down a transition that made the entire room hold its breath.",
+          "cta": "Save for your next set",
+          "format": "video",
+          "duration_sec": 55,
+          "arc": "Room Reads"
+        },
+        {
+          "account": "@ANIMAL",
+          "type": "product_tease",
+          "title": "3 Things Our AI Does Different",
+          "hook": "It's not just automation. It's intelligence.",
+          "cta": "Guess #1 in comments",
+          "format": "video",
+          "duration_sec": 20
+        }
+      ]
+    },
+    {
+      "day": 9,
+      "phase": "Build",
+      "posts": [
+        {
+          "account": "@KadeRivers",
+          "type": "behind_the_scenes",
+          "title": "The Garage Years - Part 3",
+          "hook": "Madison's 20-point critique of our early branding—and why I hired her anyway.",
+          "cta": "The finale next",
+          "format": "video",
+          "duration_sec": 50,
+          "arc": "The Garage Years"
+        },
+        {
+          "account": "@MadisonBlair",
+          "type": "educational",
+          "title": "How to Critique Your Future Boss",
+          "hook": "The framework I used to roast ANIMAL's branding—and get hired.",
+          "cta": "Use this framework",
+          "format": "carousel",
+          "slides": 5
+        }
+      ]
+    },
+    {
+      "day": 10,
+      "phase": "Build",
+      "posts": [
+        {
+          "account": "@ANIMAL",
+          "type": "product_tease",
+          "title": "AI Feature Reveal #1: Energy Detection",
+          "hook": "Real-time crowd analysis that knows when the room is peaking.",
+          "cta": "Feature #2 tomorrow",
+          "format": "video",
+          "duration_sec": 30
+        },
+        {
+          "account": "@AriaVale",
+          "type": "educational",
+          "title": "Room Reads - When the Room Fights Back",
+          "hook": "Reading a room that's not reading you back—and how to win them over.",
+          "cta": "For struggling DJs",
+          "format": "video",
+          "duration_sec": 50,
+          "arc": "Room Reads"
+        }
+      ]
+    },
+    {
+      "day": 11,
+      "phase": "Build",
+      "posts": [
+        {
+          "account": "@ANIMAL",
+          "type": "product_tease",
+          "title": "AI Feature Reveal #2: Smart Intros",
+          "hook": "Automatic detection of the best entry point—no more manual cue points.",
+          "cta": "One more to go",
+          "format": "video",
+          "duration_sec": 25
+        },
+        {
+          "account": "@MadisonBlair",
+          "type": "educational",
+          "title": "Building Anticipation",
+          "hook": "The psychology behind our 3-day feature reveal strategy.",
+          "cta": "Steal this playbook",
+          "format": "video",
+          "duration_sec": 35
+        }
+      ]
+    },
+    {
+      "day": 12,
+      "phase": "Build",
+      "posts": [
+        {
+          "account": "@KadeRivers",
+          "type": "behind_the_scenes",
+          "title": "The Garage Years - Finale",
+          "hook": "The night we named it ANIMAL—and why that word means everything.",
+          "cta": "The origin story",
+          "format": "video",
+          "duration_sec": 60,
+          "arc": "The Garage Years"
+        },
+        {
+          "account": "@ANIMAL",
+          "type": "product_tease",
+          "title": "AI Feature Reveal #3: Dynamic Extension",
+          "hook": "When the room is peaking, ANIMAL knows to add 30 more seconds.",
+          "cta": "Full reveal soon",
+          "format": "video",
+          "duration_sec": 30
+        }
+      ]
+    },
+    {
+      "day": 13,
+      "phase": "Build",
+      "posts": [
+        {
+          "account": "@AriaVale",
+          "type": "educational",
+          "title": "Room Reads - The Psychology of Peak Moments",
+          "hook": "Why the best DJs are really just conductors of human emotion.",
+          "cta": "Master the craft",
+          "format": "video",
+          "duration_sec": 55,
+          "arc": "Room Reads"
+        },
+        {
+          "account": "@ANIMAL",
+          "type": "community",
+          "title": "Dancer Spotlight - Marcus",
+          "hook": "From backup to headliner: how control over his music changed his trajectory.",
+          "cta": "His full story",
+          "format": "video",
+          "duration_sec": 60,
+          "arc": "The Dancer Portal"
+        }
+      ]
+    },
+    {
+      "day": 14,
+      "phase": "Build",
+      "posts": [
+        {
+          "account": "@MadisonBlair",
+          "type": "educational",
+          "title": "Week 2 Analytics Deep Dive",
+          "hook": "What our numbers tell us about what's working (and what's not).",
+          "cta": "Transparent growth",
+          "format": "carousel",
+          "slides": 7
+        },
+        {
+          "account": "@KadeRivers",
+          "type": "philosophy",
+          "title": "Technology Should Roar, Not Hum",
+          "hook": "The mission statement on a napkin that guides every decision we make.",
+          "cta": "Our manifesto",
+          "format": "video",
+          "duration_sec": 40
+        },
+        {
+          "account": "@ANIMAL",
+          "type": "community",
+          "title": "Comment Response Compilation",
+          "hook": "You asked, we answered. The best questions from Week 2.",
+          "cta": "Keep them coming",
+          "format": "video",
+          "duration_sec": 45
+        }
+      ]
+    },
+    {
+      "day": 15,
+      "phase": "Build",
+      "posts": [
+        {
+          "account": "@ANIMAL",
+          "type": "educational",
+          "title": "The Competition: CoverJock",
+          "hook": "Respect to the pioneers. Here's where we see room to improve.",
+          "cta": "Fair comparison",
+          "format": "carousel",
+          "slides": 6
+        },
+        {
+          "account": "@AriaVale",
+          "type": "educational",
+          "title": "Room Reads - Live Breakdown",
+          "hook": "I analyze real club footage to show you what I see.",
+          "cta": "See like a pro",
+          "format": "video",
+          "duration_sec": 60,
+          "arc": "Room Reads"
+        }
+      ]
+    },
+    {
+      "day": 16,
+      "phase": "Build",
+      "posts": [
+        {
+          "account": "@MadisonBlair",
+          "type": "educational",
+          "title": "Building a Brand from Zero",
+          "hook": "The 3-pillar content strategy behind ANIMAL's growth.",
+          "cta": "Copy this framework",
+          "format": "carousel",
+          "slides": 5
+        },
+        {
+          "account": "@ANIMAL",
+          "type": "community",
+          "title": "Dancer Spotlight - The Voice Feature",
+          "hook": "How one feature literally saved a dancer's voice—and her career.",
+          "cta": "Her testimony",
+          "format": "video",
+          "duration_sec": 55,
+          "arc": "The Dancer Portal"
+        }
+      ]
+    },
+    {
+      "day": 17,
+      "phase": "Build",
+      "posts": [
+        {
+          "account": "@KadeRivers",
+          "type": "behind_the_scenes",
+          "title": "A Day in the Life",
+          "hook": "What I actually do as a founder (spoiler: not what you think).",
+          "cta": "Real founder life",
+          "format": "video",
+          "duration_sec": 50
+        },
+        {
+          "account": "@AriaVale",
+          "type": "educational",
+          "title": "Room Reads - Advanced Techniques",
+          "hook": "The subtle cues that separate good DJs from great ones.",
+          "cta": "Level up",
+          "format": "video",
+          "duration_sec": 50,
+          "arc": "Room Reads"
+        }
+      ]
+    },
+    {
+      "day": 18,
+      "phase": "Build",
+      "posts": [
+        {
+          "account": "@ANIMAL",
+          "type": "product_tease",
+          "title": "The Dancer Portal Walkthrough",
+          "hook": "A 60-second tour of the feature we're most proud of.",
+          "cta": "Waitlist opens soon",
+          "format": "video",
+          "duration_sec": 60
+        },
+        {
+          "account": "@MadisonBlair",
+          "type": "educational",
+          "title": "Launch Strategy Teardown",
+          "hook": "How we're planning the final 10 days of this campaign.",
+          "cta": "Steal our playbook",
+          "format": "carousel",
+          "slides": 6
+        }
+      ]
+    },
+    {
+      "day": 19,
+      "phase": "Build",
+      "posts": [
+        {
+          "account": "@KadeRivers",
+          "type": "philosophy",
+          "title": "Why We Named It ANIMAL",
+          "hook": "The story behind the name—and why it matters more than you think.",
+          "cta": "The full story",
+          "format": "video",
+          "duration_sec": 45
+        },
+        {
+          "account": "@ANIMAL",
+          "type": "community",
+          "title": "Beta Tester Applications Open",
+          "hook": "Want to try ANIMAL before anyone else? Here's how.",
+          "cta": "Link in bio",
+          "format": "video",
+          "duration_sec": 30
+        }
+      ]
+    },
+    {
+      "day": 20,
+      "phase": "Build",
+      "posts": [
+        {
+          "account": "@AriaVale",
+          "type": "educational",
+          "title": "Room Reads - The Complete Series",
+          "hook": "Every Room Reads tip in one place. Save this post.",
+          "cta": "Your DJ bible",
+          "format": "carousel",
+          "slides": 10,
+          "arc": "Room Reads"
+        },
+        {
+          "account": "@MadisonBlair",
+          "type": "educational",
+          "title": "Pre-Launch Checklist",
+          "hook": "Everything we're doing in the final 10 days before release.",
+          "cta": "Use this checklist",
+          "format": "carousel",
+          "slides": 8
+        }
+      ]
+    },
+    {
+      "day": 21,
+      "phase": "Build",
+      "posts": [
+        {
+          "account": "@ANIMAL",
+          "type": "community",
+          "title": "Week 3 Community Recap",
+          "hook": "The best user-generated content, comments, and moments from this week.",
+          "cta": "You made this",
+          "format": "video",
+          "duration_sec": 45
+        },
+        {
+          "account": "@KadeRivers",
+          "type": "behind_the_scenes",
+          "title": "The Final Countdown Begins",
+          "hook": "What the next 9 days look like for the team.",
+          "cta": "We're ready",
+          "format": "video",
+          "duration_sec": 35
+        },
+        {
+          "account": "@AriaVale",
+          "type": "educational",
+          "title": "What Makes ANIMAL Different",
+          "hook": "The 3 gaps in the market that we're here to fill.",
+          "cta": "Our advantage",
+          "format": "carousel",
+          "slides": 5
+        }
+      ]
+    },
+    {
+      "day": 22,
+      "phase": "Release",
+      "posts": [
+        {
+          "account": "@ANIMAL",
+          "type": "announcement",
+          "title": "9 Days Until Launch",
+          "hook": "The countdown starts now. Here's everything you need to know.",
+          "cta": "Save this series",
+          "format": "video",
+          "duration_sec": 30
+        },
+        {
+          "account": "@MadisonBlair",
+          "type": "educational",
+          "title": "Launch Week Content Strategy",
+          "hook": "How we're maximizing impact in the final stretch.",
+          "cta": "Our playbook",
+          "format": "carousel",
+          "slides": 6
+        }
+      ]
+    },
+    {
+      "day": 23,
+      "phase": "Release",
+      "posts": [
+        {
+          "account": "@ANIMAL",
+          "type": "announcement",
+          "title": "8 Days Until Launch: Feature Spotlight",
+          "hook": "AI Energy Detection: the feature that changes everything.",
+          "cta": "Learn more",
+          "format": "video",
+          "duration_sec": 45
+        },
+        {
+          "account": "@KadeRivers",
+          "type": "philosophy",
+          "title": "Why This Matters",
+          "hook": "The personal story behind why I built ANIMAL.",
+          "cta": "From the heart",
+          "format": "video",
+          "duration_sec": 60
+        }
+      ]
+    },
+    {
+      "day": 24,
+      "phase": "Release",
+      "posts": [
+        {
+          "account": "@ANIMAL",
+          "type": "announcement",
+          "title": "7 Days Until Launch: Pricing Reveal",
+          "hook": "How much will ANIMAL cost? Here's the breakdown.",
+          "cta": "Early bird pricing",
+          "format": "carousel",
+          "slides": 5
+        },
+        {
+          "account": "@AriaVale",
+          "type": "educational",
+          "title": "Behind the AI: How It Works",
+          "hook": "The technical explanation (made simple) of our AI features.",
+          "cta": "Tech deep dive",
+          "format": "video",
+          "duration_sec": 50
+        }
+      ]
+    },
+    {
+      "day": 25,
+      "phase": "Release",
+      "posts": [
+        {
+          "account": "@ANIMAL",
+          "type": "announcement",
+          "title": "6 Days Until Launch: Beta Stories",
+          "hook": "Real feedback from real clubs using ANIMAL.",
+          "cta": "Their words",
+          "format": "video",
+          "duration_sec": 45
+        },
+        {
+          "account": "@MadisonBlair",
+          "type": "educational",
+          "title": "How to Prepare for Launch Day",
+          "hook": "Your checklist for being ready when we go live.",
+          "cta": "Be first in line",
+          "format": "carousel",
+          "slides": 6
+        }
+      ]
+    },
+    {
+      "day": 26,
+      "phase": "Release",
+      "posts": [
+        {
+          "account": "@ANIMAL",
+          "type": "announcement",
+          "title": "5 Days Until Launch: The Team",
+          "hook": "Meet the people building ANIMAL.",
+          "cta": "Our story",
+          "format": "video",
+          "duration_sec": 40
+        },
+        {
+          "account": "@KadeRivers",
+          "type": "behind_the_scenes",
+          "title": "The Final Push",
+          "hook": "What launch week looks like from the inside.",
+          "cta": "With us",
+          "format": "video",
+          "duration_sec": 35
+        }
+      ]
+    },
+    {
+      "day": 27,
+      "phase": "Release",
+      "posts": [
+        {
+          "account": "@ANIMAL",
+          "type": "announcement",
+          "title": "4 Days Until Launch: FAQ",
+          "hook": "Answering your most-asked questions before we launch.",
+          "cta": "Got more? Ask us",
+          "format": "carousel",
+          "slides": 8
+        },
+        {
+          "account": "@AriaVale",
+          "type": "educational",
+          "title": "What Happens After You Sign Up",
+          "hook": "The onboarding process explained step-by-step.",
+          "cta": "What to expect",
+          "format": "video",
+          "duration_sec": 40
+        }
+      ]
+    },
+    {
+      "day": 28,
+      "phase": "Release",
+      "posts": [
+        {
+          "account": "@ANIMAL",
+          "type": "announcement",
+          "title": "3 Days Until Launch: The Dancer Portal",
+          "hook": "A complete walkthrough of our most-requested feature.",
+          "cta": "See it in action",
+          "format": "video",
+          "duration_sec": 60
+        },
+        {
+          "account": "@MadisonBlair",
+          "type": "educational",
+          "title": "Launch Day Strategy",
+          "hook": "How we're making sure you don't miss the announcement.",
+          "cta": "Stay tuned",
+          "format": "video",
+          "duration_sec": 30
+        }
+      ]
+    },
+    {
+      "day": 29,
+      "phase": "Release",
+      "posts": [
+        {
+          "account": "@ANIMAL",
+          "type": "announcement",
+          "title": "2 Days Until Launch: Final Teaser",
+          "hook": "One last look before everything changes.",
+          "cta": "Tomorrow's the day",
+          "format": "video",
+          "duration_sec": 30
+        },
+        {
+          "account": "@KadeRivers",
+          "type": "philosophy",
+          "title": "Thank You",
+          "hook": "To everyone who's been part of this journey—thank you.",
+          "cta": "We made it",
+          "format": "video",
+          "duration_sec": 45
+        },
+        {
+          "account": "@AriaVale",
+          "type": "educational",
+          "title": "What Comes Next",
+          "hook": "The roadmap for ANIMAL after launch day.",
+          "cta": "The future",
+          "format": "carousel",
+          "slides": 5
+        }
+      ]
+    },
+    {
+      "day": 30,
+      "phase": "Release",
+      "posts": [
+        {
+          "account": "@ANIMAL",
+          "type": "launch",
+          "title": "ANIMAL IS LIVE",
+          "hook": "The wait is over. Welcome to the future of DJ automation.",
+          "cta": "Link in bio—get started",
+          "format": "video",
+          "duration_sec": 30
+        },
+        {
+          "account": "@KadeRivers",
+          "type": "launch",
+          "title": "We Did It",
+          "hook": "From a garage to launch day. The ANIMAL story continues.",
+          "cta": "Join us",
+          "format": "video",
+          "duration_sec": 45
+        },
+        {
+          "account": "@AriaVale",
+          "type": "launch",
+          "title": "For the Dancers",
+          "hook": "This one's for every performer who deserved better tools.",
+          "cta": "This is for you",
+          "format": "video",
+          "duration_sec": 35
+        },
+        {
+          "account": "@MadisonBlair",
+          "type": "launch",
+          "title": "From 0 to Launch in 30 Days",
+          "hook": "The content strategy that built a brand from scratch.",
+          "cta": "The playbook is yours",
+          "format": "carousel",
+          "slides": 10
+        }
+      ]
+    }
+  ],
+  "hashtags": {
+    "primary": ["#ANIMAL", "#DJAutomation", "#StripClubTech"],
+    "secondary": ["#DancerLife", "#DJLife", "#ClubManagement", "#NightlifeTech"],
+    "educational": ["#DJTips", "#RoomReading", "#MusicTheory"],
+    "community": ["#DancerSpotlight", "#BehindTheScenes", "#FounderLife"]
+  },
+  "content_pillars": {
+    "educational": "Teach the craft of DJing and room reading",
+    "entertainment": "POVs, trends, relatable content",
+    "promotional": "Product features, announcements, launches",
+    "behind_the_scenes": "Founder journey, team culture, building in public",
+    "community": "Dancer spotlights, user stories, testimonials"
+  },
+  "success_metrics": {
+    "followers_total_target": 10000,
+    "engagement_rate_target": 0.08,
+    "waitlist_signups_target": 500,
+    "beta_applications_target": 50,
+    "launch_day_conversions_target": 25
+  }
+}

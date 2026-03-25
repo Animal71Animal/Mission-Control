@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission Control — WLP</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0f;
+            color: #e0e0e0;
+            min-height: 100vh;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 20px 30px;
+            border-bottom: 1px solid #2a2a3e;
+        }
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .header .status {
+            font-size: 12px;
+            color: #4ade80;
+            background: rgba(74, 222, 128, 0.1);
+            padding: 4px 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(74, 222, 128, 0.3);
+        }
+        .nav {
+            display: flex;
+            gap: 4px;
+            padding: 0 30px;
+            background: #12121a;
+            border-bottom: 1px solid #2a2a3e;
+            overflow-x: auto;
+        }
+        .nav button {
+            background: transparent;
+            border: none;
+            color: #888;
+            padding: 16px 20px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.2s;
+            white-space: nowrap;
+            border-bottom: 2px solid transparent;
+        }
+        .nav button:hover { color: #fff; }
+        .nav button.active {
+            color: #60a5fa;
+            border-bottom-color: #60a5fa;
+            background: rgba(96, 165, 250, 0.05);
+        }
+        .content {
+            padding: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        
+        /* Dashboard Grid */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: #151520;
+            border: 1px solid #2a2a3e;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .card h3 {
+            font-size: 14px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .card h3 .icon { font-size: 16px; }
+        .metric {
+            font-size: 32px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .metric-label {
+            font-size: 13px;
+            color: #666;
+        }
+        .metric-change {
+            font-size: 12px;
+            margin-top: 8px;
+        }
+        .metric-change.positive { color: #4ade80; }
+        .metric-change.negative { color: #f87171; }
+        
+        /* Lists */
+        .list-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #2a2a3e;
+        }
+        .list-item:last-child { border-bottom: none; }
+        .list-item .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .list-item .status-dot.active { background: #4ade80; }
+        .list-item .status-dot.pending { background: #fbbf24; }
+        .list-item .status-dot.stopped { background: #6b7280; }
+        .list-item .info { flex: 1; }
+        .list-item .title {
+            font-size: 14px;
+            color: #fff;
+            margin-bottom: 2px;
+        }
+        .list-item .meta {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+        th {
+            text-align: left;
+            padding: 12px;
+            color: #888;
+            font-weight: 500;
+            border-bottom: 1px solid #2a2a3e;
+        }
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #1f1f2e;
+        }
+        tr:hover td { background: rgba(255,255,255,0.02); }
+        
+        /* Artist Cards */
+        .artist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .artist-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #151520 100%);
+            border: 1px solid #2a2a3e;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .artist-card .header-img {
+            height: 120px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+        }
+        .artist-card.rock .header-img {
+            background: linear-gradient(135deg, #434343 0%, #000000 100%);
+        }
+        .artist-card.pop .header-img {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        .artist-card.edm .header-img {
+            background: linear-gradient(135deg, #e63946 0%, #4dc7c7 100%);
+        }
+        .artist-card .content {
+            padding: 20px;
+        }
+        .artist-card h4 {
+            font-size: 18px;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .artist-card .genre {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 12px;
+        }
+        .artist-card .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 12px;
+        }
+        .artist-card .stat {
+            color: #666;
+        }
+        .artist-card .stat strong {
+            color: #fff;
+            display: block;
+            font-size: 16px;
+        }
+        
+        /* Links */
+        a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+        a:hover { text-decoration: underline; }
+        
+        /* Schedule */
+        .schedule-item {
+            display: flex;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid #2a2a3e;
+        }
+        .schedule-item:last-child { border-bottom: none; }
+        .schedule-item .time {
+            width: 60px;
+            font-size: 13px;
+            color: #888;
+            font-family: monospace;
+        }
+        .schedule-item .details { flex: 1; }
+        .schedule-item .task {
+            font-size: 14px;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .schedule-item .skill {
+            font-size: 12px;
+            color: #60a5fa;
+        }
+        
+        /* Skills */
+        .skill-tag {
+            display: inline-block;
+            background: rgba(96, 165, 250, 0.1);
+            color: #60a5fa;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav { padding: 0 15px; }
+            .content { padding: 20px 15px; }
+            .dashboard-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>
+            🎛️ Mission Control
+            <span class="status">● Autonomous Active</span>
+        </h1>
+    </div>
+    
+    <div class="nav">
+        <button class="active" onclick="showTab('dashboard')">Dashboard</button>
+        <button onclick="showTab('artists')">AI Artists</button>
+        <button onclick="showTab('projects')">Projects</button>
+        <button onclick="showTab('autonomous')">Autonomous</button>
+        <button onclick="showTab('tasks')">Tasks</button>
+        <button onclick="showTab('schedule')">Schedule</button>
+        <button onclick="showTab('skills')">Skills</button>
+        <button onclick="showTab('vault')">Vault</button>
+    </div>
+    
+    <div class="content">
+        <!-- Dashboard Tab -->
+        <div id="dashboard" class="tab-content active">
+            <div class="dashboard-grid">
+                <div class="card">
+                    <h3><span class="icon">🤖</span> Autonomous Status</h3>
+                    <div class="metric">3</div>
+                    <div class="metric-label">Active Skills</div>
+                    <div class="metric-change positive">Next run: 2:00 AM</div>
+                </div>
+                <div class="card">
+                    <h3><span class="icon">🎤</span> AI Artists</h3>
+                    <div class="metric">3</div>
+                    <div class="metric-label">In Production</div>
+                    <div class="metric-change positive">Kade, Madison, Aria</div>
+                </div>
+                <div class="card">
+                    <h3><span class="icon">📋</span> Open Tasks</h3>
+                    <div class="metric">0</div>
+                    <div class="metric-label">Ready for 6 AM worker</div>
+                    <div class="metric-change positive">All caught up</div>
+                </div>
+                <div class="card">
+                    <h3><span class="icon">💾</span> Memory</h3>
+                    <div class="metric">Healthy</div>
+                    <div class="metric-label">Dream cycle at 3 AM</div>
+                    <div class="metric-change positive">No bloat detected</div>
+                </div>
+            </div>
+            
+            <div class="dashboard-grid">
+                <div class="card">
+                    <h3><span class="icon">⚡</span> Quick Actions</h3>
+                    <div class="list-item">
+                        <div class="info">
+                            <div class="title"><a href="#" onclick="showTab('artists')">View AI Artist Profiles</a></div>
+                            <div class="meta">Kade Rivers, Madison Blair, Aria Vale</div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="info">
+                            <div class="title"><a href="#" onclick="showTab('tasks')">Check Task List</a></div>
+                            <div class="meta">View open and completed tasks</div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="info">
+                            <div class="title"><a href="#" onclick="showTab('schedule')">View Autonomous Schedule</a></div>
+                            <div class="meta">2 AM, 3 AM, 6 AM, 10 AM runs</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3><span class="icon">📝</span> Recent Activity</h3>
+                    <div class="list-item">
+                        <div class="status-dot active"></div>
+                        <div class="info">
+                            <div class="title">Created autonomous-employee skill</div>
+                            <div class="meta">2 AM + 6 AM modes • 2026-03-24</div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="status-dot active"></div>
+                        <div class="info">
+                            <div class="title">Enhanced narrative-tracker with dream cycle</div>
+                            <div class="meta">Video #36 pattern • 2026-03-24</div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="status-dot active"></div>
+                        <div class="info">
+                            <div class="title">Initialized WLP-Vault</div>
+                            <div class="meta">Obsidian integration • 2026-03-24</div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="status-dot pending"></div>
+                        <div class="info">
+                            <div class="title">First autonomous run scheduled</div>
+                            <div class="meta">Tonight at 2:00 AM</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- AI Artists Tab -->
+        <div id="artists" class="tab-content">
+            <div class="artist-grid">
+                <div class="artist-card rock">
+                    <div class="header-img"></div>
+                    <div class="content">
+                        <h4>Kade Rivers</h4>
+                        <div class="genre">Modern Alternative Rock / Post-Grunge</div>
+                        <div class="stats">
+                            <div class="stat">
+                                <strong>0</strong>
+                                Tracks
+                            </div>
+                            <div class="stat">
+                                <strong>Phase 1</strong>
+                                Status
+                            </div>
+                            <div class="stat">
+                                <strong>Week 3</strong>
+                                Target
+                            </div>
+                        </div>
+                        <p style="margin-top: 12px; font-size: 12px; color: #888;">
+                            Raw, honest, cinematic rock. "Echoes" in production pipeline.
+                        </p>
+                    </div>
+                </div>
+                <div class="artist-card pop">
+                    <div class="header-img"></div>
+                    <div class="content">
+                        <h4>Madison Blair</h4>
+                        <div class="genre">Pop / Top 40 / Dance Pop</div>
+                        <div class="stats">
+                            <div class="stat">
+                                <strong>1</strong>
+                                Track
+                            </div>
+                            <div class="stat">
+                                <strong>Released</strong>
+                                Status
+                            </div>
+                            <div class="stat">
+                                <strong>Active</strong>
+                                Phase
+                            </div>
+                        </div>
+                        <p style="margin-top: 12px; font-size: 12px; color: #888;">
+                            "Confidence sounds like Madison Blair." 1 track live, second in production.
+                        </p>
+                    </div>
+                </div>
+                <div class="artist-card edm">
+                    <div class="header-img"></div>
+                    <div class="content">
+                        <h4>Aria Vale</h4>
+                        <div class="genre">EDM / Future House / Vocal Dance</div>
+                        <div class="stats">
+                            <div class="stat">
+                                <strong>0</strong>
+                                Tracks
+                            </div>
+                            <div class="stat">
+                                <strong>Phase 1</strong>
+                                Status
+                            </div>
+                            <div class="stat">
+                                <strong>Week 3</strong>
+                                Target
+                            </div>
+                        </div>
+                        <p style="margin-top: 12px; font-size: 12px; color: #888;">
+                            "Freedom in frequency." Debut single "Frequency" in production pipeline.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" style="margin-top: 20px;">
+                <h3>Artist Strategy Overview</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Artist</th>
+                            <th>Primary Platform</th>
+                            <th>Target Audience</th>
+                            <th>Current Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Kade Rivers</td>
+                            <td>TikTok / Spotify</td>
+                            <td>18-35, rock/gaming crossover</td>
+                            <td>First single "Echoes"</td>
+                        </tr>
+                        <tr>
+                            <td>Madison Blair</td>
+                            <td>TikTok / Instagram</td>
+                            <td>16-30, female-skewed pop</td>
+                            <td>Second single production</td>
+                        </tr>
+                        <tr>
+                            <td>Aria Vale</td>
+                            <td>TikTok / YouTube</td>
+                            <td>18-32, EDM/festival crowd</td>
+                            <td>First single "Frequency"</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Projects Tab -->
+        <div id="projects" class="tab-content">
+            <div class="dashboard-grid">
+                <div class="card">
+                    <h3><span class="icon">🎧</span> DJ Automation</h3>
+                    <div class="list-item">
+                        <div class="status-dot active"></div>
+                        <div class="info">
+                            <div class="title">Strip Club Automation Software</div>
+                            <div class="meta">Competitor to CoverJock • VirtualDJ integration</div>
+                        </div>
+                    </div>
+                    <p style="margin-top: 12px; font-size: 13px; color: #888;">
+                        AI-powered DJ management for gentlemen's clubs. One head DJ programs the system, replacing multi-DJ staffing.
+                    </p>
+                    <div style="margin-top: 16px;">
+                        <span class="skill-tag">VirtualDJ SDK</span>
+                        <span class="skill-tag">AI Track Selection</span>
+                        <span class="skill-tag">Dancer Portal</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3><span class="icon">🎵</span> Live PA</h3>
+                    <div class="list-item">
+                        <div class="status-dot pending"></div>
+                        <div class="info">
+                            <div class="title">Ableton + Hardware Setup</div>
+                            <div class="meta">SRB residency • Live performance rig</div>
+                        </div>
+                    </div>
+                    <p style="margin-top: 12px; font-size: 13px; color: #888;">
+                        Live performance setup for strip club DJ residency. Ableton-based with hardware controllers.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3><span class="icon">📱</span> TikTok Strategy</h3>
+                    <div class="list-item">
+                        <div class="status-dot active"></div>
+                        <div class="info">
+                            <div class="title">5-Account Content System</div>
+                            <div class="meta">AI artist promotion • Organic growth</div>
+                        </div>
+                    </div>
+                    <p style="margin-top: 12px; font-size: 13px; color: #888;">
+                        Multi-account TikTok strategy for AI artist promotion and WLP brand building.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Autonomous Tab -->
+        <div id="autonomous" class="tab-content">
+            <div class="dashboard-grid">
+                <div class="card">
+                    <h3><span class="icon">🌙</span> 2 AM — Night Creative</h3>
+                    <p style="font-size: 13px; color: #888; margin-bottom: 16px;">
+                        Think outside the box. Identify unstated opportunities. Create value not on any list.
+                    </p>
+                    <div class="list-item">
+                        <div class="info">
+                            <div class="title">Reads business context</div>
+                            <div class="meta">ANIMAL.md, MEMORY.md, narrative</div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="info">
+                            <div class="title">Identifies gaps</div>
+                            <div class="meta">What's missing? What should exist?</div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="info">
+                            <div class="title">Creates value</div>
+                            <div class="meta">Drafts, research, prototypes</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3><span class="icon">💤</span> 3 AM — Dream Cycle</h3>
+                    <p style="font-size: 13px; color: #888; margin-bottom: 16px;">
+                        Memory optimization from Video #36. Prevents context bloat.
+                    </p>
+                    <div class="list-item">
+                        <div class="info">
+                            <div class="title">Audits Tier 1 files</div>
+                            <div class="meta">SOUL.md, MEMORY.md, AGENTS.md</div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="info">
+                            <div class="title">Compresses sessions</div>
+                            <div class="meta">Remove noise, keep signal</div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="info">
+                            <div class="title">Generates report</div>
+                            <div class="meta">Bloat detection + recommendations</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3><span class="icon">☀️</span> 6 AM — Morning Worker</h3>
+                    <p style="font-size: 13px; color: #888; margin-bottom: 16px;">
+                        Clear writing and research tasks from the backlog.
+                    </p>
+                    <div class="list-item">
+                        <div class="info">
+                            <div class="title">Reads tasks.json</div>
+                            <div class="meta">Identifies writing/research tasks</div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="info">
+                            <div class="title">Selects 1-3 tasks</div>
+                            <div class="meta">Prioritizes by value</div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="info">
+                            <div class="title">Creates report</div>
+                            <div class="meta">Documents all work done</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" style="margin-top: 20px;">
+                <h3>Autonomous Safety Rules</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 16px;">
+                    <div>
+                        <h4 style="font-size: 13px; color: #4ade80; margin-bottom: 8px;">✓ Always Do</h4>
+                        <ul style="font-size: 13px; color: #888; padding-left: 16px; line-height: 1.8;">
+                            <li>Work autonomously without asking</li>
+                            <li>Complete tasks fully</li>
+                            <li>Document everything</li>
+                            <li>Report honestly (even failures)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 13px; color: #f87171; margin-bottom: 8px;">✗ Never Do</h4>
+                        <ul style="font-size: 13px; color: #888; padding-left: 16px; line-height: 1.8;">
+                            <li>Send external communications</li>
+                            <li>Spend money or commit to services</li>
+                            <li>Delete files without backup</li>
+                            <li>Work on low-value busywork</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tasks Tab -->
+        <div id="tasks" class="tab-content">
+            <div class="card">
+                <h3>Open Tasks</h3>
+                <p style="font-size: 13px; color: #888; padding: 20px 0;">
+                    No open tasks. All caught up and ready for 6 AM autonomous worker.
+                </p>
+            </div>
+            
+            <div class="card" style="margin-top: 20px;">
+                <h3>Recently Completed (2026-03-24)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Task</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2026-03-24</td>
+                            <td>Created autonomous-employee skill (2 AM + 6 AM modes)</td>
+                        </tr>
+                        <tr>
+                            <td>2026-03-24</td>
+                            <td>Enhanced narrative-tracker skill with dream cycle</td>
+                        </tr>
+                        <tr>
+                            <td>2026-03-24</td>
+                            <td>Updated HEARTBEAT.md with new autonomous schedule</td>
+                        </tr>
+                        <tr>
+                            <td>2026-03-24</td>
+                            <td>Created obsidian-wlp skill for vault integration</td>
+                        </tr>
+                        <tr>
+                            <td>2026-03-24</td>
+                            <td>Initialized WLP-Vault directory structure</td>
+                        </tr>
+                        <tr>
+                            <td>2026-03-24</td>
+                            <td>Created reference files for future skills (5 files)</td>
+                        </tr>
+                        <tr>
+                            <td>2026-03-24</td>
+                            <td>Organized directory structure documentation</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Schedule Tab -->
+        <div id="schedule" class="tab-content">
+            <div class="card">
+                <h3>Daily Autonomous Schedule</h3>
+                <div class="schedule-item">
+                    <div class="time">02:00</div>
+                    <div class="details">
+                        <div class="task">Night Creative Mode</div>
+                        <div class="skill">autonomous-employee</div>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">03:00</div>
+                    <div class="details">
+                        <div class="task">Dream Cycle — Memory Optimization</div>
+                        <div class="skill">narrative-tracker</div>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">06:00</div>
+                    <div class="details">
+                        <div class="task">Morning Worker — Task Execution</div>
+                        <div class="skill">autonomous-employee</div>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">10:00</div>
+                    <div class="details">
+                        <div class="task">Morning Briefing</div>
+                        <div class="skill">—</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" style="margin-top: 20px;">
+                <h3>Heartbeat Schedule</h3>
+                <div class="schedule-item">
+                    <div class="time">60 min</div>
+                    <div class="details">
+                        <div class="task">Narrative Tracker — Session Processing</div>
+                        <div class="skill">narrative-tracker</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Skills Tab -->
+        <div id="skills" class="tab-content">
+            <div class="card">
+                <h3>Active Skills</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Skill</th>
+                            <th>Location</th>
+                            <th>Purpose</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>autonomous-employee</td>
+                            <td><code>wlp/skills/autonomous-employee/</code></td>
+                            <td>Proactive task execution (2 AM + 6 AM modes)</td>
+                            <td>✅ Active</td>
+                        </tr>
+                        <tr>
+                            <td>narrative-tracker</td>
+                            <td><code>wlp/skills/narrative-tracker/</code></td>
+                            <td>Session compression + dream cycle</td>
+                            <td>✅ Active</td>
+                        </tr>
+                        <tr>
+                            <td>obsidian-wlp</td>
+                            <td><code>wlp/skills/obsidian-wlp/</code></td>
+                            <td>Obsidian vault integration</td>
+                            <td>✅ Active</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="card" style="margin-top: 20px;">
+                <h3>Reference Files (Future Skills)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Reference</th>
+                            <th>Location</th>
+                            <th>Topic</th>
+                            <th>Priority</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>hunter-healer-alpha</td>
+                            <td><code>wlp/data/</code></td>
+                            <td>Free OpenRouter models</td>
+                            <td>Low</td>
+                        </tr>
+                        <tr>
+                            <td>figma-mcp</td>
+                            <td><code>wlp/data/</code></td>
+                            <td>Design workflow mapping</td>
+                            <td>Medium</td>
+                        </tr>
+                        <tr>
+                            <td>sst-injection</td>
+                            <td><code>wlp/data/</code></td>
+                            <td>Pre-loaded context</td>
+                            <td>Medium</td>
+                        </tr>
+                        <tr>
+                            <td>upwork-miner</td>
+                            <td><code>wlp/data/</code></td>
+                            <td>Freelance opportunity mining</td>
+                            <td>Low</td>
+                        </tr>
+                        <tr>
+                            <td>work-for-hire-miner</td>
+                            <td><code>wlp/data/</code></td>
+                            <td>Multi-platform freelance</td>
+                            <td>Low</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Vault Tab -->
+        <div id="vault" class="tab-content">
+            <div class="dashboard-grid">
+                <div class="card">
+                    <h3><span class="icon">📁</span> Vault Structure</h3>
+                    <div class="list-item">
+                        <div class="info">
+                            <div class="title">00-Inbox</div>
+                            <div class="meta">Quick capture — ideas, links, thoughts</div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="info">
+                            <div class="title">01-Projects</div>
+                            <div class="meta">Active work with defined outcomes</div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="info">
+                            <div class="title">02-Areas</div>
+                            <div class="meta">Ongoing responsibilities</div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="info">
+                            <div class="title">03-Resources</div>
+                            <div class="meta">Reference material, contacts</div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="info">
+                            <div class="title">04-Archive</div>
+                            <div class="meta">Completed work</div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="info">
+                            <div class="title">99-Daily</div>
+                            <div class="meta">Daily notes (auto-populated)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3><span class="icon">🔄</span> Sync Status</h3>
+                    <div class="list-item">
+                        <div class="status-dot active"></div>
+                        <div class="info">
+                            <div class="title">WLP-Vault initialized</div>
+                            <div class="meta">Ready for Mac sync</div>
+                        </div>
+                    </div>
+                    <p style="margin-top: 12px; font-size: 13px; color: #888;">
+                        Copy <code>~/WLP-Vault</code> to your Mac and point Obsidian at it.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="card" style="margin-top: 20px;">
+                <h3>Directory Quick Reference</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Need To...</th>
+                            <th>Go To</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Read/write daily notes</td>
+                            <td><code>memory/YYYY-MM-DD.md</code></td>
+                        </tr>
+                        <tr>
+                            <td>Check long-term memory</td>
+                            <td><code>wlp/core/MEMORY.md</code></td>
+                        </tr>
+                        <tr>
+                            <td>View tasks</td>
+                            <td><code>wlp/ops/tasks.json</code></td>
+                        </tr>
+                        <tr>
+                            <td>Use a skill</td>
+                            <td><code>wlp/skills/[skill-name]/SKILL.md</code></td>
+                        </tr>
+                        <tr>
+                            <td>Find reference material</td>
+                            <td><code>wlp/data/</code></td>
+                        </tr>
+                        <tr>
+                            <td>View project notes</td>
+                            <td><code>WLP-Vault/01-Projects/</code></td>
+                        </tr>
+                        <tr>
+                            <td>Check daily reports</td>
+                            <td><code>wlp/ops/daily-reports/</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showTab(tabId) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            // Remove active class from all buttons
+            document.querySelectorAll('.nav button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            // Show selected tab
+            document.getElementById(tabId).classList.add('active');
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>

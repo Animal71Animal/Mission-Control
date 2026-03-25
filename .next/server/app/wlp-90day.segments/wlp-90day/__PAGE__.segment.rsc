@@ -1,0 +1,48 @@
+1:"$Sreact.fragment"
+2:I[22016,["/_next/static/chunks/6c46061a0140fd5d.js"],""]
+4:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
+5:"$Sreact.suspense"
+3:T687,<h1>90-Day Plan</h1>
+<h2>Phase 1: Foundation (April 12 - May 11, 2026)</h2>
+<h3>Week 1-2: Setup</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Finalize AI artist branding</li>
+<li><input disabled="" type="checkbox"> Set up distribution channels</li>
+<li><input disabled="" type="checkbox"> Create social media accounts</li>
+</ul>
+<h3>Week 3-4: Content Creation</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Generate first batch of tracks</li>
+<li><input disabled="" type="checkbox"> Create promotional materials</li>
+<li><input disabled="" type="checkbox"> Build email list</li>
+</ul>
+<h2>Phase 2: Launch (May 12 - June 11, 2026)</h2>
+<h3>Week 5-6: Pre-Launch</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Teaser campaign</li>
+<li><input disabled="" type="checkbox"> Press outreach</li>
+<li><input disabled="" type="checkbox"> Influencer partnerships</li>
+</ul>
+<h3>Week 7-8: Launch</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Release first singles</li>
+<li><input disabled="" type="checkbox"> Social media blitz</li>
+<li><input disabled="" type="checkbox"> Paid advertising</li>
+</ul>
+<h2>Phase 3: Scale (June 12 - July 11, 2026)</h2>
+<h3>Week 9-10: Optimization</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Analyze metrics</li>
+<li><input disabled="" type="checkbox"> A/B test creatives</li>
+<li><input disabled="" type="checkbox"> Refine targeting</li>
+</ul>
+<h3>Week 11-12: Expansion</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Sync licensing push</li>
+<li><input disabled="" type="checkbox"> Playlist pitching</li>
+<li><input disabled="" type="checkbox"> Live performance prep</li>
+</ul>
+<hr>
+<p><em>Last updated: March 24, 2026</em></p>
+0:{"buildId":"jAfjfWIPK_itPSWKIEceQ","rsc":["$","$1","c",{"children":[["$","div",null,{"style":{"maxWidth":860},"children":[["$","div",null,{"style":{"marginBottom":24},"children":[["$","$L2",null,{"href":"/wlp","style":{"color":"var(--muted)","fontSize":"0.85rem","textDecoration":"none"},"children":"← Back to WLP Business"}],["$","h1",null,{"style":{"fontSize":"1.5rem","fontWeight":700,"marginTop":12,"color":"var(--text)"},"children":"📅 90-Day Plan"}]]}],["$","div",null,{"className":"md-content","dangerouslySetInnerHTML":{"__html":"$3"},"style":{"color":"var(--text)","lineHeight":1.7,"fontSize":"0.95rem"}}]]}],null,["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"loading":null,"isPartial":false}
+6:null

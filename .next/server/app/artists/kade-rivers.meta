@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/artists/layout,_N_T_/artists/kade-rivers/layout,_N_T_/artists/kade-rivers/page,_N_T_/artists/kade-rivers"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/artists/kade-rivers/__PAGE__",
+    "/artists/kade-rivers",
+    "/artists",
+    "/_index",
+    "/_head"
+  ]
+}

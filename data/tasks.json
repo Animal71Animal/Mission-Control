@@ -1,0 +1,32 @@
+{
+  "tasks": [
+    {"id": "T1", "title": "Fill weekly tip data from Google Sheets to SRB Tips", "owner": "animal", "priority": "medium", "status": "pending"},
+    {"id": "T2", "title": "Convert morning briefing to SKILL.md format", "owner": "priscylla", "priority": "medium", "status": "pending"},
+    {"id": "T3", "title": "Install NI plugins (Kontakt, Reaktor, Massive)", "owner": "animal", "priority": "medium", "status": "pending"},
+    {"id": "T4", "title": "Download free plugins (MJUCjr, TAL NoiseMaker, Bass Station, DrumTROOP)", "owner": "animal", "priority": "low", "status": "pending"},
+    {"id": "T5", "title": "TikTok handles / Postiz setup (5 accounts)", "owner": "animal", "priority": "medium", "status": "blocked", "notes": "Waiting on ANIMAL to create accounts"},
+    {"id": "T6", "title": "Social media accounts for Kade, Madison, Aria", "owner": "animal", "priority": "medium", "status": "pending"},
+    {"id": "T7", "title": "Artist Spotify pages for Kade, Madison, Aria", "owner": "both", "priority": "high", "status": "pending"},
+    {"id": "T8", "title": "Update briefing script to use Open-Meteo", "owner": "priscylla", "priority": "low", "status": "pending"},
+    {"id": "T9", "title": "Make Tailscale + node auto-reconnect persistent", "owner": "priscylla", "priority": "low", "status": "pending"}
+  ],
+  "completed": [
+    {"id": "D1", "title": "Full file migration from Mac to cloud", "owner": "priscylla", "priority": "high", "status": "done", "completedAt": "2026-03-18"},
+    {"id": "D2", "title": "Mission Control deployed to Surge", "owner": "priscylla", "priority": "high", "status": "done", "completedAt": "2026-03-18"},
+    {"id": "D3", "title": "Ableton library cleanup (36,763 files)", "owner": "priscylla", "priority": "medium", "status": "done", "completedAt": "2026-03-18"},
+    {"id": "D4", "title": "Morning briefing cron job (10 AM)", "owner": "priscylla", "priority": "high", "status": "done", "completedAt": "2026-03-18"},
+    {"id": "D5", "title": "Firecrawl account + API key", "owner": "priscylla", "priority": "medium", "status": "done", "completedAt": "2026-03-18"},
+    {"id": "D6", "title": "Tesla charging log synced to Mac", "owner": "priscylla", "priority": "medium", "status": "done", "completedAt": "2026-03-19"},
+    {"id": "D7", "title": "GOG authenticated", "owner": "priscylla", "priority": "low", "status": "done", "completedAt": "2026-03-19"},
+    {"id": "D8", "title": "Mac node connected via Tailscale", "owner": "priscylla", "priority": "high", "status": "done", "completedAt": "2026-03-19"},
+    {"id": "D9", "title": "Mission Control rebuilt with SRB Tips", "owner": "priscylla", "priority": "high", "status": "done", "completedAt": "2026-03-21"},
+    {"id": "D10", "title": "Created autonomous-employee skill (2 AM + 6 AM modes)", "owner": "priscylla", "priority": "medium", "status": "done", "completedAt": "2026-03-24"},
+    {"id": "D11", "title": "Enhanced narrative-tracker skill with dream cycle", "owner": "priscylla", "priority": "medium", "status": "done", "completedAt": "2026-03-24"},
+    {"id": "D12", "title": "Updated HEARTBEAT.md with new autonomous schedule", "owner": "priscylla", "priority": "medium", "status": "done", "completedAt": "2026-03-24"},
+    {"id": "D13", "title": "Created obsidian-wlp skill for vault integration", "owner": "priscylla", "priority": "medium", "status": "done", "completedAt": "2026-03-24"},
+    {"id": "D14", "title": "Initialized WLP-Vault directory structure", "owner": "priscylla", "priority": "low", "status": "done", "completedAt": "2026-03-24"},
+    {"id": "D15", "title": "Created reference files for future skills (5 files)", "owner": "priscylla", "priority": "low", "status": "done", "completedAt": "2026-03-24"},
+    {"id": "D16", "title": "Organized directory structure documentation", "owner": "priscylla", "priority": "low", "status": "done", "completedAt": "2026-03-24"}
+  ],
+  "updated": "2026-03-24"
+}

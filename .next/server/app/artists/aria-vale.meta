@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/artists/layout,_N_T_/artists/aria-vale/layout,_N_T_/artists/aria-vale/page,_N_T_/artists/aria-vale"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/artists/aria-vale/__PAGE__",
+    "/artists/aria-vale",
+    "/artists",
+    "/_index",
+    "/_head"
+  ]
+}
