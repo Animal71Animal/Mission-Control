@@ -733,10 +733,11 @@ export default function WLPDashboardPage() {
         </button>
         <button
           onClick={() => setToolsPopupOpen(true)}
+          className="shortcut-btn"
           style={{
-            background: "var(--card)",
-            border: "1px solid var(--border)",
-            color: "var(--text)",
+            background: "var(--card) !important",
+            border: "1px solid var(--border) !important",
+            color: "var(--text) !important",
             padding: "10px 20px",
             borderRadius: 8,
             cursor: "pointer",
@@ -745,12 +746,12 @@ export default function WLPDashboardPage() {
             transition: "all 0.2s",
           }}
           onMouseOver={(e) => {
-            (e.currentTarget as HTMLButtonElement).style.borderColor = "#9b5de5";
-            (e.currentTarget as HTMLButtonElement).style.color = "#9b5de5";
+            e.currentTarget.style.setProperty("border-color", "#9b5de5", "important");
+            e.currentTarget.style.setProperty("color", "#9b5de5", "important");
           }}
           onMouseOut={(e) => {
-            (e.currentTarget as HTMLButtonElement).style.borderColor = "var(--border)";
-            (e.currentTarget as HTMLButtonElement).style.color = "var(--text)";
+            e.currentTarget.style.setProperty("border-color", "var(--border)", "important");
+            e.currentTarget.style.setProperty("color", "var(--text)", "important");
           }}
         >
           🛠️ Tools & Apps
