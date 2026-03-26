@@ -29,8 +29,14 @@ export default function ModuleCard({ href, icon, title, desc, status }: {
           transition: "border-color 0.15s",
           height: "100%",
         }}
-        onMouseEnter={(e) => ((e.currentTarget as HTMLDivElement).style.borderColor = "var(--accent)")}
-        onMouseLeave={(e) => ((e.currentTarget as HTMLDivElement).style.borderColor = "var(--border)")}
+        onMouseEnter={(e) => {
+          (e.currentTarget as HTMLDivElement).style.borderColor = "#9b5de5";
+          (e.currentTarget as HTMLDivElement).style.color = "#9b5de5";
+        }}
+        onMouseLeave={(e) => {
+          (e.currentTarget as HTMLDivElement).style.borderColor = "var(--border)";
+          (e.currentTarget as HTMLDivElement).style.color = "var(--text)";
+        }}
       >
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10 }}>
           <span style={{ fontSize: "1.5rem" }}>{icon}</span>

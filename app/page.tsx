@@ -39,12 +39,12 @@ export default function Home() {
                 transition: "all 0.2s ease",
               }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLDivElement).style.borderColor = "var(--accent)";
-                (e.currentTarget as HTMLDivElement).style.transform = "translateY(-2px)";
+                (e.currentTarget as HTMLDivElement).style.borderColor = "#9b5de5";
+                (e.currentTarget as HTMLDivElement).style.color = "#9b5de5";
               }}
               onMouseLeave={(e) => {
                 (e.currentTarget as HTMLDivElement).style.borderColor = "var(--border)";
-                (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
+                (e.currentTarget as HTMLDivElement).style.color = "var(--text)";
               }}
             >
               <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "var(--text)", marginBottom: 8 }}>

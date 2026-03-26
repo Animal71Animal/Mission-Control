@@ -103,11 +103,11 @@ function LinkList({ items }: { items: (LinkItem | { separator: string })[] }) {
                 transition: "background 0.15s, color 0.15s",
               }}
               onMouseOver={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.background = "var(--border)";
-                (e.currentTarget as HTMLAnchorElement).style.color = "#fff";
+                (e.currentTarget as HTMLAnchorElement).style.border = "1px solid #9b5de5";
+                (e.currentTarget as HTMLAnchorElement).style.color = "#9b5de5";
               }}
               onMouseOut={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.background = "transparent";
+                (e.currentTarget as HTMLAnchorElement).style.border = "none";
                 (e.currentTarget as HTMLAnchorElement).style.color = "var(--text)";
               }}
             >
@@ -179,13 +179,13 @@ function DocGrid({ items }: { items: DocItem[] }) {
                 style={{ textDecoration: "none" }}
                 onMouseOver={(e) => {
                   const el = e.currentTarget.firstChild as HTMLElement;
-                  el.style.background = "var(--border)";
                   el.style.borderColor = "#9b5de5";
+                  el.style.color = "#9b5de5";
                 }}
                 onMouseOut={(e) => {
                   const el = e.currentTarget.firstChild as HTMLElement;
-                  el.style.background = "var(--surface, #12121a)";
                   el.style.borderColor = "var(--border)";
+                  el.style.color = "var(--text)";
                 }}
               >
                 {inner}
@@ -199,13 +199,13 @@ function DocGrid({ items }: { items: DocItem[] }) {
               style={{ textDecoration: "none" }}
               onMouseOver={(e) => {
                 const el = e.currentTarget.firstChild as HTMLElement;
-                el.style.background = "var(--border)";
                 el.style.borderColor = "#9b5de5";
+                el.style.color = "#9b5de5";
               }}
               onMouseOut={(e) => {
                 const el = e.currentTarget.firstChild as HTMLElement;
-                el.style.background = "var(--surface, #12121a)";
                 el.style.borderColor = "var(--border)";
+                el.style.color = "var(--text)";
               }}
             >
               {inner}
@@ -551,10 +551,12 @@ function ToolsPopup({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                 transition: "background 0.15s",
               }}
               onMouseOver={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.background = "var(--border)";
+                (e.currentTarget as HTMLAnchorElement).style.border = "1px solid #9b5de5";
+                (e.currentTarget as HTMLAnchorElement).style.color = "#9b5de5";
               }}
               onMouseOut={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.background = "transparent";
+                (e.currentTarget as HTMLAnchorElement).style.border = "none";
+                (e.currentTarget as HTMLAnchorElement).style.color = "var(--text)";
               }}
             >
               <Dot color={tool.dot} />
@@ -732,9 +734,9 @@ export default function WLPDashboardPage() {
         <button
           onClick={() => setToolsPopupOpen(true)}
           style={{
-            background: "#9b5de5",
-            border: "1px solid #9b5de5",
-            color: "#fff",
+            background: "var(--card)",
+            border: "1px solid var(--border)",
+            color: "var(--text)",
             padding: "10px 20px",
             borderRadius: 8,
             cursor: "pointer",
@@ -743,10 +745,12 @@ export default function WLPDashboardPage() {
             transition: "all 0.2s",
           }}
           onMouseOver={(e) => {
-            (e.currentTarget as HTMLButtonElement).style.background = "#7f5af0";
+            (e.currentTarget as HTMLButtonElement).style.borderColor = "#9b5de5";
+            (e.currentTarget as HTMLButtonElement).style.color = "#9b5de5";
           }}
           onMouseOut={(e) => {
-            (e.currentTarget as HTMLButtonElement).style.background = "#9b5de5";
+            (e.currentTarget as HTMLButtonElement).style.borderColor = "var(--border)";
+            (e.currentTarget as HTMLButtonElement).style.color = "var(--text)";
           }}
         >
           🛠️ Tools & Apps

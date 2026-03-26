@@ -92,8 +92,14 @@ export default function DrivePage() {
                     cursor: "pointer",
                     transition: "border-color 0.15s",
                   }}
-                  onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--accent)")}
-                  onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border)")}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = "#9b5de5";
+                    e.currentTarget.style.color = "#9b5de5";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = "var(--border)";
+                    e.currentTarget.style.color = "var(--text)";
+                  }}
                 >
                   <span style={{ fontSize: "1.2rem", flexShrink: 0 }}>📁</span>
                   <div>
