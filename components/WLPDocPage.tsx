@@ -46,11 +46,13 @@ export default function WLPDocPage({
           background: "var(--card)",
           border: "1px solid var(--border)",
           borderRadius: 12,
-          padding: "32px 36px",
+          padding: "40px 48px",
           marginTop: 12,
           color: "var(--text)",
-          lineHeight: 1.7,
+          lineHeight: 1.8,
           fontSize: "0.95rem",
+          maxWidth: "100%",
+          overflowX: "auto",
         }}
         dangerouslySetInnerHTML={{ __html: content }}
       />
