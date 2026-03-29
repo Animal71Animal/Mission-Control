@@ -42,34 +42,18 @@ const nightlyData: Record<string, { date: string; total: number; dancers: { name
     { date: "Sat Jan 31", total: 185, dancers: [{ name: "Adelia", amount: 30 }, { name: "Alaska", amount: 15 }, { name: "Allie", amount: 0 }, { name: "Baby", amount: 0 }, { name: "Berlin", amount: 0 }, { name: "Effie", amount: 0 }, { name: "Genesis", amount: 15 }, { name: "Hunter", amount: 20 }, { name: "Kitty", amount: 10 }, { name: "Lilly", amount: 5 }, { name: "Nala", amount: 20 }, { name: "Noelle", amount: 20 }, { name: "Suki", amount: 0 }, { name: "Customers", amount: 25 }] },
   ],
   "February": [
-    { date: "Sun Feb 1", total: 0, dancers: [] },
-    { date: "Mon Feb 2", total: 0, dancers: [] },
-    { date: "Tue Feb 3", total: 0, dancers: [] },
-    { date: "Wed Feb 4", total: 0, dancers: [] },
-    { date: "Thu Feb 5", total: 0, dancers: [] },
-    { date: "Fri Feb 6", total: 0, dancers: [] },
-    { date: "Sat Feb 7", total: 0, dancers: [] },
-    { date: "Sun Feb 8", total: 0, dancers: [] },
-    { date: "Mon Feb 9", total: 0, dancers: [] },
-    { date: "Tue Feb 10", total: 0, dancers: [] },
-    { date: "Wed Feb 11", total: 0, dancers: [] },
-    { date: "Thu Feb 12", total: 0, dancers: [] },
-    { date: "Fri Feb 13", total: 0, dancers: [] },
-    { date: "Sat Feb 14", total: 0, dancers: [] },
-    { date: "Sun Feb 15", total: 0, dancers: [] },
-    { date: "Mon Feb 16", total: 0, dancers: [] },
-    { date: "Tue Feb 17", total: 0, dancers: [] },
-    { date: "Wed Feb 18", total: 0, dancers: [] },
-    { date: "Thu Feb 19", total: 0, dancers: [] },
-    { date: "Fri Feb 20", total: 0, dancers: [] },
-    { date: "Sat Feb 21", total: 0, dancers: [] },
-    { date: "Sun Feb 22", total: 0, dancers: [] },
-    { date: "Mon Feb 23", total: 0, dancers: [] },
-    { date: "Tue Feb 24", total: 0, dancers: [] },
-    { date: "Wed Feb 25", total: 0, dancers: [] },
-    { date: "Thu Feb 26", total: 0, dancers: [] },
-    { date: "Fri Feb 27", total: 0, dancers: [] },
-    { date: "Sat Feb 28", total: 0, dancers: [] },
+    { date: "Tue Feb 4", total: 119, dancers: [{ name: "Dakota", amount: 0 }, { name: "Hunter", amount: 20 }, { name: "Georgia", amount: 4 }, { name: "Mixie", amount: 5 }, { name: "Nala", amount: 40 }, { name: "Noelle", amount: 40 }, { name: "Star", amount: 5 }, { name: "Zara", amount: 5 }, { name: "Customers", amount: 0 }] },
+    { date: "Thu Feb 5", total: 140, dancers: [{ name: "Alaska", amount: 0 }, { name: "Dior", amount: 0 }, { name: "Georgia", amount: 0 }, { name: "Hunter", amount: 20 }, { name: "Indie", amount: 5 }, { name: "Kody", amount: 8 }, { name: "Mia", amount: 12 }, { name: "Noelle", amount: 40 }, { name: "Skylar", amount: 0 }, { name: "Star", amount: 0 }, { name: "Suki", amount: 0 }, { name: "Tiana", amount: 0 }, { name: "Zara", amount: 10 }, { name: "Customers", amount: 0 }] },
+    { date: "Sat Feb 7", total: 325, dancers: [{ name: "Amity", amount: 10 }, { name: "Asia", amount: 20 }, { name: "Baby", amount: 5 }, { name: "Cassandra", amount: 0 }, { name: "Dior", amount: 10 }, { name: "Ella", amount: 20 }, { name: "Georgia", amount: 0 }, { name: "Genesis", amount: 5 }, { name: "Hunter", amount: 20 }, { name: "Kendall", amount: 15 }, { name: "Lilly", amount: 10 }, { name: "Macy", amount: 0 }, { name: "Milan", amount: 20 }, { name: "Nala", amount: 40 }, { name: "Noelle", amount: 30 }, { name: "Suki", amount: 60 }, { name: "Customers", amount: 20 }] },
+    { date: "Tue Feb 10", total: 41, dancers: [{ name: "Georgia", amount: 2 }, { name: "Genesis", amount: 0 }, { name: "Star", amount: 16 }, { name: "Taylor", amount: 0 }, { name: "Customers", amount: 18 }] },
+    { date: "Fri Feb 13", total: 60, dancers: [{ name: "Allie", amount: 20 }, { name: "Jamira", amount: 5 }, { name: "Nala", amount: 40 }, { name: "Customers", amount: 0 }] },
+    { date: "Sat Feb 14", total: 140, dancers: [{ name: "Allie", amount: 20 }, { name: "Amity", amount: 0 }, { name: "Amy", amount: 10 }, { name: "Baby", amount: 0 }, { name: "Dior", amount: 0 }, { name: "Nala", amount: 40 }, { name: "Nova", amount: 10 }, { name: "Shiiva", amount: 5 }, { name: "Skylar", amount: 10 }, { name: "Customers", amount: 30 }] },
+    { date: "Wed Feb 18", total: 97, dancers: [{ name: "Adelia", amount: 0 }, { name: "Amy", amount: 10 }, { name: "Athena", amount: 0 }, { name: "Dior", amount: 5 }, { name: "Ella", amount: 0 }, { name: "Georgia", amount: 0 }, { name: "Genesis", amount: 0 }, { name: "Hunter", amount: 15 }, { name: "Kimberly", amount: 9 }, { name: "Macy", amount: 0 }, { name: "Mia", amount: 15 }, { name: "Natasha", amount: 0 }, { name: "Nova", amount: 0 }, { name: "Quinn", amount: 0 }, { name: "Shelby", amount: 5 }, { name: "Willow", amount: 2 }, { name: "Customers", amount: 20 }] },
+    { date: "Thu Feb 19", total: 74, dancers: [{ name: "Alaska", amount: 0 }, { name: "Amity", amount: 0 }, { name: "Amy", amount: 5 }, { name: "Athena", amount: 10 }, { name: "Berlin", amount: 0 }, { name: "Dior", amount: 0 }, { name: "Ella", amount: 0 }, { name: "Georgia", amount: 10 }, { name: "Genesis", amount: 0 }, { name: "Hunter", amount: 0 }, { name: "Kimberly", amount: 10 }, { name: "Natasha", amount: 5 }, { name: "Nova", amount: 0 }, { name: "Quinn", amount: 10 }, { name: "Russia", amount: 5 }, { name: "Taylor", amount: 5 }, { name: "Zara", amount: 0 }, { name: "Customers", amount: 0 }] },
+    { date: "Fri Feb 20", total: 117, dancers: [{ name: "Allie", amount: 20 }, { name: "Amity", amount: 15 }, { name: "Asia", amount: 0 }, { name: "Dior", amount: 0 }, { name: "Genesis", amount: 7 }, { name: "Hunter", amount: 20 }, { name: "Kimberly", amount: 0 }, { name: "Mia", amount: 0 }, { name: "Milan", amount: 0 }, { name: "Mixie", amount: 0 }, { name: "Nala", amount: 40 }, { name: "Noelle", amount: 0 }, { name: "Nova", amount: 5 }, { name: "Quinn", amount: 0 }, { name: "Ruby", amount: 4 }, { name: "Russia", amount: 5 }, { name: "Willow", amount: 10 }, { name: "Customers", amount: 0 }] },
+    { date: "Wed Feb 25", total: 120, dancers: [{ name: "Dakota", amount: 0 }, { name: "Ella", amount: 20 }, { name: "Georgia", amount: 0 }, { name: "Genesis", amount: 5 }, { name: "Hunter", amount: 0 }, { name: "Mixie", amount: 5 }, { name: "Nala", amount: 0 }, { name: "Nova", amount: 5 }, { name: "Skylar", amount: 0 }, { name: "Zara", amount: 10 }, { name: "Customers", amount: 56 }] },
+    { date: "Thu Feb 26", total: 60, dancers: [{ name: "Berlin", amount: 5 }, { name: "Mixie", amount: 0 }, { name: "Nala", amount: 40 }, { name: "Shiiva", amount: 5 }, { name: "Customers", amount: 0 }] },
+    { date: "Sat Feb 27", total: 364, dancers: [{ name: "Adelia", amount: 20 }, { name: "Allie", amount: 35 }, { name: "Amity", amount: 10 }, { name: "Asia", amount: 25 }, { name: "Berlin", amount: 40 }, { name: "Dior", amount: 0 }, { name: "Ella", amount: 26 }, { name: "Georgia", amount: 33 }, { name: "Genesis", amount: 31 }, { name: "Hunter", amount: 20 }, { name: "Kimberly", amount: 2 }, { name: "Natasha", amount: 10 }, { name: "Nova", amount: 20 }, { name: "Quinn", amount: 4 }, { name: "Shiiva", amount: 0 }, { name: "Skylar", amount: 0 }, { name: "Willow", amount: 10 }, { name: "Zara", amount: 0 }, { name: "Customers", amount: 80 }] },
   ],
   "March": [
     { date: "Mon Mar 2", total: 187, dancers: [{ name: "Athena", amount: 40 }, { name: "Ella", amount: 10 }, { name: "Genesis", amount: 100 }, { name: "Mia", amount: 3 }, { name: "Customers", amount: 34 }] },
@@ -85,7 +69,7 @@ const nightlyData: Record<string, { date: string; total: number; dancers: { name
     { date: "Wed Mar 25", total: 196, dancers: [{ name: "Nova", amount: 10 }, { name: "Berlin", amount: 15 }, { name: "Dakota", amount: 10 }, { name: "Ella", amount: 10 }, { name: "Shiiva", amount: 15 }, { name: "Willow", amount: 27 }, { name: "Val", amount: 25 }, { name: "Lola", amount: 3 }, { name: "Mia", amount: 1 }, { name: "Hunter", amount: 20 }, { name: "Alaska", amount: 10 }, { name: "Allie", amount: 50 }] },
     { date: "Thu Mar 26", total: 42, dancers: [{ name: "Athena", amount: 20 }, { name: "Allie", amount: 17 }, { name: "Alaska", amount: 0 }, { name: "Quinn", amount: 0 }, { name: "Shiiva", amount: 5 }] },
     { date: "Fri Mar 27", total: 255, dancers: [{ name: "Giovanna", amount: 35 }, { name: "Kitty", amount: 21 }, { name: "Georgia", amount: 4 }, { name: "Shiiva", amount: 0 }, { name: "Dior", amount: 5 }, { name: "Genesis", amount: 30 }, { name: "Jamira", amount: 5 }, { name: "Nova", amount: 5 }, { name: "Quinn", amount: 5 }, { name: "Natasha", amount: 10 }, { name: "Willow", amount: 5 }, { name: "Hunter", amount: 20 }, { name: "Kendall", amount: 20 }, { name: "Macy", amount: 20 }, { name: "Amity", amount: 50 }, { name: "Maria", amount: 20 }] },
-    { date: "Sat Mar 28", total: 133, dancers: [{ name: "Adelia", amount: 40 }, { name: "Brooke", amount: 5 }, { name: "Effie", amount: 10 }, { name: "Jamira", amount: 5 }, { name: "Kimberly", amount: 8 }, { name: "Kylie", amount: 10 }, { name: "Natasha", amount: 20 }, { name: "Quinn", amount: 15 }, { name: "Customers", amount: 20 }] },
+    { date: "Sat Mar 28", total: 223, dancers: [{ name: "Adelia", amount: 40 }, { name: "Amity", amount: 50 }, { name: "Brooke", amount: 5 }, { name: "Effie", amount: 10 }, { name: "Giovanna", amount: 20 }, { name: "Hunter", amount: 20 }, { name: "Jamira", amount: 5 }, { name: "Kimberly", amount: 8 }, { name: "Kylie", amount: 10 }, { name: "Natasha", amount: 20 }, { name: "Quinn", amount: 15 }, { name: "Customers", amount: 20 }] },
   ],
 };
 
@@ -100,7 +84,7 @@ export default function SrbTipsPage() {
   const [expandedNights, setExpandedNights] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
-    fetch("/data/srb-tips-data.json")
+    fetch("/api/srb-tips")
       .then((res) => res.json())
       .then((data) => {
         setData(data);
@@ -314,7 +298,7 @@ export default function SrbTipsPage() {
             {/* Top 10 This Month */}
             <div>
               <h3 style={{ fontSize: "0.85rem", color: "var(--muted)", marginBottom: 12, textTransform: "uppercase", letterSpacing: "0.05em" }}>
-                🏆 Top 10 Tippers
+                🏆 Most Generous
               </h3>
               <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
                 {monthDetail.top10.map((t) => (
@@ -408,7 +392,7 @@ export default function SrbTipsPage() {
             🏆 Q1 Top 10 Overall
           </h3>
           <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-            {topTippers.slice(0, 10).map((t) => (
+            {[...topTippers].sort((a, b) => b.total - a.total).slice(0, 10).map((t, i) => (
               <div key={t.name} style={{ display: "flex", alignItems: "center", gap: 8, padding: "6px 0", borderBottom: "1px solid var(--border)" }}>
                 <span style={{
                   display: "inline-block",
@@ -418,7 +402,7 @@ export default function SrbTipsPage() {
                   fontWeight: 700,
                   ...badgeStyle(t.badge),
                 }}>
-                  {t.rank}
+                  {i + 1}
                 </span>
                 <span style={{ flex: 1 }}>{t.name}</span>
                 <span style={{ color: "var(--muted)", fontSize: "0.75rem" }}>J:${t.jan} F:${t.feb} M:${t.mar}</span>
