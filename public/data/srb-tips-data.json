@@ -12,7 +12,7 @@
     },
     {
       "month": "March",
-      "amount": 1753,
+      "amount": 1823,
       "nights": 14
     }
   ],
@@ -220,7 +220,7 @@
       "name": "Adelia",
       "jan": 60,
       "feb": 0,
-      "mar": 10
+      "mar": 50
     },
     {
       "name": "Nova",
@@ -358,7 +358,7 @@
       "name": "Quinn",
       "jan": 10,
       "feb": 0,
-      "mar": 15
+      "mar": 30
     },
     {
       "name": "Shelby",
@@ -412,7 +412,7 @@
       "name": "Jamira",
       "jan": 0,
       "feb": 5,
-      "mar": 5
+      "mar": 10
     },
     {
       "name": "Kimberly",
@@ -451,7 +451,15 @@
       "day": "Saturday",
       "tips": [
         {
+          "dancer": "Adelia",
+          "amount": 40
+        },
+        {
           "dancer": "Brooke",
+          "amount": 5
+        },
+        {
+          "dancer": "Jamira",
           "amount": 5
         },
         {
@@ -459,16 +467,24 @@
           "amount": 8
         },
         {
+          "dancer": "Effie",
+          "amount": 10
+        },
+        {
           "dancer": "Kylie",
           "amount": 10
+        },
+        {
+          "dancer": "Quinn",
+          "amount": 15
         },
         {
           "dancer": "Customers",
           "amount": 20
         }
       ],
-      "total": 43
+      "total": 113
     }
   ],
-  "lastUpdated": "2026-03-29T08:09:00.000Z"
+  "lastUpdated": "2026-03-29T09:42:00.000Z"
 }
