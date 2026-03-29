@@ -2,27 +2,70 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { modules, groupLabels, groupOrder } from "../app/data/modules";
+import type { ModuleGroup } from "../app/data/modules";
 
-const nav = [
-  { label: "Overview", href: "/", icon: "⚡" },
-  { label: "Morning Brief", href: "/brief", icon: "☀️" },
-  { label: "WLP Business", href: "/wlp", icon: "💼" },
-  { label: "Artists", href: "/artists", icon: "🎤" },
-  { label: "Open Tasks", href: "/tasks", icon: "✅" },
-  { label: "Calendar", href: "/calendar", icon: "📅" },
-  { label: "Google Drive", href: "/drive", icon: "📁" },
-  { label: "Ableton", href: "/ableton", icon: "🎛️" },
-  { label: "Analytics", href: "/analytics", icon: "📊" },
-  { label: "AI Office", href: "/agents", icon: "🤖" },
-  { label: "SRB Tips", href: "/srb-tips", icon: "💰" },
-  { label: "Tesla", href: "/tesla", icon: "🚗" },
-  { label: "YT Summaries", href: "/playlist-report", icon: "🎬" },
-];
+// Chevron icon component
+function ChevronIcon({ expanded }: { expanded: boolean }) {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      style={{
+        transform: expanded ? "rotate(90deg)" : "rotate(0deg)",
+        transition: "transform 0.2s ease",
+      }}
+    >
+      <polyline points="9 18 15 12 9 6" />
+    </svg>
+  );
+}
+
+// Group modules by their group field
+const groupedModules = groupOrder.reduce((acc, group) => {
+  acc[group] = modules.filter((m) => m.group === group);
+  return acc;
+}, {} as Record<ModuleGroup, typeof modules>);
 
 export default function Sidebar() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [expandedGroups, setExpandedGroups] = useState<Record<ModuleGroup, boolean>>({
+    operations: true,
+    systems: true,
+    external: true,
+  });
+
+  // Load expanded state from localStorage on mount
+  useEffect(() => {
+    const saved = localStorage.getItem("sidebar-groups");
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        setExpandedGroups((prev) => ({ ...prev, ...parsed }));
+      } catch {
+        // Ignore parse errors
+      }
+    }
+  }, []);
+
+  // Save expanded state to localStorage when it changes
+  useEffect(() => {
+    localStorage.setItem("sidebar-groups", JSON.stringify(expandedGroups));
+  }, [expandedGroups]);
+
+  const toggleGroup = (group: ModuleGroup) => {
+    setExpandedGroups((prev) => ({ ...prev, [group]: !prev[group] }));
+  };
+
+  const isOverviewActive = pathname === "/";
 
   return (
     <>
@@ -86,32 +129,92 @@ export default function Sidebar() {
         </div>
 
         {/* Nav */}
-        <nav style={{ flex: 1, padding: "16px 0" }}>
-          {nav.map((item) => {
-            const active = pathname === item.href;
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setMobileOpen(false)}
+        <nav style={{ flex: 1, padding: "16px 0", overflowY: "auto" }}>
+          {/* Overview - always visible */}
+          <Link
+            href="/"
+            onClick={() => setMobileOpen(false)}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 10,
+              padding: "9px 20px",
+              fontSize: "0.875rem",
+              color: isOverviewActive ? "var(--accent2)" : "var(--text)",
+              background: isOverviewActive ? "rgba(155,93,229,0.12)" : "transparent",
+              borderLeft: isOverviewActive ? "2px solid var(--accent)" : "2px solid transparent",
+              textDecoration: "none",
+              transition: "all 0.15s",
+            }}
+          >
+            <span style={{ fontSize: "1rem" }}>⚡</span>
+            Overview
+          </Link>
+
+          {/* Grouped sections */}
+          {groupOrder.map((group) => (
+            <div key={group} style={{ marginTop: 16 }}>
+              {/* Group header */}
+              <button
+                onClick={() => toggleGroup(group)}
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  gap: 10,
-                  padding: "9px 20px",
-                  fontSize: "0.875rem",
-                  color: active ? "var(--accent2)" : "var(--text)",
-                  background: active ? "rgba(155,93,229,0.12)" : "transparent",
-                  borderLeft: active ? "2px solid var(--accent)" : "2px solid transparent",
-                  textDecoration: "none",
-                  transition: "all 0.15s",
+                  justifyContent: "space-between",
+                  width: "100%",
+                  padding: "6px 20px",
+                  fontSize: "0.7rem",
+                  fontWeight: 600,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.05em",
+                  color: "var(--muted)",
+                  background: "transparent",
+                  border: "none",
+                  cursor: "pointer",
+                  textAlign: "left",
                 }}
               >
-                <span style={{ fontSize: "1rem" }}>{item.icon}</span>
-                {item.label}
-              </Link>
-            );
-          })}
+                <span>{groupLabels[group]}</span>
+                <ChevronIcon expanded={expandedGroups[group]} />
+              </button>
+
+              {/* Group items */}
+              <div
+                style={{
+                  maxHeight: expandedGroups[group] ? "500px" : "0",
+                  overflow: "hidden",
+                  transition: "max-height 0.25s ease, opacity 0.2s ease",
+                  opacity: expandedGroups[group] ? 1 : 0,
+                }}
+              >
+                {groupedModules[group].map((item) => {
+                  const active = pathname === item.href;
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setMobileOpen(false)}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 10,
+                        padding: "9px 20px",
+                        fontSize: "0.875rem",
+                        color: active ? "var(--accent2)" : "var(--text)",
+                        background: active ? "rgba(155,93,229,0.12)" : "transparent",
+                        borderLeft: active ? "2px solid var(--accent)" : "2px solid transparent",
+                        textDecoration: "none",
+                        transition: "all 0.15s",
+                      }}
+                    >
+                      <span style={{ fontSize: "1rem" }}>{item.icon}</span>
+                      {item.title}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
         </nav>
 
         {/* Footer */}

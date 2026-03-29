@@ -1,22 +1,25 @@
 import { NextRequest, NextResponse } from "next/server";
-import { exec } from "child_process";
-import { promisify } from "util";
+import { google } from "googleapis";
 
-const execAsync = promisify(exec);
+const SCOPES = [
+  "https://www.googleapis.com/auth/calendar.readonly",
+  "https://www.googleapis.com/auth/calendar.events",
+];
 
-const CALENDAR_ID = "ericmills71@gmail.com";
-const GOG_ACCOUNT = "ericmills71@gmail.com";
-
-// Helper to run gog commands
-async function runGog(args: string): Promise<any> {
-  const cmd = `GOG_ACCOUNT=${GOG_ACCOUNT} gog ${args} --json`;
-  try {
-    const { stdout } = await execAsync(cmd);
-    return JSON.parse(stdout);
-  } catch (error) {
-    console.error("gog command failed:", error);
-    throw error;
+// Initialize auth with service account
+function getAuth() {
+  const serviceAccountJson = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
+  
+  if (!serviceAccountJson) {
+    throw new Error("GOOGLE_SERVICE_ACCOUNT_JSON environment variable not set");
   }
+  
+  const credentials = JSON.parse(serviceAccountJson);
+  
+  return new google.auth.GoogleAuth({
+    credentials,
+    scopes: SCOPES,
+  });
 }
 
 // GET /api/calendar?from=YYYY-MM-DD&to=YYYY-MM-DD
@@ -26,9 +29,24 @@ export async function GET(request: NextRequest) {
   const to = searchParams.get("to") || new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
 
   try {
-    const events = await runGog(`calendar events ${CALENDAR_ID} --from ${from} --to ${to}`);
+    const auth = getAuth();
+    const calendar = google.calendar({ version: "v3", auth });
     
-    // Transform gog events to our format
+    // Use the user's calendar ID (ericmills71@gmail.com)
+    const calendarId = "ericmills71@gmail.com";
+    
+    const response = await calendar.events.list({
+      calendarId,
+      timeMin: `${from}T00:00:00Z`,
+      timeMax: `${to}T23:59:59Z`,
+      singleEvents: true,
+      orderBy: "startTime",
+      maxResults: 250,
+    });
+    
+    const events = response.data.items || [];
+    
+    // Transform to our format
     const transformedEvents = events.map((e: any) => ({
       id: e.id,
       title: e.summary || "Untitled",
@@ -42,9 +60,12 @@ export async function GET(request: NextRequest) {
     }));
 
     return NextResponse.json({ events: transformedEvents });
-  } catch (error) {
+  } catch (error: any) {
     console.error("Calendar fetch error:", error);
-    return NextResponse.json({ error: "Failed to fetch calendar events" }, { status: 500 });
+    return NextResponse.json({ 
+      error: "Failed to fetch calendar events", 
+      details: error.message 
+    }, { status: 500 });
   }
 }
 
@@ -52,25 +73,40 @@ export async function GET(request: NextRequest) {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { title, date, time, endTime, location, notes, category } = body;
+    const { title, date, time, endTime, location, notes } = body;
 
-    // Build gog command for creating event
-    let startTime = date;
-    let endTimeStr = date;
+    const auth = getAuth();
+    const calendar = google.calendar({ version: "v3", auth });
+    
+    // Build event
+    const event: any = {
+      summary: title,
+      location: location,
+      description: notes,
+    };
     
     if (time) {
-      startTime = `${date}T${time}:00`;
-      endTimeStr = endTime ? `${date}T${endTime}:00` : `${date}T${parseInt(time.split(":")[0]) + 1}:${time.split(":")[1]}:00`;
+      const startDateTime = `${date}T${time}:00`;
+      const endDateTime = endTime 
+        ? `${date}T${endTime}:00` 
+        : `${date}T${parseInt(time.split(":")[0]) + 1}:${time.split(":")[1]}:00`;
+      
+      event.start = { dateTime: startDateTime, timeZone: "America/Denver" };
+      event.end = { dateTime: endDateTime, timeZone: "America/Denver" };
+    } else {
+      event.start = { date: date };
+      event.end = { date: date };
     }
 
-    const cmd = `calendar create ${CALENDAR_ID} --summary "${title}" --start "${startTime}" --end "${endTimeStr}"${location ? ` --location "${location}"` : ""}${notes ? ` --description "${notes}"` : ""}`;
-    
-    const result = await runGog(cmd);
-    
-    return NextResponse.json({ success: true, event: result });
-  } catch (error) {
+    const response = await calendar.events.insert({
+      calendarId: "ericmills71@gmail.com",
+      requestBody: event,
+    });
+
+    return NextResponse.json({ success: true, event: response.data });
+  } catch (error: any) {
     console.error("Calendar create error:", error);
-    return NextResponse.json({ error: "Failed to create event" }, { status: 500 });
+    return NextResponse.json({ error: "Failed to create event", details: error.message }, { status: 500 });
   }
 }
 
@@ -81,22 +117,38 @@ export async function PUT(request: NextRequest) {
     const body = await request.json();
     const { title, date, time, endTime, location, notes } = body;
 
-    let startTime = date;
-    let endTimeStr = date;
+    const auth = getAuth();
+    const calendar = google.calendar({ version: "v3", auth });
+
+    const event: any = {
+      summary: title,
+      location: location,
+      description: notes,
+    };
     
     if (time) {
-      startTime = `${date}T${time}:00`;
-      endTimeStr = endTime ? `${date}T${endTime}:00` : `${date}T${parseInt(time.split(":")[0]) + 1}:${time.split(":")[1]}:00`;
+      const startDateTime = `${date}T${time}:00`;
+      const endDateTime = endTime 
+        ? `${date}T${endTime}:00` 
+        : `${date}T${parseInt(time.split(":")[0]) + 1}:${time.split(":")[1]}:00`;
+      
+      event.start = { dateTime: startDateTime, timeZone: "America/Denver" };
+      event.end = { dateTime: endDateTime, timeZone: "America/Denver" };
+    } else {
+      event.start = { date: date };
+      event.end = { date: date };
     }
 
-    const cmd = `calendar update ${CALENDAR_ID} ${id} --summary "${title}" --start "${startTime}" --end "${endTimeStr}"${location ? ` --location "${location}"` : ""}${notes ? ` --description "${notes}"` : ""}`;
-    
-    const result = await runGog(cmd);
-    
-    return NextResponse.json({ success: true, event: result });
-  } catch (error) {
+    const response = await calendar.events.update({
+      calendarId: "ericmills71@gmail.com",
+      eventId: id!,
+      requestBody: event,
+    });
+
+    return NextResponse.json({ success: true, event: response.data });
+  } catch (error: any) {
     console.error("Calendar update error:", error);
-    return NextResponse.json({ error: "Failed to update event" }, { status: 500 });
+    return NextResponse.json({ error: "Failed to update event", details: error.message }, { status: 500 });
   }
 }
 
@@ -105,12 +157,18 @@ export async function DELETE(request: NextRequest) {
   try {
     const id = request.url.split("/").pop();
     
-    await runGog(`calendar delete ${CALENDAR_ID} ${id}`);
-    
+    const auth = getAuth();
+    const calendar = google.calendar({ version: "v3", auth });
+
+    await calendar.events.delete({
+      calendarId: "ericmills71@gmail.com",
+      eventId: id!,
+    });
+
     return NextResponse.json({ success: true });
-  } catch (error) {
+  } catch (error: any) {
     console.error("Calendar delete error:", error);
-    return NextResponse.json({ error: "Failed to delete event" }, { status: 500 });
+    return NextResponse.json({ error: "Failed to delete event", details: error.message }, { status: 500 });
   }
 }
 

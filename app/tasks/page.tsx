@@ -55,12 +55,14 @@ export default function TasksPage() {
         setError(data.error);
         setTasks([]);
       } else {
-        // Combine tasks and completed
-        const allTasks = [...(data.tasks || []), ...(data.completed || [])];
+        // Combine open and completed tasks
+        const openTasks = data.open || [];
+        const completedTasks = data.completed || [];
+        const allTasks = [...openTasks, ...completedTasks];
         setTasks(allTasks);
       }
     } catch (err) {
-      setError("Failed to fetch tasks");
+      setError("Failed to fetch tasks: " + String(err));
       setTasks([]);
     } finally {
       setLoading(false);

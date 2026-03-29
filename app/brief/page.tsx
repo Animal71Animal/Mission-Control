@@ -26,7 +26,73 @@ interface AnalysisResult {
   topic: string;
 }
 
-// News API key is now handled server-side for security
+// Collapsible Card Component
+function CollapsibleCard({ 
+  title, 
+  icon, 
+  children, 
+  defaultOpen = false 
+}: { 
+  title: string; 
+  icon: string; 
+  children: React.ReactNode; 
+  defaultOpen?: boolean;
+}) {
+  const [isOpen, setIsOpen] = useState(defaultOpen);
+
+  return (
+    <div
+      style={{
+        background: "var(--card)",
+        border: "1px solid var(--border)",
+        borderRadius: 10,
+        marginBottom: 12,
+        overflow: "hidden",
+      }}
+    >
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        style={{
+          width: "100%",
+          padding: "14px 18px",
+          background: "transparent",
+          border: "none",
+          color: "var(--text)",
+          fontSize: "0.95rem",
+          fontWeight: 600,
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          textAlign: "left",
+        }}
+      >
+        <span>
+          {icon} {title}
+        </span>
+        <span
+          style={{
+            transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+            transition: "transform 0.2s",
+            fontSize: "0.8rem",
+          }}
+        >
+          ▼
+        </span>
+      </button>
+      {isOpen && (
+        <div
+          style={{
+            padding: "0 18px 18px",
+            animation: "fadeIn 0.2s ease",
+          }}
+        >
+          {children}
+        </div>
+      )}
+    </div>
+  );
+}
 
 function LoadingDots() {
   const [dots, setDots] = useState(".");
@@ -118,45 +184,22 @@ function NewsStoryCard({ story }: { story: NewsStory }) {
     }
   }
 
-  const categoryColors: Record<string, { bg: string; color: string }> = {
-    Tech: { bg: "#1a2f3d", color: "#63b3ed" },
-    AI: { bg: "#2d1f4a", color: "#b794f4" },
-    Music: { bg: "#1f2d1f", color: "#68d391" },
-  };
-  const tagStyle = categoryColors[story.category] || { bg: "#1e1e2e", color: "#aaa" };
-
   return (
     <div
       style={{
-        background: "var(--card)",
+        background: "rgba(0,0,0,0.2)",
         border: "1px solid var(--border)",
-        borderRadius: 10,
-        padding: "16px 18px",
+        borderRadius: 8,
+        padding: "14px 16px",
         marginBottom: 10,
       }}
     >
       <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
         <div style={{ flex: 1 }}>
-          <span
-            style={{
-              fontSize: "0.68rem",
-              fontWeight: 700,
-              textTransform: "uppercase",
-              letterSpacing: "0.08em",
-              padding: "2px 7px",
-              borderRadius: 4,
-              display: "inline-block",
-              marginBottom: 6,
-              background: tagStyle.bg,
-              color: tagStyle.color,
-            }}
-          >
-            {story.category}
-          </span>
-          <h3 style={{ fontSize: "0.95rem", fontWeight: 600, lineHeight: 1.4, color: "var(--text)", margin: 0 }}>
+          <h3 style={{ fontSize: "0.9rem", fontWeight: 600, lineHeight: 1.4, color: "var(--text)", margin: 0 }}>
             {story.title}
           </h3>
-          <p style={{ fontSize: "0.82rem", color: "var(--muted)", marginTop: 6, lineHeight: 1.5 }}>
+          <p style={{ fontSize: "0.8rem", color: "var(--muted)", marginTop: 6, lineHeight: 1.5 }}>
             {story.summary}
           </p>
           <span style={{ fontSize: "0.7rem", color: "#666" }}>Source: {story.source}</span>
@@ -170,7 +213,7 @@ function NewsStoryCard({ story }: { story: NewsStory }) {
             color: loading ? "#aaa" : "#9b5de5",
             borderRadius: 6,
             padding: "6px 14px",
-            fontSize: "0.8rem",
+            fontSize: "0.75rem",
             fontWeight: 600,
             cursor: loading ? "default" : "pointer",
             whiteSpace: "nowrap",
@@ -244,6 +287,13 @@ export default function BriefPage() {
     month: "long",
     day: "numeric",
   });
+
+  // Group news by category
+  const techNews = news.filter((s) => s.category === "Tech");
+  const aiNews = news.filter((s) => s.category === "AI");
+  const musicNews = news.filter((s) => s.category === "Music");
+  const politicsNews = news.filter((s) => s.category === "Politics");
+  const otherNews = news.filter((s) => !["Tech", "AI", "Music", "Politics"].includes(s.category));
 
   return (
     <div style={{ maxWidth: 960, margin: "0 auto" }}>
@@ -339,17 +389,61 @@ export default function BriefPage() {
         </div>
       </div>
 
-      {/* News Stories */}
+      {/* News Feed with Collapsible Cards */}
       <div>
         <div style={{ fontSize: "0.72rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: "var(--muted)", marginBottom: 14 }}>
-          📰 Top Stories — Tech, AI & Music
+          📰 News Feed
         </div>
+        
         {newsLoading ? (
           <div style={{ color: "var(--muted)", padding: "20px" }}>Loading news stories...</div>
         ) : newsError ? (
           <div style={{ color: "#e05c5c", padding: "20px" }}>{newsError}</div>
         ) : (
-          news.map((story, i) => <NewsStoryCard key={i} story={story} />)
+          <>
+            {/* Tech */}
+            <CollapsibleCard title="Tech" icon="💻" defaultOpen={false}>
+              {techNews.length > 0 ? (
+                techNews.map((story, i) => <NewsStoryCard key={i} story={story} />)
+              ) : (
+                <div style={{ color: "var(--muted)", fontSize: "0.85rem", padding: "10px 0" }}>No Tech stories</div>
+              )}
+            </CollapsibleCard>
+
+            {/* AI */}
+            <CollapsibleCard title="AI" icon="🤖" defaultOpen={false}>
+              {aiNews.length > 0 ? (
+                aiNews.map((story, i) => <NewsStoryCard key={i} story={story} />)
+              ) : (
+                <div style={{ color: "var(--muted)", fontSize: "0.85rem", padding: "10px 0" }}>No AI stories</div>
+              )}
+            </CollapsibleCard>
+
+            {/* Music */}
+            <CollapsibleCard title="Music" icon="🎵" defaultOpen={false}>
+              {musicNews.length > 0 ? (
+                musicNews.map((story, i) => <NewsStoryCard key={i} story={story} />)
+              ) : (
+                <div style={{ color: "var(--muted)", fontSize: "0.85rem", padding: "10px 0" }}>No Music stories</div>
+              )}
+            </CollapsibleCard>
+
+            {/* Politics */}
+            <CollapsibleCard title="Politics" icon="🏛️" defaultOpen={false}>
+              {politicsNews.length > 0 ? (
+                politicsNews.map((story, i) => <NewsStoryCard key={i} story={story} />)
+              ) : (
+                <div style={{ color: "var(--muted)", fontSize: "0.85rem", padding: "10px 0" }}>No Politics stories</div>
+              )}
+            </CollapsibleCard>
+
+            {/* Other */}
+            {otherNews.length > 0 && (
+              <CollapsibleCard title="Other" icon="📰" defaultOpen={false}>
+                {otherNews.map((story, i) => <NewsStoryCard key={i} story={story} />)}
+              </CollapsibleCard>
+            )}
+          </>
         )}
       </div>
     </div>

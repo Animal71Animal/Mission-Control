@@ -1,6 +1,16 @@
 {
   "sessions": [
     {
+      "date": "2026-03-28",
+      "time": "20:45",
+      "duration_minutes": 50,
+      "rate_per_kwh": 0.18,
+      "cost": 14.92,
+      "kwh": 82.92,
+      "notes": "",
+      "location": "Boise, ID - North Orchard St"
+    },
+    {
       "date": "2026-03-22",
       "time": "02:55",
       "duration_minutes": 59,
@@ -442,14 +452,14 @@
     }
   ],
   "summary": {
-    "total_sessions": 44,
-    "total_cost_usd": 702.33,
-    "total_kwh": 2406.9146,
-    "total_minutes": 1548,
-    "avg_cost_per_session": 15.96,
-    "avg_duration_minutes": 35.18
+    "total_sessions": 45,
+    "total_cost_usd": 717.25,
+    "total_kwh": 2489.8346,
+    "total_minutes": 1598,
+    "avg_cost_per_session": 15.94,
+    "avg_duration_minutes": 35.51
   },
-  "last_updated": "2026-03-22",
+  "last_updated": "2026-03-29",
   "monthly_summary": {
     "2026-01": {
       "cost": 358.61,
@@ -464,10 +474,10 @@
       "minutes": 356
     },
     "2026-03": {
-      "cost": 187.24,
-      "kwh": 743.18,
-      "sessions": 13,
-      "minutes": 518
+      "cost": 202.16,
+      "kwh": 826.10,
+      "sessions": 14,
+      "minutes": 568
     }
   }
 }

@@ -80,8 +80,17 @@ export default function TeslaPage() {
   }
 
   const sessions = data?.sessions || [];
-  const summary = data?.summary || {};
   const monthly = data?.monthly_summary || {};
+
+  // Calculate totals automatically from sessions
+  const calculatedSummary = {
+    total_sessions: sessions.length,
+    total_cost_usd: sessions.reduce((sum, s) => sum + (s.cost || 0), 0),
+    total_kwh: sessions.reduce((sum, s) => sum + (s.kwh || 0), 0),
+    total_minutes: sessions.reduce((sum, s) => sum + (s.duration_minutes || 0), 0),
+    avg_cost_per_session: sessions.length > 0 ? sessions.reduce((sum, s) => sum + (s.cost || 0), 0) / sessions.length : 0,
+    avg_duration_minutes: sessions.length > 0 ? sessions.reduce((sum, s) => sum + (s.duration_minutes || 0), 0) / sessions.length : 0,
+  };
 
   const sortedSessions = [...sessions].sort((a, b) => b.date.localeCompare(a.date));
 
@@ -97,10 +106,10 @@ export default function TeslaPage() {
       {/* Top stats */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, marginBottom: 16 }}>
         {[
-          { label: "Total sessions", value: summary.total_sessions ?? sessions.length },
-          { label: "Total spent", value: `$${(summary.total_cost_usd ?? 0).toFixed(2)}` },
-          { label: "Total kWh", value: `${(summary.total_kwh ?? 0).toFixed(1)}` },
-          { label: "Avg per session", value: `$${(summary.avg_cost_per_session ?? 0).toFixed(2)}` },
+          { label: "Total sessions", value: calculatedSummary.total_sessions },
+          { label: "Total spent", value: `$${calculatedSummary.total_cost_usd.toFixed(2)}` },
+          { label: "Total kWh", value: `${calculatedSummary.total_kwh.toFixed(1)}` },
+          { label: "Avg per session", value: `$${calculatedSummary.avg_cost_per_session.toFixed(2)}` },
         ].map((s) => (
           <Card key={s.label}>
             <div style={{ fontSize: "1.6rem", fontWeight: 700, color: "var(--accent2)" }}>{s.value}</div>

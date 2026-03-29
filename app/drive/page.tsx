@@ -28,7 +28,16 @@ export default function DrivePage() {
         setError(data.error);
         setFolders([]);
       } else {
-        setFolders(data.folders || []);
+        // API returns files array, filter to just folders
+        const allFiles = data.files || [];
+        const folderList = allFiles
+          .filter((f: any) => f.type === "folder")
+          .map((f: any) => ({
+            id: f.id,
+            name: f.name,
+            desc: f.mimeType?.replace("application/vnd.google-apps.", "") || "",
+          }));
+        setFolders(folderList);
       }
     } catch (err) {
       setError("Failed to fetch Drive folders");

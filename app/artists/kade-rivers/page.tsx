@@ -11,7 +11,7 @@ export default function KadeRiversPage() {
       <div style={{ display: "grid", gridTemplateColumns: "320px 1fr", gap: 28, marginTop: 12 }}>
         <div>
           <img
-            src="/artists/kade-rivers.jpg"
+            src="/kade-rivers.jpg"
             alt="Kade Rivers"
             width={320}
             height={400}

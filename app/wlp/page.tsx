@@ -341,7 +341,7 @@ const syncLinks: LinkItem[] = [
 ];
 
 const businessDocs: DocItem[] = [
-  { emoji: "🎭", name: "DOE Pitch Deck", desc: "Director of Entertainment — live pitch site", href: "https://animal-talent-manager.surge.sh" },
+  { emoji: "🎭", name: "DOE Pitch Deck", desc: "Director of Entertainment — live pitch site", href: "https://my-nvj2gsssh-ericmills71-8100s-projects.vercel.app" },
   { emoji: "🏗️", name: "Org Structure", desc: "Entity, divisions, AI roster, decision flow", href: "/wlp-org" },
   { emoji: "💰", name: "Revenue Tracker", desc: "12-month tracker, P&L, KPIs, per-gig log", href: "/wlp-revenue" },
   { emoji: "📅", name: "90-Day Plan", desc: "Apr 12 – Jul 11 · 3 phases · hard dates", href: "/wlp-90day" },
@@ -377,7 +377,7 @@ const artists = [
     statusBg: "#2d1f5e",
     statusColor: "#7f5af0",
     borderHover: "#7f5af0",
-    img: "/kade-rivers.jpg",
+    img: "/kade-rivers-v2.jpg",
   },
   {
     name: "Madison Blair",
@@ -395,7 +395,7 @@ const artists = [
     statusBg: "#0a1f2e",
     statusColor: "#4fc3f7",
     borderHover: "#4fc3f7",
-    img: "/aria-vale.jpg",
+    img: "/aria-vale.png",
   },
 ];
 
