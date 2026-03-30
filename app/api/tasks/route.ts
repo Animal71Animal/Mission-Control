@@ -1,50 +1,71 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { getTasks, addTask, updateTask, deleteTask } from '@/lib/data-store';
+/**
+ * Mission Control v2 - Tasks API
+ * Static JSON-backed (Vercel-compatible)
+ * Reads from public/data/tasks.json — writes return success stubs
+ */
 
-// GET /api/tasks
-export async function GET() {
+import { NextRequest, NextResponse } from 'next/server';
+import { readFile } from 'fs/promises';
+import { resolve } from 'path';
+
+export interface Task {
+  id: string;
+  title: string;
+  owner: string;
+  status: string;
+  priority: string;
+  due_date?: string | null;
+  category?: string | null;
+  notes?: string | null;
+  created_at: string;
+  completed_at?: string | null;
+  started_at?: string | null;
+  duration_minutes?: number | null;
+}
+
+async function loadTasks(): Promise<{ open: Task[]; completed: Task[] }> {
   try {
-    const tasks = await getTasks();
-    return NextResponse.json(tasks);
-  } catch (err) {
-    console.error('Tasks fetch error:', err);
-    return NextResponse.json({ open: [], completed: [] }, { status: 500 });
+    const filePath = resolve(process.cwd(), 'public/data/tasks.json');
+    const raw = await readFile(filePath, 'utf-8');
+    return JSON.parse(raw);
+  } catch {
+    return { open: [], completed: [] };
   }
 }
 
-// POST /api/tasks
+// GET /api/tasks — returns { open: Task[], completed: Task[] }
+export async function GET() {
+  try {
+    const data = await loadTasks();
+    return NextResponse.json(data);
+  } catch (err) {
+    console.error('[GET /api/tasks]', err);
+    return NextResponse.json({ open: [], completed: [], error: String(err) }, { status: 500 });
+  }
+}
+
+// POST /api/tasks — stub (read-only deployment)
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const task = await addTask(body);
-    return NextResponse.json({ success: true, task });
+    const id = body.id || `task-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
+    return NextResponse.json({ success: true, task: { id, ...body } });
   } catch (err) {
-    console.error('Task create error:', err);
-    return NextResponse.json({ error: 'Failed to create task' }, { status: 500 });
+    return NextResponse.json({ error: 'Failed to create task', detail: String(err) }, { status: 500 });
   }
 }
 
-// PUT /api/tasks/:id
-export async function PUT(request: NextRequest) {
+// PATCH /api/tasks — stub
+export async function PATCH(request: NextRequest) {
   try {
-    const id = request.url.split('/').pop();
     const body = await request.json();
-    const task = await updateTask(id!, body);
-    return NextResponse.json({ success: true, task });
+    return NextResponse.json({ success: true, task: body });
   } catch (err) {
-    console.error('Task update error:', err);
-    return NextResponse.json({ error: 'Failed to update task' }, { status: 500 });
+    return NextResponse.json({ error: 'Failed to update task', detail: String(err) }, { status: 500 });
   }
 }
 
-// DELETE /api/tasks/:id
-export async function DELETE(request: NextRequest) {
-  try {
-    const id = request.url.split('/').pop();
-    await deleteTask(id!);
-    return NextResponse.json({ success: true });
-  } catch (err) {
-    console.error('Task delete error:', err);
-    return NextResponse.json({ error: 'Failed to delete task' }, { status: 500 });
-  }
+// DELETE /api/tasks?id=xxx — stub
+export async function DELETE() {
+  return NextResponse.json({ success: true });
 }

@@ -1,0 +1,146 @@
+[
+  {
+    "id": "asset-animal-audio",
+    "artist_name": "ANIMAL",
+    "asset_type": "audio",
+    "status": "draft",
+    "url": null,
+    "notes": null,
+    "created_at": "2026-03-29T18:08:01.790Z"
+  },
+  {
+    "id": "asset-animal-cover",
+    "artist_name": "ANIMAL",
+    "asset_type": "cover",
+    "status": "draft",
+    "url": null,
+    "notes": null,
+    "created_at": "2026-03-29T18:08:01.790Z"
+  },
+  {
+    "id": "asset-animal-lyrics",
+    "artist_name": "ANIMAL",
+    "asset_type": "lyrics",
+    "status": "draft",
+    "url": null,
+    "notes": null,
+    "created_at": "2026-03-29T18:08:01.790Z"
+  },
+  {
+    "id": "asset-animal-social",
+    "artist_name": "ANIMAL",
+    "asset_type": "social",
+    "status": "draft",
+    "url": null,
+    "notes": null,
+    "created_at": "2026-03-29T18:08:01.790Z"
+  },
+  {
+    "id": "asset-aria-vale-audio",
+    "artist_name": "Aria Vale",
+    "asset_type": "audio",
+    "status": "draft",
+    "url": null,
+    "notes": null,
+    "created_at": "2026-03-29T18:08:01.790Z"
+  },
+  {
+    "id": "asset-aria-vale-cover",
+    "artist_name": "Aria Vale",
+    "asset_type": "cover",
+    "status": "draft",
+    "url": null,
+    "notes": null,
+    "created_at": "2026-03-29T18:08:01.790Z"
+  },
+  {
+    "id": "asset-aria-vale-lyrics",
+    "artist_name": "Aria Vale",
+    "asset_type": "lyrics",
+    "status": "draft",
+    "url": null,
+    "notes": null,
+    "created_at": "2026-03-29T18:08:01.790Z"
+  },
+  {
+    "id": "asset-aria-vale-social",
+    "artist_name": "Aria Vale",
+    "asset_type": "social",
+    "status": "draft",
+    "url": null,
+    "notes": null,
+    "created_at": "2026-03-29T18:08:01.790Z"
+  },
+  {
+    "id": "asset-kade-rivers-audio",
+    "artist_name": "Kade Rivers",
+    "asset_type": "audio",
+    "status": "draft",
+    "url": null,
+    "notes": null,
+    "created_at": "2026-03-29T18:08:01.790Z"
+  },
+  {
+    "id": "asset-kade-rivers-cover",
+    "artist_name": "Kade Rivers",
+    "asset_type": "cover",
+    "status": "draft",
+    "url": null,
+    "notes": null,
+    "created_at": "2026-03-29T18:08:01.790Z"
+  },
+  {
+    "id": "asset-kade-rivers-lyrics",
+    "artist_name": "Kade Rivers",
+    "asset_type": "lyrics",
+    "status": "draft",
+    "url": null,
+    "notes": null,
+    "created_at": "2026-03-29T18:08:01.790Z"
+  },
+  {
+    "id": "asset-kade-rivers-social",
+    "artist_name": "Kade Rivers",
+    "asset_type": "social",
+    "status": "draft",
+    "url": null,
+    "notes": null,
+    "created_at": "2026-03-29T18:08:01.790Z"
+  },
+  {
+    "id": "asset-madison-blair-audio",
+    "artist_name": "Madison Blair",
+    "asset_type": "audio",
+    "status": "draft",
+    "url": null,
+    "notes": null,
+    "created_at": "2026-03-29T18:08:01.790Z"
+  },
+  {
+    "id": "asset-madison-blair-cover",
+    "artist_name": "Madison Blair",
+    "asset_type": "cover",
+    "status": "draft",
+    "url": null,
+    "notes": null,
+    "created_at": "2026-03-29T18:08:01.790Z"
+  },
+  {
+    "id": "asset-madison-blair-lyrics",
+    "artist_name": "Madison Blair",
+    "asset_type": "lyrics",
+    "status": "draft",
+    "url": null,
+    "notes": null,
+    "created_at": "2026-03-29T18:08:01.790Z"
+  },
+  {
+    "id": "asset-madison-blair-social",
+    "artist_name": "Madison Blair",
+    "asset_type": "social",
+    "status": "draft",
+    "url": null,
+    "notes": null,
+    "created_at": "2026-03-29T18:08:01.790Z"
+  }
+]

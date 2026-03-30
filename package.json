@@ -7,10 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "db:migrate": "node scripts/migrate.js"
+    "db:init": "tsx scripts/init-db.ts",
+    "db:migrate": "tsx scripts/migrate-data.ts"
   },
   "dependencies": {
     "@vercel/postgres": "^0.10.0",
+    "better-sqlite3": "^12.8.0",
     "googleapis": "^171.4.0",
     "marked": "^17.0.4",
     "next": "16.1.6",
@@ -19,12 +21,15 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dotenv": "^17.3.1",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }

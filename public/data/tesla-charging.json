@@ -1,471 +1,560 @@
 {
   "sessions": [
     {
+      "id": "tesla-20260328-0",
       "date": "2026-03-28",
       "time": "20:45",
+      "location": "Boise, ID - North Orchard St",
+      "kwh": 82.92,
+      "cost": 14.92,
       "duration_minutes": 50,
       "rate_per_kwh": 0.18,
-      "cost": 14.92,
-      "kwh": 82.92,
-      "notes": "",
-      "location": "Boise, ID - North Orchard St"
+      "notes": null,
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260322-1",
       "date": "2026-03-22",
       "time": "02:55",
+      "location": "Boise, ID - 1426 South Entertainment Ave",
+      "kwh": 85.9846,
+      "cost": 15.47,
       "duration_minutes": 59,
       "rate_per_kwh": 0.18,
-      "cost": 15.47,
-      "kwh": 85.9846,
       "notes": "Supercharging",
-      "location": "Boise, ID - 1426 South Entertainment Ave"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260321-2",
       "date": "2026-03-21",
       "time": "05:31",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 58.03,
+      "cost": 10.44,
       "duration_minutes": 27,
       "rate_per_kwh": 0.18,
-      "cost": 10.44,
-      "kwh": 58.03,
-      "notes": "",
-      "location": "Boise, ID - 851 N Orchard St"
+      "notes": null,
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260318-3",
       "date": "2026-03-18",
       "time": "02:26",
+      "location": "Boise, ID - 1426 South Entertainment Ave",
+      "kwh": 31.18,
+      "cost": 5.61,
       "duration_minutes": 48,
       "rate_per_kwh": 0.18,
-      "cost": 5.61,
-      "kwh": 31.18,
       "notes": "Late night charging rate",
-      "location": "Boise, ID - 1426 South Entertainment Ave"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260316-4",
       "date": "2026-03-16",
       "time": "23:06",
+      "location": "Boise, ID - 1426 South Entertainment Ave",
+      "kwh": 71.32,
+      "cost": 12.83,
       "duration_minutes": 53,
       "rate_per_kwh": 0.18,
-      "cost": 12.83,
-      "kwh": 71.32,
       "notes": "Supercharging",
-      "location": "Boise, ID - 1426 South Entertainment Ave"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260314-5",
       "date": "2026-03-14",
       "time": "05:45",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 86.67,
+      "cost": 15.6,
       "duration_minutes": 49,
       "rate_per_kwh": 0.18,
-      "cost": 15.6,
-      "kwh": 86.67,
-      "notes": "",
-      "location": "Boise, ID - 851 N Orchard St"
+      "notes": null,
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260310-6",
       "date": "2026-03-10",
       "time": "23:44",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 45.61,
+      "cost": 8.21,
       "duration_minutes": 44,
       "rate_per_kwh": 0.18,
-      "cost": 8.21,
-      "kwh": 45.61,
-      "notes": "",
-      "location": "Boise, ID - 851 N Orchard St"
+      "notes": null,
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260310-7",
       "date": "2026-03-10",
       "time": "00:17",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 47.56,
+      "cost": 8.56,
       "duration_minutes": 60,
       "rate_per_kwh": 0.18,
-      "cost": 8.56,
-      "kwh": 47.56,
-      "notes": "",
-      "location": "Boise, ID - 851 N Orchard St"
+      "notes": null,
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260309-8",
       "date": "2026-03-09",
       "time": "19:55",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 65.28,
+      "cost": 23.5,
       "duration_minutes": 31,
       "rate_per_kwh": 0.36,
-      "cost": 23.5,
-      "kwh": 65.28,
-      "notes": "",
-      "location": "Boise, ID - 851 N Orchard St"
+      "notes": null,
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260308-9",
       "date": "2026-03-08",
       "time": "19:46",
+      "location": "Ontario, OR - 212 SE 10th St",
+      "kwh": 64.88,
+      "cost": 21.41,
       "duration_minutes": 28,
       "rate_per_kwh": 0.33,
-      "cost": 21.41,
-      "kwh": 64.88,
-      "notes": "",
-      "location": "Ontario, OR - 212 SE 10th St"
+      "notes": null,
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260307-10",
       "date": "2026-03-07",
       "time": "23:45",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 83.11,
+      "cost": 14.96,
       "duration_minutes": 55,
       "rate_per_kwh": 0.18,
-      "cost": 14.96,
-      "kwh": 83.11,
-      "notes": "",
-      "location": "Boise, ID - 851 N Orchard St"
+      "notes": null,
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260303-11",
       "date": "2026-03-03",
       "time": "23:13",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 65.72,
+      "cost": 11.83,
       "duration_minutes": 45,
       "rate_per_kwh": 0.18,
-      "cost": 11.83,
-      "kwh": 65.72,
-      "notes": "",
-      "location": "Boise, ID - 851 N Orchard St"
+      "notes": null,
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260303-12",
       "date": "2026-03-03",
       "time": "16:59",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 42.86,
+      "cost": 15.43,
       "duration_minutes": 23,
       "rate_per_kwh": 0.36,
-      "cost": 15.43,
-      "kwh": 42.86,
-      "notes": "",
-      "location": "Boise, ID - 851 N Orchard St"
+      "notes": null,
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260301-13",
       "date": "2026-03-01",
       "time": "12:29",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 64.97,
+      "cost": 23.39,
       "duration_minutes": 44,
       "rate_per_kwh": 0.36,
-      "cost": 23.39,
-      "kwh": 64.97,
-      "notes": "",
-      "location": "Boise, ID - 851 N Orchard St"
+      "notes": null,
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260227-14",
       "date": "2026-02-27",
       "time": "18:39",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 56.8699,
+      "cost": 20.47,
       "duration_minutes": 36,
       "rate_per_kwh": 0.36,
-      "cost": 20.47,
-      "kwh": 56.8699,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260222-15",
       "date": "2026-02-22",
       "time": "10:57",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 57.2054,
+      "cost": 20.59,
       "duration_minutes": 48,
       "rate_per_kwh": 0.36,
-      "cost": 20.59,
-      "kwh": 57.2054,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260217-16",
       "date": "2026-02-17",
       "time": "23:35",
+      "location": "Boise, ID - 1426 South Entertainment Ave",
+      "kwh": 77.6531,
+      "cost": 13.97,
       "duration_minutes": 48,
       "rate_per_kwh": 0.18,
-      "cost": 13.97,
-      "kwh": 77.6531,
       "notes": "Supercharging",
-      "location": "Boise, ID - 1426 South Entertainment Ave"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260216-17",
       "date": "2026-02-16",
       "time": "01:34",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 69.732,
+      "cost": 12.55,
       "duration_minutes": 50,
       "rate_per_kwh": 0.18,
-      "cost": 12.55,
-      "kwh": 69.732,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260212-18",
       "date": "2026-02-12",
       "time": "23:23",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 65.0814,
+      "cost": 11.71,
       "duration_minutes": 40,
       "rate_per_kwh": 0.18,
-      "cost": 11.71,
-      "kwh": 65.0814,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260211-19",
       "date": "2026-02-11",
       "time": "16:57",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 61.8404,
+      "cost": 24.11,
       "duration_minutes": 30,
       "rate_per_kwh": 0.39,
-      "cost": 24.11,
-      "kwh": 61.8404,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260209-20",
       "date": "2026-02-09",
       "time": "14:26",
+      "location": "Boise, ID - 1426 South Entertainment Ave",
+      "kwh": 59.9374,
+      "cost": 24.57,
       "duration_minutes": 50,
       "rate_per_kwh": 0.41,
-      "cost": 24.57,
-      "kwh": 59.9374,
       "notes": "Supercharging",
-      "location": "Boise, ID - 1426 South Entertainment Ave"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260206-21",
       "date": "2026-02-06",
       "time": "18:40",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 73.1112,
+      "cost": 28.51,
       "duration_minutes": 54,
       "rate_per_kwh": 0.39,
-      "cost": 28.51,
-      "kwh": 73.1112,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260131-22",
       "date": "2026-01-31",
       "time": "10:05",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 88.0835,
+      "cost": 34.35,
       "duration_minutes": 55,
       "rate_per_kwh": 0.39,
-      "cost": 34.35,
-      "kwh": 88.0835,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260130-23",
       "date": "2026-01-30",
       "time": "17:57",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 45.3393,
+      "cost": 17.68,
       "duration_minutes": 19,
       "rate_per_kwh": 0.39,
-      "cost": 17.68,
-      "kwh": 45.3393,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260127-24",
       "date": "2026-01-27",
       "time": "01:24",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 64.7999,
+      "cost": 11.66,
       "duration_minutes": 55,
       "rate_per_kwh": 0.18,
-      "cost": 11.66,
-      "kwh": 64.7999,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260126-25",
       "date": "2026-01-26",
       "time": "15:59",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 31.6646,
+      "cost": 12.34,
       "duration_minutes": 12,
       "rate_per_kwh": 0.39,
-      "cost": 12.34,
-      "kwh": 31.6646,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260125-26",
       "date": "2026-01-25",
       "time": "06:56",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 75.951,
+      "cost": 13.67,
       "duration_minutes": 70,
       "rate_per_kwh": 0.18,
-      "cost": 13.67,
-      "kwh": 75.951,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260124-27",
       "date": "2026-01-24",
       "time": "11:42",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 35.7864,
+      "cost": 13.95,
       "duration_minutes": 24,
       "rate_per_kwh": 0.39,
-      "cost": 13.95,
-      "kwh": 35.7864,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260122-28",
       "date": "2026-01-22",
       "time": "15:25",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 39.7067,
+      "cost": 15.48,
       "duration_minutes": 17,
       "rate_per_kwh": 0.39,
-      "cost": 15.48,
-      "kwh": 39.7067,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260121-29",
       "date": "2026-01-21",
       "time": "16:40",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 29.4456,
+      "cost": 11.48,
       "duration_minutes": 14,
       "rate_per_kwh": 0.39,
-      "cost": 11.48,
-      "kwh": 29.4456,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260120-30",
       "date": "2026-01-20",
       "time": "10:47",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 64.7185,
+      "cost": 25.24,
       "duration_minutes": 46,
       "rate_per_kwh": 0.39,
-      "cost": 25.24,
-      "kwh": 64.7185,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260119-31",
       "date": "2026-01-19",
       "time": "17:01",
+      "location": "Boise, ID - 1426 South Entertainment Ave",
+      "kwh": 23.9261,
+      "cost": 9.8,
       "duration_minutes": 14,
       "rate_per_kwh": 0.41,
-      "cost": 9.8,
-      "kwh": 23.9261,
       "notes": "Supercharging",
-      "location": "Boise, ID - 1426 South Entertainment Ave"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260118-32",
       "date": "2026-01-18",
       "time": "00:05",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 54.1139,
+      "cost": 9.74,
       "duration_minutes": 25,
       "rate_per_kwh": 0.18,
-      "cost": 9.74,
-      "kwh": 54.1139,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260117-33",
       "date": "2026-01-17",
       "time": "01:16",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 73.3643,
+      "cost": 13.2,
       "duration_minutes": 46,
       "rate_per_kwh": 0.18,
-      "cost": 13.2,
-      "kwh": 73.3643,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260115-34",
       "date": "2026-01-15",
       "time": "01:26",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 61.2313,
+      "cost": 11.02,
       "duration_minutes": 40,
       "rate_per_kwh": 0.18,
-      "cost": 11.02,
-      "kwh": 61.2313,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260114-35",
       "date": "2026-01-14",
       "time": "15:11",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 54.1246,
+      "cost": 21.1,
       "duration_minutes": 34,
       "rate_per_kwh": 0.39,
-      "cost": 21.1,
-      "kwh": 54.1246,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260112-36",
       "date": "2026-01-12",
       "time": "15:19",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 40.4534,
+      "cost": 15.77,
       "duration_minutes": 23,
       "rate_per_kwh": 0.39,
-      "cost": 15.77,
-      "kwh": 40.4534,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260110-37",
       "date": "2026-01-10",
       "time": "14:23",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 48.1075,
+      "cost": 18.76,
       "duration_minutes": 24,
       "rate_per_kwh": 0.39,
-      "cost": 18.76,
-      "kwh": 48.1075,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260109-38",
       "date": "2026-01-09",
       "time": "22:02",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 36.4268,
+      "cost": 6.55,
       "duration_minutes": 16,
       "rate_per_kwh": 0.18,
-      "cost": 6.55,
-      "kwh": 36.4268,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260109-39",
       "date": "2026-01-09",
       "time": "15:35",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 33.6098,
+      "cost": 13.1,
       "duration_minutes": 15,
       "rate_per_kwh": 0.39,
-      "cost": 13.1,
-      "kwh": 33.6098,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260108-40",
       "date": "2026-01-08",
       "time": "17:13",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 28.0771,
+      "cost": 10.95,
       "duration_minutes": 12,
       "rate_per_kwh": 0.39,
-      "cost": 10.95,
-      "kwh": 28.0771,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260107-41",
       "date": "2026-01-07",
       "time": "09:01",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 21.5836,
+      "cost": 8.41,
       "duration_minutes": 10,
       "rate_per_kwh": 0.39,
-      "cost": 8.41,
-      "kwh": 21.5836,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260105-42",
       "date": "2026-01-05",
       "time": "21:44",
+      "location": "Boise, ID - 1426 South Entertainment Ave",
+      "kwh": 65.0034,
+      "cost": 26.65,
       "duration_minutes": 34,
       "rate_per_kwh": 0.41,
-      "cost": 26.65,
-      "kwh": 65.0034,
       "notes": "Supercharging",
-      "location": "Boise, ID - 1426 South Entertainment Ave"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260104-43",
       "date": "2026-01-04",
       "time": "03:16",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 53.6192,
+      "cost": 9.65,
       "duration_minutes": 27,
       "rate_per_kwh": 0.18,
-      "cost": 9.65,
-      "kwh": 53.6192,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
+      "id": "tesla-20260101-44",
       "date": "2026-01-01",
       "time": "17:16",
+      "location": "Boise, ID - 851 N Orchard St",
+      "kwh": 71.9573,
+      "cost": 28.06,
       "duration_minutes": 42,
       "rate_per_kwh": 0.39,
-      "cost": 28.06,
-      "kwh": 71.9573,
       "notes": "Supercharging",
-      "location": "Boise, ID - 851 N Orchard St"
+      "created_at": "2026-03-29T18:08:01.788Z"
     }
   ],
   "summary": {
     "total_sessions": 45,
     "total_cost_usd": 717.25,
-    "total_kwh": 2489.8346,
-    "total_minutes": 1598,
+    "total_kwh": 2558.6192,
+    "total_minutes": 1646,
     "avg_cost_per_session": 15.94,
-    "avg_duration_minutes": 35.51
+    "avg_duration_minutes": 36.58
   },
-  "last_updated": "2026-03-29",
   "monthly_summary": {
-    "2026-01": {
-      "cost": 358.61,
-      "kwh": 1142.0438,
-      "sessions": 23,
-      "minutes": 674
+    "2026-03": {
+      "cost": 202.16,
+      "kwh": 896.0946,
+      "sessions": 14,
+      "minutes": 616
     },
     "2026-02": {
       "cost": 156.48,
@@ -473,11 +562,12 @@
       "sessions": 8,
       "minutes": 356
     },
-    "2026-03": {
-      "cost": 202.16,
-      "kwh": 826.10,
-      "sessions": 14,
-      "minutes": 568
+    "2026-01": {
+      "cost": 358.61,
+      "kwh": 1141.0938,
+      "sessions": 23,
+      "minutes": 674
     }
-  }
+  },
+  "last_updated": "2026-03-30T00:00:00.000Z"
 }

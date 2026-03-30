@@ -61,7 +61,7 @@ export default function TeslaPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/data/tesla-charging.json")
+    fetch("/api/tesla")
       .then((res) => res.json())
       .then((data) => {
         setData(data);
