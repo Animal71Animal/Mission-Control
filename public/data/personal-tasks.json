@@ -1,5 +1,14 @@
 [
   {
+    "id": "task-1774841641981",
+    "title": "Finish Ashley and Mike's Intro Song and send them suggestions for F/D M/S dances",
+    "category": "Personal",
+    "priority": "high",
+    "dueDate": "2026-04-02",
+    "completed": false,
+    "createdAt": "2026-03-30T03:34:01.981Z"
+  },
+  {
     "id": "task-1774841589378",
     "title": "Flight to RDUI",
     "category": "Personal",
