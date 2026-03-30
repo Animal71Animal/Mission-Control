@@ -1,20 +1,6 @@
 {
   "open": [
     {
-      "id": "T1",
-      "title": "Fill weekly tip data from Google Sheets to SRB Tips",
-      "owner": "animal",
-      "status": "completed",
-      "priority": "medium",
-      "due_date": null,
-      "category": null,
-      "notes": "Completed: Jan-Mar 2026 data filled",
-      "created_at": "2026-03-29T18:08:01.783Z",
-      "completed_at": "2026-03-30",
-      "started_at": null,
-      "duration_minutes": null
-    },
-    {
       "id": "T3",
       "title": "Install NI plugins (Kontakt, Reaktor, Massive)",
       "owner": "animal",
