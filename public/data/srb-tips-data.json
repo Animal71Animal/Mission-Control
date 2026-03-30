@@ -12,7 +12,7 @@
     },
     {
       "month": "March",
-      "amount": 1956,
+      "amount": 1976,
       "nights": 15
     }
   ],
@@ -274,7 +274,7 @@
       "name": "Quinn",
       "jan": 10,
       "feb": 14,
-      "mar": 30
+      "mar": 50
     },
     {
       "name": "Lilly",
@@ -3219,7 +3219,7 @@
       },
       {
         "date": "Sun Mar 29",
-        "total": 23,
+        "total": 43,
         "dancers": [
           {
             "name": "Alaska",
@@ -3228,6 +3228,10 @@
           {
             "name": "Tiana",
             "amount": 18
+          },
+          {
+            "name": "Quinn",
+            "amount": 20
           }
         ]
       }
