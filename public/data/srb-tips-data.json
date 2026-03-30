@@ -12,7 +12,7 @@
     },
     {
       "month": "March",
-      "amount": 1938,
+      "amount": 1956,
       "nights": 15
     }
   ],
@@ -394,7 +394,7 @@
       "name": "Tiana",
       "jan": 7,
       "feb": 5,
-      "mar": 10
+      "mar": 28
     },
     {
       "name": "Maria",
@@ -3219,11 +3219,15 @@
       },
       {
         "date": "Sun Mar 29",
-        "total": 5,
+        "total": 23,
         "dancers": [
           {
             "name": "Alaska",
             "amount": 5
+          },
+          {
+            "name": "Tiana",
+            "amount": 18
           }
         ]
       }
