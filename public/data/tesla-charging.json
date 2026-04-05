@@ -541,25 +541,49 @@
       "created_at": "2026-03-29T18:08:01.788Z"
     },
     {
-      "id": "tesla-20260405-48",
-      "date": "2026-04-05",
-      "time": "14:45",
-      "location": "Boise, ID - North Orchard St (551 N Orchard St)",
-      "kwh": 43.0468,
-      "cost": 16.35,
-      "duration_minutes": 25,
+      "id": "tesla-20260331-45",
+      "date": "2026-03-31",
+      "time": "01:17",
+      "location": "Boise, ID - 1426 South Entertainment Ave",
+      "kwh": 62.5162,
+      "cost": 11.25,
+      "duration_minutes": 30,
+      "rate_per_kwh": 0.18,
+      "notes": "Supercharging",
+      "created_at": "2026-04-05T20:51:00.000Z"
+    },
+    {
+      "id": "tesla-20260401-46",
+      "date": "2026-04-01",
+      "time": "00:58",
+      "location": "Boise, ID - North Orchard (551 N Orchard St)",
+      "kwh": 48.3511,
+      "cost": 8.7,
+      "duration_minutes": 64,
+      "rate_per_kwh": 0.18,
+      "notes": "Supercharging",
+      "created_at": "2026-04-05T20:51:00.000Z"
+    },
+    {
+      "id": "tesla-20260404-47",
+      "date": "2026-04-04",
+      "time": "16:35",
+      "location": "Boise, ID - North Orchard (551 N Orchard St)",
+      "kwh": 66.1851,
+      "cost": 25.15,
+      "duration_minutes": 39,
       "rate_per_kwh": 0.38,
       "notes": "Supercharging",
-      "created_at": "2026-04-05T21:14:00.000Z"
+      "created_at": "2026-04-05T20:51:00.000Z"
     }
   ],
   "summary": {
-    "total_sessions": 46,
-    "total_cost_usd": 733.6,
-    "total_kwh": 2601.666,
-    "total_minutes": 1671,
-    "avg_cost_per_session": 15.95,
-    "avg_duration_minutes": 36.33
+    "total_sessions": 48,
+    "total_cost_usd": 762.35,
+    "total_kwh": 2735.6716,
+    "total_minutes": 1779,
+    "avg_cost_per_session": 15.88,
+    "avg_duration_minutes": 37.06
   },
   "monthly_summary": {
     "2026-03": {
@@ -581,11 +605,11 @@
       "minutes": 674
     },
     "2026-04": {
-      "cost": 16.35,
-      "kwh": 43.0468,
-      "sessions": 1,
-      "minutes": 25
+      "cost": 45.1,
+      "kwh": 177.0524,
+      "sessions": 3,
+      "minutes": 133
     }
   },
-  "last_updated": "2026-04-05T21:14:00.000Z"
+  "last_updated": "2026-04-05T20:51:00.000Z"
 }
