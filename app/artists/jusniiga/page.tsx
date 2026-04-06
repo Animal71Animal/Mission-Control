@@ -9,10 +9,16 @@ export default function JusNiigaPage() {
       </Link>
 
       <div style={{ display: "grid", gridTemplateColumns: "320px 1fr", gap: 28, marginTop: 12 }}>
-        <div>
+        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/artists/jusniiga.jpg"
+            alt="JusNiiga"
+            style={{ borderRadius: 12, width: "100%", height: "auto", objectFit: "cover" }}
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/artists/jusniiga-2.jpg"
             alt="JusNiiga"
             style={{ borderRadius: 12, width: "100%", height: "auto", objectFit: "cover" }}
           />
