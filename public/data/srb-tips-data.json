@@ -17,7 +17,7 @@
     },
     {
       "month": "April",
-      "amount": 589,
+      "amount": 609,
       "nights": 3
     }
   ],
@@ -435,7 +435,7 @@
       "jan": 0,
       "feb": 15,
       "mar": 0,
-      "apr": 20
+      "apr": 40
     },
     {
       "name": "Jamira",
@@ -1354,12 +1354,16 @@
         {
           "dancer": "Mia",
           "amount": 10
+        },
+        {
+          "dancer": "Amy",
+          "amount": 20
         }
       ],
-      "total": 25
+      "total": 45
     }
   ],
-  "lastUpdated": "2026-04-06T07:37:00.000Z",
+  "lastUpdated": "2026-04-06T07:44:00.000Z",
   "nightlyData": {
     "January": [
       {
@@ -3518,7 +3522,7 @@
       },
       {
         "date": "Sun Apr 5",
-        "total": 25,
+        "total": 45,
         "dancers": [
           {
             "dancer": "Tiana",
@@ -3527,6 +3531,10 @@
           {
             "dancer": "Mia",
             "amount": 10
+          },
+          {
+            "dancer": "Amy",
+            "amount": 20
           }
         ]
       }
