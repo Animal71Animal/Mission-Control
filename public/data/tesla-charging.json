@@ -575,15 +575,27 @@
       "rate_per_kwh": 0.38,
       "notes": "Supercharging",
       "created_at": "2026-04-05T20:51:00.000Z"
+    },
+    {
+      "id": "tesla-20260405-48",
+      "date": "2026-04-05",
+      "time": "14:45",
+      "location": "Boise, ID - North Orchard St (551 N Orchard St)",
+      "kwh": 43.0468,
+      "cost": 16.35,
+      "duration_minutes": 25,
+      "rate_per_kwh": 0.38,
+      "notes": "Supercharging",
+      "created_at": "2026-04-06T00:18:00.000Z"
     }
   ],
   "summary": {
-    "total_sessions": 48,
-    "total_cost_usd": 762.35,
-    "total_kwh": 2735.6716,
-    "total_minutes": 1779,
-    "avg_cost_per_session": 15.88,
-    "avg_duration_minutes": 37.06
+    "total_sessions": 49,
+    "total_cost_usd": 778.7,
+    "total_kwh": 2778.7184,
+    "total_minutes": 1804,
+    "avg_cost_per_session": 15.89,
+    "avg_duration_minutes": 36.82
   },
   "monthly_summary": {
     "2026-03": {
@@ -605,11 +617,11 @@
       "minutes": 674
     },
     "2026-04": {
-      "cost": 45.1,
-      "kwh": 177.0524,
+      "cost": 50.2,
+      "kwh": 157.583,
       "sessions": 3,
-      "minutes": 133
+      "minutes": 128
     }
   },
-  "last_updated": "2026-04-05T20:51:00.000Z"
+  "last_updated": "2026-04-06T00:18:00.000Z"
 }
