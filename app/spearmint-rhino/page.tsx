@@ -20,6 +20,7 @@ const todoItems = [
   { id: "16", text: "Make hourly shot special and bottle audio", completed: false, category: "Audio" },
   { id: "17", text: "Make promo video for club", completed: false, category: "Media" },
   { id: "18", text: "Write email to Amanda (thank you + request hazer, Vesuvio fix, lighting programmer)", completed: false, category: "Communication" },
+  { id: "19", text: "Print more Spotify dancer instructions", completed: false, category: "Communication" },
 ];
 
 const categories = ["All", "Setup", "Maintenance", "Lighting", "Video", "Audio", "Media", "IT", "Equipment", "Music", "Communication"];

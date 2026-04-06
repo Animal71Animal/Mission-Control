@@ -54,10 +54,15 @@ export default function SrbTipsPage() {
 
   const { monthlyTotals, topTippers, allDancers, nightlyData } = data;
   const quarterTotal = monthlyTotals.reduce((sum, m) => sum + m.amount, 0);
+  
+  // Calculate Q2 total (April, May, June)
+  const q2Months = monthlyTotals.filter(m => ['April', 'May', 'June'].includes(m.month));
+  const q2Total = q2Months.reduce((sum, m) => sum + m.amount, 0);
+  const q2Nights = q2Months.reduce((sum, m) => sum + m.nights, 0);
 
   // Generate month details from data
   const getMonthDetails = (month: string): MonthDetail | null => {
-    if (month === "Q1") return null;
+    if (month === "Q1" || month === "Q2") return null;
     
     const monthKey = month.toLowerCase().slice(0, 3) as 'jan' | 'feb' | 'mar';
     const monthData = monthlyTotals.find(m => m.month === month);
@@ -186,7 +191,7 @@ export default function SrbTipsPage() {
           </button>
         ))}
         
-        {/* Quarter Total */}
+        {/* Q1 Total */}
         <button
           onClick={() => setSelectedMonth("Q1")}
           style={{
@@ -204,6 +209,27 @@ export default function SrbTipsPage() {
           </div>
           <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 4 }}>
             Jan-Mar 2026
+          </div>
+        </button>
+
+        {/* Q2 Total */}
+        <button
+          onClick={() => setSelectedMonth("Q2")}
+          style={{
+            background: selectedMonth === "Q2" ? "linear-gradient(135deg, rgba(0,200,124,0.4), rgba(0,255,157,0.4))" : "linear-gradient(135deg, rgba(0,200,124,0.2), rgba(0,255,157,0.2))",
+            border: selectedMonth === "Q2" ? "1px solid #00c87c" : "1px solid #00c87c",
+            borderRadius: 12,
+            padding: 20,
+            cursor: "pointer",
+            textAlign: "left",
+          }}
+        >
+          <div style={{ fontSize: "0.8rem", color: "#00c87c", marginBottom: 4 }}>Q2 2026 Total</div>
+          <div style={{ fontSize: "1.8rem", fontWeight: 700, color: "#00c87c" }}>
+            ${q2Total.toLocaleString()}
+          </div>
+          <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 4 }}>
+            Apr-Jun 2026 · {q2Nights} nights
           </div>
         </button>
       </div>
@@ -297,6 +323,79 @@ export default function SrbTipsPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </Card>
+      )}
+
+      {/* Q2 Summary View */}
+      {selectedMonth === "Q2" && (
+        <Card style={{ marginBottom: 24 }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
+            <h2 style={{ fontSize: "1.2rem", fontWeight: 600, margin: 0, color: "var(--text)" }}>
+              Q2 2026 Summary
+            </h2>
+            <button
+              onClick={() => setSelectedMonth(null)}
+              style={{
+                background: "transparent",
+                border: "none",
+                color: "var(--muted)",
+                cursor: "pointer",
+                fontSize: "0.85rem",
+              }}
+            >
+              ✕ Close
+            </button>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16, marginBottom: 20 }}>
+            {q2Months.map((m) => (
+              <div key={m.month} style={{
+                background: "var(--bg)",
+                border: "1px solid var(--border)",
+                borderRadius: 8,
+                padding: 16,
+                textAlign: "center",
+              }}>
+                <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>{m.month}</div>
+                <div style={{ fontSize: "1.3rem", fontWeight: 700, color: "var(--text)" }}>${m.amount.toLocaleString()}</div>
+                <div style={{ fontSize: "0.7rem", color: "var(--muted)" }}>{m.nights} nights</div>
+              </div>
+            ))}
+          </div>
+
+          <h3 style={{ fontSize: "0.85rem", color: "var(--muted)", marginBottom: 12, textTransform: "uppercase", letterSpacing: "0.05em" }}>
+            🏆 Q2 Top Entertainers
+          </h3>
+          <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+            {[...allDancers]
+              .map(d => ({ 
+                name: d.name, 
+                total: (d.apr || 0) + (d.may || 0) + (d.jun || 0),
+                apr: d.apr || 0,
+                may: d.may || 0,
+                jun: d.jun || 0
+              }))
+              .filter(d => d.total > 0)
+              .sort((a, b) => b.total - a.total)
+              .slice(0, 10)
+              .map((t, i) => (
+                <div key={t.name} style={{ display: "flex", alignItems: "center", gap: 8, padding: "6px 0", borderBottom: "1px solid var(--border)" }}>
+                  <span style={{
+                    display: "inline-block",
+                    padding: "1px 6px",
+                    borderRadius: 4,
+                    fontSize: "0.65rem",
+                    fontWeight: 700,
+                    ...badgeStyle(i === 0 ? "gold" : i === 1 ? "gold" : i === 2 ? "silver" : i < 5 ? "silver" : "bronze"),
+                  }}>
+                    {i + 1}
+                  </span>
+                  <span style={{ flex: 1 }}>{t.name}</span>
+                  <span style={{ color: "var(--muted)", fontSize: "0.75rem" }}>A:${t.apr} M:${t.may} J:${t.jun}</span>
+                  <span style={{ fontWeight: 600, minWidth: 50, textAlign: "right" }}>${t.total}</span>
+                </div>
+              ))}
           </div>
         </Card>
       )}

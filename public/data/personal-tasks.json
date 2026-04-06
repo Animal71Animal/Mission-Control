@@ -1,44 +1,11 @@
 [
   {
-    "id": "task-1774843576600",
-    "title": "Order Fog Juice",
+    "id": "task-1743887400000",
+    "title": "Print Spotify instructions for dancers",
+    "notes": "Create and print instructions for dancers on how to use Spotify at SRB",
     "category": "Work",
     "priority": "medium",
     "completed": false,
-    "createdAt": "2026-03-30T04:06:16.600Z"
-  },
-  {
-    "id": "task-1774843526550",
-    "title": "Send Amanda email",
-    "category": "Work",
-    "priority": "high",
-    "dueDate": "2026-04-03",
-    "completed": false,
-    "createdAt": "2026-03-30T04:05:26.550Z"
-  },
-  {
-    "id": "task-1774841802162",
-    "title": "Trello Workflow",
-    "category": "Personal",
-    "priority": "medium",
-    "completed": false,
-    "createdAt": "2026-03-30T03:36:42.162Z"
-  },
-  {
-    "id": "task-1774841641981",
-    "title": "Finish Ashley and Mike's Intro Song and send them suggestions for F/D M/S dances",
-    "category": "Personal",
-    "priority": "high",
-    "dueDate": "2026-04-02",
-    "completed": false,
-    "createdAt": "2026-03-30T03:34:01.981Z"
-  },
-  {
-    "id": "task-1774841589378",
-    "title": "Flight to RDUI",
-    "category": "Personal",
-    "priority": "high",
-    "completed": false,
-    "createdAt": "2026-03-30T03:33:09.378Z"
+    "createdAt": "2026-04-05T21:10:00.000Z"
   }
 ]

@@ -164,15 +164,22 @@ function NewsStoryCard({ story }: { story: NewsStory }) {
   const [loading, setLoading] = useState(false);
   const [analysis, setAnalysis] = useState<AnalysisResult | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [isExpanded, setIsExpanded] = useState(false);
 
-  async function analyzeStory() {
+  async function analyzeStory(e: React.MouseEvent) {
+    e.stopPropagation();
     setLoading(true);
+    setAnalysis(null);
     setError(null);
     try {
       const res = await fetch("/api/unfiltered", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ topic: story.title }),
+        body: JSON.stringify({ 
+          topic: story.title,
+          url: story.url,
+          content: story.summary
+        }),
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
@@ -186,23 +193,50 @@ function NewsStoryCard({ story }: { story: NewsStory }) {
 
   return (
     <div
+      onClick={() => setIsExpanded(!isExpanded)}
       style={{
         background: "rgba(0,0,0,0.2)",
         border: "1px solid var(--border)",
         borderRadius: 8,
         padding: "14px 16px",
         marginBottom: 10,
+        cursor: "pointer",
+        transition: "background 0.2s",
       }}
+      onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(155,93,229,0.05)")}
+      onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(0,0,0,0.2)")}
     >
       <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
         <div style={{ flex: 1 }}>
           <h3 style={{ fontSize: "0.9rem", fontWeight: 600, lineHeight: 1.4, color: "var(--text)", margin: 0 }}>
             {story.title}
           </h3>
-          <p style={{ fontSize: "0.8rem", color: "var(--muted)", marginTop: 6, lineHeight: 1.5 }}>
+          <p style={{ 
+            fontSize: "0.8rem", 
+            color: "var(--muted)", 
+            marginTop: 6, 
+            lineHeight: 1.5,
+            display: "-webkit-box",
+            WebkitLineClamp: isExpanded ? "unset" : 2,
+            WebkitBoxOrient: "vertical",
+            overflow: "hidden"
+          }}>
             {story.summary}
           </p>
-          <span style={{ fontSize: "0.7rem", color: "#666" }}>Source: {story.source}</span>
+          <div style={{ display: "flex", alignItems: "center", gap: 12, marginTop: 8 }}>
+            <span style={{ fontSize: "0.7rem", color: "#666" }}>Source: {story.source}</span>
+            {story.url && (
+              <a 
+                href={story.url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                style={{ fontSize: "0.7rem", color: "#9b5de5", textDecoration: "none" }}
+              >
+                Read Original ↗
+              </a>
+            ) }
+          </div>
         </div>
         <button
           onClick={analyzeStory}

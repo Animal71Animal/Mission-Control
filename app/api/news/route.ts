@@ -21,16 +21,18 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const [techRes, aiRes, musicRes] = await Promise.all([
-      fetch(`https://newsapi.org/v2/top-headlines?category=technology&pageSize=5&apiKey=${NEWS_API_KEY}`),
-      fetch(`https://newsapi.org/v2/everything?q=artificial+intelligence+OR+AI&pageSize=5&sortBy=publishedAt&apiKey=${NEWS_API_KEY}`),
-      fetch(`https://newsapi.org/v2/everything?q=music+industry+OR+music+production&pageSize=5&sortBy=publishedAt&apiKey=${NEWS_API_KEY}`),
+    const [techRes, aiRes, musicRes, politicsRes] = await Promise.all([
+      fetch(`https://newsapi.org/v2/top-headlines?category=technology&language=en&pageSize=5&apiKey=${NEWS_API_KEY}`),
+      fetch(`https://newsapi.org/v2/everything?q=artificial+intelligence+OR+AI&language=en&pageSize=5&sortBy=publishedAt&apiKey=${NEWS_API_KEY}`),
+      fetch(`https://newsapi.org/v2/everything?q=music+industry+OR+music+production&language=en&pageSize=5&sortBy=publishedAt&apiKey=${NEWS_API_KEY}`),
+      fetch(`https://newsapi.org/v2/top-headlines?category=politics&language=en&pageSize=5&apiKey=${NEWS_API_KEY}`),
     ]);
 
-    const [techData, aiData, musicData] = (await Promise.all([
+    const [techData, aiData, musicData, politicsData] = (await Promise.all([
       techRes.json(),
       aiRes.json(),
       musicRes.json(),
+      politicsRes.json(),
     ])) as NewsResponse[];
 
     const stories = [
@@ -54,6 +56,13 @@ export async function GET(request: NextRequest) {
         source: a.source?.name || "Unknown",
         url: a.url,
         category: "Music",
+      })),
+      ...(politicsData.articles || []).map((a) => ({
+        title: a.title,
+        summary: a.description || "No summary available",
+        source: a.source?.name || "Unknown",
+        url: a.url,
+        category: "Politics",
       })),
     ];
 

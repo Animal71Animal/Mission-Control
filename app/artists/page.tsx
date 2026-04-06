@@ -18,6 +18,22 @@ const artists = [
     ],
   },
   {
+    name: "JusNiiga",
+    genre: "Afro EDM",
+    image: "/artists/jusniiga.jpg",
+    desc: "Afro EDM fusion — infectious rhythms meet electronic energy. A sound that bridges continents and dancefloors.",
+    href: "/artists/jusniiga",
+    badge: "wlp",
+    checklist: [
+      { label: "Photos", done: true },
+      { label: "Bio", done: false },
+      { label: "Intro Video", done: false },
+      { label: "Social Profiles", done: false },
+      { label: "Press Kit", done: false },
+      { label: "First Release", done: false },
+    ],
+  },
+  {
     name: "Kade Rivers",
     genre: "Rock",
     image: "/artists/kade-rivers.jpg",
@@ -78,7 +94,7 @@ export default function ArtistsPage() {
       </p>
 
       {/* Artist cards */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, marginBottom: 28 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 16, marginBottom: 28 }}>
         {artists.map((a) => (
           <Link key={a.name} href={a.href} style={{ textDecoration: "none" }}>
             <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden", cursor: "pointer" }}>
@@ -118,7 +134,7 @@ export default function ArtistsPage() {
       </div>
 
       {/* Checklists Section */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 16 }}>
         {artists.map((a) => (
           <div key={`${a.name}-checklist`} style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12, padding: "16px 14px" }}>
             <div style={{ fontWeight: 600, fontSize: "0.9rem", marginBottom: 12, color: "var(--text)" }}>{a.name}</div>
