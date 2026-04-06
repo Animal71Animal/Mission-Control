@@ -22,6 +22,12 @@ export default function JusNiigaPage() {
             alt="JusNiiga"
             style={{ borderRadius: 12, width: "100%", height: "auto", objectFit: "cover" }}
           />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/artists/jusniiga-3.jpg"
+            alt="JusNiiga"
+            style={{ borderRadius: 12, width: "100%", height: "auto", objectFit: "cover" }}
+          />
         </div>
 
         <div>
