@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 
 // Types
-type Artist = "kade" | "madison" | "aria" | "all";
+type Artist = "kade" | "madison" | "aria" | "jusniiga" | "all";
 type ContentStatus = "planned" | "filmed" | "edited" | "posted";
 
 interface ContentItem {
@@ -38,6 +38,9 @@ const contentItems: ContentItem[] = [
   { id: "7", artist: "aria", title: "Lyric Breakdown: Autumn Leaves", type: "Storytelling", platforms: ["TikTok", "Reels", "Shorts"], scheduledDate: "2026-04-06", status: "planned" },
   { id: "8", artist: "aria", title: "Vinyl Collection Tour", type: "Aesthetic", platforms: ["TikTok", "Reels"], scheduledDate: "2026-04-09", status: "planned" },
   { id: "9", artist: "aria", title: "3 AM Bedroom Session", type: "Performance", platforms: ["TikTok", "Reels", "Shorts"], scheduledDate: "2026-04-11", status: "planned" },
+  { id: "10", artist: "jusniiga", title: "Love is Rare — Release Announcement", type: "Announcement", platforms: ["TikTok", "Reels", "Shorts"], scheduledDate: "2026-05-06", status: "planned" },
+  { id: "11", artist: "jusniiga", title: "Love is Rare — Snippet Drop", type: "Performance", platforms: ["TikTok", "Reels"], scheduledDate: "2026-04-27", status: "planned" },
+  { id: "12", artist: "jusniiga", title: "Behind the Track: Love is Rare", type: "Behind-the-Scenes", platforms: ["TikTok", "Reels", "Shorts"], scheduledDate: "2026-05-02", status: "planned" },
 ];
 
 const batchSessions: BatchSession[] = [
@@ -51,6 +54,7 @@ const artistConfig: Record<Artist, { name: string; emoji: string; color: string 
   kade: { name: "Kade Rivers", emoji: "🎸", color: "#e67e22" },
   madison: { name: "Madison Blair", emoji: "💃", color: "#e91e63" },
   aria: { name: "Aria Vale", emoji: "🌙", color: "#9b59b6" },
+  jusniiga: { name: "JusNiiga", emoji: "🌍", color: "#10b981" },
   all: { name: "All Artists", emoji: "🎵", color: "#9b5de5" },
 };
 

@@ -143,4 +143,50 @@
     "notes": null,
     "created_at": "2026-03-29T18:08:01.790Z"
   }
+,
+  {
+    "id": "asset-jusniiga-audio",
+    "artist_name": "JusNiiga",
+    "asset_type": "audio",
+    "status": "in_progress",
+    "url": null,
+    "notes": "First release: \"Love is Rare\" — target ~May 6 2026",
+    "created_at": "2026-04-06T20:54:00.000Z"
+  },
+  {
+    "id": "asset-jusniiga-cover",
+    "artist_name": "JusNiiga",
+    "asset_type": "cover",
+    "status": "draft",
+    "url": null,
+    "notes": "Cover art needed for \"Love is Rare\"",
+    "created_at": "2026-04-06T20:54:00.000Z"
+  },
+  {
+    "id": "asset-jusniiga-photos",
+    "artist_name": "JusNiiga",
+    "asset_type": "photos",
+    "status": "complete",
+    "url": "/artists/jusniiga.jpg",
+    "notes": "3 photos uploaded",
+    "created_at": "2026-04-06T20:54:00.000Z"
+  },
+  {
+    "id": "asset-jusniiga-social",
+    "artist_name": "JusNiiga",
+    "asset_type": "social",
+    "status": "draft",
+    "url": null,
+    "notes": null,
+    "created_at": "2026-04-06T20:54:00.000Z"
+  },
+  {
+    "id": "asset-jusniiga-bio",
+    "artist_name": "JusNiiga",
+    "asset_type": "bio",
+    "status": "draft",
+    "url": null,
+    "notes": "Afro EDM artist — WLP roster",
+    "created_at": "2026-04-06T20:54:00.000Z"
+  }
 ]
