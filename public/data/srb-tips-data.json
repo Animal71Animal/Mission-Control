@@ -17,8 +17,8 @@
     },
     {
       "month": "April",
-      "amount": 564,
-      "nights": 2
+      "amount": 579,
+      "nights": 3
     }
   ],
   "topTippers": [
@@ -414,7 +414,8 @@
       "name": "Tiana",
       "jan": 7,
       "feb": 5,
-      "mar": 28
+      "mar": 28,
+      "apr": 15
     },
     {
       "name": "Maria",
@@ -1341,9 +1342,20 @@
         }
       ],
       "total": 320
+    },
+    {
+      "date": "2026-04-05",
+      "day": "Sunday",
+      "tips": [
+        {
+          "dancer": "Tiana",
+          "amount": 15
+        }
+      ],
+      "total": 15
     }
   ],
-  "lastUpdated": "2026-04-05T21:04:00.000Z",
+  "lastUpdated": "2026-04-06T05:57:00.000Z",
   "nightlyData": {
     "January": [
       {
@@ -3497,6 +3509,16 @@
           {
             "dancer": "Maria",
             "amount": 20
+          }
+        ]
+      },
+      {
+        "date": "Sun Apr 5",
+        "total": 15,
+        "dancers": [
+          {
+            "dancer": "Tiana",
+            "amount": 15
           }
         ]
       }
