@@ -17,7 +17,7 @@
     },
     {
       "month": "April",
-      "amount": 579,
+      "amount": 589,
       "nights": 3
     }
   ],
@@ -181,7 +181,7 @@
       "jan": 89,
       "feb": 49,
       "mar": 4,
-      "apr": 5
+      "apr": 15
     },
     {
       "name": "Skylar",
@@ -1350,12 +1350,16 @@
         {
           "dancer": "Tiana",
           "amount": 15
+        },
+        {
+          "dancer": "Mia",
+          "amount": 10
         }
       ],
-      "total": 15
+      "total": 25
     }
   ],
-  "lastUpdated": "2026-04-06T05:57:00.000Z",
+  "lastUpdated": "2026-04-06T07:37:00.000Z",
   "nightlyData": {
     "January": [
       {
@@ -3514,11 +3518,15 @@
       },
       {
         "date": "Sun Apr 5",
-        "total": 15,
+        "total": 25,
         "dancers": [
           {
             "dancer": "Tiana",
             "amount": 15
+          },
+          {
+            "dancer": "Mia",
+            "amount": 10
           }
         ]
       }
