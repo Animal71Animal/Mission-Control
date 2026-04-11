@@ -30,8 +30,9 @@
     "category": "Personal",
     "priority": "high",
     "dueDate": "2026-04-02",
-    "completed": false,
-    "createdAt": "2026-03-30T03:34:01.981Z"
+    "completed": true,
+    "createdAt": "2026-03-30T03:34:01.981Z",
+    "completedAt": "2026-04-11T01:23:40.984Z"
   },
   {
     "id": "task-1774841589378",
