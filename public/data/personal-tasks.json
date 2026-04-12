@@ -39,8 +39,9 @@
     "title": "Flight to RDU",
     "category": "Personal",
     "priority": "high",
-    "completed": false,
-    "createdAt": "2026-03-30T03:33:09.378Z"
+    "completed": true,
+    "createdAt": "2026-03-30T03:33:09.378Z",
+    "completedAt": "2026-04-12T22:37:43.595Z"
   },
   {
     "id": "pt-1775423533238",
