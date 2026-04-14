@@ -18,6 +18,7 @@ export const modules: Module[] = [
   { href: "/calendar", icon: "📅", title: "Calendar", desc: "Gigs, studio sessions, meetings, and deadlines.", status: "active", group: "operations" },
   { href: "/tasks", icon: "✅", title: "Open Tasks", desc: "Color-coded task list — PriScylla (purple) vs ANIMAL (orange).", status: "active", group: "operations" },
   { href: "/srb-tips", icon: "💰", title: "SRB Tips", desc: "Spearmint Rhino tip tracking — monthly totals, top tippers, dancer stats.", status: "active", group: "operations" },
+  { href: "/peptides", icon: "💉", title: "Peptide Stack", desc: "Mission Control — peptide dosing, schedule, and tracking.", status: "active", group: "operations" },
   { href: "/spearmint-rhino", icon: "🦏", title: "Spearmint Rhino", desc: "Club operations, to-do lists, equipment status, and venue management.", status: "active", group: "operations" },
   { href: "/agents", icon: "🤖", title: "AI Office", desc: "Live view of AI agents working in the virtual office.", status: "active", group: "systems" },
   { href: "/ableton", icon: "🎛️", title: "Ableton", desc: "AbletonOSC, live PA template, MIDI controller config.", status: "pending", group: "systems" },

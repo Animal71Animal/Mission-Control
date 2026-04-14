@@ -1,0 +1,140 @@
+[
+  {
+    "id": "peptide-retatrutide",
+    "name": "Retatrutide",
+    "category": "core",
+    "status": "active",
+    "dose": {
+      "amount": 60,
+      "unit": "units",
+      "frequency": "weekly",
+      "day": "Monday",
+      "time": "8:00 AM"
+    },
+    "vial": {
+      "strength_mg": null,
+      "reconstitution_ml": null
+    },
+    "startDate": null,
+    "notes": "Core compound — keep steady",
+    "logs": []
+  },
+  {
+    "id": "peptide-tesamorelin",
+    "name": "Tesamorelin",
+    "category": "core",
+    "status": "active",
+    "dose": {
+      "amount": 40,
+      "unit": "units",
+      "frequency": "Mon-Fri",
+      "time": "9:30 PM"
+    },
+    "vial": {
+      "strength_mg": null,
+      "reconstitution_ml": null
+    },
+    "startDate": null,
+    "notes": "Core compound — Mon-Fri only, no weekends",
+    "logs": []
+  },
+  {
+    "id": "peptide-selank",
+    "name": "Selank",
+    "category": "core-addon",
+    "status": "planned",
+    "dose": {
+      "amount": null,
+      "unit": "mcg",
+      "frequency": "daily",
+      "day": "Wednesday",
+      "time": "8:00 AM"
+    },
+    "vial": {
+      "strength_mg": null,
+      "reconstitution_ml": null
+    },
+    "startDate": null,
+    "notes": "Week 1 add-on. Start low morning only. Optional second dose 1-2 PM if tolerated.",
+    "logs": []
+  },
+  {
+    "id": "peptide-hcg",
+    "name": "HCG",
+    "category": "core-addon",
+    "status": "planned",
+    "dose": {
+      "amount": 250,
+      "unit": "IU",
+      "frequency": "2x weekly",
+      "days": ["Tuesday", "Friday"],
+      "time": "8:00 AM"
+    },
+    "vial": {
+      "strength_mg": null,
+      "reconstitution_ml": null
+    },
+    "startDate": null,
+    "notes": "Week 2 add-on. Conservative start 250 IU Tue/Fri. Watch water retention, mood, nipple sensitivity.",
+    "logs": []
+  },
+  {
+    "id": "peptide-nad",
+    "name": "NAD+ Buffer",
+    "category": "secondary-addon",
+    "status": "planned",
+    "dose": {
+      "amount": 25,
+      "unit": "mg",
+      "frequency": "weekly",
+      "day": "Wednesday",
+      "time": "10:00 AM"
+    },
+    "vial": {
+      "strength_mg": null,
+      "reconstitution_ml": null
+    },
+    "startDate": null,
+    "notes": "Week 3 add-on. Start 25-50 mg once weekly. Stay 1-2 weeks before increasing. Watch chest pressure, nausea, flushing.",
+    "logs": []
+  },
+  {
+    "id": "peptide-mots-c",
+    "name": "MOTS-c",
+    "category": "secondary-addon",
+    "status": "planned",
+    "dose": {
+      "amount": 2.5,
+      "unit": "mg",
+      "frequency": "weekly",
+      "day": "Thursday",
+      "time": "8:00 AM"
+    },
+    "vial": {
+      "strength_mg": null,
+      "reconstitution_ml": null
+    },
+    "startDate": null,
+    "notes": "Week 4 add-on. Start 2.5-5 mg once weekly. Consider 2x weekly later if clean. Morning or pre-workout.",
+    "logs": []
+  },
+  {
+    "id": "peptide-glow70",
+    "name": "GLOW70",
+    "category": "cyclical",
+    "status": "planned",
+    "dose": {
+      "amount": null,
+      "unit": null,
+      "frequency": "cyclical",
+      "days": ["Wednesday", "Saturday"]
+    },
+    "vial": {
+      "strength_mg": null,
+      "reconstitution_ml": null
+    },
+    "startDate": null,
+    "notes": "Week 5+ cyclical only. NOT year-round core. Contains Epithalon. Review label strength first.",
+    "logs": []
+  }
+]
