@@ -29,7 +29,11 @@ export default function RootLayout({
           }
           @media (max-width: 768px) {
             .main-content {
+              margin-left: 0 !important;
               padding: 80px 16px 32px !important;
+              width: 100vw;
+              max-width: 100vw;
+              box-sizing: border-box;
             }
           }
         `}</style>

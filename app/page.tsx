@@ -280,7 +280,7 @@ export default function Home() {
             Search Results ({filteredModules.length})
           </h2>
           {filteredModules.length > 0 ? (
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 16 }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 16 }} className="module-grid">
               {filteredModules.map((m) => (
                 <div key={m.href} onClick={() => trackVisit(m.href, m.title, m.icon)}>
                   <ModuleCard {...m} />
@@ -314,7 +314,7 @@ export default function Home() {
                 >
                   {groupLabels[group]}
                 </h2>
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 16 }}>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 16 }} className="module-grid">
                   {groupModules.map((m) => (
                     <div key={m.href} onClick={() => trackVisit(m.href, m.title, m.icon)}>
                       <ModuleCard {...m} />

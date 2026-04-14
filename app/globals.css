@@ -209,3 +209,17 @@ body {
 .md-content li p {
   margin-bottom: 0.25rem;
 }
+
+/* Mobile responsive module grid */
+@media (max-width: 640px) {
+  .module-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .module-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+}
