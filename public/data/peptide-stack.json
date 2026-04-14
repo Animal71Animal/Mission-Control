@@ -12,11 +12,17 @@
       "time": "8:00 AM"
     },
     "vial": {
-      "strength_mg": null,
-      "reconstitution_ml": null
+      "strength_mg": 10,
+      "price": 40,
+      "reconstitution_ml": 2,
+      "concentration": "5mg/mL",
+      "dose_mg": 3,
+      "syringe_units": 60,
+      "weekly_cost": 12,
+      "vial_lasts_weeks": 3.3
     },
     "startDate": null,
-    "notes": "Core compound — keep steady",
+    "notes": "Core compound — keep steady. 3mg/week (60 units). Vial lasts ~3 weeks.",
     "logs": []
   },
   {
@@ -25,17 +31,23 @@
     "category": "core",
     "status": "active",
     "dose": {
-      "amount": 40,
+      "amount": 30,
       "unit": "units",
       "frequency": "Mon-Fri",
       "time": "9:30 PM"
     },
     "vial": {
-      "strength_mg": null,
-      "reconstitution_ml": null
+      "strength_mg": 10,
+      "price": 45,
+      "reconstitution_ml": 3,
+      "concentration": "3.33mg/mL",
+      "dose_mg": 1,
+      "syringe_units": 30,
+      "weekly_cost": 22.50,
+      "vial_lasts_weeks": 2
     },
     "startDate": null,
-    "notes": "Core compound — Mon-Fri only, no weekends",
+    "notes": "Core compound — Mon-Fri only, no weekends. 1mg/day (30 units). Vial lasts ~2 weeks.",
     "logs": []
   },
   {
@@ -44,18 +56,23 @@
     "category": "core-addon",
     "status": "planned",
     "dose": {
-      "amount": null,
+      "amount": 300,
       "unit": "mcg",
-      "frequency": "daily",
-      "day": "Wednesday",
-      "time": "8:00 AM"
+      "frequency": "Mon-Sat",
+      "time": "8:30 AM"
     },
     "vial": {
-      "strength_mg": null,
-      "reconstitution_ml": null
+      "strength_mg": 10,
+      "price": 20,
+      "reconstitution_ml": 3,
+      "concentration": "3333mcg/mL",
+      "dose_mg": 0.3,
+      "syringe_units": 9,
+      "weekly_cost": 3.60,
+      "vial_lasts_weeks": 5.5
     },
     "startDate": null,
-    "notes": "Week 1 add-on. Start low morning only. Optional second dose 1-2 PM if tolerated.",
+    "notes": "Week 1 add-on. 300mcg/day (9 units). Mon-Sat. Watch for mood/anxiety changes. Vial lasts ~5.5 weeks.",
     "logs": []
   },
   {
@@ -72,30 +89,43 @@
     },
     "vial": {
       "strength_mg": null,
-      "reconstitution_ml": null
+      "strength_iu": 5000,
+      "price": 50,
+      "reconstitution_ml": 2,
+      "concentration": "2500 IU/mL",
+      "dose_iu": 250,
+      "syringe_units": 10,
+      "weekly_cost": 5,
+      "vial_lasts_weeks": 10
     },
     "startDate": null,
-    "notes": "Week 2 add-on. Conservative start 250 IU Tue/Fri. Watch water retention, mood, nipple sensitivity.",
+    "notes": "Week 2 add-on. 250 IU Tue/Fri (10 units). Watch water retention, mood, nipple sensitivity. Vial lasts ~10 weeks.",
     "logs": []
   },
   {
     "id": "peptide-nad",
-    "name": "NAD+ Buffer",
+    "name": "NAD+",
     "category": "secondary-addon",
     "status": "planned",
     "dose": {
-      "amount": 25,
+      "amount": 50,
       "unit": "mg",
       "frequency": "weekly",
       "day": "Wednesday",
       "time": "10:00 AM"
     },
     "vial": {
-      "strength_mg": null,
-      "reconstitution_ml": null
+      "strength_mg": 500,
+      "price": 42,
+      "reconstitution_ml": 5,
+      "concentration": "100mg/mL",
+      "dose_mg": 50,
+      "syringe_units": 50,
+      "weekly_cost": 4.20,
+      "vial_lasts_weeks": 10
     },
     "startDate": null,
-    "notes": "Week 3 add-on. Start 25-50 mg once weekly. Stay 1-2 weeks before increasing. Watch chest pressure, nausea, flushing.",
+    "notes": "Week 3 add-on. Start 50mg (50 units) once weekly Wed. Titrate up slowly. Watch flushing, nausea, energy surge. Vial lasts ~10 weeks.",
     "logs": []
   },
   {
@@ -111,11 +141,17 @@
       "time": "8:00 AM"
     },
     "vial": {
-      "strength_mg": null,
-      "reconstitution_ml": null
+      "strength_mg": 10,
+      "price": 30,
+      "reconstitution_ml": 2,
+      "concentration": "5mg/mL",
+      "dose_mg": 2.5,
+      "syringe_units": 50,
+      "weekly_cost": 7.50,
+      "vial_lasts_weeks": 4
     },
     "startDate": null,
-    "notes": "Week 4 add-on. Start 2.5-5 mg once weekly. Consider 2x weekly later if clean. Morning or pre-workout.",
+    "notes": "Week 4 add-on. 2.5mg (50 units) once weekly Thu. Morning or pre-workout. Watch glucose sensitivity, endurance. Vial lasts ~4 weeks.",
     "logs": []
   },
   {
@@ -134,7 +170,7 @@
       "reconstitution_ml": null
     },
     "startDate": null,
-    "notes": "Week 5+ cyclical only. NOT year-round core. Contains Epithalon. Review label strength first.",
+    "notes": "Week 5+ cyclical only. NOT year-round core. Contains Epithalon. Review label strength before reconstituting.",
     "logs": []
   }
 ]

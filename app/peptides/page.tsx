@@ -18,7 +18,15 @@ interface Peptide {
   };
   vial: {
     strength_mg: number | null;
+    strength_iu?: number | null;
+    price?: number | null;
     reconstitution_ml: number | null;
+    concentration?: string | null;
+    dose_mg?: number | null;
+    dose_iu?: number | null;
+    syringe_units?: number | null;
+    weekly_cost?: number | null;
+    vial_lasts_weeks?: number | null;
   };
   startDate: string | null;
   notes: string;
@@ -514,17 +522,17 @@ export default function PeptidesPage() {
             </thead>
             <tbody>
               {[
-                { day: "Monday", time: "8:00 AM", compound: "Retatrutide", dose: "60 units", color: "#00f5d4" },
-                { day: "Monday", time: "9:30 PM", compound: "Tesamorelin", dose: "40 units", color: "#00f5d4" },
-                { day: "Tuesday", time: "8:00 AM", compound: "HCG (Week 2+)", dose: "250 IU", color: "#9b5de5" },
-                { day: "Tuesday", time: "9:30 PM", compound: "Tesamorelin", dose: "40 units", color: "#00f5d4" },
-                { day: "Wednesday", time: "8:00 AM", compound: "Selank (Week 1+)", dose: "TBD", color: "#9b5de5" },
-                { day: "Wednesday", time: "10:00 AM", compound: "NAD+ Buffer (Week 3+)", dose: "25-50 mg", color: "#00bbf9" },
-                { day: "Wednesday", time: "9:30 PM", compound: "Tesamorelin", dose: "40 units", color: "#00f5d4" },
-                { day: "Thursday", time: "8:00 AM", compound: "MOTS-c (Week 4+)", dose: "2.5-5 mg", color: "#00bbf9" },
-                { day: "Thursday", time: "9:30 PM", compound: "Tesamorelin", dose: "40 units", color: "#00f5d4" },
-                { day: "Friday", time: "8:00 AM", compound: "HCG (Week 2+)", dose: "250 IU", color: "#9b5de5" },
-                { day: "Friday", time: "9:30 PM", compound: "Tesamorelin", dose: "40 units", color: "#00f5d4" },
+                { day: "Monday", time: "8:00 AM", compound: "Retatrutide", dose: "60 units (3mg)", color: "#00f5d4" },
+                { day: "Monday", time: "9:30 PM", compound: "Tesamorelin", dose: "30 units (1mg)", color: "#00f5d4" },
+                { day: "Tuesday", time: "8:00 AM", compound: "HCG (Week 2+)", dose: "250 IU / 10 units", color: "#9b5de5" },
+                { day: "Tuesday", time: "9:30 PM", compound: "Tesamorelin", dose: "30 units (1mg)", color: "#00f5d4" },
+                { day: "Wednesday", time: "8:00 AM", compound: "Selank (Week 1+)", dose: "300mcg / 9 units", color: "#9b5de5" },
+                { day: "Wednesday", time: "10:00 AM", compound: "NAD+ (Week 3+)", dose: "50mg / 50 units", color: "#00bbf9" },
+                { day: "Wednesday", time: "9:30 PM", compound: "Tesamorelin", dose: "30 units (1mg)", color: "#00f5d4" },
+                { day: "Thursday", time: "8:00 AM", compound: "MOTS-c (Week 4+)", dose: "2.5mg / 50 units", color: "#00bbf9" },
+                { day: "Thursday", time: "9:30 PM", compound: "Tesamorelin", dose: "30 units (1mg)", color: "#00f5d4" },
+                { day: "Friday", time: "8:00 AM", compound: "HCG (Week 2+)", dose: "250 IU / 10 units", color: "#9b5de5" },
+                { day: "Friday", time: "9:30 PM", compound: "Tesamorelin", dose: "30 units (1mg)", color: "#00f5d4" },
                 { day: "Saturday", time: "8:00 AM", compound: "Selank / GLOW70", dose: "Optional", color: "#fee440" },
                 { day: "Sunday", time: "—", compound: "Off / Recovery", dose: "No Tesamorelin", color: "var(--muted)" },
               ].map((row, i) => (
@@ -537,6 +545,94 @@ export default function PeptidesPage() {
               ))}
             </tbody>
           </table>
+        </div>
+      </div>
+
+      {/* Reconstitution Guide */}
+      <div style={{ marginTop: 32 }}>
+        <h2 style={{ fontSize: "1rem", fontWeight: 600, color: "var(--text)", marginBottom: 16 }}>
+          🧪 Reconstitution & Dosing Guide
+        </h2>
+
+        {/* Cost Summary */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 12, marginBottom: 20 }}>
+          <Card>
+            <div style={{ textAlign: "center" }}>
+              <div style={{ fontSize: "1.6rem", fontWeight: 700, color: "#00f5d4" }}>$54.80</div>
+              <div style={{ fontSize: "0.75rem", color: "var(--muted)", textTransform: "uppercase", letterSpacing: "0.05em" }}>Weekly Cost</div>
+            </div>
+          </Card>
+          <Card>
+            <div style={{ textAlign: "center" }}>
+              <div style={{ fontSize: "1.6rem", fontWeight: 700, color: "#9b5de5" }}>~$238</div>
+              <div style={{ fontSize: "0.75rem", color: "var(--muted)", textTransform: "uppercase", letterSpacing: "0.05em" }}>Monthly Cost</div>
+            </div>
+          </Card>
+          <Card>
+            <div style={{ textAlign: "center" }}>
+              <div style={{ fontSize: "1.6rem", fontWeight: 700, color: "#fee440" }}>6</div>
+              <div style={{ fontSize: "0.75rem", color: "var(--muted)", textTransform: "uppercase", letterSpacing: "0.05em" }}>Active Compounds</div>
+            </div>
+          </Card>
+        </div>
+
+        {/* Reconstitution Table */}
+        <div style={{ overflowX: "auto", marginBottom: 24 }}>
+          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.82rem" }}>
+            <thead>
+              <tr style={{ borderBottom: "2px solid var(--border)" }}>
+                {["Peptide", "Vial", "Price", "Bac Water", "Concentration", "Dose", "Syringe Units", "Frequency", "Weekly Cost", "Vial Lasts"].map((h) => (
+                  <th key={h} style={{ textAlign: "left", padding: "10px 8px", color: "var(--muted)", fontWeight: 600, whiteSpace: "nowrap" }}>{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                { name: "Retatrutide", vial: "10mg", price: "$40", bac: "2mL", conc: "5mg/mL", dose: "3mg", units: "60 units", freq: "1x/week Mon", cost: "$12", lasts: "~3.3 wks", color: "#00f5d4" },
+                { name: "Tesamorelin", vial: "10mg", price: "$45", bac: "3mL", conc: "3.33mg/mL", dose: "1mg", units: "30 units", freq: "5x/week M-F", cost: "$22.50", lasts: "~2 wks", color: "#00f5d4" },
+                { name: "Selank", vial: "10mg", price: "$20", bac: "3mL", conc: "3333mcg/mL", dose: "300mcg", units: "9 units", freq: "6x/week M-Sa", cost: "$3.60", lasts: "~5.5 wks", color: "#9b5de5" },
+                { name: "HCG", vial: "5000 IU", price: "$50", bac: "2mL", conc: "2500 IU/mL", dose: "250 IU", units: "10 units", freq: "2x/week Tu/Fr", cost: "$5.00", lasts: "~10 wks", color: "#9b5de5" },
+                { name: "NAD+", vial: "500mg", price: "$42", bac: "5mL", conc: "100mg/mL", dose: "50mg", units: "50 units", freq: "1x/week Wed", cost: "$4.20", lasts: "~10 wks", color: "#00bbf9" },
+                { name: "MOTS-c", vial: "10mg", price: "$30", bac: "2mL", conc: "5mg/mL", dose: "2.5mg", units: "50 units", freq: "1x/week Thu", cost: "$7.50", lasts: "~4 wks", color: "#00bbf9" },
+              ].map((row, i) => (
+                <tr key={i} style={{ borderBottom: "1px solid var(--border)" }}>
+                  <td style={{ padding: "10px 8px", color: row.color, fontWeight: 600 }}>{row.name}</td>
+                  <td style={{ padding: "10px 8px", color: "var(--text)" }}>{row.vial}</td>
+                  <td style={{ padding: "10px 8px", color: "var(--text)" }}>{row.price}</td>
+                  <td style={{ padding: "10px 8px", color: "#fee440", fontWeight: 600 }}>{row.bac}</td>
+                  <td style={{ padding: "10px 8px", color: "var(--muted)" }}>{row.conc}</td>
+                  <td style={{ padding: "10px 8px", color: "var(--text)", fontWeight: 500 }}>{row.dose}</td>
+                  <td style={{ padding: "10px 8px", color: "#00f5d4", fontWeight: 700 }}>{row.units}</td>
+                  <td style={{ padding: "10px 8px", color: "var(--muted)" }}>{row.freq}</td>
+                  <td style={{ padding: "10px 8px", color: "var(--text)", fontWeight: 500 }}>{row.cost}</td>
+                  <td style={{ padding: "10px 8px", color: "var(--muted)" }}>{row.lasts}</td>
+                </tr>
+              ))}
+              <tr style={{ borderTop: "2px solid var(--border)", background: "rgba(0,245,212,0.05)" }}>
+                <td colSpan={8} style={{ padding: "10px 8px", color: "var(--text)", fontWeight: 700 }}>TOTAL (full stack)</td>
+                <td style={{ padding: "10px 8px", color: "#00f5d4", fontWeight: 700 }}>$54.80</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        {/* Reconstitution Steps */}
+        <div style={{ background: "var(--card)", border: "1px solid rgba(254,228,64,0.3)", borderRadius: 12, padding: 16 }}>
+          <h3 style={{ fontSize: "0.85rem", fontWeight: 600, color: "#fee440", marginBottom: 12, textTransform: "uppercase", letterSpacing: "0.05em" }}>
+            📋 How to Reconstitute (All Peptides)
+          </h3>
+          <ol style={{ margin: 0, paddingLeft: 20, color: "var(--text)", fontSize: "0.85rem", lineHeight: 2 }}>
+            <li>Wipe vial top with alcohol swab — let dry</li>
+            <li>Draw bac water amount (see table above) into syringe</li>
+            <li>Inject slowly into vial — aim needle at glass wall, not powder</li>
+            <li>Swirl gently to dissolve — <strong>never shake</strong></li>
+            <li>Refrigerate immediately — label with date</li>
+            <li>Use within <strong>30–60 days</strong> (HCG up to 60 days; NAD+ use within 30)</li>
+          </ol>
+          <div style={{ marginTop: 12, padding: "10px 12px", background: "rgba(241,91,91,0.1)", borderRadius: 8, border: "1px solid rgba(241,91,91,0.3)" }}>
+            <span style={{ color: "#f15b5b", fontWeight: 600, fontSize: "0.85rem" }}>⚠️ Syringe units = U-100 insulin syringe (100 units = 1mL)</span>
+          </div>
         </div>
       </div>
 
