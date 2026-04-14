@@ -8,6 +8,7 @@ interface TodoItem {
   completed: boolean;
   category: string;
   priority?: "high" | "medium" | "low";
+  dueDate?: string;
 }
 
 interface TodoListProps {
@@ -28,6 +29,7 @@ export default function TodoList({ title, items, categories, storageKey }: TodoL
   const [formText, setFormText] = useState("");
   const [formCategory, setFormCategory] = useState(categories.filter((c) => c !== "All")[0] || "General");
   const [formPriority, setFormPriority] = useState<"high" | "medium" | "low">("medium");
+  const [formDueDate, setFormDueDate] = useState("");
 
   const PRIORITY_COLORS = { high: "#e05c5c", medium: "#fee440", low: "#888" };
   const PRIORITY_LABELS = { high: "🔴 High", medium: "🟡 Medium", low: "⚪ Low" };
@@ -64,6 +66,7 @@ export default function TodoList({ title, items, categories, storageKey }: TodoL
     setFormText(todo.text);
     setFormCategory(todo.category);
     setFormPriority(todo.priority || "medium");
+    setFormDueDate(todo.dueDate || "");
     setShowForm(true);
   };
 
@@ -73,18 +76,20 @@ export default function TodoList({ title, items, categories, storageKey }: TodoL
     setFormText("");
     setFormCategory(categories.filter((c) => c !== "All")[0] || "General");
     setFormPriority("medium");
+    setFormDueDate("");
   };
 
   const handleSubmit = () => {
     if (!formText.trim()) return;
     if (editingId) {
-      setTodos((prev) => prev.map((t) => t.id === editingId ? { ...t, text: formText.trim(), category: formCategory, priority: formPriority } : t));
+      setTodos((prev) => prev.map((t) => t.id === editingId ? { ...t, text: formText.trim(), category: formCategory, priority: formPriority, dueDate: formDueDate || undefined } : t));
     } else {
       const newTodo: TodoItem = {
         id: `todo-${Date.now()}`,
         text: formText.trim(),
         category: formCategory,
         priority: formPriority,
+        dueDate: formDueDate || undefined,
         completed: false,
       };
       setTodos((prev) => [...prev, newTodo]);
@@ -96,13 +101,28 @@ export default function TodoList({ title, items, categories, storageKey }: TodoL
     if (confirm("Delete this task?")) setTodos((prev) => prev.filter((t) => t.id !== id));
   };
 
+  const isOverdue = (dateStr?: string) => {
+    if (!dateStr) return false;
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const due = new Date(dateStr);
+    return due < today;
+  };
+
   const priorityOrder = { high: 0, medium: 1, low: 2, undefined: 3 };
   const filteredTodos = (filter === "All" ? todos : todos.filter((t) => t.category === filter))
     .slice()
     .sort((a, b) => {
       if (a.completed !== b.completed) return a.completed ? 1 : -1;
+      // Sort by due date first (if present), then by priority
+      if (a.dueDate && b.dueDate) {
+        const dateDiff = new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime();
+        if (dateDiff !== 0) return dateDiff;
+      } else if (a.dueDate) return -1;
+      else if (b.dueDate) return 1;
       return (priorityOrder[a.priority ?? "undefined"] ?? 3) - (priorityOrder[b.priority ?? "undefined"] ?? 3);
     });
+
   const completedCount = todos.filter((t) => t.completed).length;
   const progress = todos.length > 0 ? (completedCount / todos.length) * 100 : 0;
   const allCategories = Array.from(new Set(["All", ...todos.map((t) => t.category)]));
@@ -153,6 +173,8 @@ export default function TodoList({ title, items, categories, storageKey }: TodoL
               <option value="medium">🟡 Medium</option>
               <option value="low">⚪ Low</option>
             </select>
+            <input type="date" value={formDueDate} onChange={(e) => setFormDueDate(e.target.value)}
+              style={{ background: "var(--bg)", border: "1px solid var(--border)", borderRadius: 6, padding: "8px 12px", color: "var(--text)", fontSize: "0.85rem" }} />
           </div>
           <div style={{ display: "flex", gap: 8 }}>
             <button onClick={handleSubmit} disabled={!formText.trim()}
@@ -181,7 +203,7 @@ export default function TodoList({ title, items, categories, storageKey }: TodoL
       <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
         {filteredTodos.map((todo) => (
           <div key={todo.id}
-            style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 12px", borderRadius: 8, background: todo.completed ? "rgba(55,65,81,0.4)" : "#1f2937", opacity: todo.completed ? 0.65 : 1, transition: "all 0.15s" }}>
+            style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 12px", borderRadius: 8, background: todo.completed ? "rgba(55,65,81,0.4)" : "#1f2937", opacity: todo.completed ? 0.65 : 1, transition: "all 0.15s", borderLeft: isOverdue(todo.dueDate) && !todo.completed ? "3px solid #e05c5c" : "3px solid transparent" }}>
             {/* Checkbox */}
             <div onClick={() => toggleTodo(todo.id)} style={{ cursor: "pointer", width: 20, height: 20, borderRadius: 4, border: todo.completed ? "2px solid #22c55e" : "2px solid #6b7280", background: todo.completed ? "#22c55e" : "transparent", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
               {todo.completed && <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>}
@@ -189,11 +211,16 @@ export default function TodoList({ title, items, categories, storageKey }: TodoL
             {/* Text */}
             <div style={{ flex: 1, cursor: "pointer" }} onClick={() => toggleTodo(todo.id)}>
               <span style={{ fontSize: "0.9rem", color: todo.completed ? "#6b7280" : "#e5e7eb", textDecoration: todo.completed ? "line-through" : "none" }}>{todo.text}</span>
-              <div style={{ display: "flex", gap: 6, marginTop: 4, flexWrap: "wrap" }}>
+              <div style={{ display: "flex", gap: 6, marginTop: 4, flexWrap: "wrap", alignItems: "center" }}>
                 <span style={{ fontSize: "0.7rem", color: "#6b7280" }}>{todo.category}</span>
                 {todo.priority && (
                   <span style={{ fontSize: "0.7rem", padding: "1px 7px", borderRadius: 4, background: PRIORITY_COLORS[todo.priority] + "22", color: PRIORITY_COLORS[todo.priority], fontWeight: 500 }}>
                     {PRIORITY_LABELS[todo.priority]}
+                  </span>
+                )}
+                {todo.dueDate && (
+                  <span style={{ fontSize: "0.7rem", color: isOverdue(todo.dueDate) && !todo.completed ? "#e05c5c" : "var(--muted)", fontWeight: isOverdue(todo.dueDate) && !todo.completed ? 600 : 400 }}>
+                    📅 {new Date(todo.dueDate).toLocaleDateString()} {isOverdue(todo.dueDate) && !todo.completed && "⚠️ OVERDUE"}
                   </span>
                 )}
               </div>
