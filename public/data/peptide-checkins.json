@@ -1,0 +1,65 @@
+[
+  {
+    "id": "checkin-2026-04-14",
+    "weekStarting": "2026-04-14",
+    "weekNumber": 0,
+    "checkIns": {
+      "2026-04-14": {
+        "day": "Monday",
+        "doses": [
+          { "peptideId": "peptide-retatrutide", "peptideName": "Retatrutide", "time": "8:00 AM", "taken": false, "dose": "60 units" },
+          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "40 units" }
+        ]
+      },
+      "2026-04-15": {
+        "day": "Tuesday",
+        "doses": [
+          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "40 units" }
+        ]
+      },
+      "2026-04-16": {
+        "day": "Wednesday",
+        "doses": [
+          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "40 units" }
+        ]
+      },
+      "2026-04-17": {
+        "day": "Thursday",
+        "doses": [
+          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "40 units" }
+        ]
+      },
+      "2026-04-18": {
+        "day": "Friday",
+        "doses": [
+          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "40 units" }
+        ]
+      },
+      "2026-04-19": {
+        "day": "Saturday",
+        "doses": []
+      },
+      "2026-04-20": {
+        "day": "Sunday",
+        "doses": [],
+        "notes": "Off / Recovery — no Tesamorelin"
+      }
+    },
+    "weeklyMetrics": {
+      "weight": null,
+      "waist": null,
+      "fastingGlucose": null,
+      "bloodPressure": null,
+      "restingHR": null,
+      "appetite": null,
+      "sleep": null,
+      "giSymptoms": null,
+      "mood": null,
+      "libido": null,
+      "waterRetention": null,
+      "trainingQuality": null
+    },
+    "sideEffects": [],
+    "notes": "Week 0 — Core stack only. Retatrutide + Tesamorelin steady."
+  }
+]

@@ -29,8 +29,21 @@ interface Peptide {
   }[];
 }
 
-interface WeeklyCheckIn {
-  date: string;
+interface DoseCheckIn {
+  peptideId: string;
+  peptideName: string;
+  time: string;
+  taken: boolean;
+  dose: string;
+}
+
+interface DayCheckIn {
+  day: string;
+  doses: DoseCheckIn[];
+  notes?: string;
+}
+
+interface WeeklyMetrics {
   weight: number | null;
   waist: number | null;
   fastingGlucose: number | null;
@@ -43,6 +56,16 @@ interface WeeklyCheckIn {
   libido: string | null;
   waterRetention: string | null;
   trainingQuality: string | null;
+}
+
+interface WeekCheckIn {
+  id: string;
+  weekStarting: string;
+  weekNumber: number;
+  checkIns: Record<string, DayCheckIn>;
+  weeklyMetrics: WeeklyMetrics;
+  sideEffects: string[];
+  notes: string;
 }
 
 const categoryColors: Record<string, string> = {
@@ -61,19 +84,56 @@ const statusLabels: Record<string, string> = {
 
 export default function PeptidesPage() {
   const [peptides, setPeptides] = useState<Peptide[]>([]);
+  const [checkIns, setCheckIns] = useState<WeekCheckIn[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [expandedPeptide, setExpandedPeptide] = useState<string | null>(null);
+  const [expandedWeek, setExpandedWeek] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState<"stack" | "checkin">("checkin");
 
   useEffect(() => {
-    fetch("/data/peptide-stack.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setPeptides(data);
+    Promise.all([
+      fetch("/data/peptide-stack.json").then((res) => res.json()),
+      fetch("/data/peptide-checkins.json").then((res) => res.json()),
+    ])
+      .then(([peptideData, checkInData]) => {
+        setPeptides(peptideData);
+        setCheckIns(checkInData);
         setLoading(false);
       })
       .catch(() => setLoading(false));
   }, []);
+
+  const toggleDose = (weekId: string, date: string, doseIndex: number) => {
+    setCheckIns((prev) =>
+      prev.map((week) => {
+        if (week.id !== weekId) return week;
+        const day = week.checkIns[date];
+        if (!day) return week;
+        const newDoses = [...day.doses];
+        newDoses[doseIndex] = { ...newDoses[doseIndex], taken: !newDoses[doseIndex].taken };
+        return {
+          ...week,
+          checkIns: {
+            ...week.checkIns,
+            [date]: { ...day, doses: newDoses },
+          },
+        };
+      })
+    );
+  };
+
+  const getWeekProgress = (week: WeekCheckIn) => {
+    let total = 0;
+    let taken = 0;
+    Object.values(week.checkIns).forEach((day) => {
+      day.doses.forEach((dose) => {
+        total++;
+        if (dose.taken) taken++;
+      });
+    });
+    return { total, taken, percent: total > 0 ? Math.round((taken / total) * 100) : 0 };
+  };
 
   if (loading) {
     return (
@@ -126,6 +186,42 @@ export default function PeptidesPage() {
         </Card>
       </div>
 
+      {/* Tab Switcher */}
+      <div style={{ display: "flex", gap: 8, marginBottom: 24 }}>
+        <button
+          onClick={() => setActiveTab("checkin")}
+          style={{
+            padding: "10px 20px",
+            borderRadius: 8,
+            border: "1px solid var(--border)",
+            background: activeTab === "checkin" ? "#9b5de5" : "var(--card)",
+            color: activeTab === "checkin" ? "#fff" : "var(--text)",
+            fontSize: "0.9rem",
+            fontWeight: 600,
+            cursor: "pointer",
+            transition: "all 0.15s ease",
+          }}
+        >
+          ✅ Daily Check-In
+        </button>
+        <button
+          onClick={() => setActiveTab("stack")}
+          style={{
+            padding: "10px 20px",
+            borderRadius: 8,
+            border: "1px solid var(--border)",
+            background: activeTab === "stack" ? "#00f5d4" : "var(--card)",
+            color: activeTab === "stack" ? "#000" : "var(--text)",
+            fontSize: "0.9rem",
+            fontWeight: 600,
+            cursor: "pointer",
+            transition: "all 0.15s ease",
+          }}
+        >
+          📋 Full Stack
+        </button>
+      </div>
+
       {/* Core Stack Banner */}
       <div style={{ background: "linear-gradient(135deg, rgba(0,245,212,0.1), rgba(0,245,212,0.05))", border: "1px solid rgba(0,245,212,0.3)", borderRadius: 12, padding: 16, marginBottom: 24 }}>
         <h3 style={{ fontSize: "0.85rem", fontWeight: 600, color: "#00f5d4", marginBottom: 8, textTransform: "uppercase", letterSpacing: "0.05em" }}>
@@ -140,152 +236,266 @@ export default function PeptidesPage() {
         </div>
       </div>
 
-      {/* Category Filter */}
-      <div style={{ marginBottom: 20 }}>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-          <button
-            onClick={() => setSelectedCategory(null)}
-            style={{
-              padding: "8px 16px",
-              borderRadius: 8,
-              border: "1px solid var(--border)",
-              background: selectedCategory === null ? "var(--text)" : "var(--card)",
-              color: selectedCategory === null ? "var(--bg)" : "var(--text)",
-              fontSize: "0.85rem",
-              cursor: "pointer",
-              transition: "all 0.15s ease",
-            }}
-          >
-            All
-          </button>
-          {["core", "core-addon", "secondary-addon", "cyclical"].map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setSelectedCategory(cat)}
-              style={{
-                padding: "8px 16px",
-                borderRadius: 8,
-                border: "1px solid var(--border)",
-                background: selectedCategory === cat ? categoryColors[cat] : "var(--card)",
-                color: selectedCategory === cat ? "#000" : "var(--text)",
-                fontSize: "0.85rem",
-                cursor: "pointer",
-                transition: "all 0.15s ease",
-              }}
-            >
-              {cat.replace("-", " ").replace(/\b\w/g, (l) => l.toUpperCase())}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Peptide Cards */}
-      <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-        {filteredPeptides.map((peptide) => (
-          <div
-            key={peptide.id}
-            style={{
-              background: "var(--card)",
-              border: "1px solid var(--border)",
-              borderRadius: 12,
-              overflow: "hidden",
-              transition: "all 0.15s ease",
-            }}
-          >
-            <div
-              onClick={() => setExpandedPeptide(expandedPeptide === peptide.id ? null : peptide.id)}
-              style={{
-                padding: 16,
-                cursor: "pointer",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                borderLeft: `4px solid ${categoryColors[peptide.category]}`,
-              }}
-            >
-              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                <div>
-                  <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "var(--text)", marginBottom: 4 }}>
-                    {peptide.name}
-                  </h3>
-                  <div style={{ display: "flex", gap: 8, fontSize: "0.75rem" }}>
-                    <span style={{ color: categoryColors[peptide.category], fontWeight: 500 }}>
-                      {peptide.category.replace("-", " ")}
-                    </span>
-                    <span style={{ color: "var(--muted)" }}>•</span>
-                    <span style={{ color: "var(--muted)" }}>{statusLabels[peptide.status]}</span>
-                  </div>
-                </div>
-              </div>
-              <div style={{ textAlign: "right" }}>
-                <div style={{ fontSize: "0.9rem", fontWeight: 600, color: "var(--text)" }}>
-                  {peptide.dose.amount ? `${peptide.dose.amount}${peptide.dose.unit}` : "TBD"}
-                </div>
-                <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>
-                  {peptide.dose.frequency}
-                </div>
-              </div>
-            </div>
-
-            {expandedPeptide === peptide.id && (
-              <div style={{ padding: "0 16px 16px", borderTop: "1px solid var(--border)" }}>
-                <div style={{ paddingTop: 16, display: "grid", gap: 12 }}>
-                  {/* Schedule */}
-                  <div>
-                    <h4 style={{ fontSize: "0.75rem", fontWeight: 600, color: "var(--muted)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 8 }}>
-                      Schedule
-                    </h4>
-                    <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-                      {peptide.dose.days ? (
-                        peptide.dose.days.map((day) => (
-                          <span key={day} style={{ background: "var(--bg)", padding: "6px 12px", borderRadius: 6, fontSize: "0.85rem", color: "var(--text)" }}>
-                            {day} {peptide.dose.time && `@ ${peptide.dose.time}`}
-                          </span>
-                        ))
-                      ) : (
-                        <span style={{ background: "var(--bg)", padding: "6px 12px", borderRadius: 6, fontSize: "0.85rem", color: "var(--text)" }}>
-                          {peptide.dose.day} {peptide.dose.time && `@ ${peptide.dose.time}`}
-                        </span>
-                      )}
+      {/* DAILY CHECK-IN TAB */}
+      {activeTab === "checkin" && (
+        <>
+          {/* Weekly Check-In Cards */}
+          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+            {checkIns.map((week) => {
+              const progress = getWeekProgress(week);
+              const isExpanded = expandedWeek === week.id;
+              
+              return (
+                <div
+                  key={week.id}
+                  style={{
+                    background: "var(--card)",
+                    border: "1px solid var(--border)",
+                    borderRadius: 12,
+                    overflow: "hidden",
+                  }}
+                >
+                  {/* Week Header */}
+                  <div
+                    onClick={() => setExpandedWeek(isExpanded ? null : week.id)}
+                    style={{
+                      padding: 16,
+                      cursor: "pointer",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                      borderLeft: `4px solid ${progress.percent === 100 ? "#00f5d4" : progress.percent > 50 ? "#fee440" : "#9b5de5"}`,
+                    }}
+                  >
+                    <div>
+                      <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "var(--text)", marginBottom: 4 }}>
+                        Week {week.weekNumber} — {new Date(week.weekStarting).toLocaleDateString("en-US", { month: "short", day: "numeric" })}
+                      </h3>
+                      <p style={{ fontSize: "0.8rem", color: "var(--muted)", margin: 0 }}>{week.notes}</p>
+                    </div>
+                    <div style={{ textAlign: "right" }}>
+                      <div style={{ fontSize: "1.2rem", fontWeight: 700, color: progress.percent === 100 ? "#00f5d4" : "var(--text)" }}>
+                        {progress.taken}/{progress.total}
+                      </div>
+                      <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>{progress.percent}% complete</div>
                     </div>
                   </div>
 
-                  {/* Vial Info */}
-                  {(peptide.vial.strength_mg || peptide.vial.reconstitution_ml) && (
-                    <div>
-                      <h4 style={{ fontSize: "0.75rem", fontWeight: 600, color: "var(--muted)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 8 }}>
-                        Vial Info
-                      </h4>
-                      <div style={{ fontSize: "0.85rem", color: "var(--text)" }}>
-                        {peptide.vial.strength_mg && `${peptide.vial.strength_mg}mg`}
-                        {peptide.vial.strength_mg && peptide.vial.reconstitution_ml && " + "}
-                        {peptide.vial.reconstitution_ml && `${peptide.vial.reconstitution_ml}mL bac water`}
+                  {/* Daily Doses */}
+                  {isExpanded && (
+                    <div style={{ padding: "0 16px 16px", borderTop: "1px solid var(--border)" }}>
+                      <div style={{ paddingTop: 16, display: "flex", flexDirection: "column", gap: 12 }}>
+                        {Object.entries(week.checkIns).map(([date, day]) => (
+                          <div key={date} style={{ background: "var(--bg)", borderRadius: 8, padding: 12 }}>
+                            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
+                              <span style={{ fontWeight: 600, color: "var(--text)", fontSize: "0.9rem" }}>
+                                {day.day} — {new Date(date).toLocaleDateString("en-US", { month: "short", day: "numeric" })}
+                              </span>
+                              {day.notes && (
+                                <span style={{ fontSize: "0.75rem", color: "var(--muted)", fontStyle: "italic" }}>{day.notes}</span>
+                              )}
+                            </div>
+                            
+                            {day.doses.length === 0 ? (
+                              <span style={{ fontSize: "0.8rem", color: "var(--muted)" }}>No doses scheduled</span>
+                            ) : (
+                              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                                {day.doses.map((dose, idx) => (
+                                  <label
+                                    key={idx}
+                                    style={{
+                                      display: "flex",
+                                      alignItems: "center",
+                                      gap: 12,
+                                      padding: "8px 12px",
+                                      background: dose.taken ? "rgba(0,245,212,0.1)" : "var(--card)",
+                                      borderRadius: 6,
+                                      cursor: "pointer",
+                                      transition: "all 0.15s ease",
+                                    }}
+                                  >
+                                    <input
+                                      type="checkbox"
+                                      checked={dose.taken}
+                                      onChange={() => toggleDose(week.id, date, idx)}
+                                      style={{ width: 20, height: 20, cursor: "pointer" }}
+                                    />
+                                    <div style={{ flex: 1 }}>
+                                      <div style={{ fontWeight: 500, color: dose.taken ? "#00f5d4" : "var(--text)", textDecoration: dose.taken ? "line-through" : "none" }}>
+                                        {dose.peptideName}
+                                      </div>
+                                      <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>
+                                        {dose.dose} @ {dose.time}
+                                      </div>
+                                    </div>
+                                    {dose.taken && <span style={{ fontSize: "1.2rem" }}>✅</span>}
+                                  </label>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        ))}
                       </div>
                     </div>
                   )}
-
-                  {/* Notes */}
-                  <div>
-                    <h4 style={{ fontSize: "0.75rem", fontWeight: 600, color: "var(--muted)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 8 }}>
-                      Notes
-                    </h4>
-                    <p style={{ fontSize: "0.85rem", color: "var(--text)", lineHeight: 1.5, margin: 0 }}>
-                      {peptide.notes}
-                    </p>
-                  </div>
-
-                  {/* Start Date */}
-                  {peptide.startDate && (
-                    <div style={{ fontSize: "0.8rem", color: "var(--muted)" }}>
-                      Started: {new Date(peptide.startDate).toLocaleDateString()}
-                    </div>
-                  )}
                 </div>
-              </div>
-            )}
+              );
+            })}
           </div>
-        ))}
-      </div>
+        </>
+      )}
+
+      {/* FULL STACK TAB */}
+      {activeTab === "stack" && (
+        <>
+          {/* Category Filter */}
+          <div style={{ marginBottom: 20 }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+              <button
+                onClick={() => setSelectedCategory(null)}
+                style={{
+                  padding: "8px 16px",
+                  borderRadius: 8,
+                  border: "1px solid var(--border)",
+                  background: selectedCategory === null ? "var(--text)" : "var(--card)",
+                  color: selectedCategory === null ? "var(--bg)" : "var(--text)",
+                  fontSize: "0.85rem",
+                  cursor: "pointer",
+                  transition: "all 0.15s ease",
+                }}
+              >
+                All
+              </button>
+              {["core", "core-addon", "secondary-addon", "cyclical"].map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setSelectedCategory(cat)}
+                  style={{
+                    padding: "8px 16px",
+                    borderRadius: 8,
+                    border: "1px solid var(--border)",
+                    background: selectedCategory === cat ? categoryColors[cat] : "var(--card)",
+                    color: selectedCategory === cat ? "#000" : "var(--text)",
+                    fontSize: "0.85rem",
+                    cursor: "pointer",
+                    transition: "all 0.15s ease",
+                  }}
+                >
+                  {cat.replace("-", " ").replace(/\b\w/g, (l) => l.toUpperCase())}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Peptide Cards */}
+          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+            {filteredPeptides.map((peptide) => (
+              <div
+                key={peptide.id}
+                style={{
+                  background: "var(--card)",
+                  border: "1px solid var(--border)",
+                  borderRadius: 12,
+                  overflow: "hidden",
+                  transition: "all 0.15s ease",
+                }}
+              >
+                <div
+                  onClick={() => setExpandedPeptide(expandedPeptide === peptide.id ? null : peptide.id)}
+                  style={{
+                    padding: 16,
+                    cursor: "pointer",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    borderLeft: `4px solid ${categoryColors[peptide.category]}`,
+                  }}
+                >
+                  <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                    <div>
+                      <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "var(--text)", marginBottom: 4 }}>
+                        {peptide.name}
+                      </h3>
+                      <div style={{ display: "flex", gap: 8, fontSize: "0.75rem" }}>
+                        <span style={{ color: categoryColors[peptide.category], fontWeight: 500 }}>
+                          {peptide.category.replace("-", " ")}
+                        </span>
+                        <span style={{ color: "var(--muted)" }}>•</span>
+                        <span style={{ color: "var(--muted)" }}>{statusLabels[peptide.status]}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div style={{ textAlign: "right" }}>
+                    <div style={{ fontSize: "0.9rem", fontWeight: 600, color: "var(--text)" }}>
+                      {peptide.dose.amount ? `${peptide.dose.amount}${peptide.dose.unit}` : "TBD"}
+                    </div>
+                    <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>
+                      {peptide.dose.frequency}
+                    </div>
+                  </div>
+                </div>
+
+                {expandedPeptide === peptide.id && (
+                  <div style={{ padding: "0 16px 16px", borderTop: "1px solid var(--border)" }}>
+                    <div style={{ paddingTop: 16, display: "grid", gap: 12 }}>
+                      {/* Schedule */}
+                      <div>
+                        <h4 style={{ fontSize: "0.75rem", fontWeight: 600, color: "var(--muted)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 8 }}>
+                          Schedule
+                        </h4>
+                        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                          {peptide.dose.days ? (
+                            peptide.dose.days.map((day) => (
+                              <span key={day} style={{ background: "var(--bg)", padding: "6px 12px", borderRadius: 6, fontSize: "0.85rem", color: "var(--text)" }}>
+                                {day} {peptide.dose.time && `@ ${peptide.dose.time}`}
+                              </span>
+                            ))
+                          ) : (
+                            <span style={{ background: "var(--bg)", padding: "6px 12px", borderRadius: 6, fontSize: "0.85rem", color: "var(--text)" }}>
+                              {peptide.dose.day} {peptide.dose.time && `@ ${peptide.dose.time}`}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Vial Info */}
+                      {(peptide.vial.strength_mg || peptide.vial.reconstitution_ml) && (
+                        <div>
+                          <h4 style={{ fontSize: "0.75rem", fontWeight: 600, color: "var(--muted)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 8 }}>
+                            Vial Info
+                          </h4>
+                          <div style={{ fontSize: "0.85rem", color: "var(--text)" }}>
+                            {peptide.vial.strength_mg && `${peptide.vial.strength_mg}mg`}
+                            {peptide.vial.strength_mg && peptide.vial.reconstitution_ml && " + "}
+                            {peptide.vial.reconstitution_ml && `${peptide.vial.reconstitution_ml}mL bac water`}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Notes */}
+                      <div>
+                        <h4 style={{ fontSize: "0.75rem", fontWeight: 600, color: "var(--muted)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 8 }}>
+                          Notes
+                        </h4>
+                        <p style={{ fontSize: "0.85rem", color: "var(--text)", lineHeight: 1.5, margin: 0 }}>
+                          {peptide.notes}
+                        </p>
+                      </div>
+
+                      {/* Start Date */}
+                      {peptide.startDate && (
+                        <div style={{ fontSize: "0.8rem", color: "var(--muted)" }}>
+                          Started: {new Date(peptide.startDate).toLocaleDateString()}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </>
+      )}
 
       {/* Weekly Schedule Reference */}
       <div style={{ marginTop: 32 }}>
