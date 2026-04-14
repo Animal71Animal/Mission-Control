@@ -17,8 +17,8 @@
     },
     {
       "month": "April",
-      "amount": 609,
-      "nights": 3
+      "amount": 622,
+      "nights": 4
     }
   ],
   "topTippers": [
@@ -314,7 +314,7 @@
       "jan": 20,
       "feb": 15,
       "mar": 15,
-      "apr": 10
+      "apr": 23
     },
     {
       "name": "Effie",
@@ -3408,6 +3408,16 @@
       }
     ],
     "April": [
+      {
+        "date": "Mon Apr 13",
+        "total": 13,
+        "dancers": [
+          {
+            "dancer": "Dior",
+            "amount": 13
+          }
+        ]
+      },
       {
         "date": "Thu Apr 2",
         "total": 244,
