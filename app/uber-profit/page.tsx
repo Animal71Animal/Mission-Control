@@ -1,362 +1,146 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Card from "@/components/Card";
 
-interface UberShift {
+interface Shift {
   id: string;
   date: string;
-  platform: "uber" | "lyft" | "both";
-  hours_worked: number;
-  gross_earnings: number;
-  tips: number;
-  charging_cost: number;
+  start_time: string;
+  end_time: string;
+  duration_minutes: number;
+  start_odometer: number;
+  end_odometer: number;
   miles_driven: number;
+  gross_earnings: number;
+  charging_session_id?: string;
+  charging_cost_total?: number;
+  charging_kwh_total?: number;
+  charging_kwh_used_in_shift?: number;
+  proportional_charging_cost?: number;
+  net_profit: number;
+  hourly_rate: number;
   notes?: string;
 }
 
-interface Expense {
-  id: string;
-  date: string;
-  category: "insurance" | "maintenance" | "cleaning" | "registration" | "other";
-  amount: number;
-  description: string;
-}
-
-interface MonthlyData {
-  uber_gross: number;
-  uber_charging: number;
-  uber_net: number;
-  uber_hours: number;
-  total_net: number;
-}
-
-interface ProfitData {
-  uber_shifts: UberShift[];
-  expenses: Expense[];
-  monthly_summary: Record<string, MonthlyData>;
+interface UberData {
+  uber_shifts: Shift[];
+  monthly_summary: Record<string, any>;
   last_updated: string;
 }
 
-const MONTH_NAMES: Record<string, string> = {
-  "01": "January", "02": "February", "03": "March", "04": "April",
-  "05": "May", "06": "June", "07": "July", "08": "August",
-  "09": "September", "10": "October", "11": "November", "12": "December",
-};
-
-function formatMonth(key: string) {
-  const [year, month] = key.split("-");
-  return `${MONTH_NAMES[month]} ${year}`;
-}
-
-function formatCurrency(amount: number): string {
-  return `$${amount.toFixed(2)}`;
-}
-
 export default function UberProfitPage() {
-  const [data, setData] = useState<ProfitData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState<"overview" | "shifts" | "expenses">("overview");
+  const [data, setData] = useState<UberData | null>(null);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    fetch("/api/uber-profit")
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-        setLoading(false);
-      })
-      .catch(() => setLoading(false));
+    fetch("/data/uber-profit.json")
+      .then((r) => r.json())
+      .then((d) => { setData(d); setLoaded(true); })
+      .catch(() => setLoaded(true));
   }, []);
 
-  if (loading) {
+  if (!loaded) return <p style={{ color: "var(--muted)" }}>Loading...</p>;
+  if (!data || data.uber_shifts.length === 0) {
     return (
       <div>
-        <h1 style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)" }}>🚕 Uber Profit Tracker</h1>
-        <p style={{ color: "var(--muted)", marginTop: 20 }}>Loading...</p>
+        <h1 style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)", marginBottom: 20 }}>🚗 Uber Profit Tracking</h1>
+        <p style={{ color: "var(--muted)" }}>No shifts logged yet. Start with: `Uber start [odometer]`</p>
       </div>
     );
   }
 
-  const uberShifts = data?.uber_shifts || [];
-  const expenses = data?.expenses || [];
-  const monthly = data?.monthly_summary || {};
+  const shifts = data.uber_shifts;
+  const monthly = data.monthly_summary;
+  const latestMonth = Object.keys(monthly).sort().reverse()[0];
+  const currentMonthData = monthly[latestMonth] || {};
 
-  // Calculate totals
-  const uberTotals = {
-    gross: uberShifts.reduce((sum, s) => sum + (s.gross_earnings || 0), 0),
-    tips: uberShifts.reduce((sum, s) => sum + (s.tips || 0), 0),
-    charging: uberShifts.reduce((sum, s) => sum + (s.charging_cost || 0), 0),
-    hours: uberShifts.reduce((sum, s) => sum + (s.hours_worked || 0), 0),
-    miles: uberShifts.reduce((sum, s) => sum + (s.miles_driven || 0), 0),
-    get net() { return this.gross + this.tips - this.charging; },
-    get hourly() { return this.hours > 0 ? this.net / this.hours : 0; },
-    get perMile() { return this.miles > 0 ? this.net / this.miles : 0; },
-  };
-
-  const expenseTotals = {
-    total: expenses.reduce((sum, e) => sum + (e.amount || 0), 0),
-  };
-
-  const grandTotal = uberTotals.net - expenseTotals.total;
-
-  const sortedUberShifts = [...uberShifts].sort((a, b) => b.date.localeCompare(a.date));
-  const sortedExpenses = [...expenses].sort((a, b) => b.date.localeCompare(a.date));
+  const totalGross = shifts.reduce((sum, s) => sum + s.gross_earnings, 0);
+  const totalCharging = shifts.reduce((sum, s) => sum + (s.proportional_charging_cost || 0), 0);
+  const totalNet = shifts.reduce((sum, s) => sum + s.net_profit, 0);
+  const totalMiles = shifts.reduce((sum, s) => sum + s.miles_driven, 0);
+  const avgHourly = shifts.length > 0 ? shifts.reduce((sum, s) => sum + s.hourly_rate, 0) / shifts.length : 0;
 
   return (
     <div>
-      <h1 style={{ fontSize: "1.5rem", fontWeight: 700, margin: "0 0 8px", color: "var(--text)" }}>
-        🚕 Uber Profit Tracker
-      </h1>
-      <p style={{ color: "var(--muted)", margin: "0 0 28px", fontSize: "0.875rem" }}>
-        Track Uber/Lyft income, charging costs, and profit margins
-      </p>
+      {/* Header */}
+      <div style={{ marginBottom: 28 }}>
+        <h1 style={{ fontSize: "1.5rem", fontWeight: 700, margin: 0, color: "var(--text)" }}>🚗 Uber Profit Tracking</h1>
+        <p style={{ color: "var(--muted)", marginTop: 4, fontSize: "0.85rem" }}>Earnings minus proportional Tesla charging costs</p>
+      </div>
 
-      {/* Tabs */}
-      <div style={{ display: "flex", gap: 8, marginBottom: 24, borderBottom: "1px solid var(--border)", paddingBottom: 8 }}>
+      {/* All-Time Stats */}
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 12, marginBottom: 24 }}>
         {[
-          { key: "overview", label: "Overview", icon: "📊" },
-          { key: "shifts", label: "Shifts", icon: "🚕" },
-          { key: "expenses", label: "Expenses", icon: "💸" },
-        ].map((tab) => (
-          <button
-            key={tab.key}
-            onClick={() => setActiveTab(tab.key as any)}
-            style={{
-              padding: "8px 16px",
-              borderRadius: 6,
-              border: "none",
-              background: activeTab === tab.key ? "var(--accent)" : "transparent",
-              color: activeTab === tab.key ? "white" : "var(--text)",
-              cursor: "pointer",
-              fontSize: "0.875rem",
-              fontWeight: 500,
-            }}
-          >
-            {tab.icon} {tab.label}
-          </button>
+          { label: "Total Gross", value: `$${totalGross.toFixed(2)}`, color: "#00f5d4" },
+          { label: "Charging Cost", value: `$${totalCharging.toFixed(2)}`, color: "#f15bb5" },
+          { label: "Total Net", value: `$${totalNet.toFixed(2)}`, color: "#00c87c" },
+          { label: "Miles Driven", value: `${totalMiles.toFixed(0)} mi`, color: "#fee440" },
+          { label: "Avg Hourly", value: `$${avgHourly.toFixed(2)}/hr`, color: "#00bbf9" },
+          { label: "Shifts", value: shifts.length, color: "#9b5de5" },
+        ].map((s) => (
+          <div key={s.label} style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 10, padding: 16 }}>
+            <div style={{ fontSize: "1.3rem", fontWeight: 700, color: s.color }}>{s.value}</div>
+            <div style={{ fontSize: "0.7rem", color: "var(--muted)", marginTop: 6, textTransform: "uppercase", letterSpacing: "0.05em" }}>{s.label}</div>
+          </div>
         ))}
       </div>
 
-      {/* OVERVIEW TAB */}
-      {activeTab === "overview" && (
-        <>
-          {/* Top stats */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, marginBottom: 24 }}>
-            <Card>
-              <div style={{ fontSize: "1.6rem", fontWeight: 700, color: "var(--accent2)" }}>
-                {formatCurrency(grandTotal)}
+      {/* Monthly Breakdown */}
+      {latestMonth && (
+        <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12, padding: 20, marginBottom: 24 }}>
+          <h2 style={{ fontSize: "1rem", fontWeight: 700, margin: "0 0 16px", color: "var(--text)" }}>📊 {latestMonth}</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))", gap: 12 }}>
+            {[
+              { label: "Gross", value: `$${currentMonthData.total_gross?.toFixed(2) || "0.00"}` },
+              { label: "Charging", value: `$${currentMonthData.total_charges?.toFixed(2) || "0.00"}` },
+              { label: "Net", value: `$${currentMonthData.total_net?.toFixed(2) || "0.00"}` },
+              { label: "Shifts", value: currentMonthData.shifts || 0 },
+              { label: "Miles", value: `${currentMonthData.total_miles || 0}` },
+              { label: "Avg Rate", value: `$${currentMonthData.avg_hourly_rate?.toFixed(2) || "0.00"}/hr` },
+            ].map((s) => (
+              <div key={s.label} style={{ textAlign: "center" }}>
+                <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--text)" }}>{s.value}</div>
+                <div style={{ fontSize: "0.7rem", color: "var(--muted)", marginTop: 4 }}>{s.label}</div>
               </div>
-              <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 4 }}>Total Net Profit</div>
-            </Card>
-            <Card>
-              <div style={{ fontSize: "1.6rem", fontWeight: 700, color: "var(--accent2)" }}>
-                {formatCurrency(uberTotals.net)}
-              </div>
-              <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 4 }}>Uber Net (after charging)</div>
-            </Card>
-            <Card>
-              <div style={{ fontSize: "1.6rem", fontWeight: 700, color: "var(--accent2)" }}>
-                {formatCurrency(uberTotals.gross + uberTotals.tips)}
-              </div>
-              <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 4 }}>Gross Earnings</div>
-            </Card>
-            <Card>
-              <div style={{ fontSize: "1.6rem", fontWeight: 700, color: "var(--danger)" }}>
-                {formatCurrency(expenseTotals.total)}
-              </div>
-              <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 4 }}>Other Expenses</div>
-            </Card>
+            ))}
           </div>
-
-          {/* Key Metrics */}
-          <Card title="🚕 Uber Metrics">
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }}>
-              <div>
-                <div style={{ fontSize: "1.2rem", fontWeight: 600, color: "var(--text)" }}>
-                  {formatCurrency(uberTotals.hourly)}
-                </div>
-                <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>Net per hour</div>
-              </div>
-              <div>
-                <div style={{ fontSize: "1.2rem", fontWeight: 600, color: "var(--text)" }}>
-                  {formatCurrency(uberTotals.perMile)}
-                </div>
-                <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>Net per mile</div>
-              </div>
-              <div>
-                <div style={{ fontSize: "1.2rem", fontWeight: 600, color: "var(--text)" }}>
-                  {uberTotals.hours.toFixed(1)}h
-                </div>
-                <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>Total hours</div>
-              </div>
-              <div>
-                <div style={{ fontSize: "1.2rem", fontWeight: 600, color: "var(--danger)" }}>
-                  {formatCurrency(uberTotals.charging)}
-                </div>
-                <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>Charging costs</div>
-              </div>
-            </div>
-          </Card>
-
-          {/* Monthly breakdown */}
-          <div style={{ marginTop: 24 }}>
-            <Card title="Monthly Profit Summary">
-              {Object.keys(monthly).length === 0 ? (
-                <p style={{ fontSize: "0.875rem", color: "var(--muted)" }}>No data yet. Add Uber shifts to see monthly breakdown.</p>
-              ) : (
-                <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
-                  <div style={{
-                    display: "grid",
-                    gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 1fr",
-                    padding: "0 0 8px",
-                    borderBottom: "1px solid var(--border)",
-                    fontSize: "0.7rem",
-                    color: "var(--muted)",
-                    textTransform: "uppercase",
-                    letterSpacing: "0.08em",
-                  }}>
-                    <span>Month</span>
-                    <span>Gross</span>
-                    <span>Charging</span>
-                    <span>Expenses</span>
-                    <span>Total Net</span>
-                    <span>Margin</span>
-                  </div>
-                  {Object.entries(monthly)
-                    .sort(([a], [b]) => b.localeCompare(a))
-                    .map(([month, v], i, arr) => {
-                      const margin = v.uber_gross > 0 ? ((v.total_net / v.uber_gross) * 100).toFixed(1) : "0.0";
-                      return (
-                        <div
-                          key={month}
-                          style={{
-                            display: "grid",
-                            gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 1fr",
-                            alignItems: "center",
-                            padding: "12px 0",
-                            borderBottom: i < arr.length - 1 ? "1px solid var(--border)" : "none",
-                            fontSize: "0.875rem",
-                          }}
-                        >
-                          <span style={{ fontWeight: 600 }}>{formatMonth(month)}</span>
-                          <span style={{ color: "var(--text)" }}>{formatCurrency(v.uber_gross)}</span>
-                          <span style={{ color: "var(--danger)" }}>{formatCurrency(v.uber_charging)}</span>
-                          <span style={{ color: "var(--danger)" }}>{formatCurrency(v.uber_gross - v.total_net)}</span>
-                          <span style={{ color: "var(--accent2)", fontWeight: 600 }}>{formatCurrency(v.total_net)}</span>
-                          <span style={{ color: "var(--muted)" }}>{margin}%</span>
-                        </div>
-                      );
-                    })}
-                </div>
-              )}
-            </Card>
-          </div>
-        </>
+        </div>
       )}
 
-      {/* SHIFTS TAB */}
-      {activeTab === "shifts" && (
-        <Card title="Uber/Lyft Shifts">
-          {sortedUberShifts.length === 0 ? (
-            <p style={{ fontSize: "0.875rem", color: "var(--muted)" }}>
-              No shifts logged yet. Tell PriScylla in Telegram to log a shift.
-            </p>
-          ) : (
-            <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
-              <div style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 0.6fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr",
-                padding: "0 0 8px",
-                borderBottom: "1px solid var(--border)",
-                fontSize: "0.7rem",
-                color: "var(--muted)",
-                textTransform: "uppercase",
-                letterSpacing: "0.08em",
-              }}>
-                <span>Date</span>
-                <span>Hours</span>
-                <span>Gross</span>
-                <span>Tips</span>
-                <span>Charging</span>
-                <span>Net</span>
-                <span>$/hr</span>
-              </div>
-              {sortedUberShifts.map((s, i) => {
-                const net = s.gross_earnings + (s.tips || 0) - (s.charging_cost || 0);
-                const hourly = s.hours_worked > 0 ? net / s.hours_worked : 0;
-                return (
-                  <div
-                    key={i}
-                    style={{
-                      display: "grid",
-                      gridTemplateColumns: "1fr 0.6fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr",
-                      padding: "10px 0",
-                      borderBottom: i < sortedUberShifts.length - 1 ? "1px solid var(--border)" : "none",
-                      fontSize: "0.85rem",
-                      alignItems: "center",
-                    }}
-                  >
-                    <span>{s.date}</span>
-                    <span style={{ color: "var(--muted)" }}>{s.hours_worked}h</span>
-                    <span>{formatCurrency(s.gross_earnings)}</span>
-                    <span style={{ color: "var(--accent2)" }}>+{formatCurrency(s.tips || 0)}</span>
-                    <span style={{ color: "var(--danger)" }}>-{formatCurrency(s.charging_cost || 0)}</span>
-                    <span style={{ fontWeight: 600 }}>{formatCurrency(net)}</span>
-                    <span style={{ color: "var(--muted)" }}>{formatCurrency(hourly)}/hr</span>
-                  </div>
-                );
-              })}
-            </div>
-          )}
-        </Card>
-      )}
-
-      {/* EXPENSES TAB */}
-      {activeTab === "expenses" && (
-        <Card title="Business Expenses">
-          {sortedExpenses.length === 0 ? (
-            <p style={{ fontSize: "0.875rem", color: "var(--muted)" }}>
-              No expenses logged yet. Tell PriScylla in Telegram to log an expense.
-            </p>
-          ) : (
-            <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
-              <div style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr 1fr 2fr",
-                padding: "0 0 8px",
-                borderBottom: "1px solid var(--border)",
-                fontSize: "0.7rem",
-                color: "var(--muted)",
-                textTransform: "uppercase",
-                letterSpacing: "0.08em",
-              }}>
-                <span>Date</span>
-                <span>Category</span>
-                <span>Amount</span>
-                <span>Description</span>
-              </div>
-              {sortedExpenses.map((e, i) => (
-                <div
-                  key={i}
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "1fr 1fr 1fr 2fr",
-                    padding: "10px 0",
-                    borderBottom: i < sortedExpenses.length - 1 ? "1px solid var(--border)" : "none",
-                    fontSize: "0.85rem",
-                    alignItems: "center",
-                  }}
-                >
-                  <span>{e.date}</span>
-                  <span style={{ textTransform: "capitalize" }}>{e.category}</span>
-                  <span style={{ color: "var(--danger)", fontWeight: 600 }}>{formatCurrency(e.amount)}</span>
-                  <span style={{ color: "var(--muted)" }}>{e.description}</span>
+      {/* Recent Shifts */}
+      <div>
+        <h2 style={{ fontSize: "1rem", fontWeight: 700, margin: "0 0 16px", color: "var(--text)" }}>📋 Recent Shifts</h2>
+        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+          {shifts.slice().reverse().map((shift) => (
+            <div key={shift.id} style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 10, padding: 16 }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10 }}>
+                <div>
+                  <div style={{ fontWeight: 700, fontSize: "0.95rem", color: "var(--text)" }}>{shift.date} • {shift.start_time}-{shift.end_time}</div>
+                  <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginTop: 2 }}>{shift.duration_minutes}m • {shift.miles_driven}mi • Odometer {shift.start_odometer}→{shift.end_odometer}</div>
                 </div>
-              ))}
+                <div style={{ textAlign: "right" }}>
+                  <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "#00c87c" }}>${shift.net_profit.toFixed(2)}</div>
+                  <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginTop: 2 }}>${shift.hourly_rate.toFixed(2)}/hr</div>
+                </div>
+              </div>
+              <div style={{ display: "flex", gap: 16, fontSize: "0.8rem", color: "var(--muted)" }}>
+                <span>Gross: <strong style={{ color: "var(--text)" }}>${shift.gross_earnings.toFixed(2)}</strong></span>
+                {shift.proportional_charging_cost && (
+                  <span>Charging: <strong style={{ color: "#f15bb5" }}>-${shift.proportional_charging_cost.toFixed(2)}</strong></span>
+                )}
+              </div>
+              {shift.notes && <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 8, fontStyle: "italic" }}>📝 {shift.notes}</div>}
             </div>
-          )}
-        </Card>
-      )}
+          ))}
+        </div>
+      </div>
+
+      {/* Footer */}
+      <div style={{ marginTop: 28, padding: "16px", background: "rgba(0,187,249,0.05)", border: "1px solid rgba(0,187,249,0.2)", borderRadius: 10 }}>
+        <p style={{ margin: 0, fontSize: "0.8rem", color: "var(--muted)" }}>
+          ℹ️ See `/wlp/skills/uber-tracking/SKILL.md` for calculation details. Charging deducted at 3.5 mi/kWh efficiency ratio.
+        </p>
+      </div>
     </div>
   );
 }
