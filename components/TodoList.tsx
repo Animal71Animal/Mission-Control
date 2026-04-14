@@ -7,6 +7,7 @@ interface TodoItem {
   text: string;
   completed: boolean;
   category: string;
+  priority?: "high" | "medium" | "low";
 }
 
 interface TodoListProps {
@@ -26,6 +27,10 @@ export default function TodoList({ title, items, categories, storageKey }: TodoL
   const [editingId, setEditingId] = useState<string | null>(null);
   const [formText, setFormText] = useState("");
   const [formCategory, setFormCategory] = useState(categories.filter((c) => c !== "All")[0] || "General");
+  const [formPriority, setFormPriority] = useState<"high" | "medium" | "low">("medium");
+
+  const PRIORITY_COLORS = { high: "#e05c5c", medium: "#fee440", low: "#888" };
+  const PRIORITY_LABELS = { high: "🔴 High", medium: "🟡 Medium", low: "⚪ Low" };
 
   useEffect(() => {
     setMounted(true);
@@ -58,6 +63,7 @@ export default function TodoList({ title, items, categories, storageKey }: TodoL
     setEditingId(todo.id);
     setFormText(todo.text);
     setFormCategory(todo.category);
+    setFormPriority(todo.priority || "medium");
     setShowForm(true);
   };
 
@@ -66,17 +72,19 @@ export default function TodoList({ title, items, categories, storageKey }: TodoL
     setEditingId(null);
     setFormText("");
     setFormCategory(categories.filter((c) => c !== "All")[0] || "General");
+    setFormPriority("medium");
   };
 
   const handleSubmit = () => {
     if (!formText.trim()) return;
     if (editingId) {
-      setTodos((prev) => prev.map((t) => t.id === editingId ? { ...t, text: formText.trim(), category: formCategory } : t));
+      setTodos((prev) => prev.map((t) => t.id === editingId ? { ...t, text: formText.trim(), category: formCategory, priority: formPriority } : t));
     } else {
       const newTodo: TodoItem = {
         id: `todo-${Date.now()}`,
         text: formText.trim(),
         category: formCategory,
+        priority: formPriority,
         completed: false,
       };
       setTodos((prev) => [...prev, newTodo]);
@@ -88,7 +96,13 @@ export default function TodoList({ title, items, categories, storageKey }: TodoL
     if (confirm("Delete this task?")) setTodos((prev) => prev.filter((t) => t.id !== id));
   };
 
-  const filteredTodos = filter === "All" ? todos : todos.filter((t) => t.category === filter);
+  const priorityOrder = { high: 0, medium: 1, low: 2, undefined: 3 };
+  const filteredTodos = (filter === "All" ? todos : todos.filter((t) => t.category === filter))
+    .slice()
+    .sort((a, b) => {
+      if (a.completed !== b.completed) return a.completed ? 1 : -1;
+      return (priorityOrder[a.priority ?? "undefined"] ?? 3) - (priorityOrder[b.priority ?? "undefined"] ?? 3);
+    });
   const completedCount = todos.filter((t) => t.completed).length;
   const progress = todos.length > 0 ? (completedCount / todos.length) * 100 : 0;
   const allCategories = Array.from(new Set(["All", ...todos.map((t) => t.category)]));
@@ -128,10 +142,18 @@ export default function TodoList({ title, items, categories, storageKey }: TodoL
           <p style={{ margin: "0 0 10px", fontSize: "0.85rem", fontWeight: 600, color: "var(--text)" }}>{editingId ? "✏️ Edit Task" : "➕ New Task"}</p>
           <input type="text" placeholder="Task description..." value={formText} onChange={(e) => setFormText(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleSubmit()} style={{ ...inputStyle, marginBottom: 8 }} autoFocus />
-          <select value={formCategory} onChange={(e) => setFormCategory(e.target.value)}
-            style={{ background: "var(--bg)", border: "1px solid var(--border)", borderRadius: 6, padding: "8px 12px", color: "var(--text)", fontSize: "0.85rem", marginBottom: 10 }}>
-            {categories.filter((c) => c !== "All").map((c) => <option key={c} value={c}>{c}</option>)}
-          </select>
+          <div style={{ display: "flex", gap: 8, marginBottom: 10, flexWrap: "wrap" }}>
+            <select value={formCategory} onChange={(e) => setFormCategory(e.target.value)}
+              style={{ background: "var(--bg)", border: "1px solid var(--border)", borderRadius: 6, padding: "8px 12px", color: "var(--text)", fontSize: "0.85rem" }}>
+              {categories.filter((c) => c !== "All").map((c) => <option key={c} value={c}>{c}</option>)}
+            </select>
+            <select value={formPriority} onChange={(e) => setFormPriority(e.target.value as "high" | "medium" | "low")}
+              style={{ background: "var(--bg)", border: "1px solid var(--border)", borderRadius: 6, padding: "8px 12px", color: "var(--text)", fontSize: "0.85rem" }}>
+              <option value="high">🔴 High</option>
+              <option value="medium">🟡 Medium</option>
+              <option value="low">⚪ Low</option>
+            </select>
+          </div>
           <div style={{ display: "flex", gap: 8 }}>
             <button onClick={handleSubmit} disabled={!formText.trim()}
               style={{ background: "#00c87c", color: "#fff", border: "none", borderRadius: 6, padding: "7px 14px", fontSize: "0.8rem", fontWeight: 600, cursor: "pointer" }}>
@@ -167,7 +189,14 @@ export default function TodoList({ title, items, categories, storageKey }: TodoL
             {/* Text */}
             <div style={{ flex: 1, cursor: "pointer" }} onClick={() => toggleTodo(todo.id)}>
               <span style={{ fontSize: "0.9rem", color: todo.completed ? "#6b7280" : "#e5e7eb", textDecoration: todo.completed ? "line-through" : "none" }}>{todo.text}</span>
-              <span style={{ fontSize: "0.7rem", color: "#6b7280", display: "block", marginTop: 2 }}>{todo.category}</span>
+              <div style={{ display: "flex", gap: 6, marginTop: 4, flexWrap: "wrap" }}>
+                <span style={{ fontSize: "0.7rem", color: "#6b7280" }}>{todo.category}</span>
+                {todo.priority && (
+                  <span style={{ fontSize: "0.7rem", padding: "1px 7px", borderRadius: 4, background: PRIORITY_COLORS[todo.priority] + "22", color: PRIORITY_COLORS[todo.priority], fontWeight: 500 }}>
+                    {PRIORITY_LABELS[todo.priority]}
+                  </span>
+                )}
+              </div>
             </div>
             {/* Edit/Delete */}
             <div style={{ display: "flex", gap: 5, flexShrink: 0 }}>
