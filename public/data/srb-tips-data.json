@@ -17,7 +17,7 @@
     },
     {
       "month": "April",
-      "amount": 622,
+      "amount": 642,
       "nights": 4
     }
   ],
@@ -339,7 +339,7 @@
       "jan": 25,
       "feb": 5,
       "mar": 6,
-      "apr": 20
+      "apr": 40
     },
     {
       "name": "Alaska",
@@ -1363,7 +1363,7 @@
       "total": 45
     }
   ],
-  "lastUpdated": "2026-04-14T05:35:00.000Z",
+  "lastUpdated": "2026-04-14T06:00:00.000Z",
   "nightlyData": {
     "January": [
       {
@@ -3540,11 +3540,15 @@
       },
       {
         "date": "Mon Apr 13",
-        "total": 13,
+        "total": 33,
         "dancers": [
           {
             "dancer": "Dior",
             "amount": 13
+          },
+          {
+            "dancer": "Indie",
+            "amount": 20
           }
         ]
       }
