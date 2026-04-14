@@ -1,6 +1,45 @@
 {
-  "uber_shifts": [],
-  "expenses": [],
-  "monthly_summary": {},
-  "last_updated": "2026-04-13T03:44:00.000Z"
+  "uber_shifts": [
+    {
+      "id": "uber-20260414-1",
+      "date": "2026-04-14",
+      "start_time": "13:21",
+      "end_time": "15:18",
+      "duration_minutes": 117,
+      "start_odometer": 107735,
+      "end_odometer": 107773,
+      "miles_driven": 38,
+      "gross_earnings": 44.90,
+      "charging_session_id": "tesla-20260414-51",
+      "charging_cost_total": 14.26,
+      "charging_kwh_total": 37.5422,
+      "charging_kwh_used_in_shift": 10.86,
+      "proportional_charging_cost": 4.12,
+      "net_profit": 40.78,
+      "hourly_rate": 26.00,
+      "notes": "First shift tracked. Clear day, decent payout. Charged before shift.",
+      "created_at": "2026-04-14T22:54:00.000Z"
+    }
+  ],
+  "expenses": [
+    {
+      "date": "2026-04-14",
+      "type": "charging",
+      "amount": 4.12,
+      "shift_id": "uber-20260414-1",
+      "notes": "Proportional deduction from Apr 14 pre-shift charge"
+    }
+  ],
+  "monthly_summary": {
+    "2026-04": {
+      "shifts": 1,
+      "total_gross": 44.90,
+      "total_charges": 4.12,
+      "total_net": 40.78,
+      "total_miles": 38,
+      "avg_hourly_rate": 26.00,
+      "avg_miles_per_shift": 38
+    }
+  },
+  "last_updated": "2026-04-14T22:54:00.000Z"
 }
