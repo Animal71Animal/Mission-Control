@@ -72,9 +72,10 @@
     "title": "Print Spotify instructions for dancers",
     "notes": "Create and print instructions for dancers on how to use Spotify at SRB",
     "category": "Work",
-    "priority": "medium",
+    "priority": "high",
     "completed": false,
-    "created_at": "2026-04-05T21:12:13.238Z"
+    "created_at": "2026-04-05T21:12:13.238Z",
+    "due_date": "2026-04-14"
   },
   {
     "id": "pt-1776203956693-h5yd0",
