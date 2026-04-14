@@ -3549,6 +3549,10 @@
           {
             "dancer": "Indie",
             "amount": 20
+          },
+          {
+            "dancer": "Macy",
+            "amount": 0
           }
         ]
       }
