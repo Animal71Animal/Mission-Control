@@ -21,9 +21,10 @@ const todoItems = [
   { id: "17", text: "Make promo video for club", completed: false, category: "Media" },
   { id: "18", text: "Write email to Amanda (thank you + request hazer, Vesuvio fix, lighting programmer)", completed: false, category: "Communication" },
   { id: "19", text: "Print more Spotify dancer instructions", completed: false, category: "Communication" },
+  { id: "20", text: "Get marketing materials ready for Bryan presentation — due Sun Apr 19", completed: false, category: "Marketing" },
 ];
 
-const categories = ["All", "Setup", "Maintenance", "Lighting", "Video", "Audio", "Media", "IT", "Equipment", "Music", "Communication"];
+const categories = ["All", "Setup", "Maintenance", "Lighting", "Video", "Audio", "Media", "IT", "Equipment", "Music", "Communication", "Marketing"];
 
 export default function SpearmintRhinoPage() {
   return (
