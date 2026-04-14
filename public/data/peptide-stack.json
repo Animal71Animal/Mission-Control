@@ -166,18 +166,18 @@
       "time": "8:00 AM"
     },
     "vial": {
-      "strength_mg": 100,
-      "price": 40,
+      "strength_mg": 50,
+      "price": 35,
       "reconstitution_ml": 2,
       "concentration": "25mg/mL",
       "dose_mg": 1,
       "syringe_units": 4,
-      "weekly_cost": 4.65,
-      "vial_lasts_weeks": 8.6,
-      "cycle_note": "30 days ON / 30 days OFF. Split vial — reconstitute 50mg with 2mL at a time."
+      "weekly_cost": 8.14,
+      "vial_lasts_weeks": 4.3,
+      "cycle_note": "30 days ON / 30 days OFF. 1 vial = 1 full cycle. No splitting needed."
     },
     "startDate": null,
-    "notes": "Week 6 add-on. CYCLICAL — 30 days on, 30 days off. Start 1mg/day (4 units) days 1-15, ramp to 2mg/day (8 units) days 16-30. ⚠️ Reconstitute only HALF the vial (50mg + 2mL bac water) at a time — full vial exceeds 30-day stability. Collagen synthesis, skin repair, anti-inflammatory.",
+    "notes": "Week 6 add-on. CYCLICAL — 30 days on, 30 days off. Start 1mg/day (4 units) days 1-15, ramp to 2mg/day (8 units) days 16-30. 1 vial = 1 full cycle, no splitting needed. Collagen synthesis, skin repair, anti-inflammatory.",
     "logs": []
   },
   {

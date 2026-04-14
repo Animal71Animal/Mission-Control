@@ -558,13 +558,13 @@ export default function PeptidesPage() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 12, marginBottom: 20 }}>
           <Card>
             <div style={{ textAlign: "center" }}>
-              <div style={{ fontSize: "1.6rem", fontWeight: 700, color: "#00f5d4" }}>$59.45</div>
+              <div style={{ fontSize: "1.6rem", fontWeight: 700, color: "#00f5d4" }}>$62.94</div>
               <div style={{ fontSize: "0.75rem", color: "var(--muted)", textTransform: "uppercase", letterSpacing: "0.05em" }}>Weekly Cost</div>
             </div>
           </Card>
           <Card>
             <div style={{ textAlign: "center" }}>
-              <div style={{ fontSize: "1.6rem", fontWeight: 700, color: "#9b5de5" }}>~$258</div>
+              <div style={{ fontSize: "1.6rem", fontWeight: 700, color: "#9b5de5" }}>~$273</div>
               <div style={{ fontSize: "0.75rem", color: "var(--muted)", textTransform: "uppercase", letterSpacing: "0.05em" }}>Monthly Cost</div>
             </div>
           </Card>
@@ -594,7 +594,7 @@ export default function PeptidesPage() {
                 { name: "HCG", vial: "5000 IU", price: "$50", bac: "2mL", conc: "2500 IU/mL", dose: "250 IU", units: "10 units", freq: "2x/week Tu/Fr", cost: "$5.00", lasts: "~10 wks", color: "#9b5de5" },
                 { name: "NAD+", vial: "500mg", price: "$42", bac: "5mL", conc: "100mg/mL", dose: "50mg", units: "50 units", freq: "1x/week Wed", cost: "$4.20", lasts: "~10 wks", color: "#00bbf9" },
                 { name: "MOTS-c", vial: "10mg", price: "$30", bac: "2mL", conc: "5mg/mL", dose: "2.5mg", units: "50 units", freq: "1x/week Thu", cost: "$7.50", lasts: "~4 wks", color: "#00bbf9" },
-                { name: "GHK-Cu ♻️", vial: "100mg", price: "$40", bac: "2mL (½ vial)", conc: "25mg/mL", dose: "1mg→2mg", units: "4→8 units", freq: "Daily (30 on/30 off)", cost: "$4.65", lasts: "~8.6 wks", color: "#fee440" },
+                { name: "GHK-Cu ♻️", vial: "50mg", price: "$35", bac: "2mL", conc: "25mg/mL", dose: "1mg→2mg", units: "4→8 units", freq: "Daily (30 on/30 off)", cost: "$8.14", lasts: "1 cycle", color: "#fee440" },
               ].map((row, i) => (
                 <tr key={i} style={{ borderBottom: "1px solid var(--border)" }}>
                   <td style={{ padding: "10px 8px", color: row.color, fontWeight: 600 }}>{row.name}</td>
@@ -611,7 +611,7 @@ export default function PeptidesPage() {
               ))}
               <tr style={{ borderTop: "2px solid var(--border)", background: "rgba(0,245,212,0.05)" }}>
                 <td colSpan={8} style={{ padding: "10px 8px", color: "var(--text)", fontWeight: 700 }}>TOTAL (full stack incl. GHK-Cu on-cycle)</td>
-                <td style={{ padding: "10px 8px", color: "#00f5d4", fontWeight: 700 }}>$59.45</td>
+                <td style={{ padding: "10px 8px", color: "#00f5d4", fontWeight: 700 }}>$62.94</td>
                 <td></td>
               </tr>
             </tbody>
