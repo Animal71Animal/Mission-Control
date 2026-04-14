@@ -424,5 +424,87 @@
     },
     "sideEffects": [],
     "notes": "Week 5 — Full stack active. Maintenance phase. Assess: continue, adjust doses, or cycle off any compounds."
+  },
+  {
+    "id": "checkin-2026-05-26",
+    "weekStarting": "2026-05-26",
+    "weekNumber": 6,
+    "checkIns": {
+      "2026-05-26": {
+        "day": "Monday",
+        "doses": [
+          { "peptideId": "peptide-retatrutide", "peptideName": "Retatrutide", "time": "8:00 AM", "taken": false, "dose": "60 units (3mg)" },
+          { "peptideId": "peptide-ghk-cu", "peptideName": "GHK-Cu", "time": "8:00 AM", "taken": false, "dose": "4 units (1mg)" },
+          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
+          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units (1mg)" }
+        ]
+      },
+      "2026-05-27": {
+        "day": "Tuesday",
+        "doses": [
+          { "peptideId": "peptide-hcg", "peptideName": "HCG", "time": "8:00 AM", "taken": false, "dose": "10 units (250 IU)" },
+          { "peptideId": "peptide-ghk-cu", "peptideName": "GHK-Cu", "time": "8:00 AM", "taken": false, "dose": "4 units (1mg)" },
+          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
+          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units (1mg)" }
+        ]
+      },
+      "2026-05-28": {
+        "day": "Wednesday",
+        "doses": [
+          { "peptideId": "peptide-nad", "peptideName": "NAD+", "time": "10:00 AM", "taken": false, "dose": "50 units (50mg)" },
+          { "peptideId": "peptide-ghk-cu", "peptideName": "GHK-Cu", "time": "8:00 AM", "taken": false, "dose": "4 units (1mg)" },
+          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
+          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units (1mg)" }
+        ]
+      },
+      "2026-05-29": {
+        "day": "Thursday",
+        "doses": [
+          { "peptideId": "peptide-motsc", "peptideName": "MOTS-c", "time": "8:00 AM", "taken": false, "dose": "50 units (2.5mg)" },
+          { "peptideId": "peptide-ghk-cu", "peptideName": "GHK-Cu", "time": "8:00 AM", "taken": false, "dose": "4 units (1mg)" },
+          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
+          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units (1mg)" }
+        ]
+      },
+      "2026-05-30": {
+        "day": "Friday",
+        "doses": [
+          { "peptideId": "peptide-hcg", "peptideName": "HCG", "time": "8:00 AM", "taken": false, "dose": "10 units (250 IU)" },
+          { "peptideId": "peptide-ghk-cu", "peptideName": "GHK-Cu", "time": "8:00 AM", "taken": false, "dose": "4 units (1mg)" },
+          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
+          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units (1mg)" }
+        ]
+      },
+      "2026-05-31": {
+        "day": "Saturday",
+        "doses": [
+          { "peptideId": "peptide-ghk-cu", "peptideName": "GHK-Cu", "time": "8:00 AM", "taken": false, "dose": "4 units (1mg)" },
+          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" }
+        ]
+      },
+      "2026-06-01": {
+        "day": "Sunday",
+        "doses": [
+          { "peptideId": "peptide-ghk-cu", "peptideName": "GHK-Cu", "time": "8:00 AM", "taken": false, "dose": "4 units (1mg)" }
+        ],
+        "notes": "GHK-Cu daily even on rest days. No Tesamorelin Sunday."
+      }
+    },
+    "weeklyMetrics": {
+      "weight": null,
+      "waist": null,
+      "fastingGlucose": null,
+      "bloodPressure": null,
+      "restingHR": null,
+      "appetite": null,
+      "sleep": null,
+      "giSymptoms": null,
+      "mood": null,
+      "libido": null,
+      "waterRetention": null,
+      "trainingQuality": null
+    },
+    "sideEffects": [],
+    "notes": "Week 6 — GHK-Cu added (daily, 4 units / 1mg). 30-day ON cycle begins. Ramp to 8 units (2mg) at Day 15. Watch skin, recovery, inflammation."
   }
 ]
