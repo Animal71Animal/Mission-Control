@@ -1,4 +1,4 @@
-# [PRODUCT NAME] — Investor Pitch
+# BoothMind — Investor Pitch
 
 **The AI-Powered Automated DJ Platform for Gentlemen's Clubs**
 
@@ -48,7 +48,7 @@ CoverJock is a 15-year-old Windows app that requires:
 
 ## The Solution
 
-**[PRODUCT NAME]** is an AI-native automated DJ intelligence platform built on top of VirtualDJ — the software already running in most club booths.
+**BoothMind** is an AI-native automated DJ intelligence platform built on top of VirtualDJ — the software already running in most club booths.
 
 **One head DJ programs the system. The system runs the show.**
 
@@ -155,6 +155,10 @@ Billed monthly or annually.
 
 CoverJock's moat is a 15-year head start and a customer base with high switching inertia. Our answer: make switching so easy and the value so obvious that inertia breaks.
 
+### Product Name Rationale
+
+**BoothMind** combines the physical center of club operations (the booth) with the intelligence that runs it (the mind). The name signals exactly what we deliver: AI-powered decision-making for the DJ booth. It's professional, memorable, and works naturally in conversation ("We're running BoothMind tonight").
+
 ---
 
 ## Traction
@@ -200,7 +204,7 @@ Industry is small and word travels fast.
 
 ## The Team
 
-### [ANIMAL] — CEO / Product
+### Eric Mills — CEO / Product
 
 25+ years in music production, DJ performance, and audio engineering.
 
@@ -255,7 +259,7 @@ We're not building a moonshot. We're building the obvious upgrade to a specific,
 
 ## Contact
 
-**For more information, contact:** [ANIMAL]
+**For more information, contact:** Eric Mills (ericmills71@gmail.com)
 
 **Supporting documents:**
 

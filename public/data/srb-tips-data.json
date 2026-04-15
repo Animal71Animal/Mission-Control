@@ -17,7 +17,7 @@
     },
     {
       "month": "April",
-      "amount": 697,
+      "amount": 747,
       "nights": 5
     }
   ],
@@ -181,7 +181,7 @@
       "jan": 89,
       "feb": 49,
       "mar": 4,
-      "apr": 25
+      "apr": 28
     },
     {
       "name": "Skylar",
@@ -194,7 +194,7 @@
       "jan": 26,
       "feb": 59,
       "mar": 47,
-      "apr": 65
+      "apr": 85
     },
     {
       "name": "Noelle",
@@ -226,7 +226,8 @@
       "name": "Milan",
       "jan": 70,
       "feb": 20,
-      "mar": 5
+      "mar": 5,
+      "apr": 25
     },
     {
       "name": "Nova",
@@ -366,7 +367,8 @@
       "name": "Star",
       "jan": 6,
       "feb": 21,
-      "mar": 6
+      "mar": 6,
+      "apr": 40
     },
     {
       "name": "Ruby",
@@ -500,7 +502,7 @@
       "jan": 0,
       "feb": 0,
       "mar": 0,
-      "apr": 10
+      "apr": 20
     }
   ],
   "dailyTips": [
@@ -1365,7 +1367,7 @@
       "total": 45
     }
   ],
-  "lastUpdated": "2026-04-14T06:00:00.000Z",
+  "lastUpdated": "2026-04-15T09:37:00.000Z",
   "nightlyData": {
     "January": [
       {
@@ -3559,20 +3561,32 @@
         ]
       },
       {
-        "date": "Mon Apr 14",
-        "total": 55,
+        "date": "Tue Apr 14",
+        "total": 105,
         "dancers": [
           {
-            "dancer": "Zara",
-            "amount": 40
-          },
-          {
-            "dancer": "Baby",
-            "amount": 5
+            "dancer": "Customers",
+            "amount": 10
           },
           {
             "dancer": "Mia",
-            "amount": 10
+            "amount": 3
+          },
+          {
+            "dancer": "Star",
+            "amount": 40
+          },
+          {
+            "dancer": "Milan",
+            "amount": 25
+          },
+          {
+            "dancer": "Kylie",
+            "amount": 7
+          },
+          {
+            "dancer": "Georgia",
+            "amount": 20
           }
         ]
       }
