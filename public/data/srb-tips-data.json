@@ -17,8 +17,8 @@
     },
     {
       "month": "April",
-      "amount": 747,
-      "nights": 5
+      "amount": 807,
+      "nights": 6
     }
   ],
   "topTippers": [
@@ -266,14 +266,15 @@
       "name": "Giovanna",
       "jan": 0,
       "feb": 0,
-      "mar": 75
+      "mar": 75,
+      "apr": 20
     },
     {
       "name": "Zara",
       "jan": 24,
       "feb": 30,
       "mar": 20,
-      "apr": 40
+      "apr": 45
     },
     {
       "name": "Kody",
@@ -426,7 +427,7 @@
       "jan": 0,
       "feb": 0,
       "mar": 20,
-      "apr": 30
+      "apr": 35
     },
     {
       "name": "Kylie",
@@ -502,7 +503,7 @@
       "jan": 0,
       "feb": 0,
       "mar": 0,
-      "apr": 20
+      "apr": 40
     }
   ],
   "dailyTips": [
@@ -3558,6 +3559,17 @@
             "dancer": "Macy",
             "amount": 0
           }
+        ]
+      },
+      {
+        "date": "Wed Apr 16",
+        "total": 60,
+        "dancers": [
+          { "dancer": "Giovanna", "amount": 20 },
+          { "dancer": "Customers", "amount": 20 },
+          { "dancer": "Amy", "amount": 10 },
+          { "dancer": "Zara", "amount": 5 },
+          { "dancer": "Maria", "amount": 5 }
         ]
       },
       {
