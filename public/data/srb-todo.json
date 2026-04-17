@@ -1,25 +1,145 @@
 {
   "tasks": [
-    { "id": "1", "text": "Rearrange DJ booth", "completed": false, "category": "Setup", "priority": "medium" },
-    { "id": "2", "text": "Clean all amps and equipment (need compressed air)", "completed": false, "category": "Maintenance", "priority": "medium" },
-    { "id": "3", "text": "Add scenes to Light Jockey", "completed": false, "category": "Lighting", "priority": "medium" },
-    { "id": "4", "text": "Get smoke machine in the DMX chain", "completed": false, "category": "Lighting", "priority": "medium" },
-    { "id": "5", "text": "Adjust video so that the big screen will show Main Computer", "completed": false, "category": "Video", "priority": "medium" },
-    { "id": "6", "text": "Fix the 'no mic in dressing room' issue", "completed": false, "category": "Audio", "priority": "high" },
-    { "id": "7", "text": "Make Final Version of Promotional Video", "completed": false, "category": "Media", "priority": "high" },
-    { "id": "8", "text": "Get sound back in Private Dance rooms", "completed": false, "category": "Audio", "priority": "high" },
-    { "id": "9", "text": "Audio processor and adjust crossover for speakers", "completed": false, "category": "Audio", "priority": "high" },
-    { "id": "10", "text": "Change over to new hard drive", "completed": false, "category": "IT", "priority": "medium" },
-    { "id": "11", "text": "Get computer screen fixed", "completed": false, "category": "IT", "priority": "medium" },
-    { "id": "12", "text": "See about getting Vesuvio fixed", "completed": false, "category": "Equipment", "priority": "medium" },
-    { "id": "13", "text": "Look for flash drive of corporate video", "completed": false, "category": "Media", "priority": "low" },
-    { "id": "14", "text": "Haze machine", "completed": false, "category": "Lighting", "priority": "medium" },
-    { "id": "15", "text": "Prepare Ableton sample bank", "completed": false, "category": "Music", "priority": "medium" },
-    { "id": "16", "text": "Make hourly shot special and bottle audio", "completed": false, "category": "Audio", "priority": "medium" },
-    { "id": "17", "text": "Make promo video for club", "completed": false, "category": "Media", "priority": "medium" },
-    { "id": "18", "text": "Write email to Amanda (thank you + request hazer, Vesuvio fix, lighting programmer)", "completed": false, "category": "Communication", "priority": "high" },
-    { "id": "19", "text": "Print more Spotify dancer instructions", "completed": false, "category": "Communication", "priority": "low" },
-    { "id": "20", "text": "Get marketing materials ready for Bryan presentation", "completed": false, "category": "Marketing", "priority": "high" }
+    {
+      "id": "1",
+      "text": "Rearrange DJ booth",
+      "completed": true,
+      "category": "Setup",
+      "priority": "medium"
+    },
+    {
+      "id": "2",
+      "text": "Clean all amps and equipment (need compressed air)",
+      "completed": false,
+      "category": "Maintenance",
+      "priority": "medium"
+    },
+    {
+      "id": "3",
+      "text": "Add scenes to Light Jockey",
+      "completed": false,
+      "category": "Lighting",
+      "priority": "medium"
+    },
+    {
+      "id": "4",
+      "text": "Get smoke machine in the DMX chain",
+      "completed": false,
+      "category": "Lighting",
+      "priority": "medium"
+    },
+    {
+      "id": "5",
+      "text": "Adjust video so that the big screen will show Main Computer",
+      "completed": false,
+      "category": "Video",
+      "priority": "medium"
+    },
+    {
+      "id": "6",
+      "text": "Fix the 'no mic in dressing room' issue",
+      "completed": false,
+      "category": "Audio",
+      "priority": "high"
+    },
+    {
+      "id": "7",
+      "text": "Make Final Version of Promotional Video",
+      "completed": false,
+      "category": "Media",
+      "priority": "high"
+    },
+    {
+      "id": "8",
+      "text": "Get sound back in Private Dance rooms",
+      "completed": false,
+      "category": "Audio",
+      "priority": "high"
+    },
+    {
+      "id": "9",
+      "text": "Audio processor and adjust crossover for speakers",
+      "completed": false,
+      "category": "Audio",
+      "priority": "high"
+    },
+    {
+      "id": "10",
+      "text": "Change over to new hard drive",
+      "completed": false,
+      "category": "IT",
+      "priority": "medium"
+    },
+    {
+      "id": "11",
+      "text": "Get computer screen fixed",
+      "completed": false,
+      "category": "IT",
+      "priority": "medium"
+    },
+    {
+      "id": "12",
+      "text": "See about getting Vesuvio fixed",
+      "completed": false,
+      "category": "Equipment",
+      "priority": "medium"
+    },
+    {
+      "id": "13",
+      "text": "Look for flash drive of corporate video",
+      "completed": false,
+      "category": "Media",
+      "priority": "low"
+    },
+    {
+      "id": "14",
+      "text": "Haze machine",
+      "completed": false,
+      "category": "Lighting",
+      "priority": "medium"
+    },
+    {
+      "id": "15",
+      "text": "Prepare Ableton sample bank",
+      "completed": false,
+      "category": "Music",
+      "priority": "medium"
+    },
+    {
+      "id": "16",
+      "text": "Make hourly shot special and bottle audio",
+      "completed": false,
+      "category": "Audio",
+      "priority": "medium"
+    },
+    {
+      "id": "17",
+      "text": "Make promo video for club",
+      "completed": false,
+      "category": "Media",
+      "priority": "medium"
+    },
+    {
+      "id": "18",
+      "text": "Write email to Amanda (thank you + request hazer, Vesuvio fix, lighting programmer)",
+      "completed": false,
+      "category": "Communication",
+      "priority": "high"
+    },
+    {
+      "id": "19",
+      "text": "Print more Spotify dancer instructions",
+      "completed": false,
+      "category": "Communication",
+      "priority": "low"
+    },
+    {
+      "id": "20",
+      "text": "Get marketing materials ready for Bryan presentation",
+      "completed": false,
+      "category": "Marketing",
+      "priority": "high"
+    }
   ],
-  "last_updated": "2026-04-17T22:00:00.000Z"
+  "last_updated": "2026-04-17T22:05:45.452Z"
 }
