@@ -28,6 +28,18 @@
       "amount": 4.12,
       "shift_id": "uber-20260414-1",
       "notes": "Proportional deduction from Apr 14 pre-shift charge"
+    },
+    {
+      "date": "2026-04-16",
+      "type": "charging",
+      "session_id": "tesla-20260416-1",
+      "amount": 8.27,
+      "kwh": 21.7746,
+      "rate_per_kwh": 0.38,
+      "duration_minutes": 13,
+      "location": "1426 S Entertainment Ave, Boise ID",
+      "shift_id": null,
+      "notes": "Supercharger — unattributed, ready to deduct against next shift"
     }
   ],
   "monthly_summary": {
@@ -41,5 +53,5 @@
       "avg_miles_per_shift": 38
     }
   },
-  "last_updated": "2026-04-14T22:54:00.000Z"
+  "last_updated": "2026-04-17T20:11:00.000Z"
 }
