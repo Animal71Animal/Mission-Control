@@ -1,52 +1,38 @@
 /**
- * Mission Control v2 - Uber Profit API
- * Static JSON-backed (Vercel-compatible)
- * Reads from public/data/uber-profit.json
+ * Mission Control - Uber Profit API
+ * GitHub API-backed: always live, no deploy needed
  */
-
 import { NextRequest, NextResponse } from 'next/server';
-import { readFile } from 'fs/promises';
-import { resolve } from 'path';
 
-async function loadProfitData() {
-  try {
-    const filePath = resolve(process.cwd(), 'public/data/uber-profit.json');
-    const raw = await readFile(filePath, 'utf-8');
-    return JSON.parse(raw);
-  } catch {
-    return { 
-      uber_shifts: [], 
-      expenses: [], 
-      monthly_summary: {},
-      last_updated: new Date().toISOString()
-    };
-  }
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+const GITHUB_REPO = 'Animal71Animal/Mission-Control';
+const GITHUB_BRANCH = 'main';
+const FILE_PATH = 'public/data/uber-profit.json';
+const API_URL = `https://api.github.com/repos/${GITHUB_REPO}/contents/${FILE_PATH}`;
+
+function ghHeaders() {
+  const h: Record<string, string> = {
+    Accept: 'application/vnd.github+json',
+    'X-GitHub-Api-Version': '2022-11-28',
+    'Content-Type': 'application/json',
+  };
+  if (GITHUB_TOKEN) h['Authorization'] = `Bearer ${GITHUB_TOKEN}`;
+  return h;
 }
 
-// GET /api/uber-profit — returns { uber_shifts, expenses, monthly_summary }
+async function fetchFile() {
+  const res = await fetch(`${API_URL}?ref=${GITHUB_BRANCH}`, { headers: ghHeaders(), cache: 'no-store' });
+  if (!res.ok) throw new Error(`GitHub GET failed: ${res.status}`);
+  const data = await res.json();
+  const decoded = JSON.parse(Buffer.from(data.content, 'base64').toString('utf-8'));
+  return { data: decoded, sha: data.sha };
+}
+
 export async function GET() {
   try {
-    const data = await loadProfitData();
-    return NextResponse.json({
-      ...data,
-      last_updated: data.last_updated || new Date().toISOString(),
-    });
+    const { data } = await fetchFile();
+    return NextResponse.json(data);
   } catch (err) {
-    console.error('[GET /api/uber-profit]', err);
-    return NextResponse.json(
-      { uber_shifts: [], expenses: [], monthly_summary: {}, error: String(err) },
-      { status: 500 }
-    );
-  }
-}
-
-// POST /api/uber-profit — stub for adding entries
-export async function POST(request: NextRequest) {
-  try {
-    const body = await request.json();
-    const id = body.id || `uber-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
-    return NextResponse.json({ success: true, entry: { id, ...body } });
-  } catch (err) {
-    return NextResponse.json({ error: 'Failed to create entry', detail: String(err) }, { status: 500 });
+    return NextResponse.json({ uber_shifts: [], expenses: [], monthly_summary: {} }, { status: 500 });
   }
 }

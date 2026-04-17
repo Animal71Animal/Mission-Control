@@ -101,8 +101,8 @@ export default function PeptidesPage() {
 
   useEffect(() => {
     Promise.all([
-      fetch("/data/peptide-stack.json").then((res) => res.json()),
-      fetch("/data/peptide-checkins.json").then((res) => res.json()),
+      fetch("/api/peptides").then((res) => res.json()).then((d) => d.stack),
+      fetch("/api/peptides").then((res) => res.json()).then((d) => d.checkins),
     ])
       .then(([peptideData, checkInData]) => {
         setPeptides(peptideData);

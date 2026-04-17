@@ -47,7 +47,7 @@ export default function UberProfitPage() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    fetch("/data/uber-profit.json")
+    fetch("/api/uber-profit")
       .then((r) => r.json())
       .then((d) => { setData(d); setLoaded(true); })
       .catch(() => setLoaded(true));
