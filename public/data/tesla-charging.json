@@ -613,6 +613,19 @@
       "created_at": "2026-04-14T19:54:00.000Z"
     },
     {
+      "id": "tesla-20260416-52",
+      "date": "2026-04-16",
+      "time": "14:10",
+      "location": "Boise, ID - 1426 South Entertainment Ave",
+      "kwh": 21.7746,
+      "cost": 8.27,
+      "duration_minutes": 13,
+      "rate_per_kwh": 0.38,
+      "notes": "Supercharging",
+      "uber_shift": false,
+      "created_at": "2026-04-17T20:11:00.000Z"
+    },
+    {
       "id": "tesla-20260414-51",
       "date": "2026-04-14",
       "time": "13:03",
@@ -627,12 +640,12 @@
     }
   ],
   "summary": {
-    "total_sessions": 52,
-    "total_cost_usd": 831.45,
-    "total_kwh": 2950.4152,
-    "total_minutes": 1909,
-    "avg_cost_per_session": 15.99,
-    "avg_duration_minutes": 36.71
+    "total_sessions": 53,
+    "total_cost_usd": 839.72,
+    "total_kwh": 2972.1898,
+    "total_minutes": 1922,
+    "avg_cost_per_session": 15.84,
+    "avg_duration_minutes": 36.26
   },
   "monthly_summary": {
     "2026-03": {
@@ -654,11 +667,11 @@
       "minutes": 674
     },
     "2026-04": {
-      "cost": 102.95,
-      "kwh": 329.2798,
-      "sessions": 7,
-      "minutes": 232
+      "cost": 111.22,
+      "kwh": 351.0544,
+      "sessions": 8,
+      "minutes": 245
     }
   },
-  "last_updated": "2026-04-14T19:54:00.000Z"
+  "last_updated": "2026-04-17T20:11:00.000Z"
 }
