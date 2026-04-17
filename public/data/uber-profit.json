@@ -1,6 +1,30 @@
 {
   "uber_shifts": [
     {
+      "id": "uber-20260415-2",
+      "date": "2026-04-15",
+      "start_time": "12:45",
+      "end_time": "13:57",
+      "duration_minutes": 72,
+      "miles_driven": 16.96,
+      "gross_earnings": 41.28,
+      "trips": 3,
+      "trip_detail": [
+        { "time": "12:45", "type": "Wait and Save", "amount": 13.19, "miles": 8.63, "perk": 0.63 },
+        { "time": "13:05", "type": "UberX", "amount": 7.40, "miles": 4.03, "perk": 0.35 },
+        { "time": "13:45", "type": "Comfort", "amount": 20.69, "miles": 4.30, "tip": 9.00 }
+      ],
+      "charging_session_id": "tesla-20260414-51",
+      "charging_cost_total": 14.26,
+      "charging_kwh_total": 37.5422,
+      "charging_kwh_used_in_shift": 4.85,
+      "proportional_charging_cost": 1.84,
+      "net_profit": 39.44,
+      "hourly_rate": 32.87,
+      "notes": "3 trips — Wait and Save, UberX, Comfort ($9 tip). Boise area.",
+      "created_at": "2026-04-17T20:46:00.000Z"
+    },
+    {
       "id": "uber-20260414-1",
       "date": "2026-04-14",
       "start_time": "13:21",
@@ -44,13 +68,13 @@
   ],
   "monthly_summary": {
     "2026-04": {
-      "shifts": 1,
-      "total_gross": 44.90,
-      "total_charges": 4.12,
-      "total_net": 40.78,
-      "total_miles": 38,
-      "avg_hourly_rate": 26.00,
-      "avg_miles_per_shift": 38
+      "shifts": 2,
+      "total_gross": 86.18,
+      "total_charges": 5.96,
+      "total_net": 80.22,
+      "total_miles": 54.96,
+      "avg_hourly_rate": 29.44,
+      "avg_miles_per_shift": 27.48
     }
   },
   "last_updated": "2026-04-17T20:11:00.000Z"
