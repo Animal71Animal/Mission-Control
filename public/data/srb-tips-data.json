@@ -3562,17 +3562,15 @@
         ]
       },
       {
-        "date": "Thu Apr 17",
-        "total": 80,
+        "date": "Tue Apr 14",
+        "total": 105,
         "dancers": [
-          { "dancer": "Kody", "amount": 5 },
-          { "dancer": "Kiki", "amount": 10 },
-          { "dancer": "Mia", "amount": 5 },
-          { "dancer": "Georgia", "amount": 20 },
-          { "dancer": "Willow", "amount": 5 },
-          { "dancer": "Tiana", "amount": 5 },
-          { "dancer": "Natasha", "amount": 10 },
-          { "dancer": "Macy", "amount": 20 }
+          { "dancer": "Customers", "amount": 10 },
+          { "dancer": "Mia", "amount": 3 },
+          { "dancer": "Star", "amount": 40 },
+          { "dancer": "Milan", "amount": 25 },
+          { "dancer": "Kylie", "amount": 7 },
+          { "dancer": "Georgia", "amount": 20 }
         ]
       },
       {
@@ -3587,33 +3585,17 @@
         ]
       },
       {
-        "date": "Tue Apr 14",
-        "total": 105,
+        "date": "Thu Apr 17",
+        "total": 80,
         "dancers": [
-          {
-            "dancer": "Customers",
-            "amount": 10
-          },
-          {
-            "dancer": "Mia",
-            "amount": 3
-          },
-          {
-            "dancer": "Star",
-            "amount": 40
-          },
-          {
-            "dancer": "Milan",
-            "amount": 25
-          },
-          {
-            "dancer": "Kylie",
-            "amount": 7
-          },
-          {
-            "dancer": "Georgia",
-            "amount": 20
-          }
+          { "dancer": "Kody", "amount": 5 },
+          { "dancer": "Kiki", "amount": 10 },
+          { "dancer": "Mia", "amount": 5 },
+          { "dancer": "Georgia", "amount": 20 },
+          { "dancer": "Willow", "amount": 5 },
+          { "dancer": "Tiana", "amount": 5 },
+          { "dancer": "Natasha", "amount": 10 },
+          { "dancer": "Macy", "amount": 20 }
         ]
       }
     ]
