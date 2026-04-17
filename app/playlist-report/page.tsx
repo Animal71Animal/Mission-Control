@@ -97,41 +97,20 @@ function BulletList({ text }: { text: string }) {
 
 export default function PlaylistReportPage() {
   const [entries, setEntries] = useState<VideoEntry[]>([]);
-  const [liveEpisodes, setLiveEpisodes] = useState<LiveEpisode[]>([]);
-  const [pdEpisodes, setPdEpisodes] = useState<LiveEpisode[]>([]);
   const [search, setSearch] = useState("");
   const [expanded, setExpanded] = useState<string | null>(null);
-  const [liveExpanded, setLiveExpanded] = useState<string | null>(null);
-  const [pdExpanded, setPdExpanded] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [videosOpen, setVideosOpen] = useState(false);
-  const [liveOpen, setLiveOpen] = useState(false);
-  const [pdOpen, setPdOpen] = useState(false);
+  const [videosOpen, setVideosOpen] = useState(true);
 
   useEffect(() => {
-    const fetchPlaylist = fetch("/data/openclaw-playlist-report-full.md")
+    fetch("/data/openclaw-playlist-report-full.md")
       .then(r => { if (!r.ok) throw new Error("not found"); return r.text(); })
-      .catch(() => "");
-
-    const fetchLive = fetch("/data/live-episodes.json")
-      .then(r => { if (!r.ok) throw new Error("not found"); return r.json(); })
-      .catch(() => []);
-
-    const fetchPd = fetch("/data/peter-diamandis-episodes.json")
-      .then(r => { if (!r.ok) throw new Error("not found"); return r.json(); })
-      .catch(() => []);
-
-    Promise.all([fetchPlaylist, fetchLive, fetchPd])
-      .then(([reportContent, liveData, pdData]) => {
-        setPdEpisodes(pdData);
+      .then(reportContent => {
         if (reportContent) setEntries(parseReport(reportContent));
-        setLiveEpisodes(liveData);
         setLoading(false);
       })
-      .catch(() => {
-        setLoading(false);
-      });
+      .catch(() => setLoading(false));
   }, []);
 
   const filtered = entries.filter(e => {
@@ -182,7 +161,7 @@ export default function PlaylistReportPage() {
           📺 YouTube Playlist Reports
         </h1>
         <p style={{ color: "var(--muted)", fontSize: "0.85rem" }}>
-          49 videos + Live episodes · Full breakdown with summaries, tools, and takeaways
+          OpenClaw video summaries · Full breakdown with tools and takeaways
         </p>
       </div>
 
@@ -215,281 +194,6 @@ export default function PlaylistReportPage() {
 
       {!loading && !error && (
         <div>
-          {/* Live Episodes Section */}
-          <div style={{
-            background: "var(--card)",
-            border: "1px solid var(--border)",
-            borderRadius: 12,
-            overflow: "hidden",
-            marginBottom: 24,
-          }}>
-            <button
-              onClick={() => setLiveOpen(!liveOpen)}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                width: "100%",
-                padding: "16px 20px",
-                background: "linear-gradient(135deg, rgba(155,93,229,0.1), rgba(6,182,212,0.05))",
-                border: "none",
-                color: "var(--text)",
-                fontSize: "1rem",
-                fontWeight: 600,
-                cursor: "pointer",
-                textAlign: "left",
-              }}
-            >
-              <span>
-                🔴 Tom Bilyeu
-                <span style={{ fontSize: "0.75rem", color: "var(--muted)", fontWeight: 400, marginLeft: 8 }}>
-                  Mon/Wed/Fri mornings
-                </span>
-              </span>
-              <span style={{ 
-                transform: liveOpen ? "rotate(180deg)" : "rotate(0deg)",
-                transition: "transform 0.2s",
-              }}>▼</span>
-            </button>
-            
-            {liveOpen && (
-              <div style={{ padding: "0 20px 20px" }}>
-                {liveEpisodes.length === 0 ? (
-                  <div style={{ color: "var(--muted)", textAlign: "center", padding: 40 }}>
-                    No live episodes yet. New episodes typically posted Mon/Wed/Fri mornings.
-                  </div>
-                ) : (
-                  <div style={{ display: "flex", flexDirection: "column", gap: 12, marginTop: 16 }}>
-                    {liveEpisodes.map((episode) => {
-                      const isOpen = liveExpanded === episode.id;
-                      const isRecent = isRecentDate(episode.publishedDate);
-                      
-                      return (
-                        <div
-                          key={episode.id}
-                          style={{
-                            background: "var(--bg)",
-                            border: `1px solid ${isOpen ? "var(--accent)" : isRecent ? "rgba(239,68,68,0.3)" : "var(--border)"}`,
-                            borderRadius: 10,
-                            overflow: "hidden",
-                            transition: "border-color 0.15s",
-                          }}
-                        >
-                          {/* Row */}
-                          <button
-                            onClick={() => setLiveExpanded(isOpen ? null : episode.id)}
-                            style={{
-                              width: "100%",
-                              display: "flex",
-                              alignItems: "center",
-                              gap: 14,
-                              padding: "14px 18px",
-                              background: "transparent",
-                              border: "none",
-                              cursor: "pointer",
-                              textAlign: "left",
-                            }}
-                          >
-                            <span
-                              style={{
-                                minWidth: 44,
-                                height: 44,
-                                borderRadius: 8,
-                                background: isRecent ? "rgba(239,68,68,0.15)" : "rgba(155,93,229,0.15)",
-                                color: isRecent ? "#ef4444" : "var(--accent2)",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                fontSize: "0.75rem",
-                                fontWeight: 700,
-                              }}
-                            >
-                              EP{episode.episodeNumber}
-                            </span>
-                            <div style={{ flex: 1 }}>
-                              <div style={{ fontSize: "0.9rem", fontWeight: 600, color: "var(--text)", display: "flex", alignItems: "center", gap: 8 }}>
-                                {episode.title}
-                                {isRecent && (
-                                  <span style={{ fontSize: "0.6rem", background: "#ef4444", color: "#fff", padding: "2px 6px", borderRadius: 10 }}>
-                                    NEW
-                                  </span>
-                                )}
-                              </div>
-                              <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 3, display: "flex", gap: 12 }}>
-                                <span>{formatDate(episode.publishedDate)}</span>
-                                <span>•</span>
-                                <span>{episode.duration}</span>
-                                <span>•</span>
-                                <span style={{ color: isRecent ? "#ef4444" : "var(--muted)" }}>
-                                  {getDaysAgo(episode.publishedDate)}
-                                </span>
-                              </div>
-                            </div>
-                            <span style={{ color: "var(--muted)", fontSize: "1rem", flexShrink: 0 }}>
-                              {isOpen ? "▲" : "▼"}
-                            </span>
-                          </button>
-
-                          {/* Expanded */}
-                          {isOpen && (
-                            <div style={{ padding: "0 18px 20px", borderTop: "1px solid var(--border)" }}>
-                              <a
-                                href={episode.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                style={{
-                                  display: "inline-block",
-                                  marginTop: 14,
-                                  marginBottom: 16,
-                                  fontSize: "0.78rem",
-                                  color: "var(--accent2)",
-                                  textDecoration: "none",
-                                  background: "rgba(239,68,68,0.1)",
-                                  padding: "6px 12px",
-                                  borderRadius: 5,
-                                }}
-                              >
-                                🔴 Watch Live Episode
-                              </a>
-
-                              {/* Summary */}
-                              <Section label="Summary">
-                                <p style={{ fontSize: "0.85rem", lineHeight: 1.65, color: "var(--text)", margin: 0 }}>
-                                  {episode.summary}
-                                </p>
-                              </Section>
-
-                              {/* Topic Breakdown */}
-                              {episode.topicBreakdown && episode.topicBreakdown.length > 0 && (
-                                <Section label="📋 Topic Breakdown">
-                                  <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                                    {episode.topicBreakdown.map((topic, i) => (
-                                      <TopicCard key={i} topic={topic} />
-                                    ))}
-                                  </div>
-                                </Section>
-                              )}
-
-                              {/* Key Takeaways */}
-                              {episode.keyTakeaways?.length > 0 && (
-                                <Section label="🎯 Key Takeaways">
-                                  <ul style={{ margin: 0, paddingLeft: 18, fontSize: "0.85rem", lineHeight: 1.8, color: "var(--text)" }}>
-                                    {episode.keyTakeaways?.map((takeaway, i) => (
-                                      <li key={i}>{takeaway}</li>
-                                    ))}
-                                  </ul>
-                                </Section>
-                              )}
-
-                              {/* Expanded Takeaways */}
-                              {episode.expandedTakeaways && episode.expandedTakeaways.length > 0 && (
-                                <Section label="💡 Deep Dive Takeaways">
-                                  <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                                    {episode.expandedTakeaways.map((item, i) => (
-                                      <div key={i} style={{ background: "rgba(155,93,229,0.05)", padding: 12, borderRadius: 8, border: "1px solid var(--border)" }}>
-                                        <div style={{ fontSize: "0.85rem", fontWeight: 600, color: "var(--accent2)", marginBottom: 4 }}>
-                                          {item.title}
-                                        </div>
-                                        <div style={{ fontSize: "0.8rem", color: "var(--text)", lineHeight: 1.6 }}>
-                                          {item.detail}
-                                        </div>
-                                      </div>
-                                    ))}
-                                  </div>
-                                </Section>
-                              )}
-
-                              {/* Tools Covered */}
-                              {episode.toolsCovered?.length > 0 && (
-                                <Section label="🛠️ Tools & Frameworks">
-                                  <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-                                    {episode.toolsCovered?.map((tool, i) => (
-                                      <span
-                                        key={i}
-                                        style={{
-                                          fontSize: "0.75rem",
-                                          background: "rgba(155,93,229,0.15)",
-                                          color: "var(--accent2)",
-                                          padding: "4px 10px",
-                                          borderRadius: 12,
-                                        }}
-                                      >
-                                        {tool}
-                                      </span>
-                                    ))}
-                                  </div>
-                                </Section>
-                              )}
-
-                              {/* Code Snippets */}
-                              {episode.codeSnippets?.length > 0 && (
-                                <Section label="💻 Code Snippets">
-                                  <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                                    {episode.codeSnippets?.map((snippet, i) => (
-                                      <code
-                                        key={i}
-                                        style={{
-                                          fontSize: "0.8rem",
-                                          background: "rgba(0,0,0,0.3)",
-                                          padding: "8px 12px",
-                                          borderRadius: 6,
-                                          color: "var(--text)",
-                                          fontFamily: "monospace",
-                                        }}
-                                      >
-                                        {snippet}
-                                      </code>
-                                    ))}
-                                  </div>
-                                </Section>
-                              )}
-
-                              {/* Related Videos */}
-                              {episode.relatedVideos?.length > 0 && (
-                                <Section label="📚 Related Tutorial Videos">
-                                  <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                                    {episode.relatedVideos?.map((vid, i) => (
-                                      <span
-                                        key={i}
-                                        style={{
-                                          fontSize: "0.75rem",
-                                          background: "rgba(6,182,212,0.15)",
-                                          color: "#06b6d4",
-                                          padding: "4px 10px",
-                                          borderRadius: 12,
-                                        }}
-                                      >
-                                        Video #{vid}
-                                      </span>
-                                    ))}
-                                  </div>
-                                </Section>
-                              )}
-                            </div>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-
-          {/* Peter Diamandis Section */}
-          <ChannelSection
-            label="🚀 Peter Diamandis"
-            subtitle="Exponential technology, abundance, & moonshots"
-            episodes={pdEpisodes}
-            isOpen={pdOpen}
-            onToggle={() => setPdOpen(!pdOpen)}
-            expanded={pdExpanded}
-            onExpand={setPdExpanded}
-            watchLabel="▶ Watch on YouTube"
-            watchBg="rgba(6,182,212,0.1)"
-            accentColor="#06b6d4"
-          />
-
           {/* Video Summaries Section */}
           <div style={{
             background: "var(--card)",
