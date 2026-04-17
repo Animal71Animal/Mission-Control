@@ -123,7 +123,9 @@ export default function PlaylistReportPage() {
   const [expanded, setExpanded] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [videosOpen, setVideosOpen] = useState(false);
+  const [videosOpen, setVideosOpen] = useState(true);
+  const [doneVideos, setDoneVideos] = useState<Set<string>>(new Set());
+  const [videoDoneOpen, setVideoDoneOpen] = useState(false);
 
   useEffect(() => {
     Promise.all([
@@ -137,8 +139,26 @@ export default function PlaylistReportPage() {
       if (reportContent) setEntries(parseReport(reportContent));
       setOcEpisodes(ocData.episodes || []);
       setOcLastChecked(ocData.last_checked);
+      // Load done state from localStorage for old videos
+      try {
+        const saved = localStorage.getItem('playlist-done-videos');
+        if (saved) setDoneVideos(new Set(JSON.parse(saved)));
+      } catch {}
       setLoading(false);
     }).catch(() => setLoading(false));
+  }, []);
+
+  const markVideoDone = (number: string) => {
+    setDoneVideos(prev => {
+      const next = new Set(prev);
+      next.has(number) ? next.delete(number) : next.add(number);
+      localStorage.setItem('playlist-done-videos', JSON.stringify([...next]));
+      return next;
+    });
+  };
+
+  useEffect(() => { // dummy to prevent double-close
+    return;
   }, []);
 
   const filtered = entries.filter(e => {
@@ -250,23 +270,43 @@ export default function PlaylistReportPage() {
                       const isOpen = ocExpanded === ep.id;
                       return (
                         <div key={ep.id} style={{ background: "var(--bg)", border: `1px solid ${isOpen ? "var(--accent)" : "var(--border)"}`, borderRadius: 10, overflow: "hidden" }}>
-                          <button onClick={() => setOcExpanded(isOpen ? null : ep.id)} style={{
-                            width: "100%", display: "flex", alignItems: "center", gap: 14,
-                            padding: "14px 18px", background: "transparent", border: "none", cursor: "pointer", textAlign: "left",
-                          }}>
-                            <span style={{
-                              minWidth: 44, height: 44, borderRadius: 8,
-                              background: "rgba(155,93,229,0.15)", color: "var(--accent)",
-                              display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.2rem",
-                            }}>🦞</span>
-                            <div style={{ flex: 1 }}>
-                              <div style={{ fontSize: "0.9rem", fontWeight: 600, color: "var(--text)" }}>{ep.title}</div>
-                              <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 3 }}>
-                                {ep.channel} · {new Date(ep.publishedDate + "T12:00:00").toLocaleDateString()}
+                          <div style={{ display: "flex", alignItems: "center" }}>
+                            <button onClick={() => setOcExpanded(isOpen ? null : ep.id)} style={{
+                              flex: 1, display: "flex", alignItems: "center", gap: 14,
+                              padding: "14px 18px", background: "transparent", border: "none", cursor: "pointer", textAlign: "left",
+                            }}>
+                              <span style={{
+                                minWidth: 44, height: 44, borderRadius: 8,
+                                background: "rgba(155,93,229,0.15)", color: "var(--accent)",
+                                display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.2rem",
+                              }}>🦞</span>
+                              <div style={{ flex: 1 }}>
+                                <div style={{ fontSize: "0.9rem", fontWeight: 600, color: "var(--text)" }}>{ep.title}</div>
+                                <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 3 }}>
+                                  {ep.channel} · {new Date(ep.publishedDate + "T12:00:00").toLocaleDateString()}
+                                </div>
                               </div>
-                            </div>
-                            <span style={{ color: "var(--muted)", fontSize: "1rem" }}>{isOpen ? "▲" : "▼"}</span>
-                          </button>
+                              <span style={{ color: "var(--muted)", fontSize: "1rem" }}>{isOpen ? "▲" : "▼"}</span>
+                            </button>
+                            <button
+                              onClick={async () => {
+                                setOcSaving(ep.id);
+                                setOcEpisodes(prev => prev.map(e => e.id === ep.id ? { ...e, completed: true } : e));
+                                await fetch('/api/openclaw-episodes', {
+                                  method: 'PATCH',
+                                  headers: { 'Content-Type': 'application/json' },
+                                  body: JSON.stringify({ id: ep.id, completed: true }),
+                                });
+                                setOcSaving(null);
+                              }}
+                              style={{
+                                padding: "8px 14px", marginRight: 12, borderRadius: 8,
+                                background: "rgba(0,200,124,0.12)", border: "1px solid #00c87c",
+                                color: "#00c87c", fontWeight: 700, fontSize: "0.8rem",
+                                cursor: "pointer", whiteSpace: "nowrap", flexShrink: 0,
+                              }}
+                            >{ocSaving === ep.id ? "..." : "✅ Done"}</button>
+                          </div>
                           {isOpen && (
                             <div style={{ padding: "0 18px 20px", borderTop: "1px solid var(--border)" }}>
                               <a href={ep.url} target="_blank" rel="noopener noreferrer" style={{
@@ -305,25 +345,7 @@ export default function PlaylistReportPage() {
                                   <p style={{ fontSize: "0.85rem", lineHeight: 1.65, color: "var(--accent2)", margin: 0, fontStyle: "italic" }}>{ep.priscyllaTake}</p>
                                 </Section>
                               )}
-                              <button
-                                onClick={async () => {
-                                  setOcSaving(ep.id);
-                                  setOcEpisodes(prev => prev.map(e => e.id === ep.id ? { ...e, completed: true } : e));
-                                  await fetch('/api/openclaw-episodes', {
-                                    method: 'PATCH',
-                                    headers: { 'Content-Type': 'application/json' },
-                                    body: JSON.stringify({ id: ep.id, completed: true }),
-                                  });
-                                  setOcSaving(null);
-                                }}
-                                style={{
-                                  marginTop: 16, padding: "8px 18px", borderRadius: 8,
-                                  background: "rgba(0,200,124,0.15)", border: "1px solid #00c87c",
-                                  color: "#00c87c", fontWeight: 700, fontSize: "0.85rem", cursor: "pointer",
-                                }}
-                              >
-                                {ocSaving === ep.id ? "Saving..." : "✅ Mark as Done"}
-                              </button>
+
                             </div>
                           )}
                         </div>
@@ -418,7 +440,7 @@ export default function PlaylistReportPage() {
                 {filtered.length === 0 && (
                   <div style={{ color: "var(--muted)", textAlign: "center", padding: 40 }}>No results for "{search}"</div>
                 )}
-                {filtered.map(entry => {
+                {filtered.filter(e => !doneVideos.has(e.number)).map(entry => {
                   const isOpen = expanded === entry.number;
                   return (
                     <div
@@ -432,51 +454,63 @@ export default function PlaylistReportPage() {
                       }}
                     >
                       {/* Row */}
-                      <button
-                        onClick={() => setExpanded(isOpen ? null : entry.number)}
-                        style={{
-                          width: "100%",
-                          display: "flex",
-                          alignItems: "center",
-                          gap: 14,
-                          padding: "14px 18px",
-                          background: "transparent",
-                          border: "none",
-                          cursor: "pointer",
-                          textAlign: "left",
-                        }}
-                      >
-                        <span
+                      <div style={{ display: "flex", alignItems: "center" }}>
+                        <button
+                          onClick={() => setExpanded(isOpen ? null : entry.number)}
                           style={{
-                            minWidth: 38,
-                            height: 38,
-                            borderRadius: 8,
-                            background: "rgba(155,93,229,0.15)",
-                            color: "var(--accent2)",
+                            flex: 1,
                             display: "flex",
                             alignItems: "center",
-                            justifyContent: "center",
-                            fontSize: "0.8rem",
-                            fontWeight: 700,
-                            fontVariantNumeric: "tabular-nums",
+                            gap: 14,
+                            padding: "14px 18px",
+                            background: "transparent",
+                            border: "none",
+                            cursor: "pointer",
+                            textAlign: "left",
                           }}
                         >
-                          {entry.number}
-                        </span>
-                        <div style={{ flex: 1 }}>
-                          <div style={{ fontSize: "0.9rem", fontWeight: 600, color: "var(--text)" }}>
-                            {entry.title}
-                          </div>
-                          {!isOpen && entry.summary && (
-                            <div style={{ fontSize: "0.78rem", color: "var(--muted)", marginTop: 3, lineHeight: 1.4 }}>
-                              {entry.summary.slice(0, 140)}{entry.summary.length > 140 ? "…" : ""}
+                          <span
+                            style={{
+                              minWidth: 38,
+                              height: 38,
+                              borderRadius: 8,
+                              background: "rgba(155,93,229,0.15)",
+                              color: "var(--accent2)",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              fontSize: "0.8rem",
+                              fontWeight: 700,
+                              fontVariantNumeric: "tabular-nums",
+                            }}
+                          >
+                            {entry.number}
+                          </span>
+                          <div style={{ flex: 1 }}>
+                            <div style={{ fontSize: "0.9rem", fontWeight: 600, color: "var(--text)" }}>
+                              {entry.title}
                             </div>
-                          )}
-                        </div>
-                        <span style={{ color: "var(--muted)", fontSize: "1rem", flexShrink: 0 }}>
-                          {isOpen ? "▲" : "▼"}
-                        </span>
-                      </button>
+                            {!isOpen && entry.summary && (
+                              <div style={{ fontSize: "0.78rem", color: "var(--muted)", marginTop: 3, lineHeight: 1.4 }}>
+                                {entry.summary.slice(0, 140)}{entry.summary.length > 140 ? "…" : ""}
+                              </div>
+                            )}
+                          </div>
+                          <span style={{ color: "var(--muted)", fontSize: "1rem", flexShrink: 0 }}>
+                            {isOpen ? "▲" : "▼"}
+                          </span>
+                        </button>
+                        <button
+                          onClick={() => markVideoDone(entry.number)}
+                          title="Mark as done"
+                          style={{
+                            padding: "8px 14px", marginRight: 12, borderRadius: 8,
+                            background: "rgba(0,200,124,0.12)", border: "1px solid #00c87c",
+                            color: "#00c87c", fontWeight: 700, fontSize: "0.8rem",
+                            cursor: "pointer", whiteSpace: "nowrap", flexShrink: 0,
+                          }}
+                        >✅ Done</button>
+                      </div>
 
                       {/* Expanded */}
                       {isOpen && (
@@ -528,6 +562,39 @@ export default function PlaylistReportPage() {
                     </div>
                   );
                 })}
+
+                {/* Done list for old videos */}
+                {doneVideos.size > 0 && (
+                  <div style={{ marginTop: 12 }}>
+                    <button onClick={() => setVideoDoneOpen(s => !s)} style={{
+                      background: "none", border: "none", cursor: "pointer",
+                      color: "var(--muted)", fontSize: "0.85rem", display: "flex", alignItems: "center", gap: 6, padding: 0,
+                    }}>
+                      <span style={{ transform: videoDoneOpen ? "rotate(90deg)" : "rotate(0deg)", transition: "transform 0.2s", display: "inline-block" }}>▶</span>
+                      Done ({doneVideos.size})
+                    </button>
+                    {videoDoneOpen && (
+                      <div style={{ display: "flex", flexDirection: "column", gap: 8, marginTop: 10 }}>
+                        {filtered.filter(e => doneVideos.has(e.number)).map(entry => (
+                          <div key={entry.number} style={{
+                            background: "var(--bg)", border: "1px solid var(--border)",
+                            borderRadius: 10, padding: "10px 18px", opacity: 0.45,
+                            display: "flex", alignItems: "center", gap: 12,
+                          }}>
+                            <span style={{ fontSize: "1.1rem" }}>✅</span>
+                            <div style={{ flex: 1, fontSize: "0.88rem", fontWeight: 600, color: "var(--text)", textDecoration: "line-through" }}>
+                              #{entry.number} — {entry.title}
+                            </div>
+                            <button onClick={() => markVideoDone(entry.number)} style={{
+                              fontSize: "0.72rem", color: "var(--muted)", background: "none",
+                              border: "1px solid var(--border)", borderRadius: 6, padding: "4px 8px", cursor: "pointer",
+                            }}>Undo</button>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
             )}
           </div>
