@@ -33,6 +33,7 @@ export default function SpearmintRhinoPage() {
   const [saving, setSaving] = useState(false);
 
   // Add/Edit modal state
+  const [showCompleted, setShowCompleted] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [editTask, setEditTask] = useState<Task | null>(null);
   const [form, setForm] = useState({ text: "", category: "Setup", priority: "medium", due_date: "" });
@@ -127,7 +128,9 @@ export default function SpearmintRhinoPage() {
     return (priorityRank[a.priority] ?? 2) - (priorityRank[b.priority] ?? 2);
   });
 
-  const filtered = filter === "All" ? sorted : sorted.filter(t => t.category === filter);
+  const allFiltered = filter === "All" ? sorted : sorted.filter(t => t.category === filter);
+  const filtered = allFiltered.filter(t => !t.completed);
+  const completedTasks = allFiltered.filter(t => t.completed);
   const done = tasks.filter(t => t.completed).length;
   const progress = tasks.length > 0 ? (done / tasks.length) * 100 : 0;
 
@@ -302,6 +305,45 @@ export default function SpearmintRhinoPage() {
               }}>{editTask ? "Save Changes" : "Add Task"}</button>
             </div>
           </div>
+        </div>
+      )}
+
+      {/* Completed tasks collapsible */}
+      {completedTasks.length > 0 && (
+        <div style={{ marginTop: 20 }}>
+          <button onClick={() => setShowCompleted(s => !s)} style={{
+            display: "flex", alignItems: "center", gap: 8, background: "none",
+            border: "none", cursor: "pointer", color: "var(--muted)", fontSize: "0.85rem", padding: 0,
+          }}>
+            <span style={{ transform: showCompleted ? "rotate(90deg)" : "rotate(0deg)", transition: "transform 0.2s", display: "inline-block" }}>▶</span>
+            Completed ({completedTasks.length})
+          </button>
+          {showCompleted && (
+            <div style={{ display: "flex", flexDirection: "column", gap: 8, marginTop: 10 }}>
+              {completedTasks.map(task => (
+                <div key={task.id} style={{
+                  background: "var(--card)", border: "1px solid var(--border)",
+                  borderRadius: 10, padding: "12px 16px",
+                  display: "flex", alignItems: "center", gap: 12, opacity: 0.45,
+                }}>
+                  <div onClick={() => toggle(task.id)} style={{
+                    width: 20, height: 20, borderRadius: 4, border: "2px solid var(--accent)",
+                    background: "var(--accent)", display: "flex", alignItems: "center",
+                    justifyContent: "center", flexShrink: 0, cursor: "pointer",
+                  }}>
+                    <span style={{ color: "#000", fontSize: 12 }}>✓</span>
+                  </div>
+                  <div style={{ flex: 1, fontSize: "0.9rem", color: "var(--text)", textDecoration: "line-through" }}>
+                    {task.text}
+                  </div>
+                  <button onClick={() => deleteTask(task.id)} style={{
+                    width: 32, height: 32, borderRadius: 6, background: "var(--bg)",
+                    border: "1px solid var(--border)", cursor: "pointer", color: "#ef4444", fontSize: "0.8rem",
+                  }}>🗑</button>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       )}
 
