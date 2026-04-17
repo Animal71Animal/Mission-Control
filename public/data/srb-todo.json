@@ -147,7 +147,7 @@
     {
       "id": "19",
       "text": "Print more Spotify dancer instructions",
-      "completed": false,
+      "completed": true,
       "category": "Communication",
       "priority": "low",
       "due_date": null
@@ -177,5 +177,5 @@
       "due_date": "2026-04-16"
     }
   ],
-  "last_updated": "2026-04-17T22:17:18.942Z"
+  "last_updated": "2026-04-17T22:17:44.050Z"
 }
