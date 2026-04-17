@@ -19,7 +19,7 @@
     {
       "id": "3",
       "text": "Add scenes to Light Jockey",
-      "completed": true,
+      "completed": false,
       "category": "Lighting",
       "priority": "medium",
       "due_date": null
@@ -177,5 +177,5 @@
       "due_date": "2026-04-16"
     }
   ],
-  "last_updated": "2026-04-17T22:13:22.211Z"
+  "last_updated": "2026-04-17T22:13:23.970Z"
 }
