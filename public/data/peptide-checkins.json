@@ -1,113 +1,84 @@
 [
   {
     "id": "checkin-2026-04-14",
-    "weekStarting": "2026-04-14",
+    "weekStarting": "2026-04-20",
     "weekNumber": 0,
     "checkIns": {
-      "2026-04-14": {
+      "2026-04-20": {
         "day": "Monday",
         "doses": [
-          { "peptideId": "peptide-retatrutide", "peptideName": "Retatrutide", "time": "8:00 AM", "taken": false, "dose": "60 units" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
+          {
+            "peptideId": "peptide-retatrutide",
+            "peptideName": "Retatrutide",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "60 units"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
         ]
       },
-      "2026-04-15": {
+      "2026-04-21": {
         "day": "Tuesday",
         "doses": [
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
-        ]
-      },
-      "2026-04-16": {
-        "day": "Wednesday",
-        "doses": [
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
-        ]
-      },
-      "2026-04-17": {
-        "day": "Thursday",
-        "doses": [
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
-        ]
-      },
-      "2026-04-18": {
-        "day": "Friday",
-        "doses": [
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
-        ]
-      },
-      "2026-04-19": {
-        "day": "Saturday",
-        "doses": []
-      },
-      "2026-04-20": {
-        "day": "Sunday",
-        "doses": [],
-        "notes": "Off / Recovery — no Tesamorelin"
-      }
-    },
-    "weeklyMetrics": {
-      "weight": null,
-      "waist": null,
-      "fastingGlucose": null,
-      "bloodPressure": null,
-      "restingHR": null,
-      "appetite": null,
-      "sleep": null,
-      "giSymptoms": null,
-      "mood": null,
-      "libido": null,
-      "waterRetention": null,
-      "trainingQuality": null
-    },
-    "sideEffects": [],
-    "notes": "Week 0 — Core stack only. Retatrutide + Tesamorelin steady."
-  },
-  {
-    "id": "checkin-2026-04-21",
-    "weekStarting": "2026-04-21",
-    "weekNumber": 1,
-    "checkIns": {
-      "2026-04-21": {
-        "day": "Monday",
-        "doses": [
-          { "peptideId": "peptide-retatrutide", "peptideName": "Retatrutide", "time": "8:00 AM", "taken": false, "dose": "60 units" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
         ]
       },
       "2026-04-22": {
-        "day": "Tuesday",
+        "day": "Wednesday",
         "doses": [
-          { "peptideId": "peptide-hcg", "peptideName": "HCG", "time": "8:00 AM", "taken": false, "dose": "10 units (250 IU)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
         ]
       },
       "2026-04-23": {
-        "day": "Wednesday",
+        "day": "Thursday",
         "doses": [
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
         ]
       },
       "2026-04-24": {
-        "day": "Thursday",
+        "day": "Friday",
         "doses": [
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
         ]
       },
       "2026-04-25": {
-        "day": "Friday",
-        "doses": [
-          { "peptideId": "peptide-hcg", "peptideName": "HCG", "time": "8:00 AM", "taken": false, "dose": "10 units (250 IU)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
-        ]
-      },
-      "2026-04-26": {
         "day": "Saturday",
         "doses": []
       },
-      "2026-04-27": {
+      "2026-04-26": {
         "day": "Sunday",
         "doses": [],
-        "notes": "Off / Recovery — no Tesamorelin"
+        "notes": "Off / Recovery \u2014 no Tesamorelin"
       }
     },
     "weeklyMetrics": {
@@ -125,61 +96,102 @@
       "trainingQuality": null
     },
     "sideEffects": [],
-    "notes": "Week 1 — HCG added (Tue/Fri). Hormonal protection first. Monitor libido, energy, testicular size."
+    "notes": "Week 0 \u2014 Core stack only. Retatrutide + Tesamorelin steady."
   },
   {
-    "id": "checkin-2026-04-28",
-    "weekStarting": "2026-04-28",
-    "weekNumber": 2,
+    "id": "checkin-2026-04-21",
+    "weekStarting": "2026-04-27",
+    "weekNumber": 1,
     "checkIns": {
-      "2026-04-28": {
+      "2026-04-27": {
         "day": "Monday",
         "doses": [
-          { "peptideId": "peptide-retatrutide", "peptideName": "Retatrutide", "time": "8:00 AM", "taken": false, "dose": "60 units" },
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
+          {
+            "peptideId": "peptide-retatrutide",
+            "peptideName": "Retatrutide",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "60 units"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
+        ]
+      },
+      "2026-04-28": {
+        "day": "Tuesday",
+        "doses": [
+          {
+            "peptideId": "peptide-hcg",
+            "peptideName": "HCG",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "10 units (250 IU)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
         ]
       },
       "2026-04-29": {
-        "day": "Tuesday",
+        "day": "Wednesday",
         "doses": [
-          { "peptideId": "peptide-hcg", "peptideName": "HCG", "time": "8:00 AM", "taken": false, "dose": "10 units (250 IU)" },
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
         ]
       },
       "2026-04-30": {
-        "day": "Wednesday",
+        "day": "Thursday",
         "doses": [
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
         ]
       },
       "2026-05-01": {
-        "day": "Thursday",
+        "day": "Friday",
         "doses": [
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
+          {
+            "peptideId": "peptide-hcg",
+            "peptideName": "HCG",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "10 units (250 IU)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
         ]
       },
       "2026-05-02": {
-        "day": "Friday",
-        "doses": [
-          { "peptideId": "peptide-hcg", "peptideName": "HCG", "time": "8:00 AM", "taken": false, "dose": "10 units (250 IU)" },
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
-        ]
+        "day": "Saturday",
+        "doses": []
       },
       "2026-05-03": {
-        "day": "Saturday",
-        "doses": [
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" }
-        ]
-      },
-      "2026-05-04": {
         "day": "Sunday",
         "doses": [],
-        "notes": "Off / Recovery — no Tesamorelin"
+        "notes": "Off / Recovery \u2014 no Tesamorelin"
       }
     },
     "weeklyMetrics": {
@@ -197,62 +209,145 @@
       "trainingQuality": null
     },
     "sideEffects": [],
-    "notes": "Week 2 — Selank added (M-Sat). HCG continues Tue/Fri. Watch for mood/anxiety/focus changes."
+    "notes": "Week 1 \u2014 HCG added (Tue/Fri). Hormonal protection first. Monitor libido, energy, testicular size."
   },
   {
-    "id": "checkin-2026-05-05",
-    "weekStarting": "2026-05-05",
-    "weekNumber": 3,
+    "id": "checkin-2026-04-28",
+    "weekStarting": "2026-05-04",
+    "weekNumber": 2,
     "checkIns": {
-      "2026-05-05": {
+      "2026-05-04": {
         "day": "Monday",
         "doses": [
-          { "peptideId": "peptide-retatrutide", "peptideName": "Retatrutide", "time": "8:00 AM", "taken": false, "dose": "60 units" },
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
+          {
+            "peptideId": "peptide-retatrutide",
+            "peptideName": "Retatrutide",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "60 units"
+          },
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
+        ]
+      },
+      "2026-05-05": {
+        "day": "Tuesday",
+        "doses": [
+          {
+            "peptideId": "peptide-hcg",
+            "peptideName": "HCG",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "10 units (250 IU)"
+          },
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
         ]
       },
       "2026-05-06": {
-        "day": "Tuesday",
+        "day": "Wednesday",
         "doses": [
-          { "peptideId": "peptide-hcg", "peptideName": "HCG", "time": "8:00 AM", "taken": false, "dose": "10 units (250 IU)" },
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
         ]
       },
       "2026-05-07": {
-        "day": "Wednesday",
+        "day": "Thursday",
         "doses": [
-          { "peptideId": "peptide-nad", "peptideName": "NAD+", "time": "10:00 AM", "taken": false, "dose": "25-50 mg" },
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
         ]
       },
       "2026-05-08": {
-        "day": "Thursday",
+        "day": "Friday",
         "doses": [
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
+          {
+            "peptideId": "peptide-hcg",
+            "peptideName": "HCG",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "10 units (250 IU)"
+          },
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
         ]
       },
       "2026-05-09": {
-        "day": "Friday",
+        "day": "Saturday",
         "doses": [
-          { "peptideId": "peptide-hcg", "peptideName": "HCG", "time": "8:00 AM", "taken": false, "dose": "10 units (250 IU)" },
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          }
         ]
       },
       "2026-05-10": {
-        "day": "Saturday",
-        "doses": [
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" }
-        ]
-      },
-      "2026-05-11": {
         "day": "Sunday",
         "doses": [],
-        "notes": "Off / Recovery — no Tesamorelin"
+        "notes": "Off / Recovery \u2014 no Tesamorelin"
       }
     },
     "weeklyMetrics": {
@@ -270,63 +365,152 @@
       "trainingQuality": null
     },
     "sideEffects": [],
-    "notes": "Week 3 — NAD+ added (Wed only). Start low (25mg). Watch for flushing, nausea, energy surge."
+    "notes": "Week 2 \u2014 Selank added (M-Sat). HCG continues Tue/Fri. Watch for mood/anxiety/focus changes."
   },
   {
-    "id": "checkin-2026-05-12",
-    "weekStarting": "2026-05-12",
-    "weekNumber": 4,
+    "id": "checkin-2026-05-05",
+    "weekStarting": "2026-05-11",
+    "weekNumber": 3,
     "checkIns": {
-      "2026-05-12": {
+      "2026-05-11": {
         "day": "Monday",
         "doses": [
-          { "peptideId": "peptide-retatrutide", "peptideName": "Retatrutide", "time": "8:00 AM", "taken": false, "dose": "60 units" },
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
+          {
+            "peptideId": "peptide-retatrutide",
+            "peptideName": "Retatrutide",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "60 units"
+          },
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
+        ]
+      },
+      "2026-05-12": {
+        "day": "Tuesday",
+        "doses": [
+          {
+            "peptideId": "peptide-hcg",
+            "peptideName": "HCG",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "10 units (250 IU)"
+          },
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
         ]
       },
       "2026-05-13": {
-        "day": "Tuesday",
+        "day": "Wednesday",
         "doses": [
-          { "peptideId": "peptide-hcg", "peptideName": "HCG", "time": "8:00 AM", "taken": false, "dose": "10 units (250 IU)" },
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
+          {
+            "peptideId": "peptide-nad",
+            "peptideName": "NAD+",
+            "time": "10:00 AM",
+            "taken": false,
+            "dose": "25-50 mg"
+          },
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
         ]
       },
       "2026-05-14": {
-        "day": "Wednesday",
+        "day": "Thursday",
         "doses": [
-          { "peptideId": "peptide-nad", "peptideName": "NAD+", "time": "10:00 AM", "taken": false, "dose": "25-50 mg" },
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
         ]
       },
       "2026-05-15": {
-        "day": "Thursday",
+        "day": "Friday",
         "doses": [
-          { "peptideId": "peptide-motsc", "peptideName": "MOTS-c", "time": "8:00 AM", "taken": false, "dose": "2.5-5 mg" },
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
+          {
+            "peptideId": "peptide-hcg",
+            "peptideName": "HCG",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "10 units (250 IU)"
+          },
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
         ]
       },
       "2026-05-16": {
-        "day": "Friday",
+        "day": "Saturday",
         "doses": [
-          { "peptideId": "peptide-hcg", "peptideName": "HCG", "time": "8:00 AM", "taken": false, "dose": "10 units (250 IU)" },
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          }
         ]
       },
       "2026-05-17": {
-        "day": "Saturday",
-        "doses": [
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" }
-        ]
-      },
-      "2026-05-18": {
         "day": "Sunday",
         "doses": [],
-        "notes": "Off / Recovery — no Tesamorelin"
+        "notes": "Off / Recovery \u2014 no Tesamorelin"
       }
     },
     "weeklyMetrics": {
@@ -344,63 +528,159 @@
       "trainingQuality": null
     },
     "sideEffects": [],
-    "notes": "Week 4 — MOTS-c added (Thu only). Metabolic booster. Watch for glucose sensitivity, training endurance."
+    "notes": "Week 3 \u2014 NAD+ added (Wed only). Start low (25mg). Watch for flushing, nausea, energy surge."
   },
   {
-    "id": "checkin-2026-05-19",
-    "weekStarting": "2026-05-19",
-    "weekNumber": 5,
+    "id": "checkin-2026-05-12",
+    "weekStarting": "2026-05-18",
+    "weekNumber": 4,
     "checkIns": {
-      "2026-05-19": {
+      "2026-05-18": {
         "day": "Monday",
         "doses": [
-          { "peptideId": "peptide-retatrutide", "peptideName": "Retatrutide", "time": "8:00 AM", "taken": false, "dose": "60 units" },
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
+          {
+            "peptideId": "peptide-retatrutide",
+            "peptideName": "Retatrutide",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "60 units"
+          },
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
+        ]
+      },
+      "2026-05-19": {
+        "day": "Tuesday",
+        "doses": [
+          {
+            "peptideId": "peptide-hcg",
+            "peptideName": "HCG",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "10 units (250 IU)"
+          },
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
         ]
       },
       "2026-05-20": {
-        "day": "Tuesday",
+        "day": "Wednesday",
         "doses": [
-          { "peptideId": "peptide-hcg", "peptideName": "HCG", "time": "8:00 AM", "taken": false, "dose": "10 units (250 IU)" },
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
+          {
+            "peptideId": "peptide-nad",
+            "peptideName": "NAD+",
+            "time": "10:00 AM",
+            "taken": false,
+            "dose": "25-50 mg"
+          },
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
         ]
       },
       "2026-05-21": {
-        "day": "Wednesday",
+        "day": "Thursday",
         "doses": [
-          { "peptideId": "peptide-nad", "peptideName": "NAD+", "time": "10:00 AM", "taken": false, "dose": "25-50 mg" },
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
+          {
+            "peptideId": "peptide-motsc",
+            "peptideName": "MOTS-c",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "2.5-5 mg"
+          },
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
         ]
       },
       "2026-05-22": {
-        "day": "Thursday",
+        "day": "Friday",
         "doses": [
-          { "peptideId": "peptide-motsc", "peptideName": "MOTS-c", "time": "8:00 AM", "taken": false, "dose": "2.5-5 mg" },
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
+          {
+            "peptideId": "peptide-hcg",
+            "peptideName": "HCG",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "10 units (250 IU)"
+          },
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
         ]
       },
       "2026-05-23": {
-        "day": "Friday",
+        "day": "Saturday",
         "doses": [
-          { "peptideId": "peptide-hcg", "peptideName": "HCG", "time": "8:00 AM", "taken": false, "dose": "10 units (250 IU)" },
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units" }
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          }
         ]
       },
       "2026-05-24": {
-        "day": "Saturday",
-        "doses": [
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" }
-        ]
-      },
-      "2026-05-25": {
         "day": "Sunday",
         "doses": [],
-        "notes": "Off / Recovery — no Tesamorelin"
+        "notes": "Off / Recovery \u2014 no Tesamorelin"
       }
     },
     "weeklyMetrics": {
@@ -418,69 +698,377 @@
       "trainingQuality": null
     },
     "sideEffects": [],
-    "notes": "Week 5 — Full stack active. Maintenance phase. Assess: continue, adjust doses, or cycle off any compounds."
+    "notes": "Week 4 \u2014 MOTS-c added (Thu only). Metabolic booster. Watch for glucose sensitivity, training endurance."
   },
   {
-    "id": "checkin-2026-05-26",
-    "weekStarting": "2026-05-26",
-    "weekNumber": 6,
+    "id": "checkin-2026-05-19",
+    "weekStarting": "2026-05-25",
+    "weekNumber": 5,
     "checkIns": {
-      "2026-05-26": {
+      "2026-05-25": {
         "day": "Monday",
         "doses": [
-          { "peptideId": "peptide-retatrutide", "peptideName": "Retatrutide", "time": "8:00 AM", "taken": false, "dose": "60 units (3mg)" },
-          { "peptideId": "peptide-ghk-cu", "peptideName": "GHK-Cu", "time": "8:00 AM", "taken": false, "dose": "4 units (1mg)" },
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units (1mg)" }
+          {
+            "peptideId": "peptide-retatrutide",
+            "peptideName": "Retatrutide",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "60 units"
+          },
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
+        ]
+      },
+      "2026-05-26": {
+        "day": "Tuesday",
+        "doses": [
+          {
+            "peptideId": "peptide-hcg",
+            "peptideName": "HCG",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "10 units (250 IU)"
+          },
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
         ]
       },
       "2026-05-27": {
-        "day": "Tuesday",
+        "day": "Wednesday",
         "doses": [
-          { "peptideId": "peptide-hcg", "peptideName": "HCG", "time": "8:00 AM", "taken": false, "dose": "10 units (250 IU)" },
-          { "peptideId": "peptide-ghk-cu", "peptideName": "GHK-Cu", "time": "8:00 AM", "taken": false, "dose": "4 units (1mg)" },
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units (1mg)" }
+          {
+            "peptideId": "peptide-nad",
+            "peptideName": "NAD+",
+            "time": "10:00 AM",
+            "taken": false,
+            "dose": "25-50 mg"
+          },
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
         ]
       },
       "2026-05-28": {
-        "day": "Wednesday",
+        "day": "Thursday",
         "doses": [
-          { "peptideId": "peptide-nad", "peptideName": "NAD+", "time": "10:00 AM", "taken": false, "dose": "50 units (50mg)" },
-          { "peptideId": "peptide-ghk-cu", "peptideName": "GHK-Cu", "time": "8:00 AM", "taken": false, "dose": "4 units (1mg)" },
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units (1mg)" }
+          {
+            "peptideId": "peptide-motsc",
+            "peptideName": "MOTS-c",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "2.5-5 mg"
+          },
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
         ]
       },
       "2026-05-29": {
-        "day": "Thursday",
+        "day": "Friday",
         "doses": [
-          { "peptideId": "peptide-motsc", "peptideName": "MOTS-c", "time": "8:00 AM", "taken": false, "dose": "50 units (2.5mg)" },
-          { "peptideId": "peptide-ghk-cu", "peptideName": "GHK-Cu", "time": "8:00 AM", "taken": false, "dose": "4 units (1mg)" },
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units (1mg)" }
+          {
+            "peptideId": "peptide-hcg",
+            "peptideName": "HCG",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "10 units (250 IU)"
+          },
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units"
+          }
         ]
       },
       "2026-05-30": {
-        "day": "Friday",
+        "day": "Saturday",
         "doses": [
-          { "peptideId": "peptide-hcg", "peptideName": "HCG", "time": "8:00 AM", "taken": false, "dose": "10 units (250 IU)" },
-          { "peptideId": "peptide-ghk-cu", "peptideName": "GHK-Cu", "time": "8:00 AM", "taken": false, "dose": "4 units (1mg)" },
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" },
-          { "peptideId": "peptide-tesamorelin", "peptideName": "Tesamorelin", "time": "9:30 PM", "taken": false, "dose": "30 units (1mg)" }
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          }
         ]
       },
       "2026-05-31": {
-        "day": "Saturday",
+        "day": "Sunday",
+        "doses": [],
+        "notes": "Off / Recovery \u2014 no Tesamorelin"
+      }
+    },
+    "weeklyMetrics": {
+      "weight": null,
+      "waist": null,
+      "fastingGlucose": null,
+      "bloodPressure": null,
+      "restingHR": null,
+      "appetite": null,
+      "sleep": null,
+      "giSymptoms": null,
+      "mood": null,
+      "libido": null,
+      "waterRetention": null,
+      "trainingQuality": null
+    },
+    "sideEffects": [],
+    "notes": "Week 5 \u2014 Full stack active. Maintenance phase. Assess: continue, adjust doses, or cycle off any compounds."
+  },
+  {
+    "id": "checkin-2026-05-26",
+    "weekStarting": "2026-06-01",
+    "weekNumber": 6,
+    "checkIns": {
+      "2026-06-01": {
+        "day": "Monday",
         "doses": [
-          { "peptideId": "peptide-ghk-cu", "peptideName": "GHK-Cu", "time": "8:00 AM", "taken": false, "dose": "4 units (1mg)" },
-          { "peptideId": "peptide-selank", "peptideName": "Selank", "time": "8:30 AM", "taken": false, "dose": "9 units (300mcg)" }
+          {
+            "peptideId": "peptide-retatrutide",
+            "peptideName": "Retatrutide",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "60 units (3mg)"
+          },
+          {
+            "peptideId": "peptide-ghk-cu",
+            "peptideName": "GHK-Cu",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "4 units (1mg)"
+          },
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units (1mg)"
+          }
         ]
       },
-      "2026-06-01": {
+      "2026-06-02": {
+        "day": "Tuesday",
+        "doses": [
+          {
+            "peptideId": "peptide-hcg",
+            "peptideName": "HCG",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "10 units (250 IU)"
+          },
+          {
+            "peptideId": "peptide-ghk-cu",
+            "peptideName": "GHK-Cu",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "4 units (1mg)"
+          },
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units (1mg)"
+          }
+        ]
+      },
+      "2026-06-03": {
+        "day": "Wednesday",
+        "doses": [
+          {
+            "peptideId": "peptide-nad",
+            "peptideName": "NAD+",
+            "time": "10:00 AM",
+            "taken": false,
+            "dose": "50 units (50mg)"
+          },
+          {
+            "peptideId": "peptide-ghk-cu",
+            "peptideName": "GHK-Cu",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "4 units (1mg)"
+          },
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units (1mg)"
+          }
+        ]
+      },
+      "2026-06-04": {
+        "day": "Thursday",
+        "doses": [
+          {
+            "peptideId": "peptide-motsc",
+            "peptideName": "MOTS-c",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "50 units (2.5mg)"
+          },
+          {
+            "peptideId": "peptide-ghk-cu",
+            "peptideName": "GHK-Cu",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "4 units (1mg)"
+          },
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units (1mg)"
+          }
+        ]
+      },
+      "2026-06-05": {
+        "day": "Friday",
+        "doses": [
+          {
+            "peptideId": "peptide-hcg",
+            "peptideName": "HCG",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "10 units (250 IU)"
+          },
+          {
+            "peptideId": "peptide-ghk-cu",
+            "peptideName": "GHK-Cu",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "4 units (1mg)"
+          },
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          },
+          {
+            "peptideId": "peptide-tesamorelin",
+            "peptideName": "Tesamorelin",
+            "time": "9:30 PM",
+            "taken": false,
+            "dose": "30 units (1mg)"
+          }
+        ]
+      },
+      "2026-06-06": {
+        "day": "Saturday",
+        "doses": [
+          {
+            "peptideId": "peptide-ghk-cu",
+            "peptideName": "GHK-Cu",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "4 units (1mg)"
+          },
+          {
+            "peptideId": "peptide-selank",
+            "peptideName": "Selank",
+            "time": "8:30 AM",
+            "taken": false,
+            "dose": "9 units (300mcg)"
+          }
+        ]
+      },
+      "2026-06-07": {
         "day": "Sunday",
         "doses": [
-          { "peptideId": "peptide-ghk-cu", "peptideName": "GHK-Cu", "time": "8:00 AM", "taken": false, "dose": "4 units (1mg)" }
+          {
+            "peptideId": "peptide-ghk-cu",
+            "peptideName": "GHK-Cu",
+            "time": "8:00 AM",
+            "taken": false,
+            "dose": "4 units (1mg)"
+          }
         ],
         "notes": "GHK-Cu daily even on rest days. No Tesamorelin Sunday."
       }
@@ -500,6 +1088,6 @@
       "trainingQuality": null
     },
     "sideEffects": [],
-    "notes": "Week 6 — GHK-Cu added (daily, 4 units / 1mg). 30-day ON cycle begins. Ramp to 8 units (2mg) at Day 15. Watch skin, recovery, inflammation."
+    "notes": "Week 6 \u2014 GHK-Cu added (daily, 4 units / 1mg). 30-day ON cycle begins. Ramp to 8 units (2mg) at Day 15. Watch skin, recovery, inflammation."
   }
 ]
