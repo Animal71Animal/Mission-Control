@@ -42,11 +42,11 @@
     },
     {
       "id": "6",
-      "text": "Fix the 'no mic in dressing room' issue",
+      "text": "Fix Dressing Room Speakers",
       "completed": false,
       "category": "Audio",
       "priority": "high",
-      "due_date": null
+      "due_date": "2026-04-22"
     },
     {
       "id": "7",
@@ -177,5 +177,5 @@
       "due_date": "2026-04-16"
     }
   ],
-  "last_updated": "2026-04-17T22:14:25.609Z"
+  "last_updated": "2026-04-17T22:17:18.942Z"
 }
