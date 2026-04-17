@@ -27,7 +27,7 @@
     {
       "id": "4",
       "text": "Get smoke machine in the DMX chain",
-      "completed": false,
+      "completed": true,
       "category": "Lighting",
       "priority": "medium",
       "due_date": null
@@ -177,5 +177,5 @@
       "due_date": "2026-04-16"
     }
   ],
-  "last_updated": "2026-04-17T22:13:44.864Z"
+  "last_updated": "2026-04-17T22:13:56.395Z"
 }
