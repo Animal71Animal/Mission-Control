@@ -234,8 +234,8 @@ export default function PersonalTasksPage() {
                   <div style={{ display: "flex", gap: 8, marginTop: 8, flexWrap: "wrap", alignItems: "center" }}>
                     <span style={{ fontSize: "0.7rem", padding: "2px 8px", borderRadius: 4, background: (CATEGORY_COLORS[task.category] || "#888") + "22", color: CATEGORY_COLORS[task.category] || "#888" }}>{task.category}</span>
                     <span style={{ fontSize: "0.7rem", padding: "2px 8px", borderRadius: 4, background: PRIORITY_COLORS[task.priority] + "22", color: PRIORITY_COLORS[task.priority] }}>{task.priority}</span>
-                    {task.due_date && <span style={{ fontSize: "0.7rem", color: "var(--muted)" }}>📅 {new Date(task.due_date).toLocaleDateString()}</span>}
-                    {task.completed && task.completed_at && <span style={{ fontSize: "0.7rem", color: "#00c87c" }}>✓ {new Date(task.completed_at).toLocaleDateString()}</span>}
+                    {task.due_date && <span style={{ fontSize: "0.7rem", color: "var(--muted)" }}>📅 {new Date(task.due_date + "T12:00:00").toLocaleDateString()}</span>}
+                    {task.completed && task.completed_at && <span style={{ fontSize: "0.7rem", color: "#00c87c" }}>✓ {new Date(task.completed_at + "T12:00:00").toLocaleDateString()}</span>}
                   </div>
                 </div>
                 <div style={{ display: "flex", gap: 6, flexShrink: 0 }}>

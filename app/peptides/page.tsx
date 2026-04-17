@@ -277,7 +277,7 @@ export default function PeptidesPage() {
                   >
                     <div>
                       <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "var(--text)", marginBottom: 4 }}>
-                        Week {week.weekNumber} — {new Date(week.weekStarting).toLocaleDateString("en-US", { month: "short", day: "numeric" })}
+                        Week {week.weekNumber} — {new Date(week.weekStarting + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" })}
                       </h3>
                       <p style={{ fontSize: "0.8rem", color: "var(--muted)", margin: 0 }}>{week.notes}</p>
                     </div>
@@ -297,7 +297,7 @@ export default function PeptidesPage() {
                           <div key={date} style={{ background: "var(--bg)", borderRadius: 8, padding: 12 }}>
                             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
                               <span style={{ fontWeight: 600, color: "var(--text)", fontSize: "0.9rem" }}>
-                                {day.day} — {new Date(date).toLocaleDateString("en-US", { month: "short", day: "numeric" })}
+                                {day.day} — {new Date(date + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" })}
                               </span>
                               {day.notes && (
                                 <span style={{ fontSize: "0.75rem", color: "var(--muted)", fontStyle: "italic" }}>{day.notes}</span>
@@ -493,7 +493,7 @@ export default function PeptidesPage() {
                       {/* Start Date */}
                       {peptide.startDate && (
                         <div style={{ fontSize: "0.8rem", color: "var(--muted)" }}>
-                          Started: {new Date(peptide.startDate).toLocaleDateString()}
+                          Started: {new Date(peptide.startDate + "T12:00:00").toLocaleDateString()}
                         </div>
                       )}
                     </div>
