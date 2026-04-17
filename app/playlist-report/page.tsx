@@ -24,6 +24,22 @@ interface ExpandedTakeaway {
   detail: string;
 }
 
+interface OcEpisode {
+  id: string;
+  episodeNumber: number;
+  title: string;
+  url: string;
+  channel: string;
+  publishedDate: string;
+  discoveredDate: string;
+  summary: string;
+  keyTakeaways: string[];
+  skillsMentioned: string[];
+  toolsCovered: string[];
+  priscyllaTake: string;
+  expandedTakeaways: { title: string; detail: string }[];
+}
+
 interface LiveEpisode {
   id: string;
   episodeNumber: number;
@@ -97,20 +113,30 @@ function BulletList({ text }: { text: string }) {
 
 export default function PlaylistReportPage() {
   const [entries, setEntries] = useState<VideoEntry[]>([]);
+  const [ocEpisodes, setOcEpisodes] = useState<OcEpisode[]>([]);
+  const [ocLastChecked, setOcLastChecked] = useState<string | null>(null);
+  const [ocOpen, setOcOpen] = useState(true);
+  const [ocExpanded, setOcExpanded] = useState<string | null>(null);
   const [search, setSearch] = useState("");
   const [expanded, setExpanded] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [videosOpen, setVideosOpen] = useState(true);
+  const [videosOpen, setVideosOpen] = useState(false);
 
   useEffect(() => {
-    fetch("/data/openclaw-playlist-report-full.md")
-      .then(r => { if (!r.ok) throw new Error("not found"); return r.text(); })
-      .then(reportContent => {
-        if (reportContent) setEntries(parseReport(reportContent));
-        setLoading(false);
-      })
-      .catch(() => setLoading(false));
+    Promise.all([
+      fetch("/data/openclaw-playlist-report-full.md")
+        .then(r => { if (!r.ok) throw new Error("not found"); return r.text(); })
+        .catch(() => ""),
+      fetch("/api/openclaw-episodes")
+        .then(r => r.json())
+        .catch(() => ({ episodes: [], last_checked: null })),
+    ]).then(([reportContent, ocData]) => {
+      if (reportContent) setEntries(parseReport(reportContent));
+      setOcEpisodes(ocData.episodes || []);
+      setOcLastChecked(ocData.last_checked);
+      setLoading(false);
+    }).catch(() => setLoading(false));
   }, []);
 
   const filtered = entries.filter(e => {
@@ -194,6 +220,100 @@ export default function PlaylistReportPage() {
 
       {!loading && !error && (
         <div>
+          {/* OpenClaw Discovered Videos */}
+          <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden", marginBottom: 24 }}>
+            <button onClick={() => setOcOpen(!ocOpen)} style={{
+              display: "flex", alignItems: "center", justifyContent: "space-between",
+              width: "100%", padding: "16px 20px",
+              background: "linear-gradient(135deg, rgba(155,93,229,0.1), rgba(0,245,212,0.05))",
+              border: "none", color: "var(--text)", fontSize: "1rem", fontWeight: 600, cursor: "pointer", textAlign: "left",
+            }}>
+              <span>
+                🦞 OpenClaw Videos
+                <span style={{ fontSize: "0.75rem", color: "var(--muted)", fontWeight: 400, marginLeft: 8 }}>
+                  {ocEpisodes.length} found · {ocLastChecked ? `Last checked ${new Date(ocLastChecked).toLocaleDateString()}` : "Not yet checked"}
+                </span>
+              </span>
+              <span style={{ transform: ocOpen ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.2s" }}>▼</span>
+            </button>
+            {ocOpen && (
+              <div style={{ padding: "0 20px 20px" }}>
+                {ocEpisodes.length === 0 ? (
+                  <div style={{ color: "var(--muted)", textAlign: "center", padding: 40 }}>
+                    No videos found yet. Monitor runs daily at 3 PM MDT.
+                  </div>
+                ) : (
+                  <div style={{ display: "flex", flexDirection: "column", gap: 12, marginTop: 16 }}>
+                    {ocEpisodes.map(ep => {
+                      const isOpen = ocExpanded === ep.id;
+                      return (
+                        <div key={ep.id} style={{ background: "var(--bg)", border: `1px solid ${isOpen ? "var(--accent)" : "var(--border)"}`, borderRadius: 10, overflow: "hidden" }}>
+                          <button onClick={() => setOcExpanded(isOpen ? null : ep.id)} style={{
+                            width: "100%", display: "flex", alignItems: "center", gap: 14,
+                            padding: "14px 18px", background: "transparent", border: "none", cursor: "pointer", textAlign: "left",
+                          }}>
+                            <span style={{
+                              minWidth: 44, height: 44, borderRadius: 8,
+                              background: "rgba(155,93,229,0.15)", color: "var(--accent)",
+                              display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.2rem",
+                            }}>🦞</span>
+                            <div style={{ flex: 1 }}>
+                              <div style={{ fontSize: "0.9rem", fontWeight: 600, color: "var(--text)" }}>{ep.title}</div>
+                              <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 3 }}>
+                                {ep.channel} · {new Date(ep.publishedDate + "T12:00:00").toLocaleDateString()}
+                              </div>
+                            </div>
+                            <span style={{ color: "var(--muted)", fontSize: "1rem" }}>{isOpen ? "▲" : "▼"}</span>
+                          </button>
+                          {isOpen && (
+                            <div style={{ padding: "0 18px 20px", borderTop: "1px solid var(--border)" }}>
+                              <a href={ep.url} target="_blank" rel="noopener noreferrer" style={{
+                                display: "inline-block", marginTop: 14, marginBottom: 16,
+                                fontSize: "0.78rem", color: "var(--accent)", textDecoration: "none",
+                                background: "rgba(155,93,229,0.1)", padding: "6px 12px", borderRadius: 5,
+                              }}>▶ Watch on YouTube</a>
+                              {ep.summary && <Section label="Summary"><p style={{ fontSize: "0.85rem", lineHeight: 1.65, color: "var(--text)", margin: 0 }}>{ep.summary}</p></Section>}
+                              {ep.keyTakeaways?.length > 0 && (
+                                <Section label="🎯 Key Takeaways">
+                                  <ul style={{ margin: 0, paddingLeft: 18, fontSize: "0.85rem", lineHeight: 1.8, color: "var(--text)" }}>
+                                    {ep.keyTakeaways.map((t, i) => <li key={i}>{t}</li>)}
+                                  </ul>
+                                </Section>
+                              )}
+                              {ep.skillsMentioned?.length > 0 && (
+                                <Section label="🛠️ Skills Mentioned">
+                                  <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                                    {ep.skillsMentioned.map((s, i) => (
+                                      <span key={i} style={{ fontSize: "0.75rem", background: "rgba(155,93,229,0.15)", color: "var(--accent)", padding: "4px 10px", borderRadius: 12 }}>{s}</span>
+                                    ))}
+                                  </div>
+                                </Section>
+                              )}
+                              {ep.toolsCovered?.length > 0 && (
+                                <Section label="⚙️ Tools Covered">
+                                  <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                                    {ep.toolsCovered.map((t, i) => (
+                                      <span key={i} style={{ fontSize: "0.75rem", background: "rgba(0,245,212,0.1)", color: "var(--accent2)", padding: "4px 10px", borderRadius: 12 }}>{t}</span>
+                                    ))}
+                                  </div>
+                                </Section>
+                              )}
+                              {ep.priscyllaTake && (
+                                <Section label="🦞 PriScylla's Take">
+                                  <p style={{ fontSize: "0.85rem", lineHeight: 1.65, color: "var(--accent2)", margin: 0, fontStyle: "italic" }}>{ep.priscyllaTake}</p>
+                                </Section>
+                              )}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+
           {/* Video Summaries Section */}
           <div style={{
             background: "var(--card)",
