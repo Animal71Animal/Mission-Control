@@ -22,8 +22,22 @@ interface Shift {
   notes?: string;
 }
 
+interface Expense {
+  date: string;
+  type: string;
+  session_id?: string;
+  amount: number;
+  kwh?: number;
+  rate_per_kwh?: number;
+  duration_minutes?: number;
+  location?: string;
+  shift_id: string | null;
+  notes?: string;
+}
+
 interface UberData {
   uber_shifts: Shift[];
+  expenses: Expense[];
   monthly_summary: Record<string, any>;
   last_updated: string;
 }
@@ -135,10 +149,36 @@ export default function UberProfitPage() {
         </div>
       </div>
 
+      {/* Charging Sessions */}
+      {data.expenses && data.expenses.filter(e => e.type === 'charging').length > 0 && (
+        <div style={{ marginTop: 28 }}>
+          <h2 style={{ fontSize: "1rem", fontWeight: 700, margin: "0 0 16px", color: "var(--text)" }}>⚡ Charging Sessions</h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+            {data.expenses.filter(e => e.type === 'charging').slice().reverse().map((exp, i) => (
+              <div key={i} style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 10, padding: 14, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <div>
+                  <div style={{ fontWeight: 600, fontSize: "0.9rem", color: "var(--text)" }}>{exp.date}</div>
+                  <div style={{ fontSize: "0.78rem", color: "var(--muted)", marginTop: 2 }}>
+                    {exp.kwh?.toFixed(2)} kWh @ ${exp.rate_per_kwh}/kWh • {exp.duration_minutes}min
+                  </div>
+                  {exp.location && <div style={{ fontSize: "0.72rem", color: "var(--muted)", marginTop: 2 }}>📍 {exp.location}</div>}
+                  <div style={{ fontSize: "0.72rem", marginTop: 4, color: exp.shift_id ? '#00c87c' : '#fee440' }}>
+                    {exp.shift_id ? `✅ Applied to ${exp.shift_id}` : '⏳ Unattributed — will deduct from next shift'}
+                  </div>
+                </div>
+                <div style={{ textAlign: "right" }}>
+                  <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "#f15bb5" }}>-${exp.amount.toFixed(2)}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* Footer */}
       <div style={{ marginTop: 28, padding: "16px", background: "rgba(0,187,249,0.05)", border: "1px solid rgba(0,187,249,0.2)", borderRadius: 10 }}>
         <p style={{ margin: 0, fontSize: "0.8rem", color: "var(--muted)" }}>
-          ℹ️ See `/wlp/skills/uber-tracking/SKILL.md` for calculation details. Charging deducted at 3.5 mi/kWh efficiency ratio.
+          ℹ️ Charging deducted at 3.5 mi/kWh efficiency ratio. Unattributed sessions apply to next Uber shift.
         </p>
       </div>
     </div>
