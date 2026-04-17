@@ -17,8 +17,8 @@
     },
     {
       "month": "April",
-      "amount": 807,
-      "nights": 6
+      "amount": 887,
+      "nights": 7
     }
   ],
   "topTippers": [
@@ -181,7 +181,7 @@
       "jan": 89,
       "feb": 49,
       "mar": 4,
-      "apr": 28
+      "apr": 33
     },
     {
       "name": "Skylar",
@@ -194,7 +194,7 @@
       "jan": 26,
       "feb": 59,
       "mar": 47,
-      "apr": 85
+      "apr": 105
     },
     {
       "name": "Noelle",
@@ -213,7 +213,7 @@
       "jan": 48,
       "feb": 22,
       "mar": 52,
-      "apr": 80
+      "apr": 85
     },
     {
       "name": "Berlin",
@@ -254,7 +254,7 @@
       "jan": 25,
       "feb": 15,
       "mar": 40,
-      "apr": 15
+      "apr": 25
     },
     {
       "name": "Asia",
@@ -420,7 +420,7 @@
       "jan": 7,
       "feb": 5,
       "mar": 28,
-      "apr": 15
+      "apr": 20
     },
     {
       "name": "Maria",
@@ -3559,6 +3559,20 @@
             "dancer": "Macy",
             "amount": 0
           }
+        ]
+      },
+      {
+        "date": "Thu Apr 17",
+        "total": 80,
+        "dancers": [
+          { "dancer": "Kody", "amount": 5 },
+          { "dancer": "Kiki", "amount": 10 },
+          { "dancer": "Mia", "amount": 5 },
+          { "dancer": "Georgia", "amount": 20 },
+          { "dancer": "Willow", "amount": 5 },
+          { "dancer": "Tiana", "amount": 5 },
+          { "dancer": "Natasha", "amount": 10 },
+          { "dancer": "Macy", "amount": 20 }
         ]
       },
       {
