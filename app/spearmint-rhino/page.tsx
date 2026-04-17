@@ -106,7 +106,28 @@ export default function SpearmintRhinoPage() {
     await fetch(`/api/srb-todo?id=${id}`, { method: "DELETE" });
   };
 
-  const filtered = filter === "All" ? tasks : tasks.filter(t => t.category === filter);
+  const priorityRank: Record<string, number> = { high: 0, medium: 1, low: 2 };
+
+  const sorted = [...tasks].sort((a, b) => {
+    // Completed tasks always go to bottom
+    if (a.completed !== b.completed) return a.completed ? 1 : -1;
+    // Overdue first
+    const aOverdue = isOverdue(a.due_date) ? 0 : 1;
+    const bOverdue = isOverdue(b.due_date) ? 0 : 1;
+    if (aOverdue !== bOverdue) return aOverdue - bOverdue;
+    // Has due date before no due date
+    if (a.due_date && !b.due_date) return -1;
+    if (!a.due_date && b.due_date) return 1;
+    // Sort by due date ascending
+    if (a.due_date && b.due_date) {
+      const diff = new Date(a.due_date).getTime() - new Date(b.due_date).getTime();
+      if (diff !== 0) return diff;
+    }
+    // Then by priority
+    return (priorityRank[a.priority] ?? 2) - (priorityRank[b.priority] ?? 2);
+  });
+
+  const filtered = filter === "All" ? sorted : sorted.filter(t => t.category === filter);
   const done = tasks.filter(t => t.completed).length;
   const progress = tasks.length > 0 ? (done / tasks.length) * 100 : 0;
 
