@@ -117,6 +117,8 @@ export default function PlaylistReportPage() {
   const [ocLastChecked, setOcLastChecked] = useState<string | null>(null);
   const [ocOpen, setOcOpen] = useState(true);
   const [ocExpanded, setOcExpanded] = useState<string | null>(null);
+  const [ocDoneOpen, setOcDoneOpen] = useState(false);
+  const [ocSaving, setOcSaving] = useState<string | null>(null);
   const [search, setSearch] = useState("");
   const [expanded, setExpanded] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
@@ -244,7 +246,7 @@ export default function PlaylistReportPage() {
                   </div>
                 ) : (
                   <div style={{ display: "flex", flexDirection: "column", gap: 12, marginTop: 16 }}>
-                    {ocEpisodes.map(ep => {
+                    {ocEpisodes.filter(ep => !ep.completed).map(ep => {
                       const isOpen = ocExpanded === ep.id;
                       return (
                         <div key={ep.id} style={{ background: "var(--bg)", border: `1px solid ${isOpen ? "var(--accent)" : "var(--border)"}`, borderRadius: 10, overflow: "hidden" }}>
@@ -303,11 +305,71 @@ export default function PlaylistReportPage() {
                                   <p style={{ fontSize: "0.85rem", lineHeight: 1.65, color: "var(--accent2)", margin: 0, fontStyle: "italic" }}>{ep.priscyllaTake}</p>
                                 </Section>
                               )}
+                              <button
+                                onClick={async () => {
+                                  setOcSaving(ep.id);
+                                  setOcEpisodes(prev => prev.map(e => e.id === ep.id ? { ...e, completed: true } : e));
+                                  await fetch('/api/openclaw-episodes', {
+                                    method: 'PATCH',
+                                    headers: { 'Content-Type': 'application/json' },
+                                    body: JSON.stringify({ id: ep.id, completed: true }),
+                                  });
+                                  setOcSaving(null);
+                                }}
+                                style={{
+                                  marginTop: 16, padding: "8px 18px", borderRadius: 8,
+                                  background: "rgba(0,200,124,0.15)", border: "1px solid #00c87c",
+                                  color: "#00c87c", fontWeight: 700, fontSize: "0.85rem", cursor: "pointer",
+                                }}
+                              >
+                                {ocSaving === ep.id ? "Saving..." : "✅ Mark as Done"}
+                              </button>
                             </div>
                           )}
                         </div>
                       );
                     })}
+
+                    {/* Done list */}
+                    {ocEpisodes.filter(ep => ep.completed).length > 0 && (
+                      <div style={{ marginTop: 8 }}>
+                        <button onClick={() => setOcDoneOpen(s => !s)} style={{
+                          background: "none", border: "none", cursor: "pointer",
+                          color: "var(--muted)", fontSize: "0.85rem", display: "flex", alignItems: "center", gap: 6, padding: 0,
+                        }}>
+                          <span style={{ transform: ocDoneOpen ? "rotate(90deg)" : "rotate(0deg)", transition: "transform 0.2s", display: "inline-block" }}>▶</span>
+                          Done ({ocEpisodes.filter(ep => ep.completed).length})
+                        </button>
+                        {ocDoneOpen && (
+                          <div style={{ display: "flex", flexDirection: "column", gap: 8, marginTop: 10 }}>
+                            {ocEpisodes.filter(ep => ep.completed).map(ep => (
+                              <div key={ep.id} style={{
+                                background: "var(--bg)", border: "1px solid var(--border)",
+                                borderRadius: 10, padding: "12px 18px", opacity: 0.45,
+                                display: "flex", alignItems: "center", gap: 12,
+                              }}>
+                                <span style={{ fontSize: "1.2rem" }}>✅</span>
+                                <div style={{ flex: 1 }}>
+                                  <div style={{ fontSize: "0.88rem", fontWeight: 600, color: "var(--text)", textDecoration: "line-through" }}>{ep.title}</div>
+                                  <div style={{ fontSize: "0.72rem", color: "var(--muted)" }}>{ep.channel}</div>
+                                </div>
+                                <button onClick={async () => {
+                                  setOcEpisodes(prev => prev.map(e => e.id === ep.id ? { ...e, completed: false } : e));
+                                  await fetch('/api/openclaw-episodes', {
+                                    method: 'PATCH',
+                                    headers: { 'Content-Type': 'application/json' },
+                                    body: JSON.stringify({ id: ep.id, completed: false }),
+                                  });
+                                }} style={{
+                                  fontSize: "0.72rem", color: "var(--muted)", background: "none",
+                                  border: "1px solid var(--border)", borderRadius: 6, padding: "4px 8px", cursor: "pointer",
+                                }}>Undo</button>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    )}
                   </div>
                 )}
               </div>
