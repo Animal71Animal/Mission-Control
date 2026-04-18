@@ -47,8 +47,8 @@ export default function PersonalTasksPage() {
   const [tasks, setTasks] = useState<PersonalTask[]>([]);
   const [loaded, setLoaded] = useState(false);
   const [showForm, setShowForm] = useState(false);
-  const [animalOpen, setAnimalOpen] = useState(true);
-  const [priscyllaOpen, setPriscyllaOpen] = useState(true);
+  const [animalOpen, setAnimalOpen] = useState(false);
+  const [priscyllaOpen, setPriscyllaOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
   const [filter, setFilter] = useState<"all" | "open" | "completed">("open");
