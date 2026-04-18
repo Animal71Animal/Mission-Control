@@ -1,10 +1,4 @@
 {
-  "tasks": [
-    { "id": "1", "text": "Set up studio workflow", "completed": false, "category": "Setup", "priority": "high" },
-    { "id": "2", "text": "Calibrate monitoring", "completed": false, "category": "Setup", "priority": "high" },
-    { "id": "3", "text": "Test recording chain", "completed": false, "category": "Testing", "priority": "medium" },
-    { "id": "4", "text": "Organize sample library", "completed": false, "category": "Organization", "priority": "medium" },
-    { "id": "5", "text": "Document session presets", "completed": false, "category": "Documentation", "priority": "low" }
-  ],
-  "last_updated": "2026-04-17T22:00:00.000Z"
+  "tasks": [],
+  "last_updated": "2026-04-18T19:44:00.000Z"
 }
