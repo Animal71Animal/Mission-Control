@@ -5,7 +5,8 @@
     "category": "Personal",
     "priority": "medium",
     "completed": false,
-    "created_at": "2026-04-14T06:59:00.000Z"
+    "created_at": "2026-04-14T06:59:00.000Z",
+    "owner": "animal"
   },
   {
     "id": "pt-1775686800001",
@@ -14,7 +15,8 @@
     "priority": "medium",
     "completed": true,
     "created_at": "2026-04-14T06:59:00.000Z",
-    "completed_at": "2026-04-18T18:58:27.246Z"
+    "completed_at": "2026-04-18T18:58:27.246Z",
+    "owner": "animal"
   },
   {
     "id": "pt-1775686800002",
@@ -23,7 +25,8 @@
     "priority": "medium",
     "completed": true,
     "created_at": "2026-04-14T06:59:00.000Z",
-    "completed_at": "2026-04-17T21:58:39.190Z"
+    "completed_at": "2026-04-17T21:58:39.190Z",
+    "owner": "animal"
   },
   {
     "id": "task-1774843576600",
@@ -31,7 +34,8 @@
     "category": "Work",
     "priority": "medium",
     "completed": false,
-    "createdAt": "2026-03-30T04:06:16.600Z"
+    "createdAt": "2026-03-30T04:06:16.600Z",
+    "owner": "animal"
   },
   {
     "id": "task-1774843526550",
@@ -42,7 +46,8 @@
     "completed": false,
     "createdAt": "2026-03-30T04:05:26.550Z",
     "notes": null,
-    "due_date": "2026-04-18"
+    "due_date": "2026-04-18",
+    "owner": "animal"
   },
   {
     "id": "task-1774841802162",
@@ -50,7 +55,8 @@
     "category": "Work",
     "priority": "medium",
     "completed": false,
-    "createdAt": "2026-03-30T03:36:42.162Z"
+    "createdAt": "2026-03-30T03:36:42.162Z",
+    "owner": "animal"
   },
   {
     "id": "task-1774841641981",
@@ -60,7 +66,8 @@
     "dueDate": "2026-04-02",
     "completed": true,
     "createdAt": "2026-03-30T03:34:01.981Z",
-    "completedAt": "2026-04-11T01:23:40.984Z"
+    "completedAt": "2026-04-11T01:23:40.984Z",
+    "owner": "animal"
   },
   {
     "id": "task-1774841589378",
@@ -69,7 +76,8 @@
     "priority": "high",
     "completed": true,
     "createdAt": "2026-03-30T03:33:09.378Z",
-    "completedAt": "2026-04-12T22:37:43.595Z"
+    "completedAt": "2026-04-12T22:37:43.595Z",
+    "owner": "animal"
   },
   {
     "id": "pt-1775423533238",
@@ -80,7 +88,8 @@
     "completed": true,
     "created_at": "2026-04-05T21:12:13.238Z",
     "due_date": "2026-04-14",
-    "completed_at": "2026-04-17T21:58:32.555Z"
+    "completed_at": "2026-04-17T21:58:32.555Z",
+    "owner": "animal"
   },
   {
     "id": "pt-1776203956693-h5yd0",
@@ -91,7 +100,8 @@
     "due_date": "2026-04-19",
     "completed": false,
     "created_at": "2026-04-14T21:59:16.693Z",
-    "completed_at": null
+    "completed_at": null,
+    "owner": "animal"
   },
   {
     "id": "T3",
@@ -102,7 +112,8 @@
     "due_date": null,
     "completed": false,
     "created_at": "2026-03-29T18:08:01.783Z",
-    "completed_at": null
+    "completed_at": null,
+    "owner": "animal"
   },
   {
     "id": "T4",
@@ -113,7 +124,8 @@
     "due_date": null,
     "completed": false,
     "created_at": "2026-03-29T18:08:01.783Z",
-    "completed_at": null
+    "completed_at": null,
+    "owner": "animal"
   },
   {
     "id": "T5",
@@ -124,7 +136,8 @@
     "due_date": null,
     "completed": false,
     "created_at": "2026-03-29T18:08:01.783Z",
-    "completed_at": null
+    "completed_at": null,
+    "owner": "animal"
   },
   {
     "id": "T6",
@@ -135,7 +148,8 @@
     "due_date": null,
     "completed": false,
     "created_at": "2026-03-29T18:08:01.783Z",
-    "completed_at": null
+    "completed_at": null,
+    "owner": "animal"
   },
   {
     "id": "T7",
@@ -146,7 +160,8 @@
     "due_date": null,
     "completed": false,
     "created_at": "2026-03-29T18:08:01.783Z",
-    "completed_at": null
+    "completed_at": null,
+    "owner": "animal"
   },
   {
     "id": "T9",
@@ -157,7 +172,8 @@
     "due_date": null,
     "completed": false,
     "created_at": "2026-03-29T18:08:01.783Z",
-    "completed_at": null
+    "completed_at": null,
+    "owner": "priscylla"
   },
   {
     "id": "T10",
@@ -168,7 +184,8 @@
     "due_date": null,
     "completed": false,
     "created_at": "2026-03-29T18:08:01.783Z",
-    "completed_at": null
+    "completed_at": null,
+    "owner": "priscylla"
   },
   {
     "id": "T11",
@@ -179,6 +196,7 @@
     "due_date": null,
     "completed": false,
     "created_at": "2026-03-29T18:08:01.783Z",
-    "completed_at": null
+    "completed_at": null,
+    "owner": "priscylla"
   }
 ]
