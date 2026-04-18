@@ -2,7 +2,7 @@ export const dynamic = "force-dynamic";
 
 import { NextRequest, NextResponse } from "next/server";
 
-const ABACUS_API_KEY = process.env.ABACUSAI_API_KEY || process.env.ABACUS_API_KEY;
+const ABACUS_API_KEY = process.env.ABACUSAI_API_KEY;
 
 export async function POST(request: NextRequest) {
   try {
