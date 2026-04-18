@@ -54,6 +54,7 @@ export async function GET(request: NextRequest) {
       details: error.message 
     }, { status: 500 });
   }
+}
 
 // POST /api/calendar - Create new event
 export async function POST(request: NextRequest) {
