@@ -158,5 +158,27 @@
     "completed": false,
     "created_at": "2026-03-29T18:08:01.783Z",
     "completed_at": null
+  },
+  {
+    "id": "T10",
+    "title": "Mission Control \u2014 Google Calendar integration",
+    "notes": "Connect Google Calendar API so calendar events show in MC. GOG authenticated.",
+    "category": "WLP",
+    "priority": "medium",
+    "due_date": null,
+    "completed": false,
+    "created_at": "2026-03-29T18:08:01.783Z",
+    "completed_at": null
+  },
+  {
+    "id": "T11",
+    "title": "Fix Google Drive integration (GOG malfunction?)",
+    "notes": "Google Drive tab not working \u2014 GOG auth issue suspected.",
+    "category": "WLP",
+    "priority": "low",
+    "due_date": null,
+    "completed": false,
+    "created_at": "2026-03-29T18:08:01.783Z",
+    "completed_at": null
   }
 ]
