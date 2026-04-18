@@ -250,9 +250,9 @@ export default function PersonalTasksPage() {
         );
 
         return (
-          <>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, alignItems: "start" }}>
             {/* ANIMAL's Tasks */}
-            <div style={{ marginBottom: 20 }}>
+            <div>
               <button onClick={() => setAnimalOpen(o => !o)} style={{ display: "flex", alignItems: "center", gap: 10, background: "none", border: "none", cursor: "pointer", padding: "8px 0", width: "100%", textAlign: "left" }}>
                 <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#9b5de5", flexShrink: 0 }} />
                 <h2 style={{ margin: 0, fontSize: "1rem", fontWeight: 700, color: "var(--text)" }}>ANIMAL's Tasks</h2>
@@ -269,7 +269,7 @@ export default function PersonalTasksPage() {
             </div>
 
             {/* PriScylla's Tasks */}
-            <div>
+            <div style={{ marginBottom: 0 }}>
               <button onClick={() => setPriscyllaOpen(o => !o)} style={{ display: "flex", alignItems: "center", gap: 10, background: "none", border: "none", cursor: "pointer", padding: "8px 0", width: "100%", textAlign: "left" }}>
                 <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#fee440", flexShrink: 0 }} />
                 <h2 style={{ margin: 0, fontSize: "1rem", fontWeight: 700, color: "var(--text)" }}>PriScylla's Tasks</h2>
@@ -284,7 +284,7 @@ export default function PersonalTasksPage() {
                 </div>
               )}
             </div>
-          </>
+          </div>
         );
       })()}
     </div>
