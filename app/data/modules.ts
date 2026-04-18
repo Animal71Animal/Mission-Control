@@ -81,4 +81,4 @@ export const groupLabels: Record<ModuleGroup, string> = {
 };
 
 // Group order for sidebar and overview
-export const groupOrder: ModuleGroup[] = ["business", "personal", "creative", "external"];
+export const groupOrder: ModuleGroup[] = ["external", "business", "personal", "creative"];
