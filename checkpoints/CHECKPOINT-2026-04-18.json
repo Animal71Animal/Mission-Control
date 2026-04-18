@@ -1,0 +1,41 @@
+{
+  "type": "checkpoint",
+  "timestamp": "2026-04-18T21:00:00Z",
+  "note": "Major session: GitHub persistence audit + Calendar overhaul + MC nav reorganization",
+  "status": "stable",
+  "git_status": "clean - d25fc5db",
+  "active_projects": [
+    "Mission Control v2",
+    "DJ Automation (BoothMind)",
+    "AI Artists (Kade Rivers, Madison Blair, Aria Vale)"
+  ],
+  "changes_this_session": [
+    "Logged 8 Uber rides (Apr 18) - $147.55 gross / $140.36 net to uber-profit.json",
+    "Reorganized MC nav into 4 groups: Business Operations, Personal, Creative, External Links",
+    "Moved External Links tab to top",
+    "Migrated Calendar API from Google Calendar to GitHub (calendar-events.json)",
+    "Migrated Artist Assets API from local fs to GitHub",
+    "Migrated OpenClaw Videos API from local fs to GitHub",
+    "Calendar now auto-aggregates from 3 sources: calendar-events.json + srb-todo.json + personal-tasks.json",
+    "Cleared duplicate calendar entries from calendar-events.json",
+    "Saved Google service account key to ~/.google-calendar-key.json"
+  ],
+  "github_persistence": {
+    "srb-tips": true,
+    "srb-todo": true,
+    "personal-tasks": true,
+    "tesla": true,
+    "uber-profit": true,
+    "peptides": true,
+    "joules-claw": true,
+    "calendar": true,
+    "artist-assets": true,
+    "openclaw-videos": true
+  },
+  "deploy_url": "https://mission-control-cyan-omega.vercel.app",
+  "high_urgency": [
+    "Investor pitch review (BoothMind) - due Apr 18",
+    "Get marketing materials ready for Bryan presentation - due Apr 19",
+    "Peptide stack starts Apr 20"
+  ]
+}
