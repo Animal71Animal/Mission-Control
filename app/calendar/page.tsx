@@ -192,9 +192,28 @@ export default function CalendarPage() {
     : [];
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+    <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+      <style>{`
+        .cal-layout { display: flex; gap: 20px; align-items: flex-start; }
+        .cal-sidebar { width: 260px; flex-shrink: 0; display: flex; flex-direction: column; gap: 16px; }
+        .cal-cell { min-height: 90px; }
+        .cal-day-label { font-size: 0.75rem; }
+        @media (max-width: 768px) {
+          .cal-layout { flex-direction: column; }
+          .cal-sidebar { width: 100%; }
+          .cal-cell { min-height: 56px; }
+          .cal-day-label { font-size: 0.65rem; }
+          .cal-event-chip { font-size: 0.6rem !important; padding: 1px 3px !important; }
+          .cal-month-label { font-size: 0.95rem !important; min-width: 120px !important; }
+        }
+        @media (max-width: 480px) {
+          .cal-cell { min-height: 44px; }
+          .cal-day-num { width: 20px !important; height: 20px !important; font-size: 0.7rem !important; }
+        }
+      `}</style>
+
       {/* Top bar */}
-      <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
         <h1 style={{
           fontSize: "1.5rem", fontWeight: 700, margin: 0,
           background: "linear-gradient(135deg, #9b5de5, #c77dff)",
@@ -204,7 +223,7 @@ export default function CalendarPage() {
         </h1>
         <div style={{ flex: 1 }} />
         <button onClick={prevMonth} style={btnStyle}>←</button>
-        <span style={{ fontWeight: 700, fontSize: "1.1rem", minWidth: 160, textAlign: "center" }}>
+        <span className="cal-month-label" style={{ fontWeight: 700, fontSize: "1.1rem", minWidth: 160, textAlign: "center" }}>
           {MONTHS[currentMonth]} {currentYear}
         </span>
         <button onClick={nextMonth} style={btnStyle}>→</button>
@@ -230,13 +249,13 @@ export default function CalendarPage() {
       )}
 
       {/* Main layout */}
-      <div style={{ display: "flex", gap: 20, alignItems: "flex-start" }}>
+      <div className="cal-layout">
         {/* Calendar grid */}
         <div style={{ flex: 1, minWidth: 0 }}>
           {/* Day headers */}
           <div style={{ display: "grid", gridTemplateColumns: "repeat(7, 1fr)", marginBottom: 0 }}>
             {DAYS.map((d, i) => (
-              <div key={d} style={{
+              <div key={d} className="cal-day-label" style={{
                 padding: "8px 4px",
                 textAlign: "center",
                 fontSize: "0.75rem",
@@ -266,6 +285,7 @@ export default function CalendarPage() {
                 <div
                   key={idx}
                   onClick={() => day && setSelectedDay(ymd === selectedDay ? null : ymd)}
+                  className="cal-cell"
                   style={{
                     minHeight: 90,
                     border: "1px solid var(--border)",
@@ -285,7 +305,7 @@ export default function CalendarPage() {
                     <>
                       {/* Day number */}
                       <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 4 }}>
-                        <span style={{
+                        <span className="cal-day-num" style={{
                           width: 24, height: 24,
                           display: "flex", alignItems: "center", justifyContent: "center",
                           borderRadius: "50%",
@@ -304,6 +324,7 @@ export default function CalendarPage() {
                         {dayEvents.slice(0, 3).map((ev) => (
                           <div
                             key={ev.id}
+                            className="cal-event-chip"
                             style={{
                               background: ev.color || "#888",
                               color: ev.category === "meeting" ? "#222" : "#fff",
@@ -335,7 +356,7 @@ export default function CalendarPage() {
         </div>
 
         {/* Right sidebar */}
-        <div style={{ width: 260, flexShrink: 0, display: "flex", flexDirection: "column", gap: 16 }}>
+        <div className="cal-sidebar">
           {/* Day Detail Panel */}
           {selectedDay && (
             <div style={{
