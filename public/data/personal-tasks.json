@@ -94,7 +94,7 @@
   {
     "id": "pt-1776203956693-h5yd0",
     "title": "Get marketing materials ready for Bryan presentation",
-    "notes": "SRB \u2014 marketing materials for Bryan presentation",
+    "notes": "SRB — marketing materials for Bryan presentation",
     "category": "Work",
     "priority": "high",
     "due_date": "2026-04-19",
@@ -177,7 +177,7 @@
   },
   {
     "id": "T10",
-    "title": "Mission Control \u2014 Google Calendar integration",
+    "title": "Mission Control — Google Calendar integration",
     "notes": "Connect Google Calendar API so calendar events show in MC. GOG authenticated.",
     "category": "WLP",
     "priority": "medium",
@@ -190,13 +190,13 @@
   {
     "id": "T11",
     "title": "Fix Google Drive integration (GOG malfunction?)",
-    "notes": "Google Drive tab not working \u2014 GOG auth issue suspected.",
+    "notes": "Google Drive tab not working — GOG auth issue suspected.",
     "category": "WLP",
     "priority": "low",
     "due_date": null,
-    "completed": false,
+    "completed": true,
     "created_at": "2026-03-29T18:08:01.783Z",
-    "completed_at": null,
+    "completed_at": "2026-04-18T19:31:03.203Z",
     "owner": "priscylla"
   }
 ]
