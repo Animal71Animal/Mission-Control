@@ -26,7 +26,7 @@ export const modules: Module[] = [
   { href: "/uber-profit", icon: "🚘", title: "Uber Profit", desc: "Earnings tracking with proportional charging deduction.", status: "active", group: "systems" },
   { href: "/personal-tasks", icon: "✅", title: "Tasks", desc: "All tasks — personal, WLP, and work items with priority, due dates, and categories.", status: "active", group: "systems" },
   { href: "/joules-claw", icon: "⚡", title: "Joules Claw", desc: "Production and creative workflow management.", status: "active", group: "systems" },
-  { href: "/playlist-report", icon: "🎬", title: "YT Summaries", desc: "OpenClaw video playlist summaries with tools and insights.", status: "active", group: "systems" },
+  { href: "/playlist-report", icon: "🎬", title: "OpenClaw Videos", desc: "OpenClaw video playlist summaries with tools and insights.", status: "active", group: "systems" },
   { href: "/brief", icon: "☀️", title: "Morning Brief", desc: "Daily weather, news, and task rundown. Delivered at 10 AM.", status: "active", group: "external" },
   { href: "/drive", icon: "📁", title: "Google Drive", desc: "12-folder organized Drive. Snapshot + restore available.", status: "active", group: "external" },
   // { href: "/analytics", icon: "📊", title: "Analytics", desc: "GoatCounter metrics — views, visitors, top pages.", status: "active", group: "external" },
