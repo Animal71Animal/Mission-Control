@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 // Unfiltered analysis - uses AI to analyze actual article content
-const ABACUS_API_KEY = process.env.ABACUS_API_KEY || "s2_c5edf49c33054d4aaeacd93339eacb7c";
+const ABACUS_API_KEY = process.env.ABACUSAI_API_KEY;
 const ABACUS_BASE_URL = "https://routellm.abacus.ai/v1";
 
 interface AnalysisResult {
