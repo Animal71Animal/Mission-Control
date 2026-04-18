@@ -12,6 +12,7 @@ interface PersonalTask {
   completed: boolean;
   created_at: string;
   completed_at?: string | null;
+  owner?: "animal" | "priscylla";
 }
 
 const CATEGORIES = ["Personal", "WLP", "Work", "Health", "Finance", "Shopping", "Other"];
@@ -110,11 +111,7 @@ export default function PersonalTasksPage() {
     await apiDelete(id);
   };
 
-  let filtered = [...tasks];
-  if (filter === "open") filtered = filtered.filter((t) => !t.completed);
-  if (filter === "completed") filtered = filtered.filter((t) => t.completed);
-  if (categoryFilter !== "all") filtered = filtered.filter((t) => t.category === categoryFilter);
-  filtered.sort((a, b) => {
+  const sortTasks = (arr: PersonalTask[]) => [...arr].sort((a, b) => {
     if (a.completed !== b.completed) return a.completed ? 1 : -1;
     const po = { high: 0, medium: 1, low: 2 };
     if (po[a.priority] !== po[b.priority]) return po[a.priority] - po[b.priority];
@@ -123,6 +120,17 @@ export default function PersonalTasksPage() {
     if (b.due_date) return 1;
     return 0;
   });
+
+  const applyFilters = (arr: PersonalTask[]) => {
+    let f = [...arr];
+    if (filter === "open") f = f.filter((t) => !t.completed);
+    if (filter === "completed") f = f.filter((t) => t.completed);
+    if (categoryFilter !== "all") f = f.filter((t) => t.category === categoryFilter);
+    return sortTasks(f);
+  };
+
+  const myTasks = applyFilters(tasks.filter(t => !t.owner || t.owner === "animal"));
+  const priscyllaTasks = applyFilters(tasks.filter(t => t.owner === "priscylla"));
 
   const openCount = tasks.filter((t) => !t.completed).length;
   const doneCount = tasks.filter((t) => t.completed).length;
@@ -215,44 +223,62 @@ export default function PersonalTasksPage() {
         </select>
       </div>
 
-      {/* Task List */}
-      <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-        {filtered.length === 0 ? (
-          <div style={{ color: "var(--muted)", textAlign: "center", padding: "40px 20px" }}>
-            {filter === "completed" ? "No completed tasks yet" : "No tasks. Hit '+ Add Task' to get started."}
-          </div>
-        ) : (
-          filtered.map((task) => (
-            <div key={task.id} style={{ background: "var(--card)", border: "1px solid var(--border)", borderLeft: `4px solid ${CATEGORY_COLORS[task.category] || "#888"}`, borderRadius: 8, padding: "14px 16px", opacity: task.completed ? 0.6 : 1 }}>
-              <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
-                <input type="checkbox" checked={task.completed} onChange={() => toggleComplete(task)} style={{ marginTop: 4, cursor: "pointer", width: 18, height: 18 }} />
-                <div style={{ flex: 1 }}>
-                  <div style={{ fontWeight: 600, fontSize: "0.95rem", color: "var(--text)", textDecoration: task.completed ? "line-through" : "none" }}>
-                    {task.title}
-                  </div>
-                  {task.notes && <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginTop: 4 }}>{task.notes}</div>}
-                  <div style={{ display: "flex", gap: 8, marginTop: 8, flexWrap: "wrap", alignItems: "center" }}>
-                    <span style={{ fontSize: "0.7rem", padding: "2px 8px", borderRadius: 4, background: (CATEGORY_COLORS[task.category] || "#888") + "22", color: CATEGORY_COLORS[task.category] || "#888" }}>{task.category}</span>
-                    <span style={{ fontSize: "0.7rem", padding: "2px 8px", borderRadius: 4, background: PRIORITY_COLORS[task.priority] + "22", color: PRIORITY_COLORS[task.priority] }}>{task.priority}</span>
-                    {task.due_date && <span style={{ fontSize: "0.7rem", color: "var(--muted)" }}>📅 {new Date(task.due_date + "T12:00:00").toLocaleDateString()}</span>}
-                    {task.completed && task.completed_at && <span style={{ fontSize: "0.7rem", color: "#00c87c" }}>✓ {new Date(task.completed_at + "T12:00:00").toLocaleDateString()}</span>}
-                  </div>
-                </div>
-                <div style={{ display: "flex", gap: 6, flexShrink: 0 }}>
-                  <button onClick={() => startEdit(task)}
-                    style={{ background: "rgba(0,187,249,0.1)", border: "1px solid rgba(0,187,249,0.3)", borderRadius: 4, padding: "5px 10px", fontSize: "0.75rem", color: "#00bbf9", cursor: "pointer", fontWeight: 500 }}>
-                    ✏️ Edit
-                  </button>
-                  <button onClick={() => deleteTask(task.id)}
-                    style={{ background: "rgba(224,92,92,0.1)", border: "1px solid rgba(224,92,92,0.3)", borderRadius: 4, padding: "5px 10px", fontSize: "0.75rem", color: "#e05c5c", cursor: "pointer", fontWeight: 500 }}>
-                    🗑
-                  </button>
+      {/* Task Card Helper */}
+      {(() => {
+        const renderTask = (task: PersonalTask) => (
+          <div key={task.id} style={{ background: "var(--card)", border: "1px solid var(--border)", borderLeft: `4px solid ${CATEGORY_COLORS[task.category] || "#888"}`, borderRadius: 8, padding: "14px 16px", opacity: task.completed ? 0.6 : 1 }}>
+            <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
+              <input type="checkbox" checked={task.completed} onChange={() => toggleComplete(task)} style={{ marginTop: 4, cursor: "pointer", width: 18, height: 18 }} />
+              <div style={{ flex: 1 }}>
+                <div style={{ fontWeight: 600, fontSize: "0.95rem", color: "var(--text)", textDecoration: task.completed ? "line-through" : "none" }}>{task.title}</div>
+                {task.notes && <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginTop: 4 }}>{task.notes}</div>}
+                <div style={{ display: "flex", gap: 8, marginTop: 8, flexWrap: "wrap", alignItems: "center" }}>
+                  <span style={{ fontSize: "0.7rem", padding: "2px 8px", borderRadius: 4, background: (CATEGORY_COLORS[task.category] || "#888") + "22", color: CATEGORY_COLORS[task.category] || "#888" }}>{task.category}</span>
+                  <span style={{ fontSize: "0.7rem", padding: "2px 8px", borderRadius: 4, background: PRIORITY_COLORS[task.priority] + "22", color: PRIORITY_COLORS[task.priority] }}>{task.priority}</span>
+                  {task.due_date && <span style={{ fontSize: "0.7rem", color: "var(--muted)" }}>📅 {new Date(task.due_date + "T12:00:00").toLocaleDateString()}</span>}
+                  {task.completed && task.completed_at && <span style={{ fontSize: "0.7rem", color: "#00c87c" }}>✓ {new Date(task.completed_at + "T12:00:00").toLocaleDateString()}</span>}
                 </div>
               </div>
+              <div style={{ display: "flex", gap: 6, flexShrink: 0 }}>
+                <button onClick={() => startEdit(task)} style={{ background: "rgba(0,187,249,0.1)", border: "1px solid rgba(0,187,249,0.3)", borderRadius: 4, padding: "5px 10px", fontSize: "0.75rem", color: "#00bbf9", cursor: "pointer", fontWeight: 500 }}>✏️ Edit</button>
+                <button onClick={() => deleteTask(task.id)} style={{ background: "rgba(224,92,92,0.1)", border: "1px solid rgba(224,92,92,0.3)", borderRadius: 4, padding: "5px 10px", fontSize: "0.75rem", color: "#e05c5c", cursor: "pointer", fontWeight: 500 }}>🗑</button>
+              </div>
             </div>
-          ))
-        )}
-      </div>
+          </div>
+        );
+
+        return (
+          <>
+            {/* ANIMAL's Tasks */}
+            <div style={{ marginBottom: 28 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
+                <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#9b5de5" }} />
+                <h2 style={{ margin: 0, fontSize: "1rem", fontWeight: 700, color: "var(--text)" }}>ANIMAL's Tasks</h2>
+                <span style={{ fontSize: "0.75rem", color: "var(--muted)" }}>{myTasks.length} {filter === "open" ? "open" : ""}</span>
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                {myTasks.length === 0
+                  ? <div style={{ color: "var(--muted)", padding: "20px", textAlign: "center", fontSize: "0.85rem" }}>No tasks here.</div>
+                  : myTasks.map(renderTask)}
+              </div>
+            </div>
+
+            {/* PriScylla's Tasks */}
+            <div>
+              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
+                <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#fee440" }} />
+                <h2 style={{ margin: 0, fontSize: "1rem", fontWeight: 700, color: "var(--text)" }}>PriScylla's Tasks</h2>
+                <span style={{ fontSize: "0.75rem", color: "var(--muted)" }}>{priscyllaTasks.length} {filter === "open" ? "open" : ""}</span>
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                {priscyllaTasks.length === 0
+                  ? <div style={{ color: "var(--muted)", padding: "20px", textAlign: "center", fontSize: "0.85rem" }}>No tasks here.</div>
+                  : priscyllaTasks.map(renderTask)}
+              </div>
+            </div>
+          </>
+        );
+      })()}
     </div>
   );
 }
