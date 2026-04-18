@@ -38,9 +38,10 @@ export default function Sidebar() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [expandedGroups, setExpandedGroups] = useState<Record<ModuleGroup, boolean>>({
-    operations: true,
-    systems: true,
     external: true,
+    business: true,
+    personal: true,
+    creative: true,
   });
 
   // Load expanded state from localStorage on mount
