@@ -300,12 +300,11 @@ export default function PlaylistReportPage() {
                                 setOcSaving(null);
                               }}
                               style={{
-                                padding: "8px 14px", marginRight: 12, borderRadius: 8,
-                                background: "rgba(0,200,124,0.12)", border: "1px solid #00c87c",
-                                color: "#00c87c", fontWeight: 700, fontSize: "0.8rem",
-                                cursor: "pointer", whiteSpace: "nowrap", flexShrink: 0,
+                                width: 28, height: 28, marginRight: 14, borderRadius: 6,
+                                background: "transparent", border: "2px solid #00c87c",
+                                cursor: "pointer", flexShrink: 0,
                               }}
-                            >{ocSaving === ep.id ? "..." : "✅ Done"}</button>
+                            />
                           </div>
                           {isOpen && (
                             <div style={{ padding: "0 18px 20px", borderTop: "1px solid var(--border)" }}>
@@ -504,12 +503,12 @@ export default function PlaylistReportPage() {
                           onClick={() => markVideoDone(entry.number)}
                           title="Mark as done"
                           style={{
-                            padding: "8px 14px", marginRight: 12, borderRadius: 8,
-                            background: "rgba(0,200,124,0.12)", border: "1px solid #00c87c",
-                            color: "#00c87c", fontWeight: 700, fontSize: "0.8rem",
-                            cursor: "pointer", whiteSpace: "nowrap", flexShrink: 0,
+                            width: 28, height: 28, marginRight: 14, borderRadius: 6,
+                            background: "transparent", border: "2px solid #00c87c",
+                            cursor: "pointer", flexShrink: 0, display: "flex",
+                            alignItems: "center", justifyContent: "center",
                           }}
-                        >✅ Done</button>
+                        ></button>
                       </div>
 
                       {/* Expanded */}
