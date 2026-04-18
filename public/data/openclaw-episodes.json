@@ -1,5 +1,552 @@
 {
-  "episodes": [],
-  "last_checked": null,
-  "total": 0
+  "episodes": [
+    {
+      "id": "oc-eDIDysgEHUU",
+      "episodeNumber": 1,
+      "title": "OpenClaw Step by Step: Setup Your AI Assistant 100% Locally (Telegram + Ollama)",
+      "url": "https://www.youtube.com/watch?v=eDIDysgEHUU&pp=ygUVb3BlbmNsYXcgYWkgYXNzaXN0YW50",
+      "channel": "Execute Automation",
+      "publishedDate": "2026-04-18",
+      "discoveredDate": "2026-04-18T18:58:41.826907+00:00",
+      "duration": "Unknown",
+      "summary": "OpenClaw tutorial/setup guide.",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
+      "expandedTakeaways": [],
+      "completed": false
+    },
+    {
+      "id": "oc-T-HZHO_PQPY",
+      "episodeNumber": 2,
+      "title": "OpenClaw......RIGHT NOW??? (it's not what you think)",
+      "url": "https://www.youtube.com/watch?v=T-HZHO_PQPY&pp=ygUVb3BlbmNsYXcgYWkgYXNzaXN0YW50",
+      "channel": "NetworkChuck",
+      "publishedDate": "2026-04-18",
+      "discoveredDate": "2026-04-18T18:58:41.826928+00:00",
+      "duration": "Unknown",
+      "summary": "OpenClaw tutorial/setup guide.",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
+      "expandedTakeaways": [],
+      "completed": false
+    },
+    {
+      "id": "oc-knH6Jms4vSY",
+      "episodeNumber": 3,
+      "title": "OpenClaw Explained in 12 Minutes (for beginners)",
+      "url": "https://www.youtube.com/watch?v=knH6Jms4vSY&pp=ygUVb3BlbmNsYXcgYWkgYXNzaXN0YW50",
+      "channel": "corbin",
+      "publishedDate": "2026-04-18",
+      "discoveredDate": "2026-04-18T18:58:41.826935+00:00",
+      "duration": "Unknown",
+      "summary": "OpenClaw tutorial/setup guide.",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
+      "expandedTakeaways": [],
+      "completed": false
+    },
+    {
+      "id": "oc-4llSFP8nq_M",
+      "episodeNumber": 4,
+      "title": "Build Your Own AI Assistant in 10 Minutes (OpenClaw Setup With MyClaw)",
+      "url": "https://www.youtube.com/watch?v=4llSFP8nq_M&pp=ygUVb3BlbmNsYXcgYWkgYXNzaXN0YW50",
+      "channel": "Automate Your Life Tutorials",
+      "publishedDate": "2026-04-18",
+      "discoveredDate": "2026-04-18T18:58:41.826943+00:00",
+      "duration": "Unknown",
+      "summary": "OpenClaw tutorial/setup guide.",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
+      "expandedTakeaways": [],
+      "completed": false
+    },
+    {
+      "id": "oc-9mWOU14yGcQ",
+      "episodeNumber": 5,
+      "title": "Openclaw (Formerly Moltbot) Is the Most Capable AI Assistant I\u2019ve Used",
+      "url": "https://www.youtube.com/watch?v=9mWOU14yGcQ&pp=ygUVb3BlbmNsYXcgYWkgYXNzaXN0YW50",
+      "channel": "Tim Cakir",
+      "publishedDate": "2026-04-18",
+      "discoveredDate": "2026-04-18T18:58:41.826950+00:00",
+      "duration": "Unknown",
+      "summary": "OpenClaw tutorial/setup guide.",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
+      "expandedTakeaways": [],
+      "completed": false
+    },
+    {
+      "id": "oc-SplQZqjWoiA",
+      "episodeNumber": 6,
+      "title": "Easiest way to create a Personal AI assistant (OpenClaw + Telegram)",
+      "url": "https://www.youtube.com/watch?v=SplQZqjWoiA&pp=ygUVb3BlbmNsYXcgYWkgYXNzaXN0YW50",
+      "channel": "Railway",
+      "publishedDate": "2026-04-18",
+      "discoveredDate": "2026-04-18T18:58:41.826957+00:00",
+      "duration": "Unknown",
+      "summary": "OpenClaw tutorial/setup guide.",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
+      "expandedTakeaways": [],
+      "completed": false
+    },
+    {
+      "id": "oc-NA8C8jIQNeM",
+      "episodeNumber": 7,
+      "title": "Ultimate Clawdbot Tutorial: How to Set up & Use for Beginners (OpenClaw)\u200b",
+      "url": "https://www.youtube.com/watch?v=NA8C8jIQNeM&pp=ygUVb3BlbmNsYXcgYWkgYXNzaXN0YW500gcJCdMKAYcqIYzv",
+      "channel": "AI Master",
+      "publishedDate": "2026-04-18",
+      "discoveredDate": "2026-04-18T18:58:41.826963+00:00",
+      "duration": "Unknown",
+      "summary": "OpenClaw tutorial/setup guide.",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
+      "expandedTakeaways": [],
+      "completed": false
+    },
+    {
+      "id": "oc-nCy5Hpg-ozU",
+      "episodeNumber": 8,
+      "title": "Build an Always-On AI Assistant with OpenClaw and NemoClaw on DGX Spark",
+      "url": "https://www.youtube.com/watch?v=nCy5Hpg-ozU&pp=ygUVb3BlbmNsYXcgYWkgYXNzaXN0YW50",
+      "channel": "NVIDIA Developer",
+      "publishedDate": "2026-04-18",
+      "discoveredDate": "2026-04-18T18:58:41.826979+00:00",
+      "duration": "Unknown",
+      "summary": "OpenClaw tutorial/setup guide.",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
+      "expandedTakeaways": [],
+      "completed": false
+    },
+    {
+      "id": "oc-a63dUwXUgDo",
+      "episodeNumber": 9,
+      "title": "ClawdBot Full Tutorial for Beginners: How to Use & Set up ClawdBot (Openclaw)",
+      "url": "https://www.youtube.com/watch?v=a63dUwXUgDo&t=710s&pp=ygUVb3BlbmNsYXcgYWkgYXNzaXN0YW50",
+      "channel": "Mikey No Code",
+      "publishedDate": "2026-04-18",
+      "discoveredDate": "2026-04-18T18:58:41.826988+00:00",
+      "duration": "Unknown",
+      "summary": "OpenClaw tutorial/setup guide.",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
+      "expandedTakeaways": [],
+      "completed": false
+    },
+    {
+      "id": "oc-ssYt09bCgUY",
+      "episodeNumber": 10,
+      "title": "The wild rise of OpenClaw...",
+      "url": "https://www.youtube.com/watch?v=ssYt09bCgUY&pp=ygUVb3BlbmNsYXcgYWkgYXNzaXN0YW50",
+      "channel": "Fireship",
+      "publishedDate": "2026-04-18",
+      "discoveredDate": "2026-04-18T18:58:41.826993+00:00",
+      "duration": "Unknown",
+      "summary": "OpenClaw tutorial/setup guide.",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
+      "expandedTakeaways": [],
+      "completed": false
+    },
+    {
+      "id": "oc-Xui-bSDgORU",
+      "episodeNumber": 11,
+      "title": "OpenClaw 3.8 IS INSANE - Here's Why",
+      "url": "https://www.youtube.com/watch?v=Xui-bSDgORU&pp=ygUOb3BlbmNsYXcgYWdlbnQ%3D",
+      "channel": "Build In Public",
+      "publishedDate": "2026-04-18",
+      "discoveredDate": "2026-04-18T18:58:46.910771+00:00",
+      "duration": "Unknown",
+      "summary": "OpenClaw tutorial/setup guide.",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
+      "expandedTakeaways": [],
+      "completed": false
+    },
+    {
+      "id": "oc-BoC5MY_7aDk",
+      "episodeNumber": 12,
+      "title": "OpenClaw Full Tutorial for Beginners: How to Setup Your First AI Agent (ClawdBot)",
+      "url": "https://www.youtube.com/watch?v=BoC5MY_7aDk&pp=ygUOb3BlbmNsYXcgYWdlbnQ%3D",
+      "channel": "Bart Slodyczka",
+      "publishedDate": "2026-04-18",
+      "discoveredDate": "2026-04-18T18:58:46.910792+00:00",
+      "duration": "Unknown",
+      "summary": "OpenClaw tutorial/setup guide.",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
+      "expandedTakeaways": [],
+      "completed": false
+    },
+    {
+      "id": "oc-7rzYDM6vMtI",
+      "episodeNumber": 13,
+      "title": "How I Created OpenClaw, the Breakthrough AI Agent | Peter Steinberger | TED",
+      "url": "https://www.youtube.com/watch?v=7rzYDM6vMtI&pp=ygUOb3BlbmNsYXcgYWdlbnQ%3D",
+      "channel": "TED",
+      "publishedDate": "2026-04-18",
+      "discoveredDate": "2026-04-18T18:58:46.910802+00:00",
+      "duration": "Unknown",
+      "summary": "OpenClaw tutorial/setup guide.",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
+      "expandedTakeaways": [],
+      "completed": false
+    },
+    {
+      "id": "oc-RhLpV6QDBFE",
+      "episodeNumber": 14,
+      "title": "OpenClaw is 100x better with this tool (Mission Control)",
+      "url": "https://www.youtube.com/watch?v=RhLpV6QDBFE&pp=ygUOb3BlbmNsYXcgYWdlbnQ%3D",
+      "channel": "Alex Finn",
+      "publishedDate": "2026-04-18",
+      "discoveredDate": "2026-04-18T18:58:46.910808+00:00",
+      "duration": "Unknown",
+      "summary": "OpenClaw tutorial/setup guide.",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
+      "expandedTakeaways": [],
+      "completed": false
+    },
+    {
+      "id": "oc-n1sfrc-RjyM",
+      "episodeNumber": 15,
+      "title": "OpenClaw Full Tutorial for Beginners \u2013 How to Set Up and Use OpenClaw (ClawdBot / MoltBot)",
+      "url": "https://www.youtube.com/watch?v=n1sfrc-RjyM&t=893s&pp=ygUOb3BlbmNsYXcgYWdlbnTSBwkJ0woBhyohjO8%3D",
+      "channel": "freeCodeCamp.org and neuralkian",
+      "publishedDate": "2026-04-18",
+      "discoveredDate": "2026-04-18T18:58:46.910815+00:00",
+      "duration": "Unknown",
+      "summary": "OpenClaw tutorial/setup guide.",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
+      "expandedTakeaways": [],
+      "completed": false
+    },
+    {
+      "id": "oc-bzWI3Dil9Ig",
+      "episodeNumber": 16,
+      "title": "My Multi-Agent Team with OpenClaw",
+      "url": "https://www.youtube.com/watch?v=bzWI3Dil9Ig&pp=ygUOb3BlbmNsYXcgYWdlbnQ%3D",
+      "channel": "Brian Casel",
+      "publishedDate": "2026-04-18",
+      "discoveredDate": "2026-04-18T18:58:46.910822+00:00",
+      "duration": "Unknown",
+      "summary": "OpenClaw tutorial/setup guide.",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
+      "expandedTakeaways": [],
+      "completed": false
+    },
+    {
+      "id": "oc-sjkdw5p5xas",
+      "episodeNumber": 17,
+      "title": "I Run 20 OpenClaw Agents 24/7! Here's How to Set up Agent Teams",
+      "url": "https://www.youtube.com/watch?v=sjkdw5p5xas&pp=ygUOb3BlbmNsYXcgYWdlbnQ%3D",
+      "channel": "Moe Lueker",
+      "publishedDate": "2026-04-18",
+      "discoveredDate": "2026-04-18T18:58:46.910827+00:00",
+      "duration": "Unknown",
+      "summary": "OpenClaw tutorial/setup guide.",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
+      "expandedTakeaways": [],
+      "completed": false
+    },
+    {
+      "id": "oc-g3dh8pkoxF4",
+      "episodeNumber": 18,
+      "title": "5 OpenClaw Upgrades You're Missing",
+      "url": "https://www.youtube.com/watch?v=g3dh8pkoxF4&pp=ygUOb3BlbmNsYXcgYWdlbnQ%3D",
+      "channel": "Creator Magic",
+      "publishedDate": "2026-04-18",
+      "discoveredDate": "2026-04-18T18:58:46.910833+00:00",
+      "duration": "Unknown",
+      "summary": "OpenClaw tutorial/setup guide.",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
+      "expandedTakeaways": [],
+      "completed": false
+    },
+    {
+      "id": "oc-bKGbDWTM2b0",
+      "episodeNumber": 19,
+      "title": "How to Set Up OpenClaw in 30 Minutes (Step-by-Step)",
+      "url": "https://www.youtube.com/watch?v=bKGbDWTM2b0&t=446s&pp=ygUVb3BlbmNsYXcgdGVsZWdyYW0gYm90",
+      "channel": "Sharbel A.",
+      "publishedDate": "2026-04-18",
+      "discoveredDate": "2026-04-18T18:58:51.956284+00:00",
+      "duration": "Unknown",
+      "summary": "OpenClaw tutorial/setup guide.",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
+      "expandedTakeaways": [],
+      "completed": false
+    },
+    {
+      "id": "oc-JBxEkljsBmI",
+      "episodeNumber": 20,
+      "title": "Connect OpenClaw/Clawdbot to Telegram | Step by Step Setup",
+      "url": "https://www.youtube.com/watch?v=JBxEkljsBmI&pp=ygUVb3BlbmNsYXcgdGVsZWdyYW0gYm90",
+      "channel": "Joey Seeman - CVA Agency",
+      "publishedDate": "2026-04-18",
+      "discoveredDate": "2026-04-18T18:58:51.956315+00:00",
+      "duration": "Unknown",
+      "summary": "OpenClaw tutorial/setup guide.",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
+      "expandedTakeaways": [],
+      "completed": false
+    },
+    {
+      "id": "oc-JyFZbsZ59cg",
+      "episodeNumber": 21,
+      "title": "How To Connect Telegram With OpenClaw",
+      "url": "https://www.youtube.com/watch?v=JyFZbsZ59cg&pp=ygUVb3BlbmNsYXcgdGVsZWdyYW0gYm90",
+      "channel": "MapilitMedia Inc.",
+      "publishedDate": "2026-04-18",
+      "discoveredDate": "2026-04-18T18:58:51.956323+00:00",
+      "duration": "Unknown",
+      "summary": "OpenClaw tutorial/setup guide.",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
+      "expandedTakeaways": [],
+      "completed": false
+    },
+    {
+      "id": "oc-U6waV49T8W0",
+      "episodeNumber": 22,
+      "title": "OpenClaw Bot Telegram Setup - How To Connect OpenClaw With Telegram",
+      "url": "https://www.youtube.com/watch?v=U6waV49T8W0&pp=ygUVb3BlbmNsYXcgdGVsZWdyYW0gYm90",
+      "channel": "How To Financial",
+      "publishedDate": "2026-04-18",
+      "discoveredDate": "2026-04-18T18:58:51.956331+00:00",
+      "duration": "Unknown",
+      "summary": "OpenClaw tutorial/setup guide.",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
+      "expandedTakeaways": [],
+      "completed": false
+    },
+    {
+      "id": "oc-gZ6Ay-ow0BQ",
+      "episodeNumber": 23,
+      "title": "How to Set Up Telegram Topics in OpenClaw (Beginner Tutorial)",
+      "url": "https://www.youtube.com/watch?v=gZ6Ay-ow0BQ&pp=ygUVb3BlbmNsYXcgdGVsZWdyYW0gYm90",
+      "channel": "Felix Vemmer",
+      "publishedDate": "2026-04-18",
+      "discoveredDate": "2026-04-18T18:58:51.956342+00:00",
+      "duration": "Unknown",
+      "summary": "OpenClaw tutorial/setup guide.",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
+      "expandedTakeaways": [],
+      "completed": false
+    },
+    {
+      "id": "oc--G2r_SanjoE",
+      "episodeNumber": 24,
+      "title": "OpenClaw Telegram Setup guide",
+      "url": "https://www.youtube.com/watch?v=-G2r_SanjoE&pp=ygUVb3BlbmNsYXcgdGVsZWdyYW0gYm90",
+      "channel": "BoxminingAI",
+      "publishedDate": "2026-04-18",
+      "discoveredDate": "2026-04-18T18:58:51.956350+00:00",
+      "duration": "Unknown",
+      "summary": "OpenClaw tutorial/setup guide.",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
+      "expandedTakeaways": [],
+      "completed": false
+    },
+    {
+      "id": "oc-AUAtoTRe9cs",
+      "episodeNumber": 25,
+      "title": "How to Connect Telegram to OpenClaw (Step-by-Step Guide)",
+      "url": "https://www.youtube.com/watch?v=AUAtoTRe9cs&pp=ygUVb3BlbmNsYXcgdGVsZWdyYW0gYm90",
+      "channel": "AI\u5b9e\u9a8c\u5ba4",
+      "publishedDate": "2026-04-18",
+      "discoveredDate": "2026-04-18T18:58:51.956356+00:00",
+      "duration": "Unknown",
+      "summary": "OpenClaw tutorial/setup guide.",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
+      "expandedTakeaways": [],
+      "completed": false
+    },
+    {
+      "id": "oc-HCmKzhsx7Kk",
+      "episodeNumber": 26,
+      "title": "Who Needs Discord? Organizing OpenClaw Agents in Telegram w/ Topics",
+      "url": "https://www.youtube.com/watch?v=HCmKzhsx7Kk&pp=ygUVb3BlbmNsYXcgdGVsZWdyYW0gYm90",
+      "channel": "Onchain AI Garage",
+      "publishedDate": "2026-04-18",
+      "discoveredDate": "2026-04-18T18:58:51.956363+00:00",
+      "duration": "Unknown",
+      "summary": "OpenClaw tutorial/setup guide.",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
+      "expandedTakeaways": [],
+      "completed": false
+    }
+  ],
+  "last_checked": "2026-04-18T18:58:51.956371+00:00",
+  "total": 26
 }
