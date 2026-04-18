@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 
 // Unfiltered analysis - uses AI to analyze actual article content
-const ABACUS_API_KEY = process.env.ABACUSAI_API_KEY;
-const ABACUS_BASE_URL = "https://routellm.abacus.ai/v1";
+const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
+const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent`;
 
 interface AnalysisResult {
   topic: string;
@@ -64,26 +64,21 @@ Provide:
 Format as JSON: {"left": "...", "right": "...", "truth": "..."}`;
 
   try {
-    const res = await fetch(`${ABACUS_BASE_URL}/chat/completions`, {
+    const res = await fetch(`${GEMINI_URL}?key=${GOOGLE_API_KEY}`, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${ABACUS_API_KEY}`
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        model: "abacus/claude-sonnet-4-6",
-        messages: [{ role: "user", content: prompt }],
-        max_tokens: 500,
-        temperature: 0.7
+        contents: [{ parts: [{ text: prompt }] }],
+        generationConfig: { maxOutputTokens: 600, temperature: 0.7 }
       })
     });
 
     if (!res.ok) {
-      throw new Error(`AI API error: ${res.status}`);
+      throw new Error(`Gemini API error: ${res.status}`);
     }
 
     const data = await res.json();
-    const aiResponse = data.choices?.[0]?.message?.content || "";
+    const aiResponse = data.candidates?.[0]?.content?.parts?.[0]?.text || "";
     
     // Extract JSON from response
     const jsonMatch = aiResponse.match(/\{[\s\S]*\}/);
