@@ -1,1 +1,60 @@
-{"events":[]}
+{
+  "events": [
+    {
+      "id": "task-001",
+      "title": "Send Amanda email",
+      "date": "2026-04-18",
+      "category": "deadline",
+      "notes": "[HIGH PRIORITY] Work - Personal Tasks",
+      "created_at": "2026-04-18T20:39:00Z"
+    },
+    {
+      "id": "task-002",
+      "title": "Print Spotify instructions for dancers",
+      "date": "2026-04-14",
+      "category": "deadline",
+      "notes": "[HIGH PRIORITY] OVERDUE - Personal Tasks",
+      "created_at": "2026-04-18T20:39:00Z"
+    },
+    {
+      "id": "task-003",
+      "title": "Get marketing materials ready for Bryan presentation",
+      "date": "2026-04-19",
+      "category": "deadline",
+      "notes": "[HIGH PRIORITY] Work - Personal Tasks",
+      "created_at": "2026-04-18T20:39:00Z"
+    },
+    {
+      "id": "srb-001",
+      "title": "Rearrange DJ booth",
+      "date": "2026-04-22",
+      "category": "meeting",
+      "notes": "[HIGH PRIORITY] Spearmint Rhino - Setup",
+      "created_at": "2026-04-18T20:39:00Z"
+    },
+    {
+      "id": "srb-002",
+      "title": "Clean all amps and equipment (need compressed air)",
+      "date": "2026-04-22",
+      "category": "meeting",
+      "notes": "[HIGH PRIORITY] Spearmint Rhino - Maintenance",
+      "created_at": "2026-04-18T20:39:00Z"
+    },
+    {
+      "id": "srb-003",
+      "title": "Video I/O",
+      "date": "2026-04-22",
+      "category": "meeting",
+      "notes": "[HIGH PRIORITY] Spearmint Rhino - Video",
+      "created_at": "2026-04-18T20:39:00Z"
+    },
+    {
+      "id": "srb-004",
+      "title": "Fix Dressing Room Speakers",
+      "date": "2026-04-22",
+      "category": "meeting",
+      "notes": "[HIGH PRIORITY] Spearmint Rhino - Audio",
+      "created_at": "2026-04-18T20:39:00Z"
+    }
+  ]
+}
