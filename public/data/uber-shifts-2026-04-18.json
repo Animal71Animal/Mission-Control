@@ -1,0 +1,20 @@
+{
+  "shifts": [
+    {"date": "2026-04-18", "time": "12:39 AM", "type": "UberX", "gross": 39.69, "miles": 19.61, "duration": "24m 26s", "tip": 10.00, "surge": 2.75, "perk": 1.41},
+    {"date": "2026-04-18", "time": "3:25 AM", "type": "UberX", "gross": 41.75, "miles": 14.30, "duration": "21m 29s", "tip": 25.00, "surge": 0, "perk": 0.80},
+    {"date": "2026-04-18", "time": "5:13 AM", "type": "Wait and Save", "gross": 5.62, "miles": 2.47, "duration": "6m 39s", "tip": 0, "surge": 0, "perk": 0.27},
+    {"date": "2026-04-18", "time": "5:05 AM", "type": "UberX", "gross": 7.36, "miles": 3.41, "duration": "7m 20s", "tip": 0, "surge": 0, "perk": 0.35},
+    {"date": "2026-04-18", "time": "2:29 AM", "type": "UberX", "gross": 11.71, "miles": 10.02, "duration": "18m 58s", "tip": 0, "surge": 0, "perk": 0.56},
+    {"date": "2026-04-18", "time": "1:53 AM", "type": "Comfort", "gross": 25.11, "miles": 8.53, "duration": "13m 48s", "tip": 0, "surge": 7.00, "perk": 1.20},
+    {"date": "2026-04-18", "time": "1:36 AM", "type": "Wait and Save", "gross": 4.67, "miles": 3.75, "duration": "7m 31s", "tip": 0, "surge": 0, "perk": 0.22},
+    {"date": "2026-04-18", "time": "1:10 AM", "type": "Comfort", "gross": 11.64, "miles": 4.16, "duration": "10m 35s", "tip": 0, "surge": 1.00, "perk": 0.55}
+  ],
+  "summary": {
+    "date": "2026-04-18",
+    "count": 8,
+    "gross_total": 147.55,
+    "tips_total": 35.00,
+    "miles_total": 66.25,
+    "net_total": 140.36
+  }
+}
