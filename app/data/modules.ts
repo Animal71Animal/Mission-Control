@@ -1,4 +1,4 @@
-export type ModuleGroup = "operations" | "systems" | "external";
+export type ModuleGroup = "business" | "personal" | "creative" | "external";
 
 export interface Module {
   href: string;
@@ -11,25 +11,26 @@ export interface Module {
 
 // Order matches Sidebar navigation (excluding Overview which is home page)
 export const modules: Module[] = [
-  { href: "/wlp", icon: "💼", title: "WLP Business", desc: "Business docs, AI artists, streaming, social, analytics, and industry links.", status: "active", group: "operations" },
-  { href: "/artists", icon: "🎤", title: "Artists", desc: "ANIMAL, Kade Rivers, Madison Blair, Aria Vale, JusNiiga — WLP roster.", status: "active", group: "operations" },
-  { href: "/artist-assets", icon: "🎨", title: "Artist Assets", desc: "Unified asset tracking for WLP artist roster.", status: "active", group: "operations" },
-  { href: "/content-pipeline", icon: "📱", title: "Content Pipeline", desc: "TikTok, Reels & Shorts management for WLP AI Artists.", status: "active", group: "operations" },
-  { href: "/calendar", icon: "📅", title: "Calendar", desc: "Gigs, studio sessions, meetings, and deadlines.", status: "active", group: "operations" },
+  { href: "/wlp", icon: "💼", title: "WLP Business", desc: "Business docs, AI artists, streaming, social, analytics, and industry links.", status: "active", group: "business" },
+  { href: "/artists", icon: "🎤", title: "Artists", desc: "ANIMAL, Kade Rivers, Madison Blair, Aria Vale, JusNiiga — WLP roster.", status: "active", group: "business" },
+  { href: "/artist-assets", icon: "🎨", title: "Artist Assets", desc: "Unified asset tracking for WLP artist roster.", status: "active", group: "business" },
+  { href: "/content-pipeline", icon: "📱", title: "Content Pipeline", desc: "TikTok, Reels & Shorts management for WLP AI Artists.", status: "active", group: "business" },
+  { href: "/calendar", icon: "📅", title: "Calendar", desc: "Gigs, studio sessions, meetings, and deadlines.", status: "active", group: "business" },
+  { href: "/srb-tips", icon: "💰", title: "SRB Tips", desc: "Spearmint Rhino tip tracking — monthly totals, top tippers, dancer stats.", status: "active", group: "business" },
+  { href: "/spearmint-rhino", icon: "🦏", title: "Spearmint Rhino", desc: "Club operations, to-do lists, equipment status, and venue management.", status: "active", group: "business" },
+  { href: "/agents", icon: "🤖", title: "AI Office", desc: "Live view of AI agents working in the virtual office.", status: "active", group: "business" },
   
-  { href: "/srb-tips", icon: "💰", title: "SRB Tips", desc: "Spearmint Rhino tip tracking — monthly totals, top tippers, dancer stats.", status: "active", group: "operations" },
-  { href: "/peptides", icon: "💉", title: "Peptide Stack", desc: "Mission Control — peptide dosing, schedule, and tracking.", status: "active", group: "operations" },
-  { href: "/spearmint-rhino", icon: "🦏", title: "Spearmint Rhino", desc: "Club operations, to-do lists, equipment status, and venue management.", status: "active", group: "operations" },
-  { href: "/agents", icon: "🤖", title: "AI Office", desc: "Live view of AI agents working in the virtual office.", status: "active", group: "systems" },
-  { href: "/ableton", icon: "🎛️", title: "Ableton", desc: "AbletonOSC, live PA template, MIDI controller config.", status: "pending", group: "systems" },
-  { href: "/tesla", icon: "🚗", title: "Tesla", desc: "Charging session log and cost tracker.", status: "active", group: "systems" },
-  { href: "/uber-profit", icon: "🚘", title: "Uber Profit", desc: "Earnings tracking with proportional charging deduction.", status: "active", group: "systems" },
-  { href: "/personal-tasks", icon: "✅", title: "Tasks", desc: "All tasks — personal, WLP, and work items with priority, due dates, and categories.", status: "active", group: "systems" },
-  { href: "/joules-claw", icon: "⚡", title: "Joules Claw", desc: "Production and creative workflow management.", status: "active", group: "systems" },
-  { href: "/playlist-report", icon: "🎬", title: "OpenClaw Videos", desc: "OpenClaw video playlist summaries with tools and insights.", status: "active", group: "systems" },
+  { href: "/personal-tasks", icon: "✅", title: "Tasks", desc: "All tasks — personal, WLP, and work items with priority, due dates, and categories.", status: "active", group: "personal" },
+  { href: "/peptides", icon: "💉", title: "Peptide Stack", desc: "Mission Control — peptide dosing, schedule, and tracking.", status: "active", group: "personal" },
+  { href: "/tesla", icon: "🚗", title: "Tesla", desc: "Charging session log and cost tracker.", status: "active", group: "personal" },
+  { href: "/uber-profit", icon: "🚘", title: "Uber Profit", desc: "Earnings tracking with proportional charging deduction.", status: "active", group: "personal" },
+  
+  { href: "/ableton", icon: "🎛️", title: "Ableton", desc: "AbletonOSC, live PA template, MIDI controller config.", status: "pending", group: "creative" },
+  { href: "/joules-claw", icon: "⚡", title: "Joules Claw", desc: "Production and creative workflow management.", status: "active", group: "creative" },
+  { href: "/playlist-report", icon: "🎬", title: "OpenClaw Videos", desc: "OpenClaw video playlist summaries with tools and insights.", status: "active", group: "creative" },
+  
   { href: "/brief", icon: "☀️", title: "Morning Brief", desc: "Daily weather, news, and task rundown. Delivered at 10 AM.", status: "active", group: "external" },
   { href: "/drive", icon: "📁", title: "Google Drive", desc: "12-folder organized Drive. Snapshot + restore available.", status: "active", group: "external" },
-  // { href: "/analytics", icon: "📊", title: "Analytics", desc: "GoatCounter metrics — views, visitors, top pages.", status: "active", group: "external" },
   { href: "/shared-links", icon: "🔗", title: "Shared Links", desc: "Password-protected links shared with partners, developers, and investors.", status: "active", group: "external" },
 ];
 
@@ -73,10 +74,11 @@ export const sharedLinks: SharedLink[] = [
 
 // Group labels for display
 export const groupLabels: Record<ModuleGroup, string> = {
-  operations: "Operations",
-  systems: "Systems",
-  external: "External",
+  business: "Business Operations",
+  personal: "Personal",
+  creative: "Creative",
+  external: "External Links",
 };
 
-// Group order for sidebar and overview (External first)
-export const groupOrder: ModuleGroup[] = ["external", "operations", "systems"];
+// Group order for sidebar and overview
+export const groupOrder: ModuleGroup[] = ["business", "personal", "creative", "external"];
