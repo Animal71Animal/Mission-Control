@@ -16,7 +16,7 @@ export const modules: Module[] = [
   { href: "/artist-assets", icon: "🎨", title: "Artist Assets", desc: "Unified asset tracking for WLP artist roster.", status: "active", group: "operations" },
   { href: "/content-pipeline", icon: "📱", title: "Content Pipeline", desc: "TikTok, Reels & Shorts management for WLP AI Artists.", status: "active", group: "operations" },
   { href: "/calendar", icon: "📅", title: "Calendar", desc: "Gigs, studio sessions, meetings, and deadlines.", status: "active", group: "operations" },
-  { href: "/tasks", icon: "✅", title: "Open Tasks", desc: "Color-coded task list — PriScylla (purple) vs ANIMAL (orange).", status: "active", group: "operations" },
+  
   { href: "/srb-tips", icon: "💰", title: "SRB Tips", desc: "Spearmint Rhino tip tracking — monthly totals, top tippers, dancer stats.", status: "active", group: "operations" },
   { href: "/peptides", icon: "💉", title: "Peptide Stack", desc: "Mission Control — peptide dosing, schedule, and tracking.", status: "active", group: "operations" },
   { href: "/spearmint-rhino", icon: "🦏", title: "Spearmint Rhino", desc: "Club operations, to-do lists, equipment status, and venue management.", status: "active", group: "operations" },
@@ -24,7 +24,7 @@ export const modules: Module[] = [
   { href: "/ableton", icon: "🎛️", title: "Ableton", desc: "AbletonOSC, live PA template, MIDI controller config.", status: "pending", group: "systems" },
   { href: "/tesla", icon: "🚗", title: "Tesla", desc: "Charging session log and cost tracker.", status: "active", group: "systems" },
   { href: "/uber-profit", icon: "🚘", title: "Uber Profit", desc: "Earnings tracking with proportional charging deduction.", status: "active", group: "systems" },
-  { href: "/personal-tasks", icon: "📝", title: "Personal Tasks", desc: "Your private to-do list.", status: "active", group: "systems" },
+  { href: "/personal-tasks", icon: "✅", title: "Tasks", desc: "All tasks — personal, WLP, and work items with priority, due dates, and categories.", status: "active", group: "systems" },
   { href: "/joules-claw", icon: "⚡", title: "Joules Claw", desc: "Production and creative workflow management.", status: "active", group: "systems" },
   { href: "/playlist-report", icon: "🎬", title: "YT Summaries", desc: "OpenClaw video playlist summaries with tools and insights.", status: "active", group: "systems" },
   { href: "/brief", icon: "☀️", title: "Morning Brief", desc: "Daily weather, news, and task rundown. Delivered at 10 AM.", status: "active", group: "external" },

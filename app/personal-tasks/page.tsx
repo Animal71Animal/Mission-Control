@@ -14,10 +14,10 @@ interface PersonalTask {
   completed_at?: string | null;
 }
 
-const CATEGORIES = ["Personal", "Work", "Health", "Finance", "Shopping", "Other"];
+const CATEGORIES = ["Personal", "WLP", "Work", "Health", "Finance", "Shopping", "Other"];
 const PRIORITY_COLORS = { high: "#e05c5c", medium: "#fee440", low: "#888" };
 const CATEGORY_COLORS: Record<string, string> = {
-  Personal: "#9b5de5", Work: "#00bbf9", Health: "#00f5d4",
+  Personal: "#9b5de5", WLP: "#00f5d4", Work: "#00bbf9", Health: "#fee440",
   Finance: "#f15bb5", Shopping: "#f19b5b", Other: "#888",
 };
 
@@ -129,7 +129,7 @@ export default function PersonalTasksPage() {
 
   if (!loaded) return (
     <div>
-      <h1 style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)" }}>📝 Personal Tasks</h1>
+      <h1 style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)" }}>✅ Tasks</h1>
       <p style={{ color: "var(--muted)", marginTop: 20 }}>Loading...</p>
     </div>
   );
@@ -146,7 +146,7 @@ export default function PersonalTasksPage() {
   return (
     <div>
       <div style={{ marginBottom: 24 }}>
-        <h1 style={{ fontSize: "1.5rem", fontWeight: 700, margin: 0, color: "var(--text)" }}>📝 Personal Tasks</h1>
+        <h1 style={{ fontSize: "1.5rem", fontWeight: 700, margin: 0, color: "var(--text)" }}>✅ Tasks</h1>
         <p style={{ color: "var(--muted)", marginTop: 4, fontSize: "0.85rem" }}>Synced — edits save instantly to GitHub</p>
       </div>
 
