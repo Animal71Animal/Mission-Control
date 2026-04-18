@@ -3,6 +3,16 @@ import { NextRequest, NextResponse } from "next/server";
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || "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";
 const GITHUB_REPO = "Animal71Animal/Mission-Control";
 
+async function fetchGitHubJSON(path: string): Promise<any> {
+  const response = await fetch(
+    `https://api.github.com/repos/${GITHUB_REPO}/contents/${path}`,
+    { headers: { Authorization: `token ${GITHUB_TOKEN}` }, cache: "no-store" }
+  );
+  if (!response.ok) return null;
+  const data = await response.json();
+  return JSON.parse(Buffer.from(data.content, "base64").toString("utf-8"));
+}
+
 // GET /api/calendar?from=YYYY-MM-DD&to=YYYY-MM-DD
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
@@ -10,43 +20,65 @@ export async function GET(request: NextRequest) {
   const to = searchParams.get("to") || new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
 
   try {
-    // Fetch from GitHub
-    const response = await fetch(
-      `https://api.github.com/repos/${GITHUB_REPO}/contents/public/data/calendar-events.json`,
-      {
-        headers: { Authorization: `token ${GITHUB_TOKEN}` },
-        cache: "no-store",
-      }
-    );
+    // Fetch all sources in parallel
+    const [calendarData, srbTodoData, personalTasksData] = await Promise.all([
+      fetchGitHubJSON("public/data/calendar-events.json"),
+      fetchGitHubJSON("public/data/srb-todo.json"),
+      fetchGitHubJSON("public/data/personal-tasks.json"),
+    ]);
 
-    if (!response.ok) {
-      return NextResponse.json({ events: [] });
-    }
+    const allEvents: any[] = [];
 
-    const data = await response.json();
-    const content = Buffer.from(data.content, "base64").toString("utf-8");
-    const calendarData = JSON.parse(content);
-    const allEvents = calendarData.events || [];
-
-    // Filter by date range
-    const filteredEvents = allEvents.filter((e: any) => {
-      const eventDate = e.date;
-      return eventDate >= from && eventDate <= to;
+    // 1. Calendar events (manually added)
+    const calEvents = calendarData?.events || [];
+    calEvents.forEach((e: any) => {
+      if (e.date) allEvents.push({
+        id: e.id,
+        title: e.title || "Untitled",
+        date: e.date,
+        time: e.time,
+        endTime: e.endTime,
+        location: e.location,
+        notes: e.notes,
+        category: e.category || "other",
+        color: getCategoryColor(e.category || "other"),
+        source: "calendar",
+      });
     });
 
-    const transformedEvents = filteredEvents.map((e: any) => ({
-      id: e.id,
-      title: e.title || "Untitled",
-      date: e.date,
-      time: e.time,
-      endTime: e.endTime,
-      location: e.location,
-      notes: e.notes,
-      category: e.category || "other",
-      color: getCategoryColor(e.category || "other"),
-    }));
+    // 2. SRB Todo tasks with due dates
+    const srbTasks = srbTodoData?.tasks || [];
+    srbTasks.forEach((t: any) => {
+      if (t.due_date && !t.completed) allEvents.push({
+        id: `srb-${t.id}`,
+        title: `🦏 ${t.text}`,
+        date: t.due_date,
+        category: "deadline",
+        color: getCategoryColor("deadline"),
+        notes: `SRB - ${t.category} [${t.priority}]`,
+        source: "srb",
+      });
+    });
 
-    return NextResponse.json({ events: transformedEvents });
+    // 3. Personal tasks with due dates
+    const personalTasks = Array.isArray(personalTasksData) ? personalTasksData : [];
+    personalTasks.forEach((t: any) => {
+      if (t.due_date && !t.completed) allEvents.push({
+        id: `task-${t.id}`,
+        title: `✅ ${t.title}`,
+        date: t.due_date,
+        category: "deadline",
+        color: getCategoryColor("deadline"),
+        notes: `${t.category || "Task"} [${t.priority || "normal"}]`,
+        source: "tasks",
+      });
+    });
+
+    // Filter by date range
+    const filteredEvents = allEvents.filter((e) => e.date >= from && e.date <= to);
+    filteredEvents.sort((a, b) => a.date.localeCompare(b.date));
+
+    return NextResponse.json({ events: filteredEvents });
   } catch (error: any) {
     console.error("Calendar fetch error:", error);
     return NextResponse.json({ 
