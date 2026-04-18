@@ -47,6 +47,8 @@ export default function PersonalTasksPage() {
   const [tasks, setTasks] = useState<PersonalTask[]>([]);
   const [loaded, setLoaded] = useState(false);
   const [showForm, setShowForm] = useState(false);
+  const [animalOpen, setAnimalOpen] = useState(true);
+  const [priscyllaOpen, setPriscyllaOpen] = useState(true);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
   const [filter, setFilter] = useState<"all" | "open" | "completed">("open");
@@ -250,31 +252,37 @@ export default function PersonalTasksPage() {
         return (
           <>
             {/* ANIMAL's Tasks */}
-            <div style={{ marginBottom: 28 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
-                <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#9b5de5" }} />
+            <div style={{ marginBottom: 20 }}>
+              <button onClick={() => setAnimalOpen(o => !o)} style={{ display: "flex", alignItems: "center", gap: 10, background: "none", border: "none", cursor: "pointer", padding: "8px 0", width: "100%", textAlign: "left" }}>
+                <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#9b5de5", flexShrink: 0 }} />
                 <h2 style={{ margin: 0, fontSize: "1rem", fontWeight: 700, color: "var(--text)" }}>ANIMAL's Tasks</h2>
                 <span style={{ fontSize: "0.75rem", color: "var(--muted)" }}>{myTasks.length} {filter === "open" ? "open" : ""}</span>
-              </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-                {myTasks.length === 0
-                  ? <div style={{ color: "var(--muted)", padding: "20px", textAlign: "center", fontSize: "0.85rem" }}>No tasks here.</div>
-                  : myTasks.map(renderTask)}
-              </div>
+                <span style={{ marginLeft: "auto", color: "var(--muted)", fontSize: "0.8rem", transform: animalOpen ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.2s" }}>▼</span>
+              </button>
+              {animalOpen && (
+                <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: 8 }}>
+                  {myTasks.length === 0
+                    ? <div style={{ color: "var(--muted)", padding: "20px", textAlign: "center", fontSize: "0.85rem" }}>No tasks here.</div>
+                    : myTasks.map(renderTask)}
+                </div>
+              )}
             </div>
 
             {/* PriScylla's Tasks */}
             <div>
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
-                <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#fee440" }} />
+              <button onClick={() => setPriscyllaOpen(o => !o)} style={{ display: "flex", alignItems: "center", gap: 10, background: "none", border: "none", cursor: "pointer", padding: "8px 0", width: "100%", textAlign: "left" }}>
+                <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#fee440", flexShrink: 0 }} />
                 <h2 style={{ margin: 0, fontSize: "1rem", fontWeight: 700, color: "var(--text)" }}>PriScylla's Tasks</h2>
                 <span style={{ fontSize: "0.75rem", color: "var(--muted)" }}>{priscyllaTasks.length} {filter === "open" ? "open" : ""}</span>
-              </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-                {priscyllaTasks.length === 0
-                  ? <div style={{ color: "var(--muted)", padding: "20px", textAlign: "center", fontSize: "0.85rem" }}>No tasks here.</div>
-                  : priscyllaTasks.map(renderTask)}
-              </div>
+                <span style={{ marginLeft: "auto", color: "var(--muted)", fontSize: "0.8rem", transform: priscyllaOpen ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.2s" }}>▼</span>
+              </button>
+              {priscyllaOpen && (
+                <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: 8 }}>
+                  {priscyllaTasks.length === 0
+                    ? <div style={{ color: "var(--muted)", padding: "20px", textAlign: "center", fontSize: "0.85rem" }}>No tasks here.</div>
+                    : priscyllaTasks.map(renderTask)}
+                </div>
+              )}
             </div>
           </>
         );
