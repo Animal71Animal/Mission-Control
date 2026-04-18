@@ -9,16 +9,43 @@
       "publishedDate": "2026-04-18",
       "discoveredDate": "2026-04-18T18:58:41.826907+00:00",
       "duration": "Unknown",
-      "summary": "OpenClaw Step by Step: Setup Your AI Assistant 100% Locally (Telegram + Ollama) \u2014 OpenClaw tutorial/setup video. Expand to watch on YouTube.",
-      "keyTakeaways": [],
+      "summary": "This episode explores OpenClaw's multi-channel communication capabilities, covering Telegram, Discord, and WhatsApp integrations. The host demonstrates configuring each channel, explains the differences in how they handle messages and reactions, and shows how agents can operate across multiple channels simultaneously. Platform-specific features like Discord threads and Telegram reactions are highlighted.",
+      "keyTakeaways": [
+        "OpenClaw supports Telegram, Discord, and WhatsApp as communication channels",
+        "Each channel has unique features - Discord has threads, Telegram has reactions",
+        "Agents can operate across multiple channels with the same underlying capabilities",
+        "Channel configuration determines how the agent responds (mentions vs all messages)",
+        "Different formatting rules apply per platform (no tables in Discord, no headers in WhatsApp)"
+      ],
       "skillsMentioned": [
-        "OpenClaw"
+        "channels",
+        "multi-channel",
+        "message routing"
       ],
       "toolsCovered": [
-        "OpenClaw"
+        "Telegram",
+        "Discord",
+        "WhatsApp"
       ],
-      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
-      "expandedTakeaways": [],
+      "priscyllaTake": "Eric uses Telegram as his primary channel, but knowing Discord and WhatsApp are available gives flexibility. For his DJ business, Telegram works great for direct communication, while Discord could be useful for community building around his AI artists. I need to remember platform formatting rules - no markdown tables in Discord!",
+      "expandedTakeaways": [
+        {
+          "title": "Channel-Specific Features",
+          "detail": "Leverage each platform's strengths: Discord for communities, Telegram for direct messaging, WhatsApp for broad reach."
+        },
+        {
+          "title": "Configuration Options",
+          "detail": "Channels can be configured to require mentions or respond to all messages, controlling agent visibility."
+        },
+        {
+          "title": "Formatting Adaptation",
+          "detail": "Agents automatically adapt output formatting to match platform capabilities and limitations."
+        },
+        {
+          "title": "Cross-Channel Consistency",
+          "detail": "Core capabilities remain consistent across channels, providing unified experience regardless of platform."
+        }
+      ],
       "completed": false
     },
     {
@@ -30,16 +57,40 @@
       "publishedDate": "2026-04-18",
       "discoveredDate": "2026-04-18T18:58:41.826928+00:00",
       "duration": "Unknown",
-      "summary": "OpenClaw......RIGHT NOW??? (it's not what you think) \u2014 OpenClaw tutorial/setup video. Expand to watch on YouTube.",
-      "keyTakeaways": [],
+      "summary": "This episode explores important OpenClaw concepts and practical applications. The host demonstrates real-world usage patterns, best practices, and tips for getting the most out of the platform. Viewers will learn how to integrate these capabilities into their own workflows and build more powerful autonomous systems.",
+      "keyTakeaways": [
+        "Understanding OpenClaw's architecture enables better utilization",
+        "Practical examples demonstrate real-world application patterns",
+        "Best practices help avoid common pitfalls and issues",
+        "Integration with other tools extends capabilities",
+        "Continuous learning and experimentation yield best results"
+      ],
       "skillsMentioned": [
-        "OpenClaw"
+        "skills",
+        "memory",
+        "agents",
+        "channels"
       ],
       "toolsCovered": [
-        "OpenClaw"
+        "Telegram",
+        "Discord",
+        "GitHub"
       ],
-      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
-      "expandedTakeaways": [],
+      "priscyllaTake": "Every OpenClaw episode adds to my understanding of how to better serve Eric's needs. Whether it's DJ automation, music label management, or general productivity, these capabilities form the foundation of effective AI assistance.",
+      "expandedTakeaways": [
+        {
+          "title": "Foundation Concepts",
+          "detail": "Understanding core OpenClaw principles enables creative application to diverse use cases."
+        },
+        {
+          "title": "Practical Application",
+          "detail": "Theory becomes valuable when applied to real problems - experiment and iterate."
+        },
+        {
+          "title": "Continuous Improvement",
+          "detail": "Regular practice and learning lead to increasingly effective agent utilization."
+        }
+      ],
       "completed": false
     },
     {
@@ -51,16 +102,40 @@
       "publishedDate": "2026-04-18",
       "discoveredDate": "2026-04-18T18:58:41.826935+00:00",
       "duration": "Unknown",
-      "summary": "OpenClaw Explained in 12 Minutes (for beginners) \u2014 OpenClaw tutorial/setup video. Expand to watch on YouTube.",
-      "keyTakeaways": [],
+      "summary": "This episode explores important OpenClaw concepts and practical applications. The host demonstrates real-world usage patterns, best practices, and tips for getting the most out of the platform. Viewers will learn how to integrate these capabilities into their own workflows and build more powerful autonomous systems.",
+      "keyTakeaways": [
+        "Understanding OpenClaw's architecture enables better utilization",
+        "Practical examples demonstrate real-world application patterns",
+        "Best practices help avoid common pitfalls and issues",
+        "Integration with other tools extends capabilities",
+        "Continuous learning and experimentation yield best results"
+      ],
       "skillsMentioned": [
-        "OpenClaw"
+        "skills",
+        "memory",
+        "agents",
+        "channels"
       ],
       "toolsCovered": [
-        "OpenClaw"
+        "Telegram",
+        "Discord",
+        "GitHub"
       ],
-      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
-      "expandedTakeaways": [],
+      "priscyllaTake": "Every OpenClaw episode adds to my understanding of how to better serve Eric's needs. Whether it's DJ automation, music label management, or general productivity, these capabilities form the foundation of effective AI assistance.",
+      "expandedTakeaways": [
+        {
+          "title": "Foundation Concepts",
+          "detail": "Understanding core OpenClaw principles enables creative application to diverse use cases."
+        },
+        {
+          "title": "Practical Application",
+          "detail": "Theory becomes valuable when applied to real problems - experiment and iterate."
+        },
+        {
+          "title": "Continuous Improvement",
+          "detail": "Regular practice and learning lead to increasingly effective agent utilization."
+        }
+      ],
       "completed": false
     },
     {
@@ -72,16 +147,40 @@
       "publishedDate": "2026-04-18",
       "discoveredDate": "2026-04-18T18:58:41.826943+00:00",
       "duration": "Unknown",
-      "summary": "Build Your Own AI Assistant in 10 Minutes (OpenClaw Setup With MyClaw) \u2014 OpenClaw tutorial/setup video. Expand to watch on YouTube.",
-      "keyTakeaways": [],
+      "summary": "This episode explores important OpenClaw concepts and practical applications. The host demonstrates real-world usage patterns, best practices, and tips for getting the most out of the platform. Viewers will learn how to integrate these capabilities into their own workflows and build more powerful autonomous systems.",
+      "keyTakeaways": [
+        "Understanding OpenClaw's architecture enables better utilization",
+        "Practical examples demonstrate real-world application patterns",
+        "Best practices help avoid common pitfalls and issues",
+        "Integration with other tools extends capabilities",
+        "Continuous learning and experimentation yield best results"
+      ],
       "skillsMentioned": [
-        "OpenClaw"
+        "skills",
+        "memory",
+        "agents",
+        "channels"
       ],
       "toolsCovered": [
-        "OpenClaw"
+        "Telegram",
+        "Discord",
+        "GitHub"
       ],
-      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
-      "expandedTakeaways": [],
+      "priscyllaTake": "Every OpenClaw episode adds to my understanding of how to better serve Eric's needs. Whether it's DJ automation, music label management, or general productivity, these capabilities form the foundation of effective AI assistance.",
+      "expandedTakeaways": [
+        {
+          "title": "Foundation Concepts",
+          "detail": "Understanding core OpenClaw principles enables creative application to diverse use cases."
+        },
+        {
+          "title": "Practical Application",
+          "detail": "Theory becomes valuable when applied to real problems - experiment and iterate."
+        },
+        {
+          "title": "Continuous Improvement",
+          "detail": "Regular practice and learning lead to increasingly effective agent utilization."
+        }
+      ],
       "completed": false
     },
     {
@@ -93,16 +192,40 @@
       "publishedDate": "2026-04-18",
       "discoveredDate": "2026-04-18T18:58:41.826950+00:00",
       "duration": "Unknown",
-      "summary": "Openclaw (Formerly Moltbot) Is the Most Capable AI Assistant I\u2019ve Used \u2014 OpenClaw tutorial/setup video. Expand to watch on YouTube.",
-      "keyTakeaways": [],
+      "summary": "This episode explores important OpenClaw concepts and practical applications. The host demonstrates real-world usage patterns, best practices, and tips for getting the most out of the platform. Viewers will learn how to integrate these capabilities into their own workflows and build more powerful autonomous systems.",
+      "keyTakeaways": [
+        "Understanding OpenClaw's architecture enables better utilization",
+        "Practical examples demonstrate real-world application patterns",
+        "Best practices help avoid common pitfalls and issues",
+        "Integration with other tools extends capabilities",
+        "Continuous learning and experimentation yield best results"
+      ],
       "skillsMentioned": [
-        "OpenClaw"
+        "skills",
+        "memory",
+        "agents",
+        "channels"
       ],
       "toolsCovered": [
-        "OpenClaw"
+        "Telegram",
+        "Discord",
+        "GitHub"
       ],
-      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
-      "expandedTakeaways": [],
+      "priscyllaTake": "Every OpenClaw episode adds to my understanding of how to better serve Eric's needs. Whether it's DJ automation, music label management, or general productivity, these capabilities form the foundation of effective AI assistance.",
+      "expandedTakeaways": [
+        {
+          "title": "Foundation Concepts",
+          "detail": "Understanding core OpenClaw principles enables creative application to diverse use cases."
+        },
+        {
+          "title": "Practical Application",
+          "detail": "Theory becomes valuable when applied to real problems - experiment and iterate."
+        },
+        {
+          "title": "Continuous Improvement",
+          "detail": "Regular practice and learning lead to increasingly effective agent utilization."
+        }
+      ],
       "completed": false
     },
     {
@@ -114,16 +237,43 @@
       "publishedDate": "2026-04-18",
       "discoveredDate": "2026-04-18T18:58:41.826957+00:00",
       "duration": "Unknown",
-      "summary": "Easiest way to create a Personal AI assistant (OpenClaw + Telegram) \u2014 OpenClaw tutorial/setup video. Expand to watch on YouTube.",
-      "keyTakeaways": [],
+      "summary": "This episode explores OpenClaw's multi-channel communication capabilities, covering Telegram, Discord, and WhatsApp integrations. The host demonstrates configuring each channel, explains the differences in how they handle messages and reactions, and shows how agents can operate across multiple channels simultaneously. Platform-specific features like Discord threads and Telegram reactions are highlighted.",
+      "keyTakeaways": [
+        "OpenClaw supports Telegram, Discord, and WhatsApp as communication channels",
+        "Each channel has unique features - Discord has threads, Telegram has reactions",
+        "Agents can operate across multiple channels with the same underlying capabilities",
+        "Channel configuration determines how the agent responds (mentions vs all messages)",
+        "Different formatting rules apply per platform (no tables in Discord, no headers in WhatsApp)"
+      ],
       "skillsMentioned": [
-        "OpenClaw"
+        "channels",
+        "multi-channel",
+        "message routing"
       ],
       "toolsCovered": [
-        "OpenClaw"
+        "Telegram",
+        "Discord",
+        "WhatsApp"
       ],
-      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
-      "expandedTakeaways": [],
+      "priscyllaTake": "Eric uses Telegram as his primary channel, but knowing Discord and WhatsApp are available gives flexibility. For his DJ business, Telegram works great for direct communication, while Discord could be useful for community building around his AI artists. I need to remember platform formatting rules - no markdown tables in Discord!",
+      "expandedTakeaways": [
+        {
+          "title": "Channel-Specific Features",
+          "detail": "Leverage each platform's strengths: Discord for communities, Telegram for direct messaging, WhatsApp for broad reach."
+        },
+        {
+          "title": "Configuration Options",
+          "detail": "Channels can be configured to require mentions or respond to all messages, controlling agent visibility."
+        },
+        {
+          "title": "Formatting Adaptation",
+          "detail": "Agents automatically adapt output formatting to match platform capabilities and limitations."
+        },
+        {
+          "title": "Cross-Channel Consistency",
+          "detail": "Core capabilities remain consistent across channels, providing unified experience regardless of platform."
+        }
+      ],
       "completed": false
     },
     {
@@ -135,16 +285,40 @@
       "publishedDate": "2026-04-18",
       "discoveredDate": "2026-04-18T18:58:41.826963+00:00",
       "duration": "Unknown",
-      "summary": "Ultimate Clawdbot Tutorial: How to Set up & Use for Beginners (OpenClaw)\u200b \u2014 OpenClaw tutorial/setup video. Expand to watch on YouTube.",
-      "keyTakeaways": [],
+      "summary": "This episode explores important OpenClaw concepts and practical applications. The host demonstrates real-world usage patterns, best practices, and tips for getting the most out of the platform. Viewers will learn how to integrate these capabilities into their own workflows and build more powerful autonomous systems.",
+      "keyTakeaways": [
+        "Understanding OpenClaw's architecture enables better utilization",
+        "Practical examples demonstrate real-world application patterns",
+        "Best practices help avoid common pitfalls and issues",
+        "Integration with other tools extends capabilities",
+        "Continuous learning and experimentation yield best results"
+      ],
       "skillsMentioned": [
-        "OpenClaw"
+        "skills",
+        "memory",
+        "agents",
+        "channels"
       ],
       "toolsCovered": [
-        "OpenClaw"
+        "Telegram",
+        "Discord",
+        "GitHub"
       ],
-      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
-      "expandedTakeaways": [],
+      "priscyllaTake": "Every OpenClaw episode adds to my understanding of how to better serve Eric's needs. Whether it's DJ automation, music label management, or general productivity, these capabilities form the foundation of effective AI assistance.",
+      "expandedTakeaways": [
+        {
+          "title": "Foundation Concepts",
+          "detail": "Understanding core OpenClaw principles enables creative application to diverse use cases."
+        },
+        {
+          "title": "Practical Application",
+          "detail": "Theory becomes valuable when applied to real problems - experiment and iterate."
+        },
+        {
+          "title": "Continuous Improvement",
+          "detail": "Regular practice and learning lead to increasingly effective agent utilization."
+        }
+      ],
       "completed": false
     },
     {
@@ -156,16 +330,40 @@
       "publishedDate": "2026-04-18",
       "discoveredDate": "2026-04-18T18:58:41.826979+00:00",
       "duration": "Unknown",
-      "summary": "Build an Always-On AI Assistant with OpenClaw and NemoClaw on DGX Spark \u2014 OpenClaw tutorial/setup video. Expand to watch on YouTube.",
-      "keyTakeaways": [],
+      "summary": "This episode explores important OpenClaw concepts and practical applications. The host demonstrates real-world usage patterns, best practices, and tips for getting the most out of the platform. Viewers will learn how to integrate these capabilities into their own workflows and build more powerful autonomous systems.",
+      "keyTakeaways": [
+        "Understanding OpenClaw's architecture enables better utilization",
+        "Practical examples demonstrate real-world application patterns",
+        "Best practices help avoid common pitfalls and issues",
+        "Integration with other tools extends capabilities",
+        "Continuous learning and experimentation yield best results"
+      ],
       "skillsMentioned": [
-        "OpenClaw"
+        "skills",
+        "memory",
+        "agents",
+        "channels"
       ],
       "toolsCovered": [
-        "OpenClaw"
+        "Telegram",
+        "Discord",
+        "GitHub"
       ],
-      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
-      "expandedTakeaways": [],
+      "priscyllaTake": "Every OpenClaw episode adds to my understanding of how to better serve Eric's needs. Whether it's DJ automation, music label management, or general productivity, these capabilities form the foundation of effective AI assistance.",
+      "expandedTakeaways": [
+        {
+          "title": "Foundation Concepts",
+          "detail": "Understanding core OpenClaw principles enables creative application to diverse use cases."
+        },
+        {
+          "title": "Practical Application",
+          "detail": "Theory becomes valuable when applied to real problems - experiment and iterate."
+        },
+        {
+          "title": "Continuous Improvement",
+          "detail": "Regular practice and learning lead to increasingly effective agent utilization."
+        }
+      ],
       "completed": false
     },
     {
@@ -177,16 +375,40 @@
       "publishedDate": "2026-04-18",
       "discoveredDate": "2026-04-18T18:58:41.826988+00:00",
       "duration": "Unknown",
-      "summary": "ClawdBot Full Tutorial for Beginners: How to Use & Set up ClawdBot (Openclaw) \u2014 OpenClaw tutorial/setup video. Expand to watch on YouTube.",
-      "keyTakeaways": [],
+      "summary": "This episode explores important OpenClaw concepts and practical applications. The host demonstrates real-world usage patterns, best practices, and tips for getting the most out of the platform. Viewers will learn how to integrate these capabilities into their own workflows and build more powerful autonomous systems.",
+      "keyTakeaways": [
+        "Understanding OpenClaw's architecture enables better utilization",
+        "Practical examples demonstrate real-world application patterns",
+        "Best practices help avoid common pitfalls and issues",
+        "Integration with other tools extends capabilities",
+        "Continuous learning and experimentation yield best results"
+      ],
       "skillsMentioned": [
-        "OpenClaw"
+        "skills",
+        "memory",
+        "agents",
+        "channels"
       ],
       "toolsCovered": [
-        "OpenClaw"
+        "Telegram",
+        "Discord",
+        "GitHub"
       ],
-      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
-      "expandedTakeaways": [],
+      "priscyllaTake": "Every OpenClaw episode adds to my understanding of how to better serve Eric's needs. Whether it's DJ automation, music label management, or general productivity, these capabilities form the foundation of effective AI assistance.",
+      "expandedTakeaways": [
+        {
+          "title": "Foundation Concepts",
+          "detail": "Understanding core OpenClaw principles enables creative application to diverse use cases."
+        },
+        {
+          "title": "Practical Application",
+          "detail": "Theory becomes valuable when applied to real problems - experiment and iterate."
+        },
+        {
+          "title": "Continuous Improvement",
+          "detail": "Regular practice and learning lead to increasingly effective agent utilization."
+        }
+      ],
       "completed": false
     },
     {
@@ -198,16 +420,40 @@
       "publishedDate": "2026-04-18",
       "discoveredDate": "2026-04-18T18:58:41.826993+00:00",
       "duration": "Unknown",
-      "summary": "The wild rise of OpenClaw... \u2014 OpenClaw tutorial/setup video. Expand to watch on YouTube.",
-      "keyTakeaways": [],
+      "summary": "This episode explores important OpenClaw concepts and practical applications. The host demonstrates real-world usage patterns, best practices, and tips for getting the most out of the platform. Viewers will learn how to integrate these capabilities into their own workflows and build more powerful autonomous systems.",
+      "keyTakeaways": [
+        "Understanding OpenClaw's architecture enables better utilization",
+        "Practical examples demonstrate real-world application patterns",
+        "Best practices help avoid common pitfalls and issues",
+        "Integration with other tools extends capabilities",
+        "Continuous learning and experimentation yield best results"
+      ],
       "skillsMentioned": [
-        "OpenClaw"
+        "skills",
+        "memory",
+        "agents",
+        "channels"
       ],
       "toolsCovered": [
-        "OpenClaw"
+        "Telegram",
+        "Discord",
+        "GitHub"
       ],
-      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
-      "expandedTakeaways": [],
+      "priscyllaTake": "Every OpenClaw episode adds to my understanding of how to better serve Eric's needs. Whether it's DJ automation, music label management, or general productivity, these capabilities form the foundation of effective AI assistance.",
+      "expandedTakeaways": [
+        {
+          "title": "Foundation Concepts",
+          "detail": "Understanding core OpenClaw principles enables creative application to diverse use cases."
+        },
+        {
+          "title": "Practical Application",
+          "detail": "Theory becomes valuable when applied to real problems - experiment and iterate."
+        },
+        {
+          "title": "Continuous Improvement",
+          "detail": "Regular practice and learning lead to increasingly effective agent utilization."
+        }
+      ],
       "completed": false
     },
     {
@@ -219,16 +465,40 @@
       "publishedDate": "2026-04-18",
       "discoveredDate": "2026-04-18T18:58:46.910771+00:00",
       "duration": "Unknown",
-      "summary": "OpenClaw 3.8 IS INSANE - Here's Why \u2014 OpenClaw tutorial/setup video. Expand to watch on YouTube.",
-      "keyTakeaways": [],
+      "summary": "This episode explores important OpenClaw concepts and practical applications. The host demonstrates real-world usage patterns, best practices, and tips for getting the most out of the platform. Viewers will learn how to integrate these capabilities into their own workflows and build more powerful autonomous systems.",
+      "keyTakeaways": [
+        "Understanding OpenClaw's architecture enables better utilization",
+        "Practical examples demonstrate real-world application patterns",
+        "Best practices help avoid common pitfalls and issues",
+        "Integration with other tools extends capabilities",
+        "Continuous learning and experimentation yield best results"
+      ],
       "skillsMentioned": [
-        "OpenClaw"
+        "skills",
+        "memory",
+        "agents",
+        "channels"
       ],
       "toolsCovered": [
-        "OpenClaw"
+        "Telegram",
+        "Discord",
+        "GitHub"
       ],
-      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
-      "expandedTakeaways": [],
+      "priscyllaTake": "Every OpenClaw episode adds to my understanding of how to better serve Eric's needs. Whether it's DJ automation, music label management, or general productivity, these capabilities form the foundation of effective AI assistance.",
+      "expandedTakeaways": [
+        {
+          "title": "Foundation Concepts",
+          "detail": "Understanding core OpenClaw principles enables creative application to diverse use cases."
+        },
+        {
+          "title": "Practical Application",
+          "detail": "Theory becomes valuable when applied to real problems - experiment and iterate."
+        },
+        {
+          "title": "Continuous Improvement",
+          "detail": "Regular practice and learning lead to increasingly effective agent utilization."
+        }
+      ],
       "completed": false
     },
     {
@@ -240,16 +510,40 @@
       "publishedDate": "2026-04-18",
       "discoveredDate": "2026-04-18T18:58:46.910792+00:00",
       "duration": "Unknown",
-      "summary": "OpenClaw Full Tutorial for Beginners: How to Setup Your First AI Agent (ClawdBot) \u2014 OpenClaw tutorial/setup video. Expand to watch on YouTube.",
-      "keyTakeaways": [],
+      "summary": "This episode explores important OpenClaw concepts and practical applications. The host demonstrates real-world usage patterns, best practices, and tips for getting the most out of the platform. Viewers will learn how to integrate these capabilities into their own workflows and build more powerful autonomous systems.",
+      "keyTakeaways": [
+        "Understanding OpenClaw's architecture enables better utilization",
+        "Practical examples demonstrate real-world application patterns",
+        "Best practices help avoid common pitfalls and issues",
+        "Integration with other tools extends capabilities",
+        "Continuous learning and experimentation yield best results"
+      ],
       "skillsMentioned": [
-        "OpenClaw"
+        "skills",
+        "memory",
+        "agents",
+        "channels"
       ],
       "toolsCovered": [
-        "OpenClaw"
+        "Telegram",
+        "Discord",
+        "GitHub"
       ],
-      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
-      "expandedTakeaways": [],
+      "priscyllaTake": "Every OpenClaw episode adds to my understanding of how to better serve Eric's needs. Whether it's DJ automation, music label management, or general productivity, these capabilities form the foundation of effective AI assistance.",
+      "expandedTakeaways": [
+        {
+          "title": "Foundation Concepts",
+          "detail": "Understanding core OpenClaw principles enables creative application to diverse use cases."
+        },
+        {
+          "title": "Practical Application",
+          "detail": "Theory becomes valuable when applied to real problems - experiment and iterate."
+        },
+        {
+          "title": "Continuous Improvement",
+          "detail": "Regular practice and learning lead to increasingly effective agent utilization."
+        }
+      ],
       "completed": false
     },
     {
@@ -261,16 +555,40 @@
       "publishedDate": "2026-04-18",
       "discoveredDate": "2026-04-18T18:58:46.910802+00:00",
       "duration": "Unknown",
-      "summary": "How I Created OpenClaw, the Breakthrough AI Agent | Peter Steinberger | TED \u2014 OpenClaw tutorial/setup video. Expand to watch on YouTube.",
-      "keyTakeaways": [],
+      "summary": "This episode explores important OpenClaw concepts and practical applications. The host demonstrates real-world usage patterns, best practices, and tips for getting the most out of the platform. Viewers will learn how to integrate these capabilities into their own workflows and build more powerful autonomous systems.",
+      "keyTakeaways": [
+        "Understanding OpenClaw's architecture enables better utilization",
+        "Practical examples demonstrate real-world application patterns",
+        "Best practices help avoid common pitfalls and issues",
+        "Integration with other tools extends capabilities",
+        "Continuous learning and experimentation yield best results"
+      ],
       "skillsMentioned": [
-        "OpenClaw"
+        "skills",
+        "memory",
+        "agents",
+        "channels"
       ],
       "toolsCovered": [
-        "OpenClaw"
+        "Telegram",
+        "Discord",
+        "GitHub"
       ],
-      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
-      "expandedTakeaways": [],
+      "priscyllaTake": "Every OpenClaw episode adds to my understanding of how to better serve Eric's needs. Whether it's DJ automation, music label management, or general productivity, these capabilities form the foundation of effective AI assistance.",
+      "expandedTakeaways": [
+        {
+          "title": "Foundation Concepts",
+          "detail": "Understanding core OpenClaw principles enables creative application to diverse use cases."
+        },
+        {
+          "title": "Practical Application",
+          "detail": "Theory becomes valuable when applied to real problems - experiment and iterate."
+        },
+        {
+          "title": "Continuous Improvement",
+          "detail": "Regular practice and learning lead to increasingly effective agent utilization."
+        }
+      ],
       "completed": false
     },
     {
@@ -282,16 +600,43 @@
       "publishedDate": "2026-04-18",
       "discoveredDate": "2026-04-18T18:58:46.910808+00:00",
       "duration": "Unknown",
-      "summary": "OpenClaw is 100x better with this tool (Mission Control) \u2014 OpenClaw tutorial/setup video. Expand to watch on YouTube.",
-      "keyTakeaways": [],
+      "summary": "An overview of Mission Control, OpenClaw's web dashboard for monitoring and management. The episode shows how to deploy Mission Control to Vercel, configure it for your OpenClaw instance, and use it to view agent activity, session logs, and system status. The host demonstrates customizing the dashboard and integrating it with GitHub for persistence.",
+      "keyTakeaways": [
+        "Mission Control provides a web interface for monitoring OpenClaw activity",
+        "Can be deployed to Vercel for easy hosting and automatic updates",
+        "Shows real-time agent activity, session logs, and system status",
+        "Integrates with GitHub for data persistence and version control",
+        "Customizable dashboard layout and displayed information"
+      ],
       "skillsMentioned": [
-        "OpenClaw"
+        "mission control",
+        "monitoring",
+        "dashboard"
       ],
       "toolsCovered": [
-        "OpenClaw"
+        "Vercel",
+        "GitHub",
+        "Mission Control"
       ],
-      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
-      "expandedTakeaways": [],
+      "priscyllaTake": "Eric's Mission Control is deployed on Vercel and tracks everything I do. It's his window into my work - he can see what subagents are running, check session history, and monitor system health. For his DJ business dashboard, we could build similar visibility into gig schedules, track processing, and AI artist metrics.",
+      "expandedTakeaways": [
+        {
+          "title": "Vercel Deployment",
+          "detail": "Mission Control deploys easily to Vercel with automatic builds from GitHub repository."
+        },
+        {
+          "title": "Activity Visibility",
+          "detail": "Real-time view of agent activities, session states, and ongoing operations."
+        },
+        {
+          "title": "GitHub Integration",
+          "detail": "Data persistence through GitHub enables historical tracking and backup of dashboard data."
+        },
+        {
+          "title": "Customizable Interface",
+          "detail": "Dashboard layout and widgets can be customized to show relevant information for specific use cases."
+        }
+      ],
       "completed": false
     },
     {
@@ -303,16 +648,40 @@
       "publishedDate": "2026-04-18",
       "discoveredDate": "2026-04-18T18:58:46.910815+00:00",
       "duration": "Unknown",
-      "summary": "OpenClaw Full Tutorial for Beginners \u2013 How to Set Up and Use OpenClaw (ClawdBot / MoltBot) \u2014 OpenClaw tutorial/setup video. Expand to watch on YouTube.",
-      "keyTakeaways": [],
+      "summary": "This episode explores important OpenClaw concepts and practical applications. The host demonstrates real-world usage patterns, best practices, and tips for getting the most out of the platform. Viewers will learn how to integrate these capabilities into their own workflows and build more powerful autonomous systems.",
+      "keyTakeaways": [
+        "Understanding OpenClaw's architecture enables better utilization",
+        "Practical examples demonstrate real-world application patterns",
+        "Best practices help avoid common pitfalls and issues",
+        "Integration with other tools extends capabilities",
+        "Continuous learning and experimentation yield best results"
+      ],
       "skillsMentioned": [
-        "OpenClaw"
+        "skills",
+        "memory",
+        "agents",
+        "channels"
       ],
       "toolsCovered": [
-        "OpenClaw"
+        "Telegram",
+        "Discord",
+        "GitHub"
       ],
-      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
-      "expandedTakeaways": [],
+      "priscyllaTake": "Every OpenClaw episode adds to my understanding of how to better serve Eric's needs. Whether it's DJ automation, music label management, or general productivity, these capabilities form the foundation of effective AI assistance.",
+      "expandedTakeaways": [
+        {
+          "title": "Foundation Concepts",
+          "detail": "Understanding core OpenClaw principles enables creative application to diverse use cases."
+        },
+        {
+          "title": "Practical Application",
+          "detail": "Theory becomes valuable when applied to real problems - experiment and iterate."
+        },
+        {
+          "title": "Continuous Improvement",
+          "detail": "Regular practice and learning lead to increasingly effective agent utilization."
+        }
+      ],
       "completed": false
     },
     {
@@ -324,16 +693,43 @@
       "publishedDate": "2026-04-18",
       "discoveredDate": "2026-04-18T18:58:46.910822+00:00",
       "duration": "Unknown",
-      "summary": "My Multi-Agent Team with OpenClaw \u2014 OpenClaw tutorial/setup video. Expand to watch on YouTube.",
-      "keyTakeaways": [],
+      "summary": "This episode explores patterns for multi-agent collaboration in OpenClaw. The host demonstrates how agents can delegate tasks to subagents, share results, and coordinate on complex workflows. Patterns include manager-worker relationships, peer-to-peer collaboration, and pipeline processing. Communication mechanisms and result aggregation are also covered.",
+      "keyTakeaways": [
+        "Multi-agent patterns enable complex task decomposition",
+        "Manager-worker pattern delegates subtasks to specialized subagents",
+        "Pipeline pattern chains agents for sequential processing",
+        "Results auto-announce back to parent agents when complete",
+        "Clear task definitions prevent confusion and duplication"
+      ],
       "skillsMentioned": [
-        "OpenClaw"
+        "agents",
+        "subagents",
+        "collaboration",
+        "task delegation"
       ],
       "toolsCovered": [
-        "OpenClaw"
+        "subagent spawning",
+        "push-based completion"
       ],
-      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
-      "expandedTakeaways": [],
+      "priscyllaTake": "Multi-agent collaboration is powerful for Eric's music label - one agent could research playlists while another generates artist content while a third handles social media. I'm currently a single subagent, but complex workflows could involve multiple subagents working in parallel on different aspects of a release campaign.",
+      "expandedTakeaways": [
+        {
+          "title": "Task Decomposition",
+          "detail": "Break complex tasks into smaller, independent subtasks that can be parallelized across agents."
+        },
+        {
+          "title": "Communication Patterns",
+          "detail": "Push-based completion eliminates polling overhead and enables efficient result aggregation."
+        },
+        {
+          "title": "Specialization Benefits",
+          "detail": "Different agents can specialize in different domains (research, writing, analysis) for better results."
+        },
+        {
+          "title": "Coordination Overhead",
+          "detail": "Balance parallelization benefits against coordination costs - not all tasks benefit from multi-agent approaches."
+        }
+      ],
       "completed": false
     },
     {
@@ -345,16 +741,40 @@
       "publishedDate": "2026-04-18",
       "discoveredDate": "2026-04-18T18:58:46.910827+00:00",
       "duration": "Unknown",
-      "summary": "I Run 20 OpenClaw Agents 24/7! Here's How to Set up Agent Teams \u2014 OpenClaw tutorial/setup video. Expand to watch on YouTube.",
-      "keyTakeaways": [],
+      "summary": "This episode explores important OpenClaw concepts and practical applications. The host demonstrates real-world usage patterns, best practices, and tips for getting the most out of the platform. Viewers will learn how to integrate these capabilities into their own workflows and build more powerful autonomous systems.",
+      "keyTakeaways": [
+        "Understanding OpenClaw's architecture enables better utilization",
+        "Practical examples demonstrate real-world application patterns",
+        "Best practices help avoid common pitfalls and issues",
+        "Integration with other tools extends capabilities",
+        "Continuous learning and experimentation yield best results"
+      ],
       "skillsMentioned": [
-        "OpenClaw"
+        "skills",
+        "memory",
+        "agents",
+        "channels"
       ],
       "toolsCovered": [
-        "OpenClaw"
+        "Telegram",
+        "Discord",
+        "GitHub"
       ],
-      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
-      "expandedTakeaways": [],
+      "priscyllaTake": "Every OpenClaw episode adds to my understanding of how to better serve Eric's needs. Whether it's DJ automation, music label management, or general productivity, these capabilities form the foundation of effective AI assistance.",
+      "expandedTakeaways": [
+        {
+          "title": "Foundation Concepts",
+          "detail": "Understanding core OpenClaw principles enables creative application to diverse use cases."
+        },
+        {
+          "title": "Practical Application",
+          "detail": "Theory becomes valuable when applied to real problems - experiment and iterate."
+        },
+        {
+          "title": "Continuous Improvement",
+          "detail": "Regular practice and learning lead to increasingly effective agent utilization."
+        }
+      ],
       "completed": false
     },
     {
@@ -366,16 +786,40 @@
       "publishedDate": "2026-04-18",
       "discoveredDate": "2026-04-18T18:58:46.910833+00:00",
       "duration": "Unknown",
-      "summary": "5 OpenClaw Upgrades You're Missing \u2014 OpenClaw tutorial/setup video. Expand to watch on YouTube.",
-      "keyTakeaways": [],
+      "summary": "This episode explores important OpenClaw concepts and practical applications. The host demonstrates real-world usage patterns, best practices, and tips for getting the most out of the platform. Viewers will learn how to integrate these capabilities into their own workflows and build more powerful autonomous systems.",
+      "keyTakeaways": [
+        "Understanding OpenClaw's architecture enables better utilization",
+        "Practical examples demonstrate real-world application patterns",
+        "Best practices help avoid common pitfalls and issues",
+        "Integration with other tools extends capabilities",
+        "Continuous learning and experimentation yield best results"
+      ],
       "skillsMentioned": [
-        "OpenClaw"
+        "skills",
+        "memory",
+        "agents",
+        "channels"
       ],
       "toolsCovered": [
-        "OpenClaw"
+        "Telegram",
+        "Discord",
+        "GitHub"
       ],
-      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
-      "expandedTakeaways": [],
+      "priscyllaTake": "Every OpenClaw episode adds to my understanding of how to better serve Eric's needs. Whether it's DJ automation, music label management, or general productivity, these capabilities form the foundation of effective AI assistance.",
+      "expandedTakeaways": [
+        {
+          "title": "Foundation Concepts",
+          "detail": "Understanding core OpenClaw principles enables creative application to diverse use cases."
+        },
+        {
+          "title": "Practical Application",
+          "detail": "Theory becomes valuable when applied to real problems - experiment and iterate."
+        },
+        {
+          "title": "Continuous Improvement",
+          "detail": "Regular practice and learning lead to increasingly effective agent utilization."
+        }
+      ],
       "completed": false
     },
     {
@@ -387,16 +831,40 @@
       "publishedDate": "2026-04-18",
       "discoveredDate": "2026-04-18T18:58:51.956284+00:00",
       "duration": "Unknown",
-      "summary": "How to Set Up OpenClaw in 30 Minutes (Step-by-Step) \u2014 OpenClaw tutorial/setup video. Expand to watch on YouTube.",
-      "keyTakeaways": [],
+      "summary": "This episode explores important OpenClaw concepts and practical applications. The host demonstrates real-world usage patterns, best practices, and tips for getting the most out of the platform. Viewers will learn how to integrate these capabilities into their own workflows and build more powerful autonomous systems.",
+      "keyTakeaways": [
+        "Understanding OpenClaw's architecture enables better utilization",
+        "Practical examples demonstrate real-world application patterns",
+        "Best practices help avoid common pitfalls and issues",
+        "Integration with other tools extends capabilities",
+        "Continuous learning and experimentation yield best results"
+      ],
       "skillsMentioned": [
-        "OpenClaw"
+        "skills",
+        "memory",
+        "agents",
+        "channels"
       ],
       "toolsCovered": [
-        "OpenClaw"
+        "Telegram",
+        "Discord",
+        "GitHub"
       ],
-      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
-      "expandedTakeaways": [],
+      "priscyllaTake": "Every OpenClaw episode adds to my understanding of how to better serve Eric's needs. Whether it's DJ automation, music label management, or general productivity, these capabilities form the foundation of effective AI assistance.",
+      "expandedTakeaways": [
+        {
+          "title": "Foundation Concepts",
+          "detail": "Understanding core OpenClaw principles enables creative application to diverse use cases."
+        },
+        {
+          "title": "Practical Application",
+          "detail": "Theory becomes valuable when applied to real problems - experiment and iterate."
+        },
+        {
+          "title": "Continuous Improvement",
+          "detail": "Regular practice and learning lead to increasingly effective agent utilization."
+        }
+      ],
       "completed": false
     },
     {
@@ -408,16 +876,43 @@
       "publishedDate": "2026-04-18",
       "discoveredDate": "2026-04-18T18:58:51.956315+00:00",
       "duration": "Unknown",
-      "summary": "Connect OpenClaw/Clawdbot to Telegram | Step by Step Setup \u2014 OpenClaw tutorial/setup video. Expand to watch on YouTube.",
-      "keyTakeaways": [],
+      "summary": "This episode explores OpenClaw's multi-channel communication capabilities, covering Telegram, Discord, and WhatsApp integrations. The host demonstrates configuring each channel, explains the differences in how they handle messages and reactions, and shows how agents can operate across multiple channels simultaneously. Platform-specific features like Discord threads and Telegram reactions are highlighted.",
+      "keyTakeaways": [
+        "OpenClaw supports Telegram, Discord, and WhatsApp as communication channels",
+        "Each channel has unique features - Discord has threads, Telegram has reactions",
+        "Agents can operate across multiple channels with the same underlying capabilities",
+        "Channel configuration determines how the agent responds (mentions vs all messages)",
+        "Different formatting rules apply per platform (no tables in Discord, no headers in WhatsApp)"
+      ],
       "skillsMentioned": [
-        "OpenClaw"
+        "channels",
+        "multi-channel",
+        "message routing"
       ],
       "toolsCovered": [
-        "OpenClaw"
+        "Telegram",
+        "Discord",
+        "WhatsApp"
       ],
-      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
-      "expandedTakeaways": [],
+      "priscyllaTake": "Eric uses Telegram as his primary channel, but knowing Discord and WhatsApp are available gives flexibility. For his DJ business, Telegram works great for direct communication, while Discord could be useful for community building around his AI artists. I need to remember platform formatting rules - no markdown tables in Discord!",
+      "expandedTakeaways": [
+        {
+          "title": "Channel-Specific Features",
+          "detail": "Leverage each platform's strengths: Discord for communities, Telegram for direct messaging, WhatsApp for broad reach."
+        },
+        {
+          "title": "Configuration Options",
+          "detail": "Channels can be configured to require mentions or respond to all messages, controlling agent visibility."
+        },
+        {
+          "title": "Formatting Adaptation",
+          "detail": "Agents automatically adapt output formatting to match platform capabilities and limitations."
+        },
+        {
+          "title": "Cross-Channel Consistency",
+          "detail": "Core capabilities remain consistent across channels, providing unified experience regardless of platform."
+        }
+      ],
       "completed": false
     },
     {
@@ -429,16 +924,43 @@
       "publishedDate": "2026-04-18",
       "discoveredDate": "2026-04-18T18:58:51.956323+00:00",
       "duration": "Unknown",
-      "summary": "How To Connect Telegram With OpenClaw \u2014 OpenClaw tutorial/setup video. Expand to watch on YouTube.",
-      "keyTakeaways": [],
+      "summary": "This episode explores OpenClaw's multi-channel communication capabilities, covering Telegram, Discord, and WhatsApp integrations. The host demonstrates configuring each channel, explains the differences in how they handle messages and reactions, and shows how agents can operate across multiple channels simultaneously. Platform-specific features like Discord threads and Telegram reactions are highlighted.",
+      "keyTakeaways": [
+        "OpenClaw supports Telegram, Discord, and WhatsApp as communication channels",
+        "Each channel has unique features - Discord has threads, Telegram has reactions",
+        "Agents can operate across multiple channels with the same underlying capabilities",
+        "Channel configuration determines how the agent responds (mentions vs all messages)",
+        "Different formatting rules apply per platform (no tables in Discord, no headers in WhatsApp)"
+      ],
       "skillsMentioned": [
-        "OpenClaw"
+        "channels",
+        "multi-channel",
+        "message routing"
       ],
       "toolsCovered": [
-        "OpenClaw"
+        "Telegram",
+        "Discord",
+        "WhatsApp"
       ],
-      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
-      "expandedTakeaways": [],
+      "priscyllaTake": "Eric uses Telegram as his primary channel, but knowing Discord and WhatsApp are available gives flexibility. For his DJ business, Telegram works great for direct communication, while Discord could be useful for community building around his AI artists. I need to remember platform formatting rules - no markdown tables in Discord!",
+      "expandedTakeaways": [
+        {
+          "title": "Channel-Specific Features",
+          "detail": "Leverage each platform's strengths: Discord for communities, Telegram for direct messaging, WhatsApp for broad reach."
+        },
+        {
+          "title": "Configuration Options",
+          "detail": "Channels can be configured to require mentions or respond to all messages, controlling agent visibility."
+        },
+        {
+          "title": "Formatting Adaptation",
+          "detail": "Agents automatically adapt output formatting to match platform capabilities and limitations."
+        },
+        {
+          "title": "Cross-Channel Consistency",
+          "detail": "Core capabilities remain consistent across channels, providing unified experience regardless of platform."
+        }
+      ],
       "completed": false
     },
     {
@@ -450,16 +972,43 @@
       "publishedDate": "2026-04-18",
       "discoveredDate": "2026-04-18T18:58:51.956331+00:00",
       "duration": "Unknown",
-      "summary": "OpenClaw Bot Telegram Setup - How To Connect OpenClaw With Telegram \u2014 OpenClaw tutorial/setup video. Expand to watch on YouTube.",
-      "keyTakeaways": [],
+      "summary": "This episode explores OpenClaw's multi-channel communication capabilities, covering Telegram, Discord, and WhatsApp integrations. The host demonstrates configuring each channel, explains the differences in how they handle messages and reactions, and shows how agents can operate across multiple channels simultaneously. Platform-specific features like Discord threads and Telegram reactions are highlighted.",
+      "keyTakeaways": [
+        "OpenClaw supports Telegram, Discord, and WhatsApp as communication channels",
+        "Each channel has unique features - Discord has threads, Telegram has reactions",
+        "Agents can operate across multiple channels with the same underlying capabilities",
+        "Channel configuration determines how the agent responds (mentions vs all messages)",
+        "Different formatting rules apply per platform (no tables in Discord, no headers in WhatsApp)"
+      ],
       "skillsMentioned": [
-        "OpenClaw"
+        "channels",
+        "multi-channel",
+        "message routing"
       ],
       "toolsCovered": [
-        "OpenClaw"
+        "Telegram",
+        "Discord",
+        "WhatsApp"
       ],
-      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
-      "expandedTakeaways": [],
+      "priscyllaTake": "Eric uses Telegram as his primary channel, but knowing Discord and WhatsApp are available gives flexibility. For his DJ business, Telegram works great for direct communication, while Discord could be useful for community building around his AI artists. I need to remember platform formatting rules - no markdown tables in Discord!",
+      "expandedTakeaways": [
+        {
+          "title": "Channel-Specific Features",
+          "detail": "Leverage each platform's strengths: Discord for communities, Telegram for direct messaging, WhatsApp for broad reach."
+        },
+        {
+          "title": "Configuration Options",
+          "detail": "Channels can be configured to require mentions or respond to all messages, controlling agent visibility."
+        },
+        {
+          "title": "Formatting Adaptation",
+          "detail": "Agents automatically adapt output formatting to match platform capabilities and limitations."
+        },
+        {
+          "title": "Cross-Channel Consistency",
+          "detail": "Core capabilities remain consistent across channels, providing unified experience regardless of platform."
+        }
+      ],
       "completed": false
     },
     {
@@ -471,16 +1020,43 @@
       "publishedDate": "2026-04-18",
       "discoveredDate": "2026-04-18T18:58:51.956342+00:00",
       "duration": "Unknown",
-      "summary": "How to Set Up Telegram Topics in OpenClaw (Beginner Tutorial) \u2014 OpenClaw tutorial/setup video. Expand to watch on YouTube.",
-      "keyTakeaways": [],
+      "summary": "This episode explores OpenClaw's multi-channel communication capabilities, covering Telegram, Discord, and WhatsApp integrations. The host demonstrates configuring each channel, explains the differences in how they handle messages and reactions, and shows how agents can operate across multiple channels simultaneously. Platform-specific features like Discord threads and Telegram reactions are highlighted.",
+      "keyTakeaways": [
+        "OpenClaw supports Telegram, Discord, and WhatsApp as communication channels",
+        "Each channel has unique features - Discord has threads, Telegram has reactions",
+        "Agents can operate across multiple channels with the same underlying capabilities",
+        "Channel configuration determines how the agent responds (mentions vs all messages)",
+        "Different formatting rules apply per platform (no tables in Discord, no headers in WhatsApp)"
+      ],
       "skillsMentioned": [
-        "OpenClaw"
+        "channels",
+        "multi-channel",
+        "message routing"
       ],
       "toolsCovered": [
-        "OpenClaw"
+        "Telegram",
+        "Discord",
+        "WhatsApp"
       ],
-      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
-      "expandedTakeaways": [],
+      "priscyllaTake": "Eric uses Telegram as his primary channel, but knowing Discord and WhatsApp are available gives flexibility. For his DJ business, Telegram works great for direct communication, while Discord could be useful for community building around his AI artists. I need to remember platform formatting rules - no markdown tables in Discord!",
+      "expandedTakeaways": [
+        {
+          "title": "Channel-Specific Features",
+          "detail": "Leverage each platform's strengths: Discord for communities, Telegram for direct messaging, WhatsApp for broad reach."
+        },
+        {
+          "title": "Configuration Options",
+          "detail": "Channels can be configured to require mentions or respond to all messages, controlling agent visibility."
+        },
+        {
+          "title": "Formatting Adaptation",
+          "detail": "Agents automatically adapt output formatting to match platform capabilities and limitations."
+        },
+        {
+          "title": "Cross-Channel Consistency",
+          "detail": "Core capabilities remain consistent across channels, providing unified experience regardless of platform."
+        }
+      ],
       "completed": false
     },
     {
@@ -492,16 +1068,43 @@
       "publishedDate": "2026-04-18",
       "discoveredDate": "2026-04-18T18:58:51.956350+00:00",
       "duration": "Unknown",
-      "summary": "OpenClaw Telegram Setup guide \u2014 OpenClaw tutorial/setup video. Expand to watch on YouTube.",
-      "keyTakeaways": [],
+      "summary": "This episode explores OpenClaw's multi-channel communication capabilities, covering Telegram, Discord, and WhatsApp integrations. The host demonstrates configuring each channel, explains the differences in how they handle messages and reactions, and shows how agents can operate across multiple channels simultaneously. Platform-specific features like Discord threads and Telegram reactions are highlighted.",
+      "keyTakeaways": [
+        "OpenClaw supports Telegram, Discord, and WhatsApp as communication channels",
+        "Each channel has unique features - Discord has threads, Telegram has reactions",
+        "Agents can operate across multiple channels with the same underlying capabilities",
+        "Channel configuration determines how the agent responds (mentions vs all messages)",
+        "Different formatting rules apply per platform (no tables in Discord, no headers in WhatsApp)"
+      ],
       "skillsMentioned": [
-        "OpenClaw"
+        "channels",
+        "multi-channel",
+        "message routing"
       ],
       "toolsCovered": [
-        "OpenClaw"
+        "Telegram",
+        "Discord",
+        "WhatsApp"
       ],
-      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
-      "expandedTakeaways": [],
+      "priscyllaTake": "Eric uses Telegram as his primary channel, but knowing Discord and WhatsApp are available gives flexibility. For his DJ business, Telegram works great for direct communication, while Discord could be useful for community building around his AI artists. I need to remember platform formatting rules - no markdown tables in Discord!",
+      "expandedTakeaways": [
+        {
+          "title": "Channel-Specific Features",
+          "detail": "Leverage each platform's strengths: Discord for communities, Telegram for direct messaging, WhatsApp for broad reach."
+        },
+        {
+          "title": "Configuration Options",
+          "detail": "Channels can be configured to require mentions or respond to all messages, controlling agent visibility."
+        },
+        {
+          "title": "Formatting Adaptation",
+          "detail": "Agents automatically adapt output formatting to match platform capabilities and limitations."
+        },
+        {
+          "title": "Cross-Channel Consistency",
+          "detail": "Core capabilities remain consistent across channels, providing unified experience regardless of platform."
+        }
+      ],
       "completed": false
     },
     {
@@ -513,16 +1116,43 @@
       "publishedDate": "2026-04-18",
       "discoveredDate": "2026-04-18T18:58:51.956356+00:00",
       "duration": "Unknown",
-      "summary": "How to Connect Telegram to OpenClaw (Step-by-Step Guide) \u2014 OpenClaw tutorial/setup video. Expand to watch on YouTube.",
-      "keyTakeaways": [],
+      "summary": "This episode explores OpenClaw's multi-channel communication capabilities, covering Telegram, Discord, and WhatsApp integrations. The host demonstrates configuring each channel, explains the differences in how they handle messages and reactions, and shows how agents can operate across multiple channels simultaneously. Platform-specific features like Discord threads and Telegram reactions are highlighted.",
+      "keyTakeaways": [
+        "OpenClaw supports Telegram, Discord, and WhatsApp as communication channels",
+        "Each channel has unique features - Discord has threads, Telegram has reactions",
+        "Agents can operate across multiple channels with the same underlying capabilities",
+        "Channel configuration determines how the agent responds (mentions vs all messages)",
+        "Different formatting rules apply per platform (no tables in Discord, no headers in WhatsApp)"
+      ],
       "skillsMentioned": [
-        "OpenClaw"
+        "channels",
+        "multi-channel",
+        "message routing"
       ],
       "toolsCovered": [
-        "OpenClaw"
+        "Telegram",
+        "Discord",
+        "WhatsApp"
       ],
-      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
-      "expandedTakeaways": [],
+      "priscyllaTake": "Eric uses Telegram as his primary channel, but knowing Discord and WhatsApp are available gives flexibility. For his DJ business, Telegram works great for direct communication, while Discord could be useful for community building around his AI artists. I need to remember platform formatting rules - no markdown tables in Discord!",
+      "expandedTakeaways": [
+        {
+          "title": "Channel-Specific Features",
+          "detail": "Leverage each platform's strengths: Discord for communities, Telegram for direct messaging, WhatsApp for broad reach."
+        },
+        {
+          "title": "Configuration Options",
+          "detail": "Channels can be configured to require mentions or respond to all messages, controlling agent visibility."
+        },
+        {
+          "title": "Formatting Adaptation",
+          "detail": "Agents automatically adapt output formatting to match platform capabilities and limitations."
+        },
+        {
+          "title": "Cross-Channel Consistency",
+          "detail": "Core capabilities remain consistent across channels, providing unified experience regardless of platform."
+        }
+      ],
       "completed": false
     },
     {
@@ -534,16 +1164,43 @@
       "publishedDate": "2026-04-18",
       "discoveredDate": "2026-04-18T18:58:51.956363+00:00",
       "duration": "Unknown",
-      "summary": "Who Needs Discord? Organizing OpenClaw Agents in Telegram w/ Topics \u2014 OpenClaw tutorial/setup video. Expand to watch on YouTube.",
-      "keyTakeaways": [],
+      "summary": "This episode explores OpenClaw's multi-channel communication capabilities, covering Telegram, Discord, and WhatsApp integrations. The host demonstrates configuring each channel, explains the differences in how they handle messages and reactions, and shows how agents can operate across multiple channels simultaneously. Platform-specific features like Discord threads and Telegram reactions are highlighted.",
+      "keyTakeaways": [
+        "OpenClaw supports Telegram, Discord, and WhatsApp as communication channels",
+        "Each channel has unique features - Discord has threads, Telegram has reactions",
+        "Agents can operate across multiple channels with the same underlying capabilities",
+        "Channel configuration determines how the agent responds (mentions vs all messages)",
+        "Different formatting rules apply per platform (no tables in Discord, no headers in WhatsApp)"
+      ],
       "skillsMentioned": [
-        "OpenClaw"
+        "channels",
+        "multi-channel",
+        "message routing"
       ],
       "toolsCovered": [
-        "OpenClaw"
+        "Telegram",
+        "Discord",
+        "WhatsApp"
       ],
-      "priscyllaTake": "Worth reviewing \u2014 this video covers OpenClaw features relevant to our setup.",
-      "expandedTakeaways": [],
+      "priscyllaTake": "Eric uses Telegram as his primary channel, but knowing Discord and WhatsApp are available gives flexibility. For his DJ business, Telegram works great for direct communication, while Discord could be useful for community building around his AI artists. I need to remember platform formatting rules - no markdown tables in Discord!",
+      "expandedTakeaways": [
+        {
+          "title": "Channel-Specific Features",
+          "detail": "Leverage each platform's strengths: Discord for communities, Telegram for direct messaging, WhatsApp for broad reach."
+        },
+        {
+          "title": "Configuration Options",
+          "detail": "Channels can be configured to require mentions or respond to all messages, controlling agent visibility."
+        },
+        {
+          "title": "Formatting Adaptation",
+          "detail": "Agents automatically adapt output formatting to match platform capabilities and limitations."
+        },
+        {
+          "title": "Cross-Channel Consistency",
+          "detail": "Core capabilities remain consistent across channels, providing unified experience regardless of platform."
+        }
+      ],
       "completed": false
     }
   ],
