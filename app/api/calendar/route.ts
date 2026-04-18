@@ -1,26 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { google } from "googleapis";
 
-const SCOPES = [
-  "https://www.googleapis.com/auth/calendar.readonly",
-  "https://www.googleapis.com/auth/calendar.events",
-];
-
-// Initialize auth with service account
-function getAuth() {
-  const serviceAccountJson = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
-  
-  if (!serviceAccountJson) {
-    throw new Error("GOOGLE_SERVICE_ACCOUNT_JSON environment variable not set");
-  }
-  
-  const credentials = JSON.parse(serviceAccountJson);
-  
-  return new google.auth.GoogleAuth({
-    credentials,
-    scopes: SCOPES,
-  });
-}
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN || "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";
+const GITHUB_REPO = "Animal71Animal/Mission-Control";
 
 // GET /api/calendar?from=YYYY-MM-DD&to=YYYY-MM-DD
 export async function GET(request: NextRequest) {
@@ -29,34 +10,40 @@ export async function GET(request: NextRequest) {
   const to = searchParams.get("to") || new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
 
   try {
-    const auth = getAuth();
-    const calendar = google.calendar({ version: "v3", auth });
-    
-    // Use the user's calendar ID (ericmills71@gmail.com)
-    const calendarId = "ericmills71@gmail.com";
-    
-    const response = await calendar.events.list({
-      calendarId,
-      timeMin: `${from}T00:00:00Z`,
-      timeMax: `${to}T23:59:59Z`,
-      singleEvents: true,
-      orderBy: "startTime",
-      maxResults: 250,
+    // Fetch from GitHub
+    const response = await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO}/contents/public/data/calendar-events.json`,
+      {
+        headers: { Authorization: `token ${GITHUB_TOKEN}` },
+        cache: "no-store",
+      }
+    );
+
+    if (!response.ok) {
+      return NextResponse.json({ events: [] });
+    }
+
+    const data = await response.json();
+    const content = Buffer.from(data.content, "base64").toString("utf-8");
+    const calendarData = JSON.parse(content);
+    const allEvents = calendarData.events || [];
+
+    // Filter by date range
+    const filteredEvents = allEvents.filter((e: any) => {
+      const eventDate = e.date;
+      return eventDate >= from && eventDate <= to;
     });
-    
-    const events = response.data.items || [];
-    
-    // Transform to our format
-    const transformedEvents = events.map((e: any) => ({
+
+    const transformedEvents = filteredEvents.map((e: any) => ({
       id: e.id,
-      title: e.summary || "Untitled",
-      date: e.start?.date || e.start?.dateTime?.split("T")[0],
-      time: e.start?.dateTime ? e.start.dateTime.split("T")[1]?.substring(0, 5) : undefined,
-      endTime: e.end?.dateTime ? e.end.dateTime.split("T")[1]?.substring(0, 5) : undefined,
+      title: e.title || "Untitled",
+      date: e.date,
+      time: e.time,
+      endTime: e.endTime,
       location: e.location,
-      notes: e.description,
-      category: categorizeEvent(e.summary),
-      color: getCategoryColor(categorizeEvent(e.summary)),
+      notes: e.notes,
+      category: e.category || "other",
+      color: getCategoryColor(e.category || "other"),
     }));
 
     return NextResponse.json({ events: transformedEvents });
@@ -67,43 +54,68 @@ export async function GET(request: NextRequest) {
       details: error.message 
     }, { status: 500 });
   }
-}
 
 // POST /api/calendar - Create new event
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { title, date, time, endTime, location, notes } = body;
+    const { title, date, time, endTime, location, notes, category } = body;
 
-    const auth = getAuth();
-    const calendar = google.calendar({ version: "v3", auth });
-    
-    // Build event
-    const event: any = {
-      summary: title,
-      location: location,
-      description: notes,
-    };
-    
-    if (time) {
-      const startDateTime = `${date}T${time}:00`;
-      const endDateTime = endTime 
-        ? `${date}T${endTime}:00` 
-        : `${date}T${parseInt(time.split(":")[0]) + 1}:${time.split(":")[1]}:00`;
-      
-      event.start = { dateTime: startDateTime, timeZone: "America/Denver" };
-      event.end = { dateTime: endDateTime, timeZone: "America/Denver" };
-    } else {
-      event.start = { date: date };
-      event.end = { date: date };
+    // Fetch current events
+    const getResponse = await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO}/contents/public/data/calendar-events.json`,
+      {
+        headers: { Authorization: `token ${GITHUB_TOKEN}` },
+      }
+    );
+
+    let calendarData = { events: [] };
+    let sha = "";
+
+    if (getResponse.ok) {
+      const data = await getResponse.json();
+      sha = data.sha;
+      const content = Buffer.from(data.content, "base64").toString("utf-8");
+      calendarData = JSON.parse(content);
     }
 
-    const response = await calendar.events.insert({
-      calendarId: "ericmills71@gmail.com",
-      requestBody: event,
-    });
+    // Add new event
+    const newEvent = {
+      id: `event-${Date.now()}`,
+      title,
+      date,
+      time,
+      endTime,
+      location,
+      notes,
+      category: category || "other",
+      created_at: new Date().toISOString(),
+    };
 
-    return NextResponse.json({ success: true, event: response.data });
+    calendarData.events.push(newEvent);
+
+    // Push to GitHub
+    const updateResponse = await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO}/contents/public/data/calendar-events.json`,
+      {
+        method: "PUT",
+        headers: {
+          Authorization: `token ${GITHUB_TOKEN}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          message: `Add calendar event: ${title}`,
+          content: Buffer.from(JSON.stringify(calendarData, null, 2)).toString("base64"),
+          sha,
+        }),
+      }
+    );
+
+    if (!updateResponse.ok) {
+      throw new Error("Failed to update GitHub");
+    }
+
+    return NextResponse.json({ success: true, event: newEvent });
   } catch (error: any) {
     console.error("Calendar create error:", error);
     return NextResponse.json({ error: "Failed to create event", details: error.message }, { status: 500 });
@@ -115,37 +127,61 @@ export async function PUT(request: NextRequest) {
   try {
     const id = request.url.split("/").pop();
     const body = await request.json();
-    const { title, date, time, endTime, location, notes } = body;
+    const { title, date, time, endTime, location, notes, category } = body;
 
-    const auth = getAuth();
-    const calendar = google.calendar({ version: "v3", auth });
+    // Fetch current events
+    const getResponse = await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO}/contents/public/data/calendar-events.json`,
+      {
+        headers: { Authorization: `token ${GITHUB_TOKEN}` },
+      }
+    );
 
-    const event: any = {
-      summary: title,
-      location: location,
-      description: notes,
-    };
-    
-    if (time) {
-      const startDateTime = `${date}T${time}:00`;
-      const endDateTime = endTime 
-        ? `${date}T${endTime}:00` 
-        : `${date}T${parseInt(time.split(":")[0]) + 1}:${time.split(":")[1]}:00`;
-      
-      event.start = { dateTime: startDateTime, timeZone: "America/Denver" };
-      event.end = { dateTime: endDateTime, timeZone: "America/Denver" };
-    } else {
-      event.start = { date: date };
-      event.end = { date: date };
+    const data = await getResponse.json();
+    const sha = data.sha;
+    const content = Buffer.from(data.content, "base64").toString("utf-8");
+    const calendarData = JSON.parse(content);
+
+    // Find and update event
+    const eventIndex = calendarData.events.findIndex((e: any) => e.id === id);
+    if (eventIndex === -1) {
+      return NextResponse.json({ error: "Event not found" }, { status: 404 });
     }
 
-    const response = await calendar.events.update({
-      calendarId: "ericmills71@gmail.com",
-      eventId: id!,
-      requestBody: event,
-    });
+    calendarData.events[eventIndex] = {
+      ...calendarData.events[eventIndex],
+      title,
+      date,
+      time,
+      endTime,
+      location,
+      notes,
+      category: category || "other",
+      updated_at: new Date().toISOString(),
+    };
 
-    return NextResponse.json({ success: true, event: response.data });
+    // Push to GitHub
+    const updateResponse = await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO}/contents/public/data/calendar-events.json`,
+      {
+        method: "PUT",
+        headers: {
+          Authorization: `token ${GITHUB_TOKEN}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          message: `Update calendar event: ${title}`,
+          content: Buffer.from(JSON.stringify(calendarData, null, 2)).toString("base64"),
+          sha,
+        }),
+      }
+    );
+
+    if (!updateResponse.ok) {
+      throw new Error("Failed to update GitHub");
+    }
+
+    return NextResponse.json({ success: true, event: calendarData.events[eventIndex] });
   } catch (error: any) {
     console.error("Calendar update error:", error);
     return NextResponse.json({ error: "Failed to update event", details: error.message }, { status: 500 });
@@ -157,13 +193,42 @@ export async function DELETE(request: NextRequest) {
   try {
     const id = request.url.split("/").pop();
     
-    const auth = getAuth();
-    const calendar = google.calendar({ version: "v3", auth });
+    // Fetch current events
+    const getResponse = await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO}/contents/public/data/calendar-events.json`,
+      {
+        headers: { Authorization: `token ${GITHUB_TOKEN}` },
+      }
+    );
 
-    await calendar.events.delete({
-      calendarId: "ericmills71@gmail.com",
-      eventId: id!,
-    });
+    const data = await getResponse.json();
+    const sha = data.sha;
+    const content = Buffer.from(data.content, "base64").toString("utf-8");
+    const calendarData = JSON.parse(content);
+
+    // Remove event
+    calendarData.events = calendarData.events.filter((e: any) => e.id !== id);
+
+    // Push to GitHub
+    const updateResponse = await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO}/contents/public/data/calendar-events.json`,
+      {
+        method: "PUT",
+        headers: {
+          Authorization: `token ${GITHUB_TOKEN}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          message: `Delete calendar event: ${id}`,
+          content: Buffer.from(JSON.stringify(calendarData, null, 2)).toString("base64"),
+          sha,
+        }),
+      }
+    );
+
+    if (!updateResponse.ok) {
+      throw new Error("Failed to update GitHub");
+    }
 
     return NextResponse.json({ success: true });
   } catch (error: any) {
