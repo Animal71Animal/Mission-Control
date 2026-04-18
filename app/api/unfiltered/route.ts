@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 // Unfiltered analysis - uses AI to analyze actual article content
-const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
-const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent`;
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 interface AnalysisResult {
   topic: string;
@@ -64,21 +63,26 @@ Provide:
 Format as JSON: {"left": "...", "right": "...", "truth": "..."}`;
 
   try {
-    const res = await fetch(`${GEMINI_URL}?key=${GOOGLE_API_KEY}`, {
+    const res = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${OPENAI_API_KEY}`
+      },
       body: JSON.stringify({
-        contents: [{ parts: [{ text: prompt }] }],
-        generationConfig: { maxOutputTokens: 600, temperature: 0.7 }
+        model: "gpt-4o-mini",
+        messages: [{ role: "user", content: prompt }],
+        max_tokens: 600,
+        temperature: 0.7
       })
     });
 
     if (!res.ok) {
-      throw new Error(`Gemini API error: ${res.status}`);
+      throw new Error(`OpenAI API error: ${res.status}`);
     }
 
     const data = await res.json();
-    const aiResponse = data.candidates?.[0]?.content?.parts?.[0]?.text || "";
+    const aiResponse = data.choices?.[0]?.message?.content || "";
     
     // Extract JSON from response
     const jsonMatch = aiResponse.match(/\{[\s\S]*\}/);
