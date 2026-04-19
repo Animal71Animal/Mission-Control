@@ -685,5 +685,9 @@
       "minutes": 288
     }
   },
-  "last_updated": "2026-04-17T20:43:00.000Z"
+  "last_updated": "2026-04-17T20:43:00.000Z",
+  "total_kwh": 3031.13,
+  "total_cost": 862.11,
+  "avg_rate": 0.284,
+  "session_count": 54
 }
