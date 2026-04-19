@@ -14,6 +14,11 @@
       "month": "March",
       "amount": 1976,
       "nights": 15
+    },
+    {
+      "month": "April",
+      "amount": 887,
+      "nights": 7
     }
   ],
   "topTippers": [
@@ -130,7 +135,8 @@
       "name": "Hunter",
       "jan": 20,
       "feb": 135,
-      "mar": 120
+      "mar": 120,
+      "apr": 60
     },
     {
       "name": "Amity",
@@ -142,7 +148,8 @@
       "name": "Suki",
       "jan": 200,
       "feb": 60,
-      "mar": 0
+      "mar": 0,
+      "apr": 20
     },
     {
       "name": "Genesis",
@@ -160,7 +167,8 @@
       "name": "Allie",
       "jan": 20,
       "feb": 55,
-      "mar": 87
+      "mar": 87,
+      "apr": 25
     },
     {
       "name": "Athena",
@@ -172,7 +180,8 @@
       "name": "Mia",
       "jan": 89,
       "feb": 49,
-      "mar": 4
+      "mar": 4,
+      "apr": 33
     },
     {
       "name": "Skylar",
@@ -184,7 +193,8 @@
       "name": "Georgia",
       "jan": 26,
       "feb": 59,
-      "mar": 47
+      "mar": 47,
+      "apr": 105
     },
     {
       "name": "Noelle",
@@ -202,25 +212,29 @@
       "name": "Willow",
       "jan": 48,
       "feb": 22,
-      "mar": 52
+      "mar": 52,
+      "apr": 85
     },
     {
       "name": "Berlin",
       "jan": 28,
       "feb": 45,
-      "mar": 35
+      "mar": 35,
+      "apr": 10
     },
     {
       "name": "Milan",
       "jan": 70,
       "feb": 20,
-      "mar": 5
+      "mar": 5,
+      "apr": 25
     },
     {
       "name": "Nova",
       "jan": 20,
       "feb": 40,
-      "mar": 35
+      "mar": 35,
+      "apr": 25
     },
     {
       "name": "Ella",
@@ -232,13 +246,15 @@
       "name": "Kendall",
       "jan": 20,
       "feb": 15,
-      "mar": 50
+      "mar": 50,
+      "apr": 20
     },
     {
       "name": "Natasha",
       "jan": 25,
       "feb": 15,
-      "mar": 40
+      "mar": 40,
+      "apr": 25
     },
     {
       "name": "Asia",
@@ -250,13 +266,15 @@
       "name": "Giovanna",
       "jan": 0,
       "feb": 0,
-      "mar": 75
+      "mar": 75,
+      "apr": 20
     },
     {
       "name": "Zara",
       "jan": 24,
       "feb": 30,
-      "mar": 20
+      "mar": 20,
+      "apr": 45
     },
     {
       "name": "Kody",
@@ -268,7 +286,8 @@
       "name": "Baby",
       "jan": 34,
       "feb": 15,
-      "mar": 7
+      "mar": 7,
+      "apr": 5
     },
     {
       "name": "Quinn",
@@ -298,7 +317,8 @@
       "name": "Dior",
       "jan": 20,
       "feb": 15,
-      "mar": 15
+      "mar": 15,
+      "apr": 23
     },
     {
       "name": "Effie",
@@ -322,7 +342,8 @@
       "name": "Indie",
       "jan": 25,
       "feb": 5,
-      "mar": 6
+      "mar": 6,
+      "apr": 40
     },
     {
       "name": "Alaska",
@@ -340,13 +361,15 @@
       "name": "Mixie",
       "jan": 5,
       "feb": 15,
-      "mar": 15
+      "mar": 15,
+      "apr": 5
     },
     {
       "name": "Star",
       "jan": 6,
       "feb": 21,
-      "mar": 6
+      "mar": 6,
+      "apr": 40
     },
     {
       "name": "Ruby",
@@ -364,7 +387,8 @@
       "name": "Shelby",
       "jan": 25,
       "feb": 5,
-      "mar": 0
+      "mar": 0,
+      "apr": 105
     },
     {
       "name": "Cassandra",
@@ -376,7 +400,8 @@
       "name": "Brittany",
       "jan": 0,
       "feb": 0,
-      "mar": 25
+      "mar": 25,
+      "apr": 20
     },
     {
       "name": "Val",
@@ -394,13 +419,15 @@
       "name": "Tiana",
       "jan": 7,
       "feb": 5,
-      "mar": 28
+      "mar": 28,
+      "apr": 20
     },
     {
       "name": "Maria",
       "jan": 0,
       "feb": 0,
-      "mar": 20
+      "mar": 20,
+      "apr": 35
     },
     {
       "name": "Kylie",
@@ -412,7 +439,8 @@
       "name": "Amy",
       "jan": 0,
       "feb": 15,
-      "mar": 0
+      "mar": 0,
+      "apr": 40
     },
     {
       "name": "Jamira",
@@ -436,7 +464,8 @@
       "name": "Brooke",
       "jan": 0,
       "feb": 0,
-      "mar": 8
+      "mar": 8,
+      "apr": 5
     },
     {
       "name": "Karina",
@@ -461,6 +490,20 @@
       "jan": 5,
       "feb": 0,
       "mar": 0
+    },
+    {
+      "name": "Ava",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 14
+    },
+    {
+      "name": "Customers",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 40
     }
   ],
   "dailyTips": [
@@ -1190,9 +1233,142 @@
         }
       ],
       "total": 223
+    },
+    {
+      "date": "2026-04-02",
+      "day": "Thursday",
+      "tips": [
+        {
+          "dancer": "Dior",
+          "amount": 10
+        },
+        {
+          "dancer": "Mixie",
+          "amount": 5
+        },
+        {
+          "dancer": "Brittany",
+          "amount": 20
+        },
+        {
+          "dancer": "Indie",
+          "amount": 20
+        },
+        {
+          "dancer": "Nova",
+          "amount": 20
+        },
+        {
+          "dancer": "Mia",
+          "amount": 5
+        },
+        {
+          "dancer": "Amy",
+          "amount": 10
+        },
+        {
+          "dancer": "Ava",
+          "amount": 14
+        },
+        {
+          "dancer": "Natasha",
+          "amount": 10
+        },
+        {
+          "dancer": "Hunter",
+          "amount": 40
+        },
+        {
+          "dancer": "Maria",
+          "amount": 10
+        },
+        {
+          "dancer": "Willow",
+          "amount": 80
+        }
+      ],
+      "total": 244
+    },
+    {
+      "date": "2026-04-03",
+      "day": "Friday",
+      "tips": [
+        {
+          "dancer": "Nova",
+          "amount": 5
+        },
+        {
+          "dancer": "Allie",
+          "amount": 25
+        },
+        {
+          "dancer": "Natasha",
+          "amount": 5
+        },
+        {
+          "dancer": "Hunter",
+          "amount": 20
+        },
+        {
+          "dancer": "Kendall",
+          "amount": 20
+        },
+        {
+          "dancer": "Amy",
+          "amount": 10
+        },
+        {
+          "dancer": "Georgia",
+          "amount": 65
+        },
+        {
+          "dancer": "Suki",
+          "amount": 20
+        },
+        {
+          "dancer": "Brooke",
+          "amount": 5
+        },
+        {
+          "dancer": "Shelby",
+          "amount": 105
+        },
+        {
+          "dancer": "Customers",
+          "amount": 10
+        },
+        {
+          "dancer": "Berlin",
+          "amount": 10
+        },
+        {
+          "dancer": "Maria",
+          "amount": 20
+        }
+      ],
+      "total": 320
+    },
+    {
+      "date": "2026-04-05",
+      "day": "Sunday",
+      "tips": [
+        {
+          "dancer": "Tiana",
+          "amount": 15
+        },
+        {
+          "dancer": "Mia",
+          "amount": 10
+        },
+        {
+          "dancer": "Amy",
+          "amount": 20
+        }
+      ],
+      "total": 45
     }
   ],
-  "lastUpdated": "2026-03-29T12:00:00.000Z",
+  "lastUpdated": "2026-04-15T09:37:00.000Z",
   "nightlyData": {
     "January": [
       {
@@ -3233,6 +3409,193 @@
             "name": "Quinn",
             "amount": 20
           }
+        ]
+      }
+    ],
+    "April": [
+      {
+        "date": "Thu Apr 2",
+        "total": 244,
+        "dancers": [
+          {
+            "dancer": "Dior",
+            "amount": 10
+          },
+          {
+            "dancer": "Mixie",
+            "amount": 5
+          },
+          {
+            "dancer": "Brittany",
+            "amount": 20
+          },
+          {
+            "dancer": "Indie",
+            "amount": 20
+          },
+          {
+            "dancer": "Nova",
+            "amount": 20
+          },
+          {
+            "dancer": "Mia",
+            "amount": 5
+          },
+          {
+            "dancer": "Amy",
+            "amount": 10
+          },
+          {
+            "dancer": "Ava",
+            "amount": 14
+          },
+          {
+            "dancer": "Natasha",
+            "amount": 10
+          },
+          {
+            "dancer": "Hunter",
+            "amount": 40
+          },
+          {
+            "dancer": "Maria",
+            "amount": 10
+          },
+          {
+            "dancer": "Willow",
+            "amount": 80
+          }
+        ]
+      },
+      {
+        "date": "Fri Apr 3",
+        "total": 320,
+        "dancers": [
+          {
+            "dancer": "Nova",
+            "amount": 5
+          },
+          {
+            "dancer": "Allie",
+            "amount": 25
+          },
+          {
+            "dancer": "Natasha",
+            "amount": 5
+          },
+          {
+            "dancer": "Hunter",
+            "amount": 20
+          },
+          {
+            "dancer": "Kendall",
+            "amount": 20
+          },
+          {
+            "dancer": "Amy",
+            "amount": 10
+          },
+          {
+            "dancer": "Georgia",
+            "amount": 65
+          },
+          {
+            "dancer": "Suki",
+            "amount": 20
+          },
+          {
+            "dancer": "Brooke",
+            "amount": 5
+          },
+          {
+            "dancer": "Shelby",
+            "amount": 105
+          },
+          {
+            "dancer": "Customers",
+            "amount": 10
+          },
+          {
+            "dancer": "Berlin",
+            "amount": 10
+          },
+          {
+            "dancer": "Maria",
+            "amount": 20
+          }
+        ]
+      },
+      {
+        "date": "Sun Apr 5",
+        "total": 45,
+        "dancers": [
+          {
+            "dancer": "Tiana",
+            "amount": 15
+          },
+          {
+            "dancer": "Mia",
+            "amount": 10
+          },
+          {
+            "dancer": "Amy",
+            "amount": 20
+          }
+        ]
+      },
+      {
+        "date": "Mon Apr 13",
+        "total": 33,
+        "dancers": [
+          {
+            "dancer": "Dior",
+            "amount": 13
+          },
+          {
+            "dancer": "Indie",
+            "amount": 20
+          },
+          {
+            "dancer": "Macy",
+            "amount": 0
+          }
+        ]
+      },
+      {
+        "date": "Tue Apr 14",
+        "total": 105,
+        "dancers": [
+          { "dancer": "Customers", "amount": 10 },
+          { "dancer": "Mia", "amount": 3 },
+          { "dancer": "Star", "amount": 40 },
+          { "dancer": "Milan", "amount": 25 },
+          { "dancer": "Kylie", "amount": 7 },
+          { "dancer": "Georgia", "amount": 20 }
+        ]
+      },
+      {
+        "date": "Wed Apr 16",
+        "total": 60,
+        "dancers": [
+          { "dancer": "Giovanna", "amount": 20 },
+          { "dancer": "Customers", "amount": 20 },
+          { "dancer": "Amy", "amount": 10 },
+          { "dancer": "Zara", "amount": 5 },
+          { "dancer": "Maria", "amount": 5 }
+        ]
+      },
+      {
+        "date": "Thu Apr 17",
+        "total": 80,
+        "dancers": [
+          { "dancer": "Kody", "amount": 5 },
+          { "dancer": "Kiki", "amount": 10 },
+          { "dancer": "Mia", "amount": 5 },
+          { "dancer": "Georgia", "amount": 20 },
+          { "dancer": "Willow", "amount": 5 },
+          { "dancer": "Tiana", "amount": 5 },
+          { "dancer": "Natasha", "amount": 10 },
+          { "dancer": "Macy", "amount": 20 }
         ]
       }
     ]
