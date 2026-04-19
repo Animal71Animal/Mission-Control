@@ -1,0 +1,27 @@
+{
+  "date": "2026-04-19",
+  "lastUpdated": "2026-04-19T16:00:00Z",
+  "summary": {
+    "weather": {
+      "temp": 50,
+      "unit": "F",
+      "conditions": "Overcast",
+      "high": 77,
+      "low": 39
+    },
+    "tasks": {
+      "open": 11,
+      "overdue": 1
+    },
+    "peptides": {
+      "week": 0,
+      "status": "Starting tomorrow",
+      "today": "Off day"
+    },
+    "calendar": {
+      "eventsToday": 0
+    },
+    "priority": "Marketing materials for Bryan presentation — DUE TODAY"
+  },
+  "fullBriefing": "/ops/briefings/briefing-2026-04-19.json"
+}
