@@ -70,7 +70,7 @@
       "completed": false,
       "category": "Audio",
       "priority": "high",
-      "due_date": null
+      "due_date": "2026-04-22"
     },
     {
       "id": "10",
@@ -177,5 +177,5 @@
       "due_date": "2026-04-18"
     }
   ],
-  "last_updated": "2026-04-19T09:43:01.447Z"
+  "last_updated": "2026-04-19T09:43:17.467Z"
 }
