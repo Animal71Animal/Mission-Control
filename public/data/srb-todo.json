@@ -158,7 +158,7 @@
       "completed": false,
       "category": "Marketing",
       "priority": "high",
-      "due_date": "2026-04-23"
+      "due_date": "2026-04-22"
     },
     {
       "id": "21",
@@ -177,5 +177,5 @@
       "due_date": "2026-04-18"
     }
   ],
-  "last_updated": "2026-04-19T09:42:29.615Z"
+  "last_updated": "2026-04-19T09:42:45.107Z"
 }
