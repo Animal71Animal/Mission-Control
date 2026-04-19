@@ -625,19 +625,6 @@
       "created_at": "2026-04-14T19:54:00.000Z"
     },
     {
-      "id": "tesla-20260417-53",
-      "date": "2026-04-17",
-      "time": "13:58",
-      "location": "Boise, ID - 851 N Orchard St",
-      "kwh": 58.9388,
-      "cost": 22.39,
-      "duration_minutes": 43,
-      "rate_per_kwh": 0.38,
-      "notes": "Supercharging",
-      "uber_shift": false,
-      "created_at": "2026-04-17T20:43:00.000Z"
-    },
-    {
       "id": "tesla-20260416-52",
       "date": "2026-04-16",
       "time": "14:10",
