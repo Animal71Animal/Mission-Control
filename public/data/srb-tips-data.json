@@ -17,7 +17,7 @@
     },
     {
       "month": "April",
-      "amount": 1068,
+      "amount": 1088,
       "nights": 8
     }
   ],
@@ -3657,7 +3657,7 @@
       },
       {
         "date": "Sat Apr 18",
-        "total": 181,
+        "total": 201,
         "dancers": [
           {
             "dancer": "Suki",
@@ -3702,6 +3702,10 @@
           {
             "dancer": "Cassandra",
             "amount": 5
+          },
+          {
+            "dancer": "Amy",
+            "amount": 20
           }
         ]
       }
