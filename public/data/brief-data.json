@@ -1,13 +1,18 @@
 {
-  "date": "2026-04-19",
-  "lastUpdated": "2026-04-19T16:00:00Z",
+  "date": "2026-04-20",
+  "lastUpdated": "2026-04-20T16:00:00Z",
   "summary": {
+    "weather": "55°F partly cloudy → High 81°F / Low 45°F",
+    "tasks": "11 open, 1 overdue",
+    "peptides": "Week 0 starts today: Retatrutide 8AM + Tesamorelin 9:30PM",
+    "calendar": "No events today",
+    "priority": "Marketing materials for Bryan (overdue) + TikTok handles"
+  },
+  "details": {
     "weather": {
-      "temp": 50,
-      "unit": "F",
-      "conditions": "Overcast",
-      "high": 77,
-      "low": 39
+      "current": "55°F, partly cloudy",
+      "high": "81°F",
+      "low": "45°F"
     },
     "tasks": {
       "open": 11,
@@ -15,13 +20,12 @@
     },
     "peptides": {
       "week": 0,
-      "status": "Starting tomorrow",
-      "today": "Off day"
+      "today": [
+        "Retatrutide 60 units @ 8:00 AM",
+        "Tesamorelin 30 units @ 9:30 PM"
+      ]
     },
-    "calendar": {
-      "eventsToday": 0
-    },
-    "priority": "Marketing materials for Bryan presentation — DUE TODAY"
-  },
-  "fullBriefing": "/ops/briefings/briefing-2026-04-19.json"
+    "calendar": [],
+    "wlpAction": "Finish marketing materials for Bryan presentation (was due 4/19) and create TikTok handles to unblock AI artist launch"
+  }
 }
