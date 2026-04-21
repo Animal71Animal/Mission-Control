@@ -1,31 +1,44 @@
 {
-  "date": "2026-04-20",
-  "lastUpdated": "2026-04-20T16:00:00Z",
+  "date": "2026-04-21",
+  "lastUpdated": "2026-04-21T16:00:00Z",
   "summary": {
-    "weather": "55°F partly cloudy → High 81°F / Low 45°F",
-    "tasks": "11 open, 1 overdue",
-    "peptides": "Week 0 starts today: Retatrutide 8AM + Tesamorelin 9:30PM",
-    "calendar": "No events today",
-    "priority": "Marketing materials for Bryan (overdue) + TikTok handles"
+    "weather": "62°F clear, high 82°F / low 49°F",
+    "tasksOpen": 10,
+    "tasksOverdue": 1,
+    "peptidesDue": 2,
+    "calendarEvents": 0,
+    "wlpFocus": "TikTok setup blocking AI artist launch"
   },
-  "details": {
-    "weather": {
-      "current": "55°F, partly cloudy",
-      "high": "81°F",
-      "low": "45°F"
-    },
-    "tasks": {
-      "open": 11,
-      "overdue": 1
-    },
-    "peptides": {
-      "week": 0,
-      "today": [
-        "Retatrutide 60 units @ 8:00 AM",
-        "Tesamorelin 30 units @ 9:30 PM"
-      ]
-    },
-    "calendar": [],
-    "wlpAction": "Finish marketing materials for Bryan presentation (was due 4/19) and create TikTok handles to unblock AI artist launch"
-  }
+  "weather": {
+    "location": "Boise, ID",
+    "temp": 62,
+    "high": 82,
+    "low": 49,
+    "conditions": "Clear"
+  },
+  "tasks": {
+    "open": 10,
+    "overdue": 1,
+    "overdueItems": ["Send Amanda email"]
+  },
+  "peptides": {
+    "today": "Tuesday",
+    "activeCount": 2,
+    "doses": [
+      {
+        "name": "Retatrutide",
+        "dose": "60 units",
+        "time": "8:00 AM"
+      },
+      {
+        "name": "Tesamorelin",
+        "dose": "30 units",
+        "time": "9:30 PM"
+      }
+    ]
+  },
+  "calendar": {
+    "eventsToday": 0
+  },
+  "wlpAction": "Create TikTok handles for Kade, Madison, Aria, ANIMAL, and WLP"
 }
