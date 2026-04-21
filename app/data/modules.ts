@@ -17,10 +17,11 @@ export const modules: Module[] = [
   { href: "/content-pipeline", icon: "📱", title: "Content Pipeline", desc: "TikTok, Reels & Shorts management for WLP AI Artists.", status: "active", group: "business" },
   { href: "/calendar", icon: "📅", title: "Calendar", desc: "Gigs, studio sessions, meetings, and deadlines.", status: "active", group: "business" },
   { href: "/srb-tips", icon: "💰", title: "SRB Tips", desc: "Spearmint Rhino tip tracking — monthly totals, top tippers, dancer stats.", status: "active", group: "business" },
-  { href: "/spearmint-rhino", icon: "🦏", title: "Spearmint Rhino", desc: "Club operations, to-do lists, equipment status, and venue management.", status: "active", group: "business" },
+  { href: "/tasks", icon: "📋", title: "Tasks", desc: "All task lists — Spearmint Rhino club operations and personal tasks in one hub.", status: "active", group: "business" },
+  { href: "/spearmint-rhino", icon: "🦏", title: "Spearmint Rhino", desc: "Club operations, equipment status, and venue management.", status: "active", group: "business" },
   { href: "/agents", icon: "🤖", title: "AI Office", desc: "Live view of AI agents working in the virtual office.", status: "active", group: "business" },
   
-  { href: "/personal-tasks", icon: "✅", title: "Tasks", desc: "All tasks — personal, WLP, and work items with priority, due dates, and categories.", status: "active", group: "personal" },
+
   { href: "/peptides", icon: "💉", title: "Peptide Stack", desc: "Mission Control — peptide dosing, schedule, and tracking.", status: "active", group: "personal" },
   { href: "/tesla", icon: "🚗", title: "Tesla", desc: "Charging session log and cost tracker.", status: "active", group: "personal" },
   { href: "/uber-profit", icon: "🚘", title: "Uber Profit", desc: "Earnings tracking with proportional charging deduction.", status: "active", group: "personal" },
