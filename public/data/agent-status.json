@@ -36,17 +36,17 @@
       "name": "Clawdia",
       "discipline": "Operations",
       "model": "abacus/claude-sonnet-4-6",
-      "status": "in-progress",
-      "totalTasksCompleted": 3,
+      "status": "idle",
+      "totalTasksCompleted": 4,
       "totalTasksAssigned": 8,
       "tasksInProgress": 0,
-      "currentTask": "Consolidate Artist Tabs with Dropdown",
-      "currentTaskStatus": "in-progress",
+      "currentTask": null,
+      "currentTaskStatus": null,
       "currentTaskProgress": 0,
       "blockers": [],
-      "lastUpdated": "2026-04-22T06:52:15.690761Z",
+      "lastUpdated": "2026-04-22T06:54:50.446827Z",
       "nextDeadline": null,
-      "availabilityStatus": "in-progress"
+      "availabilityStatus": "available"
     },
     "shelly": {
       "name": "Shelly",
@@ -134,11 +134,11 @@
     }
   },
   "teamStats": {
-    "totalTasksCompleted": 13,
+    "totalTasksCompleted": 14,
     "totalTasksAssigned": 17,
-    "tasksInProgress": 1,
+    "tasksInProgress": 0,
     "blockedTasks": 2,
     "teamAvailability": "medium",
-    "lastTeamUpdate": "2026-04-22T06:52:15.701088Z"
+    "lastTeamUpdate": "2026-04-22T06:54:50.456540Z"
   }
 }
