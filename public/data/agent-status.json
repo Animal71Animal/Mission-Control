@@ -56,17 +56,17 @@
       "name": "Clawdia",
       "discipline": "Operations",
       "model": "abacus/claude-sonnet-4-6",
-      "status": "idle",
+      "status": "in-progress",
       "totalTasksCompleted": 8,
-      "totalTasksAssigned": 13,
+      "totalTasksAssigned": 14,
       "tasksInProgress": 0,
-      "currentTask": null,
-      "currentTaskStatus": null,
+      "currentTask": "Integrate Uber Earnings into Mission Control",
+      "currentTaskStatus": "in-progress",
       "currentTaskProgress": 0,
       "blockers": [],
-      "lastUpdated": "2026-04-22T08:23:04.090808Z",
+      "lastUpdated": "2026-04-22T08:24:41.496947Z",
       "nextDeadline": null,
-      "availabilityStatus": "available",
+      "availabilityStatus": "in-progress",
       "taskHistory": {
         "completed": [
           {
@@ -230,10 +230,10 @@
   },
   "teamStats": {
     "totalTasksCompleted": 19,
-    "totalTasksAssigned": 23,
-    "tasksInProgress": 0,
+    "totalTasksAssigned": 24,
+    "tasksInProgress": 1,
     "blockedTasks": 2,
     "teamAvailability": "medium",
-    "lastTeamUpdate": "2026-04-22T08:23:04.099621Z"
+    "lastTeamUpdate": "2026-04-22T08:24:41.506183Z"
   }
 }
