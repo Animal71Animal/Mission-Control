@@ -1,44 +1,49 @@
 {
-  "date": "2026-04-21",
-  "lastUpdated": "2026-04-21T16:00:00Z",
+  "date": "2026-04-22",
+  "lastUpdated": "2026-04-22T16:00:00Z",
   "summary": {
-    "weather": "62°F clear, high 82°F / low 49°F",
-    "tasksOpen": 10,
-    "tasksOverdue": 1,
-    "peptidesDue": 2,
-    "calendarEvents": 0,
-    "wlpFocus": "TikTok setup blocking AI artist launch"
+    "weather": {
+      "temp": 45,
+      "high": 51,
+      "low": 42,
+      "conditions": "Rain",
+      "precipitation": "100%"
+    },
+    "tasks": {
+      "open": 10,
+      "overdue": 1
+    },
+    "peptides": "Tesamorelin tonight (Mon-Fri schedule)",
+    "calendar": "No events today",
+    "priority": "DJ Automation MVP (May 31) — Agent status sync blocker"
   },
-  "weather": {
-    "location": "Boise, ID",
-    "temp": 62,
-    "high": 82,
-    "low": 49,
-    "conditions": "Clear"
-  },
-  "tasks": {
-    "open": 10,
-    "overdue": 1,
-    "overdueItems": ["Send Amanda email"]
-  },
-  "peptides": {
-    "today": "Tuesday",
-    "activeCount": 2,
-    "doses": [
-      {
-        "name": "Retatrutide",
-        "dose": "60 units",
-        "time": "8:00 AM"
-      },
-      {
-        "name": "Tesamorelin",
-        "dose": "30 units",
-        "time": "9:30 PM"
-      }
-    ]
-  },
-  "calendar": {
-    "eventsToday": 0
-  },
-  "wlpAction": "Create TikTok handles for Kade, Madison, Aria, ANIMAL, and WLP"
+  "fullBriefing": {
+    "date": "2026-04-22",
+    "time": "10:00",
+    "timestamp": "2026-04-22T16:00:00Z",
+    "timezone": "America/Denver",
+    "weather": {
+      "current_temp_f": 45,
+      "high_temp_f": 51,
+      "low_temp_f": 42,
+      "conditions": "Rain",
+      "precipitation_probability": 100,
+      "humidity": 87
+    },
+    "tasks": {
+      "wlp_open": 6,
+      "personal_open": 4,
+      "total_open": 10,
+      "overdue": 1
+    },
+    "peptides": {
+      "active": ["Retatrutide (Monday)", "Tesamorelin (Mon-Fri)"],
+      "today_dose": "Tesamorelin 30 units (9:30 PM) — Mon-Fri only"
+    },
+    "calendar": {
+      "events_today": 0,
+      "upcoming": "Clawdia scheduled tomorrow 12:00 PM MDT — Mission Control GitHub refactor"
+    },
+    "wlp_priority": "DJ Automation MVP — May 31 deadline. Agent status GitHub sync is critical blocker."
+  }
 }
