@@ -42,7 +42,7 @@ export function PersonalTasksCard() {
           title: todo.text || todo.title || todo.task,
           category: "SRB",
           priority: (todo.priority as "high" | "medium" | "low") || "medium",
-          dueDate: todo.due_date || todo.dueDate || todo.due,
+          dueDate: todo.due_date || todo.dueDate || todo.due || undefined,
           completed: todo.completed || false,
           createdAt: todo.created_at || todo.createdAt || new Date().toISOString(),
         }));
@@ -57,13 +57,18 @@ export function PersonalTasksCard() {
   const openTasks = tasks.filter((t) => !t.completed);
   const highPriority = openTasks.filter((t) => t.priority === "high");
   const dueSoon = openTasks.filter((t) => {
-    if (!t.dueDate) return false;
-    const due = new Date(t.dueDate);
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    due.setHours(0, 0, 0, 0);
-    const diff = Math.ceil((due.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
-    return diff <= 3 && diff >= 0;
+    if (!t.dueDate || t.dueDate === "") return false;
+    try {
+      // Parse date properly (handle YYYY-MM-DD format)
+      const due = new Date(t.dueDate + "T00:00:00Z");
+      const today = new Date();
+      today.setUTCHours(0, 0, 0, 0);
+      const diffMs = due.getTime() - today.getTime();
+      const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+      return diffDays <= 3 && diffDays >= 0;
+    } catch {
+      return false;
+    }
   });
 
   if (!loaded) return <div style={{ padding: 20 }}>Loading...</div>;
@@ -136,7 +141,7 @@ export function PersonalTasksCard() {
                 </span>
                 {task.dueDate && (
                   <span style={{ fontSize: "0.7rem", color: "var(--muted)" }}>
-                    {new Date(task.dueDate).toLocaleDateString()}
+                    {new Date(task.dueDate + "T00:00:00Z").toLocaleDateString()}
                   </span>
                 )}
               </div>
