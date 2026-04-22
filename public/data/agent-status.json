@@ -36,17 +36,17 @@
       "name": "Clawdia",
       "discipline": "Operations",
       "model": "abacus/claude-sonnet-4-6",
-      "status": "idle",
+      "status": "in-progress",
       "totalTasksCompleted": 4,
-      "totalTasksAssigned": 8,
+      "totalTasksAssigned": 9,
       "tasksInProgress": 0,
-      "currentTask": null,
-      "currentTaskStatus": null,
+      "currentTask": "UX Fixes - Artist Tab Content + Clickable Task Counts",
+      "currentTaskStatus": "in-progress",
       "currentTaskProgress": 0,
       "blockers": [],
-      "lastUpdated": "2026-04-22T06:54:50.446827Z",
+      "lastUpdated": "2026-04-22T06:57:59.134342Z",
       "nextDeadline": null,
-      "availabilityStatus": "available"
+      "availabilityStatus": "in-progress"
     },
     "shelly": {
       "name": "Shelly",
@@ -135,10 +135,10 @@
   },
   "teamStats": {
     "totalTasksCompleted": 14,
-    "totalTasksAssigned": 17,
-    "tasksInProgress": 0,
+    "totalTasksAssigned": 18,
+    "tasksInProgress": 1,
     "blockedTasks": 2,
     "teamAvailability": "medium",
-    "lastTeamUpdate": "2026-04-22T06:54:50.456540Z"
+    "lastTeamUpdate": "2026-04-22T06:57:59.144718Z"
   }
 }
