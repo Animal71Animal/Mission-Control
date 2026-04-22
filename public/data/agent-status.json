@@ -205,17 +205,17 @@
       "name": "Coral",
       "discipline": "R&D/Innovation",
       "model": "abacus/claude-opus-4-6",
-      "status": "in-progress",
-      "totalTasksCompleted": 2,
+      "status": "idle",
+      "totalTasksCompleted": 3,
       "totalTasksAssigned": 2,
       "tasksInProgress": 0,
-      "currentTask": "Research Uber Partner API for Daily Earnings Integration",
-      "currentTaskStatus": "in-progress",
+      "currentTask": null,
+      "currentTaskStatus": null,
       "currentTaskProgress": 0,
       "blockers": [],
-      "lastUpdated": "2026-04-22T07:33:14.115806Z",
+      "lastUpdated": "2026-04-22T07:34:09.983246Z",
       "nextDeadline": null,
-      "availabilityStatus": "in-progress",
+      "availabilityStatus": "available",
       "taskHistory": {
         "completed": [
           {
@@ -229,11 +229,11 @@
     }
   },
   "teamStats": {
-    "totalTasksCompleted": 17,
+    "totalTasksCompleted": 18,
     "totalTasksAssigned": 22,
-    "tasksInProgress": 1,
+    "tasksInProgress": 0,
     "blockedTasks": 2,
     "teamAvailability": "medium",
-    "lastTeamUpdate": "2026-04-22T07:33:14.125133Z"
+    "lastTeamUpdate": "2026-04-22T07:34:09.992428Z"
   }
 }
