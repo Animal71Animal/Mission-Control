@@ -1,7 +1,9 @@
 {
   "status": "Software in Dev",
   "subtitle": "First MVP delivered to Eric by May 31, 2026. Testing June–July. ED Expo August premiere.",
-  "revenueTarget": "50 clubs × $2,000/month = $100K MRR",
+  "launchTarget": "0 clubs (product premiere, outreach begins)",
+  "yearOneGoal": "100 clubs × $2,000/month = $200K MRR (by August 2027)",
+  "finalScalingGoal": "500 clubs × $2,000/month = $1M MRR",
   "milestones": [
     {
       "emoji": "🚀",
@@ -30,19 +32,19 @@
   ],
   "revenueProjection": [
     {
-      "phase": "Post-Expo (Sept 2026)",
-      "clubs": 10,
-      "mrr": "$20,000"
+      "phase": "Launch (Aug 2026)",
+      "clubs": 0,
+      "mrr": "$0"
     },
     {
-      "phase": "Growth (Q4 2026)",
-      "clubs": 25,
-      "mrr": "$50,000"
+      "phase": "Year One (Aug 2027)",
+      "clubs": 100,
+      "mrr": "$200,000"
     },
     {
-      "phase": "Scale (2027)",
-      "clubs": 50,
-      "mrr": "$100,000"
+      "phase": "Final Scale",
+      "clubs": 500,
+      "mrr": "$1,000,000"
     }
   ],
   "currentStatus": [
@@ -50,8 +52,9 @@
     "✅ Concept validated at Spearmint Rhino",
     "📅 MVP delivery: May 31, 2026",
     "🧪 Testing: June – July 2026 (live at SRB)",
-    "🎯 Target: Premier at ED Expo in August 2026",
-    "🎯 Revenue target: 50 clubs × $2,000/month = $100K MRR"
+    "🎪 Launch: ED Expo August 2026 (Vegas)",
+    "🎯 Year One Goal: 100 clubs × $2,000/month = $200K MRR",
+    "🚀 Final Scale: 500 clubs × $2,000/month = $1M MRR"
   ],
-  "lastUpdated": "2026-04-22T10:00:00Z"
+  "lastUpdated": "2026-04-22T10:06:00Z"
 }
