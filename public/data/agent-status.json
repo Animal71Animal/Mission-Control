@@ -56,17 +56,17 @@
       "name": "Clawdia",
       "discipline": "Operations",
       "model": "abacus/claude-sonnet-4-6",
-      "status": "in-progress",
-      "totalTasksCompleted": 8,
+      "status": "idle",
+      "totalTasksCompleted": 10,
       "totalTasksAssigned": 14,
       "tasksInProgress": 0,
-      "currentTask": "Integrate Uber Earnings into Mission Control",
-      "currentTaskStatus": "in-progress",
+      "currentTask": null,
+      "currentTaskStatus": null,
       "currentTaskProgress": 0,
       "blockers": [],
-      "lastUpdated": "2026-04-22T08:24:41.496947Z",
+      "lastUpdated": "2026-04-22T10:12:00Z",
       "nextDeadline": null,
-      "availabilityStatus": "in-progress",
+      "availabilityStatus": "available",
       "taskHistory": {
         "completed": [
           {
@@ -96,6 +96,10 @@
           {
             "name": "Debug Task Modal Error in Browser",
             "completedAt": "2026-04-22T07:18:00Z"
+          },
+          {
+            "name": "Integrate Uber Earnings into Mission Control",
+            "completedAt": "2026-04-22T09:30:00Z"
           }
         ],
         "inProgress": [],
@@ -229,11 +233,11 @@
     }
   },
   "teamStats": {
-    "totalTasksCompleted": 19,
+    "totalTasksCompleted": 21,
     "totalTasksAssigned": 24,
-    "tasksInProgress": 1,
+    "tasksInProgress": 0,
     "blockedTasks": 2,
     "teamAvailability": "medium",
-    "lastTeamUpdate": "2026-04-22T08:24:41.506183Z"
+    "lastTeamUpdate": "2026-04-22T10:12:00Z"
   }
 }
