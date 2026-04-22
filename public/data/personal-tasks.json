@@ -38,18 +38,6 @@
     "owner": "animal"
   },
   {
-    "id": "task-1774843526550",
-    "title": "Send Amanda email",
-    "category": "Work",
-    "priority": "high",
-    "dueDate": "2026-04-03",
-    "completed": false,
-    "createdAt": "2026-03-30T04:05:26.550Z",
-    "notes": null,
-    "due_date": "2026-04-18",
-    "owner": "animal"
-  },
-  {
     "id": "task-1774841802162",
     "title": "Trello Workflow",
     "category": "Work",
