@@ -1,7 +1,37 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { agentTasks, agentStats, AgentTask } from "../data/agentTasks";
+
+interface AgentData {
+  name: string;
+  discipline: string;
+  model: string;
+  status: string;
+  totalTasksCompleted: number;
+  totalTasksAssigned: number;
+  tasksInProgress: number;
+  currentTask: string | null;
+  currentTaskStatus: string | null;
+  currentTaskProgress: number;
+  blockers: string[];
+  lastUpdated: string;
+  nextDeadline: string | null;
+  availabilityStatus: "available" | "blocked" | "busy";
+}
+
+interface TeamStats {
+  totalTasksCompleted: number;
+  totalTasksAssigned: number;
+  tasksInProgress: number;
+  blockedTasks: number;
+  teamAvailability: string;
+  lastTeamUpdate: string;
+}
+
+interface AgentStatusData {
+  agents: Record<string, AgentData>;
+  teamStats: TeamStats;
+}
 
 interface Robot {
   id: number;
@@ -14,45 +44,70 @@ interface Robot {
   discipline: string;
 }
 
-const AGENT_DATA = [
-  { name: "Langostino", color: "#9b5de5", discipline: "Marketing" },
-  { name: "Homard", color: "#00bbf9", discipline: "Finance / SRB Tips" },
-  { name: "Clawdia", color: "#fee440", discipline: "Operations" },
-  { name: "Shelly", color: "#00f5d4", discipline: "A&R / Artists" },
-  { name: "Rockwell", color: "#f15bb5", discipline: "Production" },
-  { name: "Barnaby", color: "#f15b5b", discipline: "Business Dev" },
-  { name: "Sebastian", color: "#f19b5b", discipline: "Legal / Admin" },
-  { name: "Coral", color: "#5bf166", discipline: "R&D / Innovation" },
-];
+const AGENT_COLORS: Record<string, string> = {
+  langostino: "#9b5de5",
+  homard: "#00bbf9",
+  clawdia: "#fee440",
+  shelly: "#00f5d4",
+  rockwell: "#f15bb5",
+  barnaby: "#f15b5b",
+  sebastian: "#f19b5b",
+  coral: "#5bf166",
+};
 
 export default function AIOfficePage() {
   const [robots, setRobots] = useState<Robot[]>([]);
   const [time, setTime] = useState(new Date());
-  const [selectedAgent, setSelectedAgent] = useState<string>("all");
-  const [expandedTask, setExpandedTask] = useState<string | null>(null);
+  const [agentData, setAgentData] = useState<AgentStatusData | null>(null);
+  const [loading, setLoading] = useState(true);
 
-  // Sort tasks by startTime (newest first)
-  const sortedTasks = [...agentTasks].sort((a, b) => {
-    return new Date(b.startTime).getTime() - new Date(a.startTime).getTime();
-  });
+  // Fetch agent status data
+  useEffect(() => {
+    const fetchAgentData = async () => {
+      try {
+        const response = await fetch("/api/agent-status");
+        if (response.ok) {
+          const data = await response.json();
+          setAgentData(data);
+        } else {
+          // Fallback: try to fetch directly from file
+          const fileResponse = await fetch("/data/agent-status.json");
+          if (fileResponse.ok) {
+            const data = await fileResponse.json();
+            setAgentData(data);
+          }
+        }
+      } catch (error) {
+        console.error("Failed to fetch agent status:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  // Filter tasks by agent
-  const filteredTasks = selectedAgent === "all" 
-    ? sortedTasks 
-    : sortedTasks.filter(t => t.agent === selectedAgent);
+    fetchAgentData();
+    // Refresh every 30 seconds
+    const interval = setInterval(fetchAgentData, 30000);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
-    // Initialize robots
-    const initialRobots: Robot[] = AGENT_DATA.map((agent, i) => ({
-      id: i,
-      x: Math.random() * 80 + 10,
-      y: Math.random() * 60 + 20,
-      targetX: Math.random() * 80 + 10,
-      targetY: Math.random() * 60 + 20,
-      color: agent.color,
-      name: agent.name,
-      discipline: agent.discipline,
-    }));
+    // Initialize robots from agent data or fallback
+    const agents = agentData?.agents || {};
+    const agentKeys = Object.keys(agents).length > 0 ? Object.keys(agents) : Object.keys(AGENT_COLORS);
+    
+    const initialRobots: Robot[] = agentKeys.map((key, i) => {
+      const agent = agents[key];
+      return {
+        id: i,
+        x: Math.random() * 80 + 10,
+        y: Math.random() * 60 + 20,
+        targetX: Math.random() * 80 + 10,
+        targetY: Math.random() * 60 + 20,
+        color: AGENT_COLORS[key] || "#9b5de5",
+        name: agent?.name || key.charAt(0).toUpperCase() + key.slice(1),
+        discipline: agent?.discipline || "Agent",
+      };
+    });
     setRobots(initialRobots);
 
     // Animation loop
@@ -83,16 +138,28 @@ export default function AIOfficePage() {
     }, 50);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [agentData]);
 
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case "completed": return "✅";
-      case "in-progress": return "⏳";
-      case "failed": return "❌";
-      default: return "⏳";
+  const getStatusLight = (availabilityStatus: string, blockers: string[]) => {
+    if (blockers.length > 0) return { emoji: "🔴", label: "Critical Blocker", color: "#ff4444" };
+    if (availabilityStatus === "available") return { emoji: "🟢", label: "Available", color: "#00c87c" };
+    if (availabilityStatus === "busy" || availabilityStatus === "in-progress") return { emoji: "🟡", label: "In Progress", color: "#ffc107" };
+    if (availabilityStatus === "blocked") return { emoji: "🟡", label: "Blocked", color: "#ffc107" };
+    return { emoji: "⚪", label: "Unknown", color: "#888" };
+  };
+
+  const getTeamAvailabilityEmoji = (availability: string) => {
+    switch (availability) {
+      case "high": return "🟢";
+      case "medium": return "🟡";
+      case "low": return "🔴";
+      default: return "⚪";
     }
   };
+
+  const agents = agentData?.agents || {};
+  const teamStats = agentData?.teamStats;
+  const agentEntries = Object.entries(agents);
 
   return (
     <div>
@@ -114,6 +181,49 @@ export default function AIOfficePage() {
           Live view of agents at work · {time.toLocaleTimeString()}
         </p>
       </div>
+
+      {/* Team Summary */}
+      {teamStats && (
+        <div
+          style={{
+            background: "linear-gradient(135deg, rgba(155,93,229,0.15), rgba(0,200,124,0.1))",
+            border: "1px solid var(--border)",
+            borderRadius: 12,
+            padding: 20,
+            marginBottom: 28,
+          }}
+        >
+          <h2 style={{ fontSize: "1rem", fontWeight: 600, marginBottom: 16, color: "var(--text)" }}>
+            📊 Team Summary
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: 16 }}>
+            <div style={{ textAlign: "center", padding: "12px", background: "rgba(0,0,0,0.2)", borderRadius: 8 }}>
+              <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--accent2)" }}>
+                {teamStats.totalTasksCompleted}/{teamStats.totalTasksAssigned}
+              </div>
+              <div style={{ fontSize: "0.75rem", color: "var(--muted)", textTransform: "uppercase" }}>Tasks Completed</div>
+            </div>
+            <div style={{ textAlign: "center", padding: "12px", background: "rgba(0,0,0,0.2)", borderRadius: 8 }}>
+              <div style={{ fontSize: "1.5rem", fontWeight: 700, color: teamStats.blockedTasks > 0 ? "#ff4444" : "var(--accent2)" }}>
+                {teamStats.blockedTasks}
+              </div>
+              <div style={{ fontSize: "0.75rem", color: "var(--muted)", textTransform: "uppercase" }}>Blockers</div>
+            </div>
+            <div style={{ textAlign: "center", padding: "12px", background: "rgba(0,0,0,0.2)", borderRadius: 8 }}>
+              <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)" }}>
+                {getTeamAvailabilityEmoji(teamStats.teamAvailability)} {teamStats.teamAvailability}
+              </div>
+              <div style={{ fontSize: "0.75rem", color: "var(--muted)", textTransform: "uppercase" }}>Team Availability</div>
+            </div>
+            <div style={{ textAlign: "center", padding: "12px", background: "rgba(0,0,0,0.2)", borderRadius: 8 }}>
+              <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)" }}>
+                {agentEntries.length}
+              </div>
+              <div style={{ fontSize: "0.75rem", color: "var(--muted)", textTransform: "uppercase" }}>Active Agents</div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Office Floor - Just Animation */}
       <div
@@ -253,7 +363,7 @@ export default function AIOfficePage() {
             <span style={{ color: "#00c87c" }}>●</span> {robots.length} Agents Active
           </div>
           <div style={{ fontSize: "0.8rem", color: "var(--muted)" }}>
-            Tasks completed: <span style={{ color: "var(--accent2)", fontWeight: 600 }}>{sortedTasks.length}</span>
+            Tasks completed: <span style={{ color: "var(--accent2)", fontWeight: 600 }}>{teamStats?.totalTasksCompleted || 0}</span>
           </div>
           <div style={{ fontSize: "0.8rem", color: "var(--muted)" }}>
             Uptime: <span style={{ color: "var(--accent2)" }}>99.9%</span>
@@ -261,234 +371,196 @@ export default function AIOfficePage() {
         </div>
       </div>
 
-      {/* Static Agent List with Stats */}
+      {/* Agent Cards with Live Status */}
       <div style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: "1.1rem", fontWeight: 600, marginBottom: 16, color: "var(--text)" }}>
-          📊 Agent Roster & Statistics
+          👥 Agent Roster & Live Status
         </h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 12 }}>
-          {AGENT_DATA.map((agent) => {
-            const stats = agentStats[agent.name as keyof typeof agentStats];
-            const agentTasksList = sortedTasks.filter(t => t.agent === agent.name);
-            const lastTask = agentTasksList[0];
-            
-            return (
-              <div
-                key={agent.name}
-                style={{
-                  background: "var(--card)",
-                  border: "1px solid var(--border)",
-                  borderRadius: 10,
-                  padding: 16,
-                  borderLeft: `4px solid ${agent.color}`,
-                }}
-              >
-                <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
-                  <div
-                    style={{
-                      width: 40,
-                      height: 40,
-                      background: agent.color,
-                      borderRadius: "50%",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontSize: "1.2rem",
-                      boxShadow: `0 0 12px ${agent.color}60`,
-                    }}
-                  >
-                    🤖
-                  </div>
-                  <div>
-                    <div style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text)" }}>
-                      {agent.name}
-                    </div>
-                    <div style={{ fontSize: "0.8rem", color: agent.color, fontWeight: 500 }}>
-                      {agent.discipline}
-                    </div>
-                  </div>
-                </div>
-                
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8, marginBottom: 12 }}>
-                  <div style={{ textAlign: "center", padding: "8px 4px", background: "rgba(155,93,229,0.08)", borderRadius: 6 }}>
-                    <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--accent2)" }}>
-                      {stats?.tasks || 0}
-                    </div>
-                    <div style={{ fontSize: "0.65rem", color: "var(--muted)", textTransform: "uppercase" }}>Tasks</div>
-                  </div>
-                  <div style={{ textAlign: "center", padding: "8px 4px", background: "rgba(155,93,229,0.08)", borderRadius: 6 }}>
-                    <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--text)" }}>
-                      {stats?.totalRuntime || "0m"}
-                    </div>
-                    <div style={{ fontSize: "0.65rem", color: "var(--muted)", textTransform: "uppercase" }}>Runtime</div>
-                  </div>
-                  <div style={{ textAlign: "center", padding: "8px 4px", background: "rgba(155,93,229,0.08)", borderRadius: 6 }}>
-                    <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--text)" }}>
-                      {stats?.totalTokens || "0"}
-                    </div>
-                    <div style={{ fontSize: "0.65rem", color: "var(--muted)", textTransform: "uppercase" }}>Tokens</div>
-                  </div>
-                </div>
-                
-                {stats?.currentAssignment && (
-                  <div style={{ fontSize: "0.75rem", color: "#00c87c", paddingTop: 12, borderTop: "1px solid var(--border)" }}>
-                    <strong>🎯 Current Assignment:</strong> {stats.currentAssignment}
-                  </div>
-                )}
-                
-                {lastTask && (
-                  <div style={{ fontSize: "0.75rem", color: "var(--muted)", paddingTop: 12, borderTop: "1px solid var(--border)" }}>
-                    <strong style={{ color: "var(--text)" }}>Last task:</strong> {lastTask.task}
-                    <div style={{ marginTop: 2 }}>{lastTask.startTime}</div>
-                  </div>
-                )}
-                
-                {!lastTask && !stats?.currentAssignment && (
-                  <div style={{ fontSize: "0.75rem", color: "var(--muted)", paddingTop: 12, borderTop: "1px solid var(--border)", fontStyle: "italic" }}>
-                    Awaiting first assignment
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Agent Task History */}
-      <div>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16, flexWrap: "wrap", gap: 12 }}>
-          <h2 style={{ fontSize: "1.1rem", fontWeight: 600, color: "var(--text)", margin: 0 }}>
-            📋 Agent Task History
-          </h2>
-          <select
-            value={selectedAgent}
-            onChange={(e) => setSelectedAgent(e.target.value)}
-            style={{
-              background: "var(--card)",
-              border: "1px solid var(--border)",
-              borderRadius: 6,
-              padding: "6px 12px",
-              color: "var(--text)",
-              fontSize: "0.85rem",
-              cursor: "pointer",
-            }}
-          >
-            <option value="all">All Agents</option>
-            {AGENT_DATA.map(agent => (
-              <option key={agent.name} value={agent.name}>{agent.name}</option>
-            ))}
-          </select>
-        </div>
-
-        {/* Task List */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-          {filteredTasks.map((task) => (
-            <div
-              key={task.id}
-              style={{
-                background: "var(--card)",
-                border: "1px solid var(--border)",
-                borderRadius: 8,
-                overflow: "hidden",
-              }}
-            >
-              {/* Task Header - Clickable */}
-              <div
-                onClick={() => setExpandedTask(expandedTask === task.id ? null : task.id)}
-                style={{
-                  padding: 12,
-                  cursor: "pointer",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 12,
-                  borderLeft: `3px solid ${task.agentColor}`,
-                }}
-              >
-                <span style={{ fontSize: "1rem" }}>{getStatusIcon(task.status)}</span>
-                <div style={{ flex: 1 }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
-                    <span style={{ fontSize: "0.85rem", fontWeight: 600, color: "var(--text)" }}>
-                      {task.task}
-                    </span>
-                    <span
+        {loading ? (
+          <div style={{ textAlign: "center", padding: 40, color: "var(--muted)" }}>
+            Loading agent status...
+          </div>
+        ) : agentEntries.length === 0 ? (
+          <div style={{ textAlign: "center", padding: 40, color: "var(--muted)" }}>
+            No agent data available.
+          </div>
+        ) : (
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 12 }}>
+            {agentEntries.map(([key, agent]) => {
+              const statusLight = getStatusLight(agent.availabilityStatus, agent.blockers);
+              const color = AGENT_COLORS[key] || "#9b5de5";
+              const progress = agent.currentTaskProgress || 0;
+              
+              return (
+                <div
+                  key={key}
+                  style={{
+                    background: "var(--card)",
+                    border: "1px solid var(--border)",
+                    borderRadius: 10,
+                    padding: 16,
+                    borderLeft: `4px solid ${agent.blockers.length > 0 ? "#ff4444" : color}`,
+                  }}
+                >
+                  {/* Header with Status Light */}
+                  <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
+                    <div
                       style={{
-                        fontSize: "0.7rem",
-                        background: task.agentColor + "20",
-                        color: task.agentColor,
-                        padding: "2px 6px",
-                        borderRadius: 4,
+                        width: 44,
+                        height: 44,
+                        background: color,
+                        borderRadius: "50%",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        fontSize: "1.3rem",
+                        boxShadow: `0 0 12px ${color}60`,
+                        position: "relative",
                       }}
                     >
-                      {task.agent}
-                    </span>
-                  </div>
-                  <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 2 }}>
-                    {task.startTime} {task.runtime && `· ${task.runtime}`} {task.tokens && `· ${task.tokens} tokens`}
-                  </div>
-                </div>
-                <span style={{ fontSize: "0.8rem", color: "var(--muted)" }}>
-                  {expandedTask === task.id ? "▼" : "▶"}
-                </span>
-              </div>
-
-              {/* Task Details - Expandable */}
-              {expandedTask === task.id && (
-                <div style={{ padding: "0 12px 12px 12px", borderLeft: `3px solid ${task.agentColor}` }}>
-                  <div style={{ paddingLeft: 32 }}>
-                    <div style={{ fontSize: "0.8rem", color: "var(--text)", marginBottom: 8 }}>
-                      <strong>Description:</strong> {task.description}
+                      🤖
+                      {/* Status indicator badge */}
+                      <div
+                        style={{
+                          position: "absolute",
+                          bottom: -2,
+                          right: -2,
+                          fontSize: "1rem",
+                          background: "var(--card)",
+                          borderRadius: "50%",
+                          width: 20,
+                          height: 20,
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          border: "2px solid var(--card)",
+                        }}
+                        title={statusLight.label}
+                      >
+                        {statusLight.emoji}
+                      </div>
                     </div>
-                    <div style={{ fontSize: "0.8rem", color: "var(--text)", marginBottom: 8 }}>
-                      <strong>Deliverables:</strong>
-                      <ul style={{ margin: "4px 0", paddingLeft: 20 }}>
-                        {task.deliverables.map((deliverable, i) => (
-                          <li key={i} style={{ color: "var(--muted)" }}>
-                            {deliverable.startsWith("http") ? (
-                              <a
-                                href={deliverable}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                style={{ color: "var(--accent2)", textDecoration: "none" }}
-                              >
-                                {deliverable}
-                              </a>
-                            ) : deliverable.startsWith("/") ? (
-                              <code style={{ background: "rgba(155,93,229,0.1)", padding: "1px 4px", borderRadius: 4 }}>
-                                {deliverable}
-                              </code>
-                            ) : (
-                              deliverable
-                            )}
+                    <div style={{ flex: 1 }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                        <span style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text)" }}>
+                          {agent.name}
+                        </span>
+                        <span
+                          style={{
+                            fontSize: "0.7rem",
+                            background: statusLight.color + "20",
+                            color: statusLight.color,
+                            padding: "2px 6px",
+                            borderRadius: 4,
+                            fontWeight: 500,
+                          }}
+                        >
+                          {statusLight.label}
+                        </span>
+                      </div>
+                      <div style={{ fontSize: "0.8rem", color: color, fontWeight: 500 }}>
+                        {agent.discipline}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Task Count */}
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8, marginBottom: 12 }}>
+                    <div style={{ textAlign: "center", padding: "8px 4px", background: "rgba(155,93,229,0.08)", borderRadius: 6 }}>
+                      <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--accent2)" }}>
+                        {agent.totalTasksCompleted}/{agent.totalTasksAssigned}
+                      </div>
+                      <div style={{ fontSize: "0.65rem", color: "var(--muted)", textTransform: "uppercase" }}>Tasks</div>
+                    </div>
+                    <div style={{ textAlign: "center", padding: "8px 4px", background: "rgba(155,93,229,0.08)", borderRadius: 6 }}>
+                      <div style={{ fontSize: "1.1rem", fontWeight: 700, color: agent.tasksInProgress > 0 ? "#ffc107" : "var(--text)" }}>
+                        {agent.tasksInProgress}
+                      </div>
+                      <div style={{ fontSize: "0.65rem", color: "var(--muted)", textTransform: "uppercase" }}>In Progress</div>
+                    </div>
+                    <div style={{ textAlign: "center", padding: "8px 4px", background: "rgba(155,93,229,0.08)", borderRadius: 6 }}>
+                      <div style={{ fontSize: "1.1rem", fontWeight: 700, color: agent.blockers.length > 0 ? "#ff4444" : "#00c87c" }}>
+                        {agent.blockers.length}
+                      </div>
+                      <div style={{ fontSize: "0.65rem", color: "var(--muted)", textTransform: "uppercase" }}>Blockers</div>
+                    </div>
+                  </div>
+
+                  {/* Current Task with Progress Bar */}
+                  {agent.currentTask && (
+                    <div style={{ marginBottom: 12 }}>
+                      <div style={{ fontSize: "0.8rem", color: "var(--text)", marginBottom: 6 }}>
+                        <strong>🎯 Current Task:</strong> {agent.currentTask}
+                      </div>
+                      {progress > 0 && (
+                        <div>
+                          <div
+                            style={{
+                              height: 6,
+                              background: "rgba(155,93,229,0.2)",
+                              borderRadius: 3,
+                              overflow: "hidden",
+                            }}
+                          >
+                            <div
+                              style={{
+                                height: "100%",
+                                width: `${progress}%`,
+                                background: progress === 100 ? "#00c87c" : "linear-gradient(90deg, #9b5de5, #c77dff)",
+                                borderRadius: 3,
+                                transition: "width 0.3s ease",
+                              }}
+                            />
+                          </div>
+                          <div style={{ fontSize: "0.7rem", color: "var(--muted)", textAlign: "right", marginTop: 2 }}>
+                            {progress}%
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  {/* Blockers - Red if any */}
+                  {agent.blockers.length > 0 && (
+                    <div
+                      style={{
+                        background: "rgba(255,68,68,0.1)",
+                        border: "1px solid rgba(255,68,68,0.3)",
+                        borderRadius: 6,
+                        padding: 10,
+                        marginTop: 10,
+                      }}
+                    >
+                      <div style={{ fontSize: "0.75rem", color: "#ff4444", fontWeight: 600, marginBottom: 4 }}>
+                        🔴 Blockers:
+                      </div>
+                      <ul style={{ margin: 0, paddingLeft: 16 }}>
+                        {agent.blockers.map((blocker, i) => (
+                          <li key={i} style={{ fontSize: "0.75rem", color: "#ff6666" }}>
+                            {blocker}
                           </li>
                         ))}
                       </ul>
                     </div>
-                    {task.url && (
-                      <div style={{ fontSize: "0.8rem" }}>
-                        <strong>URL:</strong>{" "}
-                        <a
-                          href={task.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          style={{ color: "var(--accent2)", textDecoration: "none" }}
-                        >
-                          {task.url}
-                        </a>
-                      </div>
-                    )}
-                    <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 8 }}>
-                      Task ID: {task.id} · Status: {task.status}
+                  )}
+
+                  {/* Next Deadline */}
+                  {agent.nextDeadline && (
+                    <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 10, paddingTop: 10, borderTop: "1px solid var(--border)" }}>
+                      <strong>⏰ Next Deadline:</strong>{" "}
+                      <span style={{ color: "var(--accent2)" }}>
+                        {new Date(agent.nextDeadline).toLocaleDateString()}
+                      </span>
                     </div>
+                  )}
+
+                  {/* Last Updated */}
+                  <div style={{ fontSize: "0.7rem", color: "var(--muted)", marginTop: 8, fontStyle: "italic" }}>
+                    Updated: {new Date(agent.lastUpdated).toLocaleTimeString()}
                   </div>
                 </div>
-              )}
-            </div>
-          ))}
-        </div>
-
-        {filteredTasks.length === 0 && (
-          <div style={{ textAlign: "center", padding: 40, color: "var(--muted)" }}>
-            No tasks found for the selected agent.
+              );
+            })}
           </div>
         )}
       </div>
