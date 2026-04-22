@@ -57,7 +57,7 @@
       "discipline": "Operations",
       "model": "abacus/claude-sonnet-4-6",
       "status": "idle",
-      "totalTasksCompleted": 11,
+      "totalTasksCompleted": 13,
       "totalTasksAssigned": 14,
       "tasksInProgress": 0,
       "currentTask": null,
@@ -104,13 +104,22 @@
           {
             "name": "Mission Control GitHub-JSON-Only Refactor",
             "completedAt": "2026-04-22T18:20:00Z"
+          },
+          {
+            "name": "Fix agent-status API route",
+            "completedAt": "2026-04-22T18:20:00Z",
+            "executedBy": "PriScylla",
+            "note": "Part of GitHub refactor - agent-status route already GitHub-native, verified working"
+          },
+          {
+            "name": "Update agent write flow",
+            "completedAt": "2026-04-22T18:20:00Z",
+            "executedBy": "PriScylla",
+            "note": "Part of GitHub refactor - POST/PATCH handlers now use GitHub API with local fallback"
           }
         ],
         "inProgress": [],
-        "upcoming": [
-          "Fix agent-status API route",
-          "Update agent write flow"
-        ]
+        "upcoming": []
       }
     },
     "shelly": {
