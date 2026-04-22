@@ -82,11 +82,14 @@ export default function TeslaPage() {
   const sessions = data?.sessions || [];
   const monthly = data?.monthly_summary || {};
 
+  const MILES_PER_KWH = 3.5;
+
   // Calculate totals automatically from sessions
   const calculatedSummary = {
     total_sessions: sessions.length,
     total_cost_usd: sessions.reduce((sum, s) => sum + (s.cost || 0), 0),
     total_kwh: sessions.reduce((sum, s) => sum + (s.kwh || 0), 0),
+    total_miles: sessions.reduce((sum, s) => sum + (s.kwh || 0), 0) * MILES_PER_KWH,
     total_minutes: sessions.reduce((sum, s) => sum + (s.duration_minutes || 0), 0),
     avg_cost_per_session: sessions.length > 0 ? sessions.reduce((sum, s) => sum + (s.cost || 0), 0) / sessions.length : 0,
     avg_duration_minutes: sessions.length > 0 ? sessions.reduce((sum, s) => sum + (s.duration_minutes || 0), 0) / sessions.length : 0,
@@ -104,11 +107,12 @@ export default function TeslaPage() {
       </p>
 
       {/* Top stats */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, marginBottom: 16 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 16, marginBottom: 16 }}>
         {[
           { label: "Total sessions", value: calculatedSummary.total_sessions },
           { label: "Total spent", value: `$${calculatedSummary.total_cost_usd.toFixed(2)}` },
           { label: "Total kWh", value: `${calculatedSummary.total_kwh.toFixed(1)}` },
+          { label: "Est. miles", value: `${calculatedSummary.total_miles.toFixed(0).toLocaleString()}` },
           { label: "Avg per session", value: `$${calculatedSummary.avg_cost_per_session.toFixed(2)}` },
         ].map((s) => (
           <Card key={s.label}>
@@ -161,7 +165,7 @@ export default function TeslaPage() {
           <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
             <div style={{
               display: "grid",
-              gridTemplateColumns: "1fr 0.6fr 0.6fr 0.8fr 0.8fr 1fr",
+              gridTemplateColumns: "1fr 0.6fr 0.6fr 0.8fr 0.7fr 0.8fr 1fr",
               padding: "0 0 8px",
               borderBottom: "1px solid var(--border)",
               fontSize: "0.7rem",
@@ -173,6 +177,7 @@ export default function TeslaPage() {
               <span>Duration</span>
               <span>Rate</span>
               <span>kWh</span>
+              <span>Miles</span>
               <span>Cost</span>
               <span>Location</span>
             </div>
@@ -181,7 +186,7 @@ export default function TeslaPage() {
                 key={i}
                 style={{
                   display: "grid",
-                  gridTemplateColumns: "1fr 0.6fr 0.6fr 0.8fr 0.8fr 1fr",
+                  gridTemplateColumns: "1fr 0.6fr 0.6fr 0.8fr 0.7fr 0.8fr 1fr",
                   padding: "10px 0",
                   borderBottom: i < sortedSessions.length - 1 ? "1px solid var(--border)" : "none",
                   fontSize: "0.85rem",
@@ -192,6 +197,7 @@ export default function TeslaPage() {
                 <span style={{ color: "var(--muted)" }}>{formatDuration(s.duration_minutes)}</span>
                 <span style={{ color: "var(--muted)" }}>${s.rate_per_kwh}/kWh</span>
                 <span>{s.kwh}</span>
+                <span style={{ color: "var(--muted)" }}>{(s.kwh * MILES_PER_KWH).toFixed(1)}</span>
                 <span style={{ color: "var(--accent2)", fontWeight: 600 }}>${s.cost.toFixed(2)}</span>
                 <span style={{ color: "var(--muted)" }}>{s.location || "—"}</span>
               </div>
