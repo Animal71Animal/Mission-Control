@@ -27,13 +27,31 @@ export function PersonalTasksCard() {
   const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
-    fetch("/api/personal-tasks")
-      .then((r) => r.json())
-      .then((data) => {
-        setTasks(Array.isArray(data) ? data : []);
-        setLoaded(true);
-      })
-      .catch(() => setLoaded(true));
+    // Fetch both personal tasks and SRB tasks
+    Promise.all([
+      fetch("/api/personal-tasks").then((r) => r.json()).catch(() => []),
+      fetch("/api/srb-tips").then((r) => r.json()).catch(() => ({}))
+    ]).then(([personalTasks, srbData]) => {
+      // Combine personal tasks with SRB tasks (if available)
+      const allTasks = Array.isArray(personalTasks) ? [...personalTasks] : [];
+      
+      // Add SRB todos if they exist in the SRB data
+      if (srbData?.todos && Array.isArray(srbData.todos)) {
+        const srbTasks = srbData.todos.map((todo: any) => ({
+          id: todo.id || Math.random().toString(),
+          title: todo.task || todo.title,
+          category: "SRB",
+          priority: (todo.priority as "high" | "medium" | "low") || "medium",
+          dueDate: todo.due_date || todo.dueDate,
+          completed: todo.completed || false,
+          createdAt: todo.created_at || new Date().toISOString(),
+        }));
+        allTasks.push(...srbTasks);
+      }
+      
+      setTasks(allTasks);
+      setLoaded(true);
+    }).catch(() => setLoaded(true));
   }, []);
 
   const openTasks = tasks.filter((t) => !t.completed);
@@ -42,6 +60,8 @@ export function PersonalTasksCard() {
     if (!t.dueDate) return false;
     const due = new Date(t.dueDate);
     const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    due.setHours(0, 0, 0, 0);
     const diff = Math.ceil((due.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
     return diff <= 3 && diff >= 0;
   });
