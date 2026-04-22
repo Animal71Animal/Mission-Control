@@ -36,17 +36,17 @@
       "name": "Clawdia",
       "discipline": "Operations",
       "model": "abacus/claude-sonnet-4-6",
-      "status": "in-progress",
-      "totalTasksCompleted": 2,
-      "totalTasksAssigned": 5,
+      "status": "idle",
+      "totalTasksCompleted": 3,
+      "totalTasksAssigned": 6,
       "tasksInProgress": 0,
-      "currentTask": "Fix Mission Control Agent Status Display (URGENT)",
-      "currentTaskStatus": "in-progress",
+      "currentTask": null,
+      "currentTaskStatus": null,
       "currentTaskProgress": 0,
       "blockers": [],
-      "lastUpdated": "2026-04-22T06:30:35.265563Z",
+      "lastUpdated": "2026-04-22T06:43:18.818247Z",
       "nextDeadline": null,
-      "availabilityStatus": "in-progress"
+      "availabilityStatus": "available"
     },
     "shelly": {
       "name": "Shelly",
@@ -134,11 +134,11 @@
     }
   },
   "teamStats": {
-    "totalTasksCompleted": 12,
-    "totalTasksAssigned": 14,
-    "tasksInProgress": 1,
+    "totalTasksCompleted": 13,
+    "totalTasksAssigned": 15,
+    "tasksInProgress": 0,
     "blockedTasks": 2,
     "teamAvailability": "medium",
-    "lastTeamUpdate": "2026-04-22T06:30:35.274924Z"
+    "lastTeamUpdate": "2026-04-22T06:43:18.826842Z"
   }
 }
