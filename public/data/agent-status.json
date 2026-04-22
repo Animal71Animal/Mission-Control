@@ -36,17 +36,17 @@
       "name": "Clawdia",
       "discipline": "Operations",
       "model": "abacus/claude-sonnet-4-6",
-      "status": "idle",
+      "status": "in-progress",
       "totalTasksCompleted": 3,
-      "totalTasksAssigned": 6,
+      "totalTasksAssigned": 7,
       "tasksInProgress": 0,
-      "currentTask": null,
-      "currentTaskStatus": null,
+      "currentTask": "Replace 90-Day Plan with DJ Automation Roadmap",
+      "currentTaskStatus": "in-progress",
       "currentTaskProgress": 0,
       "blockers": [],
-      "lastUpdated": "2026-04-22T06:43:18.818247Z",
+      "lastUpdated": "2026-04-22T06:47:41.763956Z",
       "nextDeadline": null,
-      "availabilityStatus": "available"
+      "availabilityStatus": "in-progress"
     },
     "shelly": {
       "name": "Shelly",
@@ -135,10 +135,10 @@
   },
   "teamStats": {
     "totalTasksCompleted": 13,
-    "totalTasksAssigned": 15,
-    "tasksInProgress": 0,
+    "totalTasksAssigned": 16,
+    "tasksInProgress": 1,
     "blockedTasks": 2,
     "teamAvailability": "medium",
-    "lastTeamUpdate": "2026-04-22T06:43:18.826842Z"
+    "lastTeamUpdate": "2026-04-22T06:47:41.773026Z"
   }
 }
