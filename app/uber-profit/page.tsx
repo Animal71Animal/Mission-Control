@@ -14,9 +14,32 @@ interface DailySummary {
   netPayout: number;
 }
 
+interface Shift {
+  id: string;
+  date: string;
+  start_time: string;
+  end_time: string;
+  duration_minutes: number;
+  start_odometer: number;
+  end_odometer: number;
+  miles_driven: number;
+  gross_earnings: number;
+  proportional_charging_cost?: number;
+  net_profit: number;
+  hourly_rate: number;
+  notes?: string;
+}
+
 interface EarningsData {
   dailySummaries: DailySummary[];
   lastUpdated: string;
+}
+
+interface UberData {
+  uber_shifts: Shift[];
+  expenses: any[];
+  monthly_summary: Record<string, any>;
+  last_updated: string;
 }
 
 type SortKey = "date" | "earnings" | "trips" | "tips";
@@ -33,19 +56,25 @@ function dayColor(earnings: number, avg: number) {
 }
 
 export default function UberProfitPage() {
-  const [data, setData] = useState<EarningsData | null>(null);
+  const [earningsData, setEarningsData] = useState<EarningsData | null>(null);
+  const [shiftsData, setShiftsData] = useState<UberData | null>(null);
   const [loaded, setLoaded] = useState(false);
   const [sortKey, setSortKey] = useState<SortKey>("date");
   const [sortDir, setSortDir] = useState<SortDir>("desc");
 
   useEffect(() => {
-    fetch("/data/uber-earnings.json")
-      .then((r) => r.json())
-      .then((d) => { setData(d); setLoaded(true); })
-      .catch(() => setLoaded(true));
+    Promise.all([
+      fetch("/data/uber-earnings.json").then((r) => r.json()).catch(() => ({ dailySummaries: [] })),
+      fetch("/api/uber-profit").then((r) => r.json()).catch(() => ({ uber_shifts: [], expenses: [] }))
+    ]).then(([earnings, shifts]) => {
+      setEarningsData(earnings);
+      setShiftsData(shifts);
+      setLoaded(true);
+    }).catch(() => setLoaded(true));
   }, []);
 
-  const summaries = data?.dailySummaries ?? [];
+  const summaries = earningsData?.dailySummaries ?? [];
+  const shifts = shiftsData?.uber_shifts ?? [];
 
   const totals = useMemo(() => {
     const totalEarnings = summaries.reduce((s, d) => s + d.earnings, 0);
@@ -62,6 +91,16 @@ export default function UberProfitPage() {
   const monthSummaries = summaries.filter((d) => d.date.startsWith(thisMonth));
   const monthEarnings = monthSummaries.reduce((s, d) => s + d.earnings, 0);
   const monthTrips = monthSummaries.reduce((s, d) => s + d.trips, 0);
+
+  // Shift totals
+  const shiftTotals = useMemo(() => {
+    const totalGross = shifts.reduce((s, shift) => s + shift.gross_earnings, 0);
+    const totalCharging = shifts.reduce((s, shift) => s + (shift.proportional_charging_cost || 0), 0);
+    const totalNet = shifts.reduce((s, shift) => s + shift.net_profit, 0);
+    const totalMiles = shifts.reduce((s, shift) => s + shift.miles_driven, 0);
+    const avgHourly = shifts.length > 0 ? shifts.reduce((s, shift) => s + shift.hourly_rate, 0) / shifts.length : 0;
+    return { totalGross, totalCharging, totalNet, totalMiles, avgHourly };
+  }, [shifts]);
 
   // Chart data — last 14 days
   const chartData = useMemo(() => {
@@ -90,143 +129,167 @@ export default function UberProfitPage() {
 
   const sortIcon = (key: SortKey) => sortKey === key ? (sortDir === "desc" ? " ▼" : " ▲") : " ⇅";
 
-  if (!loaded) return <p style={{ color: "var(--muted)" }}>Loading Uber earnings…</p>;
+  if (!loaded) return <p style={{ color: "var(--muted)" }}>Loading…</p>;
 
   return (
     <div>
       {/* Header */}
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 24 }}>
         <div>
-          <h1 style={{ fontSize: "1.5rem", fontWeight: 700, margin: 0, color: "var(--text)" }}>🚗 Uber Earnings</h1>
-          <p style={{ color: "var(--muted)", marginTop: 4, fontSize: "0.82rem" }}>Daily summaries — trips, tips &amp; breakdown</p>
+          <h1 style={{ fontSize: "1.5rem", fontWeight: 700, margin: 0, color: "var(--text)" }}>💰 Uber Earnings</h1>
+          <p style={{ color: "var(--muted)", margin: "8px 0 0", fontSize: "0.85rem" }}>Dashboard earnings + logged shifts</p>
         </div>
-        {data?.lastUpdated && (
-          <div style={{ fontSize: "0.72rem", color: "var(--muted)", textAlign: "right", lineHeight: 1.6 }}>
-            🕐 Updated<br />
-            {new Date(data.lastUpdated).toLocaleString("en-US", { timeZone: "America/Denver", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" })}
+        {earningsData?.lastUpdated && (
+          <div style={{ fontSize: "0.75rem", color: "var(--muted)", textAlign: "right" }}>
+            Updated: {new Date(earningsData.lastUpdated).toLocaleDateString()} {new Date(earningsData.lastUpdated).toLocaleTimeString()}
           </div>
         )}
       </div>
 
-      {/* Running Totals */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: 12, marginBottom: 24 }}>
-        {[
-          { label: "This Month", value: fmt$(monthEarnings), sub: `${monthTrips} trips`, color: "#00f5d4" },
-          { label: "All-Time Earnings", value: fmt$(totals.totalEarnings), sub: `${summaries.length} days`, color: "#00c87c" },
-          { label: "All-Time Trips", value: totals.totalTrips.toString(), sub: "total rides", color: "#fee440" },
-          { label: "All-Time Tips", value: fmt$(totals.totalTips), sub: `${totals.totalTrips > 0 ? fmt$(totals.totalTips / totals.totalTrips) : "$0"}/trip avg`, color: "#9b5de5" },
-          { label: "Avg / Trip", value: fmt$(totals.avgPerTrip), sub: "earnings per ride", color: "#00bbf9" },
-          { label: "Avg / Day", value: fmt$(totals.avgPerDay), sub: "daily average", color: "#f15bb5" },
-        ].map((s) => (
-          <div key={s.label} style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 10, padding: 16 }}>
-            <div style={{ fontSize: "1.3rem", fontWeight: 700, color: s.color }}>{s.value}</div>
-            <div style={{ fontSize: "0.7rem", color: "var(--muted)", marginTop: 4, textTransform: "uppercase", letterSpacing: "0.05em" }}>{s.label}</div>
-            <div style={{ fontSize: "0.72rem", color: "var(--muted)", marginTop: 2 }}>{s.sub}</div>
-          </div>
-        ))}
-      </div>
+      {/* Summary Stats */}
+      {summaries.length > 0 && (
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))", gap: 12, marginBottom: 24 }}>
+          {[
+            { label: "All-Time", value: fmt$(totals.totalEarnings), color: "#00f5d4" },
+            { label: "This Month", value: fmt$(monthEarnings), color: "#fee440" },
+            { label: "Total Trips", value: totalTrips, color: "#00bbf9" },
+            { label: "Total Tips", value: fmt$(totals.totalTips), color: "#f15bb5" },
+            { label: "Avg/Trip", value: fmt$(totals.avgPerTrip), color: "#9b5de5" },
+            { label: "Avg/Day", value: fmt$(totals.avgPerDay), color: "#00c87c" },
+          ].map((s) => (
+            <div key={s.label} style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 10, padding: 14 }}>
+              <div style={{ fontSize: "1.1rem", fontWeight: 700, color: s.color }}>{s.value}</div>
+              <div style={{ fontSize: "0.7rem", color: "var(--muted)", marginTop: 6, textTransform: "uppercase" }}>{s.label}</div>
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* Chart */}
       {chartData.length > 0 && (
         <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12, padding: 20, marginBottom: 24 }}>
           <h2 style={{ fontSize: "0.95rem", fontWeight: 700, margin: "0 0 16px", color: "var(--text)" }}>📈 Earnings Trend — Last {chartData.length} Days</h2>
-          <div style={{ display: "flex", alignItems: "flex-end", gap: 6, height: 80 }}>
-            {chartData.map((d) => (
-              <div key={d.date} style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 4 }}>
-                <div style={{ fontSize: "0.6rem", color: "var(--muted)" }}>{fmt$(d.earnings)}</div>
+          <div style={{ display: "flex", alignItems: "flex-end", gap: 4, height: 120 }}>
+            {chartData.map((d, i) => (
+              <div key={i} style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center" }}>
                 <div
-                  title={`${d.date}: ${fmt$(d.earnings)} • ${d.trips} trips`}
                   style={{
                     width: "100%",
-                    height: `${Math.max(d.pct * 0.55, 4)}px`,
+                    height: `${d.pct}%`,
                     background: dayColor(d.earnings, totals.avgPerDay),
-                    borderRadius: "3px 3px 0 0",
-                    minHeight: 4,
-                    transition: "height 0.3s",
-                    cursor: "default",
+                    borderRadius: "4px 4px 0 0",
+                    opacity: 0.8,
+                    transition: "opacity 0.2s",
                   }}
+                  title={`${d.date}: ${fmt$(d.earnings)}`}
                 />
-                <div style={{ fontSize: "0.55rem", color: "var(--muted)", whiteSpace: "nowrap", transform: "rotate(-30deg)", marginTop: 4 }}>
-                  {d.date.slice(5)}
+                <div style={{ fontSize: "0.6rem", color: "var(--muted)", marginTop: 4, textAlign: "center" }}>
+                  {d.date.slice(-2)}
                 </div>
               </div>
             ))}
           </div>
-          <div style={{ display: "flex", gap: 16, marginTop: 20, fontSize: "0.72rem", color: "var(--muted)" }}>
-            <span><span style={{ color: "#00c87c" }}>●</span> Strong day (≥120% avg)</span>
-            <span><span style={{ color: "#fee440" }}>●</span> Normal day</span>
-            <span><span style={{ color: "#f15bb5" }}>●</span> Slow day (&lt;80% avg)</span>
+          <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 12, textAlign: "center" }}>
+            🟢 Strong (120%+ avg) · 🟡 Normal (80-120%) · 🔴 Slow (&lt;80% avg)
           </div>
         </div>
       )}
 
       {/* Daily Earnings Table */}
-      <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
-        <div style={{ padding: "16px 20px", borderBottom: "1px solid var(--border)" }}>
-          <h2 style={{ fontSize: "0.95rem", fontWeight: 700, margin: 0, color: "var(--text)" }}>📋 Daily Earnings</h2>
-        </div>
-
-        {summaries.length === 0 ? (
-          <div style={{ padding: 24, color: "var(--muted)", fontSize: "0.9rem" }}>No earnings data yet.</div>
-        ) : (
-          <div style={{ overflowX: "auto" }}>
-            <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.85rem" }}>
-              <thead>
-                <tr style={{ borderBottom: "1px solid var(--border)" }}>
-                  {(["date", "earnings", "trips", "tips"] as SortKey[]).map((k) => (
-                    <th
-                      key={k}
-                      onClick={() => toggleSort(k)}
-                      style={{ padding: "10px 16px", textAlign: k === "date" ? "left" : "right", color: "var(--muted)", fontWeight: 600, fontSize: "0.75rem", textTransform: "uppercase", cursor: "pointer", userSelect: "none", whiteSpace: "nowrap" }}
-                    >
-                      {k.charAt(0).toUpperCase() + k.slice(1)}{sortIcon(k)}
-                    </th>
-                  ))}
-                  <th style={{ padding: "10px 16px", textAlign: "right", color: "var(--muted)", fontWeight: 600, fontSize: "0.75rem", textTransform: "uppercase", whiteSpace: "nowrap" }}>Base</th>
-                  <th style={{ padding: "10px 16px", textAlign: "right", color: "var(--muted)", fontWeight: 600, fontSize: "0.75rem", textTransform: "uppercase", whiteSpace: "nowrap" }}>Surge</th>
-                  <th style={{ padding: "10px 16px", textAlign: "right", color: "var(--muted)", fontWeight: 600, fontSize: "0.75rem", textTransform: "uppercase", whiteSpace: "nowrap" }}>Promos</th>
-                  <th style={{ padding: "10px 16px", textAlign: "right", color: "var(--muted)", fontWeight: 600, fontSize: "0.75rem", textTransform: "uppercase", whiteSpace: "nowrap" }}>Net Payout</th>
-                </tr>
-              </thead>
-              <tbody>
-                {sorted.map((d, i) => {
-                  const color = dayColor(d.earnings, totals.avgPerDay);
-                  return (
-                    <tr
-                      key={d.date}
-                      style={{
-                        borderBottom: i < sorted.length - 1 ? "1px solid var(--border)" : "none",
-                        background: i % 2 === 0 ? "transparent" : "rgba(255,255,255,0.02)",
-                      }}
-                    >
-                      <td style={{ padding: "12px 16px", color: "var(--text)", fontWeight: 600 }}>
-                        <span style={{ display: "inline-block", width: 6, height: 6, borderRadius: "50%", background: color, marginRight: 8, verticalAlign: "middle" }} />
-                        {d.date}
+      {summaries.length > 0 && (
+        <div style={{ marginBottom: 24 }}>
+          <h2 style={{ fontSize: "0.95rem", fontWeight: 700, margin: "0 0 16px", color: "var(--text)" }}>📋 Daily Earnings</h2>
+          <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
+            <div style={{ overflowX: "auto" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.85rem" }}>
+                <thead>
+                  <tr style={{ background: "rgba(0,0,0,0.1)", borderBottom: "1px solid var(--border)" }}>
+                    <th style={{ padding: "12px 16px", textAlign: "left", fontWeight: 700, cursor: "pointer", color: "var(--text)" }} onClick={() => toggleSort("date")}>Date{sortIcon("date")}</th>
+                    <th style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, cursor: "pointer", color: "var(--text)" }} onClick={() => toggleSort("earnings")}>Earnings{sortIcon("earnings")}</th>
+                    <th style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, cursor: "pointer", color: "var(--text)" }} onClick={() => toggleSort("trips")}>Trips{sortIcon("trips")}</th>
+                    <th style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, cursor: "pointer", color: "var(--text)" }} onClick={() => toggleSort("tips")}>Tips{sortIcon("tips")}</th>
+                    <th style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, color: "var(--text)" }}>Breakdown</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {sorted.map((e, i) => (
+                    <tr key={i} style={{ borderBottom: "1px solid var(--border)" }}>
+                      <td style={{ padding: "12px 16px", color: "var(--text)" }}>{e.date}</td>
+                      <td style={{ padding: "12px 16px", textAlign: "right", color: dayColor(e.earnings, totals.avgPerDay), fontWeight: 600 }}>{fmt$(e.earnings)}</td>
+                      <td style={{ padding: "12px 16px", textAlign: "right", color: "var(--text)" }}>{e.trips}</td>
+                      <td style={{ padding: "12px 16px", textAlign: "right", color: "#fee440", fontWeight: 600 }}>{fmt$(e.tips)}</td>
+                      <td style={{ padding: "12px 16px", textAlign: "right", fontSize: "0.75rem", color: "var(--muted)" }}>
+                        Base: {fmt$(e.basefare)} | Surge: {fmt$(e.surge)}
                       </td>
-                      <td style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, color, fontSize: "0.95rem" }}>{fmt$(d.earnings)}</td>
-                      <td style={{ padding: "12px 16px", textAlign: "right", color: "var(--text)", fontWeight: 600 }}>
-                        <span style={{ background: "rgba(0,187,249,0.15)", color: "#00bbf9", borderRadius: 4, padding: "2px 6px", fontSize: "0.8rem" }}>
-                          {d.trips} trips
-                        </span>
-                      </td>
-                      <td style={{ padding: "12px 16px", textAlign: "right", color: "#9b5de5", fontWeight: 600 }}>{fmt$(d.tips)}</td>
-                      <td style={{ padding: "12px 16px", textAlign: "right", color: "var(--muted)" }}>{fmt$(d.basefare)}</td>
-                      <td style={{ padding: "12px 16px", textAlign: "right", color: d.surge > 0 ? "#fee440" : "var(--muted)" }}>{fmt$(d.surge)}</td>
-                      <td style={{ padding: "12px 16px", textAlign: "right", color: d.promotions > 0 ? "#00f5d4" : "var(--muted)" }}>{fmt$(d.promotions)}</td>
-                      <td style={{ padding: "12px 16px", textAlign: "right", color: "#00c87c", fontWeight: 700 }}>{fmt$(d.netPayout)}</td>
                     </tr>
-                  );
-                })}
-              </tbody>
-            </table>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
 
-      {/* Footer note */}
-      <div style={{ marginTop: 16, padding: "12px 16px", background: "rgba(0,187,249,0.05)", border: "1px solid rgba(0,187,249,0.15)", borderRadius: 8 }}>
-        <p style={{ margin: 0, fontSize: "0.78rem", color: "var(--muted)" }}>
-          📂 Data source: <code style={{ color: "#00bbf9" }}>/public/data/uber-earnings.json</code> — updated by uber-scraper script
+      {/* Logged Shifts Section */}
+      {shifts.length > 0 && (
+        <>
+          <h2 style={{ fontSize: "1.1rem", fontWeight: 700, margin: "28px 0 16px", color: "var(--text)" }}>🚗 Logged Shifts (Manual Tracking)</h2>
+
+          {/* Shift Stats */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: 12, marginBottom: 24 }}>
+            {[
+              { label: "Total Gross", value: fmt$(shiftTotals.totalGross), color: "#00f5d4" },
+              { label: "Charging Cost", value: fmt$(shiftTotals.totalCharging), color: "#f15bb5" },
+              { label: "Net Profit", value: fmt$(shiftTotals.totalNet), color: "#00c87c" },
+              { label: "Miles", value: `${shiftTotals.totalMiles.toFixed(0)} mi`, color: "#fee440" },
+              { label: "Avg Hourly", value: fmt$(shiftTotals.avgHourly) + "/hr", color: "#00bbf9" },
+              { label: "Shifts", value: shifts.length, color: "#9b5de5" },
+            ].map((s) => (
+              <div key={s.label} style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 10, padding: 14 }}>
+                <div style={{ fontSize: "1.1rem", fontWeight: 700, color: s.color }}>{s.value}</div>
+                <div style={{ fontSize: "0.7rem", color: "var(--muted)", marginTop: 6, textTransform: "uppercase" }}>{s.label}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Recent Shifts Table */}
+          <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
+            <div style={{ overflowX: "auto" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.85rem" }}>
+                <thead>
+                  <tr style={{ background: "rgba(0,0,0,0.1)", borderBottom: "1px solid var(--border)" }}>
+                    <th style={{ padding: "12px 16px", textAlign: "left", fontWeight: 700, color: "var(--text)" }}>Date</th>
+                    <th style={{ padding: "12px 16px", textAlign: "left", fontWeight: 700, color: "var(--text)" }}>Time</th>
+                    <th style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, color: "var(--text)" }}>Duration</th>
+                    <th style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, color: "var(--text)" }}>Miles</th>
+                    <th style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, color: "var(--text)" }}>Gross</th>
+                    <th style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, color: "var(--text)" }}>Net</th>
+                    <th style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, color: "var(--text)" }}>/hr</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {shifts.slice().reverse().map((shift) => (
+                    <tr key={shift.id} style={{ borderBottom: "1px solid var(--border)" }}>
+                      <td style={{ padding: "12px 16px", color: "var(--text)", fontWeight: 600 }}>{shift.date}</td>
+                      <td style={{ padding: "12px 16px", color: "var(--muted)" }}>{shift.start_time}–{shift.end_time}</td>
+                      <td style={{ padding: "12px 16px", textAlign: "right", color: "var(--text)" }}>{shift.duration_minutes}m</td>
+                      <td style={{ padding: "12px 16px", textAlign: "right", color: "var(--text)" }}>{shift.miles_driven}</td>
+                      <td style={{ padding: "12px 16px", textAlign: "right", color: "#00f5d4", fontWeight: 600 }}>{fmt$(shift.gross_earnings)}</td>
+                      <td style={{ padding: "12px 16px", textAlign: "right", color: "#00c87c", fontWeight: 600 }}>{fmt$(shift.net_profit)}</td>
+                      <td style={{ padding: "12px 16px", textAlign: "right", color: "#00bbf9" }}>{fmt$(shift.hourly_rate)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </>
+      )}
+
+      {/* Footer */}
+      <div style={{ marginTop: 28, padding: "16px", background: "rgba(0,187,249,0.05)", border: "1px solid rgba(0,187,249,0.2)", borderRadius: 10 }}>
+        <p style={{ margin: 0, fontSize: "0.8rem", color: "var(--muted)" }}>
+          ℹ️ Top section: daily earnings from Uber dashboard. Bottom section: shifts you've logged manually. Charging deducted at 3.5 mi/kWh.
         </p>
       </div>
     </div>
