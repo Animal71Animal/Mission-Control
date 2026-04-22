@@ -206,7 +206,7 @@
       "discipline": "R&D/Innovation",
       "model": "abacus/claude-opus-4-6",
       "status": "idle",
-      "totalTasksCompleted": 2,
+      "totalTasksCompleted": 1,
       "totalTasksAssigned": 1,
       "tasksInProgress": 0,
       "currentTask": null,
