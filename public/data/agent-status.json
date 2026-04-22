@@ -58,7 +58,7 @@
       "model": "abacus/claude-sonnet-4-6",
       "status": "idle",
       "totalTasksCompleted": 7,
-      "totalTasksAssigned": 10,
+      "totalTasksAssigned": 12,
       "tasksInProgress": 0,
       "currentTask": null,
       "currentTaskStatus": null,
@@ -205,17 +205,17 @@
       "name": "Coral",
       "discipline": "R&D/Innovation",
       "model": "abacus/claude-opus-4-6",
-      "status": "idle",
-      "totalTasksCompleted": 1,
-      "totalTasksAssigned": 1,
+      "status": "in-progress",
+      "totalTasksCompleted": 2,
+      "totalTasksAssigned": 2,
       "tasksInProgress": 0,
-      "currentTask": null,
-      "currentTaskStatus": null,
+      "currentTask": "Research Uber Partner API for Daily Earnings Integration",
+      "currentTaskStatus": "in-progress",
       "currentTaskProgress": 0,
       "blockers": [],
-      "lastUpdated": "2026-04-22T05:53:25.841654Z",
+      "lastUpdated": "2026-04-22T07:33:14.115806Z",
       "nextDeadline": null,
-      "availabilityStatus": "available",
+      "availabilityStatus": "in-progress",
       "taskHistory": {
         "completed": [
           {
@@ -230,10 +230,10 @@
   },
   "teamStats": {
     "totalTasksCompleted": 17,
-    "totalTasksAssigned": 21,
-    "tasksInProgress": 0,
+    "totalTasksAssigned": 22,
+    "tasksInProgress": 1,
     "blockedTasks": 2,
     "teamAvailability": "medium",
-    "lastTeamUpdate": "2026-04-22T07:25:52.911850Z"
+    "lastTeamUpdate": "2026-04-22T07:33:14.125133Z"
   }
 }
