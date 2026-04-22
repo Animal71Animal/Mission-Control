@@ -1,68 +1,78 @@
 {
-  "weekly_summaries": [
+  "dailySummaries": [
+    {
+      "date": "2026-04-21",
+      "earnings": 194.75,
+      "trips": 20,
+      "tips": 27.25,
+      "basefare": 161.75,
+      "surge": 5.25,
+      "promotions": 3.75,
+      "expenses": 0.0,
+      "netPayout": 194.75
+    },
+    {
+      "date": "2026-04-20",
+      "earnings": 158.36,
+      "trips": 8,
+      "tips": 24.0,
+      "basefare": 119.36,
+      "surge": 9.75,
+      "promotions": 5.25,
+      "expenses": 0.0,
+      "netPayout": 158.36
+    },
+    {
+      "date": "2026-04-18",
+      "earnings": 147.55,
+      "trips": 8,
+      "tips": 35.0,
+      "basefare": 107.55,
+      "surge": 9.75,
+      "promotions": 5.25,
+      "expenses": 7.19,
+      "netPayout": 140.36
+    },
+    {
+      "date": "2026-04-15",
+      "earnings": 86.18,
+      "trips": 4,
+      "tips": 9.0,
+      "basefare": 77.18,
+      "surge": 0.0,
+      "promotions": 0.0,
+      "expenses": 5.96,
+      "netPayout": 80.22
+    }
+  ],
+  "weeklySummaries": [
     {
       "period_start": "2026-04-20",
       "period_end": "2026-04-22",
       "total_earnings": 353.11,
       "total_trips": 28,
       "breakdown": {
-        "base_fare": 155.32999999999998,
+        "base_fare": 288.11,
         "surge": 15.0,
-        "promotions": 6.96,
+        "promotions": 9.0,
         "tips": 51.25,
         "expenses": 0.0
-      },
-      "scraped_at": "2026-04-22T08:00:00Z",
-      "source": "manual_seed"
-    },
-    {
-      "period_start": "2026-04-14",
-      "period_end": "2026-04-15",
-      "total_earnings": 86.18,
-      "total_trips": 4,
-      "breakdown": {
-        "base_fare": 77.18,
-        "surge": 0.0,
-        "promotions": 0.0,
-        "tips": 9.0,
-        "expenses": 0.0
-      },
-      "charging_deduction": 5.96,
-      "net_profit": 80.22,
-      "scraped_at": "2026-04-22T08:00:00Z",
-      "source": "manual_seed"
-    },
-    {
-      "period_start": "2026-04-18",
-      "period_end": "2026-04-18",
-      "total_earnings": 147.55,
-      "total_trips": 8,
-      "breakdown": {
-        "base_fare": 107.55,
-        "surge": 9.75,
-        "promotions": 5.25,
-        "tips": 35.0,
-        "expenses": 0.0
-      },
-      "charging_deduction": 7.19,
-      "net_profit": 140.36,
-      "scraped_at": "2026-04-22T08:00:00Z",
-      "source": "manual_seed"
+      }
     }
   ],
-  "monthly_totals": {
+  "monthlyTotals": {
     "2026-04": {
       "total_earnings": 549.16,
-      "total_net": 361.36,
+      "total_net": 520.94,
       "total_trips": 34,
-      "total_tips": 68.0,
+      "total_tips": 95.25,
       "total_charging_deductions": 13.15
     }
   },
   "metadata": {
     "source": "drivers.uber.com",
-    "scrape_method": "manual_seed",
-    "last_scrape_attempt": "2026-04-22T08:54:47.289237+00:00"
+    "scrape_method": "manual_entry",
+    "last_scrape_attempt": "2026-04-22T10:28:00Z"
   },
-  "last_updated": "2026-04-22T10:20:34.456299Z"
+  "last_updated": "2026-04-22T10:28:00Z"
 }
