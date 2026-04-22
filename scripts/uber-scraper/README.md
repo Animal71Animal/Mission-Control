@@ -1,160 +1,126 @@
 # Uber Earnings Scraper
 
-Playwright-powered scraper for Uber driver dashboard → Mission Control Uber Profit tab.
+Auto-scrapes Eric's Uber driver dashboard weekly → saves structured JSON → auto-populates Mission Control Uber Profit tab.
 
-**Location:** `/home/ubuntu/wlp/scripts/uber-scraper/`  
-**Output:** `/home/ubuntu/wlp/projects/mission-control/public/data/uber-earnings.json`  
-**Schedule:** Every Sunday 11 PM MDT (auto-commit + push to GitHub)
-
----
-
-## First-Time Setup
-
-### 1. Authenticate (one-time, interactive)
-
-This step requires a display OR running from Eric's Mac where you can see the browser.
+## Quick Start
 
 ```bash
-cd /home/ubuntu/wlp/scripts/uber-scraper
-node uber-scraper.js --login
+cd /home/ubuntu/wlp/projects/mission-control/scripts/uber-scraper
+
+# 1. Copy env file and add credentials
+cp .env.example .env
+nano .env   # set UBER_EMAIL and UBER_PASSWORD
+
+# 2. Run once to test
+python3 uber-scraper.py --dry-run
+
+# 3. Install weekly cron
+bash setup-cron.sh
 ```
 
-Walk through the Uber login:
-- Enter email/phone when prompted
-- Enter OTP from SMS/email when prompted
-- Session saved to `auth-state.json` — all future runs are fully headless
+## First Run (No Auth State)
 
-### 2. Test headless run
+The first time you run, it'll attempt headless login. Uber often requires phone/2FA verification on new sessions. If that fails:
 
 ```bash
-node uber-scraper.js --dry-run
+# Run with visible browser to complete 2FA manually
+python3 uber-scraper.py --visible
+# Browser opens → complete 2FA → auth state saves → future runs headless
 ```
 
-Output shows extracted JSON without writing to disk.
+Auth state is saved to `uber-auth-state.json` — keep this file, it avoids re-login.
 
-### 3. Install cron
+## Commands
 
-```bash
-bash install-cron.sh
+| Command | What it does |
+|---------|-------------|
+| `python3 uber-scraper.py` | Scrape current week, save, commit |
+| `python3 uber-scraper.py --all` | Scrape all available weeks |
+| `python3 uber-scraper.py --dry-run` | Scrape but don't save or commit |
+| `python3 uber-scraper.py --no-commit` | Save to JSON but don't git push |
+| `python3 uber-scraper.py --visible` | Open browser visibly (debug/2FA) |
+| `python3 seed-sample-data.py` | Populate with known real data (no login needed) |
+
+## Files
+
+```
+scripts/uber-scraper/
+├── uber-scraper.py        ← Main scraper
+├── seed-sample-data.py    ← Seed with known data (no login required)
+├── setup-cron.sh          ← Install weekly cron
+├── .env                   ← Your credentials (gitignored)
+├── .env.example           ← Template
+├── uber-auth-state.json   ← Saved browser session (auto-created)
+└── debug-screenshot.png   ← Auto-captured on each run (for debugging)
+
+public/data/
+└── uber-earnings.json     ← Output consumed by Mission Control
 ```
 
-Installs: `Every Monday 05:00 UTC` (= Sunday 11 PM MDT)
-
----
-
-## Running Manually
-
-```bash
-# Normal run (extract + save + git push)
-node uber-scraper.js
-
-# Pull last 4 weeks
-node uber-scraper.js --weeks 4
-
-# Dry run (no write, no push)
-node uber-scraper.js --dry-run
-
-# Force fresh login (clears saved session)
-node uber-scraper.js --login
-```
-
----
-
-## Output Format
+## Output Format (`uber-earnings.json`)
 
 ```json
 {
   "weekly_summaries": [
     {
-      "period_start": "2026-04-14",
-      "period_end":   "2026-04-20",
-      "total_earnings": 86.18,
-      "total_trips": 5,
+      "period_start": "2026-04-20",
+      "period_end":   "2026-04-22",
+      "total_earnings": 158.36,
+      "total_trips": 8,
       "breakdown": {
-        "base_fare":  69.44,
-        "surge":       3.75,
-        "tips":        9.00,
-        "promotions":  4.22,
-        "expenses":   -0.23
+        "base_fare":   119.36,
+        "surge":         9.75,
+        "promotions":    5.25,
+        "tips":         24.00,
+        "expenses":      0.00
       },
-      "net_payout": 85.95,
-      "scraped_at": "2026-04-22T08:00:00.000Z",
-      "source": "auto"
+      "scraped_at": "2026-04-22T08:00:00Z"
     }
   ],
-  "last_updated": "2026-04-22T08:00:00.000Z",
-  "scraper_version": "1.0"
+  "monthly_totals": { "2026-04": { ... } },
+  "metadata": { "source": "drivers.uber.com", ... },
+  "last_updated": "2026-04-22T08:00:00Z"
 }
 ```
 
-Weeks are merged on re-run (no duplicates). Sorted newest first.
+## Cron Schedule
 
----
+Installed by `setup-cron.sh`:
+
+```
+0 5 * * 1   # Every Monday 05:00 UTC = Sunday 11 PM MDT
+```
+
+Auto-commits + pushes to GitHub. MC dashboard picks up new data on next page load.
 
 ## Troubleshooting
 
-### Session Expired
+**Login fails headlessly:**
+→ Run `--visible` to complete 2FA, saves auth state for future headless runs.
+
+**"Not authenticated — login redirect":**
+→ Auth state expired. Delete `uber-auth-state.json` and re-run `--visible`.
+
+**No data extracted:**
+→ Check `debug-screenshot.png` to see what the page looks like.
+→ Uber may have changed their DOM. File an issue or update selectors in `scrape_earnings()`.
+
+**Git push fails:**
+→ Check `GITHUB_TOKEN` in `.env`. Token needs `repo` scope.
+
+**Discord alert on failure:**
+→ Set `DISCORD_WEBHOOK_URL` in `.env` to get pinged when scrape fails.
+
+## Important Notes
+
+- Uber's driver portal is a React SPA — DOM structure changes without notice
+- The scraper uses multiple extraction strategies (embedded JSON → API intercept → DOM text)
+- Auth state (`uber-auth-state.json`) is your session cookie — treat like a password, gitignored
+- Charges are NOT auto-deducted here — the existing uber-profit.json handles per-shift deductions
+
+## Dependencies
+
 ```bash
-node uber-scraper.js --login   # Re-auth interactively
+pip install playwright python-dotenv
+# Chromium already at /usr/local/bin/chromium in this environment
 ```
-
-### Debug Screenshot
-If extraction fails, a screenshot is saved:
-```
-/home/ubuntu/wlp/scripts/uber-scraper/debug-screenshot.png
-```
-
-### View Logs
-```bash
-tail -50 /home/ubuntu/wlp/scripts/uber-scraper/cron.log
-```
-
-### Check Cron
-```bash
-crontab -l | grep uber
-```
-
-### Uber Changed DOM / API
-The scraper tries 3 extraction strategies in order:
-1. **API intercept** — intercepts Uber's internal JSON calls (most reliable)
-2. **`__NEXT_DATA__`** — Next.js server-rendered state
-3. **DOM scrape** — reads visible text from earnings cards
-
-If all fail, a screenshot is saved at `debug-screenshot.png`. File an issue or check the screenshot to identify new selectors.
-
----
-
-## Credentials
-
-Stored in `.env` (git-ignored):
-```
-UBER_EMAIL=ericmills71@gmail.com
-UBER_PASSWORD=...
-```
-
-Or set as environment variables before running.
-
----
-
-## Architecture
-
-```
-uber-scraper.js
-  ├── doLogin()           — handles email → password → OTP flow
-  ├── extractEarnings()   — 3-strategy extraction (API / Next / DOM)
-  ├── buildWeekEntry()    — normalizes API response shape
-  ├── mergeWeeks()        — deduplicates + sorts weekly entries
-  ├── saveData()          — writes to uber-earnings.json
-  └── gitCommitPush()     — auto-commits + pushes MC repo
-```
-
-Session persisted in `auth-state.json` (Playwright storageState — cookies + localStorage).
-
----
-
-## Limitations
-
-- **OTP Required on First Login** — Uber uses SMS/email 2FA. One-time interactive step.
-- **Session Duration** — Uber sessions typically last 30–90 days. Re-auth needed when expired.
-- **Headless Detection** — If Uber blocks headless, add `--login` to trigger full-browser re-auth.
-- **Data Granularity** — Weekly summaries only. Per-trip detail available in shift tracker.
