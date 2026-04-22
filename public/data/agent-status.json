@@ -56,17 +56,17 @@
       "name": "Clawdia",
       "discipline": "Operations",
       "model": "abacus/claude-sonnet-4-6",
-      "status": "in-progress",
-      "totalTasksCompleted": 6,
+      "status": "idle",
+      "totalTasksCompleted": 7,
       "totalTasksAssigned": 12,
       "tasksInProgress": 0,
-      "currentTask": "Add EV Charging Sessions to Mission Control",
-      "currentTaskStatus": "in-progress",
+      "currentTask": null,
+      "currentTaskStatus": null,
       "currentTaskProgress": 0,
       "blockers": [],
-      "lastUpdated": "2026-04-22T07:22:52.884958Z",
+      "lastUpdated": "2026-04-22T07:25:52.902093Z",
       "nextDeadline": null,
-      "availabilityStatus": "in-progress",
+      "availabilityStatus": "available",
       "taskHistory": {
         "completed": [
           {
@@ -229,11 +229,11 @@
     }
   },
   "teamStats": {
-    "totalTasksCompleted": 16,
+    "totalTasksCompleted": 17,
     "totalTasksAssigned": 21,
-    "tasksInProgress": 1,
+    "tasksInProgress": 0,
     "blockedTasks": 2,
     "teamAvailability": "medium",
-    "lastTeamUpdate": "2026-04-22T07:22:52.893832Z"
+    "lastTeamUpdate": "2026-04-22T07:25:52.911850Z"
   }
 }
