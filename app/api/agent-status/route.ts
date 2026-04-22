@@ -20,6 +20,7 @@ const DB_PATHS = [
 ];
 
 const JSON_PATHS = [
+  path.join(process.cwd(), "public", "data", "agent-status.json"),
   path.join(process.cwd(), "..", "..", "data", "agent-status.json"),
   path.join(process.cwd(), "..", "data", "agent-status.json"),
   path.join(process.cwd(), "data", "agent-status.json"),
