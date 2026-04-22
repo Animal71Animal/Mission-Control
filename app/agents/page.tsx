@@ -2,10 +2,15 @@
 
 import { useEffect, useState } from "react";
 
+interface TaskHistoryItem {
+  name: string;
+  completedAt?: string;
+}
+
 interface TaskHistory {
-  completed: string[];
-  inProgress: string[];
-  upcoming: string[];
+  completed: (string | TaskHistoryItem)[];
+  inProgress: (string | TaskHistoryItem)[];
+  upcoming: (string | TaskHistoryItem)[];
 }
 
 interface AgentData {
@@ -664,8 +669,15 @@ export default function AIOfficePage() {
                     <div style={{ fontSize: "0.8rem", color: "var(--muted)", fontStyle: "italic", paddingLeft: 8 }}>None</div>
                   ) : (
                     <ul style={{ margin: 0, paddingLeft: 20 }}>
-                      {tasks.map((task: string, i: number) => (
-                        <li key={i} style={{ fontSize: "0.8rem", color: "var(--text)", marginBottom: 4 }}>{task}</li>
+                      {tasks.map((task: string | { name: string; completedAt?: string }, i: number) => (
+                        <li key={i} style={{ fontSize: "0.8rem", color: "var(--text)", marginBottom: 4 }}>
+                          {typeof task === "string" ? task : task.name}
+                          {typeof task !== "string" && task.completedAt && (
+                            <span style={{ fontSize: "0.7rem", color: "var(--muted)", marginLeft: 6 }}>
+                              {new Date(task.completedAt).toLocaleDateString()}
+                            </span>
+                          )}
+                        </li>
                       ))}
                     </ul>
                   )}
