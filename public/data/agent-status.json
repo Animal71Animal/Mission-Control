@@ -56,17 +56,17 @@
       "name": "Clawdia",
       "discipline": "Operations",
       "model": "abacus/claude-sonnet-4-6",
-      "status": "in-progress",
-      "totalTasksCompleted": 5,
+      "status": "idle",
+      "totalTasksCompleted": 6,
       "totalTasksAssigned": 10,
       "tasksInProgress": 0,
-      "currentTask": "Debug & Fix Task Modal Client Error",
-      "currentTaskStatus": "in-progress",
+      "currentTask": null,
+      "currentTaskStatus": null,
       "currentTaskProgress": 0,
       "blockers": [],
-      "lastUpdated": "2026-04-22T07:10:07.808420Z",
+      "lastUpdated": "2026-04-22T07:12:28.121992Z",
       "nextDeadline": null,
-      "availabilityStatus": "in-progress",
+      "availabilityStatus": "available",
       "taskHistory": {
         "completed": [
           {
@@ -225,11 +225,11 @@
     }
   },
   "teamStats": {
-    "totalTasksCompleted": 15,
+    "totalTasksCompleted": 16,
     "totalTasksAssigned": 19,
-    "tasksInProgress": 1,
+    "tasksInProgress": 0,
     "blockedTasks": 2,
     "teamAvailability": "medium",
-    "lastTeamUpdate": "2026-04-22T07:10:07.816765Z"
+    "lastTeamUpdate": "2026-04-22T07:12:28.132011Z"
   }
 }
