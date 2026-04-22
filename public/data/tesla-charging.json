@@ -678,21 +678,27 @@
   "summary": {
     "total_sessions": 56,
     "total_cost_usd": 893.11,
-    "total_kwh": 3203.4227,
+    "total_kwh": 3203.4239,
     "total_minutes": 2077,
     "avg_cost_per_session": 15.95,
     "avg_duration_minutes": 37.09
   },
   "monthly_summary": {
+    "2026-04": {
+      "cost": 164.60999999999999,
+      "kwh": 582.2885,
+      "sessions": 10,
+      "minutes": 401
+    },
     "2026-03": {
-      "cost": 202.16,
-      "kwh": 896.0946,
-      "sessions": 14,
-      "minutes": 616
+      "cost": 213.41000000000003,
+      "kwh": 958.6108000000002,
+      "sessions": 15,
+      "minutes": 646
     },
     "2026-02": {
       "cost": 156.48,
-      "kwh": 521.4308,
+      "kwh": 521.4307999999999,
       "sessions": 8,
       "minutes": 356
     },
@@ -701,17 +707,11 @@
       "kwh": 1141.0938,
       "sessions": 23,
       "minutes": 674
-    },
-    "2026-04": {
-      "cost": 164.61,
-      "kwh": 582.2873,
-      "sessions": 11,
-      "minutes": 400
     }
   },
-  "last_updated": "2026-04-22T05:22:00.000Z",
+  "last_updated": "2026-04-22T07:25:02.047246Z",
   "total_kwh": 3203.42,
   "total_cost": 893.11,
-  "avg_rate": 0.284,
+  "avg_rate": 0.279,
   "session_count": 56
 }
