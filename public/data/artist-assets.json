@@ -108,6 +108,15 @@
     "created_at": "2026-03-29T18:08:01.790Z"
   },
   {
+    "id": "asset-kade-rivers-logo",
+    "artist_name": "Kade Rivers",
+    "asset_type": "logo",
+    "status": "complete",
+    "url": "/artists/kade-rivers-logo.jpg",
+    "notes": "Official logo with metallic text and winged skull",
+    "created_at": "2026-04-06T21:06:00.000Z"
+  },
+  {
     "id": "asset-madison-blair-audio",
     "artist_name": "Madison Blair",
     "asset_type": "audio",
