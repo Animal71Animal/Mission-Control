@@ -10,7 +10,7 @@
 
 ## Current Focus (As of 2026-04-22)
 
-**Active Priority:** DJ Automation Software ($200/mo SaaS for strip clubs)
+**Active Priority:** DJ Automation Software ($2,000/mo SaaS for strip clubs)
 
 **On Backburner:** AI Artists (Kade Rivers, Madison Blair, Aria Vale)
 - Timeline: TBD
@@ -37,8 +37,11 @@ See `/business/dj-software/PRODUCT-BRIEF.md` for detailed product roadmap.
 - FastAPI backend + python-vlc + React frontend
 - Schedule tab: Built (SRB preset one-click)
 - Demo: Ready for testing
-- Target: 10 clubs × $200/month = $2K MRR
-- Next: Eric installs + tests at home
+- Developer: Micah
+- MVP delivery: May 31, 2026
+- Testing: June–July 2026 (live at Spearmint Rhino)
+- Launch: ED Expo August 2026 (Las Vegas Convention Center)
+- Revenue Target: 50 clubs × $2,000/month = $100K MRR
 
 ---
 
