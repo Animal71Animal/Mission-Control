@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { modules, groupLabels, groupOrder } from "../app/data/modules";
-import type { ModuleGroup } from "../app/data/modules";
+import type { ModuleGroup, Module } from "../app/data/modules";
 
 // Chevron icon component
 function ChevronIcon({ expanded }: { expanded: boolean }) {
@@ -25,6 +25,85 @@ function ChevronIcon({ expanded }: { expanded: boolean }) {
     >
       <polyline points="9 18 15 12 9 6" />
     </svg>
+  );
+}
+
+// NavItem: renders a module link, with optional collapsible children
+function NavItem({ item, pathname, onClose, depth = 0 }: { item: Module; pathname: string; onClose: () => void; depth?: number }) {
+  const active = pathname === item.href;
+  const hasChildren = item.children && item.children.length > 0;
+  const childActive = hasChildren && item.children!.some((c) => pathname === c.href);
+  const [open, setOpen] = useState(childActive || active);
+
+  // Auto-open if a child becomes active
+  useEffect(() => {
+    if (childActive) setOpen(true);
+  }, [childActive]);
+
+  const indent = depth * 12;
+
+  if (hasChildren) {
+    return (
+      <div>
+        <button
+          onClick={() => setOpen((o) => !o)}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 10,
+            width: "100%",
+            padding: `9px 20px 9px ${20 + indent}px`,
+            fontSize: "0.875rem",
+            color: childActive || active ? "var(--accent2)" : "var(--text)",
+            background: childActive || active ? "rgba(155,93,229,0.12)" : "transparent",
+            borderLeft: childActive || active ? "2px solid var(--accent)" : "2px solid transparent",
+            textDecoration: "none",
+            transition: "all 0.15s",
+            border: "none",
+            cursor: "pointer",
+            textAlign: "left",
+          }}
+        >
+          <span style={{ fontSize: "1rem" }}>{item.icon}</span>
+          <span style={{ flex: 1 }}>{item.title}</span>
+          <ChevronIcon expanded={open} />
+        </button>
+        <div
+          style={{
+            maxHeight: open ? "400px" : "0",
+            overflow: "hidden",
+            transition: "max-height 0.25s ease, opacity 0.2s ease",
+            opacity: open ? 1 : 0,
+          }}
+        >
+          {item.children!.map((child) => (
+            <NavItem key={child.href} item={child} pathname={pathname} onClose={onClose} depth={depth + 1} />
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <Link
+      href={item.href}
+      onClick={onClose}
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: 10,
+        padding: `9px 20px 9px ${20 + indent}px`,
+        fontSize: "0.875rem",
+        color: active ? "var(--accent2)" : "var(--text)",
+        background: active ? "rgba(155,93,229,0.12)" : "transparent",
+        borderLeft: active ? "2px solid var(--accent)" : "2px solid transparent",
+        textDecoration: "none",
+        transition: "all 0.15s",
+      }}
+    >
+      <span style={{ fontSize: "1rem" }}>{item.icon}</span>
+      {item.title}
+    </Link>
   );
 }
 
@@ -188,31 +267,9 @@ export default function Sidebar() {
                   opacity: expandedGroups[group] ? 1 : 0,
                 }}
               >
-                {groupedModules[group].map((item) => {
-                  const active = pathname === item.href;
-                  return (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      onClick={() => setMobileOpen(false)}
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: 10,
-                        padding: "9px 20px",
-                        fontSize: "0.875rem",
-                        color: active ? "var(--accent2)" : "var(--text)",
-                        background: active ? "rgba(155,93,229,0.12)" : "transparent",
-                        borderLeft: active ? "2px solid var(--accent)" : "2px solid transparent",
-                        textDecoration: "none",
-                        transition: "all 0.15s",
-                      }}
-                    >
-                      <span style={{ fontSize: "1rem" }}>{item.icon}</span>
-                      {item.title}
-                    </Link>
-                  );
-                })}
+                {groupedModules[group].map((item) => (
+                  <NavItem key={item.href} item={item} pathname={pathname} onClose={() => setMobileOpen(false)} />
+                ))}
               </div>
             </div>
           ))}
