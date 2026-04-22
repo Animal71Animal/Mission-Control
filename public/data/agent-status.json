@@ -31,7 +31,7 @@
       "model": "abacus/claude-haiku-4-5",
       "status": "idle",
       "totalTasksCompleted": 1,
-      "totalTasksAssigned": 1,
+      "totalTasksAssigned": 3,
       "tasksInProgress": 0,
       "currentTask": "SRB Tips - Sole Responsibility",
       "currentTaskStatus": "idle",
@@ -47,7 +47,9 @@
         "inProgress": [
           "SRB Tips - Sole Responsibility"
         ],
-        "upcoming": []
+        "upcoming": [
+          "Quarterly financial review"
+        ]
       }
     },
     "clawdia": {
@@ -150,7 +152,7 @@
       "model": "abacus/claude-opus-4-6",
       "status": "blocked",
       "totalTasksCompleted": 2,
-      "totalTasksAssigned": 2,
+      "totalTasksAssigned": 3,
       "tasksInProgress": 0,
       "currentTask": "DOE Partnership",
       "currentTaskStatus": "blocked",
@@ -177,8 +179,8 @@
       "discipline": "Legal/Admin",
       "model": "abacus/claude-sonnet-4-6",
       "status": "idle",
-      "totalTasksCompleted": 1,
-      "totalTasksAssigned": 1,
+      "totalTasksCompleted": 0,
+      "totalTasksAssigned": 0,
       "tasksInProgress": 0,
       "currentTask": null,
       "currentTaskStatus": null,
