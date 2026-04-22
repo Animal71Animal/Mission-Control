@@ -2,6 +2,7 @@
   "status": "Software in Dev",
   "subtitle": "First MVP delivered to Eric by May 31, 2026. Testing June–July. ED Expo August premiere.",
   "launchTarget": "0 clubs (product premiere, outreach begins)",
+  "sixMonthGoal": "50 clubs × $2,000/month = $100K MRR (by February 2027)",
   "yearOneGoal": "100 clubs × $2,000/month = $200K MRR (by August 2027)",
   "finalScalingGoal": "500 clubs × $2,000/month = $1M MRR",
   "milestones": [
@@ -27,7 +28,7 @@
       "emoji": "🎪",
       "date": "August 2026",
       "title": "ED Expo Premiere (Las Vegas Convention Center)",
-      "desc": "Finished, production-ready software premieres at DJ booth at the ED Expo in Las Vegas. Live demo to industry attendees. 50-club rollout outreach begins."
+      "desc": "Finished, production-ready software premieres at DJ booth at the ED Expo in Las Vegas. Live demo to industry attendees. Outreach begins."
     }
   ],
   "revenueProjection": [
@@ -35,6 +36,11 @@
       "phase": "Launch (Aug 2026)",
       "clubs": 0,
       "mrr": "$0"
+    },
+    {
+      "phase": "Six Months (Feb 2027)",
+      "clubs": 50,
+      "mrr": "$100,000"
     },
     {
       "phase": "Year One (Aug 2027)",
@@ -53,8 +59,9 @@
     "📅 MVP delivery: May 31, 2026",
     "🧪 Testing: June – July 2026 (live at SRB)",
     "🎪 Launch: ED Expo August 2026 (Vegas)",
+    "🎯 Six Month Goal: 50 clubs × $2,000/month = $100K MRR",
     "🎯 Year One Goal: 100 clubs × $2,000/month = $200K MRR",
     "🚀 Final Scale: 500 clubs × $2,000/month = $1M MRR"
   ],
-  "lastUpdated": "2026-04-22T10:06:00Z"
+  "lastUpdated": "2026-04-22T10:08:00Z"
 }
