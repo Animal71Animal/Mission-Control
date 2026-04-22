@@ -116,7 +116,9 @@ export default function UberEarningsPage() {
                       <th style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, color: "var(--text)" }}>Earnings</th>
                       <th style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, color: "var(--text)" }}>Trips</th>
                       <th style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, color: "var(--text)" }}>Tips</th>
-                      <th style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, color: "var(--text)" }}>Breakdown</th>
+                      <th style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, color: "var(--text)" }}>Miles</th>
+                      <th style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, color: "var(--text)" }}>Charging</th>
+                      <th style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, color: "var(--text)" }}>Net
                     </tr>
                   </thead>
                   <tbody>
