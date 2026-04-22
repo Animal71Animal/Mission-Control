@@ -57,10 +57,10 @@ export function PersonalTasksCard() {
     >
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 12 }}>
         <h3 style={{ margin: 0, fontSize: "1rem", fontWeight: 700, color: "var(--text)" }}>
-          📝 Personal Tasks
+          📋 Action Items
         </h3>
         <a
-          href="/personal-tasks"
+          href="/tasks"
           style={{
             fontSize: "0.75rem",
             color: "#9b5de5",
