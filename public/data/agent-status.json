@@ -56,17 +56,17 @@
       "name": "Clawdia",
       "discipline": "Operations",
       "model": "abacus/claude-sonnet-4-6",
-      "status": "in-progress",
-      "totalTasksCompleted": 6,
-      "totalTasksAssigned": 9,
+      "status": "idle",
+      "totalTasksCompleted": 7,
+      "totalTasksAssigned": 11,
       "tasksInProgress": 0,
-      "currentTask": "Debug Task Modal Error in Browser",
-      "currentTaskStatus": "in-progress",
+      "currentTask": null,
+      "currentTaskStatus": null,
       "currentTaskProgress": 0,
       "blockers": [],
-      "lastUpdated": "2026-04-22T07:14:34.492967Z",
+      "lastUpdated": "2026-04-22T07:18:00Z",
       "nextDeadline": null,
-      "availabilityStatus": "in-progress",
+      "availabilityStatus": "available",
       "taskHistory": {
         "completed": [
           {
@@ -92,6 +92,10 @@
           {
             "name": "UX Fixes - Artist Tab Content + Clickable Task Counts",
             "completedAt": "2026-04-22T07:01:00Z"
+          },
+          {
+            "name": "Debug Task Modal Error in Browser",
+            "completedAt": "2026-04-22T07:18:00Z"
           }
         ],
         "inProgress": [],
@@ -225,11 +229,11 @@
     }
   },
   "teamStats": {
-    "totalTasksCompleted": 16,
+    "totalTasksCompleted": 17,
     "totalTasksAssigned": 20,
     "tasksInProgress": 1,
     "blockedTasks": 2,
     "teamAvailability": "medium",
-    "lastTeamUpdate": "2026-04-22T07:14:34.502014Z"
+    "lastTeamUpdate": "2026-04-22T07:18:00Z"
   }
 }
