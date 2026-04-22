@@ -948,6 +948,37 @@ export default function WLPDashboardPage() {
                 </div>
               </div>
             </div>
+
+            {/* DJ Automation Roadmap */}
+            <div style={{ marginTop: 24, paddingTop: 24, borderTop: "1px solid var(--border)" }}>
+              <h4 style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--accent2)", marginBottom: 12 }}>🗺️ Roadmap</h4>
+              <div style={{ fontSize: "0.85rem", lineHeight: 1.7, color: "var(--text)" }}>
+                <div style={{ marginBottom: 16 }}>
+                  <strong>Status:</strong> Demo-ready · Awaiting May 31 kickoff<br />
+                  <strong>Revenue Target:</strong> 10 clubs × $200/month = <strong>$2K MRR</strong>
+                </div>
+                <div style={{ marginBottom: 16 }}>
+                  <div style={{ marginBottom: 8 }}><strong>🤝 May 31</strong> — Developer meeting with Tommy (requirements lock)</div>
+                  <div style={{ marginBottom: 8 }}><strong>🔬 June 1–30</strong> — Alpha testing at Spearmint Rhino (live venue validation)</div>
+                  <div style={{ marginBottom: 8 }}><strong>🧪 July 1–25</strong> — Beta testing (broader venues, edge cases)</div>
+                  <div style={{ marginBottom: 8 }}><strong>🚀 July 31</strong> — Product launch (ready for 10-club rollout)</div>
+                </div>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 12, fontSize: "0.8rem" }}>
+                  <div style={{ background: "rgba(155,93,229,0.1)", padding: "8px 12px", borderRadius: 6, borderLeft: "2px solid var(--accent2)" }}>
+                    <div style={{ fontWeight: 600, color: "var(--accent2)" }}>Launch (Aug)</div>
+                    <div style={{ color: "var(--muted)", marginTop: 4 }}>10 clubs · $2K MRR</div>
+                  </div>
+                  <div style={{ background: "rgba(155,93,229,0.1)", padding: "8px 12px", borderRadius: 6, borderLeft: "2px solid var(--accent2)" }}>
+                    <div style={{ fontWeight: 600, color: "var(--accent2)" }}>Growth (Q4)</div>
+                    <div style={{ color: "var(--muted)", marginTop: 4 }}>25 clubs · $5K MRR</div>
+                  </div>
+                  <div style={{ background: "rgba(155,93,229,0.1)", padding: "8px 12px", borderRadius: 6, borderLeft: "2px solid var(--accent2)" }}>
+                    <div style={{ fontWeight: 600, color: "var(--accent2)" }}>Scale (2027)</div>
+                    <div style={{ color: "var(--muted)", marginTop: 4 }}>50+ clubs · $10K+ MRR</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </Card>
         </div>
 
