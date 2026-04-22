@@ -58,7 +58,7 @@
       "model": "abacus/claude-sonnet-4-6",
       "status": "idle",
       "totalTasksCompleted": 13,
-      "totalTasksAssigned": 14,
+      "totalTasksAssigned": 13,
       "tasksInProgress": 0,
       "currentTask": null,
       "currentTaskStatus": null,
@@ -172,7 +172,7 @@
       "model": "abacus/claude-opus-4-6",
       "status": "blocked",
       "totalTasksCompleted": 2,
-      "totalTasksAssigned": 2,
+      "totalTasksAssigned": 3,
       "tasksInProgress": 1,
       "currentTask": "DOE Partnership",
       "currentTaskStatus": "blocked",
@@ -199,7 +199,7 @@
       "discipline": "Legal/Admin",
       "model": "abacus/claude-sonnet-4-6",
       "status": "idle",
-      "totalTasksCompleted": 1,
+      "totalTasksCompleted": 0,
       "totalTasksAssigned": 1,
       "tasksInProgress": 0,
       "currentTask": null,
@@ -223,7 +223,7 @@
       "model": "abacus/claude-opus-4-6",
       "status": "idle",
       "totalTasksCompleted": 3,
-      "totalTasksAssigned": 2,
+      "totalTasksAssigned": 3,
       "tasksInProgress": 0,
       "currentTask": null,
       "currentTaskStatus": null,
@@ -245,11 +245,11 @@
     }
   },
   "teamStats": {
-    "totalTasksCompleted": 21,
+    "totalTasksCompleted": 24,
     "totalTasksAssigned": 24,
     "tasksInProgress": 0,
     "blockedTasks": 2,
     "teamAvailability": "medium",
-    "lastTeamUpdate": "2026-04-22T10:12:00Z"
+    "lastTeamUpdate": "2026-04-22T18:27:00Z"
   }
 }
