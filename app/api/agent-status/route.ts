@@ -47,6 +47,8 @@ function readFromSqlite(): object | null {
 
   try {
     const db = new Database(dbPath, { readonly: true });
+    db.pragma('foreign_keys = ON');
+    db.pragma('temp_store = MEMORY');
 
     // Verify tables exist
     const tables: { name: string }[] = db
