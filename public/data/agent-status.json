@@ -54,17 +54,17 @@
       "name": "Clawdia",
       "discipline": "Operations",
       "model": "abacus/claude-sonnet-4-6",
-      "status": "in-progress",
-      "totalTasksCompleted": 4,
+      "status": "idle",
+      "totalTasksCompleted": 5,
       "totalTasksAssigned": 9,
       "tasksInProgress": 0,
-      "currentTask": "UX Fixes - Artist Tab Content + Clickable Task Counts",
-      "currentTaskStatus": "in-progress",
+      "currentTask": null,
+      "currentTaskStatus": null,
       "currentTaskProgress": 0,
       "blockers": [],
-      "lastUpdated": "2026-04-22T06:57:59.134342Z",
+      "lastUpdated": "2026-04-22T07:01:19.517542Z",
       "nextDeadline": null,
-      "availabilityStatus": "in-progress",
+      "availabilityStatus": "available",
       "taskHistory": {
         "completed": [
           "Mission Control deployment",
@@ -202,11 +202,11 @@
     }
   },
   "teamStats": {
-    "totalTasksCompleted": 14,
+    "totalTasksCompleted": 15,
     "totalTasksAssigned": 18,
-    "tasksInProgress": 1,
+    "tasksInProgress": 0,
     "blockedTasks": 2,
     "teamAvailability": "medium",
-    "lastTeamUpdate": "2026-04-22T06:57:59.144718Z"
+    "lastTeamUpdate": "2026-04-22T07:01:19.526410Z"
   }
 }
