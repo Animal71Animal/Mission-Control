@@ -4,70 +4,78 @@
       "date": "2026-04-21",
       "earnings": 158.36,
       "trips": 20,
+      "miles": 71.49,
       "tips": 24.00,
       "basefare": 128.22,
       "surge": 6.14,
       "promotions": 0.0,
-      "expenses": 0.0,
-      "netPayout": 158.36
+      "charging_cost": 2.50,
+      "netPayout": 155.86
     },
     {
       "date": "2026-04-20",
       "earnings": 0.0,
       "trips": 0,
+      "miles": 0.0,
       "tips": 0.0,
       "basefare": 0.0,
       "surge": 0.0,
       "promotions": 0.0,
-      "expenses": 0.0,
+      "charging_cost": 0.0,
       "netPayout": 0.0
     },
     {
       "date": "2026-04-18",
       "earnings": 12.98,
       "trips": 3,
+      "miles": 5.88,
       "tips": 0.0,
       "basefare": 12.36,
       "surge": 0.0,
       "promotions": 0.62,
-      "expenses": 0.0,
-      "netPayout": 12.98
+      "charging_cost": 0.21,
+      "netPayout": 12.77
     },
     {
       "date": "2026-04-17",
       "earnings": 134.57,
-      "trips": 5,
+      "trips": 6,
+      "miles": 60.37,
       "tips": 35.00,
       "basefare": 94.83,
-      "surge": 0.0,
-      "promotions": 4.74,
-      "expenses": 0.0,
-      "netPayout": 134.57
+      "surge": 10.75,
+      "promotions": 3.99,
+      "charging_cost": 2.11,
+      "netPayout": 132.46
     },
     {
       "date": "2026-04-15",
       "earnings": 43.28,
       "trips": 3,
+      "miles": 16.96,
       "tips": 11.00,
       "basefare": 31.30,
       "surge": 0.0,
       "promotions": 0.98,
-      "expenses": 0.0,
-      "netPayout": 43.28
+      "charging_cost": 0.59,
+      "netPayout": 42.69
     }
   ],
   "monthlyTotals": {
     "2026-04": {
       "total_earnings": 349.19,
-      "total_net": 349.19,
-      "total_trips": 31,
-      "total_tips": 70.0
+      "total_net": 343.78,
+      "total_trips": 32,
+      "total_miles": 154.70,
+      "total_tips": 70.0,
+      "total_charging_cost": 5.41
     }
   },
   "metadata": {
     "source": "drivers.uber.com",
     "scrape_method": "manual_entry",
-    "last_scrape_attempt": "2026-04-22T10:45:00Z"
+    "charging_cost_per_mile": 0.035,
+    "last_scrape_attempt": "2026-04-22T11:11:00Z"
   },
-  "last_updated": "2026-04-22T10:45:00Z"
+  "last_updated": "2026-04-22T11:11:00Z"
 }
