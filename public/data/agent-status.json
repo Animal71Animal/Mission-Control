@@ -57,14 +57,14 @@
       "discipline": "Operations",
       "model": "abacus/claude-sonnet-4-6",
       "status": "idle",
-      "totalTasksCompleted": 10,
+      "totalTasksCompleted": 11,
       "totalTasksAssigned": 14,
       "tasksInProgress": 0,
       "currentTask": null,
       "currentTaskStatus": null,
       "currentTaskProgress": 0,
       "blockers": [],
-      "lastUpdated": "2026-04-22T10:12:00Z",
+      "lastUpdated": "2026-04-22T18:20:00Z",
       "nextDeadline": null,
       "availabilityStatus": "available",
       "taskHistory": {
@@ -100,11 +100,14 @@
           {
             "name": "Integrate Uber Earnings into Mission Control",
             "completedAt": "2026-04-22T09:30:00Z"
+          },
+          {
+            "name": "Mission Control GitHub-JSON-Only Refactor",
+            "completedAt": "2026-04-22T18:20:00Z"
           }
         ],
         "inProgress": [],
         "upcoming": [
-          "Refactor agent status to GitHub-only (no SQLite)",
           "Fix agent-status API route",
           "Update agent write flow"
         ]
