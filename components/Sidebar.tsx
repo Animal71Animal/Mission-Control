@@ -212,20 +212,8 @@ export default function Sidebar() {
       >
         {/* Logo */}
         <div style={{ padding: "0 20px 24px", borderBottom: "1px solid var(--border)" }}>
-          <div
-            style={{
-              fontSize: "1.1rem",
-              fontWeight: 700,
-              background: "linear-gradient(135deg, #9b5de5, #c77dff)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            Mission Control
-          </div>
-          <div style={{ fontSize: "0.7rem", color: "var(--muted)", marginTop: 3 }}>
-            WLP · ANIMAL
-          </div>
+          <img src="/logos/animal-wicked-combined-mockup.png" alt="ANIMAL / Wicked Liquid" style={{ maxHeight: "80px", width: "auto", marginBottom: 8 }} />
+          <div style={{ fontSize: "0.7rem", color: "var(--muted)", marginTop: 4 }}>Mission Control</div>
         </div>
 
         {/* Nav */}
