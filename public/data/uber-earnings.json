@@ -1,16 +1,38 @@
 {
-  "dailySummaries": [
+  "weekly_summaries": [
     {
-      "date": "2026-04-21",
-      "earnings": 158.36,
-      "trips": 8,
-      "tips": 24.0,
-      "basefare": 128.22,
-      "surge": 5.25,
-      "promotions": 6.14,
-      "expenses": -1.72,
-      "netPayout": 156.64
+      "period_start": "2026-04-14",
+      "period_end": "2026-04-20",
+      "total_earnings": 86.18,
+      "total_trips": 5,
+      "breakdown": {
+        "base_fare": 69.44,
+        "surge": 3.75,
+        "tips": 9.00,
+        "promotions": 4.22,
+        "expenses": -0.23
+      },
+      "net_payout": 85.95,
+      "scraped_at": "2026-04-22T08:00:00.000Z",
+      "source": "manual"
+    },
+    {
+      "period_start": "2026-04-07",
+      "period_end": "2026-04-13",
+      "total_earnings": 41.28,
+      "total_trips": 3,
+      "breakdown": {
+        "base_fare": 31.88,
+        "surge": 0,
+        "tips": 9.00,
+        "promotions": 0.40,
+        "expenses": 0
+      },
+      "net_payout": 41.28,
+      "scraped_at": "2026-04-22T08:00:00.000Z",
+      "source": "manual"
     }
   ],
-  "lastUpdated": "2026-04-22T08:22:52.124121Z"
+  "last_updated": "2026-04-22T08:00:00.000Z",
+  "scraper_version": "1.0"
 }
