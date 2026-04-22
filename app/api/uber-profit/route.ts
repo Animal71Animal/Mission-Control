@@ -7,7 +7,7 @@ import { NextRequest, NextResponse } from 'next/server';
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GITHUB_REPO = 'Animal71Animal/Mission-Control';
 const GITHUB_BRANCH = 'main';
-const FILE_PATH = 'public/data/uber-profit.json';
+const FILE_PATH = 'public/data/uber-earnings.json';
 const API_URL = `https://api.github.com/repos/${GITHUB_REPO}/contents/${FILE_PATH}`;
 
 function ghHeaders() {
