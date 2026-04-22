@@ -55,7 +55,7 @@
       "discipline": "Operations",
       "model": "abacus/claude-sonnet-4-6",
       "status": "idle",
-      "totalTasksCompleted": 5,
+      "totalTasksCompleted": 6,
       "totalTasksAssigned": 9,
       "tasksInProgress": 0,
       "currentTask": null,
@@ -67,20 +67,36 @@
       "availabilityStatus": "available",
       "taskHistory": {
         "completed": [
-          "Mission Control deployment",
-          "System health check",
-          "Infrastructure repair",
-          "Subagent orchestration setup"
+          {
+            "name": "SQLite Agent Status Architecture",
+            "completedAt": "2026-04-22T06:02:00Z"
+          },
+          {
+            "name": "Fix Mission Control Agent Status Display (URGENT)",
+            "completedAt": "2026-04-22T06:33:00Z"
+          },
+          {
+            "name": "Replace 90-Day Plan with DJ Automation Roadmap",
+            "completedAt": "2026-04-22T06:50:00Z"
+          },
+          {
+            "name": "Update MC Navigation - Rename Tasks to Action Items",
+            "completedAt": "2026-04-22T06:42:00Z"
+          },
+          {
+            "name": "Consolidate Artist Tabs with Dropdown",
+            "completedAt": "2026-04-22T06:54:00Z"
+          },
+          {
+            "name": "UX Fixes - Artist Tab Content + Clickable Task Counts",
+            "completedAt": "2026-04-22T07:01:00Z"
+          }
         ],
-        "inProgress": [
-          "UX Fixes - Artist Tab Content + Clickable Task Counts"
-        ],
+        "inProgress": [],
         "upcoming": [
-          "DJ automation SaaS deploy",
-          "Cron scheduler setup",
-          "Vercel auto-deploy investigation",
-          "Tailscale keepalive fix",
-          "Agent-status API endpoint"
+          "Refactor agent status to GitHub-only (no SQLite)",
+          "Fix agent-status API route",
+          "Update agent write flow"
         ]
       }
     },
