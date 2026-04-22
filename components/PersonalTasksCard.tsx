@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 interface PersonalTask {
   id: string;
@@ -23,6 +24,7 @@ const PRIORITY_COLORS = {
 export function PersonalTasksCard() {
   const [tasks, setTasks] = useState<PersonalTask[]>([]);
   const [loaded, setLoaded] = useState(false);
+  const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
     fetch("/api/personal-tasks")
@@ -47,87 +49,86 @@ export function PersonalTasksCard() {
   if (!loaded) return <div style={{ padding: 20 }}>Loading...</div>;
 
   return (
-    <div
-      style={{
-        background: "var(--card)",
-        border: "1px solid var(--border)",
-        borderRadius: 10,
-        padding: "16px 20px",
-      }}
+    <Link
+      href="/tasks"
+      style={{ textDecoration: "none" }}
     >
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 12 }}>
-        <h3 style={{ margin: 0, fontSize: "1rem", fontWeight: 700, color: "var(--text)" }}>
-          📋 Action Items
-        </h3>
-        <a
-          href="/tasks"
-          style={{
-            fontSize: "0.75rem",
-            color: "#9b5de5",
-            textDecoration: "none",
-            fontWeight: 600,
-          }}
-        >
-          Open →
-        </a>
-      </div>
+      <div
+        style={{
+          background: "var(--card)",
+          border: hovered ? "1px solid #9b5de5" : "1px solid var(--border)",
+          borderRadius: 10,
+          padding: "16px 20px",
+          cursor: "pointer",
+          transition: "all 0.2s",
+          transform: hovered ? "translateY(-2px)" : "translateY(0)",
+        }}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+      >
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 12 }}>
+          <h3 style={{ margin: 0, fontSize: "1rem", fontWeight: 700, color: "var(--text)" }}>
+            📋 Action Items
+          </h3>
+        </div>
 
-      <div style={{ display: "flex", gap: 12, marginBottom: 12 }}>
-        <div style={{ textAlign: "center" }}>
-          <div style={{ fontSize: "1.4rem", fontWeight: 700, color: "var(--text)" }}>{openTasks.length}</div>
-          <div style={{ fontSize: "0.65rem", color: "var(--muted)", textTransform: "uppercase" }}>Open</div>
+        <div style={{ display: "flex", gap: 12, marginBottom: 12 }}>
+          <div style={{ textAlign: "center" }}>
+            <div style={{ fontSize: "1.4rem", fontWeight: 700, color: "var(--text)" }}>{openTasks.length}</div>
+            <div style={{ fontSize: "0.65rem", color: "var(--muted)", textTransform: "uppercase" }}>Open</div>
+          </div>
+          <div style={{ textAlign: "center" }}>
+            <div style={{ fontSize: "1.4rem", fontWeight: 700, color: "#e05c5c" }}>{highPriority.length}</div>
+            <div style={{ fontSize: "0.65rem", color: "var(--muted)", textTransform: "uppercase" }}>High Priority</div>
+          </div>
+          <div style={{ textAlign: "center" }}>
+            <div style={{ fontSize: "1.4rem", fontWeight: 700, color: "#fee440" }}>{dueSoon.length}</div>
+            <div style={{ fontSize: "0.65rem", color: "var(--muted)", textTransform: "uppercase" }}>Due Soon</div>
+          </div>
         </div>
-        <div style={{ textAlign: "center" }}>
-          <div style={{ fontSize: "1.4rem", fontWeight: 700, color: "#e05c5c" }}>{highPriority.length}</div>
-          <div style={{ fontSize: "0.65rem", color: "var(--muted)", textTransform: "uppercase" }}>High Priority</div>
-        </div>
-        <div style={{ textAlign: "center" }}>
-          <div style={{ fontSize: "1.4rem", fontWeight: 700, color: "#fee440" }}>{dueSoon.length}</div>
-          <div style={{ fontSize: "0.65rem", color: "var(--muted)", textTransform: "uppercase" }}>Due Soon</div>
-        </div>
-      </div>
 
-      {openTasks.length === 0 ? (
-        <p style={{ color: "var(--muted)", fontSize: "0.8rem", margin: 0 }}>No tasks yet. Click "Open" to add some.</p>
-      ) : (
-        <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-          {openTasks.slice(0, 3).map((task) => (
-            <div
-              key={task.id}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 8,
-                fontSize: "0.8rem",
-                color: "var(--text)",
-              }}
-            >
-              <span
+        {openTasks.length === 0 ? (
+          <p style={{ color: "var(--muted)", fontSize: "0.8rem", margin: 0 }}>No tasks yet. Click to add some.</p>
+        ) : (
+          <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+            {openTasks.slice(0, 3).map((task) => (
+              <div
+                key={task.id}
                 style={{
-                  width: 6,
-                  height: 6,
-                  borderRadius: "50%",
-                  background: PRIORITY_COLORS[task.priority],
-                  flexShrink: 0,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 8,
+                  fontSize: "0.8rem",
+                  color: "var(--text)",
                 }}
-              />
-              <span style={{ flex: 1, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
-                {task.title}
-              </span>
-              {task.dueDate && (
-                <span style={{ fontSize: "0.7rem", color: "var(--muted)" }}>
-                  {new Date(task.dueDate).toLocaleDateString()}
+              >
+                <span
+                  style={{
+                    width: 6,
+                    height: 6,
+                    borderRadius: "50%",
+                    background: PRIORITY_COLORS[task.priority],
+                    flexShrink: 0,
+                  }}
+                />
+                <span style={{ flex: 1, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                  {task.title}
                 </span>
-              )}
-            </div>
-          ))}
-          {openTasks.length > 3 && (
-            <p style={{ color: "var(--muted)", fontSize: "0.75rem", margin: "4px 0 0" }}>
-              +{openTasks.length - 3} more...
-            </p>
-          )}
-        </div>
-      )}
-    </div>
+                {task.dueDate && (
+                  <span style={{ fontSize: "0.7rem", color: "var(--muted)" }}>
+                    {new Date(task.dueDate).toLocaleDateString()}
+                  </span>
+                )}
+              </div>
+            ))}
+            {openTasks.length > 3 && (
+              <p style={{ color: "var(--muted)", fontSize: "0.75rem", margin: "4px 0 0" }}>
+                +{openTasks.length - 3} more...
+              </p>
+            )}
+          </div>
+        )}
+      </div>
+    </Link>
   );
 }
