@@ -1,0 +1,56 @@
+{
+  "status": "Software in Dev",
+  "subtitle": "First MVP delivered to Eric by May 31, 2026. Testing June–July. ED Expo August premiere.",
+  "revenueTarget": "10 clubs × $200/month = $2K MRR",
+  "milestones": [
+    {
+      "emoji": "🚀",
+      "date": "May 31, 2026",
+      "title": "First MVP Delivery",
+      "desc": "First minimum viable product delivered to Eric from Tommy. Ready for live testing at Spearmint Rhino."
+    },
+    {
+      "emoji": "🔬",
+      "date": "June 1–30",
+      "title": "Testing Phase 1 (Spearmint Rhino)",
+      "desc": "Live testing with Eric running the room at SRB. Real-world validation, bug fixes, and workflow refinements based on actual venue feedback."
+    },
+    {
+      "emoji": "🧪",
+      "date": "July 1–31",
+      "title": "Testing Phase 2 (Extended)",
+      "desc": "Continued live testing and polish. Edge case handling, feature refinement, and pre-launch hardening. Product stabilization."
+    },
+    {
+      "emoji": "🎪",
+      "date": "August 2026",
+      "title": "ED Expo Premiere (Las Vegas Convention Center)",
+      "desc": "Finished, production-ready software premieres at DJ booth at the ED Expo in Las Vegas. Live demo to industry attendees. 10-club rollout outreach begins."
+    }
+  ],
+  "revenueProjection": [
+    {
+      "phase": "Post-Expo (Sept 2026)",
+      "clubs": 10,
+      "mrr": "$2,000"
+    },
+    {
+      "phase": "Growth (Q4 2026)",
+      "clubs": 25,
+      "mrr": "$5,000"
+    },
+    {
+      "phase": "Scale (2027)",
+      "clubs": 50,
+      "mrr": "$10,000+"
+    }
+  ],
+  "currentStatus": [
+    "🔨 Software in development with Tommy",
+    "✅ Concept validated at Spearmint Rhino",
+    "📅 MVP delivery: May 31, 2026",
+    "🧪 Testing: June – July 2026 (live at SRB)",
+    "🎯 Target: Premier at ED Expo in August 2026"
+  ],
+  "lastUpdated": "2026-04-22T09:55:00Z"
+}
