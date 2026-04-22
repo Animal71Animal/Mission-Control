@@ -344,7 +344,7 @@ const businessDocs: DocItem[] = [
   { emoji: "🎭", name: "DOE Pitch Deck", desc: "Director of Entertainment — live pitch site", href: "https://my-nvj2gsssh-ericmills71-8100s-projects.vercel.app" },
   { emoji: "🏗️", name: "Org Structure", desc: "Entity, divisions, AI roster, decision flow", href: "/wlp-org" },
   { emoji: "💰", name: "Revenue Tracker", desc: "12-month tracker, P&L, KPIs, per-gig log", href: "/wlp-revenue" },
-  { emoji: "🗺️", name: "DJ Automation Roadmap", desc: "May–Jul 2026 · 4 milestones · $2K MRR target", href: "/wlp-dj-roadmap" },
+  { emoji: "🗺️", name: "DJ Automation Roadmap", desc: "May–Aug 2026 · MVP May 31 · Testing June–July · ED Expo August · $100K MRR (6-month)", href: "/wlp-dj-roadmap" },
   { emoji: "🎵", name: "Release Pipeline", desc: "12-week checklist, distro, sync, calendar", href: "/wlp-release" },
   { emoji: "🤖", name: "AI Workflow", desc: "Agent stack, tools, 25-prompt library", href: "/wlp-ai" },
   { emoji: "📣", name: "Marketing Plan", desc: "Brand USP, social, PR, ads, quick wins", href: "/wlp-marketing" },
@@ -355,7 +355,7 @@ const djSoftwareDocs: DocItem[] = [
   { emoji: "📋", name: "Product Brief", desc: "Full product spec, features, roadmap", href: "/wlp-product" },
   { emoji: "⚔️", name: "Competitive Positioning", desc: "vs. CoverJock, BoothPoint & others", href: "/wlp-competitive" },
   { emoji: "💼", name: "Investor Pitch", desc: "Seed round deck — formatted markdown", href: "/wlp-investor" },
-  { emoji: "🗺️", name: "DJ Automation Roadmap", desc: "May–Jul 2026 · 4 milestones · $2K MRR target", href: "/wlp-dj-roadmap" },
+  { emoji: "🗺️", name: "DJ Automation Roadmap", desc: "May–Aug 2026 · MVP May 31 · Testing June–July · ED Expo August · $100K MRR (6-month)", href: "/wlp-dj-roadmap" },
 ];
 
 const djAutomationFeatures = [
@@ -787,19 +787,19 @@ export default function WLPDashboardPage() {
                 marginLeft: 6,
               }}
             >
-              May – July 2026
+              May – August 2026
             </span>
           </div>
           <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginTop: 4 }}>
-            Demo-ready · May 31 kickoff with Tommy · Launch July 31
+            Software in Dev · MVP May 31 · Testing June–July · ED Expo August premiere
           </div>
         </div>
         <div style={{ textAlign: "right" }}>
           <div style={{ fontSize: "1.4rem", fontWeight: 700, color: "#2cb67d", lineHeight: 1 }}>
-            $2K MRR
+            $100K MRR
           </div>
           <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 4 }}>
-            10 clubs × $200/mo target
+            50 clubs × $2,000/mo (6-month target)
           </div>
         </div>
       </div>
