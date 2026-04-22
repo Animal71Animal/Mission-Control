@@ -27,26 +27,26 @@ export function PersonalTasksCard() {
   const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
-    // Fetch both personal tasks and SRB tasks
+    // Fetch both personal tasks and SRB todo tasks
     Promise.all([
       fetch("/api/personal-tasks").then((r) => r.json()).catch(() => []),
-      fetch("/api/srb-tips").then((r) => r.json()).catch(() => ({}))
-    ]).then(([personalTasks, srbData]) => {
-      // Combine personal tasks with SRB tasks (if available)
+      fetch("/api/srb-todo").then((r) => r.json()).catch(() => [])
+    ]).then(([personalTasks, srbTasks]) => {
+      // Combine personal tasks with SRB tasks
       const allTasks = Array.isArray(personalTasks) ? [...personalTasks] : [];
       
-      // Add SRB todos if they exist in the SRB data
-      if (srbData?.todos && Array.isArray(srbData.todos)) {
-        const srbTasks = srbData.todos.map((todo: any) => ({
+      // Add SRB todos
+      if (Array.isArray(srbTasks)) {
+        const formattedSrbTasks = srbTasks.map((todo: any) => ({
           id: todo.id || Math.random().toString(),
-          title: todo.task || todo.title,
+          title: todo.text || todo.title || todo.task,
           category: "SRB",
           priority: (todo.priority as "high" | "medium" | "low") || "medium",
-          dueDate: todo.due_date || todo.dueDate,
+          dueDate: todo.due_date || todo.dueDate || todo.due,
           completed: todo.completed || false,
-          createdAt: todo.created_at || new Date().toISOString(),
+          createdAt: todo.created_at || todo.createdAt || new Date().toISOString(),
         }));
-        allTasks.push(...srbTasks);
+        allTasks.push(...formattedSrbTasks);
       }
       
       setTasks(allTasks);
