@@ -6,6 +6,13 @@ import AnimatedBackground from "@/components/AnimatedBackground";
 export const metadata: Metadata = {
   title: "Mission Control — WLP",
   description: "ANIMAL's productivity hub",
+  manifest: "/manifest.json",
+  themeColor: "#9b5de5",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "Mission Control",
+  },
 };
 
 export default function RootLayout({
