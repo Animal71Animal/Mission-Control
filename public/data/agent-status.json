@@ -56,17 +56,17 @@
       "name": "Clawdia",
       "discipline": "Operations",
       "model": "abacus/claude-sonnet-4-6",
-      "status": "in-progress",
-      "totalTasksCompleted": 7,
+      "status": "idle",
+      "totalTasksCompleted": 8,
       "totalTasksAssigned": 13,
       "tasksInProgress": 0,
-      "currentTask": "Build Playwright Scraper for Uber Dashboard",
-      "currentTaskStatus": "in-progress",
+      "currentTask": null,
+      "currentTaskStatus": null,
       "currentTaskProgress": 0,
       "blockers": [],
-      "lastUpdated": "2026-04-22T08:00:16.565202Z",
+      "lastUpdated": "2026-04-22T08:23:04.090808Z",
       "nextDeadline": null,
-      "availabilityStatus": "in-progress",
+      "availabilityStatus": "available",
       "taskHistory": {
         "completed": [
           {
@@ -229,11 +229,11 @@
     }
   },
   "teamStats": {
-    "totalTasksCompleted": 18,
+    "totalTasksCompleted": 19,
     "totalTasksAssigned": 23,
-    "tasksInProgress": 1,
+    "tasksInProgress": 0,
     "blockedTasks": 2,
     "teamAvailability": "medium",
-    "lastTeamUpdate": "2026-04-22T08:00:16.581279Z"
+    "lastTeamUpdate": "2026-04-22T08:23:04.099621Z"
   }
 }
