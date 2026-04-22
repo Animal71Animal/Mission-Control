@@ -2,6 +2,12 @@
 
 import { useEffect, useState } from "react";
 
+interface TaskHistory {
+  completed: string[];
+  inProgress: string[];
+  upcoming: string[];
+}
+
 interface AgentData {
   name: string;
   discipline: string;
@@ -17,6 +23,7 @@ interface AgentData {
   lastUpdated: string;
   nextDeadline: string | null;
   availabilityStatus: "available" | "blocked" | "busy";
+  taskHistory?: TaskHistory;
 }
 
 interface TeamStats {
@@ -60,6 +67,7 @@ export default function AIOfficePage() {
   const [time, setTime] = useState(new Date());
   const [agentData, setAgentData] = useState<AgentStatusData | null>(null);
   const [loading, setLoading] = useState(true);
+  const [selectedAgent, setSelectedAgent] = useState<{ key: string; agent: AgentData } | null>(null);
 
   // Fetch agent status data
   useEffect(() => {
@@ -466,8 +474,12 @@ export default function AIOfficePage() {
 
                   {/* Task Count */}
                   <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8, marginBottom: 12 }}>
-                    <div style={{ textAlign: "center", padding: "8px 4px", background: "rgba(155,93,229,0.08)", borderRadius: 6 }}>
-                      <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--accent2)" }}>
+                    <div
+                      onClick={() => setSelectedAgent({ key, agent })}
+                      style={{ textAlign: "center", padding: "8px 4px", background: "rgba(155,93,229,0.08)", borderRadius: 6, cursor: "pointer" }}
+                      title="Click to view task history"
+                    >
+                      <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "#60a5fa", textDecoration: "underline" }}>
                         {agent.totalTasksCompleted}/{agent.totalTasksAssigned}
                       </div>
                       <div style={{ fontSize: "0.65rem", color: "var(--muted)", textTransform: "uppercase" }}>Tasks</div>
@@ -564,6 +576,109 @@ export default function AIOfficePage() {
           </div>
         )}
       </div>
+
+      {/* Task History Modal */}
+      {selectedAgent && (
+        <div
+          onClick={() => setSelectedAgent(null)}
+          style={{
+            position: "fixed",
+            inset: 0,
+            background: "rgba(0,0,0,0.7)",
+            zIndex: 1000,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: 16,
+          }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              background: "var(--card)",
+              border: "1px solid var(--border)",
+              borderLeft: `4px solid ${AGENT_COLORS[selectedAgent.key] || "#9b5de5"}`,
+              borderRadius: 12,
+              padding: 24,
+              maxWidth: 520,
+              width: "100%",
+              maxHeight: "80vh",
+              overflowY: "auto",
+            }}
+          >
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 20 }}>
+              <div>
+                <h2 style={{ margin: 0, fontSize: "1.2rem", fontWeight: 700, color: "var(--text)" }}>
+                  {selectedAgent.agent.name} — Task History
+                </h2>
+                <div style={{ fontSize: "0.8rem", color: AGENT_COLORS[selectedAgent.key] || "#9b5de5", marginTop: 2 }}>
+                  {selectedAgent.agent.discipline}
+                </div>
+              </div>
+              <button
+                onClick={() => setSelectedAgent(null)}
+                style={{
+                  background: "transparent",
+                  border: "none",
+                  color: "var(--muted)",
+                  fontSize: "1.4rem",
+                  cursor: "pointer",
+                  lineHeight: 1,
+                }}
+              >
+                ×
+              </button>
+            </div>
+
+            {/* Summary */}
+            <div style={{ display: "flex", gap: 12, marginBottom: 20 }}>
+              <div style={{ flex: 1, textAlign: "center", padding: 12, background: "rgba(0,200,124,0.1)", borderRadius: 8 }}>
+                <div style={{ fontSize: "1.4rem", fontWeight: 700, color: "#00c87c" }}>{selectedAgent.agent.totalTasksCompleted}</div>
+                <div style={{ fontSize: "0.7rem", color: "var(--muted)", textTransform: "uppercase" }}>Completed</div>
+              </div>
+              <div style={{ flex: 1, textAlign: "center", padding: 12, background: "rgba(255,193,7,0.1)", borderRadius: 8 }}>
+                <div style={{ fontSize: "1.4rem", fontWeight: 700, color: "#ffc107" }}>{selectedAgent.agent.tasksInProgress}</div>
+                <div style={{ fontSize: "0.7rem", color: "var(--muted)", textTransform: "uppercase" }}>In Progress</div>
+              </div>
+              <div style={{ flex: 1, textAlign: "center", padding: 12, background: "rgba(155,93,229,0.1)", borderRadius: 8 }}>
+                <div style={{ fontSize: "1.4rem", fontWeight: 700, color: "var(--accent2)" }}>{selectedAgent.agent.totalTasksAssigned}</div>
+                <div style={{ fontSize: "0.7rem", color: "var(--muted)", textTransform: "uppercase" }}>Total Assigned</div>
+              </div>
+            </div>
+
+            {/* Task Lists */}
+            {["inProgress", "completed", "upcoming"].map((section) => {
+              const labels: Record<string, { label: string; emoji: string; color: string }> = {
+                inProgress: { label: "In Progress", emoji: "🔄", color: "#ffc107" },
+                completed: { label: "Completed", emoji: "✅", color: "#00c87c" },
+                upcoming: { label: "Upcoming / Assigned", emoji: "📋", color: "#60a5fa" },
+              };
+              const tasks = selectedAgent.agent.taskHistory?.[section as keyof TaskHistory] || [];
+              const { label, emoji, color } = labels[section];
+              return (
+                <div key={section} style={{ marginBottom: 16 }}>
+                  <div style={{ fontSize: "0.85rem", fontWeight: 600, color, marginBottom: 8 }}>
+                    {emoji} {label} ({tasks.length})
+                  </div>
+                  {tasks.length === 0 ? (
+                    <div style={{ fontSize: "0.8rem", color: "var(--muted)", fontStyle: "italic", paddingLeft: 8 }}>None</div>
+                  ) : (
+                    <ul style={{ margin: 0, paddingLeft: 20 }}>
+                      {tasks.map((task: string, i: number) => (
+                        <li key={i} style={{ fontSize: "0.8rem", color: "var(--text)", marginBottom: 4 }}>{task}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              );
+            })}
+
+            <div style={{ fontSize: "0.7rem", color: "var(--muted)", marginTop: 16, paddingTop: 12, borderTop: "1px solid var(--border)", fontStyle: "italic" }}>
+              Last updated: {new Date(selectedAgent.agent.lastUpdated).toLocaleString()}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

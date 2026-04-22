@@ -45,29 +45,49 @@ function NavItem({ item, pathname, onClose, depth = 0 }: { item: Module; pathnam
   if (hasChildren) {
     return (
       <div>
-        <button
-          onClick={() => setOpen((o) => !o)}
+        <div
           style={{
             display: "flex",
             alignItems: "center",
-            gap: 10,
             width: "100%",
-            padding: `9px 20px 9px ${20 + indent}px`,
-            fontSize: "0.875rem",
             color: childActive || active ? "var(--accent2)" : "var(--text)",
             background: childActive || active ? "rgba(155,93,229,0.12)" : "transparent",
             borderLeft: childActive || active ? "2px solid var(--accent)" : "2px solid transparent",
-            textDecoration: "none",
             transition: "all 0.15s",
-            border: "none",
-            cursor: "pointer",
-            textAlign: "left",
           }}
         >
-          <span style={{ fontSize: "1rem" }}>{item.icon}</span>
-          <span style={{ flex: 1 }}>{item.title}</span>
-          <ChevronIcon expanded={open} />
-        </button>
+          <Link
+            href={item.href}
+            onClick={onClose}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 10,
+              flex: 1,
+              padding: `9px 8px 9px ${20 + indent}px`,
+              fontSize: "0.875rem",
+              color: "inherit",
+              textDecoration: "none",
+            }}
+          >
+            <span style={{ fontSize: "1rem" }}>{item.icon}</span>
+            <span style={{ flex: 1 }}>{item.title}</span>
+          </Link>
+          <button
+            onClick={() => setOpen((o) => !o)}
+            style={{
+              background: "transparent",
+              border: "none",
+              cursor: "pointer",
+              color: "inherit",
+              padding: "9px 14px 9px 4px",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <ChevronIcon expanded={open} />
+          </button>
+        </div>
         <div
           style={{
             maxHeight: open ? "400px" : "0",

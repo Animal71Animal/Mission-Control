@@ -14,7 +14,16 @@
       "blockers": [],
       "lastUpdated": "2026-04-22T04:30:00Z",
       "nextDeadline": null,
-      "availabilityStatus": "available"
+      "availabilityStatus": "available",
+      "taskHistory": {
+        "completed": [
+          "Brand positioning doc",
+          "AI artist content pillars",
+          "WLP founder story narrative"
+        ],
+        "inProgress": [],
+        "upcoming": []
+      }
     },
     "homard": {
       "name": "Homard",
@@ -30,7 +39,16 @@
       "blockers": [],
       "lastUpdated": "2026-04-22T04:30:00Z",
       "nextDeadline": "2026-04-28T23:59:59Z",
-      "availabilityStatus": "available"
+      "availabilityStatus": "available",
+      "taskHistory": {
+        "completed": [
+          "SRB tips data pipeline setup"
+        ],
+        "inProgress": [
+          "SRB Tips - Sole Responsibility"
+        ],
+        "upcoming": []
+      }
     },
     "clawdia": {
       "name": "Clawdia",
@@ -46,7 +64,25 @@
       "blockers": [],
       "lastUpdated": "2026-04-22T06:57:59.134342Z",
       "nextDeadline": null,
-      "availabilityStatus": "in-progress"
+      "availabilityStatus": "in-progress",
+      "taskHistory": {
+        "completed": [
+          "Mission Control deployment",
+          "System health check",
+          "Infrastructure repair",
+          "Subagent orchestration setup"
+        ],
+        "inProgress": [
+          "UX Fixes - Artist Tab Content + Clickable Task Counts"
+        ],
+        "upcoming": [
+          "DJ automation SaaS deploy",
+          "Cron scheduler setup",
+          "Vercel auto-deploy investigation",
+          "Tailscale keepalive fix",
+          "Agent-status API endpoint"
+        ]
+      }
     },
     "shelly": {
       "name": "Shelly",
@@ -62,7 +98,14 @@
       "blockers": [],
       "lastUpdated": "2026-04-22T04:30:00Z",
       "nextDeadline": null,
-      "availabilityStatus": "available"
+      "availabilityStatus": "available",
+      "taskHistory": {
+        "completed": [
+          "Artist strategy plans (Kade, Madison, Aria)"
+        ],
+        "inProgress": [],
+        "upcoming": []
+      }
     },
     "rockwell": {
       "name": "Rockwell",
@@ -78,7 +121,12 @@
       "blockers": [],
       "lastUpdated": "2026-04-22T04:30:00Z",
       "nextDeadline": null,
-      "availabilityStatus": "available"
+      "availabilityStatus": "available",
+      "taskHistory": {
+        "completed": [],
+        "inProgress": [],
+        "upcoming": []
+      }
     },
     "barnaby": {
       "name": "Barnaby",
@@ -96,7 +144,17 @@
       ],
       "lastUpdated": "2026-04-22T06:00:17.629559Z",
       "nextDeadline": null,
-      "availabilityStatus": "blocked"
+      "availabilityStatus": "blocked",
+      "taskHistory": {
+        "completed": [
+          "DOE pitch deck",
+          "Partnership outreach"
+        ],
+        "inProgress": [
+          "DOE Partnership"
+        ],
+        "upcoming": []
+      }
     },
     "sebastian": {
       "name": "Sebastian",
@@ -114,7 +172,12 @@
       ],
       "lastUpdated": "2026-04-22T04:30:00Z",
       "nextDeadline": null,
-      "availabilityStatus": "blocked"
+      "availabilityStatus": "blocked",
+      "taskHistory": {
+        "completed": [],
+        "inProgress": [],
+        "upcoming": []
+      }
     },
     "coral": {
       "name": "Coral",
@@ -130,7 +193,12 @@
       "blockers": [],
       "lastUpdated": "2026-04-22T05:53:25.841654Z",
       "nextDeadline": null,
-      "availabilityStatus": "available"
+      "availabilityStatus": "available",
+      "taskHistory": {
+        "completed": [],
+        "inProgress": [],
+        "upcoming": []
+      }
     }
   },
   "teamStats": {
