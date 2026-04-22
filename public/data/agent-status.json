@@ -184,7 +184,7 @@
       "discipline": "R&D/Innovation",
       "model": "abacus/claude-opus-4-6",
       "status": "idle",
-      "totalTasksCompleted": 2,
+      "totalTasksCompleted": 1,
       "totalTasksAssigned": 1,
       "tasksInProgress": 0,
       "currentTask": null,
@@ -195,7 +195,12 @@
       "nextDeadline": null,
       "availabilityStatus": "available",
       "taskHistory": {
-        "completed": [],
+        "completed": [
+          {
+            "name": "Suno v5.5 Deep Dive + Optimization",
+            "completedAt": "2026-04-22T05:47:00Z"
+          }
+        ],
         "inProgress": [],
         "upcoming": []
       }
