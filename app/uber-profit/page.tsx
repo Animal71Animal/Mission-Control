@@ -35,6 +35,18 @@ interface Expense {
   notes?: string;
 }
 
+interface DailyEarning {
+  date: string;
+  earnings: number;
+  trips: number;
+  tips: number;
+  basefare: number;
+  surge: number;
+  promotions: number;
+  expenses: number;
+  netPayout: number;
+}
+
 interface UberData {
   uber_shifts: Shift[];
   expenses: Expense[];
@@ -44,35 +56,28 @@ interface UberData {
 
 export default function UberProfitPage() {
   const [data, setData] = useState<UberData | null>(null);
+  const [earnings, setEarnings] = useState<DailyEarning[]>([]);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    fetch("/api/uber-profit")
-      .then((r) => r.json())
-      .then((d) => { setData(d); setLoaded(true); })
-      .catch(() => setLoaded(true));
+    Promise.all([
+      fetch("/api/uber-profit").then((r) => r.json()).catch(() => ({ uber_shifts: [], expenses: [] })),
+      fetch("/data/uber-earnings.json").then((r) => r.json()).catch(() => ({ dailySummaries: [] }))
+    ]).then(([profitData, earningsData]) => {
+      setData(profitData);
+      setEarnings(earningsData.dailySummaries || []);
+      setLoaded(true);
+    }).catch(() => setLoaded(true));
   }, []);
 
   if (!loaded) return <p style={{ color: "var(--muted)" }}>Loading...</p>;
-  if (!data || data.uber_shifts.length === 0) {
-    return (
-      <div>
-        <h1 style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)", marginBottom: 20 }}>🚗 Uber Profit Tracking</h1>
-        <p style={{ color: "var(--muted)" }}>No shifts logged yet. Start with: `Uber start [odometer]`</p>
-      </div>
-    );
-  }
 
-  const shifts = data.uber_shifts;
-  const monthly = data.monthly_summary;
-  const latestMonth = Object.keys(monthly).sort().reverse()[0];
-  const currentMonthData = monthly[latestMonth] || {};
-
-  const totalGross = shifts.reduce((sum, s) => sum + s.gross_earnings, 0);
-  const totalCharging = shifts.reduce((sum, s) => sum + (s.proportional_charging_cost || 0), 0);
-  const totalNet = shifts.reduce((sum, s) => sum + s.net_profit, 0);
-  const totalMiles = shifts.reduce((sum, s) => sum + s.miles_driven, 0);
-  const avgHourly = shifts.length > 0 ? shifts.reduce((sum, s) => sum + s.hourly_rate, 0) / shifts.length : 0;
+  // Calculate earnings stats
+  const totalEarnings = earnings.reduce((sum, e) => sum + e.earnings, 0);
+  const totalTrips = earnings.reduce((sum, e) => sum + e.trips, 0);
+  const totalTips = earnings.reduce((sum, e) => sum + e.tips, 0);
+  const avgPerTrip = totalTrips > 0 ? totalEarnings / totalTrips : 0;
+  const earningsLastUpdated = earnings.length > 0 ? earnings[0].date : null;
 
   return (
     <div>
@@ -82,103 +87,125 @@ export default function UberProfitPage() {
         <p style={{ color: "var(--muted)", marginTop: 4, fontSize: "0.85rem" }}>Earnings minus proportional Tesla charging costs</p>
       </div>
 
-      {/* All-Time Stats */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 12, marginBottom: 24 }}>
-        {[
-          { label: "Total Gross", value: `$${totalGross.toFixed(2)}`, color: "#00f5d4" },
-          { label: "Charging Cost", value: `$${totalCharging.toFixed(2)}`, color: "#f15bb5" },
-          { label: "Total Net", value: `$${totalNet.toFixed(2)}`, color: "#00c87c" },
-          { label: "Miles Driven", value: `${totalMiles.toFixed(0)} mi`, color: "#fee440" },
-          { label: "Avg Hourly", value: `$${avgHourly.toFixed(2)}/hr`, color: "#00bbf9" },
-          { label: "Shifts", value: shifts.length, color: "#9b5de5" },
-        ].map((s) => (
-          <div key={s.label} style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 10, padding: 16 }}>
-            <div style={{ fontSize: "1.3rem", fontWeight: 700, color: s.color }}>{s.value}</div>
-            <div style={{ fontSize: "0.7rem", color: "var(--muted)", marginTop: 6, textTransform: "uppercase", letterSpacing: "0.05em" }}>{s.label}</div>
-          </div>
-        ))}
-      </div>
-
-      {/* Monthly Breakdown */}
-      {latestMonth && (
-        <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12, padding: 20, marginBottom: 24 }}>
-          <h2 style={{ fontSize: "1rem", fontWeight: 700, margin: "0 0 16px", color: "var(--text)" }}>📊 {latestMonth}</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))", gap: 12 }}>
-            {[
-              { label: "Gross", value: `$${currentMonthData.total_gross?.toFixed(2) || "0.00"}` },
-              { label: "Charging", value: `$${currentMonthData.total_charges?.toFixed(2) || "0.00"}` },
-              { label: "Net", value: `$${currentMonthData.total_net?.toFixed(2) || "0.00"}` },
-              { label: "Shifts", value: currentMonthData.shifts || 0 },
-              { label: "Miles", value: `${currentMonthData.total_miles || 0}` },
-              { label: "Avg Rate", value: `$${currentMonthData.avg_hourly_rate?.toFixed(2) || "0.00"}/hr` },
-            ].map((s) => (
-              <div key={s.label} style={{ textAlign: "center" }}>
-                <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--text)" }}>{s.value}</div>
-                <div style={{ fontSize: "0.7rem", color: "var(--muted)", marginTop: 4 }}>{s.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Recent Shifts */}
-      <div>
-        <h2 style={{ fontSize: "1rem", fontWeight: 700, margin: "0 0 16px", color: "var(--text)" }}>📋 Recent Shifts</h2>
-        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-          {shifts.slice().reverse().map((shift) => (
-            <div key={shift.id} style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 10, padding: 16 }}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10 }}>
-                <div>
-                  <div style={{ fontWeight: 700, fontSize: "0.95rem", color: "var(--text)" }}>{shift.date} • {shift.start_time}-{shift.end_time}</div>
-                  <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginTop: 2 }}>{shift.duration_minutes}m • {shift.miles_driven}mi • Odometer {shift.start_odometer}→{shift.end_odometer}</div>
+      {/* Daily Earnings Summary (from scraper) */}
+      {earnings.length > 0 && (
+        <>
+          <div style={{ marginBottom: 24 }}>
+            <h2 style={{ fontSize: "1.1rem", fontWeight: 700, margin: "0 0 16px", color: "var(--text)" }}>💰 Daily Earnings (Scraped from Dashboard)</h2>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: 12, marginBottom: 16 }}>
+              {[
+                { label: "Total Earnings", value: `$${totalEarnings.toFixed(2)}`, color: "#00f5d4" },
+                { label: "Total Trips", value: totalTrips, color: "#00bbf9" },
+                { label: "Total Tips", value: `$${totalTips.toFixed(2)}`, color: "#fee440" },
+                { label: "Avg per Trip", value: `$${avgPerTrip.toFixed(2)}`, color: "#9b5de5" },
+              ].map((s) => (
+                <div key={s.label} style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 10, padding: 14 }}>
+                  <div style={{ fontSize: "1.2rem", fontWeight: 700, color: s.color }}>{s.value}</div>
+                  <div style={{ fontSize: "0.7rem", color: "var(--muted)", marginTop: 6, textTransform: "uppercase", letterSpacing: "0.05em" }}>{s.label}</div>
                 </div>
-                <div style={{ textAlign: "right" }}>
-                  <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "#00c87c" }}>${shift.net_profit.toFixed(2)}</div>
-                  <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginTop: 2 }}>${shift.hourly_rate.toFixed(2)}/hr</div>
-                </div>
-              </div>
-              <div style={{ display: "flex", gap: 16, fontSize: "0.8rem", color: "var(--muted)" }}>
-                <span>Gross: <strong style={{ color: "var(--text)" }}>${shift.gross_earnings.toFixed(2)}</strong></span>
-                {shift.proportional_charging_cost && (
-                  <span>Charging: <strong style={{ color: "#f15bb5" }}>-${shift.proportional_charging_cost.toFixed(2)}</strong></span>
-                )}
-              </div>
-              {shift.notes && <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 8, fontStyle: "italic" }}>📝 {shift.notes}</div>}
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
 
-      {/* Charging Sessions */}
-      {data.expenses && data.expenses.filter(e => e.type === 'charging').length > 0 && (
-        <div style={{ marginTop: 28 }}>
-          <h2 style={{ fontSize: "1rem", fontWeight: 700, margin: "0 0 16px", color: "var(--text)" }}>⚡ Charging Sessions</h2>
-          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-            {data.expenses.filter(e => e.type === 'charging').slice().reverse().map((exp, i) => (
-              <div key={i} style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 10, padding: 14, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                <div>
-                  <div style={{ fontWeight: 600, fontSize: "0.9rem", color: "var(--text)" }}>{exp.date}</div>
-                  <div style={{ fontSize: "0.78rem", color: "var(--muted)", marginTop: 2 }}>
-                    {exp.kwh?.toFixed(2)} kWh @ ${exp.rate_per_kwh}/kWh • {exp.duration_minutes}min
-                  </div>
-                  {exp.location && <div style={{ fontSize: "0.72rem", color: "var(--muted)", marginTop: 2 }}>📍 {exp.location}</div>}
-                  <div style={{ fontSize: "0.72rem", marginTop: 4, color: exp.shift_id ? '#00c87c' : '#fee440' }}>
-                    {exp.shift_id ? `✅ Applied to ${exp.shift_id}` : '⏳ Unattributed — will deduct from next shift'}
-                  </div>
-                </div>
-                <div style={{ textAlign: "right" }}>
-                  <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "#f15bb5" }}>-${exp.amount.toFixed(2)}</div>
-                </div>
+            {/* Daily Earnings Table */}
+            <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
+              <div style={{ overflowX: "auto" }}>
+                <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.85rem" }}>
+                  <thead>
+                    <tr style={{ background: "rgba(0,0,0,0.1)", borderBottom: "1px solid var(--border)" }}>
+                      <th style={{ padding: "12px 16px", textAlign: "left", fontWeight: 700, color: "var(--text)" }}>Date</th>
+                      <th style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, color: "var(--text)" }}>Earnings</th>
+                      <th style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, color: "var(--text)" }}>Trips</th>
+                      <th style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, color: "var(--text)" }}>Tips</th>
+                      <th style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, color: "var(--text)" }}>Breakdown</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {earnings.map((e, i) => (
+                      <tr key={i} style={{ borderBottom: "1px solid var(--border)" }}>
+                        <td style={{ padding: "12px 16px", color: "var(--text)" }}>{e.date}</td>
+                        <td style={{ padding: "12px 16px", textAlign: "right", color: "#00f5d4", fontWeight: 600 }}>${e.earnings.toFixed(2)}</td>
+                        <td style={{ padding: "12px 16px", textAlign: "right", color: "var(--text)" }}>{e.trips}</td>
+                        <td style={{ padding: "12px 16px", textAlign: "right", color: "#fee440", fontWeight: 600 }}>${e.tips.toFixed(2)}</td>
+                        <td style={{ padding: "12px 16px", textAlign: "right", fontSize: "0.75rem", color: "var(--muted)" }}>
+                          Base: ${e.basefare.toFixed(2)} | Surge: ${e.surge.toFixed(2)} | Promo: ${e.promotions.toFixed(2)}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
-            ))}
+              {earnings.length > 0 && (
+                <div style={{ padding: "12px 16px", background: "rgba(0,0,0,0.05)", borderTop: "1px solid var(--border)", fontSize: "0.8rem", color: "var(--muted)" }}>
+                  ✅ Last updated: {earningsLastUpdated}
+                </div>
+              )}
+            </div>
           </div>
-        </div>
+        </>
       )}
 
-      {/* Footer */}
+      {/* Shift Tracking Section */}
+      {data?.uber_shifts && data.uber_shifts.length > 0 && (
+        <>
+          <h2 style={{ fontSize: "1.1rem", fontWeight: 700, margin: "24px 0 16px", color: "var(--text)" }}>📊 Shift Tracking (Manual)</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 12, marginBottom: 24 }}>
+            {(() => {
+              const shifts = data.uber_shifts;
+              const totalGross = shifts.reduce((sum, s) => sum + s.gross_earnings, 0);
+              const totalCharging = shifts.reduce((sum, s) => sum + (s.proportional_charging_cost || 0), 0);
+              const totalNet = shifts.reduce((sum, s) => sum + s.net_profit, 0);
+              const totalMiles = shifts.reduce((sum, s) => sum + s.miles_driven, 0);
+              const avgHourly = shifts.length > 0 ? shifts.reduce((sum, s) => sum + s.hourly_rate, 0) / shifts.length : 0;
+
+              return [
+                { label: "Total Gross", value: `$${totalGross.toFixed(2)}`, color: "#00f5d4" },
+                { label: "Charging Cost", value: `$${totalCharging.toFixed(2)}`, color: "#f15bb5" },
+                { label: "Total Net", value: `$${totalNet.toFixed(2)}`, color: "#00c87c" },
+                { label: "Miles Driven", value: `${totalMiles.toFixed(0)} mi`, color: "#fee440" },
+                { label: "Avg Hourly", value: `$${avgHourly.toFixed(2)}/hr`, color: "#00bbf9" },
+                { label: "Shifts", value: shifts.length, color: "#9b5de5" },
+              ].map((s) => (
+                <div key={s.label} style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 10, padding: 16 }}>
+                  <div style={{ fontSize: "1.3rem", fontWeight: 700, color: s.color }}>{s.value}</div>
+                  <div style={{ fontSize: "0.7rem", color: "var(--muted)", marginTop: 6, textTransform: "uppercase", letterSpacing: "0.05em" }}>{s.label}</div>
+                </div>
+              ));
+            })()}
+          </div>
+
+          {/* Recent Shifts */}
+          <div>
+            <h3 style={{ fontSize: "1rem", fontWeight: 700, margin: "0 0 16px", color: "var(--text)" }}>📋 Recent Shifts</h3>
+            <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+              {data.uber_shifts.slice().reverse().slice(0, 5).map((shift) => (
+                <div key={shift.id} style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 10, padding: 16 }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10 }}>
+                    <div>
+                      <div style={{ fontWeight: 700, fontSize: "0.95rem", color: "var(--text)" }}>{shift.date} • {shift.start_time}-{shift.end_time}</div>
+                      <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginTop: 2 }}>{shift.duration_minutes}m • {shift.miles_driven}mi • Odo: {shift.start_odometer}→{shift.end_odometer}</div>
+                    </div>
+                    <div style={{ textAlign: "right" }}>
+                      <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "#00c87c" }}>${shift.net_profit.toFixed(2)}</div>
+                      <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginTop: 2 }}>${shift.hourly_rate.toFixed(2)}/hr</div>
+                    </div>
+                  </div>
+                  <div style={{ display: "flex", gap: 16, fontSize: "0.8rem", color: "var(--muted)" }}>
+                    <span>Gross: <strong style={{ color: "var(--text)" }}>${shift.gross_earnings.toFixed(2)}</strong></span>
+                    {shift.proportional_charging_cost && (
+                      <span>Charging: <strong style={{ color: "#f15bb5" }}>-${shift.proportional_charging_cost.toFixed(2)}</strong></span>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </>
+      )}
+
+      {/* Info Footer */}
       <div style={{ marginTop: 28, padding: "16px", background: "rgba(0,187,249,0.05)", border: "1px solid rgba(0,187,249,0.2)", borderRadius: 10 }}>
         <p style={{ margin: 0, fontSize: "0.8rem", color: "var(--muted)" }}>
-          ℹ️ Charging deducted at 3.5 mi/kWh efficiency ratio. Unattributed sessions apply to next Uber shift.
+          ℹ️ Daily earnings pulled from Uber dashboard (top section). Shift tracking available for detailed profitability analysis.
         </p>
       </div>
     </div>
