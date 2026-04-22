@@ -2,9 +2,22 @@ import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+const GITHUB_REPO = 'Animal71Animal/Mission-Control';
+const GITHUB_BRANCH = 'main';
+const GITHUB_FILE_PATH = 'public/data/agent-status.json';
+const GITHUB_API_URL = `https://api.github.com/repos/${GITHUB_REPO}/contents/${GITHUB_FILE_PATH}`;
+
+function ghHeaders() {
+  const h: Record<string, string> = {
+    Accept: 'application/vnd.github+json',
+    'X-GitHub-Api-Version': '2022-11-28',
+  };
+  if (GITHUB_TOKEN) h['Authorization'] = `Bearer ${GITHUB_TOKEN}`;
+  return h;
+}
+
 // ── SQLite import (available at runtime in Vercel if bundled, or local) ────
-// We attempt better-sqlite3 first (sync, ideal for serverless).
-// If unavailable, we gracefully fall back to reading the JSON snapshot.
 function tryRequireSqlite() {
   try {
     // eslint-disable-next-line @typescript-eslint/no-require-imports
@@ -19,11 +32,8 @@ const DB_PATHS = [
   path.join(process.cwd(), "mission-control.db"),
 ];
 
-const JSON_PATHS = [
+const LOCAL_JSON_PATHS = [
   path.join(process.cwd(), "public", "data", "agent-status.json"),
-  path.join(process.cwd(), "..", "..", "data", "agent-status.json"),
-  path.join(process.cwd(), "..", "data", "agent-status.json"),
-  path.join(process.cwd(), "data", "agent-status.json"),
   "/home/ubuntu/wlp/data/agent-status.json",
 ];
 
@@ -135,9 +145,25 @@ function readFromSqlite(): object | null {
   }
 }
 
-// ── Read from JSON (fallback) ─────────────────────────────────────────────────
+// ── Read from GitHub API ──────────────────────────────────────────────────────
+async function readFromGitHub(): Promise<object | null> {
+  try {
+    const res = await fetch(`${GITHUB_API_URL}?ref=${GITHUB_BRANCH}`, {
+      headers: ghHeaders(),
+      cache: 'no-store',
+    });
+    if (!res.ok) return null;
+    const raw = await res.json();
+    const decoded = JSON.parse(Buffer.from(raw.content, 'base64').toString('utf-8'));
+    return { source: 'github', ...decoded };
+  } catch {
+    return null;
+  }
+}
+
+// ── Read from JSON (local fallback) ───────────────────────────────────────────
 function readFromJson(): object | null {
-  for (const p of JSON_PATHS) {
+  for (const p of LOCAL_JSON_PATHS) {
     try {
       if (fs.existsSync(p)) {
         const data = JSON.parse(fs.readFileSync(p, "utf-8"));
@@ -153,11 +179,11 @@ function readFromJson(): object | null {
 // ── GET handler ───────────────────────────────────────────────────────────────
 export async function GET() {
   try {
-    const data = readFromSqlite() ?? readFromJson();
+    const data = readFromSqlite() ?? (await readFromGitHub()) ?? readFromJson();
 
     if (!data) {
       return NextResponse.json(
-        { error: "Agent status unavailable (SQLite + JSON both failed)" },
+        { error: "Agent status unavailable (SQLite + GitHub + JSON all failed)" },
         { status: 503 }
       );
     }
