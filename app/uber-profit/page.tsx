@@ -54,7 +54,7 @@ interface UberData {
   last_updated: string;
 }
 
-export default function UberProfitPage() {
+export default function UberEarningsPage() {
   const [data, setData] = useState<UberData | null>(null);
   const [earnings, setEarnings] = useState<DailyEarning[]>([]);
   const [loaded, setLoaded] = useState(false);

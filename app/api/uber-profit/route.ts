@@ -1,5 +1,5 @@
 /**
- * Mission Control - Uber Profit API
+ * Mission Control - Uber Earnings API
  * GitHub API-backed: always live, no deploy needed
  */
 import { NextRequest, NextResponse } from 'next/server';
