@@ -58,7 +58,7 @@
       "model": "abacus/claude-sonnet-4-6",
       "status": "idle",
       "totalTasksCompleted": 7,
-      "totalTasksAssigned": 12,
+      "totalTasksAssigned": 10,
       "tasksInProgress": 0,
       "currentTask": null,
       "currentTaskStatus": null,
