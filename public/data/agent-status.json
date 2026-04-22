@@ -31,7 +31,7 @@
       "model": "abacus/claude-haiku-4-5",
       "status": "idle",
       "totalTasksCompleted": 1,
-      "totalTasksAssigned": 1,
+      "totalTasksAssigned": 3,
       "tasksInProgress": 1,
       "currentTask": "SRB Tips - Sole Responsibility",
       "currentTaskStatus": "idle",
@@ -57,8 +57,8 @@
       "discipline": "Operations",
       "model": "abacus/claude-sonnet-4-6",
       "status": "idle",
-      "totalTasksCompleted": 13,
-      "totalTasksAssigned": 13,
+      "totalTasksCompleted": 11,
+      "totalTasksAssigned": 11,
       "tasksInProgress": 0,
       "currentTask": null,
       "currentTaskStatus": null,
@@ -200,7 +200,7 @@
       "model": "abacus/claude-sonnet-4-6",
       "status": "idle",
       "totalTasksCompleted": 0,
-      "totalTasksAssigned": 1,
+      "totalTasksAssigned": 0,
       "tasksInProgress": 0,
       "currentTask": null,
       "currentTaskStatus": null,
@@ -222,8 +222,8 @@
       "discipline": "R&D/Innovation",
       "model": "abacus/claude-opus-4-6",
       "status": "idle",
-      "totalTasksCompleted": 3,
-      "totalTasksAssigned": 3,
+      "totalTasksCompleted": 1,
+      "totalTasksAssigned": 1,
       "tasksInProgress": 0,
       "currentTask": null,
       "currentTaskStatus": null,
@@ -245,11 +245,11 @@
     }
   },
   "teamStats": {
-    "totalTasksCompleted": 24,
-    "totalTasksAssigned": 24,
-    "tasksInProgress": 0,
-    "blockedTasks": 2,
+    "totalTasksCompleted": 19,
+    "totalTasksAssigned": 22,
+    "tasksInProgress": 2,
+    "blockedTasks": 1,
     "teamAvailability": "medium",
-    "lastTeamUpdate": "2026-04-22T18:27:00Z"
+    "lastTeamUpdate": "2026-04-22T18:29:59.851963Z"
   }
 }
