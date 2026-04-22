@@ -344,7 +344,7 @@ const businessDocs: DocItem[] = [
   { emoji: "🎭", name: "DOE Pitch Deck", desc: "Director of Entertainment — live pitch site", href: "https://my-nvj2gsssh-ericmills71-8100s-projects.vercel.app" },
   { emoji: "🏗️", name: "Org Structure", desc: "Entity, divisions, AI roster, decision flow", href: "/wlp-org" },
   { emoji: "💰", name: "Revenue Tracker", desc: "12-month tracker, P&L, KPIs, per-gig log", href: "/wlp-revenue" },
-  { emoji: "📅", name: "90-Day Plan", desc: "Apr 12 – Jul 11 · 3 phases · hard dates", href: "/wlp-90day" },
+  { emoji: "🗺️", name: "DJ Automation Roadmap", desc: "May–Jul 2026 · 4 milestones · $2K MRR target", href: "/wlp-dj-roadmap" },
   { emoji: "🎵", name: "Release Pipeline", desc: "12-week checklist, distro, sync, calendar", href: "/wlp-release" },
   { emoji: "🤖", name: "AI Workflow", desc: "Agent stack, tools, 25-prompt library", href: "/wlp-ai" },
   { emoji: "📣", name: "Marketing Plan", desc: "Brand USP, social, PR, ads, quick wins", href: "/wlp-marketing" },
@@ -571,7 +571,6 @@ function ToolsPopup({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
 
 export default function WLPDashboardPage() {
   const [clock, setClock] = useState("--:-- --");
-  const [countdown, setCountdown] = useState<number | null>(null);
   const [toolsPopupOpen, setToolsPopupOpen] = useState(false);
 
   useEffect(() => {
@@ -588,22 +587,6 @@ export default function WLPDashboardPage() {
     };
     updateClock();
     const interval = setInterval(updateClock, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    const updateCountdown = () => {
-      const target = new Date("2026-04-12T00:00:00-06:00");
-      const now = new Date();
-      const diff = target.getTime() - now.getTime();
-      if (diff > 0) {
-        setCountdown(Math.ceil(diff / (1000 * 60 * 60 * 24)));
-      } else {
-        setCountdown(-1);
-      }
-    };
-    updateCountdown();
-    const interval = setInterval(updateCountdown, 60000);
     return () => clearInterval(interval);
   }, []);
 
@@ -761,11 +744,11 @@ export default function WLPDashboardPage() {
       {/* Tools Popup */}
       <ToolsPopup isOpen={toolsPopupOpen} onClose={() => setToolsPopupOpen(false)} />
 
-      {/* 90-Day Phase Banner */}
+      {/* DJ Automation Roadmap Banner */}
       <div
         style={{
-          background: "linear-gradient(135deg, #1a1a2e, #16213e)",
-          border: "1px solid #7f5af0",
+          background: "linear-gradient(135deg, #0d1f1a, #0a2010)",
+          border: "1px solid #2cb67d",
           borderRadius: 12,
           padding: "16px 20px",
           marginBottom: 24,
@@ -780,16 +763,16 @@ export default function WLPDashboardPage() {
           <div
             style={{
               fontSize: "0.8rem",
-              color: "#7f5af0",
+              color: "#2cb67d",
               letterSpacing: "1.5px",
               textTransform: "uppercase",
               marginBottom: 4,
             }}
           >
-            🗓 Active 90-Day Plan
+            🎛️ Active Roadmap
           </div>
           <div style={{ fontSize: "1rem", fontWeight: 600, color: "#fff" }}>
-            Phase 1: Foundation{" "}
+            DJ Automation Software{" "}
             <span
               style={{
                 display: "inline-block",
@@ -798,21 +781,24 @@ export default function WLPDashboardPage() {
                 borderRadius: 999,
                 fontWeight: 600,
                 letterSpacing: "0.5px",
-                background: "#2d1f5e",
-                color: "#7f5af0",
+                background: "#0d2e22",
+                color: "#2cb67d",
                 marginLeft: 6,
               }}
             >
-              April 12 – May 11, 2026
+              May – July 2026
             </span>
+          </div>
+          <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginTop: 4 }}>
+            Demo-ready · May 31 kickoff with Tommy · Launch July 31
           </div>
         </div>
         <div style={{ textAlign: "right" }}>
-          <div style={{ fontSize: "2rem", fontWeight: 700, color: "#7f5af0", lineHeight: 1 }}>
-            {countdown === null ? "--" : countdown < 0 ? "🔥" : countdown}
+          <div style={{ fontSize: "1.4rem", fontWeight: 700, color: "#2cb67d", lineHeight: 1 }}>
+            $2K MRR
           </div>
-          <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>
-            {countdown !== null && countdown < 0 ? "LIVE" : "days to kickoff"}
+          <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 4 }}>
+            10 clubs × $200/mo target
           </div>
         </div>
       </div>
