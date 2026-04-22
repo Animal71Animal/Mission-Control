@@ -5,11 +5,11 @@
       "earnings": 158.36,
       "trips": 20,
       "miles": 71.49,
-      "tips": 24.00,
+      "tips": 24.0,
       "basefare": 128.22,
       "surge": 6.14,
       "promotions": 0.0,
-      "charging_cost": 2.50,
+      "charging_cost": 2.5,
       "netPayout": 155.86
     },
     {
@@ -41,7 +41,7 @@
       "earnings": 134.57,
       "trips": 6,
       "miles": 60.37,
-      "tips": 35.00,
+      "tips": 35.0,
       "basefare": 94.83,
       "surge": 10.75,
       "promotions": 3.99,
@@ -53,8 +53,8 @@
       "earnings": 43.28,
       "trips": 3,
       "miles": 16.96,
-      "tips": 11.00,
-      "basefare": 31.30,
+      "tips": 11.0,
+      "basefare": 31.3,
       "surge": 0.0,
       "promotions": 0.98,
       "charging_cost": 0.59,
@@ -62,25 +62,25 @@
     },
     {
       "date": "2026-04-14",
-      "earnings": 30.16,
-      "trips": 4,
-      "miles": 13.53,
-      "tips": 4.00,
-      "basefare": 25.90,
+      "earnings": 44.9,
+      "trips": 6,
+      "miles": 16.72,
+      "tips": 8.0,
+      "basefare": 36.64,
       "surge": 0.0,
-      "promotions": 0.26,
-      "charging_cost": 0.47,
-      "netPayout": 29.69
+      "promotions": 1.26,
+      "charging_cost": 0.59,
+      "netPayout": 44.31
     }
   ],
   "monthlyTotals": {
     "2026-04": {
-      "total_earnings": 379.35,
-      "total_net": 373.47,
-      "total_trips": 36,
-      "total_miles": 168.23,
-      "total_tips": 74.0,
-      "total_charging_cost": 5.88
+      "total_earnings": 424.25,
+      "total_net": 418.13,
+      "total_trips": 40,
+      "total_miles": 184.95,
+      "total_tips": 82.0,
+      "total_charging_cost": 6.47
     }
   },
   "metadata": {
