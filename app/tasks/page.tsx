@@ -15,8 +15,8 @@ export default function TasksPage() {
   return (
     <div className="page-container">
       <div style={{ marginBottom: 24 }}>
-        <h1 style={{ fontSize: "1.5rem", fontWeight: 700, margin: 0, color: "var(--text)" }}>📋 Tasks</h1>
-        <p style={{ color: "var(--muted)", marginTop: 4, fontSize: "0.85rem" }}>All task lists in one place</p>
+        <h1 style={{ fontSize: "1.5rem", fontWeight: 700, margin: 0, color: "var(--text)" }}>📋 Action Items</h1>
+        <p style={{ color: "var(--muted)", marginTop: 4, fontSize: "0.85rem" }}>All action items in one place</p>
       </div>
 
       {/* Tab Bar */}

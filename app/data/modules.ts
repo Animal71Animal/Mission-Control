@@ -17,8 +17,7 @@ export const modules: Module[] = [
   { href: "/content-pipeline", icon: "📱", title: "Content Pipeline", desc: "TikTok, Reels & Shorts management for WLP AI Artists.", status: "active", group: "business" },
   { href: "/calendar", icon: "📅", title: "Calendar", desc: "Gigs, studio sessions, meetings, and deadlines.", status: "active", group: "business" },
   { href: "/srb-tips", icon: "💰", title: "SRB Tips", desc: "Spearmint Rhino tip tracking — monthly totals, top tippers, dancer stats.", status: "active", group: "business" },
-  { href: "/tasks", icon: "📋", title: "Tasks", desc: "All task lists — Spearmint Rhino club operations and personal tasks in one hub.", status: "active", group: "business" },
-  { href: "/spearmint-rhino", icon: "🦏", title: "Spearmint Rhino", desc: "Club operations, equipment status, and venue management.", status: "active", group: "business" },
+  { href: "/tasks", icon: "📋", title: "Action Items", desc: "All action items — SRB club operations and personal tasks in one hub.", status: "active", group: "business" },
   { href: "/agents", icon: "🤖", title: "AI Office", desc: "Live view of AI agents working in the virtual office.", status: "active", group: "business" },
   
 
