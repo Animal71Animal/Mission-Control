@@ -128,18 +128,6 @@
     "owner": "animal"
   },
   {
-    "id": "T5",
-    "title": "TikTok handles / Postiz setup (5 accounts: Kade, Madison, Aria, ANIMAL, WLP)",
-    "notes": "Blocking AI artist launch",
-    "category": "WLP",
-    "priority": "high",
-    "due_date": null,
-    "completed": false,
-    "created_at": "2026-03-29T18:08:01.783Z",
-    "completed_at": null,
-    "owner": "animal"
-  },
-  {
     "id": "T6",
     "title": "Social media accounts for Kade, Madison, Aria",
     "notes": "Instagram, TikTok, Twitter",
