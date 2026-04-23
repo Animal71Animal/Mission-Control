@@ -637,6 +637,56 @@ export default function PeptidesPage() {
         </div>
       </div>
 
+      {/* 6-Week Schedule */}
+      <div style={{ marginTop: 32 }}>
+        <h2 style={{ fontSize: "1rem", fontWeight: 600, color: "var(--text)", marginBottom: 16 }}>📅 6-Week Introduction Schedule</h2>
+        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+          {[
+            {
+              week: "Week 0", dates: "Thu Apr 23 – Sun Apr 26", label: "Restart (Half Week)", color: "#00f5d4",
+              compounds: ["🌙 Reta 30u @ 9:30 PM (Thu only — restart dose)", "☀️ Tesa 20u @ 8:00 AM (Thu–Fri only)"]
+            },
+            {
+              week: "Week 1", dates: "Mon Apr 27 – Sun May 3", label: "Full Restart + HCG", color: "#00f5d4",
+              compounds: ["🌙 Reta 30u @ 9:30 PM (Mon)", "☀️ Tesa 20u @ 8:00 AM (Mon–Fri)", "💉 HCG 10u @ 8:00 AM (Tue + Fri) — NEW"]
+            },
+            {
+              week: "Week 2", dates: "Mon May 4 – Sun May 10", label: "+ Selank", color: "#9b5de5",
+              compounds: ["🌙 Reta 60u @ 9:30 PM (Mon)", "☀️ Tesa 20u @ 8:00 AM (Mon–Fri)", "💉 HCG 10u @ 8:00 AM (Tue + Fri)", "☀️ Selank 6u @ 8:30 AM (Mon–Sat) — NEW"]
+            },
+            {
+              week: "Week 3", dates: "Mon May 11 – Sun May 17", label: "+ NAD+", color: "#00bbf9",
+              compounds: ["🌙 Reta 60u @ 9:30 PM (Mon)", "☀️ Tesa 20u @ 8:00 AM (Mon–Fri)", "💉 HCG 10u @ 8:00 AM (Tue + Fri)", "☀️ Selank 6u @ 8:30 AM (Mon–Sat)", "☀️ NAD+ 50u @ 10:00 AM (Wed only) — NEW"]
+            },
+            {
+              week: "Week 4", dates: "Mon May 18 – Sun May 24", label: "+ MOTS-c", color: "#00bbf9",
+              compounds: ["🌙 Reta 60u @ 9:30 PM (Mon)", "☀️ Tesa 20u @ 8:00 AM (Mon–Fri)", "💉 HCG 10u @ 8:00 AM (Tue + Fri)", "☀️ Selank 6u @ 8:30 AM (Mon–Sat)", "☀️ NAD+ 50u @ 10:00 AM (Wed)", "☀️ MOTS-c 50u @ 8:00 AM (Thu only) — NEW"]
+            },
+            {
+              week: "Week 5", dates: "Mon May 25 – Sun May 31", label: "+ GLOW70 (Cyclical)", color: "#fee440",
+              compounds: ["🌙 Reta 60u @ 9:30 PM (Mon)", "☀️ Tesa 20u @ 8:00 AM (Mon–Fri)", "💉 HCG 10u @ 8:00 AM (Tue + Fri)", "☀️ Selank 6u @ 8:30 AM (Mon–Sat)", "☀️ NAD+ 50u @ 10:00 AM (Wed)", "☀️ MOTS-c 50u @ 8:00 AM (Thu)", "♻️ GLOW70 (Wed + Sat) — NEW"]
+            },
+            {
+              week: "Week 6", dates: "Mon Jun 1 onward", label: "+ GHK-Cu (Cyclical 30/30)", color: "#fee440",
+              compounds: ["🌙 Reta 60u @ 9:30 PM (Mon)", "☀️ Tesa 20u @ 8:00 AM (Mon–Fri)", "💉 HCG 10u @ 8:00 AM (Tue + Fri)", "☀️ Selank 6u @ 8:30 AM (Mon–Sat)", "☀️ NAD+ 50u @ 10:00 AM (Wed)", "☀️ MOTS-c 50u @ 8:00 AM (Thu)", "♻️ GLOW70 (Wed + Sat)", "☀️ GHK-Cu 4u @ 8:00 AM (Daily — 30 days on/30 off) — NEW"]
+            },
+          ].map((week, i) => (
+            <div key={i} style={{ background: "var(--card)", border: `1px solid ${week.color}33`, borderLeft: `4px solid ${week.color}`, borderRadius: 10, padding: 14 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10 }}>
+                <span style={{ fontWeight: 700, color: week.color, fontSize: "0.9rem", minWidth: 60 }}>{week.week}</span>
+                <span style={{ color: "var(--muted)", fontSize: "0.8rem" }}>{week.dates}</span>
+                <span style={{ marginLeft: "auto", fontSize: "0.75rem", fontWeight: 600, color: week.color, background: `${week.color}18`, padding: "2px 8px", borderRadius: 4 }}>{week.label}</span>
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+                {week.compounds.map((c, j) => (
+                  <div key={j} style={{ fontSize: "0.82rem", color: c.includes("NEW") ? "var(--text)" : "var(--muted)", fontWeight: c.includes("NEW") ? 600 : 400 }}>{c}</div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Order Timeline */}
       <div style={{ marginTop: 32, background: "var(--card)", border: "1px solid rgba(0,187,249,0.3)", borderRadius: 12, padding: 16 }}>
         <h2 style={{ fontSize: "1rem", fontWeight: 600, color: "#00bbf9", marginBottom: 16 }}>
