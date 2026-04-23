@@ -1,49 +1,34 @@
 {
-  "date": "2026-04-22",
-  "lastUpdated": "2026-04-22T16:00:00Z",
+  "date": "2026-04-23",
+  "lastUpdated": "2026-04-23T16:00:00Z",
   "summary": {
-    "weather": {
-      "temp": 45,
-      "high": 51,
-      "low": 42,
-      "conditions": "Rain",
-      "precipitation": "100%"
-    },
-    "tasks": {
-      "open": 10,
-      "overdue": 1
-    },
-    "peptides": "Tesamorelin tonight (Mon-Fri schedule)",
-    "calendar": "No events today",
-    "priority": "DJ Automation MVP (May 31) — Agent status sync blocker"
+    "weather": "46°F now, high 56°F, low 42°F — Clear now, light drizzle later",
+    "tasksOpen": 10,
+    "tasksOverdue": 1,
+    "calendarEvents": 0,
+    "peptideStatus": "Active stack ready — waiting on Week 0+ start",
+    "wlpFocus": "T7: Artist Spotify pages (needs DistroKid + tracks)"
   },
-  "fullBriefing": {
-    "date": "2026-04-22",
-    "time": "10:00",
-    "timestamp": "2026-04-22T16:00:00Z",
-    "timezone": "America/Denver",
-    "weather": {
-      "current_temp_f": 45,
-      "high_temp_f": 51,
-      "low_temp_f": 42,
-      "conditions": "Rain",
-      "precipitation_probability": 100,
-      "humidity": 87
-    },
-    "tasks": {
-      "wlp_open": 6,
-      "personal_open": 4,
-      "total_open": 10,
-      "overdue": 1
-    },
-    "peptides": {
-      "active": ["Retatrutide (Monday)", "Tesamorelin (Mon-Fri)"],
-      "today_dose": "Tesamorelin 30 units (9:30 PM) — Mon-Fri only"
-    },
-    "calendar": {
-      "events_today": 0,
-      "upcoming": "Clawdia scheduled tomorrow 12:00 PM MDT — Mission Control GitHub refactor"
-    },
-    "wlp_priority": "DJ Automation MVP — May 31 deadline. Agent status GitHub sync is critical blocker."
-  }
+  "weather": {
+    "temp": 46,
+    "high": 56,
+    "low": 42,
+    "condition": "Clear now, light drizzle later",
+    "humidity": 76
+  },
+  "tasks": {
+    "open": 10,
+    "overdue": 1,
+    "highPriority": ["T7: Artist Spotify pages", "T3: Install NI plugins"]
+  },
+  "calendar": [],
+  "peptides": {
+    "active": ["Retatrutide", "Tesamorelin"],
+    "today": "Retatrutide 60 units (if Monday)"
+  },
+  "blockers": [
+    "T7: Needs DistroKid account + first AI artist tracks",
+    "T5: TikTok handles — Eric needs to create 5 accounts",
+    "T3: NI plugins — needs NI account login"
+  ]
 }

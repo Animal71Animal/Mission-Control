@@ -268,7 +268,39 @@ export default function PlaylistReportPage() {
                               border: `1px solid ${isImportant ? "#f59e0b" : "var(--border)"}`,
                               cursor: "pointer", fontSize: "0.9rem",
                             }}
-                          >⭐</button>
+                                                    >⭐</button>
+                          {video.source === 'openclaw' && (
+                            <button
+                              onClick={() => {
+                                if (video.ocEp) {
+                                  fetch("/api/joules-claw", {
+                                    method: "POST",
+                                    headers: { "Content-Type": "application/json" },
+                                    body: JSON.stringify({
+                                      id: video.ocEp.id,
+                                      title: video.ocEp.title,
+                                      url: video.ocEp.url,
+                                      channel: video.ocEp.channel,
+                                      episodeNumber: video.ocEp.episodeNumber,
+                                      publishedDate: video.ocEp.publishedDate,
+                                    }),
+                                  })
+                                    .then(r => r.json())
+                                    .then(data => {
+                                      if (data.success) alert("✅ Added to Joules Claw!");
+                                      else if (data.error?.includes("already")) alert("ℹ️ Already in Joules Claw");
+                                    });
+                                }
+                              }}
+                              title="Copy to Joules Claw"
+                              style={{
+                                width: 32, height: 32, marginLeft: 12, borderRadius: 6, flexShrink: 0,
+                                background: "rgba(79,195,247,0.15)",
+                                border: "1px solid #4fc3f7",
+                                cursor: "pointer", fontSize: "0.85rem",
+                              }}
+                            >⚡</button>
+                          )}
                         </div>
 
                         {isOpen && (

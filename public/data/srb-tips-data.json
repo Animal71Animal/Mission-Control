@@ -3708,6 +3708,36 @@
             "amount": 20
           }
         ]
+      },
+      {
+        "date": "Wed Apr 22",
+        "total": 70,
+        "dancers": [
+          {
+            "dancer": "Nadia",
+            "amount": 10
+          },
+          {
+            "dancer": "Amy",
+            "amount": 5
+          },
+          {
+            "dancer": "Tiana",
+            "amount": 15
+          },
+          {
+            "dancer": "Dior",
+            "amount": 10
+          },
+          {
+            "dancer": "Zara",
+            "amount": 10
+          },
+          {
+            "dancer": "Natasha",
+            "amount": 20
+          }
+        ]
       }
     ]
   }
