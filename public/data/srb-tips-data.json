@@ -17,8 +17,8 @@
     },
     {
       "month": "April",
-      "amount": 1088,
-      "nights": 8
+      "amount": 1158,
+      "nights": 9
     }
   ],
   "topTippers": [
@@ -254,7 +254,7 @@
       "jan": 25,
       "feb": 15,
       "mar": 40,
-      "apr": 25
+      "apr": 45
     },
     {
       "name": "Asia",
@@ -274,7 +274,7 @@
       "jan": 24,
       "feb": 30,
       "mar": 20,
-      "apr": 45
+      "apr": 55
     },
     {
       "name": "Kody",
@@ -318,7 +318,7 @@
       "jan": 20,
       "feb": 15,
       "mar": 15,
-      "apr": 23
+      "apr": 33
     },
     {
       "name": "Effie",
@@ -420,7 +420,7 @@
       "jan": 7,
       "feb": 5,
       "mar": 28,
-      "apr": 20
+      "apr": 35
     },
     {
       "name": "Maria",
@@ -440,7 +440,7 @@
       "jan": 0,
       "feb": 15,
       "mar": 0,
-      "apr": 40
+      "apr": 45
     },
     {
       "name": "Jamira",
@@ -504,6 +504,13 @@
       "feb": 0,
       "mar": 0,
       "apr": 40
+    },
+    {
+      "name": "Nadia",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 10
     }
   ],
   "dailyTips": [
@@ -1368,7 +1375,7 @@
       "total": 45
     }
   ],
-  "lastUpdated": "2026-04-15T09:37:00.000Z",
+  "lastUpdated": "2026-04-23T22:34:31.368Z",
   "nightlyData": {
     "January": [
       {
