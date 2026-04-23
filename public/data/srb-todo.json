@@ -6,7 +6,7 @@
       "completed": false,
       "category": "Setup",
       "priority": "high",
-      "due_date": "2026-04-22"
+      "due_date": "2026-05-05"
     },
     {
       "id": "2",
@@ -177,5 +177,5 @@
       "due_date": "2026-04-18"
     }
   ],
-  "last_updated": "2026-04-19T09:43:17.467Z"
+  "last_updated": "2026-04-23T09:58:39.690Z"
 }
