@@ -28,7 +28,7 @@
       "vial_lasts_weeks": 3.3
     },
     "startDate": "2026-04-27",
-    "notes": "Core compound. 3mg/week (60 units) every Monday. Week 0: 30 units Thu Apr 23 (restart). Week 1: 30 units Mon Apr 27 (completes 60 units in body). Full 60 units every Monday from Apr 27 onward.",
+    "notes": "Core compound. 3mg/week (60 units) every Monday. Week 0: 30 units Thu Apr 23 (restart). Week 1: 30 units Mon Apr 27. Full 60 units every Monday from Apr 27 onward.",
     "logs": [
       {
         "date": "2026-04-23",
@@ -65,7 +65,7 @@
       "vial_lasts_weeks": 2
     },
     "startDate": "2026-04-27",
-    "notes": "Core compound. Mon-Fri only, no weekends. 1mg/day (30 units) at 9:30 PM. Week 0: 20 units Thu Apr 23 + Fri Apr 24 (restart low). Full 30 units from Mon Apr 27 (Week 1) onward.",
+    "notes": "Core compound. Mon-Fri only, no weekends. 1mg/day (30 units) at 9:30 PM. Week 0: 20 units Thu Apr 23 + Fri Apr 24. Full 30 units from Mon Apr 27 onward.",
     "logs": [
       {
         "date": "2026-04-23",
@@ -101,7 +101,7 @@
       "vial_lasts_weeks": 10
     },
     "startDate": "2026-04-29",
-    "notes": "Week 1 add-on (swapped with Selank — HCG prioritized first for hormonal stability). 250 IU Tue/Fri (10 units) at 8:00 AM. Watch water retention, mood, nipple sensitivity. Vial lasts ~10 weeks.",
+    "notes": "Week 1 add-on. 250 IU Tue/Fri (10 units) at 8:00 AM. Watch water retention, mood, nipple sensitivity. Vial lasts ~10 weeks.",
     "logs": []
   },
   {
@@ -109,7 +109,7 @@
     "name": "Selank",
     "category": "core-addon",
     "status": "planned",
-    "phase": "Week 2 — add when received",
+    "phase": "Week 2 — starts Mon May 4 (with NAD+)",
     "dose": {
       "amount": 300,
       "unit": "mcg",
@@ -126,8 +126,8 @@
       "weekly_cost": 3.6,
       "vial_lasts_weeks": 5.5
     },
-    "startDate": null,
-    "notes": "Week 2 add-on (swapped with HCG — add when Selank arrives). 300mcg/day (9 units) Mon-Sat at 8:30 AM. Watch for mood/anxiety changes. Vial lasts ~5.5 weeks.",
+    "startDate": "2026-05-04",
+    "notes": "Week 2 add-on (paired with NAD+). 300mcg/day (9 units) Mon-Sat at 8:30 AM. Watch for mood/anxiety changes. Vial lasts ~5.5 weeks.",
     "logs": []
   },
   {
@@ -135,7 +135,7 @@
     "name": "NAD+",
     "category": "secondary-addon",
     "status": "planned",
-    "phase": "Week 3",
+    "phase": "Week 2 — starts Wed May 6 (with Selank)",
     "dose": {
       "amount": 50,
       "unit": "mg",
@@ -153,8 +153,8 @@
       "weekly_cost": 4.2,
       "vial_lasts_weeks": 10
     },
-    "startDate": null,
-    "notes": "Week 3 add-on. Start 50mg (50 units) once weekly Wed at 10:00 AM. Titrate up slowly. Watch flushing, nausea, energy surge. Vial lasts ~10 weeks.",
+    "startDate": "2026-05-06",
+    "notes": "Week 2 add-on (paired with Selank). Start 50mg (50 units) once weekly Wed at 10:00 AM. Titrate up slowly. Watch flushing, nausea, energy surge. Vial lasts ~10 weeks.",
     "logs": []
   },
   {
@@ -162,7 +162,7 @@
     "name": "MOTS-c",
     "category": "secondary-addon",
     "status": "planned",
-    "phase": "Week 4",
+    "phase": "Week 3 — starts Thu May 14",
     "dose": {
       "amount": 2.5,
       "unit": "mg",
@@ -180,8 +180,8 @@
       "weekly_cost": 7.5,
       "vial_lasts_weeks": 4
     },
-    "startDate": null,
-    "notes": "Week 4 add-on. 2.5mg (50 units) once weekly Thu at 8:00 AM. Morning or pre-workout. Watch glucose sensitivity, endurance. Vial lasts ~4 weeks.",
+    "startDate": "2026-05-14",
+    "notes": "Week 3 add-on. 2.5mg (50 units) once weekly Thu at 8:00 AM. Morning or pre-workout. Watch glucose sensitivity, endurance. Vial lasts ~4 weeks.",
     "logs": []
   },
   {
@@ -189,7 +189,7 @@
     "name": "GHK-Cu",
     "category": "cyclical",
     "status": "planned",
-    "phase": "Week 6 (cyclical)",
+    "phase": "Week 5 — starts Mon May 25 (cyclical)",
     "dose": {
       "amount": 1,
       "unit": "mg",
@@ -207,7 +207,7 @@
       "vial_lasts_weeks": 4.3,
       "cycle_note": "30 days ON / 30 days OFF. 1 vial = 1 full cycle."
     },
-    "startDate": null,
+    "startDate": "2026-05-25",
     "notes": "Week 6 add-on. CYCLICAL — 30 days on, 30 days off. Start 1mg/day (4 units) days 1-15, ramp to 2mg/day (8 units) days 16-30. 1 vial = 1 full cycle. Collagen synthesis, skin repair, anti-inflammatory.",
     "logs": []
   },
@@ -216,7 +216,7 @@
     "name": "GLOW70",
     "category": "cyclical",
     "status": "planned",
-    "phase": "Week 5+ (cyclical)",
+    "phase": "Week 4 — starts Wed May 20 (cyclical)",
     "dose": {
       "amount": null,
       "unit": null,
@@ -230,7 +230,7 @@
       "strength_mg": null,
       "reconstitution_ml": null
     },
-    "startDate": null,
+    "startDate": "2026-05-20",
     "notes": "Week 5+ cyclical only. NOT year-round core. Contains Epithalon. Review label strength before reconstituting.",
     "logs": []
   }
