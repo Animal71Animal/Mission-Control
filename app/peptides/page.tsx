@@ -694,11 +694,13 @@ export default function PeptidesPage() {
         </h2>
         <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
           {[
-            { due: "Apr 27", compound: "Selank", week: "Week 2 — starts Mon May 4", note: "10mg vial + 2mL BAC water", urgent: true },
-            { due: "May 4", compound: "NAD+", week: "Week 3 — starts Wed May 11", note: "500mg vial", urgent: false },
-            { due: "May 11", compound: "MOTS-c", week: "Week 4 — starts Thu May 18", note: "10mg vial", urgent: false },
-            { due: "May 18", compound: "GLOW70", week: "Week 5 — starts Wed May 25", note: "Review label before reconstituting", urgent: false },
-            { due: "May 25", compound: "GHK-Cu", week: "Week 6 — starts Mon Jun 1", note: "50mg vial — 1 vial = 1 full 30-day cycle", urgent: false },
+            { due: "NOW", compound: "Tesamorelin ⚠️", week: "Runs out Week 2 (May 7)", note: "Order 3 more vials (10mg each) — you need 4 total for 6 weeks", urgent: true },
+            { due: "Apr 27", compound: "Selank", week: "Week 2 — starts Mon May 4", note: "1 vial (10mg) covers all 5 weeks", urgent: true },
+            { due: "May 11", compound: "Retatrutide ⚠️", week: "Runs out Week 4 (May 18)", note: "Order 1 more vial (10mg) — need 2 total for 6 weeks", urgent: false },
+            { due: "May 4", compound: "NAD+", week: "Week 3 — starts Wed May 11", note: "1 vial (500mg) covers all 4 weeks easily", urgent: false },
+            { due: "May 11", compound: "MOTS-c", week: "Week 4 — starts Thu May 18", note: "1 vial (10mg) covers all 3 weeks", urgent: false },
+            { due: "May 18", compound: "GLOW70", week: "Week 5 — starts Wed May 25", note: "Review label strength before reconstituting", urgent: false },
+            { due: "May 25", compound: "GHK-Cu", week: "Week 6 — starts Mon Jun 1", note: "1 vial (50mg) = exactly 1 full 30-day cycle", urgent: false },
           ].map((item, i) => (
             <div key={i} style={{
               display: "flex",
