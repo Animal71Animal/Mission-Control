@@ -589,8 +589,8 @@ export default function PeptidesPage() {
             <tbody>
               {[
                 { name: "Retatrutide", vial: "10mg", price: "$40", bac: "2mL", conc: "5mg/mL", dose: "3mg", units: "60 units", freq: "1x/week Mon", cost: "$12", lasts: "~3.3 wks", color: "#00f5d4" },
-                { name: "Tesamorelin", vial: "10mg", price: "$45", bac: "3mL", conc: "3.33mg/mL", dose: "1mg", units: "30 units", freq: "5x/week M-F", cost: "$22.50", lasts: "~2 wks", color: "#00f5d4" },
-                { name: "Selank", vial: "10mg", price: "$20", bac: "3mL", conc: "3333mcg/mL", dose: "300mcg", units: "9 units", freq: "6x/week M-Sa", cost: "$3.60", lasts: "~5.5 wks", color: "#9b5de5" },
+                { name: "Tesamorelin", vial: "10mg", price: "$45", bac: "2mL", conc: "5mg/mL", dose: "1mg", units: "20 units", freq: "5x/week M-F", cost: "$22.50", lasts: "~2 wks", color: "#00f5d4" },
+                { name: "Selank", vial: "10mg", price: "$20", bac: "2mL", conc: "5000mcg/mL", dose: "300mcg", units: "6 units", freq: "6x/week M-Sa", cost: "$3.60", lasts: "~5.6 wks", color: "#9b5de5" },
                 { name: "HCG", vial: "5000 IU", price: "$50", bac: "2mL", conc: "2500 IU/mL", dose: "250 IU", units: "10 units", freq: "2x/week Tu/Fr", cost: "$5.00", lasts: "~10 wks", color: "#9b5de5" },
                 { name: "NAD+", vial: "500mg", price: "$42", bac: "5mL", conc: "100mg/mL", dose: "50mg", units: "50 units", freq: "1x/week Wed", cost: "$4.20", lasts: "~10 wks", color: "#00bbf9" },
                 { name: "MOTS-c", vial: "10mg", price: "$30", bac: "2mL", conc: "5mg/mL", dose: "2.5mg", units: "50 units", freq: "1x/week Thu", cost: "$7.50", lasts: "~4 wks", color: "#00bbf9" },
@@ -644,11 +644,11 @@ export default function PeptidesPage() {
         </h2>
         <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
           {[
-            { due: "Apr 27", compound: "Selank", week: "Week 2 — starts Mon May 4", note: "10mg vial", urgent: true },
-            { due: "Apr 27", compound: "NAD+", week: "Week 2 — starts Wed May 6", note: "500mg vial", urgent: true },
-            { due: "May 4", compound: "MOTS-c", week: "Week 3 — starts Thu May 14", note: "10mg vial", urgent: false },
-            { due: "May 11", compound: "GLOW70", week: "Week 4 — starts Wed May 20", note: "Review label before reconstituting", urgent: false },
-            { due: "May 18", compound: "GHK-Cu", week: "Week 5 — starts Mon May 25", note: "50mg vial — 1 vial = 1 full 30-day cycle", urgent: false },
+            { due: "Apr 27", compound: "Selank", week: "Week 2 — starts Mon May 4", note: "10mg vial + 2mL BAC water", urgent: true },
+            { due: "May 4", compound: "NAD+", week: "Week 3 — starts Wed May 11", note: "500mg vial", urgent: false },
+            { due: "May 11", compound: "MOTS-c", week: "Week 4 — starts Thu May 18", note: "10mg vial", urgent: false },
+            { due: "May 18", compound: "GLOW70", week: "Week 5 — starts Wed May 25", note: "Review label before reconstituting", urgent: false },
+            { due: "May 25", compound: "GHK-Cu", week: "Week 6 — starts Mon Jun 1", note: "50mg vial — 1 vial = 1 full 30-day cycle", urgent: false },
           ].map((item, i) => (
             <div key={i} style={{
               display: "flex",
