@@ -12,14 +12,14 @@
           {
             "peptideId": "peptide-retatrutide",
             "peptideName": "Retatrutide",
-            "time": "Tonight",
+            "time": "9:30 PM",
             "taken": false,
             "dose": "30 units (1.5mg) — restart dose"
           },
           {
             "peptideId": "peptide-tesamorelin",
             "peptideName": "Tesamorelin",
-            "time": "9:30 PM",
+            "time": "8:00 AM",
             "taken": false,
             "dose": "20 units (0.67mg) — restart dose"
           }
@@ -31,7 +31,7 @@
           {
             "peptideId": "peptide-tesamorelin",
             "peptideName": "Tesamorelin",
-            "time": "9:30 PM",
+            "time": "8:00 AM",
             "taken": false,
             "dose": "20 units (0.67mg)"
           }
@@ -72,14 +72,14 @@
           {
             "peptideId": "peptide-retatrutide",
             "peptideName": "Retatrutide",
-            "time": "8:00 AM",
+            "time": "9:30 PM",
             "taken": false,
             "dose": "30 units (1.5mg) — completing 60 units total this week"
           },
           {
             "peptideId": "peptide-tesamorelin",
             "peptideName": "Tesamorelin",
-            "time": "9:30 PM",
+            "time": "8:00 AM",
             "taken": false,
             "dose": "30 units (1mg)"
           }
@@ -98,7 +98,7 @@
           {
             "peptideId": "peptide-tesamorelin",
             "peptideName": "Tesamorelin",
-            "time": "9:30 PM",
+            "time": "8:00 AM",
             "taken": false,
             "dose": "30 units (1mg)"
           }
@@ -110,7 +110,7 @@
           {
             "peptideId": "peptide-tesamorelin",
             "peptideName": "Tesamorelin",
-            "time": "9:30 PM",
+            "time": "8:00 AM",
             "taken": false,
             "dose": "30 units (1mg)"
           }
@@ -122,7 +122,7 @@
           {
             "peptideId": "peptide-tesamorelin",
             "peptideName": "Tesamorelin",
-            "time": "9:30 PM",
+            "time": "8:00 AM",
             "taken": false,
             "dose": "30 units (1mg)"
           }
@@ -141,7 +141,7 @@
           {
             "peptideId": "peptide-tesamorelin",
             "peptideName": "Tesamorelin",
-            "time": "9:30 PM",
+            "time": "8:00 AM",
             "taken": false,
             "dose": "30 units (1mg)"
           }
@@ -176,7 +176,7 @@
           {
             "peptideId": "peptide-retatrutide",
             "peptideName": "Retatrutide",
-            "time": "8:00 AM",
+            "time": "9:30 PM",
             "taken": false,
             "dose": "60 units (3mg)"
           },
@@ -190,7 +190,7 @@
           {
             "peptideId": "peptide-tesamorelin",
             "peptideName": "Tesamorelin",
-            "time": "9:30 PM",
+            "time": "8:00 AM",
             "taken": false,
             "dose": "30 units (1mg)"
           }
@@ -216,7 +216,7 @@
           {
             "peptideId": "peptide-tesamorelin",
             "peptideName": "Tesamorelin",
-            "time": "9:30 PM",
+            "time": "8:00 AM",
             "taken": false,
             "dose": "30 units (1mg)"
           }
@@ -235,7 +235,7 @@
           {
             "peptideId": "peptide-tesamorelin",
             "peptideName": "Tesamorelin",
-            "time": "9:30 PM",
+            "time": "8:00 AM",
             "taken": false,
             "dose": "30 units (1mg)"
           }
@@ -254,7 +254,7 @@
           {
             "peptideId": "peptide-tesamorelin",
             "peptideName": "Tesamorelin",
-            "time": "9:30 PM",
+            "time": "8:00 AM",
             "taken": false,
             "dose": "30 units (1mg)"
           }
@@ -280,7 +280,7 @@
           {
             "peptideId": "peptide-tesamorelin",
             "peptideName": "Tesamorelin",
-            "time": "9:30 PM",
+            "time": "8:00 AM",
             "taken": false,
             "dose": "30 units (1mg)"
           }
