@@ -637,6 +637,52 @@ export default function PeptidesPage() {
         </div>
       </div>
 
+      {/* Order Timeline */}
+      <div style={{ marginTop: 32, background: "var(--card)", border: "1px solid rgba(0,187,249,0.3)", borderRadius: 12, padding: 16 }}>
+        <h2 style={{ fontSize: "1rem", fontWeight: 600, color: "#00bbf9", marginBottom: 16 }}>
+          🛒 Order Timeline
+        </h2>
+        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+          {[
+            { due: "Apr 27", compound: "Selank", week: "Week 2 — starts Mon May 4", note: "10mg vial", urgent: true },
+            { due: "Apr 27", compound: "NAD+", week: "Week 2 — starts Wed May 6", note: "500mg vial", urgent: true },
+            { due: "May 4", compound: "MOTS-c", week: "Week 3 — starts Thu May 14", note: "10mg vial", urgent: false },
+            { due: "May 11", compound: "GLOW70", week: "Week 4 — starts Wed May 20", note: "Review label before reconstituting", urgent: false },
+            { due: "May 18", compound: "GHK-Cu", week: "Week 5 — starts Mon May 25", note: "50mg vial — 1 vial = 1 full 30-day cycle", urgent: false },
+          ].map((item, i) => (
+            <div key={i} style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 12,
+              padding: "10px 14px",
+              background: item.urgent ? "rgba(241,91,91,0.08)" : "var(--bg)",
+              border: `1px solid ${item.urgent ? "rgba(241,91,91,0.3)" : "var(--border)"}`,
+              borderRadius: 8,
+            }}>
+              <div style={{
+                minWidth: 70,
+                fontSize: "0.8rem",
+                fontWeight: 700,
+                color: item.urgent ? "#f15b5b" : "#fee440",
+                textAlign: "center",
+                background: item.urgent ? "rgba(241,91,91,0.15)" : "rgba(254,228,64,0.1)",
+                padding: "4px 8px",
+                borderRadius: 6,
+              }}>
+                {item.due}
+              </div>
+              <div style={{ flex: 1 }}>
+                <div style={{ fontWeight: 600, color: "var(--text)", fontSize: "0.9rem" }}>{item.compound}</div>
+                <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>{item.week} · {item.note}</div>
+              </div>
+              {item.urgent && (
+                <span style={{ fontSize: "0.7rem", fontWeight: 700, color: "#f15b5b", background: "rgba(241,91,91,0.15)", padding: "2px 8px", borderRadius: 4 }}>ORDER NOW</span>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Ground Rules */}
       <div style={{ marginTop: 32, background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12, padding: 16 }}>
         <h2 style={{ fontSize: "1rem", fontWeight: 600, color: "var(--text)", marginBottom: 12 }}>
