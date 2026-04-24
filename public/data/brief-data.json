@@ -1,30 +1,29 @@
 {
-  "date": "2026-04-23",
-  "lastUpdated": "2026-04-23T16:00:00Z",
+  "date": "2026-04-24",
+  "lastUpdated": "2026-04-24T16:00:00Z",
   "summary": {
-    "weather": "46°F now, high 56°F, low 42°F — Clear now, light drizzle later",
+    "weather": "51°F now, high 52°F, low 40°F — Mainly clear, partly cloudy later",
     "tasksOpen": 10,
     "tasksOverdue": 1,
     "calendarEvents": 0,
-    "peptideStatus": "Active stack ready — waiting on Week 0+ start",
-    "wlpFocus": "T7: Artist Spotify pages (needs DistroKid + tracks)"
+    "peptideStatus": "Week 0 restart — Retatrutide 30u + Tesamorelin 20u tonight",
+    "wlpFocus": "T7: Artist Spotify pages (needs DistroKid + first tracks)"
   },
   "weather": {
-    "temp": 46,
-    "high": 56,
-    "low": 42,
-    "condition": "Clear now, light drizzle later",
-    "humidity": 76
+    "temp": 51,
+    "high": 52,
+    "low": 40,
+    "condition": "Mainly clear, partly cloudy later"
   },
   "tasks": {
     "open": 10,
     "overdue": 1,
-    "highPriority": ["T7: Artist Spotify pages", "T3: Install NI plugins"]
+    "highPriority": ["Change post office address", "T7: Artist Spotify pages"]
   },
   "calendar": [],
   "peptides": {
     "active": ["Retatrutide", "Tesamorelin"],
-    "today": "Retatrutide 60 units (if Monday)"
+    "today": "Week 0 restart — Retatrutide 30u + Tesamorelin 20u tonight"
   },
   "blockers": [
     "T7: Needs DistroKid account + first AI artist tracks",
