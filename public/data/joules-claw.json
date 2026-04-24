@@ -1,5 +1,16 @@
 {
-  "videos": [],
+  "videos": [
+    {
+      "id": "oc-eDIDysgEHUU",
+      "title": "OpenClaw Step by Step: Setup Your AI Assistant 100% Locally (Telegram + Ollama)",
+      "url": "https://www.youtube.com/watch?v=eDIDysgEHUU&pp=ygUVb3BlbmNsYXcgYWkgYXNzaXN0YW50",
+      "channel": "Execute Automation",
+      "addedAt": "2026-04-24T07:36:35.298Z",
+      "addedBy": "eric",
+      "episodeNumber": 1,
+      "publishedDate": "2026-04-18"
+    }
+  ],
   "pairings": [],
-  "lastUpdated": "2026-04-22T18:40:00Z"
+  "lastUpdated": "2026-04-24T07:36:35.298Z"
 }
