@@ -11,7 +11,7 @@
     {
       "id": "2",
       "text": "Clean all amps and equipment (need compressed air)",
-      "completed": false,
+      "completed": true,
       "category": "Maintenance",
       "priority": "high",
       "due_date": "2026-05-05"
@@ -185,5 +185,5 @@
       "due_date": "2026-05-05"
     }
   ],
-  "last_updated": "2026-04-23T10:01:06.092Z"
+  "last_updated": "2026-04-25T18:29:42.856Z"
 }
