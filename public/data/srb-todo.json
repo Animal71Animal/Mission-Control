@@ -178,12 +178,12 @@
     },
     {
       "id": "srb-1776938466092",
-      "completed": false,
+      "completed": true,
       "text": "Make QR Code Ad",
       "category": "Video",
       "priority": "medium",
       "due_date": "2026-05-05"
     }
   ],
-  "last_updated": "2026-04-25T18:29:46.675Z"
+  "last_updated": "2026-04-25T18:29:59.276Z"
 }
