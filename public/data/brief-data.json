@@ -1,19 +1,19 @@
 {
-  "date": "2026-04-24",
-  "lastUpdated": "2026-04-24T16:00:00Z",
+  "date": "2026-04-25",
+  "lastUpdated": "2026-04-25T16:00:00Z",
   "summary": {
-    "weather": "51°F now, high 52°F, low 40°F — Mainly clear, partly cloudy later",
+    "weather": "44°F now, high 57°F, low 34°F — Clear skies",
     "tasksOpen": 10,
     "tasksOverdue": 1,
     "calendarEvents": 0,
-    "peptideStatus": "Week 0 restart — Retatrutide 30u + Tesamorelin 20u tonight",
+    "peptideStatus": "Week 0 restart — Retatrutide 30u + Tesamorelin 20u tonight (Mon Apr 27 back to full doses)",
     "wlpFocus": "T7: Artist Spotify pages (needs DistroKid + first tracks)"
   },
   "weather": {
-    "temp": 51,
-    "high": 52,
-    "low": 40,
-    "condition": "Mainly clear, partly cloudy later"
+    "temp": 44,
+    "high": 57,
+    "low": 34,
+    "condition": "Clear skies"
   },
   "tasks": {
     "open": 10,
@@ -23,7 +23,7 @@
   "calendar": [],
   "peptides": {
     "active": ["Retatrutide", "Tesamorelin"],
-    "today": "Week 0 restart — Retatrutide 30u + Tesamorelin 20u tonight"
+    "today": "Week 0 restart — Retatrutide 30u + Tesamorelin 20u tonight. Full doses (60u / 30u) resume Mon Apr 27."
   },
   "blockers": [
     "T7: Needs DistroKid account + first AI artist tracks",

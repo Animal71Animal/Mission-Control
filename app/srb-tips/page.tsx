@@ -83,13 +83,8 @@ export default function SrbTipsPage() {
       badge: i === 0 ? "gold" : i === 1 ? "gold" : i === 2 ? "silver" : i < 5 ? "silver" : "bronze",
     }));
 
-    // Mock weekly breakdown (would come from real data)
-    const weeklyBreakdown = [
-      { week: "Week 1", amount: Math.round(monthData.amount * 0.28) },
-      { week: "Week 2", amount: Math.round(monthData.amount * 0.22) },
-      { week: "Week 3", amount: Math.round(monthData.amount * 0.26) },
-      { week: "Week 4", amount: Math.round(monthData.amount * 0.24) },
-    ];
+    // Weekly breakdown removed per user request
+    const weeklyBreakdown: { week: string; amount: number }[] = [];
 
     return {
       month,
@@ -255,22 +250,7 @@ export default function SrbTipsPage() {
             </button>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
-            {/* Weekly Breakdown */}
-            <div>
-              <h3 style={{ fontSize: "0.85rem", color: "var(--muted)", marginBottom: 12, textTransform: "uppercase", letterSpacing: "0.05em" }}>
-                Weekly Breakdown
-              </h3>
-              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                {monthDetail.weeklyBreakdown.map((w) => (
-                  <div key={w.week} style={{ display: "flex", justifyContent: "space-between", padding: "8px 0", borderBottom: "1px solid var(--border)" }}>
-                    <span style={{ color: "var(--muted)" }}>{w.week}</span>
-                    <span style={{ fontWeight: 600 }}>${w.amount}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
+          <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 24 }}>
             {/* Top 10 This Month */}
             <div>
               <h3 style={{ fontSize: "0.85rem", color: "var(--muted)", marginBottom: 12, textTransform: "uppercase", letterSpacing: "0.05em" }}>
