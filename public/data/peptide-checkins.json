@@ -13,7 +13,7 @@
             "peptideId": "peptide-retatrutide",
             "peptideName": "Retatrutide",
             "time": "9:30 PM",
-            "taken": false,
+            "taken": true,
             "dose": "30 units (1.5mg) — restart dose"
           },
           {
