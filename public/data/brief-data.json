@@ -1,33 +1,25 @@
 {
-  "date": "2026-04-25",
-  "lastUpdated": "2026-04-25T16:00:00Z",
-  "summary": {
-    "weather": "44°F now, high 57°F, low 34°F — Clear skies",
-    "tasksOpen": 10,
-    "tasksOverdue": 1,
-    "calendarEvents": 0,
-    "peptideStatus": "Week 0 restart — Retatrutide 30u + Tesamorelin 20u tonight (Mon Apr 27 back to full doses)",
-    "wlpFocus": "T7: Artist Spotify pages (needs DistroKid + first tracks)"
-  },
+  "date": "2026-04-26",
+  "time_mdt": "10:00 AM",
   "weather": {
-    "temp": 44,
-    "high": 57,
-    "low": 34,
-    "condition": "Clear skies"
+    "temp_f": 43,
+    "feels_like_f": 39,
+    "conditions": "Overcast",
+    "high_f": 56,
+    "low_f": 36,
+    "humidity": 77
   },
   "tasks": {
     "open": 10,
-    "overdue": 1,
-    "highPriority": ["Change post office address", "T7: Artist Spotify pages"]
+    "overdue": 1
   },
-  "calendar": [],
   "peptides": {
-    "active": ["Retatrutide", "Tesamorelin"],
-    "today": "Week 0 restart — Retatrutide 30u + Tesamorelin 20u tonight. Full doses (60u / 30u) resume Mon Apr 27."
+    "status": "Week 0 restart",
+    "today": "No injections — rest day",
+    "next": "Mon Apr 27: Retatrutide 60u + Tesamorelin 30u"
   },
-  "blockers": [
-    "T7: Needs DistroKid account + first AI artist tracks",
-    "T5: TikTok handles — Eric needs to create 5 accounts",
-    "T3: NI plugins — needs NI account login"
-  ]
+  "calendar": {
+    "events_today": 0
+  },
+  "wlp_priority": "T5 — TikTok handles / Postiz setup (5 accounts)"
 }
