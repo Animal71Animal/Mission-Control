@@ -112,23 +112,80 @@ export default function PeptidesPage() {
       .catch(() => setLoading(false));
   }, []);
 
-  const toggleDose = (weekId: string, date: string, doseIndex: number) => {
+  const toggleDose = async (weekId: string, date: string, doseIndex: number) => {
+    // Find current state
+    const week = checkIns.find((w) => w.id === weekId);
+    if (!week) return;
+    const day = week.checkIns[date];
+    if (!day) return;
+    const currentTaken = day.doses[doseIndex].taken;
+    const newChecked = !currentTaken;
+
+    // Optimistic update
     setCheckIns((prev) =>
-      prev.map((week) => {
-        if (week.id !== weekId) return week;
-        const day = week.checkIns[date];
-        if (!day) return week;
-        const newDoses = [...day.doses];
-        newDoses[doseIndex] = { ...newDoses[doseIndex], taken: !newDoses[doseIndex].taken };
+      prev.map((w) => {
+        if (w.id !== weekId) return w;
+        const d = w.checkIns[date];
+        if (!d) return w;
+        const newDoses = [...d.doses];
+        newDoses[doseIndex] = { ...newDoses[doseIndex], taken: newChecked };
         return {
-          ...week,
+          ...w,
           checkIns: {
-            ...week.checkIns,
-            [date]: { ...day, doses: newDoses },
+            ...w.checkIns,
+            [date]: { ...d, doses: newDoses },
           },
         };
       })
     );
+
+    // Save to backend
+    try {
+      const res = await fetch('/api/peptides', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ weekId, date, doseIndex, checked: newChecked }),
+      });
+      if (!res.ok) {
+        console.error('Failed to save dose check-in');
+        // Revert optimistic update on error
+        setCheckIns((prev) =>
+          prev.map((w) => {
+            if (w.id !== weekId) return w;
+            const d = w.checkIns[date];
+            if (!d) return w;
+            const newDoses = [...d.doses];
+            newDoses[doseIndex] = { ...newDoses[doseIndex], taken: currentTaken };
+            return {
+              ...w,
+              checkIns: {
+                ...w.checkIns,
+                [date]: { ...d, doses: newDoses },
+              },
+            };
+          })
+        );
+      }
+    } catch (err) {
+      console.error('Error saving dose check-in:', err);
+      // Revert optimistic update on error
+      setCheckIns((prev) =>
+        prev.map((w) => {
+          if (w.id !== weekId) return w;
+          const d = w.checkIns[date];
+          if (!d) return w;
+          const newDoses = [...d.doses];
+          newDoses[doseIndex] = { ...newDoses[doseIndex], taken: currentTaken };
+          return {
+            ...w,
+            checkIns: {
+              ...w.checkIns,
+              [date]: { ...d, doses: newDoses },
+            },
+          };
+        })
+      );
+    }
   };
 
   const getWeekProgress = (week: WeekCheckIn) => {

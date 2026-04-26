@@ -1,1 +1,60 @@
-[]
+{
+  "episodes": [
+    {
+      "id": "yt-FM5-R4VPArw",
+      "episodeNumber": 1,
+      "title": "Type",
+      "url": "https://www.youtube.com/watch?v=FM5-R4VPArw",
+      "channel": "Unknown",
+      "publishedDate": "2026-04-26",
+      "summary": "Video about OpenClaw from Unknown",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Auto-discovered: ",
+      "completed": false
+    },
+    {
+      "id": "yt-QGEvjMaSMmg",
+      "episodeNumber": 2,
+      "title": "Video QGEvjMaSMmg",
+      "url": "https://www.youtube.com/watch?v=QGEvjMaSMmg",
+      "channel": "Unknown",
+      "publishedDate": "2026-04-26",
+      "summary": "Video about OpenClaw from Unknown",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Auto-discovered: ",
+      "completed": false
+    },
+    {
+      "id": "yt-Uz3t2XljXuU",
+      "episodeNumber": 3,
+      "title": "Video Uz3t2XljXuU",
+      "url": "https://www.youtube.com/watch?v=Uz3t2XljXuU",
+      "channel": "Unknown",
+      "publishedDate": "2026-04-26",
+      "summary": "Video about OpenClaw from Unknown",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Auto-discovered: ",
+      "completed": false
+    }
+  ],
+  "last_updated": "2026-04-26T04:34:33.512428",
+  "total": 3
+}
