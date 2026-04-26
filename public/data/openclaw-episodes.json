@@ -1,8 +1,314 @@
 {
   "episodes": [
     {
-      "id": "yt-FM5-R4VPArw",
+      "id": "yt-js1dbmDIYmo",
       "episodeNumber": 1,
+      "title": "Anthropic Reversed the OpenClaw Subscription Ban",
+      "url": "https://www.youtube.com/watch?v=js1dbmDIYmo",
+      "channel": "Build In Public",
+      "publishedDate": "2026-04-26",
+      "summary": "Video about OpenClaw from Build In Public",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Auto-discovered: ",
+      "completed": false
+    },
+    {
+      "id": "yt-vXNOjHAcDMs",
+      "episodeNumber": 2,
+      "title": "OpenClaw 4.23 Just Changed AI Agents Forever",
+      "url": "https://www.youtube.com/watch?v=vXNOjHAcDMs",
+      "channel": "Julian Goldie SEO",
+      "publishedDate": "2026-04-26",
+      "summary": "Video about OpenClaw from Julian Goldie SEO",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Auto-discovered: ",
+      "completed": false
+    },
+    {
+      "id": "yt-mGcdxFPwBdU",
+      "episodeNumber": 3,
+      "title": "OpenClaw Full Tutorial: Set up your first AI employee!",
+      "url": "https://www.youtube.com/watch?v=mGcdxFPwBdU",
+      "channel": "Alex Finn",
+      "publishedDate": "2026-04-26",
+      "summary": "Video about OpenClaw from Alex Finn",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Auto-discovered: ",
+      "completed": false
+    },
+    {
+      "id": "yt-QvfqAMUJTT4",
+      "episodeNumber": 4,
+      "title": "3 Tools That Make OpenClaw Actually Useful",
+      "url": "https://www.youtube.com/watch?v=QvfqAMUJTT4",
+      "channel": "Sean Matthew",
+      "publishedDate": "2026-04-26",
+      "summary": "Video about OpenClaw from Sean Matthew",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Auto-discovered: ",
+      "completed": false
+    },
+    {
+      "id": "yt-4nqtyCSS7Fg",
+      "episodeNumber": 5,
+      "title": "OpenClaw 4.24: New AI Voice + Browser Updates",
+      "url": "https://www.youtube.com/watch?v=4nqtyCSS7Fg",
+      "channel": "Julian Goldie SEO",
+      "publishedDate": "2026-04-26",
+      "summary": "Video about OpenClaw from Julian Goldie SEO",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Auto-discovered: ",
+      "completed": false
+    },
+    {
+      "id": "yt-ssYt09bCgUY",
+      "episodeNumber": 6,
+      "title": "The wild rise of OpenClaw...",
+      "url": "https://www.youtube.com/watch?v=ssYt09bCgUY",
+      "channel": "Fireship",
+      "publishedDate": "2026-04-26",
+      "summary": "Video about OpenClaw from Fireship",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Auto-discovered: ",
+      "completed": false
+    },
+    {
+      "id": "yt-dEe9XBqzK10",
+      "episodeNumber": 7,
+      "title": "OpenClaw 4.22 AI Update Just Changed Everything",
+      "url": "https://www.youtube.com/watch?v=dEe9XBqzK10",
+      "channel": "Julian Goldie SEO",
+      "publishedDate": "2026-04-26",
+      "summary": "Video about OpenClaw from Julian Goldie SEO",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Auto-discovered: ",
+      "completed": false
+    },
+    {
+      "id": "yt-T-HZHO_PQPY",
+      "episodeNumber": 8,
+      "title": "OpenClaw......RIGHT NOW??? (it's not what you think)",
+      "url": "https://www.youtube.com/watch?v=T-HZHO_PQPY",
+      "channel": "NetworkChuck",
+      "publishedDate": "2026-04-26",
+      "summary": "Video about OpenClaw from NetworkChuck",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Auto-discovered: ",
+      "completed": false
+    },
+    {
+      "id": "yt-u4ydH-QvPeg",
+      "episodeNumber": 9,
+      "title": "OpenClaw Tutorial for Beginners - Crash Course",
+      "url": "https://www.youtube.com/watch?v=u4ydH-QvPeg",
+      "channel": "Adrian Twarog",
+      "publishedDate": "2026-04-26",
+      "summary": "Video about OpenClaw from Adrian Twarog",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Auto-discovered: ",
+      "completed": false
+    },
+    {
+      "id": "yt-Y3Qc4F3Gl1A",
+      "episodeNumber": 10,
+      "title": "OpenClaw 4.23 + GPT-5.5 AI Just Changed Everything",
+      "url": "https://www.youtube.com/watch?v=Y3Qc4F3Gl1A",
+      "channel": "Julian Goldie SEO",
+      "publishedDate": "2026-04-26",
+      "summary": "Video about OpenClaw from Julian Goldie SEO",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Auto-discovered: ",
+      "completed": false
+    },
+    {
+      "id": "yt-7rzYDM6vMtI",
+      "episodeNumber": 11,
+      "title": "How I Created OpenClaw, the Breakthrough AI Agent | Peter Steinberger | TED",
+      "url": "https://www.youtube.com/watch?v=7rzYDM6vMtI",
+      "channel": "TED",
+      "publishedDate": "2026-04-26",
+      "summary": "Video about OpenClaw from TED",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Auto-discovered: ",
+      "completed": false
+    },
+    {
+      "id": "yt-o65eztN8mVY",
+      "episodeNumber": 12,
+      "title": "OpenClaw 4.20 Just Changed AI Agents Forever",
+      "url": "https://www.youtube.com/watch?v=o65eztN8mVY",
+      "channel": "Julian Goldie SEO",
+      "publishedDate": "2026-04-26",
+      "summary": "Video about OpenClaw from Julian Goldie SEO",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Auto-discovered: ",
+      "completed": false
+    },
+    {
+      "id": "yt-st534T7-mdE",
+      "episodeNumber": 13,
+      "title": "The Ultimate Beginner\u2019s Guide to OpenClaw",
+      "url": "https://www.youtube.com/watch?v=st534T7-mdE",
+      "channel": "Metics Media",
+      "publishedDate": "2026-04-26",
+      "summary": "Video about OpenClaw from Metics Media",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Auto-discovered: ",
+      "completed": false
+    },
+    {
+      "id": "yt-knH6Jms4vSY",
+      "episodeNumber": 14,
+      "title": "OpenClaw Explained in 12 Minutes (for beginners)",
+      "url": "https://www.youtube.com/watch?v=knH6Jms4vSY",
+      "channel": "corbin",
+      "publishedDate": "2026-04-26",
+      "summary": "Video about OpenClaw from corbin",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Auto-discovered: ",
+      "completed": false
+    },
+    {
+      "id": "yt-dPoIuIvOPo8",
+      "episodeNumber": 15,
+      "title": "The ONLY OpenClaw Tutorial You Need 2026 - How To Use Open Claw For Beginners",
+      "url": "https://www.youtube.com/watch?v=dPoIuIvOPo8",
+      "channel": "Charlie Chang",
+      "publishedDate": "2026-04-26",
+      "summary": "Video about OpenClaw from Charlie Chang",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Auto-discovered: ",
+      "completed": false
+    },
+    {
+      "id": "yt-bSiMSSeno9g",
+      "episodeNumber": 16,
+      "title": "What Is OpenClaw? - Explained for Beginners",
+      "url": "https://www.youtube.com/watch?v=bSiMSSeno9g",
+      "channel": "Metics Media",
+      "publishedDate": "2026-04-26",
+      "summary": "Video about OpenClaw from Metics Media",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Auto-discovered: ",
+      "completed": false
+    },
+    {
+      "id": "yt-wYE1RIJfFhU",
+      "episodeNumber": 17,
+      "title": "Update To Openclaw 4.9 Immediately (URGENT)",
+      "url": "https://www.youtube.com/watch?v=wYE1RIJfFhU",
+      "channel": "Build In Public",
+      "publishedDate": "2026-04-26",
+      "summary": "Video about OpenClaw from Build In Public",
+      "keyTakeaways": [],
+      "skillsMentioned": [
+        "OpenClaw"
+      ],
+      "toolsCovered": [
+        "OpenClaw"
+      ],
+      "priscyllaTake": "Auto-discovered: ",
+      "completed": false
+    },
+    {
+      "id": "yt-FM5-R4VPArw",
+      "episodeNumber": 18,
       "title": "Type",
       "url": "https://www.youtube.com/watch?v=FM5-R4VPArw",
       "channel": "Unknown",
@@ -20,7 +326,7 @@
     },
     {
       "id": "yt-QGEvjMaSMmg",
-      "episodeNumber": 2,
+      "episodeNumber": 19,
       "title": "Video QGEvjMaSMmg",
       "url": "https://www.youtube.com/watch?v=QGEvjMaSMmg",
       "channel": "Unknown",
@@ -38,7 +344,7 @@
     },
     {
       "id": "yt-Uz3t2XljXuU",
-      "episodeNumber": 3,
+      "episodeNumber": 20,
       "title": "Video Uz3t2XljXuU",
       "url": "https://www.youtube.com/watch?v=Uz3t2XljXuU",
       "channel": "Unknown",
@@ -55,6 +361,6 @@
       "completed": false
     }
   ],
-  "last_updated": "2026-04-26T04:34:33.512428",
-  "total": 3
+  "last_updated": "2026-04-26T04:39:15.194237",
+  "total": 20
 }
