@@ -128,9 +128,10 @@ export default function UberEarningsPage() {
                         <td style={{ padding: "12px 16px", textAlign: "right", color: "#00f5d4", fontWeight: 600 }}>${e.earnings.toFixed(2)}</td>
                         <td style={{ padding: "12px 16px", textAlign: "right", color: "var(--text)" }}>{e.trips}</td>
                         <td style={{ padding: "12px 16px", textAlign: "right", color: "#fee440", fontWeight: 600 }}>${e.tips.toFixed(2)}</td>
-                        <td style={{ padding: "12px 16px", textAlign: "right", fontSize: "0.75rem", color: "var(--muted)" }}>
+                        <td style={{ padding: "12px 16px", textAlign: "right", color: "var(--text)" }}>{e.miles.toFixed(1)} mi</td>
+                        <td style={{ padding: "12px 16px", textAlign: "right", color: "#ff6b6b", fontWeight: 600 }}>${e.expenses.toFixed(2)}</td>
+                        <td style={{ padding: "12px 16px", textAlign: "right", color: "#51cf66", fontWeight: 600 }}>${e.netPayout.toFixed(2)}</td>
                           ${e.miles} mi
-                        </td>
                       </tr>
                     ))}
                   </tbody>
