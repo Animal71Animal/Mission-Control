@@ -106,18 +106,6 @@
     "owner": "animal"
   },
   {
-    "id": "T7",
-    "title": "Artist Spotify pages for Kade, Madison, Aria",
-    "notes": "Requires tracks first",
-    "category": "WLP",
-    "priority": "low",
-    "due_date": null,
-    "completed": false,
-    "created_at": "2026-03-29T18:08:01.783Z",
-    "completed_at": null,
-    "owner": "animal"
-  },
-  {
     "id": "T9",
     "title": "Make Tailscale + node auto-reconnect persistent",
     "notes": "Keepalive is hourly now but container restart still needs manual fix",
