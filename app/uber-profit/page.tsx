@@ -119,6 +119,8 @@ export default function UberEarningsPage() {
                       <th style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, color: "var(--text)" }}>Miles</th>
                       <th style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, color: "var(--text)" }}>Charging</th>
                       <th style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, color: "var(--text)" }}>Net</th>
+                      <th style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, color: "var(--text)" }}>Charging</th>
+                      <th style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, color: "var(--text)" }}>Net</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -129,7 +131,7 @@ export default function UberEarningsPage() {
                         <td style={{ padding: "12px 16px", textAlign: "right", color: "var(--text)" }}>{e.trips}</td>
                         <td style={{ padding: "12px 16px", textAlign: "right", color: "#fee440", fontWeight: 600 }}>${e.tips.toFixed(2)}</td>
                         <td style={{ padding: "12px 16px", textAlign: "right", fontSize: "0.75rem", color: "var(--muted)" }}>
-                          Base: ${e.basefare.toFixed(2)} | Surge: ${e.surge.toFixed(2)} | Promo: ${e.promotions.toFixed(2)}
+                          ${e.miles} mi
                         </td>
                       </tr>
                     ))}
