@@ -1,6 +1,22 @@
 {
   "weekly_summaries": [
     {
+      "period_start": "2026-04-26",
+      "period_end": "2026-04-26",
+      "total_earnings": 187.69,
+      "total_trips": 18,
+      "breakdown": {
+        "base_fare": 165.69,
+        "surge": 8.0,
+        "promotions": 0.0,
+        "tips": 15.0,
+        "expenses": 0.0
+      },
+      "notes": "18 Uber rides from Apr 26 Uber app earnings",
+      "scraped_at": "2026-04-27T08:06:00Z",
+      "source": "manual_entry"
+    },
+    {
       "period_start": "2026-04-20",
       "period_end": "2026-04-22",
       "total_earnings": 353.11,
