@@ -85,8 +85,8 @@
       "text": "Get computer screen fixed",
       "completed": false,
       "category": "IT",
-      "priority": "medium",
-      "due_date": null
+      "priority": "high",
+      "due_date": "2026-04-29"
     },
     {
       "id": "12",
@@ -185,5 +185,5 @@
       "due_date": "2026-05-05"
     }
   ],
-  "last_updated": "2026-04-28T09:38:53.781Z"
+  "last_updated": "2026-04-28T09:39:21.644Z"
 }
