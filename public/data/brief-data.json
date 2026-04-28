@@ -1,25 +1,29 @@
 {
-  "date": "2026-04-26",
-  "time_mdt": "10:00 AM",
+  "date": "2026-04-27",
+  "day": "Monday",
+  "time": "10:00 AM MDT",
   "weather": {
-    "temp_f": 43,
-    "feels_like_f": 39,
-    "conditions": "Overcast",
-    "high_f": 56,
-    "low_f": 36,
-    "humidity": 77
+    "temp": "45°F",
+    "feelsLike": "41°F",
+    "conditions": "Clear sky",
+    "high": "59°F",
+    "low": "36°F",
+    "humidity": "69%",
+    "wind": "3 mph"
   },
   "tasks": {
-    "open": 10,
+    "open": 16,
     "overdue": 1
   },
   "peptides": {
-    "status": "Week 0 restart",
-    "today": "No injections — rest day",
-    "next": "Mon Apr 27: Retatrutide 60u + Tesamorelin 30u"
+    "active": 2,
+    "today": [
+      "Tesamorelin 20 units @ 8:00 AM",
+      "Retatrutide 60 units @ 9:30 PM"
+    ],
+    "note": "Week 1 restart — full doses. HCG starts Tue Apr 29."
   },
-  "calendar": {
-    "events_today": 0
-  },
-  "wlp_priority": "T5 — TikTok handles / Postiz setup (5 accounts)"
+  "calendar": [],
+  "wlpFocus": "T7: Spotify pages for Kade, Madison, Aria — highest priority. Needs DistroKid + first tracks.",
+  "lastUpdated": "2026-04-27T16:00:00Z"
 }
