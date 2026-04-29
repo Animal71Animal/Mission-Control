@@ -92,7 +92,7 @@
             "peptideId": "peptide-hcg",
             "peptideName": "HCG",
             "time": "8:00 AM",
-            "taken": false,
+            "taken": true,
             "dose": "10 units (250 IU) — FIRST HCG SHOT"
           },
           {
