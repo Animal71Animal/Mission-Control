@@ -15,7 +15,6 @@ interface Exercise {
     movement: string;
     tips: string[];
     mistakes: string[];
-    image: string;
     videoUrl: string;
   };
 }
@@ -42,7 +41,6 @@ const EXERCISES: Exercise[] = [
       movement: "Pull the bar down to your upper chest. Drive elbows down and back. Squeeze shoulder blades together. Return slowly with control.",
       tips: ["Lean back slightly (10–15°)", "Pull with elbows, not hands", "Squeeze lats at the bottom", "Full stretch at the top"],
       mistakes: ["Pulling behind the neck", "Using body momentum", "Shrugging shoulders", "Half reps — not full stretch"],
-      image: "https://images.unsplash.com/photo-1603287681836-b174ce5074c2?w=400&h=250&fit=crop",
       videoUrl: "https://www.youtube.com/watch?v=CAwf7n6Luuc",
     },
   },
@@ -56,7 +54,6 @@ const EXERCISES: Exercise[] = [
       movement: "Press the handles forward until arms are nearly straight (don't lock elbows). Control the return — feel the stretch in your chest.",
       tips: ["Keep shoulder blades back and down", "Elbows at about 45° from body", "Feel the chest stretch at the bottom"],
       mistakes: ["Locking elbows at top", "Shrugging shoulders", "Bouncing off the chest", "Only doing partial reps"],
-      image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=250&fit=crop",
       videoUrl: "https://www.youtube.com/watch?v=2y6ntGVg4dw",
     },
   },
@@ -70,36 +67,33 @@ const EXERCISES: Exercise[] = [
       movement: "Extend your legs forward until fully straight. Pause and squeeze your quads for 1 second at the top. Lower slowly — count to 3 on the way down.",
       tips: ["Keep your back glued to the pad — don't arch", "Point toes slightly upward", "Control the negative — don't let the weight slam down"],
       mistakes: ["Using momentum / swinging", "Arching lower back", "Only doing half reps", "Letting weight drop uncontrolled"],
-      image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=250&fit=crop",
       videoUrl: "https://www.youtube.com/watch?v=8Jqof7zP9Tk",
     },
   },
   {
-    id: "seated-leg-curl",
-    name: "Seated Leg Curl",
-    sets: 3, reps: "12", muscle: "Hamstrings",
-    notes: "No swinging — slow and controlled",
+    id: "standing-tricep-pushdown",
+    name: "Standing Tricep Pushdown",
+    sets: 3, reps: "12", muscle: "Triceps",
+    notes: "Keep elbows locked at sides, push straight down",
     technique: {
-      setup: "Sit on the leg curl station. Position the roller pad just above your heels. Keep hips flat on the seat.",
-      movement: "Curl your heels down and back toward your glutes as far as possible. Squeeze hamstrings at the top. Lower slowly over 2–3 seconds.",
-      tips: ["Keep hips pressed into the seat", "Don't lift your butt", "Full range — curl all the way in"],
-      mistakes: ["Lifting hips off the seat", "Using momentum", "Partial range of motion", "Rushing the negative"],
-      image: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=400&h=250&fit=crop",
-      videoUrl: "https://www.youtube.com/watch?v=1Tq3QdYUuHs",
+      setup: "Stand facing the high pulley. Grip the lat pulldown bar with palms down, hands shoulder-width apart. Elbows tucked tight at your sides.",
+      movement: "Push the bar straight down until arms are fully extended. Squeeze triceps hard at the bottom. Return slowly — control the bar on the way up.",
+      tips: ["Elbows stay glued to your sides — don't let them flare", "Push down, not out", "Squeeze triceps at full extension", "Control the negative — 2 seconds up"],
+      mistakes: ["Flaring elbows out wide", "Using body momentum / leaning", "Partial reps — not full extension", "Letting bar snap back up"],
+      videoUrl: "https://www.youtube.com/watch?v=2-LAMcpMYDQ",
     },
   },
   {
-    id: "preacher-curl",
-    name: "Preacher Curl",
+    id: "standing-bicep-curl",
+    name: "Standing Bicep Curl",
     sets: 3, reps: "10–12", muscle: "Biceps",
-    notes: "No swinging, full extension at bottom",
+    notes: "No swinging, squeeze at top",
     technique: {
-      setup: "Sit at the preacher curl station. Rest your upper arms on the angled pad. Grip the bar/handles with palms up.",
-      movement: "Curl up by contracting biceps — only your forearms move. Squeeze at the top. Lower ALL the way down — full extension at bottom.",
-      tips: ["Upper arms stay glued to the pad", "No swinging or body English", "Full range — all the way down, all the way up", "Squeeze biceps at peak contraction"],
-      mistakes: ["Lifting elbows off the pad", "Swinging torso", "Partial reps — not full extension", "Using too much weight and cheating"],
-      image: "https://images.unsplash.com/photo-1583454155184-870a1f63aebc?w=400&h=250&fit=crop",
-      videoUrl: "https://www.youtube.com/watch?v=GydpcCcsWws",
+      setup: "Stand facing the low pulley. Grip the straight bar attachment with palms up, hands shoulder-width apart. Stand tall with chest up.",
+      movement: "Curl the bar up by contracting biceps. Keep elbows at your sides. Squeeze hard at the top. Lower slowly with full control.",
+      tips: ["No swinging — keep body still", "Elbows stay at your sides", "Full range — all the way down, all the way up", "Squeeze biceps at peak contraction"],
+      mistakes: ["Swinging torso for momentum", "Elbows drifting forward", "Partial reps — not full extension", "Using too much weight and cheating"],
+      videoUrl: "https://www.youtube.com/watch?v=ykJmrZ5v0Oo",
     },
   },
 ];
@@ -625,16 +619,6 @@ function ExerciseCard({
       {/* Technique Detail Panel */}
       {showDetail && (
         <div style={{ marginTop: 16, paddingTop: 16, borderTop: "1px solid var(--border)" }}>
-          {/* Image */}
-          <div style={{ marginBottom: 16, borderRadius: 10, overflow: "hidden", maxHeight: 200 }}>
-            <img
-              src={ex.technique.image}
-              alt={ex.name}
-              style={{ width: "100%", height: 200, objectFit: "cover", display: "block" }}
-              loading="lazy"
-            />
-          </div>
-
           <div style={{ display: "grid", gap: 14 }}>
             {/* Setup */}
             <div>
@@ -743,15 +727,6 @@ function ExerciseReferenceCard({ ex, idx }: { ex: Exercise; idx: number }) {
 
       {showDetail && (
         <div style={{ marginTop: 16, paddingTop: 16, borderTop: "1px solid var(--border)" }}>
-          <div style={{ marginBottom: 16, borderRadius: 10, overflow: "hidden", maxHeight: 200 }}>
-            <img
-              src={ex.technique.image}
-              alt={ex.name}
-              style={{ width: "100%", height: 200, objectFit: "cover", display: "block" }}
-              loading="lazy"
-            />
-          </div>
-
           <div style={{ display: "grid", gap: 14 }}>
             <div>
               <h5 style={{ fontSize: "0.8rem", fontWeight: 700, color: "#00f5d4", margin: "0 0 6px", textTransform: "uppercase" }}>
