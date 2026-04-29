@@ -59,7 +59,7 @@
     {
       "id": "8",
       "text": "Get sound back in Private Dance rooms",
-      "completed": true,
+      "completed": false,
       "category": "Audio",
       "priority": "high",
       "due_date": "2026-05-05"
@@ -85,8 +85,8 @@
       "text": "Get computer screen fixed",
       "completed": false,
       "category": "IT",
-      "priority": "high",
-      "due_date": "2026-04-29"
+      "priority": "medium",
+      "due_date": null
     },
     {
       "id": "12",
@@ -99,7 +99,7 @@
     {
       "id": "13",
       "text": "Look for flash drive of corporate video",
-      "completed": true,
+      "completed": false,
       "category": "Media",
       "priority": "low",
       "due_date": null
@@ -142,7 +142,7 @@
       "completed": false,
       "category": "Communication",
       "priority": "high",
-      "due_date": "2026-04-28"
+      "due_date": null
     },
     {
       "id": "19",
@@ -158,12 +158,12 @@
       "completed": false,
       "category": "Marketing",
       "priority": "high",
-      "due_date": "2026-04-28"
+      "due_date": "2026-05-05"
     },
     {
       "id": "21",
       "text": "Buy Fog Juice 4/1 gallon",
-      "completed": true,
+      "completed": false,
       "category": "Setup",
       "priority": "medium",
       "due_date": "2026-04-23"
@@ -185,5 +185,5 @@
       "due_date": "2026-05-05"
     }
   ],
-  "last_updated": "2026-04-28T09:59:21.754Z"
+  "last_updated": "2026-04-26T19:01:55.611Z"
 }
