@@ -442,6 +442,18 @@ export default function WorkoutPage() {
         </Card>
       )}
 
+      {/* Exercise Reference Library — always visible */}
+      <div style={{ marginTop: 32 }}>
+        <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "var(--text)", marginBottom: 12 }}>
+          📚 Exercise Reference
+        </h3>
+        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+          {EXERCISES.map((ex, idx) => (
+            <ExerciseReferenceCard key={ex.id} ex={ex} idx={idx} />
+          ))}
+        </div>
+      </div>
+
       {/* Weekly Schedule */}
       <div style={{ marginTop: 32 }}>
         <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "var(--text)", marginBottom: 12 }}>
@@ -497,6 +509,18 @@ export default function WorkoutPage() {
           <li>Exhale on the hard part, inhale on the return</li>
           <li>Log every session — progress is the best motivation</li>
         </ul>
+      </div>
+
+      {/* Exercise Reference Library — always visible */}
+      <div style={{ marginTop: 32 }}>
+        <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "var(--text)", marginBottom: 12 }}>
+          📚 Exercise Reference
+        </h3>
+        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+          {EXERCISES.map((ex, idx) => (
+            <ExerciseReferenceCard key={ex.id} ex={ex} idx={idx} />
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -674,6 +698,103 @@ function ExerciseCard({
             </div>
 
             {/* Mistakes */}
+            <div>
+              <h5 style={{ fontSize: "0.8rem", fontWeight: 700, color: "#f15b5b", margin: "0 0 6px", textTransform: "uppercase" }}>
+                ❌ Common Mistakes
+              </h5>
+              <ul style={{ margin: 0, paddingLeft: 18, color: "var(--text)", fontSize: "0.85rem", lineHeight: 1.7 }}>
+                {ex.technique.mistakes.map((m, i) => (
+                  <li key={i}>{m}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      )}
+    </Card>
+  );
+}
+
+// ─── Exercise Reference Card (read-only, always visible) ───
+function ExerciseReferenceCard({ ex, idx }: { ex: Exercise; idx: number }) {
+  const [showDetail, setShowDetail] = useState(false);
+
+  return (
+    <Card style={{ borderLeft: "3px solid var(--border)" }}>
+      <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
+        <div style={{
+          minWidth: 28, height: 28, borderRadius: "50%",
+          background: "var(--border)", color: "var(--muted)",
+          display: "flex", alignItems: "center", justifyContent: "center",
+          fontSize: "0.8rem", fontWeight: 700,
+        }}>
+          {idx + 1}
+        </div>
+        <div style={{ flex: 1 }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 4 }}>
+            <h4 style={{ fontSize: "0.95rem", fontWeight: 600, color: "var(--text)", margin: 0 }}>
+              {ex.name}
+            </h4>
+            <span style={{ fontSize: "0.7rem", color: "#9b5de5", background: "rgba(155,93,229,0.1)", padding: "2px 8px", borderRadius: 4 }}>
+              {ex.muscle}
+            </span>
+          </div>
+          <p style={{ fontSize: "0.75rem", color: "var(--muted)", margin: "0 0 10px" }}>{ex.notes}</p>
+
+          <button
+            onClick={() => setShowDetail((s) => !s)}
+            style={{
+              padding: "6px 14px", borderRadius: 6,
+              border: "1px solid var(--border)", background: "var(--bg)",
+              color: "var(--muted)", fontSize: "0.75rem", cursor: "pointer",
+            }}
+          >
+            {showDetail ? "▲ Hide Technique" : "▼ Show Technique"}
+          </button>
+        </div>
+      </div>
+
+      {showDetail && (
+        <div style={{ marginTop: 16, paddingTop: 16, borderTop: "1px solid var(--border)" }}>
+          <div style={{ marginBottom: 16, borderRadius: 10, overflow: "hidden", maxHeight: 200 }}>
+            <img
+              src={ex.technique.image}
+              alt={ex.name}
+              style={{ width: "100%", height: 200, objectFit: "cover", display: "block" }}
+              loading="lazy"
+            />
+          </div>
+
+          <div style={{ display: "grid", gap: 14 }}>
+            <div>
+              <h5 style={{ fontSize: "0.8rem", fontWeight: 700, color: "#00f5d4", margin: "0 0 6px", textTransform: "uppercase" }}>
+                🎯 Setup
+              </h5>
+              <p style={{ fontSize: "0.85rem", color: "var(--text)", margin: 0, lineHeight: 1.6 }}>
+                {ex.technique.setup}
+              </p>
+            </div>
+
+            <div>
+              <h5 style={{ fontSize: "0.8rem", fontWeight: 700, color: "#00f5d4", margin: "0 0 6px", textTransform: "uppercase" }}>
+                🔄 Movement
+              </h5>
+              <p style={{ fontSize: "0.85rem", color: "var(--text)", margin: 0, lineHeight: 1.6 }}>
+                {ex.technique.movement}
+              </p>
+            </div>
+
+            <div>
+              <h5 style={{ fontSize: "0.8rem", fontWeight: 700, color: "#9b5de5", margin: "0 0 6px", textTransform: "uppercase" }}>
+                ✅ Pro Tips
+              </h5>
+              <ul style={{ margin: 0, paddingLeft: 18, color: "var(--text)", fontSize: "0.85rem", lineHeight: 1.7 }}>
+                {ex.technique.tips.map((tip, i) => (
+                  <li key={i}>{tip}</li>
+                ))}
+              </ul>
+            </div>
+
             <div>
               <h5 style={{ fontSize: "0.8rem", fontWeight: 700, color: "#f15b5b", margin: "0 0 6px", textTransform: "uppercase" }}>
                 ❌ Common Mistakes
