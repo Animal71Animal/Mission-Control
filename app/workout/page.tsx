@@ -16,6 +16,7 @@ interface Exercise {
     tips: string[];
     mistakes: string[];
     image: string;
+    videoUrl: string;
   };
 }
 
@@ -42,6 +43,7 @@ const EXERCISES: Exercise[] = [
       tips: ["Keep your back glued to the pad — don't arch", "Point toes slightly upward", "Control the negative — don't let the weight slam down"],
       mistakes: ["Using momentum / swinging", "Arching lower back", "Only doing half reps", "Letting weight drop uncontrolled"],
       image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=250&fit=crop",
+      videoUrl: "https://www.youtube.com/watch?v=8Jqof7zP9Tk",
     },
   },
   {
@@ -55,6 +57,7 @@ const EXERCISES: Exercise[] = [
       tips: ["Keep hips pressed into the pad", "Don't lift your butt", "Full range — curl all the way in"],
       mistakes: ["Lifting hips off the pad", "Using momentum", "Partial range of motion", "Rushing the negative"],
       image: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=400&h=250&fit=crop",
+      videoUrl: "https://www.youtube.com/watch?v=1Tq3QdYUuHs",
     },
   },
   {
@@ -68,6 +71,7 @@ const EXERCISES: Exercise[] = [
       tips: ["Keep shoulder blades back and down", "Elbows at about 45° from body", "Feel the chest stretch at the bottom"],
       mistakes: ["Locking elbows at top", "Shrugging shoulders", "Bouncing off the chest", "Only doing partial reps"],
       image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=250&fit=crop",
+      videoUrl: "https://www.youtube.com/watch?v=2y6ntGVg4dw",
     },
   },
   {
@@ -81,6 +85,7 @@ const EXERCISES: Exercise[] = [
       tips: ["Lean back slightly (10–15°)", "Pull with elbows, not hands", "Squeeze lats at the bottom", "Full stretch at the top"],
       mistakes: ["Pulling behind the neck", "Using body momentum", "Shrugging shoulders", "Half reps — not full stretch"],
       image: "https://images.unsplash.com/photo-1603287681836-b174ce5074c2?w=400&h=250&fit=crop",
+      videoUrl: "https://www.youtube.com/watch?v=CAwf7n6Luuc",
     },
   },
   {
@@ -94,6 +99,7 @@ const EXERCISES: Exercise[] = [
       tips: ["Keep chest on the pad", "Pull low — toward belly button area", "Squeeze at the hold for 1 second", "Don't round shoulders forward"],
       mistakes: ["Flaring elbows out wide", "Rounding upper back", "Using momentum", "Not squeezing shoulder blades"],
       image: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=400&h=250&fit=crop",
+      videoUrl: "https://www.youtube.com/watch?v=GZbfZ033f74",
     },
   },
   {
@@ -107,6 +113,7 @@ const EXERCISES: Exercise[] = [
       tips: ["Keep a slight bend in elbows throughout", "Squeeze chest, not hands together", "Controlled tempo — 2 sec in, 3 sec out", "Don't overstretch at bottom"],
       mistakes: ["Locking elbows straight", "Using momentum to swing", "Not squeezing at center", "Going too deep and risking shoulder strain"],
       image: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&h=250&fit=crop",
+      videoUrl: "https://www.youtube.com/watch?v=Iwe6AmxVf7o",
     },
   },
   {
@@ -120,6 +127,7 @@ const EXERCISES: Exercise[] = [
       tips: ["Upper arms stay glued to the pad", "No swinging or body English", "Full range — all the way down, all the way up", "Squeeze biceps at peak contraction"],
       mistakes: ["Lifting elbows off the pad", "Swinging torso", "Partial reps — not full extension", "Using too much weight and cheating"],
       image: "https://images.unsplash.com/photo-1583454155184-870a1f63aebc?w=400&h=250&fit=crop",
+      videoUrl: "https://www.youtube.com/watch?v=GydpcCcsWws",
     },
   },
   {
@@ -133,6 +141,7 @@ const EXERCISES: Exercise[] = [
       tips: ["Focus on abs doing the work, not arms pulling", "Exhale fully on the crunch", "Short, controlled range — don't hyperextend", "Keep tension on abs throughout"],
       mistakes: ["Pulling with arms instead of crunching", "Going too far back and hyperextending", "Holding breath", "Using momentum / bouncing"],
       image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
+      videoUrl: "https://www.youtube.com/watch?v=0t6k8pP2AqE",
     },
   },
 ];
@@ -625,17 +634,33 @@ function ExerciseCard({
             ))}
           </div>
 
-          {/* Toggle technique */}
-          <button
-            onClick={() => setShowDetail((s) => !s)}
-            style={{
-              marginTop: 12, padding: "6px 14px", borderRadius: 6,
-              border: "1px solid var(--border)", background: "var(--bg)",
-              color: "var(--muted)", fontSize: "0.75rem", cursor: "pointer",
-            }}
-          >
-            {showDetail ? "▲ Hide Technique" : "▼ Show Technique"}
-          </button>
+          {/* Toggle technique + video */}
+          <div style={{ display: "flex", gap: 8, marginTop: 12 }}>
+            <button
+              onClick={() => setShowDetail((s) => !s)}
+              style={{
+                padding: "6px 14px", borderRadius: 6,
+                border: "1px solid var(--border)", background: "var(--bg)",
+                color: "var(--muted)", fontSize: "0.75rem", cursor: "pointer",
+              }}
+            >
+              {showDetail ? "▲ Hide Technique" : "▼ Show Technique"}
+            </button>
+            <a
+              href={ex.technique.videoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                padding: "6px 14px", borderRadius: 6,
+                border: "1px solid #f15b5b", background: "rgba(241,91,91,0.1)",
+                color: "#f15b5b", fontSize: "0.75rem", cursor: "pointer",
+                textDecoration: "none", fontWeight: 600,
+                display: "flex", alignItems: "center", gap: 4,
+              }}
+            >
+              ▶ Watch Demo
+            </a>
+          </div>
         </div>
       </div>
 
@@ -729,16 +754,32 @@ function ExerciseReferenceCard({ ex, idx }: { ex: Exercise; idx: number }) {
           </div>
           <p style={{ fontSize: "0.75rem", color: "var(--muted)", margin: "0 0 10px" }}>{ex.notes}</p>
 
-          <button
-            onClick={() => setShowDetail((s) => !s)}
-            style={{
-              padding: "6px 14px", borderRadius: 6,
-              border: "1px solid var(--border)", background: "var(--bg)",
-              color: "var(--muted)", fontSize: "0.75rem", cursor: "pointer",
-            }}
-          >
-            {showDetail ? "▲ Hide Technique" : "▼ Show Technique"}
-          </button>
+          <div style={{ display: "flex", gap: 8 }}>
+            <button
+              onClick={() => setShowDetail((s) => !s)}
+              style={{
+                padding: "6px 14px", borderRadius: 6,
+                border: "1px solid var(--border)", background: "var(--bg)",
+                color: "var(--muted)", fontSize: "0.75rem", cursor: "pointer",
+              }}
+            >
+              {showDetail ? "▲ Hide Technique" : "▼ Show Technique"}
+            </button>
+            <a
+              href={ex.technique.videoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                padding: "6px 14px", borderRadius: 6,
+                border: "1px solid #f15b5b", background: "rgba(241,91,91,0.1)",
+                color: "#f15b5b", fontSize: "0.75rem", cursor: "pointer",
+                textDecoration: "none", fontWeight: 600,
+                display: "flex", alignItems: "center", gap: 4,
+              }}
+            >
+              ▶ Watch Demo
+            </a>
+          </div>
         </div>
       </div>
 
