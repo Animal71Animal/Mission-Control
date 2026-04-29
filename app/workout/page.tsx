@@ -10,6 +10,13 @@ interface Exercise {
   reps: string;
   muscle: string;
   notes: string;
+  technique: {
+    setup: string;
+    movement: string;
+    tips: string[];
+    mistakes: string[];
+    image: string;
+  };
 }
 
 interface WorkoutLog {
@@ -24,14 +31,110 @@ interface WorkoutData {
 }
 
 const EXERCISES: Exercise[] = [
-  { id: "leg-ext", name: "Leg Extension", sets: 3, reps: "12", muscle: "Quads", notes: "Squeeze at top, control down" },
-  { id: "leg-curl", name: "Leg Curl", sets: 3, reps: "12", muscle: "Hamstrings", notes: "No swinging — slow and controlled" },
-  { id: "chest-press", name: "Chest Press", sets: 3, reps: "10–12", muscle: "Chest", notes: "Full range, don't lock elbows" },
-  { id: "lat-pull", name: "Lat Pulldown", sets: 3, reps: "10–12", muscle: "Back", notes: "Pull to upper chest, squeeze shoulder blades" },
-  { id: "low-row", name: "Low Row", sets: 3, reps: "12", muscle: "Back", notes: "Elbows close to body, squeeze back" },
-  { id: "pec-fly", name: "Pec Fly", sets: 2, reps: "12", muscle: "Chest", notes: "Gentle stretch, squeeze chest" },
-  { id: "preacher-curl", name: "Preacher Curl", sets: 2, reps: "12", muscle: "Biceps", notes: "No swinging, full extension at bottom" },
-  { id: "ab-crunch", name: "Ab Crunch", sets: 3, reps: "15", muscle: "Core", notes: "Exhale on crunch, hold 1 sec" },
+  {
+    id: "leg-ext",
+    name: "Leg Extension",
+    sets: 3, reps: "12", muscle: "Quads",
+    notes: "Squeeze at top, control down",
+    technique: {
+      setup: "Sit on the machine with back flat against the pad. Adjust the leg pad so it rests on top of your ankles/shins. Grip the side handles for stability.",
+      movement: "Extend your legs forward until fully straight. Pause and squeeze your quads for 1 second at the top. Lower slowly — count to 3 on the way down.",
+      tips: ["Keep your back glued to the pad — don't arch", "Point toes slightly upward", "Control the negative — don't let the weight slam down"],
+      mistakes: ["Using momentum / swinging", "Arching lower back", "Only doing half reps", "Letting weight drop uncontrolled"],
+      image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=250&fit=crop",
+    },
+  },
+  {
+    id: "leg-curl",
+    name: "Leg Curl",
+    sets: 3, reps: "12", muscle: "Hamstrings",
+    notes: "No swinging — slow and controlled",
+    technique: {
+      setup: "Lie face down on the bench. Position the roller pad just above your heels. Keep hips flat on the pad.",
+      movement: "Curl your heels toward your glutes as far as possible. Squeeze hamstrings at the top. Lower slowly over 2–3 seconds.",
+      tips: ["Keep hips pressed into the pad", "Don't lift your butt", "Full range — curl all the way in"],
+      mistakes: ["Lifting hips off the pad", "Using momentum", "Partial range of motion", "Rushing the negative"],
+      image: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=400&h=250&fit=crop",
+    },
+  },
+  {
+    id: "chest-press",
+    name: "Chest Press",
+    sets: 3, reps: "10–12", muscle: "Chest",
+    notes: "Full range, don't lock elbows",
+    technique: {
+      setup: "Sit with back flat against the pad. Grip the handles at chest height. Feet flat on the floor.",
+      movement: "Press the handles forward until arms are nearly straight (don't lock elbows). Control the return — feel the stretch in your chest.",
+      tips: ["Keep shoulder blades back and down", "Elbows at about 45° from body", "Feel the chest stretch at the bottom"],
+      mistakes: ["Locking elbows at top", "Shrugging shoulders", "Bouncing off the chest", "Only doing partial reps"],
+      image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=250&fit=crop",
+    },
+  },
+  {
+    id: "lat-pull",
+    name: "Lat Pulldown",
+    sets: 3, reps: "10–12", muscle: "Back",
+    notes: "Pull to upper chest, squeeze shoulder blades",
+    technique: {
+      setup: "Sit facing the machine. Adjust thigh pad to lock you in place. Grip the bar slightly wider than shoulder-width.",
+      movement: "Pull the bar down to your upper chest. Drive elbows down and back. Squeeze shoulder blades together. Return slowly with control.",
+      tips: ["Lean back slightly (10–15°)", "Pull with elbows, not hands", "Squeeze lats at the bottom", "Full stretch at the top"],
+      mistakes: ["Pulling behind the neck", "Using body momentum", "Shrugging shoulders", "Half reps — not full stretch"],
+      image: "https://images.unsplash.com/photo-1603287681836-b174ce5074c2?w=400&h=250&fit=crop",
+    },
+  },
+  {
+    id: "low-row",
+    name: "Low Row",
+    sets: 3, reps: "12", muscle: "Back",
+    notes: "Elbows close to body, squeeze back",
+    technique: {
+      setup: "Sit facing the machine, chest against the pad. Grip the handles with palms facing each other.",
+      movement: "Pull handles toward your lower ribs. Keep elbows tucked close to your sides. Squeeze shoulder blades back. Return with control.",
+      tips: ["Keep chest on the pad", "Pull low — toward belly button area", "Squeeze at the hold for 1 second", "Don't round shoulders forward"],
+      mistakes: ["Flaring elbows out wide", "Rounding upper back", "Using momentum", "Not squeezing shoulder blades"],
+      image: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=400&h=250&fit=crop",
+    },
+  },
+  {
+    id: "pec-fly",
+    name: "Pec Fly",
+    sets: 2, reps: "12", muscle: "Chest",
+    notes: "Gentle stretch, squeeze chest",
+    technique: {
+      setup: "Sit with back flat. Grip the handles with elbows slightly bent. Arms should be out to the sides at chest height.",
+      movement: "Bring handles together in front of your chest. Squeeze your pecs hard. Return slowly — feel the stretch, but don't go past comfortable range.",
+      tips: ["Keep a slight bend in elbows throughout", "Squeeze chest, not hands together", "Controlled tempo — 2 sec in, 3 sec out", "Don't overstretch at bottom"],
+      mistakes: ["Locking elbows straight", "Using momentum to swing", "Not squeezing at center", "Going too deep and risking shoulder strain"],
+      image: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&h=250&fit=crop",
+    },
+  },
+  {
+    id: "preacher-curl",
+    name: "Preacher Curl",
+    sets: 2, reps: "12", muscle: "Biceps",
+    notes: "No swinging, full extension at bottom",
+    technique: {
+      setup: "Sit at the preacher curl station. Rest your upper arms on the angled pad. Grip the bar/handles with palms up.",
+      movement: "Curl up by contracting biceps — only your forearms move. Squeeze at the top. Lower ALL the way down — full extension at bottom.",
+      tips: ["Upper arms stay glued to the pad", "No swinging or body English", "Full range — all the way down, all the way up", "Squeeze biceps at peak contraction"],
+      mistakes: ["Lifting elbows off the pad", "Swinging torso", "Partial reps — not full extension", "Using too much weight and cheating"],
+      image: "https://images.unsplash.com/photo-1583454155184-870a1f63aebc?w=400&h=250&fit=crop",
+    },
+  },
+  {
+    id: "ab-crunch",
+    name: "Ab Crunch",
+    sets: 3, reps: "15", muscle: "Core",
+    notes: "Exhale on crunch, hold 1 sec",
+    technique: {
+      setup: "Sit facing the machine. Grip the handles above your head. Keep lower back against the pad.",
+      movement: "Crunch forward by contracting abs — pull ribcage toward hips. Exhale hard during the crunch. Hold the squeeze for 1 second. Return slowly.",
+      tips: ["Focus on abs doing the work, not arms pulling", "Exhale fully on the crunch", "Short, controlled range — don't hyperextend", "Keep tension on abs throughout"],
+      mistakes: ["Pulling with arms instead of crunching", "Going too far back and hyperextending", "Holding breath", "Using momentum / bouncing"],
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
+    },
+  },
 ];
 
 const WEEKLY_STRUCTURE = [
@@ -308,119 +411,18 @@ export default function WorkoutPage() {
             const exComplete = exChecked.every(Boolean);
 
             return (
-              <Card
+              <ExerciseCard
                 key={ex.id}
-                style={{
-                  borderLeft: exComplete ? "3px solid #00f5d4" : "3px solid var(--border)",
-                  opacity: exComplete ? 0.7 : 1,
-                }}
-              >
-                <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
-                  <div style={{
-                    minWidth: 28,
-                    height: 28,
-                    borderRadius: "50%",
-                    background: exComplete ? "#00f5d4" : "var(--border)",
-                    color: exComplete ? "#000" : "var(--muted)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontSize: "0.8rem",
-                    fontWeight: 700,
-                  }}>
-                    {idx + 1}
-                  </div>
-                  <div style={{ flex: 1 }}>
-                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 4 }}>
-                      <h4 style={{ fontSize: "0.95rem", fontWeight: 600, color: "var(--text)", margin: 0 }}>
-                        {ex.name}
-                      </h4>
-                      <span style={{ fontSize: "0.7rem", color: "#9b5de5", background: "rgba(155,93,229,0.1)", padding: "2px 8px", borderRadius: 4 }}>
-                        {ex.muscle}
-                      </span>
-                    </div>
-                    <p style={{ fontSize: "0.75rem", color: "var(--muted)", margin: "0 0 10px" }}>{ex.notes}</p>
-
-                    {/* Weight Input */}
-                    <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
-                      <span style={{ fontSize: "0.8rem", color: "var(--muted)" }}>Weight (plates):</span>
-                      <input
-                        type="number"
-                        value={exWeight || ""}
-                        onChange={(e) => setWeight(ex.id, parseInt(e.target.value) || 0)}
-                        placeholder="0"
-                        style={{
-                          width: 60,
-                          padding: "4px 8px",
-                          borderRadius: 6,
-                          border: "1px solid var(--border)",
-                          background: "var(--bg)",
-                          color: "var(--text)",
-                          fontSize: "0.85rem",
-                        }}
-                      />
-                    </div>
-
-                    {/* Sets */}
-                    <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                      {Array.from({ length: ex.sets }).map((_, setIdx) => (
-                        <div
-                          key={setIdx}
-                          onClick={() => toggleSet(ex.id, setIdx)}
-                          style={{
-                            display: "flex",
-                            alignItems: "center",
-                            gap: 6,
-                            padding: "6px 10px",
-                            borderRadius: 8,
-                            border: `1px solid ${exChecked[setIdx] ? "#00f5d4" : "var(--border)"}`,
-                            background: exChecked[setIdx] ? "rgba(0,245,212,0.1)" : "var(--bg)",
-                            cursor: "pointer",
-                            transition: "all 0.15s",
-                          }}
-                        >
-                          <div style={{
-                            width: 16,
-                            height: 16,
-                            borderRadius: 4,
-                            border: `2px solid ${exChecked[setIdx] ? "#00f5d4" : "var(--muted)"}`,
-                            background: exChecked[setIdx] ? "#00f5d4" : "transparent",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                          }}>
-                            {exChecked[setIdx] && <span style={{ fontSize: "0.7rem", color: "#000" }}>✓</span>}
-                          </div>
-                          <span style={{ fontSize: "0.8rem", color: "var(--text)", fontWeight: 500 }}>
-                            Set {setIdx + 1}
-                          </span>
-                          <input
-                            type="number"
-                            value={exReps[setIdx] || ""}
-                            onChange={(e) => {
-                              e.stopPropagation();
-                              setReps(ex.id, setIdx, parseInt(e.target.value) || 0);
-                            }}
-                            onClick={(e) => e.stopPropagation()}
-                            placeholder={ex.reps}
-                            style={{
-                              width: 40,
-                              padding: "2px 6px",
-                              borderRadius: 4,
-                              border: "1px solid var(--border)",
-                              background: "var(--bg)",
-                              color: "var(--text)",
-                              fontSize: "0.75rem",
-                              textAlign: "center",
-                            }}
-                          />
-                          <span style={{ fontSize: "0.7rem", color: "var(--muted)" }}>reps</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </Card>
+                ex={ex}
+                idx={idx}
+                exChecked={exChecked}
+                exReps={exReps}
+                exWeight={exWeight}
+                exComplete={exComplete}
+                onToggleSet={(setIdx) => toggleSet(ex.id, setIdx)}
+                onSetReps={(setIdx, val) => setReps(ex.id, setIdx, val)}
+                onSetWeight={(val) => setWeight(ex.id, val)}
+              />
             );
           })}
         </div>
@@ -497,5 +499,194 @@ export default function WorkoutPage() {
         </ul>
       </div>
     </div>
+  );
+}
+
+// ─── Exercise Card Component ───
+function ExerciseCard({
+  ex,
+  idx,
+  exChecked,
+  exReps,
+  exWeight,
+  exComplete,
+  onToggleSet,
+  onSetReps,
+  onSetWeight,
+}: {
+  ex: Exercise;
+  idx: number;
+  exChecked: boolean[];
+  exReps: number[];
+  exWeight: number;
+  exComplete: boolean;
+  onToggleSet: (setIdx: number) => void;
+  onSetReps: (setIdx: number, val: number) => void;
+  onSetWeight: (val: number) => void;
+}) {
+  const [showDetail, setShowDetail] = useState(false);
+
+  return (
+    <Card
+      style={{
+        borderLeft: exComplete ? "3px solid #00f5d4" : "3px solid var(--border)",
+        opacity: exComplete ? 0.7 : 1,
+      }}
+    >
+      {/* Header row */}
+      <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
+        <div style={{
+          minWidth: 28, height: 28, borderRadius: "50%",
+          background: exComplete ? "#00f5d4" : "var(--border)",
+          color: exComplete ? "#000" : "var(--muted)",
+          display: "flex", alignItems: "center", justifyContent: "center",
+          fontSize: "0.8rem", fontWeight: 700,
+        }}>
+          {idx + 1}
+        </div>
+        <div style={{ flex: 1 }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 4 }}>
+            <h4 style={{ fontSize: "0.95rem", fontWeight: 600, color: "var(--text)", margin: 0 }}>
+              {ex.name}
+            </h4>
+            <span style={{ fontSize: "0.7rem", color: "#9b5de5", background: "rgba(155,93,229,0.1)", padding: "2px 8px", borderRadius: 4 }}>
+              {ex.muscle}
+            </span>
+          </div>
+          <p style={{ fontSize: "0.75rem", color: "var(--muted)", margin: "0 0 10px" }}>{ex.notes}</p>
+
+          {/* Weight Input */}
+          <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
+            <span style={{ fontSize: "0.8rem", color: "var(--muted)" }}>Weight (plates):</span>
+            <input
+              type="number"
+              value={exWeight || ""}
+              onChange={(e) => onSetWeight(parseInt(e.target.value) || 0)}
+              placeholder="0"
+              style={{
+                width: 60, padding: "4px 8px", borderRadius: 6,
+                border: "1px solid var(--border)", background: "var(--bg)",
+                color: "var(--text)", fontSize: "0.85rem",
+              }}
+            />
+          </div>
+
+          {/* Sets */}
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+            {Array.from({ length: ex.sets }).map((_, setIdx) => (
+              <div
+                key={setIdx}
+                onClick={() => onToggleSet(setIdx)}
+                style={{
+                  display: "flex", alignItems: "center", gap: 6,
+                  padding: "6px 10px", borderRadius: 8,
+                  border: `1px solid ${exChecked[setIdx] ? "#00f5d4" : "var(--border)"}`,
+                  background: exChecked[setIdx] ? "rgba(0,245,212,0.1)" : "var(--bg)",
+                  cursor: "pointer", transition: "all 0.15s",
+                }}
+              >
+                <div style={{
+                  width: 16, height: 16, borderRadius: 4,
+                  border: `2px solid ${exChecked[setIdx] ? "#00f5d4" : "var(--muted)"}`,
+                  background: exChecked[setIdx] ? "#00f5d4" : "transparent",
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                }}>
+                  {exChecked[setIdx] && <span style={{ fontSize: "0.7rem", color: "#000" }}>✓</span>}
+                </div>
+                <span style={{ fontSize: "0.8rem", color: "var(--text)", fontWeight: 500 }}>
+                  Set {setIdx + 1}
+                </span>
+                <input
+                  type="number"
+                  value={exReps[setIdx] || ""}
+                  onChange={(e) => { e.stopPropagation(); onSetReps(setIdx, parseInt(e.target.value) || 0); }}
+                  onClick={(e) => e.stopPropagation()}
+                  placeholder={ex.reps}
+                  style={{
+                    width: 40, padding: "2px 6px", borderRadius: 4,
+                    border: "1px solid var(--border)", background: "var(--bg)",
+                    color: "var(--text)", fontSize: "0.75rem", textAlign: "center",
+                  }}
+                />
+                <span style={{ fontSize: "0.7rem", color: "var(--muted)" }}>reps</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Toggle technique */}
+          <button
+            onClick={() => setShowDetail((s) => !s)}
+            style={{
+              marginTop: 12, padding: "6px 14px", borderRadius: 6,
+              border: "1px solid var(--border)", background: "var(--bg)",
+              color: "var(--muted)", fontSize: "0.75rem", cursor: "pointer",
+            }}
+          >
+            {showDetail ? "▲ Hide Technique" : "▼ Show Technique"}
+          </button>
+        </div>
+      </div>
+
+      {/* Technique Detail Panel */}
+      {showDetail && (
+        <div style={{ marginTop: 16, paddingTop: 16, borderTop: "1px solid var(--border)" }}>
+          {/* Image */}
+          <div style={{ marginBottom: 16, borderRadius: 10, overflow: "hidden", maxHeight: 200 }}>
+            <img
+              src={ex.technique.image}
+              alt={ex.name}
+              style={{ width: "100%", height: 200, objectFit: "cover", display: "block" }}
+              loading="lazy"
+            />
+          </div>
+
+          <div style={{ display: "grid", gap: 14 }}>
+            {/* Setup */}
+            <div>
+              <h5 style={{ fontSize: "0.8rem", fontWeight: 700, color: "#00f5d4", margin: "0 0 6px", textTransform: "uppercase" }}>
+                🎯 Setup
+              </h5>
+              <p style={{ fontSize: "0.85rem", color: "var(--text)", margin: 0, lineHeight: 1.6 }}>
+                {ex.technique.setup}
+              </p>
+            </div>
+
+            {/* Movement */}
+            <div>
+              <h5 style={{ fontSize: "0.8rem", fontWeight: 700, color: "#00f5d4", margin: "0 0 6px", textTransform: "uppercase" }}>
+                🔄 Movement
+              </h5>
+              <p style={{ fontSize: "0.85rem", color: "var(--text)", margin: 0, lineHeight: 1.6 }}>
+                {ex.technique.movement}
+              </p>
+            </div>
+
+            {/* Tips */}
+            <div>
+              <h5 style={{ fontSize: "0.8rem", fontWeight: 700, color: "#9b5de5", margin: "0 0 6px", textTransform: "uppercase" }}>
+                ✅ Pro Tips
+              </h5>
+              <ul style={{ margin: 0, paddingLeft: 18, color: "var(--text)", fontSize: "0.85rem", lineHeight: 1.7 }}>
+                {ex.technique.tips.map((tip, i) => (
+                  <li key={i}>{tip}</li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Mistakes */}
+            <div>
+              <h5 style={{ fontSize: "0.8rem", fontWeight: 700, color: "#f15b5b", margin: "0 0 6px", textTransform: "uppercase" }}>
+                ❌ Common Mistakes
+              </h5>
+              <ul style={{ margin: 0, paddingLeft: 18, color: "var(--text)", fontSize: "0.85rem", lineHeight: 1.7 }}>
+                {ex.technique.mistakes.map((m, i) => (
+                  <li key={i}>{m}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      )}
+    </Card>
   );
 }
