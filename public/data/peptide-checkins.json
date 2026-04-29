@@ -111,7 +111,7 @@
             "peptideId": "peptide-tesamorelin",
             "peptideName": "Tesamorelin",
             "time": "8:00 AM",
-            "taken": false,
+            "taken": true,
             "dose": "30 units (1mg)"
           }
         ]
