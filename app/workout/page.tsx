@@ -18,6 +18,11 @@ interface WorkoutLog {
   exercises: Record<string, { weight: number; repsDone: number[]; completed: boolean[] }>;
 }
 
+interface WorkoutData {
+  logs: Record<string, WorkoutLog>;
+  weights: Record<string, number>;
+}
+
 const EXERCISES: Exercise[] = [
   { id: "leg-ext", name: "Leg Extension", sets: 3, reps: "12", muscle: "Quads", notes: "Squeeze at top, control down" },
   { id: "leg-curl", name: "Leg Curl", sets: 3, reps: "12", muscle: "Hamstrings", notes: "No swinging — slow and controlled" },
@@ -53,46 +58,50 @@ export default function WorkoutPage() {
   const [repsDone, setRepsDone] = useState<Record<string, number[]>>({});
   const [checked, setChecked] = useState<Record<string, boolean[]>>({});
   const [todayComplete, setTodayComplete] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [saveStatus, setSaveStatus] = useState("");
 
   const todayKey = getTodayKey();
   const todayDay = getDayName();
   const todayPlan = WEEKLY_STRUCTURE.find((d) => d.day === todayDay);
 
-  // Load from localStorage on mount
+  // Load from GitHub API on mount
   useEffect(() => {
-    const savedLogs = localStorage.getItem("workout-logs");
-    const savedWeights = localStorage.getItem("workout-weights");
-    if (savedLogs) {
-      try {
-        const parsed = JSON.parse(savedLogs);
-        setLogs(parsed);
-        if (parsed[todayKey]) {
-          setWeights(parsed[todayKey].exercises);
+    fetch("/api/workout")
+      .then((res) => res.json())
+      .then((data: WorkoutData) => {
+        setLogs(data.logs || {});
+        setWeights(data.weights || {});
+
+        // Restore today's session if it exists
+        if (data.logs && data.logs[todayKey]) {
+          const todayLog = data.logs[todayKey];
           const r: Record<string, number[]> = {};
           const c: Record<string, boolean[]> = {};
-          Object.entries(parsed[todayKey].exercises).forEach(([id, data]: [string, any]) => {
-            r[id] = data.repsDone || new Array(EXERCISES.find((e) => e.id === id)?.sets || 3).fill(0);
-            c[id] = data.completed || new Array(EXERCISES.find((e) => e.id === id)?.sets || 3).fill(false);
+          Object.entries(todayLog.exercises).forEach(([id, exData]: [string, any]) => {
+            r[id] = exData.repsDone || new Array(EXERCISES.find((e) => e.id === id)?.sets || 3).fill(0);
+            c[id] = exData.completed || new Array(EXERCISES.find((e) => e.id === id)?.sets || 3).fill(false);
           });
           setRepsDone(r);
           setChecked(c);
-          setTodayComplete(parsed[todayKey].completed);
+          setTodayComplete(todayLog.completed);
         }
-      } catch {}
-    }
-    if (savedWeights) {
-      try {
-        setWeights(JSON.parse(savedWeights));
-      } catch {}
-    }
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
   }, []);
 
-  // Save to localStorage
+  // Auto-save to GitHub when state changes (debounced)
   useEffect(() => {
-    localStorage.setItem("workout-weights", JSON.stringify(weights));
-  }, [weights]);
+    const timer = setTimeout(() => {
+      if (Object.keys(checked).length > 0 || Object.keys(repsDone).length > 0) {
+        syncToGitHub();
+      }
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, [checked, repsDone, weights]);
 
-  const saveLog = (complete: boolean) => {
+  const syncToGitHub = async () => {
     const exerciseData: Record<string, any> = {};
     EXERCISES.forEach((ex) => {
       exerciseData[ex.id] = {
@@ -101,15 +110,46 @@ export default function WorkoutPage() {
         completed: checked[ex.id] || new Array(ex.sets).fill(false),
       };
     });
-    const newLog: WorkoutLog = {
-      date: todayKey,
-      completed: complete,
-      exercises: exerciseData,
-    };
+
+    try {
+      await fetch("/api/workout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ date: todayKey, completed: todayComplete, exercises: exerciseData }),
+      });
+      setSaveStatus("Saved");
+      setTimeout(() => setSaveStatus(""), 2000);
+    } catch {
+      setSaveStatus("Save failed");
+    }
+  };
+
+  const saveLog = async (complete: boolean) => {
+    const exerciseData: Record<string, any> = {};
+    EXERCISES.forEach((ex) => {
+      exerciseData[ex.id] = {
+        weight: weights[ex.id] || 0,
+        repsDone: repsDone[ex.id] || new Array(ex.sets).fill(0),
+        completed: checked[ex.id] || new Array(ex.sets).fill(false),
+      };
+    });
+
+    const newLog: WorkoutLog = { date: todayKey, completed: complete, exercises: exerciseData };
     const updated = { ...logs, [todayKey]: newLog };
     setLogs(updated);
-    localStorage.setItem("workout-logs", JSON.stringify(updated));
     setTodayComplete(complete);
+
+    try {
+      await fetch("/api/workout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ date: todayKey, completed: complete, exercises: exerciseData }),
+      });
+      setSaveStatus(complete ? "Workout saved!" : "Updated");
+      setTimeout(() => setSaveStatus(""), 2000);
+    } catch {
+      setSaveStatus("Save failed");
+    }
   };
 
   const toggleSet = (exId: string, setIndex: number) => {
@@ -143,10 +183,8 @@ export default function WorkoutPage() {
     const d = new Date();
     while (true) {
       const key = d.toISOString().split("T")[0];
-      if (logs[key]?.completed) {
-        s++;
-        d.setDate(d.getDate() - 1);
-      } else break;
+      if (logs[key]?.completed) { s++; d.setDate(d.getDate() - 1); }
+      else break;
     }
     return s;
   })();
@@ -166,13 +204,29 @@ export default function WorkoutPage() {
     return count;
   })();
 
+  if (loading) {
+    return (
+      <div>
+        <h1 style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)" }}>🏋️ Workout Tracker</h1>
+        <p style={{ color: "var(--muted)", marginTop: 20 }}>Loading...</p>
+      </div>
+    );
+  }
+
   return (
     <div>
       {/* Header */}
       <div style={{ marginBottom: 24 }}>
-        <h1 style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)", marginBottom: 8 }}>
-          🏋️ Workout Tracker
-        </h1>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <h1 style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)", marginBottom: 8 }}>
+            🏋️ Workout Tracker
+          </h1>
+          {saveStatus && (
+            <span style={{ fontSize: "0.75rem", color: saveStatus.includes("failed") ? "#f15b5b" : "#00f5d4", fontWeight: 600 }}>
+              {saveStatus}
+            </span>
+          )}
+        </div>
         <p style={{ color: "var(--muted)", fontSize: "0.9rem" }}>
           Marcy MP-2500 — Full-body beginner routine
         </p>
