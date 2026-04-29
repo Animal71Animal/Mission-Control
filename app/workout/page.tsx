@@ -442,18 +442,6 @@ export default function WorkoutPage() {
         </Card>
       )}
 
-      {/* Exercise Reference Library — always visible */}
-      <div style={{ marginTop: 32 }}>
-        <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "var(--text)", marginBottom: 12 }}>
-          📚 Exercise Reference
-        </h3>
-        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-          {EXERCISES.map((ex, idx) => (
-            <ExerciseReferenceCard key={ex.id} ex={ex} idx={idx} />
-          ))}
-        </div>
-      </div>
-
       {/* Weekly Schedule */}
       <div style={{ marginTop: 32 }}>
         <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "var(--text)", marginBottom: 12 }}>
