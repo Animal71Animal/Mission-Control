@@ -4,12 +4,11 @@
     "title": "Change post office address",
     "category": "Personal",
     "priority": "high",
-    "completed": true,
+    "completed": false,
     "created_at": "2026-04-14T06:59:00.000Z",
     "owner": "animal",
     "notes": null,
-    "due_date": "2026-04-22",
-    "completed_at": "2026-04-28T09:44:04.243Z"
+    "due_date": "2026-04-22"
   },
   {
     "id": "pt-1775686800001",
@@ -36,10 +35,9 @@
     "title": "Order Fog Juice",
     "category": "Work",
     "priority": "medium",
-    "completed": true,
+    "completed": false,
     "createdAt": "2026-03-30T04:06:16.600Z",
-    "owner": "animal",
-    "completed_at": "2026-04-28T09:44:05.975Z"
+    "owner": "animal"
   },
   {
     "id": "task-1774841802162",
