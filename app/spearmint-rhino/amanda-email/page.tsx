@@ -39,15 +39,15 @@ SHOW PRODUCTION IDEAS
 
 We discussed doing a "Midnight Showtime" where I introduce the girls, and I believe a "2 for $" dance would be perfect right here after introductions. I love this format because it gives me time to bring up a Featured Entertainer (in-house) on Friday and Saturday nights without breaking the flow.
 
-With my background, I like to make a big theatrical production for showtime that really gets people excited. I've attached a few clips of shows I've produced — the "Midnight Showtime" clips show the intro format, and the "Featured Entertainer" clips show the fully produced performances with custom lighting, music beds, and special effects. This is the kind of value that keeps customers coming back and bringing friends. These are older videos, but they'd give you a sense of what I'm talking about. I'd obviously create new ones for the Spearmint brand at a much higher level with the tools I have now.
-
 Featured Entertainer flyer: https://featured-entertainer-ho9owtja5-ericmills71-8100s-projects.vercel.app/flyer
 
+With my background, I like to make a big theatrical production for showtime that really gets people excited. I've attached a few clips of shows I've produced — the "Midnight Showtime" clips show the intro format, and the "Featured Entertainer" clips show the fully produced performances with custom lighting, music beds, and special effects. This is the kind of value that keeps customers coming back and bringing friends. These are older videos, but they'd give you a sense of what I'm talking about. I'd obviously create new ones for the Spearmint brand at a much higher level with the tools I have now.
+
 Featured Entertainer examples:
-• Halloween Feature - Vera: https://drive.google.com/file/d/1RH7hNaDjRQSRrU_jBRa7MsIOszRnmEjC/view?usp=drive_link
+• Grand Opening: https://drive.google.com/file/d/1hTK1icTTDXhixmLzxftBCNZxlBTcQsfr/view?usp=sharing
 • Showtime Video 1: https://drive.google.com/file/d/1Ny-2V5SBuzpRoc8THsklPzXL_yXbjSg5/view?usp=sharing
 • Showtime Video 2: https://drive.google.com/file/d/1bOB2fyymO5WOJTyzzUiDhfVdIqJNR9AK/view?usp=sharing
-• Grand Opening: https://drive.google.com/file/d/1hTK1icTTDXhixmLzxftBCNZxlBTcQsfr/view?usp=sharing
+• Halloween Feature - Vera: https://drive.google.com/file/d/1RH7hNaDjRQSRrU_jBRa7MsIOszRnmEjC/view?usp=drive_link
 
 EQUIPMENT & SUPPORT REQUESTS
 
