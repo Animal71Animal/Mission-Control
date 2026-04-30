@@ -6,12 +6,12 @@
       "trips": 5,
       "miles": 21.63,
       "tips": 9.0,
-      "charging_cost": 2.38,
-      "netPayout": 45.11,
+      "charging_cost": 1.75,
+      "netPayout": 45.74,
       "basefare": 27.5,
       "surge": 5.5,
       "promotions": 5.49,
-      "expenses": 2.38
+      "expenses": 1.75
     },
     {
       "date": "2026-04-28",
@@ -19,12 +19,12 @@
       "trips": 7,
       "miles": 33.93,
       "tips": 8.0,
-      "charging_cost": 3.39,
-      "netPayout": 64.74,
+      "charging_cost": 2.75,
+      "netPayout": 65.38,
       "basefare": 40.04,
       "surge": 9.24,
       "promotions": 10.85,
-      "expenses": 3.39
+      "expenses": 2.75
     },
     {
       "date": "2026-04-27",
@@ -32,12 +32,12 @@
       "trips": 9,
       "miles": 30.44,
       "tips": 0.0,
-      "charging_cost": 3.04,
-      "netPayout": 54.77,
+      "charging_cost": 2.47,
+      "netPayout": 55.34,
       "basefare": 32.14,
       "surge": 7.41,
       "promotions": 9.88,
-      "expenses": 3.04
+      "expenses": 2.47
     },
     {
       "date": "2026-04-26",
@@ -45,12 +45,12 @@
       "trips": 18,
       "miles": 62.5,
       "tips": 15.0,
-      "charging_cost": 6.25,
-      "netPayout": 181.44,
+      "charging_cost": 5.06,
+      "netPayout": 182.63,
       "basefare": 112.25,
       "surge": 25.9,
       "promotions": 34.54,
-      "expenses": 6.25
+      "expenses": 5.06
     },
     {
       "date": "2026-04-21",
@@ -58,12 +58,12 @@
       "trips": 20,
       "miles": 71.49,
       "tips": 24.0,
-      "charging_cost": 7.15,
-      "netPayout": 151.21,
+      "charging_cost": 5.79,
+      "netPayout": 152.57,
       "basefare": 87.33,
       "surge": 20.15,
       "promotions": 26.87,
-      "expenses": 7.15
+      "expenses": 5.79
     },
     {
       "date": "2026-04-18",
@@ -71,12 +71,12 @@
       "trips": 3,
       "miles": 5.88,
       "tips": 0.0,
-      "charging_cost": 0.59,
-      "netPayout": 12.39,
+      "charging_cost": 0.48,
+      "netPayout": 12.5,
       "basefare": 8.44,
       "surge": 1.95,
       "promotions": 2.6,
-      "expenses": 0.59
+      "expenses": 0.48
     },
     {
       "date": "2026-04-17",
@@ -84,12 +84,12 @@
       "trips": 6,
       "miles": 60.37,
       "tips": 35.0,
-      "charging_cost": 6.04,
-      "netPayout": 128.53,
+      "charging_cost": 4.89,
+      "netPayout": 129.68,
       "basefare": 64.72,
       "surge": 14.94,
       "promotions": 19.91,
-      "expenses": 6.04
+      "expenses": 4.89
     },
     {
       "date": "2026-04-15",
@@ -97,12 +97,12 @@
       "trips": 3,
       "miles": 16.96,
       "tips": 11.0,
-      "charging_cost": 1.7,
-      "netPayout": 41.58,
+      "charging_cost": 1.37,
+      "netPayout": 41.91,
       "basefare": 20.98,
       "surge": 4.84,
       "promotions": 6.46,
-      "expenses": 1.7
+      "expenses": 1.37
     },
     {
       "date": "2026-04-14",
@@ -110,12 +110,12 @@
       "trips": 6,
       "miles": 16.72,
       "tips": 8.0,
-      "charging_cost": 1.67,
-      "netPayout": 43.23,
+      "charging_cost": 1.35,
+      "netPayout": 43.55,
       "basefare": 23.98,
       "surge": 5.53,
       "promotions": 7.38,
-      "expenses": 1.67
+      "expenses": 1.35
     },
     {
       "date": "2026-04-13",
@@ -123,12 +123,12 @@
       "trips": 5,
       "miles": 33.82,
       "tips": 3.0,
-      "charging_cost": 3.38,
-      "netPayout": 55.99,
+      "charging_cost": 2.74,
+      "netPayout": 56.63,
       "basefare": 36.64,
       "surge": 8.46,
       "promotions": 11.27,
-      "expenses": 3.38
+      "expenses": 2.74
     }
   ],
   "monthlyTotals": {
