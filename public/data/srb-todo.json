@@ -107,7 +107,7 @@
     {
       "id": "14",
       "text": "Haze machine",
-      "completed": false,
+      "completed": true,
       "category": "Lighting",
       "priority": "medium",
       "due_date": null
@@ -185,5 +185,5 @@
       "due_date": "2026-05-05"
     }
   ],
-  "last_updated": "2026-04-30T06:53:31.575Z"
+  "last_updated": "2026-04-30T06:53:32.309Z"
 }
