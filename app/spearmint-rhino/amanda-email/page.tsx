@@ -58,7 +58,7 @@ EQUIPMENT & SUPPORT REQUESTS
 
 Both of these would be huge for putting on a real show, which is where I naturally lean. I think this type of production value helps retain regulars and brings in new clientele.
 
-3. Lighting Programmer — Something we didn't discuss, but would be very helpful: could I bring in a local light tech with Light Jockey experience for a couple hours? I haven't used LJ in a while and could use a refresher. I'd watch, learn, and apply that knowledge as part of my duties here.
+3. Lighting Programmer — Something we didn't discuss, but would be very helpful: could I bring in a local light tech with Light Jockey experience for a couple hours? I desperately need additional scenes and effects out of our system, and I haven't used LJ in a while so I could use a refresher. I'd watch, learn, and apply that knowledge as part of my duties here.
 
 ONE LAST THING
 
