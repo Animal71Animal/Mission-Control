@@ -1,6 +1,19 @@
 {
   "dailySummaries": [
     {
+      "date": "2026-04-30",
+      "earnings": 47.49,
+      "trips": 5,
+      "miles": 21.63,
+      "tips": 9.0,
+      "charging_cost": 2.38,
+      "netPayout": 45.11,
+      "basefare": 27.5,
+      "surge": 5.5,
+      "promotions": 5.49,
+      "expenses": 2.38
+    },
+    {
       "date": "2026-04-28",
       "earnings": 68.13,
       "trips": 7,
