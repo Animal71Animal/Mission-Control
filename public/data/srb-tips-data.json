@@ -17,8 +17,8 @@
     },
     {
       "month": "April",
-      "amount": 1318,
-      "nights": 10
+      "amount": 1328,
+      "nights": 11
     }
   ],
   "topTippers": [
@@ -358,7 +358,8 @@
       "name": "Kitty",
       "jan": 14,
       "feb": 0,
-      "mar": 21
+      "mar": 21,
+      "apr": 10
     },
     {
       "name": "Mixie",
