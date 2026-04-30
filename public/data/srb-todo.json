@@ -163,7 +163,7 @@
     {
       "id": "21",
       "text": "Buy Fog Juice 4/1 gallon",
-      "completed": false,
+      "completed": true,
       "category": "Setup",
       "priority": "medium",
       "due_date": "2026-04-23"
@@ -185,5 +185,5 @@
       "due_date": "2026-05-05"
     }
   ],
-  "last_updated": "2026-04-30T06:53:44.014Z"
+  "last_updated": "2026-04-30T06:53:49.865Z"
 }
