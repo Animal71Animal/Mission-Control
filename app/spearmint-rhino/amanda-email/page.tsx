@@ -65,7 +65,7 @@ Best,
 Eric "ANIMAL" Mills
 DJ | Producer | Musician
 Spearmint Rhino — Boise, ID
-[Phone] | [Email]`;
+561.666.2109 | ericmills71@gmail.com`;
 
 export default function AmandaEmailPage() {
   return (
@@ -168,7 +168,7 @@ export default function AmandaEmailPage() {
               Notes
             </h3>
             <div className="space-y-2 text-sm text-gray-400">
-              <p>• Customize [Phone] and [Email] before sending</p>
+              <p>• Phone and email filled in</p>
               <p>• Attach show videos & flyer</p>
               <p>• Hazer link included in draft</p>
             </div>
