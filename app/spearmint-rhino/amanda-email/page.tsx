@@ -38,7 +38,7 @@ SHOW PRODUCTION IDEAS
 
 We discussed doing a "Midnight Showtime" where I introduce the girls and the "2 for..." IS the special dance right after introductions. I love this format because it gives me time to bring up a Featured Entertainer (in-house) on Friday and Saturday nights without breaking the flow.
 
-With my background, I like to make a big theatrical production for showtime that really gets people excited. I've attached a couple examples — these are older videos, but they'd give you a sense of what I'm talking about. I'd obviously create new ones for the Spearmint brand at a much higher level with the tools I have now.
+With my background, I like to make a big theatrical production for showtime that really gets people excited. I've attached a few clips of shows I've produced to give you a sense of the Featured Entertainer concept — fully produced with custom lighting, music beds, and special effects. This is the kind of value that keeps customers coming back and bringing friends. These are older videos, but they'd give you a sense of what I'm talking about. I'd obviously create new ones for the Spearmint brand at a much higher level with the tools I have now.
 
 As a side note — the intro video format is something that could scale across the entire Spearmint Rhino brand if it performs well here. Just something to keep in mind for the future.
 
