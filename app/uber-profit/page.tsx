@@ -163,16 +163,17 @@ export default function UberEarningsPage() {
             {(() => {
               const shifts = data.uber_shifts;
               const totalGross = shifts.reduce((sum, s) => sum + s.gross_earnings, 0);
-              const totalCharging = shifts.reduce((sum, s) => sum + (s.proportional_charging_cost || 0), 0);
-              const totalNet = shifts.reduce((sum, s) => sum + s.net_profit, 0);
-              const totalMiles = shifts.reduce((sum, s) => sum + s.miles_driven, 0);
+              const totalMilesManual = shifts.reduce((sum, s) => sum + s.miles_driven, 0);
+              const totalCharging = totalMilesManual * TESLA_COST_PER_MILE;
+              const totalNet = totalGross - totalCharging;
               const avgHourly = shifts.length > 0 ? shifts.reduce((sum, s) => sum + s.hourly_rate, 0) / shifts.length : 0;
 
               return [
                 { label: "Total Gross", value: `$${totalGross.toFixed(2)}`, color: "#00f5d4" },
-                { label: "Charging Cost", value: `$${totalCharging.toFixed(2)}`, color: "#f15bb5" },
+                { label: "Est. Energy Cost", value: `$${totalCharging.toFixed(2)}`, color: "#f15bb5" },
                 { label: "Total Net", value: `$${totalNet.toFixed(2)}`, color: "#00c87c" },
-                { label: "Miles Driven", value: `${totalMiles.toFixed(0)} mi`, color: "#fee440" },
+                { label: "Miles Driven", value: `${totalMilesManual.toFixed(0)} mi`, color: "#fee440" },
+                { label: "Energy Cost/Mi", value: `$${TESLA_COST_PER_MILE.toFixed(3)}`, color: "#ff6b6b" },
                 { label: "Avg Hourly", value: `$${avgHourly.toFixed(2)}/hr`, color: "#00bbf9" },
                 { label: "Shifts", value: shifts.length, color: "#9b5de5" },
               ].map((s) => (
@@ -188,7 +189,10 @@ export default function UberEarningsPage() {
           <div>
             <h3 style={{ fontSize: "1rem", fontWeight: 700, margin: "0 0 16px", color: "var(--text)" }}>📋 Recent Shifts</h3>
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-              {data.uber_shifts.slice().reverse().slice(0, 5).map((shift) => (
+              {data.uber_shifts.slice().reverse().slice(0, 5).map((shift) => {
+                const shiftEnergyCost = shift.miles_driven * TESLA_COST_PER_MILE;
+                const shiftNet = shift.gross_earnings - shiftEnergyCost;
+                return (
                 <div key={shift.id} style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 10, padding: 16 }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10 }}>
                     <div>
@@ -196,18 +200,17 @@ export default function UberEarningsPage() {
                       <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginTop: 2 }}>{shift.duration_minutes}m • {shift.miles_driven}mi • Odo: {shift.start_odometer}→{shift.end_odometer}</div>
                     </div>
                     <div style={{ textAlign: "right" }}>
-                      <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "#00c87c" }}>${shift.net_profit.toFixed(2)}</div>
+                      <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "#00c87c" }}>${shiftNet.toFixed(2)}</div>
                       <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginTop: 2 }}>${shift.hourly_rate.toFixed(2)}/hr</div>
                     </div>
                   </div>
                   <div style={{ display: "flex", gap: 16, fontSize: "0.8rem", color: "var(--muted)" }}>
                     <span>Gross: <strong style={{ color: "var(--text)" }}>${shift.gross_earnings.toFixed(2)}</strong></span>
-                    {shift.proportional_charging_cost && (
-                      <span>Charging: <strong style={{ color: "#f15bb5" }}>-${shift.proportional_charging_cost.toFixed(2)}</strong></span>
-                    )}
+                    <span>Energy: <strong style={{ color: "#f15bb5" }}>-${shiftEnergyCost.toFixed(2)}</strong></span>
+                    <span>Cost/Mi: <strong style={{ color: "#ff6b6b" }}>${TESLA_COST_PER_MILE.toFixed(3)}</strong></span>
                   </div>
                 </div>
-              ))}
+              );})}
             </div>
           </div>
         </>
@@ -216,7 +219,7 @@ export default function UberEarningsPage() {
       {/* Info Footer */}
       <div style={{ marginTop: 28, padding: "16px", background: "rgba(0,187,249,0.05)", border: "1px solid rgba(0,187,249,0.2)", borderRadius: 10 }}>
         <p style={{ margin: 0, fontSize: "0.8rem", color: "var(--muted)" }}>
-          ℹ️ Earnings pulled from Uber dashboard (top section). Shift tracking for detailed profitability with Tesla charging deductions.
+          ℹ️ Energy cost calculated at $0.081/mi (Tesla Model 3/Y average). All net payouts use this fixed rate instead of actual charging session costs.
         </p>
       </div>
     </div>
