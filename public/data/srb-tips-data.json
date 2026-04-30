@@ -17,7 +17,7 @@
     },
     {
       "month": "April",
-      "amount": 1336,
+      "amount": 1346,
       "nights": 11
     }
   ],
@@ -168,7 +168,7 @@
       "jan": 20,
       "feb": 55,
       "mar": 87,
-      "apr": 36
+      "apr": 46
     },
     {
       "name": "Athena",
@@ -3824,7 +3824,7 @@
       },
       {
         "date": "Wed Apr 29",
-        "total": 18,
+        "total": 28,
         "dancers": [
           {
             "dancer": "Kitty",
@@ -3833,6 +3833,10 @@
           {
             "dancer": "Customers",
             "amount": 8
+          },
+          {
+            "dancer": "Allie",
+            "amount": 10
           }
         ]
       }
