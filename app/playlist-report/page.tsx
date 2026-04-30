@@ -80,7 +80,8 @@ export default function PlaylistReportPage() {
     Promise.all([
       fetch("/data/openclaw-playlist-report-full.md").then(r => r.ok ? r.text() : "").catch(() => ""),
       fetch("/api/openclaw-episodes").then(r => r.json()).catch(() => ({ episodes: [] })),
-    ]).then(([mdContent, ocData]) => {
+      fetch("/api/openclaw-episodes", { method: 'PUT' }).then(r => r.json()).catch(() => ({ completed: [], important: [] })),
+    ]).then(([mdContent, ocData, playlistState]) => {
       const entries = mdContent ? parseReport(mdContent) : [];
       const oc: OcEpisode[] = ocData.episodes || [];
       setOcEpisodes(oc);
@@ -111,12 +112,26 @@ export default function PlaylistReportPage() {
       ];
       setAllVideos(unified);
 
+      // Load from server first, fallback to localStorage
+      const serverDone = playlistState?.completed || [];
+      const serverImportant = playlistState?.important || [];
+      
       try {
         const savedDone = localStorage.getItem('yt-done-v2');
         const savedImportant = localStorage.getItem('yt-important-v2');
-        if (savedDone) setDoneSet(new Set(JSON.parse(savedDone)));
-        if (savedImportant) setImportantSet(new Set(JSON.parse(savedImportant)));
-      } catch {}
+        const localDone = savedDone ? JSON.parse(savedDone) : [];
+        const localImportant = savedImportant ? JSON.parse(savedImportant) : [];
+        
+        // Merge: server state takes priority, but include local-only entries
+        const mergedDone = new Set([...serverDone, ...localDone]);
+        const mergedImportant = new Set([...serverImportant, ...localImportant]);
+        
+        setDoneSet(mergedDone);
+        setImportantSet(mergedImportant);
+      } catch {
+        setDoneSet(new Set(serverDone));
+        setImportantSet(new Set(serverImportant));
+      }
 
       setLoading(false);
     });
@@ -124,30 +139,50 @@ export default function PlaylistReportPage() {
 
   const toggleDone = async (uid: string, ocId?: string) => {
     const isDone = doneSet.has(uid);
+    const newState = !isDone;
     setDoneSet(prev => {
       const next = new Set(prev);
       isDone ? next.delete(uid) : next.add(uid);
       localStorage.setItem('yt-done-v2', JSON.stringify([...next]));
       return next;
     });
+    
+    // Save to server for all videos (not just OpenClaw episodes)
+    setOcSaving(uid);
     if (ocId) {
-      setOcSaving(uid);
       await fetch('/api/openclaw-episodes', {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id: ocId, completed: !isDone }),
+        body: JSON.stringify({ id: ocId, completed: newState }),
       });
-      setOcSaving(null);
+    } else {
+      await fetch('/api/openclaw-episodes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'toggleDone', uid, state: newState }),
+      });
     }
+    setOcSaving(null);
   };
 
-  const toggleImportant = (uid: string) => {
+  const toggleImportant = async (uid: string) => {
+    const isImportant = importantSet.has(uid);
+    const newState = !isImportant;
     setImportantSet(prev => {
       const next = new Set(prev);
-      prev.has(uid) ? next.delete(uid) : next.add(uid);
+      isImportant ? next.delete(uid) : next.add(uid);
       localStorage.setItem('yt-important-v2', JSON.stringify([...next]));
       return next;
     });
+    
+    // Save to server
+    setOcSaving(uid);
+    await fetch('/api/openclaw-episodes', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'toggleImportant', uid, state: newState }),
+    });
+    setOcSaving(null);
   };
 
   const filtered = allVideos.filter(v => {

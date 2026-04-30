@@ -62,3 +62,66 @@ export async function PATCH(request: NextRequest) {
     return NextResponse.json({ ok: false, error: String(err) }, { status: 500 });
   }
 }
+
+// NEW: Persist playlist video completion status
+const PLAYLIST_STATE_PATH = 'public/data/playlist-video-state.json';
+const PLAYLIST_API_URL = `https://api.github.com/repos/${GITHUB_REPO}/contents/${PLAYLIST_STATE_PATH}`;
+
+async function fetchPlaylistFile() {
+  const res = await fetch(`${PLAYLIST_API_URL}?ref=${GITHUB_BRANCH}`, { headers: ghHeaders(), cache: 'no-store' });
+  if (res.status === 404) return { content: { completed: [], important: [] }, sha: null };
+  if (!res.ok) throw new Error(`GitHub GET failed: ${res.status}`);
+  const data = await res.json();
+  return { content: JSON.parse(Buffer.from(data.content, 'base64').toString('utf-8')), sha: data.sha };
+}
+
+async function writePlaylistFile(content: unknown, sha: string | null, msg: string) {
+  const encoded = Buffer.from(JSON.stringify(content, null, 2)).toString('base64');
+  const body: any = { message: msg, content: encoded, branch: GITHUB_BRANCH };
+  if (sha) body.sha = sha;
+  const res = await fetch(PLAYLIST_API_URL, {
+    method: 'PUT', headers: ghHeaders(),
+    body: JSON.stringify(body),
+  });
+  if (!res.ok) throw new Error(`GitHub PUT failed: ${res.status}`);
+}
+
+export async function POST(request: NextRequest) {
+  try {
+    const body = await request.json();
+    const { action, uid, state } = body;
+    if (!action || !uid) return NextResponse.json({ ok: false, error: 'Missing action or uid' }, { status: 400 });
+    
+    const { content, sha } = await fetchPlaylistFile();
+    
+    if (action === 'toggleDone') {
+      const set = new Set(content.completed || []);
+      if (state === true) set.add(uid);
+      else if (state === false) set.delete(uid);
+      else set.has(uid) ? set.delete(uid) : set.add(uid);
+      content.completed = [...set];
+    } else if (action === 'toggleImportant') {
+      const set = new Set(content.important || []);
+      if (state === true) set.add(uid);
+      else if (state === false) set.delete(uid);
+      else set.has(uid) ? set.delete(uid) : set.add(uid);
+      content.important = [...set];
+    } else {
+      return NextResponse.json({ ok: false, error: 'Invalid action' }, { status: 400 });
+    }
+    
+    await writePlaylistFile(content, sha, `fix: update playlist video state ${action} ${uid}`);
+    return NextResponse.json({ ok: true, completed: content.completed, important: content.important });
+  } catch (err) {
+    return NextResponse.json({ ok: false, error: String(err) }, { status: 500 });
+  }
+}
+
+export async function PUT(request: NextRequest) {
+  try {
+    const { content } = await fetchPlaylistFile();
+    return NextResponse.json({ completed: content.completed || [], important: content.important || [] });
+  } catch (err) {
+    return NextResponse.json({ completed: [], important: [] }, { status: 500 });
+  }
+}
