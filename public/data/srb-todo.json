@@ -91,7 +91,7 @@
     {
       "id": "12",
       "text": "See about getting Vesuvio fixed",
-      "completed": false,
+      "completed": true,
       "category": "Equipment",
       "priority": "medium",
       "due_date": null
@@ -185,5 +185,5 @@
       "due_date": "2026-05-05"
     }
   ],
-  "last_updated": "2026-04-30T06:53:23.888Z"
+  "last_updated": "2026-04-30T06:53:31.575Z"
 }
