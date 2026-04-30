@@ -43,7 +43,7 @@ With my background, I like to make a big theatrical production for showtime that
 Featured Entertainer examples:
 • Halloween Feature - Vera: https://drive.google.com/file/d/1RH7hNaDjRQSRrU_jBRa7MsIOszRnmEjC/view?usp=drive_link
 • Showtime Video 1: https://drive.google.com/file/d/1Ny-2V5SBuzpRoc8THsklPzXL_yXbjSg5/view?usp=sharing
-• Showtime Video 2: https://drive.google.com/file/d/1hTK1icTTDXhixmLzxftBCNZxlBTcQsfr/view?usp=sharing
+• Grand Opening: https://drive.google.com/file/d/1hTK1icTTDXhixmLzxftBCNZxlBTcQsfr/view?usp=sharing
 
 EQUIPMENT & SUPPORT REQUESTS
 
