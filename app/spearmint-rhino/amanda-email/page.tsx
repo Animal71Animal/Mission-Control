@@ -17,6 +17,7 @@ A couple of things on this:
 
 • It was mentioned during my hiring that this would happen after the probation period
 • Boise is a tough market for DJs, especially without a Wed–Sat/Sun schedule that would help maximize earnings
+• The $15 rate would make it a little easier to earn a living wage here, especially on nights when the floor is lighter
 • In return, I'll faithfully execute the responsibilities of Head DJ/AV Technician
 
 I have extensive experience leading teams with SOPs and protocols that produce results — and more importantly, revenue.
