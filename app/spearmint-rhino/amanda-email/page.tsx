@@ -40,6 +40,8 @@ We discussed doing a "Midnight Showtime" where I introduce the girls, and I beli
 
 With my background, I like to make a big theatrical production for showtime that really gets people excited. I've attached a few clips of shows I've produced — the "Midnight Showtime" clips show the intro format, and the "Featured Entertainer" clips show the fully produced performances with custom lighting, music beds, and special effects. This is the kind of value that keeps customers coming back and bringing friends. These are older videos, but they'd give you a sense of what I'm talking about. I'd obviously create new ones for the Spearmint brand at a much higher level with the tools I have now.
 
+Featured Entertainer example: https://drive.google.com/file/d/1RH7hNaDjRQSRrU_jBRa7MsIOszRnmEjC/view?usp=drive_link
+
 EQUIPMENT & SUPPORT REQUESTS
 
 1. Hazer — Here's a cost-effective option I think would work great for our space:
