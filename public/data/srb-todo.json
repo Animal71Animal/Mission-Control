@@ -131,7 +131,7 @@
     {
       "id": "17",
       "text": "Make promo video for club",
-      "completed": false,
+      "completed": true,
       "category": "Media",
       "priority": "medium",
       "due_date": null
@@ -185,5 +185,5 @@
       "due_date": "2026-05-05"
     }
   ],
-  "last_updated": "2026-04-30T06:53:18.503Z"
+  "last_updated": "2026-04-30T06:53:23.888Z"
 }
