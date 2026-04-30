@@ -20,7 +20,7 @@ A couple of things on this:
 • The $15 rate would make it a little easier to earn a living wage here, especially since the entertainer numbers tend to lend themselves to a lower ceiling for income potential
 • In return, I'll faithfully execute the responsibilities of Head DJ/AV Technician
 
-I have extensive experience leading teams with SOPs and protocols that produce results — and more importantly, revenue.
+I have extensive experience leading teams with SOPs and protocols that produce results — and more importantly, revenue. I also have a number of promotional and marketing initiatives in development that I'll be presenting to Bryan for approval, which I believe will drive even stronger numbers going forward.
 
 Booth improvements completed so far:
 1. Installed speakers in booth
