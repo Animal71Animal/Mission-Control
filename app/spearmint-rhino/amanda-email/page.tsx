@@ -36,11 +36,9 @@ More to come.
 
 SHOW PRODUCTION IDEAS
 
-We discussed doing a "Midnight Showtime" where I introduce the girls and the "2 for..." IS the special dance right after introductions. I love this format because it gives me time to bring up a Featured Entertainer (in-house) on Friday and Saturday nights without breaking the flow.
+We discussed doing a "Midnight Showtime" where I introduce the girls, and I believe a "2 for $" dance would be perfect right here after introductions. I love this format because it gives me time to bring up a Featured Entertainer (in-house) on Friday and Saturday nights without breaking the flow.
 
-With my background, I like to make a big theatrical production for showtime that really gets people excited. I've attached a few clips of shows I've produced to give you a sense of the Featured Entertainer concept — fully produced with custom lighting, music beds, and special effects. This is the kind of value that keeps customers coming back and bringing friends. These are older videos, but they'd give you a sense of what I'm talking about. I'd obviously create new ones for the Spearmint brand at a much higher level with the tools I have now.
-
-As a side note — the intro video format is something that could scale across the entire Spearmint Rhino brand if it performs well here. Just something to keep in mind for the future.
+With my background, I like to make a big theatrical production for showtime that really gets people excited. I've attached a few clips of shows I've produced — the "Midnight Showtime" clips show the intro format, and the "Featured Entertainer" clips show the fully produced performances with custom lighting, music beds, and special effects. This is the kind of value that keeps customers coming back and bringing friends. These are older videos, but they'd give you a sense of what I'm talking about. I'd obviously create new ones for the Spearmint brand at a much higher level with the tools I have now.
 
 EQUIPMENT & SUPPORT REQUESTS
 
@@ -59,7 +57,7 @@ I just wanted to make a brief mention of the great job I think Bryan is doing. F
 
 And no, Bryan did not pay me for that endorsement... lol.
 
-Let me know what you think, and if there's a good time to chat through any of this. I'm happy to work within whatever budget makes sense and prioritize the items that will have the biggest impact first.
+Let me know what you think, and if there's a good time to chat through any of this. I'm ready to move on all of this ASAP.
 
 Thanks again for everything.
 
