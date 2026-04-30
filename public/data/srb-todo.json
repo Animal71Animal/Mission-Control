@@ -59,7 +59,7 @@
     {
       "id": "8",
       "text": "Get sound back in Private Dance rooms",
-      "completed": false,
+      "completed": true,
       "category": "Audio",
       "priority": "high",
       "due_date": "2026-05-05"
@@ -185,5 +185,5 @@
       "due_date": "2026-05-05"
     }
   ],
-  "last_updated": "2026-04-30T06:53:37.744Z"
+  "last_updated": "2026-04-30T06:53:44.014Z"
 }
