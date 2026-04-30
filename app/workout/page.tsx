@@ -318,6 +318,48 @@ export default function WorkoutPage() {
         </Card>
       </div>
 
+      {/* Weekly Schedule */}
+      <div style={{ marginBottom: 24 }}>
+        <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "var(--text)", marginBottom: 12 }}>
+          Weekly Schedule
+        </h3>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(7, 1fr)", gap: 8 }}>
+          {WEEKLY_STRUCTURE.map((d) => {
+            const isToday = d.day === todayDay;
+            const dateKey = (() => {
+              const today = new Date();
+              const dayIdx = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].indexOf(d.day);
+              const diff = dayIdx - today.getDay();
+              const target = new Date(today);
+              target.setDate(today.getDate() + diff);
+              return target.toISOString().split("T")[0];
+            })();
+            const done = logs[dateKey]?.completed;
+
+            return (
+              <div
+                key={d.day}
+                style={{
+                  textAlign: "center",
+                  padding: "10px 4px",
+                  borderRadius: 8,
+                  border: isToday ? "1px solid #00f5d4" : "1px solid var(--border)",
+                  background: done ? "rgba(0,245,212,0.1)" : isToday ? "rgba(0,245,212,0.05)" : "var(--card)",
+                }}
+              >
+                <div style={{ fontSize: "0.75rem", fontWeight: 700, color: isToday ? "#00f5d4" : "var(--muted)" }}>
+                  {d.day}
+                </div>
+                <div style={{ fontSize: "0.7rem", color: "var(--text)", marginTop: 4 }}>
+                  {d.type === "workout" ? "🏋️" : "🛌"}
+                </div>
+                {done && <div style={{ fontSize: "0.6rem", color: "#00f5d4", marginTop: 2 }}>✓ Done</div>}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
       {/* Today's Plan */}
       <Card style={{ marginBottom: 24, borderLeft: "3px solid #00f5d4" }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
@@ -403,48 +445,6 @@ export default function WorkoutPage() {
         </Card>
       )}
 
-      {/* Weekly Schedule */}
-      <div style={{ marginTop: 32 }}>
-        <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "var(--text)", marginBottom: 12 }}>
-          Weekly Schedule
-        </h3>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(7, 1fr)", gap: 8 }}>
-          {WEEKLY_STRUCTURE.map((d) => {
-            const isToday = d.day === todayDay;
-            const dateKey = (() => {
-              const today = new Date();
-              const dayIdx = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].indexOf(d.day);
-              const diff = dayIdx - today.getDay();
-              const target = new Date(today);
-              target.setDate(today.getDate() + diff);
-              return target.toISOString().split("T")[0];
-            })();
-            const done = logs[dateKey]?.completed;
-
-            return (
-              <div
-                key={d.day}
-                style={{
-                  textAlign: "center",
-                  padding: "10px 4px",
-                  borderRadius: 8,
-                  border: isToday ? "1px solid #00f5d4" : "1px solid var(--border)",
-                  background: done ? "rgba(0,245,212,0.1)" : isToday ? "rgba(0,245,212,0.05)" : "var(--card)",
-                }}
-              >
-                <div style={{ fontSize: "0.75rem", fontWeight: 700, color: isToday ? "#00f5d4" : "var(--muted)" }}>
-                  {d.day}
-                </div>
-                <div style={{ fontSize: "0.7rem", color: "var(--text)", marginTop: 4 }}>
-                  {d.type === "workout" ? "🏋️" : "🛌"}
-                </div>
-                {done && <div style={{ fontSize: "0.6rem", color: "#00f5d4", marginTop: 2 }}>✓ Done</div>}
-              </div>
-            );
-          })}
-        </div>
-      </div>
-
       {/* Rules */}
       <div style={{ marginTop: 32, background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12, padding: 16 }}>
         <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "var(--text)", marginBottom: 12 }}>
@@ -460,17 +460,7 @@ export default function WorkoutPage() {
         </ul>
       </div>
 
-      {/* Exercise Reference Library — always visible */}
-      <div style={{ marginTop: 32 }}>
-        <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "var(--text)", marginBottom: 12 }}>
-          📚 Exercise Reference
-        </h3>
-        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-          {EXERCISES.map((ex, idx) => (
-            <ExerciseReferenceCard key={ex.id} ex={ex} idx={idx} />
-          ))}
-        </div>
-      </div>
+
     </div>
   );
 }
