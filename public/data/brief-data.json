@@ -1,32 +1,20 @@
 {
-  "date": "2026-04-28",
+  "date": "2026-04-29",
   "weather": {
-    "temp": "61°F",
+    "temp": "64°F",
     "condition": "Overcast",
-    "high": "63°F",
-    "low": "37°F"
+    "high": "67°F",
+    "low": "49°F"
   },
   "tasks": {
     "open": 6,
     "overdue": 1
   },
   "peptides": {
-    "active": 2,
-    "today": [
-      {
-        "name": "Retatrutide",
-        "dose": "60 units",
-        "time": "9:30 PM",
-        "note": "Week 1 restart — full dose resumes tonight"
-      },
-      {
-        "name": "Tesamorelin",
-        "dose": "30 units",
-        "time": "8:00 AM",
-        "note": "Week 1 restart — full dose resumes today"
-      }
-    ]
+    "active": 0,
+    "today": []
   },
   "calendar": [],
-  "wlp_focus": "T5: TikTok handles for 5 accounts — strategy doc ready, Eric needs to create accounts"
+  "wlp_focus": "T7: Spotify for Artists setup — DistroKid + first tracks needed for Kade, Madison, Aria",
+  "deploy_url": "https://mission-control-cyan-omega.vercel.app"
 }
