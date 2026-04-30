@@ -30,6 +30,7 @@ Booth improvements completed so far:
 6. Swapped out the external hard drive
 7. Added Beatport subscription
 8. Hooked up a redundant audio system for if the main computer goes down
+9. Fixed the smoke machine
 
 More to come.
 
