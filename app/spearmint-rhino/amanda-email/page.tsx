@@ -35,7 +35,7 @@ More to come.
 
 SHOW PRODUCTION IDEAS
 
-We discussed doing a "Midnight Showtime" where I introduce the girls and we do a special dance, followed by the classic "2 for..." format. I love this because it gives me time to bring up a Featured Entertainer (in-house) on Friday and Saturday nights without breaking the flow.
+We discussed doing a "Midnight Showtime" where I introduce the girls and the "2 for..." IS the special dance right after introductions. I love this format because it gives me time to bring up a Featured Entertainer (in-house) on Friday and Saturday nights without breaking the flow.
 
 With my background, I like to make a big theatrical production for showtime that really gets people excited. I've attached a couple examples — these are older videos, but they'd give you a sense of what I'm talking about. I'd obviously create new ones for the Spearmint brand at a much higher level with the tools I have now.
 
