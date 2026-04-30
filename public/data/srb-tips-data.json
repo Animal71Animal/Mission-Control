@@ -3823,12 +3823,16 @@
         ]
       },
       {
-        "date": "Thu Apr 30",
-        "total": 10,
+        "date": "Wed Apr 29",
+        "total": 18,
         "dancers": [
           {
             "dancer": "Kitty",
             "amount": 10
+          },
+          {
+            "dancer": "Customers",
+            "amount": 8
           }
         ]
       }
