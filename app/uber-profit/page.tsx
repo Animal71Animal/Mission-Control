@@ -73,13 +73,14 @@ export default function UberEarningsPage() {
   if (!loaded) return <p style={{ color: "var(--muted)" }}>Loading...</p>;
 
   // Calculate earnings stats
+  const TESLA_COST_PER_MILE = 0.081; // $/mi energy cost
   const totalEarnings = earnings.reduce((sum, e) => sum + e.earnings, 0);
   const totalTrips = earnings.reduce((sum, e) => sum + e.trips, 0);
   const totalTips = earnings.reduce((sum, e) => sum + e.tips, 0);
   const totalMiles = earnings.reduce((sum, e) => sum + (e.miles || 0), 0);
-  const totalExpenses = earnings.reduce((sum, e) => sum + (e.expenses || 0), 0);
+  const totalExpenses = totalMiles * TESLA_COST_PER_MILE; // Use fixed Tesla energy cost instead of charging_cost
   const avgPerTrip = totalTrips > 0 ? totalEarnings / totalTrips : 0;
-  const costPerMile = totalMiles > 0 ? totalExpenses / totalMiles : 0;
+  const costPerMile = TESLA_COST_PER_MILE;
   const earningsLastUpdated = earnings.length > 0 ? earnings[0].date : null;
 
   return (
@@ -101,8 +102,9 @@ export default function UberEarningsPage() {
                 { label: "Total Trips", value: totalTrips, color: "#00bbf9" },
                 { label: "Total Tips", value: `$${totalTips.toFixed(2)}`, color: "#fee440" },
                 { label: "Avg per Trip", value: `$${avgPerTrip.toFixed(2)}`, color: "#9b5de5" },
-                { label: "Cost/Mile", value: `$${costPerMile.toFixed(3)}`, color: "#ff6b6b" },
+                { label: "Energy Cost/Mi", value: `$${TESLA_COST_PER_MILE.toFixed(3)}`, color: "#ff6b6b" },
                 { label: "Total Miles", value: `${totalMiles.toFixed(1)}`, color: "#fee440" },
+                { label: "Est. Energy Cost", value: `$${totalExpenses.toFixed(2)}`, color: "#f15bb5" },
               ].map((s) => (
                 <div key={s.label} style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 10, padding: 14 }}>
                   <div style={{ fontSize: "1.2rem", fontWeight: 700, color: s.color }}>{s.value}</div>
@@ -135,9 +137,9 @@ export default function UberEarningsPage() {
                         <td style={{ padding: "12px 16px", textAlign: "right", color: "var(--text)" }}>{e.trips}</td>
                         <td style={{ padding: "12px 16px", textAlign: "right", color: "#fee440", fontWeight: 600 }}>${e.tips.toFixed(2)}</td>
                         <td style={{ padding: "12px 16px", textAlign: "right", color: "var(--text)" }}>{e.miles.toFixed(1)} mi</td>
-                        <td style={{ padding: "12px 16px", textAlign: "right", color: "#ff6b6b", fontWeight: 600 }}>${e.expenses.toFixed(2)}</td>
-                        <td style={{ padding: "12px 16px", textAlign: "right", color: "var(--muted)", fontSize: "0.8rem" }}>${e.miles > 0 ? (e.expenses / e.miles).toFixed(3) : "—"}</td>
-                        <td style={{ padding: "12px 16px", textAlign: "right", color: "#51cf66", fontWeight: 600 }}>${e.netPayout.toFixed(2)}</td>
+                        <td style={{ padding: "12px 16px", textAlign: "right", color: "#ff6b6b", fontWeight: 600 }}>${(e.miles * TESLA_COST_PER_MILE).toFixed(2)}</td>
+                        <td style={{ padding: "12px 16px", textAlign: "right", color: "var(--muted)", fontSize: "0.8rem" }}>${TESLA_COST_PER_MILE.toFixed(3)}</td>
+                        <td style={{ padding: "12px 16px", textAlign: "right", color: "#51cf66", fontWeight: 600 }}>${(e.earnings - (e.miles * TESLA_COST_PER_MILE)).toFixed(2)}</td>
                       </tr>
                     ))}
                   </tbody>
