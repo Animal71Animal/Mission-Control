@@ -326,7 +326,7 @@ export default function WorkoutPage() {
               Today: {todayDay} — {todayPlan?.focus}
             </h3>
             <p style={{ fontSize: "0.8rem", color: "var(--muted)", margin: 0 }}>
-              {todayPlan?.type === "workout" ? "8 exercises · ~35 min · Warm up first" : "Rest day — light walk or stretch"}
+              {todayPlan?.type === "workout" ? "5 exercises · ~30 min · Warm up first" : "Rest day — light walk or stretch"}
             </p>
           </div>
           {todayPlan?.type === "workout" && (
