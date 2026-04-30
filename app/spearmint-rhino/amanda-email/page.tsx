@@ -64,7 +64,7 @@ ONE LAST THING
 
 I just wanted to make a brief mention of the great job I think Bryan is doing. From the energy he brings to the club, to his common sense (which we all know is not plentiful these days), to his work ethic and dedication. Thankfully we worked through that initial misunderstanding and he is truly a pleasure to work for.
 
-And no, Bryan did not pay me for that endorsement... lol.
+And no, Bryan did not pay me for that endorsement... lol. He has my respect, confidence, and loyalty going forward as part of his team.
 
 Let me know what you think, and if there's a good time to chat through any of this. I'm ready to move on all of this ASAP.
 
