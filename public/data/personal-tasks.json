@@ -48,7 +48,8 @@
     "priority": "medium",
     "completed": false,
     "createdAt": "2026-03-30T03:36:42.162Z",
-    "owner": "animal"
+    "owner": "animal",
+    "completed_at": null
   },
   {
     "id": "task-1774841641981",
