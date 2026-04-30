@@ -1,4 +1,76 @@
 {
-  "logs": {},
+  "logs": {
+    "2026-04-30": {
+      "date": "2026-04-30",
+      "completed": false,
+      "exercises": {
+        "lat-pulldown": {
+          "weight": 0,
+          "repsDone": [
+            0,
+            0,
+            0
+          ],
+          "completed": [
+            false,
+            false,
+            false
+          ]
+        },
+        "chest-press": {
+          "weight": 0,
+          "repsDone": [
+            0,
+            0,
+            0
+          ],
+          "completed": [
+            false,
+            false,
+            false
+          ]
+        },
+        "leg-extension": {
+          "weight": 0,
+          "repsDone": [
+            0,
+            0,
+            0
+          ],
+          "completed": [
+            false,
+            false,
+            false
+          ]
+        },
+        "standing-tricep-pushdown": {
+          "weight": 0,
+          "repsDone": [
+            0,
+            0,
+            0
+          ],
+          "completed": [
+            false,
+            false,
+            false
+          ]
+        },
+        "standing-bicep-curl": {
+          "weight": 0,
+          "repsDone": [
+            0,
+            0,
+            0
+          ],
+          "completed": [
+            false,
+            false,
+            false
+          ]
+        }
+      }
+    }
+  },
   "weights": {}
 }
