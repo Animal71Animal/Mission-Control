@@ -70,6 +70,77 @@
           ]
         }
       }
+    },
+    "2026-05-01": {
+      "date": "2026-05-01",
+      "completed": false,
+      "exercises": {
+        "lat-pulldown": {
+          "weight": 5,
+          "repsDone": [
+            0,
+            0,
+            0
+          ],
+          "completed": [
+            true,
+            true,
+            true
+          ]
+        },
+        "chest-press": {
+          "weight": 0,
+          "repsDone": [
+            0,
+            0,
+            0
+          ],
+          "completed": [
+            false,
+            false,
+            false
+          ]
+        },
+        "leg-extension": {
+          "weight": 0,
+          "repsDone": [
+            0,
+            0,
+            0
+          ],
+          "completed": [
+            false,
+            false,
+            false
+          ]
+        },
+        "standing-tricep-pushdown": {
+          "weight": 0,
+          "repsDone": [
+            0,
+            0,
+            0
+          ],
+          "completed": [
+            false,
+            false,
+            false
+          ]
+        },
+        "standing-bicep-curl": {
+          "weight": 0,
+          "repsDone": [
+            0,
+            0,
+            0
+          ],
+          "completed": [
+            false,
+            false,
+            false
+          ]
+        }
+      }
     }
   },
   "weights": {}
