@@ -17,7 +17,7 @@
     },
     {
       "month": "April",
-      "amount": 1474,
+      "amount": 1514,
       "nights": 12
     }
   ],
@@ -195,7 +195,7 @@
       "jan": 26,
       "feb": 59,
       "mar": 47,
-      "apr": 110
+      "apr": 125
     },
     {
       "name": "Noelle",
@@ -255,7 +255,7 @@
       "jan": 25,
       "feb": 15,
       "mar": 40,
-      "apr": 55
+      "apr": 60
     },
     {
       "name": "Asia",
@@ -348,7 +348,7 @@
       "jan": 25,
       "feb": 5,
       "mar": 6,
-      "apr": 53
+      "apr": 73
     },
     {
       "name": "Alaska",
@@ -3853,7 +3853,7 @@
       },
       {
         "date": "Thu Apr 30",
-        "total": 113,
+        "total": 153,
         "dancers": [
           {
             "dancer": "Mixie",
@@ -3869,7 +3869,7 @@
           },
           {
             "dancer": "Indie",
-            "amount": 13
+            "amount": 33
           },
           {
             "dancer": "Alaska",
@@ -3878,6 +3878,14 @@
           {
             "dancer": "Skylar",
             "amount": 40
+          },
+          {
+            "dancer": "Natasha",
+            "amount": 5
+          },
+          {
+            "dancer": "Georgia",
+            "amount": 15
           }
         ]
       }
