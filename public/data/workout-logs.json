@@ -141,16 +141,16 @@
           ]
         },
         "butterfly-chest": {
-          "weight": 0,
+          "weight": 2,
           "repsDone": [
             0,
             0,
             0
           ],
           "completed": [
-            false,
-            false,
-            false
+            true,
+            true,
+            true
           ]
         }
       }
