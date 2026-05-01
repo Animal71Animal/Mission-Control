@@ -96,9 +96,9 @@
             0
           ],
           "completed": [
-            false,
-            false,
-            false
+            true,
+            true,
+            true
           ]
         },
         "leg-extension": {
