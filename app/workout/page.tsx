@@ -84,16 +84,16 @@ const EXERCISES: Exercise[] = [
     },
   },
   {
-    id: "standing-bicep-curl",
-    name: "Standing Bicep Curl",
-    sets: 3, reps: "10–12", muscle: "Biceps",
-    notes: "No swinging, squeeze at top",
+    id: "butterfly-chest",
+    name: "Butterfly (Chest Fly)",
+    sets: 3, reps: "10–12", muscle: "Chest",
+    notes: "Slow and controlled, squeeze chest at peak",
     technique: {
-      setup: "Stand facing the low pulley. Grip the straight bar attachment with palms up, hands shoulder-width apart. Stand tall with chest up.",
-      movement: "Curl the bar up by contracting biceps. Keep elbows at your sides. Squeeze hard at the top. Lower slowly with full control.",
-      tips: ["No swinging — keep body still", "Elbows stay at your sides", "Full range — all the way down, all the way up", "Squeeze biceps at peak contraction"],
-      mistakes: ["Swinging torso for momentum", "Elbows drifting forward", "Partial reps — not full extension", "Using too much weight and cheating"],
-      videoUrl: "https://www.youtube.com/watch?v=ykJmrZ5v0Oo",
+      setup: "Sit on the MP-2500 with back flat against the pad. Grip the butterfly handles with palms facing forward. Adjust seat so handles are at chest height. Feet flat on the floor.",
+      movement: "Bring the handles together in front of your chest by squeezing your pecs. Pause for 1 second at peak contraction. Return slowly — feel the stretch across your chest. Don't let the weight stack slam.",
+      tips: ["Keep a slight bend in elbows — don't lock them straight", "Squeeze chest, not arms", "Control the negative — 2–3 seconds on return", "Full stretch at the bottom, full contraction at top"],
+      mistakes: ["Using momentum to swing handles together", "Locking elbows completely straight", "Only doing partial reps", "Letting weight drop uncontrolled on return"],
+      videoUrl: "https://www.youtube.com/watch?v=eG-3Wq9D2yY",
     },
   },
 ];
@@ -142,12 +142,15 @@ export default function WorkoutPage() {
           const todayLog = data.logs[todayKey];
           const r: Record<string, number[]> = {};
           const c: Record<string, boolean[]> = {};
+          const w: Record<string, number> = {};
           Object.entries(todayLog.exercises).forEach(([id, exData]: [string, any]) => {
             r[id] = exData.repsDone || new Array(EXERCISES.find((e) => e.id === id)?.sets || 3).fill(0);
             c[id] = exData.completed || new Array(EXERCISES.find((e) => e.id === id)?.sets || 3).fill(false);
+            w[id] = exData.weight || 0;
           });
           setRepsDone(r);
           setChecked(c);
+          setWeights((prev) => ({ ...prev, ...w }));
           setTodayComplete(todayLog.completed);
         }
         setLoading(false);
@@ -158,7 +161,7 @@ export default function WorkoutPage() {
   // Auto-save to GitHub when state changes (debounced)
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (Object.keys(checked).length > 0 || Object.keys(repsDone).length > 0) {
+      if (Object.keys(checked).length > 0 || Object.keys(repsDone).length > 0 || Object.keys(weights).length > 0) {
         syncToGitHub();
       }
     }, 3000);
@@ -240,6 +243,7 @@ export default function WorkoutPage() {
 
   const completedSets = Object.values(checked).flat().filter(Boolean).length;
   const totalSets = EXERCISES.reduce((sum, e) => sum + e.sets, 0);
+  const totalExercises = EXERCISES.length;
   const progressPct = Math.round((completedSets / totalSets) * 100);
 
   const streak = (() => {
@@ -368,7 +372,7 @@ export default function WorkoutPage() {
               Today: {todayDay} — {todayPlan?.focus}
             </h3>
             <p style={{ fontSize: "0.8rem", color: "var(--muted)", margin: 0 }}>
-              {todayPlan?.type === "workout" ? "5 exercises · ~30 min · Warm up first" : "Rest day — light walk or stretch"}
+              {todayPlan?.type === "workout" ? `${totalExercises} exercises · ~35 min · Warm up first` : "Rest day — light walk or stretch"}
             </p>
           </div>
           {todayPlan?.type === "workout" && (
