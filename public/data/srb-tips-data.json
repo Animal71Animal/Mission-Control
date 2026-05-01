@@ -17,7 +17,7 @@
     },
     {
       "month": "April",
-      "amount": 1406,
+      "amount": 1409,
       "nights": 12
     }
   ],
@@ -347,7 +347,7 @@
       "jan": 25,
       "feb": 5,
       "mar": 6,
-      "apr": 40
+      "apr": 43
     },
     {
       "name": "Alaska",
@@ -3851,7 +3851,7 @@
       },
       {
         "date": "Thu Apr 30",
-        "total": 45,
+        "total": 48,
         "dancers": [
           {
             "dancer": "Mixie",
@@ -3864,6 +3864,10 @@
           {
             "dancer": "Customers",
             "amount": 20
+          },
+          {
+            "dancer": "Indie",
+            "amount": 3
           }
         ]
       }
