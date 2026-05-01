@@ -76,7 +76,7 @@
       "completed": false,
       "exercises": {
         "lat-pulldown": {
-          "weight": 3,
+          "weight": 0,
           "repsDone": [
             0,
             0,
@@ -89,7 +89,7 @@
           ]
         },
         "chest-press": {
-          "weight": 3,
+          "weight": 0,
           "repsDone": [
             0,
             0,
@@ -102,7 +102,7 @@
           ]
         },
         "leg-extension": {
-          "weight": 2,
+          "weight": 0,
           "repsDone": [
             0,
             0,
@@ -115,7 +115,7 @@
           ]
         },
         "standing-tricep-pushdown": {
-          "weight": 2,
+          "weight": 0,
           "repsDone": [
             0,
             0,
