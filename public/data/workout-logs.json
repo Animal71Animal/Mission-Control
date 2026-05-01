@@ -115,7 +115,7 @@
           ]
         },
         "standing-tricep-pushdown": {
-          "weight": 3,
+          "weight": 2,
           "repsDone": [
             0,
             0,
@@ -123,7 +123,7 @@
           ],
           "completed": [
             true,
-            false,
+            true,
             false
           ]
         },
