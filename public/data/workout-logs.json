@@ -89,7 +89,7 @@
           ]
         },
         "chest-press": {
-          "weight": 0,
+          "weight": 1,
           "repsDone": [
             0,
             0,
