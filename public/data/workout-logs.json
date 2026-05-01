@@ -76,7 +76,7 @@
       "completed": false,
       "exercises": {
         "lat-pulldown": {
-          "weight": 0,
+          "weight": 3,
           "repsDone": [
             0,
             0,
@@ -89,7 +89,7 @@
           ]
         },
         "chest-press": {
-          "weight": 0,
+          "weight": 3,
           "repsDone": [
             0,
             0,
