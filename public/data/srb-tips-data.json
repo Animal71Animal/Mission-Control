@@ -17,7 +17,7 @@
     },
     {
       "month": "April",
-      "amount": 1409,
+      "amount": 1434,
       "nights": 12
     }
   ],
@@ -281,7 +281,7 @@
       "jan": 64,
       "feb": 8,
       "mar": 0,
-      "apr": 40
+      "apr": 45
     },
     {
       "name": "Baby",
@@ -347,13 +347,14 @@
       "jan": 25,
       "feb": 5,
       "mar": 6,
-      "apr": 43
+      "apr": 53
     },
     {
       "name": "Alaska",
       "jan": 25,
       "feb": 0,
-      "mar": 15
+      "mar": 15,
+      "apr": 10
     },
     {
       "name": "Kitty",
@@ -3851,7 +3852,7 @@
       },
       {
         "date": "Thu Apr 30",
-        "total": 48,
+        "total": 73,
         "dancers": [
           {
             "dancer": "Mixie",
@@ -3859,7 +3860,7 @@
           },
           {
             "dancer": "Kodi",
-            "amount": 20
+            "amount": 25
           },
           {
             "dancer": "Customers",
@@ -3867,7 +3868,11 @@
           },
           {
             "dancer": "Indie",
-            "amount": 3
+            "amount": 13
+          },
+          {
+            "dancer": "Alaska",
+            "amount": 10
           }
         ]
       }
