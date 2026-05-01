@@ -1,10 +1,10 @@
 {
-  "date": "2026-04-29",
+  "date": "2026-04-30",
   "weather": {
-    "temp": "64°F",
-    "condition": "Overcast",
-    "high": "67°F",
-    "low": "49°F"
+    "temp": "56°F",
+    "condition": "Clear",
+    "high": "69°F",
+    "low": "43°F"
   },
   "tasks": {
     "open": 6,
@@ -15,6 +15,6 @@
     "today": []
   },
   "calendar": [],
-  "wlp_focus": "T7: Spotify for Artists setup — DistroKid + first tracks needed for Kade, Madison, Aria",
+  "wlp_focus": "T7: Spotify for Artists — DistroKid + first tracks needed for Kade, Madison, Aria",
   "deploy_url": "https://mission-control-cyan-omega.vercel.app"
 }
