@@ -73,7 +73,7 @@
     },
     "2026-05-01": {
       "date": "2026-05-01",
-      "completed": false,
+      "completed": true,
       "exercises": {
         "lat-pulldown": {
           "weight": 3,
