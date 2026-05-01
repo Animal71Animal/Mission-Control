@@ -17,7 +17,7 @@
     },
     {
       "month": "April",
-      "amount": 1361,
+      "amount": 1386,
       "nights": 11
     }
   ],
@@ -280,7 +280,8 @@
       "name": "Kody",
       "jan": 64,
       "feb": 8,
-      "mar": 0
+      "mar": 0,
+      "apr": 20
     },
     {
       "name": "Baby",
@@ -366,7 +367,7 @@
       "jan": 5,
       "feb": 15,
       "mar": 15,
-      "apr": 5
+      "apr": 10
     },
     {
       "name": "Star",
@@ -3824,7 +3825,7 @@
       },
       {
         "date": "Wed Apr 29",
-        "total": 43,
+        "total": 68,
         "dancers": [
           {
             "dancer": "Kitty",
@@ -3845,6 +3846,14 @@
           {
             "dancer": "Nova",
             "amount": 5
+          },
+          {
+            "dancer": "Mixie",
+            "amount": 5
+          },
+          {
+            "dancer": "Kodi",
+            "amount": 20
           }
         ]
       }
