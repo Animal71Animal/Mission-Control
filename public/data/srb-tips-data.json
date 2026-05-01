@@ -17,7 +17,7 @@
     },
     {
       "month": "April",
-      "amount": 1589,
+      "amount": 1602,
       "nights": 12
     }
   ],
@@ -369,7 +369,7 @@
       "jan": 5,
       "feb": 15,
       "mar": 15,
-      "apr": 15
+      "apr": 20
     },
     {
       "name": "Star",
@@ -447,7 +447,7 @@
       "jan": 0,
       "feb": 15,
       "mar": 0,
-      "apr": 75
+      "apr": 83
     },
     {
       "name": "Jamira",
@@ -3853,11 +3853,11 @@
       },
       {
         "date": "Thu Apr 30",
-        "total": 228,
+        "total": 241,
         "dancers": [
           {
             "dancer": "Mixie",
-            "amount": 5
+            "amount": 10
           },
           {
             "dancer": "Kodi",
@@ -3893,7 +3893,7 @@
           },
           {
             "dancer": "Amy",
-            "amount": 20
+            "amount": 28
           },
           {
             "dancer": "Mia",
