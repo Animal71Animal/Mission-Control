@@ -1,14 +1,75 @@
 export const dynamic = "force-dynamic";
 
 import { NextRequest, NextResponse } from "next/server";
-import { appendFileSync } from "fs";
+import { readFileSync, writeFileSync } from "fs";
+import { join } from "path";
 
-const LOG_FILE = "/home/ubuntu/wlp/data/model-cost-log.jsonl";
+const LOCAL_LOG_FILE = "/home/ubuntu/wlp/data/model-cost-log.jsonl";
+const PUBLIC_LOG_FILE = join(process.cwd(), "public", "data", "cost-log.json");
+
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+const GITHUB_REPO = "Animal71Animal/Mission-Control";
+const GITHUB_BRANCH = "main";
+const FILE_PATH = "public/data/cost-log.json";
+const API_URL = `https://api.github.com/repos/${GITHUB_REPO}/contents/${FILE_PATH}`;
+
+function ghHeaders() {
+  const h: Record<string, string> = {
+    Accept: "application/vnd.github+json",
+    "X-GitHub-Api-Version": "2022-11-28",
+    "Content-Type": "application/json",
+  };
+  if (GITHUB_TOKEN) h["Authorization"] = `Bearer ${GITHUB_TOKEN}`;
+  return h;
+}
+
+async function fetchGitHubFile() {
+  const res = await fetch(`${API_URL}?ref=${GITHUB_BRANCH}`, { headers: ghHeaders(), cache: "no-store" });
+  if (!res.ok) throw new Error(`GitHub GET failed: ${res.status}`);
+  const data = await res.json();
+  const decoded = Buffer.from(data.content, "base64").toString("utf-8");
+  return { content: decoded, sha: data.sha };
+}
+
+async function writeGitHubFile(content: string, sha: string, msg: string) {
+  const encoded = Buffer.from(content).toString("base64");
+  const res = await fetch(API_URL, {
+    method: "PUT",
+    headers: ghHeaders(),
+    body: JSON.stringify({ message: msg, content: encoded, sha, branch: GITHUB_BRANCH }),
+  });
+  if (!res.ok) throw new Error(`GitHub PUT failed: ${res.status}`);
+}
+
+function readLocalLog(): string {
+  try {
+    return readFileSync(LOCAL_LOG_FILE, "utf8");
+  } catch {
+    try {
+      return readFileSync(PUBLIC_LOG_FILE, "utf8");
+    } catch {
+      return "";
+    }
+  }
+}
+
+function writeLocalLog(content: string) {
+  try {
+    writeFileSync(LOCAL_LOG_FILE, content, "utf8");
+  } catch {
+    // Local write may fail on Vercel
+  }
+  try {
+    writeFileSync(PUBLIC_LOG_FILE, content, "utf8");
+  } catch {
+    // Public write may fail on Vercel
+  }
+}
 
 /**
  * POST /api/log-model
  * Body: { "model": "minimax-m2.7", "tier": "standard", "prompt": "...", "input_tokens": 1000, "output_tokens": 500 }
- * Logs a model call to the cost tracker in real-time
+ * Logs a model call to the cost tracker in real-time and syncs to GitHub
  */
 export async function POST(req: NextRequest) {
   try {
@@ -58,7 +119,21 @@ export async function POST(req: NextRequest) {
       savings_pct: legacyCost > 0 ? Math.round((savings / legacyCost) * 1000) / 10 : 0,
     };
 
-    appendFileSync(LOG_FILE, JSON.stringify(entry) + "\n");
+    // Read existing log
+    const existingLog = readLocalLog();
+    const newLog = existingLog + JSON.stringify(entry) + "\n";
+
+    // Write locally
+    writeLocalLog(newLog);
+
+    // Sync to GitHub
+    try {
+      const { sha } = await fetchGitHubFile();
+      await writeGitHubFile(newLog, sha, `🦞 PriScylla: Log model call ${model} ${tier}`);
+    } catch (ghErr) {
+      console.error("GitHub sync failed:", ghErr);
+      // Don't fail the request if GitHub sync fails
+    }
 
     return NextResponse.json({
       success: true,

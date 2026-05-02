@@ -4,24 +4,61 @@ import { NextResponse } from "next/server";
 import { readFileSync } from "fs";
 import { join } from "path";
 
+const LOCAL_LOG_FILE = "/home/ubuntu/wlp/data/model-cost-log.jsonl";
+const PUBLIC_LOG_FILE = join(process.cwd(), "public", "data", "cost-log.json");
+
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+const GITHUB_REPO = "Animal71Animal/Mission-Control";
+const GITHUB_BRANCH = "main";
+const FILE_PATH = "public/data/cost-log.json";
+const API_URL = `https://api.github.com/repos/${GITHUB_REPO}/contents/${FILE_PATH}`;
+
+function ghHeaders() {
+  const h: Record<string, string> = {
+    Accept: "application/vnd.github+json",
+    "X-GitHub-Api-Version": "2022-11-28",
+    "Content-Type": "application/json",
+  };
+  if (GITHUB_TOKEN) h["Authorization"] = `Bearer ${GITHUB_TOKEN}`;
+  return h;
+}
+
+async function fetchGitHubFile(): Promise<string> {
+  const res = await fetch(`${API_URL}?ref=${GITHUB_BRANCH}`, { headers: ghHeaders(), cache: "no-store" });
+  if (!res.ok) throw new Error(`GitHub GET failed: ${res.status}`);
+  const data = await res.json();
+  return Buffer.from(data.content, "base64").toString("utf-8");
+}
+
+function readLocalLog(): string {
+  try {
+    return readFileSync(LOCAL_LOG_FILE, "utf8");
+  } catch {
+    try {
+      return readFileSync(PUBLIC_LOG_FILE, "utf8");
+    } catch {
+      return "";
+    }
+  }
+}
+
 /**
  * GET /api/cost-data
  * Returns parsed cost tracker data with legacy comparison
- * Reads from public/data/cost-log.json (synced from local log)
+ * Reads from GitHub (live) or local fallback
  */
 export async function GET() {
   try {
-    // Try local file first (dev server)
-    let data: string;
+    // Try GitHub first for live data
+    let rawData: string;
     try {
-      data = readFileSync("/home/ubuntu/wlp/data/model-cost-log.jsonl", "utf8");
+      rawData = await fetchGitHubFile();
     } catch {
-      // Fallback to public file (Vercel deployment)
-      const publicPath = join(process.cwd(), "public", "data", "cost-log.json");
-      data = readFileSync(publicPath, "utf8");
+      // Fallback to local file
+      rawData = readLocalLog();
     }
 
-    const lines = data.trim().split("\n").filter(Boolean);
+    const lines = rawData.trim().split("\n").filter(Boolean);
     const entries = lines.map((line) => JSON.parse(line));
 
     // Aggregate by model
@@ -65,6 +102,7 @@ export async function GET() {
       entries: entries.slice(-50),
     });
   } catch (err) {
+    console.error("GET /api/cost-data error:", err);
     return NextResponse.json({
       totalCalls: 0,
       totalCost: 0,
