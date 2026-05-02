@@ -105,7 +105,7 @@ export async function GET() {
       simple: { model: TIER_SIMPLE, cost_per_1k: COST_RATES[TIER_SIMPLE] },
       standard: { model: TIER_STANDARD, cost_per_1k: COST_RATES[TIER_STANDARD] },
       creative: { model: TIER_CREATIVE, cost_per_1k: COST_RATES[TIER_CREATIVE] },
-      complex: { model: TIER_COMPLEX, cost_per_1k: "$0.0175" },
+      complex: { model: TIER_COMPLEX, cost_per_1k: COST_RATES[TIER_COMPLEX] },
     },
     standard_keywords_count: M2_7_KEYWORDS.length,
     complex_keywords_count: COMPLEX_KEYWORDS.length,
