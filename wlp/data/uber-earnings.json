@@ -1,0 +1,170 @@
+{
+  "dailySummaries": [
+    {
+      "date": "2026-05-01",
+      "earnings": 39.23,
+      "gross": 39.23,
+      "trips": 2,
+      "miles": 26.13,
+      "tips": 7.00,
+      "surge": 1.50,
+      "pro_perk": 1.53,
+      "charging_cost": 0.91,
+      "netPayout": 38.32,
+      "basefare": 30.70,
+      "promotions": 0.00,
+      "expenses": 0.91
+    },
+    {
+      "date": "2026-04-28",
+      "earnings": 68.13,
+      "gross": 68.13,
+      "trips": 7,
+      "miles": 29.0,
+      "tips": 0.0,
+      "charging_cost": 3.04,
+      "netPayout": 65.09,
+      "basefare": 42.0,
+      "surge": 5.0,
+      "promotions": 21.13,
+      "expenses": 3.04
+    },
+    {
+      "date": "2026-04-27",
+      "earnings": 57.81,
+      "trips": 9,
+      "miles": 30.44,
+      "tips": 0.0,
+      "charging_cost": 3.04,
+      "netPayout": 54.77,
+      "basefare": 32.14,
+      "surge": 7.41,
+      "promotions": 9.88,
+      "expenses": 3.04,
+      "gross": 57.81
+    },
+    {
+      "date": "2026-04-26",
+      "earnings": 187.69,
+      "trips": 18,
+      "miles": 62.5,
+      "tips": 15.0,
+      "charging_cost": 6.25,
+      "netPayout": 181.44,
+      "basefare": 112.25,
+      "surge": 25.9,
+      "promotions": 34.54,
+      "expenses": 6.25,
+      "gross": 187.69
+    },
+    {
+      "date": "2026-04-21",
+      "earnings": 158.36,
+      "trips": 20,
+      "miles": 71.49,
+      "tips": 24.0,
+      "charging_cost": 7.15,
+      "netPayout": 151.21,
+      "basefare": 87.33,
+      "surge": 20.15,
+      "promotions": 26.87,
+      "expenses": 7.15,
+      "gross": 158.36
+    },
+    {
+      "date": "2026-04-18",
+      "earnings": 12.98,
+      "trips": 3,
+      "miles": 5.88,
+      "tips": 0.0,
+      "charging_cost": 0.59,
+      "netPayout": 12.39,
+      "basefare": 8.44,
+      "surge": 1.95,
+      "promotions": 2.6,
+      "expenses": 0.59,
+      "gross": 12.98
+    },
+    {
+      "date": "2026-04-17",
+      "earnings": 134.57,
+      "trips": 6,
+      "miles": 60.37,
+      "tips": 35.0,
+      "charging_cost": 6.04,
+      "netPayout": 128.53,
+      "basefare": 64.72,
+      "surge": 14.94,
+      "promotions": 19.91,
+      "expenses": 6.04,
+      "gross": 134.57
+    },
+    {
+      "date": "2026-04-15",
+      "earnings": 43.28,
+      "trips": 3,
+      "miles": 16.96,
+      "tips": 11.0,
+      "charging_cost": 1.7,
+      "netPayout": 41.58,
+      "basefare": 20.98,
+      "surge": 4.84,
+      "promotions": 6.46,
+      "expenses": 1.7,
+      "gross": 43.28
+    },
+    {
+      "date": "2026-04-14",
+      "earnings": 44.9,
+      "trips": 6,
+      "miles": 16.72,
+      "tips": 8.0,
+      "charging_cost": 1.67,
+      "netPayout": 43.23,
+      "basefare": 23.98,
+      "surge": 5.53,
+      "promotions": 7.38,
+      "expenses": 1.67,
+      "gross": 44.9
+    },
+    {
+      "date": "2026-04-13",
+      "earnings": 59.37,
+      "trips": 5,
+      "miles": 33.82,
+      "tips": 3.0,
+      "charging_cost": 3.38,
+      "netPayout": 55.99,
+      "basefare": 36.64,
+      "surge": 8.46,
+      "promotions": 11.27,
+      "expenses": 3.38,
+      "gross": 59.37
+    }
+  ],
+  "monthlyTotals": {
+    "2026-05": {
+      "total_earnings": 39.23,
+      "total_net": 38.32,
+      "total_trips": 2,
+      "total_miles": 26.13,
+      "total_tips": 7.00,
+      "total_charging_cost": 0.91
+    },
+    "2026-04": {
+      "total_earnings": 767.09,
+      "total_net": 734.23,
+      "total_trips": 77,
+      "total_miles": 327.18,
+      "total_tips": 96.00,
+      "total_charging_cost": 27.86
+    }
+  },
+  "metadata": {
+    "source": "drivers.uber.com",
+    "scrape_method": "manual_entry",
+    "charging_cost_per_mile": 0.035,
+    "last_scrape_attempt": "2026-05-02T09:23:00Z"
+  },
+  "last_updated": "2026-05-02T09:23:00Z"
+}
