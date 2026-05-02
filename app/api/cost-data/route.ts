@@ -42,6 +42,23 @@ function readLocalLog(): string {
   }
 }
 
+// Model display names
+const MODEL_NAMES: Record<string, string> = {
+  "claude-sonnet-4-6": "Claude Sonnet 4.6",
+  "claude-opus-4-6": "Claude Opus 4.6",
+  "claude-haiku-4-5": "Claude Haiku 4.5",
+  "gemini-3-flash-preview": "Gemini 3 Flash",
+  "m2.7": "MiniMax M2.7",
+  "kimi-k2.6": "Kimi K2.6",
+};
+
+const TIER_COLORS: Record<string, string> = {
+  simple: "#00f5d4",
+  standard: "#9b5de5",
+  creative: "#f15bb5",
+  complex: "#fee440",
+};
+
 /**
  * GET /api/cost-data
  * Returns parsed cost tracker data with legacy comparison
@@ -100,6 +117,8 @@ export async function GET() {
       byModel,
       byTier,
       entries: entries.slice(-50),
+      modelNames: MODEL_NAMES,
+      tierColors: TIER_COLORS,
     });
   } catch (err) {
     console.error("GET /api/cost-data error:", err);
@@ -111,6 +130,8 @@ export async function GET() {
       byModel: {},
       byTier: {},
       entries: [],
+      modelNames: MODEL_NAMES,
+      tierColors: TIER_COLORS,
     });
   }
 }
