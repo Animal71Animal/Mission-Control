@@ -1,15 +1,74 @@
 export const dynamic = "force-dynamic";
 
 import { NextRequest, NextResponse } from "next/server";
-import { execSync } from "child_process";
+
+// === MODEL ROUTER CONFIGURATION ===
+const TIER_SIMPLE = "gpt-5-nano";
+const TIER_STANDARD = "minimax-m2.7";
+const TIER_COMPLEX = "gpt-5.5";
+const TIER_CREATIVE = "kimi-k2.6";
+
+const COST_RATES: Record<string, string> = {
+  [TIER_SIMPLE]: "$0.00045",
+  [TIER_STANDARD]: "$0.0009",
+  [TIER_CREATIVE]: "$0.00545",
+  [TIER_COMPLEX]: "$0.0175",
+};
+
+// MiniMax M2.7 keywords (standard tier)
+const M2_7_KEYWORDS = [
+  "mission control", "vercel deploy", "github", "workout tracker",
+  "data file", "update page", "add feature", "fix bug", "dashboard",
+  "api route", "react", "nextjs", "javascript", "typescript", "exercise",
+  "wlp project", "deploy script", "build error", "uber earnings",
+  "srb tip", "srb tips", "tesla charging", "spearmint rhino", "push to github",
+  "redeploy", "peptides", "openclaw youtube", "action items"
+];
+
+// Complex tier keywords
+const COMPLEX_KEYWORDS = [
+  "investor", "legal", "contract", "terms", "agreement",
+  "advanced reasoning", "deep analysis", "complex problem",
+  "multi-step", "strategic planning", "financial model"
+];
+
+// Creative tier keywords
+const CREATIVE_KEYWORDS = [
+  "image", "vision", "creative", "art", "design", "generate image",
+  "visual", "logo", "album art", "cover art", "illustration"
+];
+
+function routeModel(prompt: string): { model: string; tier: string; matchedKeyword: string | null } {
+  const promptLower = prompt.toLowerCase();
+
+  // Check creative tier first
+  for (const keyword of CREATIVE_KEYWORDS) {
+    if (promptLower.includes(keyword)) {
+      return { model: TIER_CREATIVE, tier: "creative", matchedKeyword: keyword };
+    }
+  }
+
+  // Check complex tier
+  for (const keyword of COMPLEX_KEYWORDS) {
+    if (promptLower.includes(keyword)) {
+      return { model: TIER_COMPLEX, tier: "complex", matchedKeyword: keyword };
+    }
+  }
+
+  // Check standard tier
+  for (const keyword of M2_7_KEYWORDS) {
+    if (promptLower.includes(keyword)) {
+      return { model: TIER_STANDARD, tier: "standard", matchedKeyword: keyword };
+    }
+  }
+
+  // Default to simple
+  return { model: TIER_SIMPLE, tier: "simple", matchedKeyword: null };
+}
 
 /**
  * POST /api/route-model
  * Body: { "prompt": "your prompt here" }
- * Returns: { "model": "minimax-m2.7", "tier": "standard", "cost_per_1k": "$0.0009" }
- * 
- * Uses the model router to pick the most cost-effective model
- * based on prompt keywords.
  */
 export async function POST(req: NextRequest) {
   try {
@@ -23,25 +82,13 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Call the Python router
-    const routerPath = "/home/ubuntu/wlp/skills/model-router/model_router.py";
-    const output = execSync(
-      `python3 "${routerPath}" "${prompt.replace(/"/g, '\\"')}"`,
-      { encoding: "utf8" }
-    );
-
-    // Parse the output
-    const lines = output.trim().split("\n");
-    const model = lines.find((l) => l.startsWith("Model:"))?.split(":")[1]?.trim();
-    const tier = lines.find((l) => l.startsWith("Tier:"))?.split(":")[1]?.trim();
-    const cost = lines.find((l) => l.startsWith("Cost:"))?.split(":")[1]?.trim();
-    const match = lines.find((l) => l.startsWith("Match:"))?.split(":")[1]?.trim();
+    const result = routeModel(prompt);
 
     return NextResponse.json({
-      model: model || "unknown",
-      tier: tier || "unknown",
-      cost_per_1k: cost || "unknown",
-      matched_keyword: match || null,
+      model: result.model,
+      tier: result.tier,
+      cost_per_1k: COST_RATES[result.model] || "unknown",
+      matched_keyword: result.matchedKeyword,
       prompt_preview: prompt.slice(0, 100),
     });
   } catch (err) {
@@ -55,18 +102,18 @@ export async function POST(req: NextRequest) {
 
 /**
  * GET /api/route-model
- * Returns the current router configuration
+ * Returns router configuration
  */
 export async function GET() {
   return NextResponse.json({
     tiers: {
-      simple: { model: "gpt-5-nano", cost_per_1k: "$0.00045" },
-      standard: { model: "minimax-m2.7", cost_per_1k: "$0.0009" },
-      creative: { model: "kimi-k2.6", cost_per_1k: "$0.00545" },
-      complex: { model: "gpt-5.5", cost_per_1k: "$0.0175" },
+      simple: { model: TIER_SIMPLE, cost_per_1k: COST_RATES[TIER_SIMPLE] },
+      standard: { model: TIER_STANDARD, cost_per_1k: COST_RATES[TIER_STANDARD] },
+      creative: { model: TIER_CREATIVE, cost_per_1k: COST_RATES[TIER_CREATIVE] },
+      complex: { model: TIER_COMPLEX, cost_per_1k: COST_RATES[TIER_COMPLEX] },
     },
-    standard_keywords_count: 30,
-    complex_keywords_count: 9,
-    creative_keywords_count: 11,
+    standard_keywords_count: M2_7_KEYWORDS.length,
+    complex_keywords_count: COMPLEX_KEYWORDS.length,
+    creative_keywords_count: CREATIVE_KEYWORDS.length,
   });
 }
