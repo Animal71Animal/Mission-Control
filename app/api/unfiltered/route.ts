@@ -41,7 +41,7 @@ Format as JSON: {"left": "...", "right": "...", "truth": "..."}`;
         "Authorization": `Bearer ${ABACUS_API_KEY}`
       },
       body: JSON.stringify({
-        model: "abacus/kimi-k2.6",
+        model: "kimi-k2.6",
         messages: [{ role: "user", content: prompt }],
         max_tokens: 600,
         temperature: 0.7
