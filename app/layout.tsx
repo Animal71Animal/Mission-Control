@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 import AnimatedBackground from "@/components/AnimatedBackground";
-import ModelLogger from "@/components/ModelLogger";
+// import ModelLogger from "@/components/ModelLogger";
 
 export const metadata: Metadata = {
   title: "Mission Control — WLP",
@@ -29,7 +29,7 @@ export default function RootLayout({
         <main className="main-content" style={{ flex: 1, padding: "32px 28px", overflowY: "auto", position: "relative", zIndex: 1, marginLeft: 0 }}>
           {children}
         </main>
-        <ModelLogger />
+        {/* <ModelLogger /> */}
         <style>{`
           @media (min-width: 769px) {
             .main-content {
