@@ -6,6 +6,62 @@ import { useState, useEffect } from "react";
 import { modules, groupLabels, groupOrder } from "../app/data/modules";
 import type { ModuleGroup, Module } from "../app/data/modules";
 
+// Model Indicator - shows current AI model in use
+function ModelIndicator() {
+  const [model, setModel] = useState<string>("Loading...");
+  const [tier, setTier] = useState<string>("");
+
+  useEffect(() => {
+    fetch("/api/route-model")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.tiers) {
+          // Get the "standard" tier model as default (most common)
+          setModel(data.tiers.standard?.model || "Unknown");
+          setTier("standard");
+        }
+      })
+      .catch(() => setModel("Offline"));
+  }, []);
+
+  const tierColors: Record<string, string> = {
+    simple: "#00f5d4",
+    standard: "#9b5de5",
+    creative: "#f15bb5",
+    complex: "#fee440",
+  };
+
+  return (
+    <div style={{
+      display: "flex",
+      alignItems: "center",
+      gap: 6,
+      padding: "6px 10px",
+      background: "rgba(155,93,229,0.15)",
+      borderRadius: 8,
+      border: "1px solid rgba(155,93,229,0.3)",
+      marginBottom: 8,
+    }}>
+      <div style={{
+        width: 8,
+        height: 8,
+        borderRadius: "50%",
+        background: tierColors[tier] || "#9b5de5",
+        animation: "pulse 2s infinite",
+      }} />
+      <span style={{ fontWeight: 600, fontSize: "0.75rem" }}>
+        {model}
+      </span>
+      <style>{`
+        @keyframes pulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.5; }
+        }
+      `}</style>
+    </div>
+  );
+}
+
 // Chevron icon component
 function ChevronIcon({ expanded }: { expanded: boolean }) {
   return (
@@ -285,7 +341,8 @@ export default function Sidebar() {
 
         {/* Footer */}
         <div style={{ padding: "16px 20px", borderTop: "1px solid var(--border)", fontSize: "0.7rem", color: "var(--muted)" }}>
-          PriScylla 🦞 online
+          <ModelIndicator />
+          <div style={{ marginTop: 8 }}>PriScylla 🦞 online</div>
         </div>
       </aside>
 
