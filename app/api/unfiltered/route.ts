@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
-// Unfiltered analysis - uses AI to analyze actual article content
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+// Unfiltered analysis - uses Abacus RouteLLM instead of OpenAI
+const ABACUS_API_KEY = process.env.ABACUSAI_API_KEY;
 
 interface AnalysisResult {
   topic: string;
@@ -10,36 +10,7 @@ interface AnalysisResult {
   truth: string;
 }
 
-async function fetchArticleContent(url: string): Promise<string | null> {
-  try {
-    // Use a simple fetch to get article content
-    // Note: Many sites block this, so we'll fall back to title-based analysis
-    const res = await fetch(url, {
-      headers: {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
-      },
-      timeout: 5000
-    } as any);
-    
-    if (!res.ok) return null;
-    
-    const html = await res.text();
-    // Extract text from article (basic)
-    const textMatch = html.match(/<article[^>]*>([\s\S]*?)<\/article>/i) ||
-                     html.match(/<main[^>]*>([\s\S]*?)<\/main>/i) ||
-                     html.match(/<div[^>]*class="[^"]*content[^"]*"[^>]*>([\s\S]*?)<\/div>/i);
-    
-    if (textMatch) {
-      // Strip HTML tags
-      return textMatch[1].replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim().substring(0, 3000);
-    }
-    return null;
-  } catch {
-    return null;
-  }
-}
-
-async function analyzeWithAI(topic: string, content?: string): Promise<AnalysisResult> {
+async function analyzeWithAbacus(topic: string, content?: string): Promise<AnalysisResult> {
   const prompt = content 
     ? `Analyze this news article and provide three perspectives:
 
@@ -63,14 +34,14 @@ Provide:
 Format as JSON: {"left": "...", "right": "...", "truth": "..."}`;
 
   try {
-    const res = await fetch("https://api.openai.com/v1/chat/completions", {
+    const res = await fetch("https://routellm.abacus.ai/v1/chat/completions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${OPENAI_API_KEY}`
+        "Authorization": `Bearer ${ABACUS_API_KEY}`
       },
       body: JSON.stringify({
-        model: "gpt-4o-mini",
+        model: "abacus/kimi-k2.6",
         messages: [{ role: "user", content: prompt }],
         max_tokens: 600,
         temperature: 0.7
@@ -78,7 +49,8 @@ Format as JSON: {"left": "...", "right": "...", "truth": "..."}`;
     });
 
     if (!res.ok) {
-      throw new Error(`OpenAI API error: ${res.status}`);
+      const errorText = await res.text();
+      throw new Error(`Abacus API error: ${res.status} - ${errorText}`);
     }
 
     const data = await res.json();
@@ -87,13 +59,17 @@ Format as JSON: {"left": "...", "right": "...", "truth": "..."}`;
     // Extract JSON from response
     const jsonMatch = aiResponse.match(/\{[\s\S]*\}/);
     if (jsonMatch) {
-      const parsed = JSON.parse(jsonMatch[0]);
-      return {
-        topic,
-        left: parsed.left || parsed.LEFT || "Analysis unavailable",
-        right: parsed.right || parsed.RIGHT || "Analysis unavailable",
-        truth: parsed.truth || parsed.TRUTH || "Analysis unavailable"
-      };
+      try {
+        const parsed = JSON.parse(jsonMatch[0]);
+        return {
+          topic,
+          left: parsed.left || parsed.LEFT || "Analysis unavailable",
+          right: parsed.right || parsed.RIGHT || "Analysis unavailable",
+          truth: parsed.truth || parsed.TRUTH || "Analysis unavailable"
+        };
+      } catch {
+        // JSON parse failed, fall through to manual parsing
+      }
     }
     
     // Fallback: parse manually
@@ -108,7 +84,7 @@ Format as JSON: {"left": "...", "right": "...", "truth": "..."}`;
       truth: truthMatch?.[1]?.trim() || "Balanced analysis unavailable"
     };
   } catch (error) {
-    console.error("AI analysis error:", error);
+    console.error("Abacus analysis error:", error);
     // Fallback to keyword-based
     return fallbackAnalysis(topic);
   }
@@ -172,21 +148,14 @@ function fallbackAnalysis(topic: string): AnalysisResult {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { topic, url, content } = body;
+    const { topic, content } = body;
 
     if (!topic || typeof topic !== "string") {
       return NextResponse.json({ error: "Topic required" }, { status: 400 });
     }
 
-    let articleContent = content;
-    
-    // If URL provided, try to fetch article content
-    if (url && !content) {
-      articleContent = await fetchArticleContent(url) || undefined;
-    }
-
-    // Use AI for analysis
-    const analysis = await analyzeWithAI(topic, articleContent);
+    // Use Abacus RouteLLM for analysis
+    const analysis = await analyzeWithAbacus(topic, content);
 
     return NextResponse.json(analysis);
   } catch (error) {
