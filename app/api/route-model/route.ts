@@ -15,7 +15,6 @@ const COST_RATES: Record<string, string> = {
   [TIER_COMPLEX]: "$0.0175",
 };
 
-// MiniMax M2.7 keywords (standard tier)
 const M2_7_KEYWORDS = [
   "mission control", "vercel deploy", "github", "workout tracker",
   "data file", "update page", "add feature", "fix bug", "dashboard",
@@ -25,14 +24,12 @@ const M2_7_KEYWORDS = [
   "redeploy", "peptides", "openclaw youtube", "action items"
 ];
 
-// Complex tier keywords
 const COMPLEX_KEYWORDS = [
   "investor", "legal", "contract", "terms", "agreement",
   "advanced reasoning", "deep analysis", "complex problem",
   "multi-step", "strategic planning", "financial model"
 ];
 
-// Creative tier keywords
 const CREATIVE_KEYWORDS = [
   "image", "vision", "creative", "art", "design", "generate image",
   "visual", "logo", "album art", "cover art", "illustration"
@@ -41,43 +38,44 @@ const CREATIVE_KEYWORDS = [
 function routeModel(prompt: string): { model: string; tier: string; matchedKeyword: string | null } {
   const promptLower = prompt.toLowerCase();
 
-  // Check creative tier first
   for (const keyword of CREATIVE_KEYWORDS) {
     if (promptLower.includes(keyword)) {
       return { model: TIER_CREATIVE, tier: "creative", matchedKeyword: keyword };
     }
   }
 
-  // Check complex tier
   for (const keyword of COMPLEX_KEYWORDS) {
     if (promptLower.includes(keyword)) {
       return { model: TIER_COMPLEX, tier: "complex", matchedKeyword: keyword };
     }
   }
 
-  // Check standard tier
   for (const keyword of M2_7_KEYWORDS) {
     if (promptLower.includes(keyword)) {
       return { model: TIER_STANDARD, tier: "standard", matchedKeyword: keyword };
     }
   }
 
-  // Default to simple
   return { model: TIER_SIMPLE, tier: "simple", matchedKeyword: null };
 }
 
-/**
- * POST /api/route-model
- * Body: { "prompt": "your prompt here" }
- */
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json();
-    const { prompt } = body;
+    let body;
+    try {
+      body = await req.json();
+    } catch (parseErr) {
+      return NextResponse.json(
+        { error: "Invalid JSON body", details: String(parseErr) },
+        { status: 400 }
+      );
+    }
+
+    const prompt = body?.prompt;
 
     if (!prompt || typeof prompt !== "string") {
       return NextResponse.json(
-        { error: "Missing or invalid prompt" },
+        { error: "Missing or invalid prompt", received: body },
         { status: 400 }
       );
     }
@@ -92,18 +90,15 @@ export async function POST(req: NextRequest) {
       prompt_preview: prompt.slice(0, 100),
     });
   } catch (err) {
-    console.error("POST /api/route-model error:", err);
+    const errorMessage = err instanceof Error ? err.message : String(err);
+    console.error("POST /api/route-model error:", errorMessage);
     return NextResponse.json(
-      { error: "Failed to route model" },
+      { error: "Failed to route model", details: errorMessage },
       { status: 500 }
     );
   }
 }
 
-/**
- * GET /api/route-model
- * Returns router configuration
- */
 export async function GET() {
   return NextResponse.json({
     tiers: {
