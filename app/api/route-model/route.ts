@@ -5,7 +5,7 @@ import { NextRequest, NextResponse } from "next/server";
 // === MODEL ROUTER CONFIGURATION ===
 const TIER_SIMPLE = "gpt-5-nano";
 const TIER_STANDARD = "minimax-m2.7";
-const TIER_COMPLEX = "gpt-5.5";
+const TIER_COMPLEX = "claude-opus-4.7";
 const TIER_CREATIVE = "kimi-k2.6";
 
 const COST_RATES: Record<string, string> = {
@@ -105,7 +105,7 @@ export async function GET() {
       simple: { model: TIER_SIMPLE, cost_per_1k: COST_RATES[TIER_SIMPLE] },
       standard: { model: TIER_STANDARD, cost_per_1k: COST_RATES[TIER_STANDARD] },
       creative: { model: TIER_CREATIVE, cost_per_1k: COST_RATES[TIER_CREATIVE] },
-      complex: { model: TIER_COMPLEX, cost_per_1k: COST_RATES[TIER_COMPLEX] },
+      complex: { model: TIER_COMPLEX, cost_per_1k: "$0.0175" },
     },
     standard_keywords_count: M2_7_KEYWORDS.length,
     complex_keywords_count: COMPLEX_KEYWORDS.length,

@@ -37,7 +37,7 @@ const MODEL_NAMES: Record<string, string> = {
   "gpt-5-nano": "GPT-5 Nano",
   "minimax-m2.7": "MiniMax M2.7",
   "kimi-k2.6": "Kimi K2.6",
-  "gpt-5.5": "GPT-5.5",
+  "claude-opus-4.7": "Claude Opus 4.7",
 };
 
 const LEGACY_NAMES: Record<string, string> = {
@@ -98,7 +98,7 @@ export default function CostTrackerPage() {
               { tier: "simple", newModel: "GPT-5 Nano", newCost: "$0.00045", legacyModel: "Kimi K2.5", legacyCost: "$0.0009", desc: "Weather, reminders" },
               { tier: "standard", newModel: "MiniMax M2.7", newCost: "$0.0009", legacyModel: "Kimi K2.5", legacyCost: "$0.0009", desc: "Coding, Mission Control" },
               { tier: "creative", newModel: "Kimi K2.6", newCost: "$0.00545", legacyModel: "Kimi K2.5", legacyCost: "$0.0009", desc: "Vision, creative tasks" },
-              { tier: "complex", newModel: "GPT-5.5", newCost: "$0.0175", legacyModel: "Claude Opus", legacyCost: "$0.025", desc: "Investor docs, legal" },
+              { tier: "complex", newModel: "Claude Opus 4.7", newCost: "$0.0175", legacyModel: "Claude Opus", legacyCost: "$0.025", desc: "Investor docs, legal" },
             ].map((t) => (
               <div key={t.tier} style={{
                 background: "var(--card)",
