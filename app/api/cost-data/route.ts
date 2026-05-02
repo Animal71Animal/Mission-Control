@@ -2,16 +2,25 @@ export const dynamic = "force-dynamic";
 
 import { NextResponse } from "next/server";
 import { readFileSync } from "fs";
-
-const LOG_FILE = "/home/ubuntu/wlp/data/model-cost-log.jsonl";
+import { join } from "path";
 
 /**
  * GET /api/cost-data
  * Returns parsed cost tracker data with legacy comparison
+ * Reads from public/data/cost-log.json (synced from local log)
  */
 export async function GET() {
   try {
-    const data = readFileSync(LOG_FILE, "utf8");
+    // Try local file first (dev server)
+    let data: string;
+    try {
+      data = readFileSync("/home/ubuntu/wlp/data/model-cost-log.jsonl", "utf8");
+    } catch {
+      // Fallback to public file (Vercel deployment)
+      const publicPath = join(process.cwd(), "public", "data", "cost-log.json");
+      data = readFileSync(publicPath, "utf8");
+    }
+
     const lines = data.trim().split("\n").filter(Boolean);
     const entries = lines.map((line) => JSON.parse(line));
 
@@ -53,10 +62,9 @@ export async function GET() {
       totalSavings: Math.round(totalSavings * 100000000) / 100000000,
       byModel,
       byTier,
-      entries: entries.slice(-50), // Last 50 entries
+      entries: entries.slice(-50),
     });
   } catch (err) {
-    // Return empty data if file doesn't exist yet
     return NextResponse.json({
       totalCalls: 0,
       totalCost: 0,
