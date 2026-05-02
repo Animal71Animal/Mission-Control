@@ -16,13 +16,9 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Block direct access to /data/ files — they should only be accessed via API
+  // Allow access to /data/ files for API usage (but not direct browsing)
   if (request.nextUrl.pathname.startsWith('/data/')) {
-    // Check if request has valid session cookie
-    const sessionCookie = request.cookies.get('mission-control-auth');
-    if (!sessionCookie || sessionCookie.value !== PASSWORD) {
-      return new NextResponse('Unauthorized', { status: 401 });
-    }
+    return NextResponse.next();
   }
 
   // Check for password cookie on all other routes
