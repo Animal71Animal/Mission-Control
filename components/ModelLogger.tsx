@@ -25,12 +25,10 @@ const TIER_COLORS: Record<string, string> = {
 export default function ModelLogger() {
   const [logs, setLogs] = useState<ModelLog[]>([]);
   const [lastUpdate, setLastUpdate] = useState<Date>(new Date());
+  const [collapsed, setCollapsed] = useState(false);
 
   useEffect(() => {
-    // Fetch initial logs
     fetchLogs();
-
-    // Poll for new logs every 5 seconds
     const interval = setInterval(fetchLogs, 5000);
     return () => clearInterval(interval);
   }, []);
@@ -40,7 +38,7 @@ export default function ModelLogger() {
       const res = await fetch("/api/cost-data");
       const data = await res.json();
       if (data.entries) {
-        setLogs(data.entries.slice(-5).reverse()); // Last 5 entries, newest first
+        setLogs(data.entries.slice(-5).reverse());
         setLastUpdate(new Date());
       }
     } catch (err) {
@@ -72,6 +70,44 @@ export default function ModelLogger() {
   const totalSavings = logs.reduce((sum, log) => sum + (log.savings_usd || 0), 0);
   const isSaving = totalSavings >= 0;
 
+  // Collapsed view — just a small pill
+  if (collapsed) {
+    return (
+      <div 
+        onClick={() => setCollapsed(false)}
+        style={{
+          position: "fixed",
+          bottom: 20,
+          right: 20,
+          background: "var(--card)",
+          border: "1px solid var(--border)",
+          borderRadius: 20,
+          padding: "8px 16px",
+          zIndex: 100,
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          gap: 8,
+          boxShadow: "0 2px 10px rgba(0,0,0,0.2)",
+          fontSize: "0.875rem",
+        }}
+      >
+        <span style={{
+          width: 8,
+          height: 8,
+          borderRadius: "50%",
+          background: TIER_COLORS[latestLog.tier] || "#9b5de5",
+          animation: "pulse 2s infinite",
+        }} />
+        <span style={{ fontWeight: 600 }}>{latestLog.model}</span>
+        <span style={{ color: isSaving ? "#00f5d4" : "#f15bb5", fontWeight: 700 }}>
+          {isSaving ? "💵" : "💸"} ${Math.abs(totalSavings).toFixed(6)}
+        </span>
+      </div>
+    );
+  }
+
+  // Expanded view
   return (
     <div style={{
       position: "fixed",
@@ -86,7 +122,7 @@ export default function ModelLogger() {
       fontSize: "0.875rem",
       boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
     }}>
-      {/* Header */}
+      {/* Header with collapse button */}
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
         <div style={{ fontWeight: 600, display: "flex", alignItems: "center", gap: 8 }}>
           <span style={{
@@ -98,9 +134,20 @@ export default function ModelLogger() {
           }} />
           🤖 Live Model Activity
         </div>
-        <div style={{ fontSize: "0.7rem", color: "var(--muted)" }}>
-          {lastUpdate.toLocaleTimeString()}
-        </div>
+        <button
+          onClick={() => setCollapsed(true)}
+          style={{
+            background: "transparent",
+            border: "none",
+            color: "var(--muted)",
+            cursor: "pointer",
+            fontSize: "1.2rem",
+            padding: "0 4px",
+          }}
+          title="Collapse"
+        >
+          −
+        </button>
       </div>
 
       {/* Current Model */}
