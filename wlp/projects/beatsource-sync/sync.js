@@ -1,6 +1,6 @@
 /**
  * Beatport Weekly Sync
- * Scrapes charts from Beatport genre pages and adds to monthly playlists
+ * Scrapes Top 10 + Latest Releases (5 pages) from Beatport genre pages
  * 
  * Usage: node sync.js [genre-name]
  * Runs: Wednesdays at noon MDT (via cron)
@@ -59,6 +59,133 @@ function log(msg) {
   console.log(line);
   fs.mkdirSync(LOG_DIR, { recursive: true });
   fs.appendFileSync(path.join(LOG_DIR, `sync-${new Date().toISOString().slice(0,10)}.log`), line + '\n');
+}
+
+// ─── Track Extraction ─────────────────────────────────────────────────────────
+
+async function extractTop10(page) {
+  log('Extracting Top 10...');
+  
+  const tracks = await page.evaluate(() => {
+    const results = [];
+    
+    // Look for Top 10 section heading
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    let top10Section = null;
+    
+    for (const heading of headings) {
+      const text = heading.textContent?.trim().toLowerCase() || '';
+      if (text.includes('top 10') || text.includes('top ten')) {
+        // Find the track list container after this heading
+        top10Section = heading.closest('section') || heading.parentElement;
+        break;
+      }
+    }
+    
+    if (!top10Section) {
+      // Fallback: look for first track list on page (often Top 10)
+      top10Section = document;
+    }
+    
+    // Extract tracks - Beatport selectors
+    const trackElements = top10Section.querySelectorAll('[data-testid="track-row"], .track-list-item, .buk-track, [class*="TrackListItem"]');
+    
+    let count = 0;
+    for (const el of trackElements) {
+      if (count >= 10) break;
+      
+      const titleEl = el.querySelector('.track-title, [data-testid="track-title"], .buk-track-title, [class*="title"]');
+      const artistEl = el.querySelector('.track-artist, [data-testid="track-artist"], .buk-track-artists, [class*="artist"]');
+      
+      if (titleEl) {
+        results.push({
+          name: titleEl.textContent?.trim() || '',
+          artist: artistEl?.textContent?.trim() || '',
+          source: 'top10'
+        });
+        count++;
+      }
+    }
+    
+    return results;
+  });
+  
+  log(`Found ${tracks.length} Top 10 tracks`);
+  return tracks;
+}
+
+async function extractLatestReleases(page, maxPages = 5) {
+  log(`Extracting Latest Releases (up to ${maxPages} pages)...`);
+  
+  const allTracks = [];
+  let currentPage = 1;
+  
+  while (currentPage <= maxPages) {
+    log(`  Page ${currentPage}...`);
+    
+    const tracks = await page.evaluate(() => {
+      const results = [];
+      
+      // Look for Latest Releases section
+      const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+      let latestSection = null;
+      
+      for (const heading of headings) {
+        const text = heading.textContent?.trim().toLowerCase() || '';
+        if (text.includes('latest releases') || text.includes('new releases') || text.includes('new tracks')) {
+          latestSection = heading.closest('section') || heading.parentElement;
+          break;
+        }
+      }
+      
+      if (!latestSection) {
+        latestSection = document;
+      }
+      
+      // Extract tracks
+      const trackElements = latestSection.querySelectorAll('[data-testid="track-row"], .track-list-item, .buk-track, [class*="TrackListItem"]');
+      
+      for (const el of trackElements) {
+        const titleEl = el.querySelector('.track-title, [data-testid="track-title"], .buk-track-title, [class*="title"]');
+        const artistEl = el.querySelector('.track-artist, [data-testid="track-artist"], .buk-track-artists, [class*="artist"]');
+        
+        if (titleEl) {
+          results.push({
+            name: titleEl.textContent?.trim() || '',
+            artist: artistEl?.textContent?.trim() || '',
+            source: 'latest'
+          });
+        }
+      }
+      
+      return results;
+    });
+    
+    allTracks.push(...tracks);
+    log(`    Found ${tracks.length} tracks`);
+    
+    // Look for next page arrow/button
+    const hasNextPage = await page.evaluate(() => {
+      const nextBtn = document.querySelector('[data-testid="pagination-next"], .pagination-next, [class*="next"], button[class*="arrow-right"]');
+      if (nextBtn && !nextBtn.disabled) {
+        nextBtn.click();
+        return true;
+      }
+      return false;
+    });
+    
+    if (!hasNextPage) {
+      log('  No more pages');
+      break;
+    }
+    
+    // Wait for page to load
+    await page.waitForTimeout(2000);
+    currentPage++;
+  }
+  
+  log(`Total Latest Releases: ${allTracks.length} tracks from ${currentPage} page(s)`);
+  return allTracks;
 }
 
 // ─── Main ─────────────────────────────────────────────────────────────────────
@@ -126,40 +253,33 @@ function log(msg) {
     try {
       // Load genre page
       await page.goto(genre.url, { waitUntil: 'domcontentloaded', timeout: 30000 });
-      await page.waitForTimeout(2000);
+      await page.waitForTimeout(3000);
 
-      // Extract tracks from charts on the page
-      const tracks = await page.evaluate(() => {
-        const results = [];
-        
-        // Look for track items - Beatport uses different selectors
-        const trackElements = document.querySelectorAll('[data-testid="track-row"], .track-list-item, .buk-track');
-        
-        for (const el of trackElements) {
-          const titleEl = el.querySelector('.track-title, [data-testid="track-title"], .buk-track-title');
-          const artistEl = el.querySelector('.track-artist, [data-testid="track-artist"], .buk-track-artists');
-          
-          if (titleEl) {
-            results.push({
-              name: titleEl.textContent?.trim() || '',
-              artist: artistEl?.textContent?.trim() || '',
-              source: 'chart'
-            });
-          }
+      // Extract Top 10
+      const top10Tracks = await extractTop10(page);
+      
+      // Extract Latest Releases (up to 5 pages)
+      const latestTracks = await extractLatestReleases(page, 5);
+      
+      // Combine and dedupe
+      const allTracks = [...top10Tracks];
+      for (const track of latestTracks) {
+        const key = `${track.artist} - ${track.name}`.toLowerCase();
+        const exists = allTracks.some(t => `${t.artist} - ${t.name}`.toLowerCase() === key);
+        if (!exists) {
+          allTracks.push(track);
         }
-        
-        return results;
-      });
+      }
 
-      log(`Found ${tracks.length} tracks on ${genre.name} page`);
+      log(`Total unique tracks: ${allTracks.length} (Top 10: ${top10Tracks.length}, Latest: ${latestTracks.length})`);
 
-      if (tracks.length === 0) {
+      if (allTracks.length === 0) {
         log('No tracks found - may need selector update');
         continue;
       }
 
       // Filter new tracks
-      const newTracks = tracks.filter(t => {
+      const newTracks = allTracks.filter(t => {
         const key = `${t.artist} - ${t.name}`.toLowerCase();
         return !seen.has(key);
       });
@@ -171,7 +291,7 @@ function log(msg) {
       // and selecting the correct playlist from dropdown
 
       // Mark tracks as seen
-      for (const t of tracks) {
+      for (const t of allTracks) {
         const key = `${t.artist} - ${t.name}`.toLowerCase();
         if (!seen.has(key)) {
           seen.add(key);
@@ -182,7 +302,9 @@ function log(msg) {
       summary.push({
         genre: genre.name,
         playlist: playlistName,
-        found: tracks.length,
+        top10: top10Tracks.length,
+        latest: latestTracks.length,
+        total: allTracks.length,
         new: newTracks.length
       });
 
@@ -205,7 +327,7 @@ function log(msg) {
     if (s.error) {
       log(`❌ ${s.genre}: ERROR - ${s.error}`);
     } else {
-      log(`${s.new > 0 ? '✅' : '⏭'} ${s.genre} → "${s.playlist}": ${s.new} new / ${s.found} total`);
+      log(`${s.new > 0 ? '✅' : '⏭'} ${s.genre} → "${s.playlist}": ${s.new} new / ${s.total} total (Top 10: ${s.top10}, Latest: ${s.latest})`);
     }
   }
 
