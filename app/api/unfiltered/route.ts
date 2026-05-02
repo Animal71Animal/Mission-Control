@@ -85,13 +85,8 @@ Format as JSON: {"left": "...", "right": "...", "truth": "..."}`;
     };
   } catch (error) {
     console.error("Abacus analysis error:", error);
-    // Return error details so we can debug
-    return {
-      topic,
-      left: "Error calling Abacus API",
-      right: String(error),
-      truth: "Fallback disabled for debugging"
-    };
+    // Fallback to keyword-based
+    return fallbackAnalysis(topic);
   }
 }
 
