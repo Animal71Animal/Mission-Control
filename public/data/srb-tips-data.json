@@ -75,7 +75,9 @@
       "jan": 20,
       "feb": 55,
       "mar": 87,
-      "total": 162,
+      "apr": 46,
+      "may": 30,
+      "total": 238,
       "badge": "bronze"
     },
     {
@@ -3908,7 +3910,7 @@
       },
       {
         "date": "Sat May 2",
-        "total": 83,
+        "total": 113,
         "dancers": [
           {
             "dancer": "Georgia",
@@ -3925,6 +3927,10 @@
           {
             "dancer": "Brittany",
             "amount": 20
+          },
+          {
+            "dancer": "Allie",
+            "amount": 30
           }
         ]
       }
