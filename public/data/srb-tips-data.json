@@ -55,7 +55,9 @@
       "jan": 74,
       "feb": 48,
       "mar": 138,
-      "total": 260,
+      "apr": 20,
+      "may": 28,
+      "total": 308,
       "badge": "silver"
     },
     {
@@ -409,7 +411,8 @@
       "jan": 0,
       "feb": 0,
       "mar": 25,
-      "apr": 20
+      "apr": 20,
+      "may": 20
     },
     {
       "name": "Val",
@@ -532,7 +535,8 @@
       "jan": 0,
       "feb": 0,
       "mar": 0,
-      "apr": 10
+      "apr": 10,
+      "may": 15
     }
   ],
   "dailyTips": [
@@ -3904,10 +3908,22 @@
       },
       {
         "date": "Sat May 2",
-        "total": 20,
+        "total": 83,
         "dancers": [
           {
             "dancer": "Georgia",
+            "amount": 20
+          },
+          {
+            "dancer": "Genesis",
+            "amount": 28
+          },
+          {
+            "dancer": "Nadia",
+            "amount": 15
+          },
+          {
+            "dancer": "Brittany",
             "amount": 20
           }
         ]
