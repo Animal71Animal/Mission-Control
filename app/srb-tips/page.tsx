@@ -415,7 +415,7 @@ export default function SrbTipsPage() {
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16, marginBottom: 20 }}>
-            {monthlyTotals.map((m) => (
+            {monthlyTotals.filter(m => ['January', 'February', 'March'].includes(m.month)).map((m) => (
               <div key={m.month} style={{
                 background: "var(--bg)",
                 border: "1px solid var(--border)",
@@ -434,7 +434,10 @@ export default function SrbTipsPage() {
             🏆 Q1 Top 10 Overall
           </h3>
           <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-            {[...topTippers].sort((a, b) => b.total - a.total).slice(0, 10).map((t, i) => (
+            {[...topTippers].map(t => ({
+              ...t,
+              q1Total: (t.jan || 0) + (t.feb || 0) + (t.mar || 0)
+            })).sort((a, b) => b.q1Total - a.q1Total).slice(0, 10).map((t, i) => (
               <div key={t.name} style={{ display: "flex", alignItems: "center", gap: 8, padding: "6px 0", borderBottom: "1px solid var(--border)" }}>
                 <span style={{
                   display: "inline-block",
@@ -447,8 +450,8 @@ export default function SrbTipsPage() {
                   {i + 1}
                 </span>
                 <span style={{ flex: 1 }}>{t.name}</span>
-                <span style={{ color: "var(--muted)", fontSize: "0.75rem" }}>J:${t.jan} F:${t.feb} M:${t.mar}</span>
-                <span style={{ fontWeight: 600, minWidth: 50, textAlign: "right" }}>${t.total}</span>
+                <span style={{ color: "var(--muted)", fontSize: "0.75rem" }}>J:${t.jan || 0} F:${t.feb || 0} M:${t.mar || 0}</span>
+                <span style={{ fontWeight: 600, minWidth: 50, textAlign: "right" }}>${t.q1Total}</span>
               </div>
             ))}
           </div>
