@@ -111,19 +111,24 @@ export default function SrbTipsPage() {
     
     if (!dancer) return null;
 
-    let jan = dancer.jan;
-    let feb = dancer.feb;
-    let mar = dancer.mar;
+    let jan = dancer.jan || 0;
+    let feb = dancer.feb || 0;
+    let mar = dancer.mar || 0;
+    let apr = (dancer as any).apr || 0;
+    let may = (dancer as any).may || 0;
 
     // Apply date range filter
-    if (dateRange === "jan") { feb = 0; mar = 0; }
-    else if (dateRange === "feb") { jan = 0; mar = 0; }
-    else if (dateRange === "mar") { jan = 0; feb = 0; }
-    else if (dateRange === "q1") { /* all months */ }
+    if (dateRange === "jan") { feb = 0; mar = 0; apr = 0; may = 0; }
+    else if (dateRange === "feb") { jan = 0; mar = 0; apr = 0; may = 0; }
+    else if (dateRange === "mar") { jan = 0; feb = 0; apr = 0; may = 0; }
+    else if (dateRange === "q1") { apr = 0; may = 0; }
+    else if (dateRange === "apr") { jan = 0; feb = 0; mar = 0; may = 0; }
+    else if (dateRange === "may") { jan = 0; feb = 0; mar = 0; apr = 0; }
+    else if (dateRange === "q2") { jan = 0; feb = 0; mar = 0; }
 
-    const total = jan + feb + mar;
+    const total = jan + feb + mar + apr + may;
     
-    return { name: dancer.name, jan, feb, mar, total };
+    return { name: dancer.name, jan, feb, mar, apr, may, total };
   };
 
   const toggleMonth = (month: string) => {
@@ -666,11 +671,14 @@ export default function SrbTipsPage() {
                   cursor: "pointer",
                 }}
               >
-                <option value="all">All Time (Q1)</option>
+                <option value="all">All Time</option>
                 <option value="jan">January Only</option>
                 <option value="feb">February Only</option>
                 <option value="mar">March Only</option>
                 <option value="q1">Q1 Total</option>
+                <option value="apr">April Only</option>
+                <option value="may">May Only</option>
+                <option value="q2">Q2 Total</option>
               </select>
             </div>
 
@@ -686,7 +694,30 @@ export default function SrbTipsPage() {
                   {dancerResult.name}
                 </h3>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, textAlign: "center" }}>
-                  {dateRange === "all" || dateRange === "q1" ? (
+                  {dateRange === "all" ? (
+                    <>
+                      <div>
+                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>Jan</div>
+                        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.jan}</div>
+                      </div>
+                      <div>
+                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>Feb</div>
+                        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.feb}</div>
+                      </div>
+                      <div>
+                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>Mar</div>
+                        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.mar}</div>
+                      </div>
+                      <div>
+                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>Apr</div>
+                        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.apr}</div>
+                      </div>
+                      <div>
+                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>May</div>
+                        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.may}</div>
+                      </div>
+                    </>
+                  ) : dateRange === "q1" ? (
                     <>
                       <div>
                         <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>January</div>
@@ -701,13 +732,24 @@ export default function SrbTipsPage() {
                         <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.mar}</div>
                       </div>
                     </>
+                  ) : dateRange === "q2" ? (
+                    <>
+                      <div>
+                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>April</div>
+                        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.apr}</div>
+                      </div>
+                      <div>
+                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>May</div>
+                        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.may}</div>
+                      </div>
+                    </>
                   ) : (
                     <div style={{ gridColumn: "span 3" }}>
                       <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>
-                        {dateRange === "jan" ? "January" : dateRange === "feb" ? "February" : "March"}
+                        {dateRange === "jan" ? "January" : dateRange === "feb" ? "February" : dateRange === "mar" ? "March" : dateRange === "apr" ? "April" : "May"}
                       </div>
                       <div style={{ fontSize: "2rem", fontWeight: 700, color: "var(--accent2)" }}>
-                        ${dateRange === "jan" ? dancerResult.jan : dateRange === "feb" ? dancerResult.feb : dancerResult.mar}
+                        ${dateRange === "jan" ? dancerResult.jan : dateRange === "feb" ? dancerResult.feb : dateRange === "mar" ? dancerResult.mar : dateRange === "apr" ? dancerResult.apr : dancerResult.may}
                       </div>
                     </div>
                   )}
