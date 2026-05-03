@@ -53,7 +53,10 @@ export default function SrbTipsPage() {
   }
 
   const { monthlyTotals, topTippers, allDancers, nightlyData } = data;
-  const quarterTotal = monthlyTotals.reduce((sum, m) => sum + m.amount, 0);
+  
+  // Q1 = January, February, March
+  const q1Months = monthlyTotals.filter(m => ['January', 'February', 'March'].includes(m.month));
+  const quarterTotal = q1Months.reduce((sum, m) => sum + m.amount, 0);
   
   // Calculate Q2 total (April, May, June)
   const q2Months = monthlyTotals.filter(m => ['April', 'May', 'June'].includes(m.month));
