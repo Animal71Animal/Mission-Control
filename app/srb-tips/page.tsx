@@ -693,7 +693,7 @@ export default function SrbTipsPage() {
                 <h3 style={{ margin: "0 0 16px", fontSize: "1.1rem", color: "var(--text)" }}>
                   {dancerResult.name}
                 </h3>
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, textAlign: "center" }}>
+                <div style={{ display: "grid", gridTemplateColumns: dateRange === "all" ? "repeat(6, 1fr)" : "repeat(4, 1fr)", gap: 16, textAlign: "center" }}>
                   {dateRange === "all" ? (
                     <>
                       <div>
