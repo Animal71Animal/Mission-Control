@@ -156,7 +156,8 @@
       "jan": 200,
       "feb": 60,
       "mar": 0,
-      "apr": 50
+      "apr": 50,
+      "may": 30
     },
     {
       "name": "Genesis",
@@ -271,14 +272,16 @@
       "name": "Asia",
       "jan": 0,
       "feb": 45,
-      "mar": 35
+      "mar": 35,
+      "may": 13
     },
     {
       "name": "Giovanna",
       "jan": 0,
       "feb": 0,
       "mar": 75,
-      "apr": 20
+      "apr": 20,
+      "may": 20
     },
     {
       "name": "Zara",
@@ -3921,7 +3924,7 @@
       },
       {
         "date": "Sat May 2",
-        "total": 268,
+        "total": 331,
         "dancers": [
           {
             "dancer": "Georgia",
@@ -3986,6 +3989,18 @@
           {
             "dancer": "Karina",
             "amount": 20
+          },
+          {
+            "dancer": "Suki",
+            "amount": 30
+          },
+          {
+            "dancer": "Giovanna",
+            "amount": 20
+          },
+          {
+            "dancer": "Asia",
+            "amount": 13
           }
         ]
       }
