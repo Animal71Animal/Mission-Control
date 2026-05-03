@@ -22,7 +22,7 @@
     },
     {
       "month": "May",
-      "amount": 331,
+      "amount": 371,
       "nights": 1
     }
   ],
@@ -33,7 +33,9 @@
       "jan": 20,
       "feb": 135,
       "mar": 120,
-      "total": 275,
+      "apr": 60,
+      "may": 20,
+      "total": 355,
       "badge": "gold"
     },
     {
@@ -71,8 +73,9 @@
       "jan": 20,
       "feb": 200,
       "mar": 0,
+      "apr": 20,
       "may": 20,
-      "total": 240,
+      "total": 260,
       "badge": "silver"
     },
     {
@@ -148,7 +151,8 @@
       "jan": 20,
       "feb": 135,
       "mar": 120,
-      "apr": 60
+      "apr": 60,
+      "may": 20
     },
     {
       "name": "Amity",
@@ -176,7 +180,9 @@
       "name": "Nala",
       "jan": 20,
       "feb": 200,
-      "mar": 0
+      "mar": 0,
+      "apr": 20,
+      "may": 20
     },
     {
       "name": "Allie",
@@ -3931,7 +3937,7 @@
       },
       {
         "date": "Sat May 2",
-        "total": 331,
+        "total": 371,
         "dancers": [
           {
             "dancer": "Georgia",
@@ -4008,6 +4014,10 @@
           {
             "dancer": "Asia",
             "amount": 13
+          },
+          {
+            "dancer": "Hunter",
+            "amount": 20
           }
         ]
       }
