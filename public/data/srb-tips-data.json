@@ -66,7 +66,8 @@
       "jan": 20,
       "feb": 200,
       "mar": 0,
-      "total": 220,
+      "may": 20,
+      "total": 240,
       "badge": "silver"
     },
     {
@@ -104,7 +105,9 @@
       "jan": 0,
       "feb": 50,
       "mar": 89,
-      "total": 139,
+      "apr": 40,
+      "may": 20,
+      "total": 199,
       "badge": "bronze"
     },
     {
@@ -444,7 +447,8 @@
       "jan": 0,
       "feb": 0,
       "mar": 20,
-      "apr": 45
+      "apr": 45,
+      "may": 10
     },
     {
       "name": "Kylie",
@@ -457,7 +461,8 @@
       "jan": 0,
       "feb": 15,
       "mar": 0,
-      "apr": 83
+      "apr": 83,
+      "may": 20
     },
     {
       "name": "Jamira",
@@ -489,7 +494,8 @@
       "name": "Karina",
       "jan": 7,
       "feb": 0,
-      "mar": 0
+      "mar": 0,
+      "may": 20
     },
     {
       "name": "Natalie",
@@ -3915,7 +3921,7 @@
       },
       {
         "date": "Sat May 2",
-        "total": 178,
+        "total": 268,
         "dancers": [
           {
             "dancer": "Georgia",
@@ -3959,6 +3965,26 @@
           },
           {
             "dancer": "Kendall",
+            "amount": 20
+          },
+          {
+            "dancer": "Amy",
+            "amount": 20
+          },
+          {
+            "dancer": "Nala",
+            "amount": 20
+          },
+          {
+            "dancer": "Skylar",
+            "amount": 20
+          },
+          {
+            "dancer": "Maria",
+            "amount": 10
+          },
+          {
+            "dancer": "Karina",
             "amount": 20
           }
         ]
