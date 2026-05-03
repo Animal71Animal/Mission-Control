@@ -5,8 +5,8 @@ import Card from "@/components/Card";
 
 interface SrbTipsData {
   monthlyTotals: { month: string; amount: number; nights: number }[];
-  topTippers: { rank: number; name: string; jan: number; feb: number; mar: number; total: number; badge: string | null }[];
-  allDancers: { name: string; jan: number; feb: number; mar: number }[];
+  topTippers: { rank: number; name: string; jan: number; feb: number; mar: number; apr?: number; may?: number; jun?: number; total: number; badge: string | null }[];
+  allDancers: { name: string; jan: number; feb: number; mar: number; apr?: number; may?: number; jun?: number }[];
   customerTips: { month: string; amount: number; topNight: string }[];
   dailyTips?: { date: string; amount: number; dancers: { name: string; amount: number }[] }[];
   nightlyData?: Record<string, { date: string; total: number; dancers: { name: string; amount: number }[] }[]>;
@@ -59,19 +59,24 @@ export default function SrbTipsPage() {
   const q2Months = monthlyTotals.filter(m => ['April', 'May', 'June'].includes(m.month));
   const q2Total = q2Months.reduce((sum, m) => sum + m.amount, 0);
   const q2Nights = q2Months.reduce((sum, m) => sum + m.nights, 0);
+  
+  // Calculate May total from daily data
+  const mayNights = nightlyData?.['May'] || [];
+  const mayTotal = mayNights.reduce((sum, n) => sum + n.total, 0);
+  const mayNightsCount = mayNights.length;
 
   // Generate month details from data
   const getMonthDetails = (month: string): MonthDetail | null => {
     if (month === "Q1" || month === "Q2") return null;
     
-    const monthKey = month.toLowerCase().slice(0, 3) as 'jan' | 'feb' | 'mar';
+    const monthKey = month.toLowerCase().slice(0, 3) as 'jan' | 'feb' | 'mar' | 'apr' | 'may' | 'jun';
     const monthData = monthlyTotals.find(m => m.month === month);
     
     if (!monthData) return null;
     
     // Sort entertainers by this month's tips
     const entertainers = allDancers
-      .map(d => ({ name: d.name, amount: d[monthKey] || 0 }))
+      .map(d => ({ name: d.name, amount: (d as any)[monthKey] || 0 }))
       .filter(d => d.amount > 0)
       .sort((a, b) => b.amount - a.amount);
     
@@ -151,7 +156,7 @@ export default function SrbTipsPage() {
           💰 SRB Tips
         </h1>
         <p style={{ color: "var(--muted)", marginTop: 6, fontSize: "0.9rem" }}>
-          Spearmint Rhino Boise tip tracking · Jan-Mar 2026
+          Spearmint Rhino Boise tip tracking · Jan-May 2026
         </p>
       </div>
 
