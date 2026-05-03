@@ -212,7 +212,8 @@
       "name": "Adelia",
       "jan": 60,
       "feb": 20,
-      "mar": 50
+      "mar": 50,
+      "may": 15
     },
     {
       "name": "Willow",
@@ -253,7 +254,8 @@
       "jan": 20,
       "feb": 15,
       "mar": 50,
-      "apr": 20
+      "apr": 20,
+      "may": 20
     },
     {
       "name": "Natasha",
@@ -294,7 +296,8 @@
       "jan": 34,
       "feb": 15,
       "mar": 7,
-      "apr": 5
+      "apr": 5,
+      "may": 10
     },
     {
       "name": "Quinn",
@@ -314,7 +317,8 @@
       "jan": 20,
       "feb": 0,
       "mar": 30,
-      "apr": 10
+      "apr": 10,
+      "may": 5
     },
     {
       "name": "London",
@@ -459,7 +463,8 @@
       "name": "Jamira",
       "jan": 0,
       "feb": 5,
-      "mar": 10
+      "mar": 10,
+      "may": 5
     },
     {
       "name": "Russia",
@@ -3910,7 +3915,7 @@
       },
       {
         "date": "Sat May 2",
-        "total": 113,
+        "total": 178,
         "dancers": [
           {
             "dancer": "Georgia",
@@ -3931,6 +3936,30 @@
           {
             "dancer": "Allie",
             "amount": 30
+          },
+          {
+            "dancer": "Macy",
+            "amount": 5
+          },
+          {
+            "dancer": "Adelia",
+            "amount": 15
+          },
+          {
+            "dancer": "Jazmin",
+            "amount": 10
+          },
+          {
+            "dancer": "Jamira",
+            "amount": 5
+          },
+          {
+            "dancer": "Baby",
+            "amount": 10
+          },
+          {
+            "dancer": "Kendall",
+            "amount": 20
           }
         ]
       }
