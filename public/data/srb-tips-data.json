@@ -19,6 +19,11 @@
       "month": "April",
       "amount": 1602,
       "nights": 12
+    },
+    {
+      "month": "May",
+      "amount": 331,
+      "nights": 1
     }
   ],
   "topTippers": [
