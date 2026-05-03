@@ -195,7 +195,8 @@
       "jan": 26,
       "feb": 59,
       "mar": 47,
-      "apr": 125
+      "apr": 125,
+      "may": 20
     },
     {
       "name": "Noelle",
@@ -3898,6 +3899,16 @@
           {
             "dancer": "Mia",
             "amount": 15
+          }
+        ]
+      },
+      {
+        "date": "Sat May 2",
+        "total": 20,
+        "dancers": [
+          {
+            "dancer": "Georgia",
+            "amount": 20
           }
         ]
       }
