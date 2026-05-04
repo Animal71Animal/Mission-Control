@@ -1,1 +1,123 @@
-[]
+{
+  "status": "active",
+  "started": "2026-05-04",
+  "current_phase": "LOADING (Weeks 1-2 for MT1)",
+  "compounds": [
+    {
+      "name": "Reta (Testosterone)",
+      "concentration": "5 mg/mL (10 mg / 2 mL)",
+      "dosage_units": 60,
+      "dosage_mg": 3,
+      "schedule": "Monday 11pm",
+      "frequency": "weekly",
+      "current_vials": 1,
+      "notes": "Late night injection"
+    },
+    {
+      "name": "Tesa (Tesofensine)",
+      "concentration": "5 mg/mL (10 mg / 2 mL)",
+      "dosage_units": 20,
+      "dosage_mg": 1,
+      "schedule": "Mon-Fri 10am",
+      "frequency": "weekdays",
+      "current_vials": 3,
+      "notes": "Appetite suppression, 5-day cycle"
+    },
+    {
+      "name": "HCG (Human Chorionic Gonadotropin)",
+      "concentration": "2500 IU/mL (5000 IU / 2 mL)",
+      "dosage_units": 10,
+      "dosage_iu": 250,
+      "schedule": "Tuesday & Friday mornings",
+      "frequency": "2x weekly",
+      "current_vials": 1,
+      "notes": "Maintains testicular function"
+    },
+    {
+      "name": "Semax (Cognitive Peptide)",
+      "concentration": "5 mg/mL (10 mg / 2 mL)",
+      "dosage_units": 5,
+      "dosage_mcg": 250,
+      "schedule": "Mon-Fri 10am",
+      "frequency": "weekdays",
+      "current_vials": 1,
+      "notes": "Start at 5 units, can increase to 8-10 units after 3-5 days. Optional second dose 2-3pm (4-6 units).",
+      "status": "JUST_ARRIVED"
+    },
+    {
+      "name": "MT1 (Melanotan I)",
+      "concentration": "5 mg/mL (10 mg / 2 mL)",
+      "dosage_units": 5,
+      "dosage_mcg": 250,
+      "schedule": "Daily (Loading Phase)",
+      "frequency": "daily",
+      "current_vials": 1,
+      "phase": "LOADING",
+      "phase_duration": "10-14 days (approx May 4-18)",
+      "notes": "Take 10am (with Tesa/Semax) or 30-60min before UV exposure. Start low to avoid nausea. After loading phase (Week 3+), switch to 10u (500 mcg) 2x weekly (Tue/Fri mornings).",
+      "status": "JUST_ARRIVED"
+    }
+  ],
+  "weekly_schedule_loading_phase": {
+    "monday": {
+      "10am": "Tesa 20u + Semax 5u + MT1 5u",
+      "11pm": "Reta 60u"
+    },
+    "tuesday": {
+      "morning": "HCG 10u",
+      "10am": "Tesa 20u + Semax 5u + MT1 5u"
+    },
+    "wednesday": {
+      "10am": "Tesa 20u + Semax 5u + MT1 5u"
+    },
+    "thursday": {
+      "10am": "Tesa 20u + Semax 5u + MT1 5u"
+    },
+    "friday": {
+      "morning": "HCG 10u",
+      "10am": "Tesa 20u + Semax 5u + MT1 5u"
+    },
+    "saturday": {
+      "10am": "MT1 5u"
+    },
+    "sunday": {
+      "10am": "MT1 5u"
+    }
+  },
+  "weekly_totals_loading_phase": {
+    "reta_mg": 3,
+    "tesa_mg": 5,
+    "hcg_iu": 500,
+    "semax_mcg": 1250,
+    "mt1_mcg": 1750
+  },
+  "maintenance_schedule_week_3_plus": {
+    "_note": "Transition after 10-14 days loading phase (approx May 19+)",
+    "monday": {
+      "10am": "Tesa 20u + Semax 5u",
+      "11pm": "Reta 60u"
+    },
+    "tuesday": {
+      "morning": "HCG 10u + MT1 10u (500 mcg)",
+      "10am": "Tesa 20u + Semax 5u"
+    },
+    "wednesday": {
+      "10am": "Tesa 20u + Semax 5u"
+    },
+    "thursday": {
+      "10am": "Tesa 20u + Semax 5u"
+    },
+    "friday": {
+      "morning": "HCG 10u + MT1 10u (500 mcg)",
+      "10am": "Tesa 20u + Semax 5u"
+    },
+    "saturday": "Rest",
+    "sunday": "Rest"
+  },
+  "upcoming_milestones": [
+    "2026-05-11: First week assessment — note nausea levels, skin response, energy, appetite impact",
+    "2026-05-15: Semax dosage decision — stay at 5u or move to 8-10u?",
+    "2026-05-18: MT1 loading phase complete — assess pigmentation progress",
+    "2026-05-19: Switch MT1 to maintenance phase (10u 2x weekly: Tue & Fri mornings)"
+  ]
+}
