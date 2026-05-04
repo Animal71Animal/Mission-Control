@@ -248,15 +248,7 @@ Constraint-based track selection (not just random):
 - Chain discounts for multi-location operators (e.g., 20% off for 3+ locations — TBD)
 - Includes: core platform, all stages, all accounts, dancer self-service, announcements, TTS, shift logs, offline playback
 
-### Stream 2 — Curated Music Library (Upsell)
-
-- ANIMAL's 25-year, 4TB professional DJ library pre-loaded on venue hardware
-- Sold as a one-time upsell or annual license
-- Positioned as "day one ready" — no music sourcing headache for the venue
-
-⚠️ **Legal note:** Requires entertainment lawyer review before launch. Structure as "licensed for venue use only" with clear terms. Do NOT position as outright sale of music files.
-
-### Stream 3 — Record Pool Subscription (Future Revenue Stream)
+### Stream 2 — Record Pool Subscription (Future Revenue Stream)
 
 Weekly curated drops specifically designed for club/automation use:
 
@@ -270,7 +262,7 @@ Weekly curated drops specifically designed for club/automation use:
 
 Creates sticky recurring revenue tied directly to the software. ANIMAL's 25+ years of programming instincts = genuine curatorial edge here.
 
-### Stream 4 — VirtualDJ Streaming Integration
+### Stream 3 — VirtualDJ Streaming Integration
 
 - Clubs using VirtualDJ already have access to integrated streaming services (SoundCloud Go+, Beatport Link, etc.)
 - Our software routes track selection through those licensed streams — no separate music licensing required for base tier
