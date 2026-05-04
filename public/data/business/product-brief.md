@@ -1,6 +1,6 @@
 # DJ Automation Software — Product Brief
 
-**Version:** 1.1  
+**Version:** 1.2  
 **Prepared for:** Developer Handoff  
 **Owner:** ANIMAL
 
@@ -339,15 +339,31 @@ Focus: Multi-venue operations + production readiness
 
 ---
 
-## What Developer Needs to Answer Before Week 1
+## Developer Handoff Checklist Before Week 1
 
-- Windows-first or cross-platform from day one?
-- Will we provide music licensing or is venue responsible for their own library?
-- Preferred audio library (rodio/cpal in Rust, or different approach)?
-- POS integration in V1 or Phase 3?
-- Any preference on local DB (SQLite vs. embedded Postgres)?
+### Architecture Decisions (Locked)
+- ✅ Cross-platform (macOS + Windows) via Tauri desktop app
+- ✅ Build ON VirtualDJ, not against it (SDK integration)
+- ✅ Offline-first with local SQLite (no server required)
+- ✅ Venues use own music library + VirtualDJ streaming subscriptions
+
+### Critical Questions to Answer
+- **VirtualDJ SDK version & licensing:** Which version do we target? Development license terms? Support channels?
+- **Tauri deployment:** Code signing certificates for macOS/Windows? App notarization workflow?
+- **ElevenLabs API scaling:** Rate limits per venue? Monthly API cost at 50 clubs? Caching strategy?
+- **POS system integration:** Do we need CoverJock-style BoothPoint integration in V1? Or defer to Phase 3?
+- **August ED Expo demo:** Which single feature is the centerpiece? (Rotation fairness? Energy adaptation? Real-time VirtualDJ control?)
+- **Phase 2 test venue:** Which club runs the pilot? Contract terms? Timeline?
+
+### Day 1 Deliverables
+- Tauri project skeleton (macOS + Windows build targets)
+- SQLite schema (rotations, dancers, music metadata, policies)
+- VirtualDJ SDK integration stub (command structure, event hooks)
+- Constraint engine algorithm (BPM, energy, repeat protection)
+- Basic setup wizard flow
 
 ---
 
-**Document prepared by PriScylla (AI assistant) based on product research and development sessions.**  
-**Last updated:** March 2026
+**Document version:** 1.2  
+**Last updated:** May 2026  
+**Status:** Ready for developer handoff
