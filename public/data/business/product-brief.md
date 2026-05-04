@@ -247,7 +247,6 @@ Constraint-based track selection (not just random):
 - **$2,000/month per venue** (flat rate — all stages, all DJs, all operators included)
 - Chain discounts for multi-location operators (e.g., 20% off for 3+ locations — TBD)
 - Includes: core platform, all stages, all accounts, dancer self-service, announcements, TTS, shift logs, offline playback
-- No per-DJ or per-stage scaling — one price, full access
 
 ### Stream 2 — Curated Music Library (Upsell)
 
