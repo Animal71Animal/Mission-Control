@@ -145,16 +145,15 @@ Constraint-based track selection (not just random):
 - Staff can add/remove tracks from any dancer's folder
 - "Do Not Play For Me" list per dancer
 
-### 5. DJ Control Interface
+### 5. Operator Control Interface
 
-- Professional dual-deck layout (Virtual DJ / Serato aesthetic)
-- Per deck: waveform display, album art, BPM, key, energy level, track timer
-- Crossfader, 3-band EQ per deck, volume faders, tempo control (±10%)
-- BPM Sync — auto-match tempo between decks
-- Cue point setting and recall
-- Upcoming track queue (next 3 tracks visible)
-- Stage selector at top — one interface manages all active stages
-- Mobile-responsive for tablet use
+- Professional rotation queue manager (next 3 tracks, upcoming dancers)
+- Stage selector — one interface manages all active stages simultaneously
+- Live controls: skip track, extend set, manual queue override, emergency abort
+- Announcement trigger panel (approved stingers only for operator role)
+- Real-time timing display (set timer, stage occupancy, next dancer ETA)
+- Mobile-responsive for tablet use in booth
+- Integrates with VirtualDJ SDK: programmatically controls track queuing, crossfade triggers, deck state via VDJ API (does NOT replicate deck controls — mixing, EQ, BPM sync remain VirtualDJ's responsibility)
 
 ### 6. Content Policy Management
 
@@ -202,23 +201,28 @@ Constraint-based track selection (not just random):
 
 ### Platform Targets
 
-- **Playout app:** Windows-first (most club booths are Windows), then macOS
-- **Admin console:** Web-based (tablet + desktop)
+- **Cross-platform from day one** — macOS and Windows (clubs run both)
+- **Playout app:** Tauri desktop app (Rust backend + React UI) — single codebase for both OS
+- **Admin console:** Web-based (tablet + desktop, browser)
 - **Dancer app:** Mobile web or native iOS/Android (Phase 2)
 
-### Tech Recommendations
+### Tech Stack
 
-- **Desktop app:** Tauri (Rust backend + React UI) or Electron
-- **Audio engine:** Rust with rodio/cpal for gapless playback and hardware access
-- **Local DB:** SQLite (no server required in venue)
-- **Cloud sync:** Optional — rotation/config syncs up when online
-- **TTS:** ElevenLabs API (cached locally after generation) or local TTS fallback
-- **Music:** Venue provides own library (no licensing liability on our end)
-- **Auth:** JWT-based, offline-capable
+| Layer | Technology | Rationale |
+|-------|------------|-----------|
+| Desktop shell | Tauri (Rust + React) | Cross-platform, small binary, native performance |
+| Audio engine | Rust rodio/cpal | Gapless playback, hardware I/O, offline-first |
+| Local DB | SQLite | Zero-config, offline-capable, no server required |
+| Cloud sync | Optional — rotation/config syncs when online | venues with stable internet |
+| TTS | ElevenLabs API (cached locally) | Instant voiceovers, no 24-hr wait |
+| Music | Venue's own library + VirtualDJ streaming integration | No music licensing liability |
+| Auth | JWT-based, offline-capable | Role-based access (Admin/Operator/Dancer) |
+
+**Key architectural principle:** Two-system design. Control plane (web/cloud) handles config, rotation, analytics, approvals. Playout plane (local app) handles audio output, gapless playback, offline cache, failover. Cloud syncs config down; playout runs independently.
 
 ### Deployment
 
-- Single executable installer (signed .exe for Windows)
+- Single executable installer (.exe for Windows, .app for macOS — Tauri handles both)
 - Silent auto-update (outside business hours)
 - Remote management via web admin panel
 
@@ -256,8 +260,10 @@ A working web prototype has been built on AbacusAI:
 
 ### Stream 1 — Software License (Core)
 
-- Monthly SaaS subscription per venue (TBD pricing — research CoverJock rates)
-- Chain discounts for multi-location operators
+- **$2,000/month per venue** (flat rate — all stages, all DJs, all operators included)
+- Chain discounts for multi-location operators (e.g., 20% off for 3+ locations — TBD)
+- Includes: core platform, all stages, all accounts, dancer self-service, announcements, TTS, shift logs, offline playback
+- No per-DJ or per-stage scaling — one price, full access
 
 ### Stream 2 — Curated Music Library (Upsell)
 
