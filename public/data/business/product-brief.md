@@ -303,35 +303,39 @@ Creates sticky recurring revenue tied directly to the software. ANIMAL's 25+ yea
 
 ## Phased Build Plan
 
-### Phase 1 — MVP (Weeks 1–6)
+### Phase 1 — Core Engine (Weeks 1–6)
 
-Core playout engine that can run one stage for a full shift:
+Focus: Rotation logic + VirtualDJ integration for one stage
 
-- Audio playback (gapless, crossfade, local files)
-- Rotation scheduler (dancer timers, auto-next)
-- Basic constraint engine (BPM, energy, repeat)
-- Setup wizard (stages, dancers, music rules)
-- Announcement engine (TTS + ducking)
-- Offline-first SQLite + failover
+- Rotation scheduler (dancer timers, auto-next, fairness enforcement)
+- Constraint engine (BPM, energy, repeat protection, artist separation)
+- Basic VirtualDJ SDK integration (track queuing, deck state control)
+- Local SQLite database (stages, dancers, music metadata)
+- Setup wizard (quick configuration)
+- Offline cache + failover watchdog
+- TTS announcement engine (ElevenLabs API, cached locally)
 
-### Phase 2 — V1 Pilot (Weeks 7–10)
+### Phase 2 — V1 Operator Edition (Weeks 7–10)
 
-Ready for real club testing:
+Focus: Professional operator UI + dancer self-service
 
-- Full DJ control panel (professional UI)
-- Dancer music self-service + approval workflow
-- Content filtering
+- Operator control UI (queue manager, stage selector, live controls)
+- Dancer self-service + approval workflow (Spotify search, requests)
+- Web admin panel (cloud-based configuration)
 - Multi-stage support
-- Web admin panel (remote management)
+- Content filtering (banned words, explicit flag)
 - Shift logs and reporting
+- Real-time cloud sync (when online)
 
 ### Phase 3 — Chain Launch (Weeks 11–16)
 
+Focus: Multi-venue operations + production readiness
+
 - Multi-location dashboard
-- Branding/white-label options
+- Chain pricing & billing integration
 - Security audit + code signing
 - Documentation + support portal
-- Chain contract templates
+- On-site support runbooks
 
 ---
 
