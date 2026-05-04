@@ -36,12 +36,12 @@ interface DailyDose {
   taken: boolean;
 }
 
-const COMPOUND_COLORS: Record<string, { bg: string; text: string; light: string }> = {
-  "Reta": { bg: "bg-red-950", text: "text-red-200", light: "bg-red-900/30" },
-  "Tesa": { bg: "bg-blue-950", text: "text-blue-200", light: "bg-blue-900/30" },
-  "HCG": { bg: "bg-purple-950", text: "text-purple-200", light: "bg-purple-900/30" },
-  "Semax": { bg: "bg-green-950", text: "text-green-200", light: "bg-green-900/30" },
-  "MT1": { bg: "bg-yellow-950", text: "text-yellow-200", light: "bg-yellow-900/30" },
+const COMPOUND_COLORS: Record<string, { bg: string; text: string; light: string; hex: string }> = {
+  "Tesa": { bg: "bg-cyan-950", text: "text-cyan-200", light: "bg-cyan-900/40", hex: "#0891b2" },
+  "Semax": { bg: "bg-purple-950", text: "text-purple-200", light: "bg-purple-900/40", hex: "#a855f7" },
+  "MT1": { bg: "bg-yellow-950", text: "text-yellow-200", light: "bg-yellow-900/40", hex: "#eab308" },
+  "Reta": { bg: "bg-pink-950", text: "text-pink-200", light: "bg-pink-900/40", hex: "#ec4899" },
+  "HCG": { bg: "bg-lime-950", text: "text-lime-200", light: "bg-lime-900/40", hex: "#84cc16" },
 };
 
 const DAYS_OF_WEEK = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
@@ -235,10 +235,11 @@ export default function PeptidesPage() {
                     padding: "12px 16px",
                     borderRadius: "8px",
                     background: isChecked ? "var(--bg)" : colors.light,
-                    border: `2px solid ${isChecked ? "var(--success)" : "var(--border)"}`,
+                    border: `2px solid ${isChecked ? "var(--border)" : "var(--border)"}`,
                     cursor: "pointer",
-                    transition: "all 0.2s",
-                    opacity: isChecked ? 0.7 : 1,
+                    transition: "all 0.25s ease",
+                    opacity: isChecked ? 0.55 : 1,
+                    filter: isChecked ? "saturate(0.3)" : "saturate(1)",
                   }}
                 >
                   <div
