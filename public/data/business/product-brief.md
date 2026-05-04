@@ -184,20 +184,31 @@ Constraint-based track selection (not just random):
 
 ## Architecture Requirements
 
-### Two-System Design
+### Three-Layer System Design
 
-```
-┌─────────────────────────────────┐    ┌──────────────────────────────┐
-│   CONTROL PLANE (Web/Cloud)     │    │  PLAYOUT PLANE (Local App)   │
-│                                 │    │                              │
-│ - Configuration                 │◄──►│ - Audio output               │
-│ - Rotation management           │    │ - Gapless playback           │
-│ - Analytics & logs              │    │ - Offline cache              │
-│ - Users & permissions           │    │ - Failover                   │
-│ - Dancer music approval         │    │ - Hardware health            │
-│ - Announcements library         │    │ - Real-time sync w/ cloud    │
-└─────────────────────────────────┘    └──────────────────────────────┘
-```
+**Control Plane (Web/Cloud)** handles:
+- Configuration: stages, dancers, rotation rules, policies
+- Constraint engine: BPM, energy, fairness, repeat protection, artist separation
+- Dancer self-service: music submissions, approvals, personal folders
+- Announcement management & scheduling
+- Analytics, reporting, shift logs
+- Multi-location dashboard (for chains)
+
+**Playout Engine (VirtualDJ — Third-Party)** handles:
+- Audio output, mixing, crossfades, gapless playback
+- Hardware I/O (soundcard, lighting, tempo sync)
+- Already battle-tested in thousands of clubs
+- We integrate programmatically via SDK
+
+**Integration & Operator Layer (Tauri Desktop App — What You Build)** handles:
+- Operator control UI: queue manager, stage controls, skip/extend, announcements
+- Real-time sync with cloud control plane
+- Offline cache: rotation configs, policies, music metadata
+- Failover watchdog: monitors health, auto-switches to safe playlist if needed
+- Programmatic control of VirtualDJ SDK: track queuing, deck state, crossfade triggers
+- Local SQLite for offline-first operation
+
+**Key principle:** You own the intelligence and the operator experience. VirtualDJ owns the audio. Your app orchestrates between them.
 
 ### Platform Targets
 
@@ -210,15 +221,16 @@ Constraint-based track selection (not just random):
 
 | Layer | Technology | Rationale |
 |-------|------------|-----------|
-| Desktop shell | Tauri (Rust + React) | Cross-platform, small binary, native performance |
-| Audio engine | Rust rodio/cpal | Gapless playback, hardware I/O, offline-first |
+| Desktop shell | Tauri (Rust + React) | Cross-platform, single codebase for macOS & Windows |
 | Local DB | SQLite | Zero-config, offline-capable, no server required |
-| Cloud sync | Optional — rotation/config syncs when online | venues with stable internet |
-| TTS | ElevenLabs API (cached locally) | Instant voiceovers, no 24-hr wait |
-| Music | Venue's own library + VirtualDJ streaming integration | No music licensing liability |
+| VirtualDJ SDK | Public API + scripting | Controls VDJ programmatically for track queuing, deck state, crossfades |
+| Cloud sync | Optional REST API | Rotation/config syncs when online, queued if offline |
+| TTS | ElevenLabs API (cached locally) | Instant voiceovers, no 24-hr wait like CoverJock |
+| Music source | Venue's own + VirtualDJ streaming | No separate music licensing — clubs use existing VDJ subscriptions |
 | Auth | JWT-based, offline-capable | Role-based access (Admin/Operator/Dancer) |
+| Monitoring | Local watchdog + cloud health dashboard | Real-time status, failover automation, no dead air |
 
-**Key architectural principle:** Two-system design. Control plane (web/cloud) handles config, rotation, analytics, approvals. Playout plane (local app) handles audio output, gapless playback, offline cache, failover. Cloud syncs config down; playout runs independently.
+**Key architectural principle:** Three layers, clear separation. Control plane manages intelligence. Playout engine (VirtualDJ) handles audio. Integration layer orchestrates both offline-first with fallback. No single point of failure.
 
 ### Deployment
 
