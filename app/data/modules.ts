@@ -46,7 +46,7 @@ export interface Shortcut {
 // Quick access shortcuts - none currently
 export const shortcuts: Shortcut[] = [];
 
-// Shared access links for external parties
+// Shared access links for external parties — now pointing to live MC pages
 export interface SharedLink {
   id: string;
   name: string;
@@ -58,20 +58,12 @@ export interface SharedLink {
 
 export const sharedLinks: SharedLink[] = [
   {
-    id: "dj-auto-001",
-    name: "DJ Automation Software",
-    url: "https://dj-automation-srb.vercel.app",
+    id: "product-brief-live",
+    name: "DJ Automation — Product Brief (Live)",
+    url: "https://mission-control-cyan-omega.vercel.app/wlp-product",
     password: "wlp2025",
-    created: "2026-03-28",
-    description: "Product brief, competitive analysis, and investor pitch for DJ automation app"
-  },
-  {
-    id: "doe-pitch-001",
-    name: "DOE Pitch Deck",
-    url: "https://my-9qag5ejfh-ericmills71-8100s-projects.vercel.app",
-    password: "wlp2025",
-    created: "2026-03-28",
-    description: "Director of Entertainment pitch deck for prospective employers"
+    created: "2026-05-04",
+    description: "Live product brief — always current, updates automatically as changes are made to MC"
   }
 ];
 

@@ -82,10 +82,17 @@ export default function PeptidesPage() {
         const doses: DailyDose[] = [];
         Object.entries(daySchedule).forEach(([time, dose]: any) => {
           if (typeof dose === "string") {
-            doses.push({ compound: "", time, dose, taken: false });
+            // Split combined doses like "Tesa 20u + Semax 5u + MT1 5u" into separate items
+            const parts = dose.split(" + ");
+            parts.forEach((part: string) => {
+              doses.push({ compound: "", time, dose: part.trim(), taken: false });
+            });
           } else {
             Object.entries(dose).forEach(([t, d]: any) => {
-              doses.push({ compound: "", time: t, dose: d, taken: false });
+              const parts = (d as string).split(" + ");
+              parts.forEach((part: string) => {
+                doses.push({ compound: "", time: t, dose: part.trim(), taken: false });
+              });
             });
           }
         });
@@ -165,9 +172,10 @@ export default function PeptidesPage() {
               padding: "8px 12px",
               borderRadius: "6px",
               background: colors.light,
-              border: `2px solid var(--border)`,
+              border: `2px solid ${colors.hex}`,
               fontSize: "0.9rem",
               color: colors.text,
+              fontWeight: 600,
             }}
           >
             {name}
@@ -221,7 +229,7 @@ export default function PeptidesPage() {
           {todayDoses.length > 0 ? (
             todayDoses.map((dose, idx) => {
               const compound = getCompoundFromDose(dose.dose);
-              const colors = COMPOUND_COLORS[compound] || { bg: "bg-gray-950", text: "text-gray-200", light: "bg-gray-900/30" };
+              const colors = COMPOUND_COLORS[compound] || { bg: "bg-gray-950", text: "text-gray-200", light: "bg-gray-900/30", hex: "#6b7280" };
               const isChecked = checklist[`${selectedDay}-${idx}`] || false;
 
               return (
@@ -235,6 +243,7 @@ export default function PeptidesPage() {
                     padding: "12px 16px",
                     borderRadius: "8px",
                     background: isChecked ? "var(--bg)" : colors.light,
+                    borderLeft: `4px solid ${colors.hex}`,
                     border: `2px solid ${isChecked ? "var(--border)" : "var(--border)"}`,
                     cursor: "pointer",
                     transition: "all 0.25s ease",
@@ -247,7 +256,7 @@ export default function PeptidesPage() {
                       width: "24px",
                       height: "24px",
                       borderRadius: "4px",
-                      border: `2px solid ${isChecked ? "var(--success)" : colors.text}`,
+                      border: `2px solid ${isChecked ? "var(--success)" : colors.hex}`,
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
@@ -259,14 +268,12 @@ export default function PeptidesPage() {
                   </div>
 
                   <div style={{ flex: 1 }}>
-                    <div style={{ fontSize: "0.95rem", fontWeight: 600, color: "var(--text)" }}>
-                      {dose.time}: {dose.dose}
+                    <div style={{ fontSize: "0.95rem", fontWeight: 600, color: colors.text }}>
+                      {dose.dose}
                     </div>
-                    {compound && (
-                      <div style={{ fontSize: "0.8rem", color: colors.text, marginTop: 4 }}>
-                        {compound}
-                      </div>
-                    )}
+                    <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 2 }}>
+                      {dose.time}
+                    </div>
                   </div>
 
                   <div
@@ -274,6 +281,7 @@ export default function PeptidesPage() {
                       fontSize: "1.2rem",
                       opacity: isChecked ? 1 : 0.3,
                       transition: "opacity 0.2s",
+                      color: colors.hex,
                     }}
                   >
                     ✓
@@ -297,13 +305,13 @@ export default function PeptidesPage() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "16px" }}>
           {data.compounds.map((compound, idx) => {
             const compound_name = compound.name.split(" ")[0];
-            const colors = COMPOUND_COLORS[compound_name] || { bg: "bg-gray-950", text: "text-gray-200", light: "bg-gray-900/30" };
+            const colors = COMPOUND_COLORS[compound_name] || { bg: "bg-gray-950", text: "text-gray-200", light: "bg-gray-900/30", hex: "#6b7280" };
             return (
               <div
                 key={idx}
                 style={{
                   background: colors.light,
-                  border: `2px solid var(--border)`,
+                  border: `2px solid ${colors.hex}`,
                   borderRadius: "8px",
                   padding: "16px",
                 }}
