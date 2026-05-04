@@ -36,14 +36,6 @@ interface DailyDose {
   taken: boolean;
 }
 
-const COLORS: Record<string, string> = {
-  "Reta": "bg-red-900 border-red-700",
-  "Tesa": "bg-blue-900 border-blue-700",
-  "HCG": "bg-purple-900 border-purple-700",
-  "Semax": "bg-green-900 border-green-700",
-  "MT1": "bg-yellow-800 border-yellow-700",
-};
-
 const COMPOUND_COLORS: Record<string, { bg: string; text: string; light: string }> = {
   "Reta": { bg: "bg-red-950", text: "text-red-200", light: "bg-red-900/30" },
   "Tesa": { bg: "bg-blue-950", text: "text-blue-200", light: "bg-blue-900/30" },
@@ -61,12 +53,19 @@ export default function PeptidesPage() {
   const [checklist, setChecklist] = useState<Record<string, boolean>>({});
   const [todayDoses, setTodayDoses] = useState<DailyDose[]>([]);
   const [selectedDay, setSelectedDay] = useState<string>(DAYS_OF_WEEK[new Date().getDay() === 0 ? 6 : new Date().getDay() - 1]);
+  const [isSyncing, setIsSyncing] = useState(false);
 
+  // Load peptide data and checklist state
   useEffect(() => {
-    fetch("/data/peptide-stack.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
+    Promise.all([
+      fetch("/data/peptide-stack.json"),
+      fetch("/api/peptide-checklist")
+    ])
+      .then(async ([res1, res2]) => {
+        const peptideData = await res1.json();
+        const checklistData = await res2.json();
+        setData(peptideData);
+        setChecklist(checklistData);
         setLoading(false);
       })
       .catch((err) => {
@@ -75,6 +74,7 @@ export default function PeptidesPage() {
       });
   }, []);
 
+  // Update today's doses when selected day or data changes
   useEffect(() => {
     if (data && selectedDay) {
       const daySchedule = data.weekly_schedule_loading_phase[selectedDay.toLowerCase()];
@@ -103,12 +103,27 @@ export default function PeptidesPage() {
     return "";
   };
 
-  const toggleDose = (index: number) => {
+  const toggleDose = async (index: number) => {
     const key = `${selectedDay}-${index}`;
-    setChecklist((prev) => ({
-      ...prev,
-      [key]: !prev[key],
-    }));
+    const newState = !checklist[key];
+    
+    // Update local state immediately
+    const updatedChecklist = { ...checklist, [key]: newState };
+    setChecklist(updatedChecklist);
+    
+    // Sync to server
+    setIsSyncing(true);
+    try {
+      await fetch("/api/peptide-checklist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ [key]: newState })
+      });
+    } catch (err) {
+      console.error("Failed to sync checklist:", err);
+    } finally {
+      setIsSyncing(false);
+    }
   };
 
   if (loading) {
@@ -137,6 +152,7 @@ export default function PeptidesPage() {
         </h1>
         <p style={{ color: "var(--muted)", fontSize: "0.95rem" }}>
           Started: {data.started} • Track your daily dosages below
+          {isSyncing && <span style={{ marginLeft: "12px", color: "var(--accent)" }}>↻ Syncing...</span>}
         </p>
       </div>
 
