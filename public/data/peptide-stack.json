@@ -15,15 +15,15 @@
       "notes": "Weight loss / metabolic support. Late night injection."
     },
     {
-      "name": "Tesa (Tesofensine — Appetite Suppressant)",
-      "type": "Appetite Suppressant",
+      "name": "Tesa (Tesamorelin — GHRH Analog)",
+      "type": "GHRH Analog (Growth Hormone Secretagogue)",
       "concentration": "5 mg/mL (10 mg / 2 mL)",
       "dosage_units": 20,
       "dosage_mg": 1,
       "schedule": "Mon-Fri 10am",
       "frequency": "weekdays",
       "current_vials": 3,
-      "notes": "Appetite suppression. 5-day cycle (weekdays only)."
+      "notes": "Stimulates natural growth hormone secretion. Supports lean mass, fat loss, and metabolic function. 5-day cycle (weekdays only)."
     },
     {
       "name": "HCG (Human Chorionic Gonadotropin — Hormone)",
@@ -121,7 +121,7 @@
   },
   "compound_types_summary": {
     "GLP-1 Agonist": ["Reta (Retratrutide)"],
-    "Appetite Suppressant": ["Tesa (Tesofensine)"],
+    "GHRH Analog": ["Tesa (Tesamorelin)"],
     "Hormone": ["HCG (Human Chorionic Gonadotropin)"],
     "Nootropic Peptide": ["Semax"],
     "Peptide Hormone": ["MT1 (Melanotan I)"]
