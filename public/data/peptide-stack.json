@@ -4,48 +4,53 @@
   "current_phase": "LOADING (Weeks 1-2 for MT1)",
   "compounds": [
     {
-      "name": "Reta (Testosterone)",
+      "name": "Reta (Retratrutide — GLP-1/GIP/Glucagon Triple Agonist)",
+      "type": "GLP-1 Agonist",
       "concentration": "5 mg/mL (10 mg / 2 mL)",
       "dosage_units": 60,
       "dosage_mg": 3,
       "schedule": "Monday 11pm",
       "frequency": "weekly",
       "current_vials": 1,
-      "notes": "Late night injection"
+      "notes": "Weight loss / metabolic support. Late night injection."
     },
     {
-      "name": "Tesa (Tesofensine)",
+      "name": "Tesa (Tesofensine — Appetite Suppressant)",
+      "type": "Appetite Suppressant",
       "concentration": "5 mg/mL (10 mg / 2 mL)",
       "dosage_units": 20,
       "dosage_mg": 1,
       "schedule": "Mon-Fri 10am",
       "frequency": "weekdays",
       "current_vials": 3,
-      "notes": "Appetite suppression, 5-day cycle"
+      "notes": "Appetite suppression. 5-day cycle (weekdays only)."
     },
     {
-      "name": "HCG (Human Chorionic Gonadotropin)",
+      "name": "HCG (Human Chorionic Gonadotropin — Hormone)",
+      "type": "Hormone",
       "concentration": "2500 IU/mL (5000 IU / 2 mL)",
       "dosage_units": 10,
       "dosage_iu": 250,
       "schedule": "Tuesday & Friday mornings",
       "frequency": "2x weekly",
       "current_vials": 1,
-      "notes": "Maintains testicular function"
+      "notes": "Maintains testicular function and hormone balance."
     },
     {
-      "name": "Semax (Cognitive Peptide)",
+      "name": "Semax (Nootropic Peptide)",
+      "type": "Nootropic Peptide",
       "concentration": "5 mg/mL (10 mg / 2 mL)",
       "dosage_units": 5,
       "dosage_mcg": 250,
       "schedule": "Mon-Fri 10am",
       "frequency": "weekdays",
       "current_vials": 1,
-      "notes": "Start at 5 units, can increase to 8-10 units after 3-5 days. Optional second dose 2-3pm (4-6 units).",
+      "notes": "Cognitive enhancement. Start at 5 units, can increase to 8-10 units after 3-5 days if effects mild. Optional second dose 2-3pm (4-6 units).",
       "status": "JUST_ARRIVED"
     },
     {
-      "name": "MT1 (Melanotan I)",
+      "name": "MT1 (Melanotan I — Peptide Hormone)",
+      "type": "Peptide Hormone",
       "concentration": "5 mg/mL (10 mg / 2 mL)",
       "dosage_units": 5,
       "dosage_mcg": 250,
@@ -54,7 +59,7 @@
       "current_vials": 1,
       "phase": "LOADING",
       "phase_duration": "10-14 days (approx May 4-18)",
-      "notes": "Take 10am (with Tesa/Semax) or 30-60min before UV exposure. Start low to avoid nausea. After loading phase (Week 3+), switch to 10u (500 mcg) 2x weekly (Tue/Fri mornings).",
+      "notes": "Skin pigmentation. Take 10am (with Tesa/Semax) or 30-60min before UV exposure. Start low to avoid nausea. After loading phase (Week 3+), switch to 10u (500 mcg) 2x weekly (Tue/Fri mornings).",
       "status": "JUST_ARRIVED"
     }
   ],
@@ -113,6 +118,13 @@
     },
     "saturday": "Rest",
     "sunday": "Rest"
+  },
+  "compound_types_summary": {
+    "GLP-1 Agonist": ["Reta (Retratrutide)"],
+    "Appetite Suppressant": ["Tesa (Tesofensine)"],
+    "Hormone": ["HCG (Human Chorionic Gonadotropin)"],
+    "Nootropic Peptide": ["Semax"],
+    "Peptide Hormone": ["MT1 (Melanotan I)"]
   },
   "upcoming_milestones": [
     "2026-05-11: First week assessment — note nausea levels, skin response, energy, appetite impact",
