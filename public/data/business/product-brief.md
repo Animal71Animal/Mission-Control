@@ -240,34 +240,6 @@ Constraint-based track selection (not just random):
 
 ---
 
-## Existing MVP (Use as Spec Reference)
-
-A working web prototype has been built on AbacusAI:
-
-**URL:** https://dj-automation-mvp-b05g4d.abacusai.app  
-**Admin login:** john@doe.com / johndoe123  
-**Dancer login:** sarah@dancers.com / dancer123
-
-### What's Already Built and Working
-
-- Track library (CRUD, metadata, search/filter)
-- Multi-stage management
-- Rotation & constraint engine (BPM, energy, repeat protection, artist separation)
-- Dancer management + shift scheduling
-- Dancer authentication (role-based, each dancer sees only their own music)
-- Spotify integration (search + metadata pull)
-- Content filtering (banned words, explicit flag, manager approval queue)
-- Pending approvals workflow with audio preview
-- Basic DJ control panel (dual deck UI — simulated audio, not real playback)
-- Reports/analytics
-- Role-based access (Admin / Operator / Dancer)
-
-**Stack:** Next.js, React, Prisma, PostgreSQL, NextAuth.js, Spotify API
-
-⚠️ **Important:** This MVP is a cloud web app — great as a living spec and prototype, but NOT suitable for production club use. Clubs need offline-first local playback. The production app should use the web app as a design reference and rebuild the playout plane as a local desktop application.
-
----
-
 ## Revenue Model & Upsell Stack
 
 ### Stream 1 — Software License (Core)
