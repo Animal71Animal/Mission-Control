@@ -354,50 +354,6 @@ export default function PepTrakPage() {
         </>
       )}
 
-      {/* Compound Inventory */}
-      {compounds.length > 0 && (
-        <>
-          <h2 style={{ fontSize: "1.1rem", fontWeight: 700, margin: "0 0 16px", color: "var(--text)" }}>
-            Compound Inventory
-          </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: 12, marginBottom: 32 }}>
-            {compounds.map((compound) => {
-              const units = calculateUnits(compound.prescribedDosageMg, compound.totalMgInVial, compound.bacWaterRatioMl);
-              return (
-                <div key={compound.id} style={{
-                  background: "var(--card)",
-                  border: "1px solid var(--border)",
-                  borderTop: `3px solid ${compound.color}`,
-                  borderRadius: 12,
-                  padding: "16px",
-                }}>
-                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
-                    <span style={{ fontSize: "0.9rem", fontWeight: 600, color: "var(--text)" }}>{compound.name}</span>
-                    <div style={{ display: "flex", gap: 8 }}>
-                      <button
-                        onClick={() => { setEditingCompound(compound); setShowAddForm(true); }}
-                        style={{ background: "transparent", border: "none", color: "var(--muted)", cursor: "pointer", fontSize: "0.75rem", padding: "2px 6px" }}
-                      >Edit</button>
-                      <button
-                        onClick={() => deleteCompound(compound.id)}
-                        style={{ background: "transparent", border: "none", color: "#ef4444", cursor: "pointer", fontSize: "0.75rem", padding: "2px 6px" }}
-                      >Delete</button>
-                    </div>
-                  </div>
-                  <div style={{ fontSize: "0.75rem", color: "var(--muted)", lineHeight: 1.7 }}>
-                    <div><strong>Total in Vial:</strong> {compound.totalMgInVial} mg</div>
-                    <div><strong>Dose:</strong> {compound.prescribedDosageMg} mg</div>
-                    <div><strong>BAC Water:</strong> {compound.bacWaterRatioMl} mL</div>
-                    <div><strong>Units on Syringe:</strong> {units} units</div>
-                    <div><strong>Schedule:</strong> {compound.scheduleDays.map(d => d.slice(0, 3)).join(", ")} @ {compound.scheduleTime}</div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </>
-      )}
-
       {/* Weekly Overview */}
       {compounds.length > 0 && (
         <>
@@ -442,6 +398,50 @@ export default function PepTrakPage() {
                       ))}
                     </div>
                   )}
+                </div>
+              );
+            })}
+          </div>
+        </>
+      )}
+
+      {/* Compound Inventory */}
+      {compounds.length > 0 && (
+        <>
+          <h2 style={{ fontSize: "1.1rem", fontWeight: 700, margin: "0 0 16px", color: "var(--text)" }}>
+            Compound Inventory
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: 12, marginBottom: 32 }}>
+            {compounds.map((compound) => {
+              const units = calculateUnits(compound.prescribedDosageMg, compound.totalMgInVial, compound.bacWaterRatioMl);
+              return (
+                <div key={compound.id} style={{
+                  background: "var(--card)",
+                  border: "1px solid var(--border)",
+                  borderTop: `3px solid ${compound.color}`,
+                  borderRadius: 12,
+                  padding: "16px",
+                }}>
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
+                    <span style={{ fontSize: "0.9rem", fontWeight: 600, color: "var(--text)" }}>{compound.name}</span>
+                    <div style={{ display: "flex", gap: 8 }}>
+                      <button
+                        onClick={() => { setEditingCompound(compound); setShowAddForm(true); }}
+                        style={{ background: "transparent", border: "none", color: "var(--muted)", cursor: "pointer", fontSize: "0.75rem", padding: "2px 6px" }}
+                      >Edit</button>
+                      <button
+                        onClick={() => deleteCompound(compound.id)}
+                        style={{ background: "transparent", border: "none", color: "#ef4444", cursor: "pointer", fontSize: "0.75rem", padding: "2px 6px" }}
+                      >Delete</button>
+                    </div>
+                  </div>
+                  <div style={{ fontSize: "0.75rem", color: "var(--muted)", lineHeight: 1.7 }}>
+                    <div><strong>Total in Vial:</strong> {compound.totalMgInVial} mg</div>
+                    <div><strong>Dose:</strong> {compound.prescribedDosageMg} mg</div>
+                    <div><strong>BAC Water:</strong> {compound.bacWaterRatioMl} mL</div>
+                    <div><strong>Units on Syringe:</strong> {units} units</div>
+                    <div><strong>Schedule:</strong> {compound.scheduleDays.map(d => d.slice(0, 3)).join(", ")} @ {compound.scheduleTime}</div>
+                  </div>
                 </div>
               );
             })}
