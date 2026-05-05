@@ -236,14 +236,15 @@ export default function PepTrakPage() {
               padding: "6px 14px",
               borderRadius: 20,
               border: "1px solid var(--accent)",
-              background: "transparent",
-              color: "var(--accent)",
+              background: showSetup ? "var(--accent)" : "transparent",
+              color: showSetup ? "#fff" : "var(--accent)",
               fontSize: "0.8rem",
               fontWeight: 500,
               cursor: "pointer",
+              transition: "all 0.15s",
             }}
           >
-            {showSetup ? "Close Setup" : "Configure"}
+            {showSetup ? "▲ Add Compound" : "▼ Add Compound"}
           </button>
           <button
             onClick={() => setShowGuide(!showGuide)}
@@ -269,8 +270,15 @@ export default function PepTrakPage() {
       {/* Reconstitution Guide */}
       {showGuide && <ReconstitutionGuide />}
 
-      {/* Setup Panel */}
-      {showSetup && (
+      {/* Setup Panel — collapsible dropdown */}
+      <div
+        style={{
+          maxHeight: showSetup ? "2000px" : "0",
+          overflow: "hidden",
+          transition: "max-height 0.3s ease",
+          opacity: showSetup ? 1 : 0,
+        }}
+      >
         <SetupPanel
           compounds={compounds}
           schedule={schedule}
@@ -282,7 +290,7 @@ export default function PepTrakPage() {
           editingCompound={editingCompound}
           setEditingCompound={setEditingCompound}
         />
-      )}
+      </div>
 
       {/* Progress Bar */}
       {compounds.length > 0 && (
