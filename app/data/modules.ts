@@ -23,6 +23,7 @@ export const modules: Module[] = [
   { href: "/agents", icon: "🤖", title: "AI Office", desc: "Live view of AI agents working in the virtual office.", status: "active", group: "business" },
 
 
+  { href: "/peptrak", icon: "💉", title: "PepTrak", desc: "Peptide dosing tracker — daily checklist, vial inventory, and schedule.", status: "active", group: "business" },
   { href: "/peptides", icon: "💉", title: "Peptide Stack", desc: "Mission Control — peptide dosing, schedule, and tracking.", status: "active", group: "personal" },
   { href: "/tesla", icon: "🚗", title: "Tesla", desc: "Charging session log and cost tracker.", status: "active", group: "personal" },
   { href: "/uber-profit", icon: "💰", title: "Uber Earnings", desc: "Dashboard earnings + shift tracking with charging deduction.", status: "active", group: "personal" },
