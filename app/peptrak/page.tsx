@@ -1052,7 +1052,7 @@ function ReconstitutionGuide() {
           <div>7. <strong>Repeat steps 3-6</strong> as needed until you've added the correct total amount of BAC water (e.g., 2 mL = two 100-unit draws).</div>
           <div>8. <strong>Do not shake.</strong> Gently swirl the vial between your palms until powder fully dissolves. Some take 30-60 seconds. Never agitate or tap forcefully.</div>
           <div>9. <strong>Inspect</strong> — solution should be clear. If cloudy, discolored, or particulate, discard and do not use.</div>
-          <div>10. <strong>Withdraw needle</strong> slowly, then <strong>swab</strong> the peptide vial stopper again.</div>
+          <div>10. <strong>Swab</strong> the peptide vial stopper again with alcohol after final needle withdrawal.</div>
           <div>11. <strong>Label</strong> the vial with compound name, reconstitution date, total mg, BAC water amount, final concentration, and your initials.</div>
           <div style={{ marginTop: 8, fontSize: "0.8rem", color: "#fca5a5" }}>
             ⚠️ Reconstituted peptides degrade faster. Store refrigerated (2-8°C). Most last 2-4 weeks after mixing. Never freeze after reconstitution.
