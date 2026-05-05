@@ -1047,8 +1047,8 @@ function ReconstitutionGuide() {
           <div>2. <strong>Swab</strong> the BAC water vial top with alcohol. Let it dry.</div>
           <div>3. <strong>Using a new insulin syringe</strong>, draw 100 units (1 mL) of BAC water from the BAC vial.</div>
           <div>4. <strong>Pierce the peptide vial</strong> at 90° through the center of the rubber stopper. <strong>Inject water slowly down the inside wall</strong> of the vial — never spray directly onto the powder. Peptide proteins are fragile.</div>
-          <div>5. <strong>Withdraw the needle</strong> slowly. <strong>Draw 100 units of air</strong> into the same syringe from the atmosphere (pull back on plunger with needle in open air).</div>
-          <div>6. <strong>Inject that air</strong> into the peptide vial. This equalizes pressure and makes the next withdrawal easier.</div>
+          <div>5. <strong>With needle still in the peptide vial</strong>, <strong>draw 100 units of air</strong> from inside the vial into the syringe.</div>
+          <div>6. <strong>Withdraw the needle</strong> from the vial and <strong>expel the air</strong> into the atmosphere (push plunger down with needle in open air).</div>
           <div>7. <strong>Repeat steps 3-6</strong> as needed until you've added the correct total amount of BAC water (e.g., 2 mL = two 100-unit draws).</div>
           <div>8. <strong>Do not shake.</strong> Gently swirl the vial between your palms until powder fully dissolves. Some take 30-60 seconds. Never agitate or tap forcefully.</div>
           <div>9. <strong>Inspect</strong> — solution should be clear. If cloudy, discolored, or particulate, discard and do not use.</div>
