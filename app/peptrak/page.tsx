@@ -59,7 +59,7 @@ export default function PepTrakPage() {
   const [schedule, setSchedule] = useState<UserSchedule[]>([]);
   const [checklist, setChecklist] = useState<Record<string, boolean>>({});
   const [selectedDay, setSelectedDay] = useState<string>(DAYS_OF_WEEK[new Date().getDay() === 0 ? 6 : new Date().getDay() - 1]);
-  const [showSetup, setShowSetup] = useState(false);
+  const [showSetup, setShowSetup] = useState(true);
   const [showGuide, setShowGuide] = useState(false);
   const [editingCompound, setEditingCompound] = useState<CompoundConfig | null>(null);
   const [isSyncing, setIsSyncing] = useState(false);
@@ -80,10 +80,8 @@ export default function PepTrakPage() {
       setChecklist(JSON.parse(savedChecklist));
     }
 
-    // Show setup if no compounds configured
-    if (!savedCompounds || JSON.parse(savedCompounds || '[]').length === 0) {
-      setShowSetup(true);
-    }
+    // Always show setup on fresh load
+    setShowSetup(true);
   }, []);
 
   // Save to localStorage
@@ -493,19 +491,34 @@ export default function PepTrakPage() {
               >
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
                   <span style={{ fontSize: "0.9rem", fontWeight: 600, color: "var(--text)" }}>{compound.name}</span>
-                  <button
-                    onClick={() => setEditingCompound(compound)}
-                    style={{
-                      background: "transparent",
-                      border: "none",
-                      color: "var(--muted)",
-                      cursor: "pointer",
-                      fontSize: "0.75rem",
-                      padding: "2px 6px",
-                    }}
-                  >
-                    Edit
-                  </button>
+                  <div style={{ display: "flex", gap: 8 }}>
+                    <button
+                      onClick={() => setEditingCompound(compound)}
+                      style={{
+                        background: "transparent",
+                        border: "none",
+                        color: "var(--muted)",
+                        cursor: "pointer",
+                        fontSize: "0.75rem",
+                        padding: "2px 6px",
+                      }}
+                    >
+                      Edit
+                    </button>
+                    <button
+                      onClick={() => deleteCompound(compound.id)}
+                      style={{
+                        background: "transparent",
+                        border: "none",
+                        color: "#ef4444",
+                        cursor: "pointer",
+                        fontSize: "0.75rem",
+                        padding: "2px 6px",
+                      }}
+                    >
+                      Delete
+                    </button>
+                  </div>
                 </div>
                 <div style={{ fontSize: "0.75rem", color: "var(--muted)", lineHeight: 1.7 }}>
                   <div><strong>Total in Vial:</strong> {compound.totalMgInVial} mg</div>
