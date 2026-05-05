@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = "force-dynamic";
 
 import { useState, useEffect } from "react";
 
@@ -26,7 +27,7 @@ export default function SharedDJAutomationPage() {
   const [unlocked, setUnlocked] = useState(false);
   const [data, setData] = useState<DJAutomationData | null>(null);
   const [loading, setLoading] = useState(false);
-  const correctPassword = "wlp2025";
+  const correctPassword = "wlp2026";
 
   // ROI Calculator state
   const [numVenues, setNumVenues] = useState(1);
@@ -39,7 +40,7 @@ export default function SharedDJAutomationPage() {
   const annualSoftwareCost = monthlySoftwareCost * 12;
   const netAnnualSavings = annualSavings - annualSoftwareCost;
   const monthlySavings = annualSavings / 12;
-  const roiMonths = monthlySavings > monthlySoftwareCost ? (annualSoftwareCost / (annualSavings - annualSoftwareCost)).toFixed(1) : 'N/A';
+  const roiMonths = annualSavings > annualSoftwareCost ? (annualSoftwareCost / (annualSavings - annualSoftwareCost) / 12).toFixed(1) : 'N/A';
 
   useEffect(() => {
     if (unlocked && !data) {

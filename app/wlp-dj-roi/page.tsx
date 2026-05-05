@@ -185,17 +185,7 @@ export default function DJAutomationROI() {
         </h2>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "24px" }}>
-          {/* Weekly Savings */}
-          <div style={{ padding: "20px", background: "var(--bg)", borderRadius: "8px" }}>
-            <p style={{ fontSize: "0.85rem", color: "var(--muted)", textTransform: "uppercase", margin: 0 }}>
-              Weekly Savings
-            </p>
-            <p style={{ fontSize: "1.8rem", fontWeight: 700, color: "var(--accent)", margin: "8px 0 0" }}>
-              ${weeklySavings.toLocaleString()}
-            </p>
-          </div>
-
-          {/* Monthly Savings */}
+{/* Monthly Savings */}
           <div style={{ padding: "20px", background: "var(--bg)", borderRadius: "8px" }}>
             <p style={{ fontSize: "0.85rem", color: "var(--muted)", textTransform: "uppercase", margin: 0 }}>
               Monthly Savings
@@ -259,7 +249,7 @@ export default function DJAutomationROI() {
           </h3>
           <p style={{ color: "var(--muted)", fontSize: "0.95rem", lineHeight: 1.6, margin: 0 }}>
             Your venue would save <strong style={{ color: "var(--text)" }}>${netAnnualSavings.toLocaleString()}</strong> per
-            year by replacing {djsPerShift} DJs per shift with automated management. The software pays for itself in{" "}
+            year by replacing {totalDJs} DJs per shift with automated management. The software pays for itself in{" "}
             <strong style={{ color: "var(--text)" }}>
               {roiMonths < 1 ? "less than a month" : `${roiMonths.toFixed(1)} months`}
             </strong>

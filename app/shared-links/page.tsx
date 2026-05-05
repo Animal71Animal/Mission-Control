@@ -8,7 +8,7 @@ export default function SharedLinksPage() {
       id: "dj-automation-full",
       name: "DJ Automation — Full Card",
       url: "/shared/dj-automation",
-      password: "wlp2025",
+      password: "wlp2026",
       created: "2026-05-05",
       description: "Complete DJ Automation product overview with ROI calculator, docs, features, and tech stack. Interactive savings estimator.",
     },

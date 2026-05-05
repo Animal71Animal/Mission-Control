@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 // Password protection for Mission Control
-const PASSWORD = 'wlp2025';
+const PASSWORD = 'wlp2026';
 
 export function middleware(request: NextRequest) {
   // Skip password check for API routes (they have their own auth)
@@ -18,6 +18,12 @@ export function middleware(request: NextRequest) {
 
   // Allow access to /data/ files for API usage (but not direct browsing)
   if (request.nextUrl.pathname.startsWith('/data/')) {
+    return NextResponse.next();
+  }
+
+  // Allow /shared/ and /wlp-dj-roi routes (they handle their own auth/have no auth)
+  if (request.nextUrl.pathname.startsWith('/shared/') || 
+      request.nextUrl.pathname === '/wlp-dj-roi') {
     return NextResponse.next();
   }
 
