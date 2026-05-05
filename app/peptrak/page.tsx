@@ -413,19 +413,35 @@ export default function PepTrakPage() {
           <h2 style={{ fontSize: "1.1rem", fontWeight: 700, margin: "0 0 16px", color: "var(--text)" }}>
             Compound Inventory
           </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: 12, marginBottom: 32 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 12, marginBottom: 32 }}>
             {compounds.map((compound) => {
               const units = calculateUnits(compound.prescribedDosageMg, compound.totalMgInVial, compound.bacWaterRatioMl);
+              const doseDisplay = compound.doseUnit === "mcg"
+                ? `${units}u (${(compound.prescribedDosageMg * 1000).toFixed(0)}mcg)`
+                : `${units}u (${compound.prescribedDosageMg}mg)`;
+              const concentrationDisplay = compound.vialUnit === "IU"
+                ? `${compound.totalMgInVial} IU`
+                : `${compound.totalMgInVial} mg`;
+              const freqDisplay = compound.timesPerWeek === 7 ? "daily" : compound.timesPerWeek === 1 ? "weekly" : `${compound.timesPerWeek}x weekly`;
+
               return (
                 <div key={compound.id} style={{
                   background: "var(--card)",
                   border: "1px solid var(--border)",
-                  borderTop: `3px solid ${compound.color}`,
+                  borderLeft: `3px solid ${compound.color}`,
                   borderRadius: 12,
-                  padding: "16px",
+                  padding: "20px",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 12,
                 }}>
-                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
-                    <span style={{ fontSize: "0.9rem", fontWeight: 600, color: "var(--text)" }}>{compound.name}</span>
+                  <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between" }}>
+                    <div>
+                      <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--text)", marginBottom: 4 }}>{compound.name}</div>
+                      <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>
+                        {concentrationDisplay} / {compound.bacWaterRatioMl} mL BAC
+                      </div>
+                    </div>
                     <div style={{ display: "flex", gap: 8 }}>
                       <button
                         onClick={() => { setEditingCompound(compound); setShowAddForm(true); }}
@@ -437,13 +453,25 @@ export default function PepTrakPage() {
                       >Delete</button>
                     </div>
                   </div>
-                  <div style={{ fontSize: "0.75rem", color: "var(--muted)", lineHeight: 1.7 }}>
-                    <div><strong>Total in Vial:</strong> {compound.totalMgInVial} {compound.vialUnit || "mg"}</div>
-                    <div><strong>Dose:</strong> {compound.doseUnit === "mcg" ? (compound.prescribedDosageMg * 1000) + " mcg" : compound.prescribedDosageMg + " mg"}</div>
-                    <div><strong>BAC Water:</strong> {compound.bacWaterRatioMl} mL</div>
-                    <div><strong>Units on Syringe:</strong> {units} units</div>
+
+                  <div style={{ fontSize: "0.8rem", color: "var(--text)", lineHeight: 1.8 }}>
+                    <div><strong>Dose:</strong> {doseDisplay}</div>
                     <div><strong>Schedule:</strong> {compound.scheduleDays.map(d => d.slice(0, 3)).join(", ")} @ {compound.scheduleTime}</div>
+                    <div><strong>Frequency:</strong> {freqDisplay}</div>
                   </div>
+
+                  {compound.notes && (
+                    <div style={{
+                      fontSize: "0.75rem",
+                      color: "var(--muted)",
+                      fontStyle: "italic",
+                      lineHeight: 1.5,
+                      borderTop: "1px solid var(--border)",
+                      paddingTop: 10,
+                    }}>
+                      {compound.notes}
+                    </div>
+                  )}
                 </div>
               );
             })}
@@ -716,6 +744,18 @@ function CompoundForm({
               </button>
             ))}
           </div>
+        </div>
+
+        {/* Notes */}
+        <div>
+          <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Notes (optional)</label>
+          <textarea
+            value={form.notes || ""}
+            onChange={e => setForm({ ...form, notes: e.target.value })}
+            placeholder="e.g., Take with food, avoid sun exposure, start low to avoid nausea..."
+            rows={2}
+            style={{ width: "100%", padding: "8px 12px", borderRadius: 8, border: "1px solid var(--border)", background: "var(--bg)", color: "var(--text)", fontSize: "0.8rem", resize: "vertical", fontFamily: "inherit" }}
+          />
         </div>
 
         {/* Submit */}
