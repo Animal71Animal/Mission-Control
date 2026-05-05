@@ -439,16 +439,22 @@ export default function PepTrakPage() {
                   flexDirection: "column",
                   gap: 12,
                 }}>
+                  {/* Card Header: Name (Legal — Classification) */}
                   <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between" }}>
                     <div>
-                      <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--text)", marginBottom: 2 }}>{compound.name}</div>
-                      {compound.legalName && <div style={{ fontSize: "0.7rem", color: "var(--muted)", fontStyle: "italic", marginBottom: 2 }}>{compound.legalName}</div>}
-                      {compound.classification && <div style={{ fontSize: "0.7rem", color: compound.color, fontWeight: 500, marginBottom: 2 }}>{compound.classification}</div>}
-                      <div style={{ fontSize: "0.72rem", color: "var(--muted)" }}>
-                        {concentrationDisplay} / {compound.bacWaterRatioMl} mL BAC
+                      <div style={{ fontSize: "0.9rem", fontWeight: 700, color: "var(--text)", lineHeight: 1.4 }}>
+                        {compound.name}
+                        {compound.legalName && ` (${compound.legalName}`}
+                        {compound.classification && ` — ${compound.classification})`}
+                        {!compound.legalName && !compound.classification && ""}
+                        {compound.legalName && !compound.classification && ")"}
+                        {!compound.legalName && compound.classification && ` (${compound.classification})`}
+                      </div>
+                      <div style={{ fontSize: "0.72rem", color: "var(--muted)", marginTop: 4 }}>
+                        {compound.totalMgInVial} {compound.vialUnit || "mg"} / {compound.bacWaterRatioMl} mL BAC
                       </div>
                     </div>
-                    <div style={{ display: "flex", gap: 8 }}>
+                    <div style={{ display: "flex", gap: 8, flexShrink: 0 }}>
                       <button
                         onClick={() => { setEditingCompound(compound); setShowAddForm(true); }}
                         style={{ background: "transparent", border: "none", color: "var(--muted)", cursor: "pointer", fontSize: "0.75rem", padding: "2px 6px" }}
@@ -460,23 +466,21 @@ export default function PepTrakPage() {
                     </div>
                   </div>
 
+                  {/* Dose / Schedule / Frequency */}
                   <div style={{ fontSize: "0.8rem", color: "var(--text)", lineHeight: 1.8 }}>
                     <div><strong>Dose:</strong> {doseDisplay}</div>
                     <div><strong>Schedule:</strong> {compound.scheduleDays.map(d => d.slice(0, 3)).join(", ")} @ {compound.scheduleTime}</div>
                     <div><strong>Frequency:</strong> {freqDisplay}</div>
                   </div>
 
-                  {/* Intended Effects */}
-                  {compound.intendedEffects && (
-                    <div style={{ fontSize: "0.75rem", color: "var(--text)", lineHeight: 1.5 }}>
-                      <strong style={{ color: "#4ade80" }}>Effects:</strong> {compound.intendedEffects}
-                    </div>
-                  )}
-
-                  {/* Overdose Symptoms */}
-                  {compound.overdoseSymptoms && (
-                    <div style={{ fontSize: "0.75rem", color: "var(--text)", lineHeight: 1.5 }}>
-                      <strong style={{ color: "#ef4444" }}>⚠️ Watch for:</strong> {compound.overdoseSymptoms}
+                  {/* Description: Effects + Symptoms combined paragraph */}
+                  {(compound.intendedEffects || compound.overdoseSymptoms) && (
+                    <div style={{ fontSize: "0.75rem", color: "var(--muted)", lineHeight: 1.6 }}>
+                      {compound.intendedEffects && compound.intendedEffects}
+                      {compound.intendedEffects && compound.overdoseSymptoms && " "}
+                      {compound.overdoseSymptoms && (
+                        <span style={{ color: "#fca5a5" }}>Watch for: {compound.overdoseSymptoms}</span>
+                      )}
                     </div>
                   )}
 
