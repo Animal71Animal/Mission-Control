@@ -12,6 +12,14 @@ export default function SharedLinksPage() {
       created: "2026-05-05",
       description: "Complete DJ Automation product overview with ROI calculator, docs, features, and tech stack. Interactive savings estimator.",
     },
+    {
+      id: "investor-materials",
+      name: "Investor Materials",
+      url: "/shared/investor-materials",
+      password: "wlp2026",
+      created: "2026-05-05",
+      description: "Investor pitch deck and target investor list with funding strategy.",
+    },
   ];
 
   return (

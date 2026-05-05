@@ -97,8 +97,8 @@ Labor costs are up. The labor shortage in service industries made the case for a
 | **Average addressable spend per club** | $1,500/month | Software + support; vs. $3,000-5,000/month current DJ labor |
 | **US TAM** | ~$72M ARR | At 100% penetration |
 | **Realistic US SAM (20% capture in 5 years)** | ~$14M ARR | Conservative |
-| **International markets** (Canada, UK, EU, Australia) | ~6,000+ clubs (excluding US) | 2-3x multiplier | Similar venue density |
-| **Total addressable market (global)** | ~$180M ARR | |
+| **International markets** (Canada, UK, EU, Australia) | ~3,000+ clubs (excluding US) | 2-3x multiplier | Similar venue density |
+| **Total addressable market (global)** | ~$126M ARR | |
 
 This is a niche SaaS with a highly capturable market — not a billion-dollar swing, but a defensible, recurring-revenue business with 70%+ gross margins at scale and a clear path to $14M ARR in 5 years.
 

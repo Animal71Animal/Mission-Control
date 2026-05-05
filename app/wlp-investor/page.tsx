@@ -3,9 +3,11 @@ import WLPDocPage from "@/components/WLPDocPage";
 export default function Page() {
   return (
     <WLPDocPage
-      title="💼 Investor Pitch"
-      subtitle="Seed round deck — AI-powered DJ automation"
+      title="💼 Investor Materials"
+      subtitle="Pitch deck + target investor list"
       fileName="investor-pitch.md"
+      secondaryFile="investor-targets.md"
+      secondaryTitle="🎯 Investor Target List"
     />
   );
 }
