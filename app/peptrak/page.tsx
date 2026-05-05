@@ -9,28 +9,10 @@ interface CompoundConfig {
   totalMgInVial: number;
   prescribedDosageMg: number;
   bacWaterRatioMl: number;
-  schedule: string;
-  frequency: string;
+  timesPerWeek: number;
+  scheduleDays: string[];
+  scheduleTime: string;
   notes: string;
-}
-
-interface DailyDose {
-  compoundId: string;
-  compoundName: string;
-  time: string;
-  doseUnits: number;
-  doseMg: number;
-  taken: boolean;
-}
-
-interface ScheduleEntry {
-  time: string;
-  compoundIds: string[];
-}
-
-interface UserSchedule {
-  day: string;
-  entries: ScheduleEntry[];
 }
 
 const PRESET_COLORS = [
@@ -39,177 +21,101 @@ const PRESET_COLORS = [
 ];
 
 const DAYS_OF_WEEK = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-const TIME_SLOTS = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm", "9pm", "10pm", "11pm"];
+const DAYS_SHORT = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const TIME_SLOTS = [
+  "5am", "6am", "7am", "8am", "9am", "10am", "11am",
+  "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm",
+  "7pm", "8pm", "9pm", "10pm", "11pm"
+];
 
 const DISCLAIMER = "⚠️ NOT FOR HUMAN USE. For research purposes only. We are not medical doctors. This is not a medical device. Consult a licensed physician before use.";
 
 function calculateUnits(dosageMg: number, totalMgInVial: number, bacWaterMl: number): number {
-  // After reconstitution: total volume = BAC water added (peptide powder has negligible volume)
+  if (!totalMgInVial || !bacWaterMl || !dosageMg) return 0;
   const totalVolumeMl = bacWaterMl;
-  // Concentration after reconstitution: mg per ml
   const mgPerMlAfterRecon = totalMgInVial / totalVolumeMl;
-  // Units (assuming 100 units = 1ml on U-100 insulin syringe)
   const unitsPerMl = 100;
   const mlNeeded = dosageMg / mgPerMlAfterRecon;
   return Math.round(mlNeeded * unitsPerMl);
 }
 
+function getTodayDayName(): string {
+  const dayIndex = new Date().getDay();
+  return dayIndex === 0 ? "Sunday" : DAYS_OF_WEEK[dayIndex - 1];
+}
+
 export default function PepTrakPage() {
   const [compounds, setCompounds] = useState<CompoundConfig[]>([]);
-  const [schedule, setSchedule] = useState<UserSchedule[]>([]);
   const [checklist, setChecklist] = useState<Record<string, boolean>>({});
-  const [selectedDay, setSelectedDay] = useState<string>(DAYS_OF_WEEK[new Date().getDay() === 0 ? 6 : new Date().getDay() - 1]);
-  const [showSetup, setShowSetup] = useState(true);
+  const [selectedDay, setSelectedDay] = useState<string>(getTodayDayName());
+  const [showAddForm, setShowAddForm] = useState(true);
   const [showGuide, setShowGuide] = useState(false);
   const [editingCompound, setEditingCompound] = useState<CompoundConfig | null>(null);
-  const [isSyncing, setIsSyncing] = useState(false);
 
-  // Load from localStorage on mount
+  // Load from localStorage
   useEffect(() => {
-    const savedCompounds = localStorage.getItem("peptrak-compounds");
-    const savedSchedule = localStorage.getItem("peptrak-schedule");
-    const savedChecklist = localStorage.getItem("peptrak-checklist");
-
-    if (savedCompounds) {
-      setCompounds(JSON.parse(savedCompounds));
-    }
-    if (savedSchedule) {
-      setSchedule(JSON.parse(savedSchedule));
+    const saved = localStorage.getItem("peptrak-v2-compounds");
+    const savedChecklist = localStorage.getItem("peptrak-v2-checklist");
+    if (saved) {
+      try { setCompounds(JSON.parse(saved)); } catch {}
     }
     if (savedChecklist) {
-      setChecklist(JSON.parse(savedChecklist));
+      try { setChecklist(JSON.parse(savedChecklist)); } catch {}
     }
-
-    // Always show setup on fresh load
-    setShowSetup(true);
   }, []);
 
-  // Save to localStorage
+  // Save compounds
   useEffect(() => {
-    if (compounds.length > 0) {
-      localStorage.setItem("peptrak-compounds", JSON.stringify(compounds));
-    }
+    localStorage.setItem("peptrak-v2-compounds", JSON.stringify(compounds));
   }, [compounds]);
 
+  // Save checklist
   useEffect(() => {
-    if (schedule.length > 0) {
-      localStorage.setItem("peptrak-schedule", JSON.stringify(schedule));
-    }
-  }, [schedule]);
-
-  useEffect(() => {
-    localStorage.setItem("peptrak-checklist", JSON.stringify(checklist));
+    localStorage.setItem("peptrak-v2-checklist", JSON.stringify(checklist));
   }, [checklist]);
 
   const addCompound = (compound: CompoundConfig) => {
-    const newCompounds = [...compounds, compound];
-    setCompounds(newCompounds);
+    setCompounds(prev => [...prev, compound]);
     setEditingCompound(null);
   };
 
   const updateCompound = (updated: CompoundConfig) => {
-    setCompounds(compounds.map(c => c.id === updated.id ? updated : c));
+    setCompounds(prev => prev.map(c => c.id === updated.id ? updated : c));
     setEditingCompound(null);
   };
 
   const deleteCompound = (id: string) => {
-    setCompounds(compounds.filter(c => c.id !== id));
-    setSchedule(schedule.map(s => ({
-      ...s,
-      entries: s.entries.map(e => ({
-        ...e,
-        compoundIds: e.compoundIds.filter(cid => cid !== id)
-      })).filter(e => e.compoundIds.length > 0)
-    })));
+    setCompounds(prev => prev.filter(c => c.id !== id));
   };
 
-  const addScheduleEntry = (day: string, time: string, compoundIds: string[]) => {
-    const existingDay = schedule.find(s => s.day === day);
-    if (existingDay) {
-      const newSchedule = schedule.map(s => {
-        if (s.day !== day) return s;
-        const existingEntry = s.entries.find(e => e.time === time);
-        if (existingEntry) {
-          return {
-            ...s,
-            entries: s.entries.map(e =>
-              e.time === time ? { ...e, compoundIds: [...new Set([...e.compoundIds, ...compoundIds])] } : e
-            )
-          };
-        }
-        return { ...s, entries: [...s.entries, { time, compoundIds }] };
-      });
-      setSchedule(newSchedule);
-    } else {
-      setSchedule([...schedule, { day, entries: [{ time, compoundIds }] }]);
-    }
-  };
-
-  const removeScheduleEntry = (day: string, time: string, compoundId: string) => {
-    setSchedule(schedule.map(s => {
-      if (s.day !== day) return s;
-      return {
-        ...s,
-        entries: s.entries.map(e => {
-          if (e.time !== time) return e;
-          return { ...e, compoundIds: e.compoundIds.filter(id => id !== compoundId) };
-        }).filter(e => e.compoundIds.length > 0)
-      };
+  // Get doses for a specific day
+  const getDosesForDay = (day: string) => {
+    return compounds.filter(c => c.scheduleDays.includes(day)).map(c => ({
+      ...c,
+      units: calculateUnits(c.prescribedDosageMg, c.totalMgInVial, c.bacWaterRatioMl),
     }));
   };
 
-  const getTodayDoses = (): DailyDose[] => {
-    const daySchedule = schedule.find(s => s.day === selectedDay);
-    if (!daySchedule) return [];
-
-    const doses: DailyDose[] = [];
-    daySchedule.entries.forEach(entry => {
-      entry.compoundIds.forEach(compoundId => {
-        const compound = compounds.find(c => c.id === compoundId);
-        if (compound) {
-          const units = calculateUnits(
-            compound.prescribedDosageMg,
-            compound.totalMgInVial,
-            compound.bacWaterRatioMl
-          );
-          doses.push({
-            compoundId: compound.id,
-            compoundName: compound.name,
-            time: entry.time,
-            doseUnits: units,
-            doseMg: compound.prescribedDosageMg,
-            taken: false,
-          });
-        }
-      });
-    });
-    return doses;
+  const toggleDose = (compoundId: string, day: string) => {
+    const dateKey = new Date().toISOString().split("T")[0];
+    const key = `${compoundId}-${day}-${dateKey}`;
+    setChecklist(prev => ({ ...prev, [key]: !prev[key] }));
   };
 
-  const toggleDose = (compoundId: string, time: string) => {
-    const key = `${compoundId}-${time}-${selectedDay}`;
-    const newState = { ...checklist, [key]: !checklist[key] };
-    setChecklist(newState);
+  const isDoseDone = (compoundId: string, day: string) => {
+    const dateKey = new Date().toISOString().split("T")[0];
+    const key = `${compoundId}-${day}-${dateKey}`;
+    return checklist[key] || false;
   };
 
-  const getProgress = () => {
-    const doses = getTodayDoses();
-    if (doses.length === 0) return 0;
-    const taken = doses.filter(d => checklist[`${d.compoundId}-${d.time}-${selectedDay}`]).length;
-    return Math.round((taken / doses.length) * 100);
-  };
-
-  const getCompoundColor = (id: string) => {
-    const compound = compounds.find(c => c.id === id);
-    return compound?.color || "#6b7280";
-  };
-
-  const progress = getProgress();
-  const todayDoses = getTodayDoses();
+  const todayDoses = getDosesForDay(selectedDay);
+  const todayDone = todayDoses.filter(d => isDoseDone(d.id, selectedDay)).length;
+  const todayTotal = todayDoses.length;
+  const progress = todayTotal > 0 ? Math.round((todayDone / todayTotal) * 100) : 0;
 
   return (
     <div>
-      {/* Disclaimer - Top */}
+      {/* Disclaimer */}
       <div style={{
         background: "rgba(239,68,68,0.1)",
         border: "1px solid rgba(239,68,68,0.3)",
@@ -227,24 +133,22 @@ export default function PepTrakPage() {
       <div style={{ marginBottom: 28 }}>
         <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8, flexWrap: "wrap" }}>
           <span style={{ fontSize: "1.75rem" }}>💉</span>
-          <h1 style={{ fontSize: "1.5rem", fontWeight: 700, margin: 0, color: "var(--text)" }}>
-            PepTrak
-          </h1>
+          <h1 style={{ fontSize: "1.5rem", fontWeight: 700, margin: 0, color: "var(--text)" }}>PepTrak</h1>
           <button
-            onClick={() => setShowSetup(!showSetup)}
+            onClick={() => { setShowAddForm(!showAddForm); setEditingCompound(null); }}
             style={{
               padding: "6px 14px",
               borderRadius: 20,
               border: "1px solid var(--accent)",
-              background: showSetup ? "var(--accent)" : "transparent",
-              color: showSetup ? "#fff" : "var(--accent)",
+              background: showAddForm ? "var(--accent)" : "transparent",
+              color: showAddForm ? "#fff" : "var(--accent)",
               fontSize: "0.8rem",
               fontWeight: 500,
               cursor: "pointer",
               transition: "all 0.15s",
             }}
           >
-            {showSetup ? "▲ Add Compound" : "▼ Add Compound"}
+            {showAddForm ? "▲ Add Compound" : "▼ Add Compound"}
           </button>
           <button
             onClick={() => setShowGuide(!showGuide)}
@@ -270,214 +174,185 @@ export default function PepTrakPage() {
       {/* Reconstitution Guide */}
       {showGuide && <ReconstitutionGuide />}
 
-      {/* Setup Panel — collapsible dropdown */}
-      <div
-        style={{
-          maxHeight: showSetup ? "2000px" : "0",
-          overflow: "hidden",
-          transition: "max-height 0.3s ease",
-          opacity: showSetup ? 1 : 0,
-        }}
-      >
-        <SetupPanel
+      {/* Add/Edit Compound Form */}
+      <div style={{
+        maxHeight: showAddForm ? "2000px" : "0",
+        overflow: "hidden",
+        transition: "max-height 0.3s ease",
+        opacity: showAddForm ? 1 : 0,
+      }}>
+        <CompoundForm
           compounds={compounds}
-          schedule={schedule}
-          onAddCompound={addCompound}
-          onUpdateCompound={updateCompound}
-          onDeleteCompound={deleteCompound}
-          onAddScheduleEntry={addScheduleEntry}
-          onRemoveScheduleEntry={removeScheduleEntry}
           editingCompound={editingCompound}
-          setEditingCompound={setEditingCompound}
+          onAdd={addCompound}
+          onUpdate={updateCompound}
+          onCancelEdit={() => setEditingCompound(null)}
         />
       </div>
 
-      {/* Progress Bar */}
+      {/* Day Selector + Progress */}
       {compounds.length > 0 && (
-        <div
-          style={{
+        <>
+          {/* Progress */}
+          <div style={{
             background: "var(--card)",
             border: "1px solid var(--border)",
             borderRadius: 12,
             padding: "20px",
             marginBottom: 24,
-          }}
-        >
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
-            <span style={{ fontSize: "0.875rem", fontWeight: 600, color: "var(--text)" }}>
-              {selectedDay} Progress
-            </span>
-            <span style={{ fontSize: "0.875rem", fontWeight: 600, color: progress === 100 ? "#4ade80" : "var(--accent)" }}>
-              {progress}%
-            </span>
-          </div>
-          <div
-            style={{
-              width: "100%",
-              height: 8,
-              background: "var(--bg)",
-              borderRadius: 4,
-              overflow: "hidden",
-            }}
-          >
-            <div
-              style={{
+          }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
+              <span style={{ fontSize: "0.875rem", fontWeight: 600, color: "var(--text)" }}>
+                {selectedDay} {selectedDay === getTodayDayName() ? "(Today)" : ""}
+              </span>
+              <span style={{ fontSize: "0.875rem", fontWeight: 600, color: progress === 100 ? "#4ade80" : "var(--accent)" }}>
+                {progress}%
+              </span>
+            </div>
+            <div style={{ width: "100%", height: 8, background: "var(--bg)", borderRadius: 4, overflow: "hidden" }}>
+              <div style={{
                 width: `${progress}%`,
                 height: "100%",
                 background: progress === 100 ? "#4ade80" : "var(--accent)",
                 borderRadius: 4,
                 transition: "width 0.3s ease",
-              }}
-            />
+              }} />
+            </div>
           </div>
-        </div>
-      )}
 
-      {/* Day Selector */}
-      {compounds.length > 0 && (
-        <div style={{ display: "flex", gap: 8, marginBottom: 24, flexWrap: "wrap" }}>
-          {DAYS_OF_WEEK.map((day) => (
-            <button
-              key={day}
-              onClick={() => setSelectedDay(day)}
-              style={{
-                padding: "8px 16px",
-                borderRadius: 20,
-                border: "1px solid var(--border)",
-                background: selectedDay === day ? "var(--accent)" : "var(--card)",
-                color: selectedDay === day ? "#fff" : "var(--text)",
-                fontSize: "0.8rem",
-                fontWeight: 500,
-                cursor: "pointer",
-                transition: "all 0.15s",
-              }}
-            >
-              {day.slice(0, 3)}
-            </button>
-          ))}
-        </div>
-      )}
-
-      {/* Daily Dose Cards */}
-      <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 32 }}>
-        {compounds.length === 0 ? (
-          <div
-            style={{
-              background: "var(--card)",
-              border: "1px solid var(--border)",
-              borderRadius: 12,
-              padding: "32px",
-              textAlign: "center",
-              color: "var(--muted)",
-              fontSize: "0.875rem",
-            }}
-          >
-            <div style={{ fontSize: "2rem", marginBottom: 12 }}>💉</div>
-            <div style={{ fontWeight: 600, marginBottom: 8, color: "var(--text)" }}>No compounds configured</div>
-            <div>Click "Configure" to add your first research compound</div>
-          </div>
-        ) : todayDoses.length === 0 ? (
-          <div
-            style={{
-              background: "var(--card)",
-              border: "1px solid var(--border)",
-              borderRadius: 12,
-              padding: "24px",
-              textAlign: "center",
-              color: "var(--muted)",
-              fontSize: "0.875rem",
-            }}
-          >
-            No doses scheduled for {selectedDay}
-          </div>
-        ) : (
-          todayDoses.map((dose, idx) => {
-            const color = getCompoundColor(dose.compoundId);
-            const isTaken = checklist[`${dose.compoundId}-${dose.time}-${selectedDay}`];
-            return (
-              <div
-                key={idx}
-                onClick={() => toggleDose(dose.compoundId, dose.time)}
-                style={{
-                  background: "var(--card)",
-                  border: "1px solid var(--border)",
-                  borderLeft: `3px solid ${color}`,
-                  borderRadius: 12,
-                  padding: "16px 20px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  gap: 16,
-                  cursor: "pointer",
-                  opacity: isTaken ? 0.55 : 1,
-                  filter: isTaken ? "saturate(0.4)" : "none",
-                  transition: "all 0.2s ease",
-                }}
-              >
-                <div style={{ display: "flex", alignItems: "center", gap: 16, flex: 1 }}>
-                  {/* Checkbox */}
-                  <div
-                    style={{
-                      width: 24,
-                      height: 24,
-                      borderRadius: 6,
-                      border: `2px solid ${isTaken ? color : "var(--border)"}`,
-                      background: isTaken ? color : "transparent",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      flexShrink: 0,
-                      transition: "all 0.15s",
-                    }}
-                  >
-                    {isTaken && (
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                        <polyline points="20 6 9 17 4 12" />
-                      </svg>
-                    )}
-                  </div>
-
-                  {/* Dose Info */}
-                  <div style={{ flex: 1 }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 4, flexWrap: "wrap" }}>
-                      <span style={{ fontSize: "1rem", fontWeight: 600, color: "var(--text)" }}>
-                        {dose.compoundName}
-                      </span>
-                      <span
-                        style={{
-                          fontSize: "0.7rem",
-                          padding: "2px 8px",
-                          borderRadius: 10,
-                          background: `${color}20`,
-                          color: color,
-                          fontWeight: 500,
-                        }}
-                      >
-                        {dose.time}
-                      </span>
-                    </div>
-                    <div style={{ fontSize: "0.8rem", color: "var(--muted)" }}>
-                      {dose.doseUnits} units ({dose.doseMg} mg)
-                    </div>
-                  </div>
-                </div>
-
-                {/* Status */}
-                <div
+          {/* Day Tabs */}
+          <div style={{ display: "flex", gap: 8, marginBottom: 24, flexWrap: "wrap" }}>
+            {DAYS_OF_WEEK.map((day, i) => {
+              const dayDoses = getDosesForDay(day);
+              const hasDoses = dayDoses.length > 0;
+              return (
+                <button
+                  key={day}
+                  onClick={() => setSelectedDay(day)}
                   style={{
-                    fontSize: "0.75rem",
-                    fontWeight: 600,
-                    color: isTaken ? "#4ade80" : "var(--muted)",
-                    whiteSpace: "nowrap",
+                    padding: "8px 16px",
+                    borderRadius: 20,
+                    border: `1px solid ${selectedDay === day ? "var(--accent)" : "var(--border)"}`,
+                    background: selectedDay === day ? "var(--accent)" : "var(--card)",
+                    color: selectedDay === day ? "#fff" : hasDoses ? "var(--text)" : "var(--muted)",
+                    fontSize: "0.8rem",
+                    fontWeight: 500,
+                    cursor: "pointer",
+                    transition: "all 0.15s",
+                    position: "relative",
                   }}
                 >
-                  {isTaken ? "Done" : "Pending"}
-                </div>
+                  {DAYS_SHORT[i]}
+                  {hasDoses && selectedDay !== day && (
+                    <span style={{
+                      position: "absolute",
+                      top: -2,
+                      right: -2,
+                      width: 8,
+                      height: 8,
+                      borderRadius: "50%",
+                      background: "var(--accent)",
+                    }} />
+                  )}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Daily Dose Cards */}
+          <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 32 }}>
+            {todayDoses.length === 0 ? (
+              <div style={{
+                background: "var(--card)",
+                border: "1px solid var(--border)",
+                borderRadius: 12,
+                padding: "24px",
+                textAlign: "center",
+                color: "var(--muted)",
+                fontSize: "0.875rem",
+              }}>
+                No doses scheduled for {selectedDay}
               </div>
-            );
-          })
-        )}
-      </div>
+            ) : (
+              todayDoses.map((dose) => {
+                const done = isDoseDone(dose.id, selectedDay);
+                return (
+                  <div
+                    key={dose.id}
+                    onClick={() => toggleDose(dose.id, selectedDay)}
+                    style={{
+                      background: "var(--card)",
+                      border: "1px solid var(--border)",
+                      borderLeft: `3px solid ${dose.color}`,
+                      borderRadius: 12,
+                      padding: "16px 20px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                      gap: 16,
+                      cursor: "pointer",
+                      opacity: done ? 0.55 : 1,
+                      filter: done ? "saturate(0.4)" : "none",
+                      transition: "all 0.2s ease",
+                    }}
+                  >
+                    <div style={{ display: "flex", alignItems: "center", gap: 16, flex: 1 }}>
+                      {/* Checkbox */}
+                      <div style={{
+                        width: 24,
+                        height: 24,
+                        borderRadius: 6,
+                        border: `2px solid ${done ? dose.color : "var(--border)"}`,
+                        background: done ? dose.color : "transparent",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        flexShrink: 0,
+                        transition: "all 0.15s",
+                      }}>
+                        {done && (
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                            <polyline points="20 6 9 17 4 12" />
+                          </svg>
+                        )}
+                      </div>
+
+                      {/* Dose Info */}
+                      <div style={{ flex: 1 }}>
+                        <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 4, flexWrap: "wrap" }}>
+                          <span style={{ fontSize: "1rem", fontWeight: 600, color: "var(--text)" }}>{dose.name}</span>
+                          <span style={{
+                            fontSize: "0.7rem",
+                            padding: "2px 8px",
+                            borderRadius: 10,
+                            background: `${dose.color}20`,
+                            color: dose.color,
+                            fontWeight: 500,
+                          }}>
+                            {dose.scheduleTime}
+                          </span>
+                        </div>
+                        <div style={{ fontSize: "0.8rem", color: "var(--muted)" }}>
+                          <strong>{dose.units} units</strong> on syringe ({dose.prescribedDosageMg} mg)
+                        </div>
+                      </div>
+                    </div>
+
+                    <div style={{
+                      fontSize: "0.75rem",
+                      fontWeight: 600,
+                      color: done ? "#4ade80" : "var(--muted)",
+                      whiteSpace: "nowrap",
+                    }}>
+                      {done ? "✓ Done" : "Pending"}
+                    </div>
+                  </div>
+                );
+              })
+            )}
+          </div>
+        </>
+      )}
 
       {/* Compound Inventory */}
       {compounds.length > 0 && (
@@ -486,62 +361,95 @@ export default function PepTrakPage() {
             Compound Inventory
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: 12, marginBottom: 32 }}>
-            {compounds.map((compound) => (
-              <div
-                key={compound.id}
-                style={{
+            {compounds.map((compound) => {
+              const units = calculateUnits(compound.prescribedDosageMg, compound.totalMgInVial, compound.bacWaterRatioMl);
+              return (
+                <div key={compound.id} style={{
                   background: "var(--card)",
                   border: "1px solid var(--border)",
                   borderTop: `3px solid ${compound.color}`,
                   borderRadius: 12,
                   padding: "16px",
-                }}
-              >
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
-                  <span style={{ fontSize: "0.9rem", fontWeight: 600, color: "var(--text)" }}>{compound.name}</span>
-                  <div style={{ display: "flex", gap: 8 }}>
-                    <button
-                      onClick={() => setEditingCompound(compound)}
-                      style={{
-                        background: "transparent",
-                        border: "none",
-                        color: "var(--muted)",
-                        cursor: "pointer",
-                        fontSize: "0.75rem",
-                        padding: "2px 6px",
-                      }}
-                    >
-                      Edit
-                    </button>
-                    <button
-                      onClick={() => deleteCompound(compound.id)}
-                      style={{
-                        background: "transparent",
-                        border: "none",
-                        color: "#ef4444",
-                        cursor: "pointer",
-                        fontSize: "0.75rem",
-                        padding: "2px 6px",
-                      }}
-                    >
-                      Delete
-                    </button>
+                }}>
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
+                    <span style={{ fontSize: "0.9rem", fontWeight: 600, color: "var(--text)" }}>{compound.name}</span>
+                    <div style={{ display: "flex", gap: 8 }}>
+                      <button
+                        onClick={() => { setEditingCompound(compound); setShowAddForm(true); }}
+                        style={{ background: "transparent", border: "none", color: "var(--muted)", cursor: "pointer", fontSize: "0.75rem", padding: "2px 6px" }}
+                      >Edit</button>
+                      <button
+                        onClick={() => deleteCompound(compound.id)}
+                        style={{ background: "transparent", border: "none", color: "#ef4444", cursor: "pointer", fontSize: "0.75rem", padding: "2px 6px" }}
+                      >Delete</button>
+                    </div>
+                  </div>
+                  <div style={{ fontSize: "0.75rem", color: "var(--muted)", lineHeight: 1.7 }}>
+                    <div><strong>Total in Vial:</strong> {compound.totalMgInVial} mg</div>
+                    <div><strong>Dose:</strong> {compound.prescribedDosageMg} mg</div>
+                    <div><strong>BAC Water:</strong> {compound.bacWaterRatioMl} mL</div>
+                    <div><strong>Units on Syringe:</strong> {units} units</div>
+                    <div><strong>Schedule:</strong> {compound.scheduleDays.map(d => d.slice(0, 3)).join(", ")} @ {compound.scheduleTime}</div>
                   </div>
                 </div>
-                <div style={{ fontSize: "0.75rem", color: "var(--muted)", lineHeight: 1.7 }}>
-                  <div><strong>Total in Vial:</strong> {compound.totalMgInVial} mg</div>
-                  <div><strong>Dose:</strong> {compound.prescribedDosageMg} mg</div>
-                  <div><strong>BAC Water:</strong> {compound.bacWaterRatioMl} mL</div>
-                  <div><strong>Units on Syringe:</strong> {calculateUnits(compound.prescribedDosageMg, compound.totalMgInVial, compound.bacWaterRatioMl)} units</div>
-                  <div><strong>Schedule:</strong> {compound.schedule}</div>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </>
       )}
 
-      {/* Disclaimer - Bottom */}
+      {/* Weekly Overview */}
+      {compounds.length > 0 && (
+        <>
+          <h2 style={{ fontSize: "1.1rem", fontWeight: 700, margin: "0 0 16px", color: "var(--text)" }}>
+            Weekly Schedule
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))", gap: 12, marginBottom: 32 }}>
+            {DAYS_OF_WEEK.map((day, i) => {
+              const dayDoses = getDosesForDay(day);
+              return (
+                <div key={day} style={{
+                  background: day === getTodayDayName() ? "rgba(155,93,229,0.08)" : "var(--card)",
+                  border: `1px solid ${day === getTodayDayName() ? "var(--accent)" : "var(--border)"}`,
+                  borderRadius: 12,
+                  padding: "12px",
+                }}>
+                  <div style={{
+                    fontSize: "0.8rem",
+                    fontWeight: 600,
+                    color: day === getTodayDayName() ? "var(--accent)" : "var(--text)",
+                    marginBottom: 8,
+                  }}>
+                    {DAYS_SHORT[i]}
+                    {day === getTodayDayName() && <span style={{ fontSize: "0.65rem", color: "var(--accent)", marginLeft: 6 }}>TODAY</span>}
+                  </div>
+                  {dayDoses.length === 0 ? (
+                    <div style={{ fontSize: "0.7rem", color: "var(--muted)" }}>Rest day</div>
+                  ) : (
+                    <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                      {dayDoses.map(d => (
+                        <div key={d.id} style={{
+                          fontSize: "0.7rem",
+                          padding: "4px 8px",
+                          borderRadius: 6,
+                          background: `${d.color}15`,
+                          borderLeft: `2px solid ${d.color}`,
+                          color: "var(--text)",
+                        }}>
+                          <div style={{ fontWeight: 600 }}>{d.name}</div>
+                          <div style={{ color: "var(--muted)" }}>{d.units} units @ {d.scheduleTime}</div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </>
+      )}
+
+      {/* Disclaimer Bottom */}
       <div style={{
         background: "rgba(239,68,68,0.1)",
         border: "1px solid rgba(239,68,68,0.3)",
@@ -558,457 +466,216 @@ export default function PepTrakPage() {
   );
 }
 
-// Setup Panel Component
-function SetupPanel({
+// Compound Form Component
+function CompoundForm({
   compounds,
-  schedule,
-  onAddCompound,
-  onUpdateCompound,
-  onDeleteCompound,
-  onAddScheduleEntry,
-  onRemoveScheduleEntry,
   editingCompound,
-  setEditingCompound,
+  onAdd,
+  onUpdate,
+  onCancelEdit,
 }: {
   compounds: CompoundConfig[];
-  schedule: UserSchedule[];
-  onAddCompound: (c: CompoundConfig) => void;
-  onUpdateCompound: (c: CompoundConfig) => void;
-  onDeleteCompound: (id: string) => void;
-  onAddScheduleEntry: (day: string, time: string, compoundIds: string[]) => void;
-  onRemoveScheduleEntry: (day: string, time: string, compoundId: string) => void;
   editingCompound: CompoundConfig | null;
-  setEditingCompound: (c: CompoundConfig | null) => void;
+  onAdd: (c: CompoundConfig) => void;
+  onUpdate: (c: CompoundConfig) => void;
+  onCancelEdit: () => void;
 }) {
-  const [compoundForm, setCompoundForm] = useState<Partial<CompoundConfig>>({
+  const defaultForm = {
+    name: "",
+    color: PRESET_COLORS[compounds.length % PRESET_COLORS.length],
     totalMgInVial: 10,
     prescribedDosageMg: 1,
     bacWaterRatioMl: 2,
-  });
-  const [scheduleDay, setScheduleDay] = useState("Monday");
-  const [scheduleTime, setScheduleTime] = useState("10am");
-  const [scheduleCompoundIds, setScheduleCompoundIds] = useState<string[]>([]);
+    timesPerWeek: 7,
+    scheduleDays: [...DAYS_OF_WEEK],
+    scheduleTime: "10am",
+    notes: "",
+  };
+
+  const [form, setForm] = useState<Partial<CompoundConfig>>(defaultForm);
 
   useEffect(() => {
     if (editingCompound) {
-      setCompoundForm(editingCompound);
+      setForm(editingCompound);
     }
   }, [editingCompound]);
 
-  const handleSubmitCompound = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!compoundForm.name) return;
-
-    const compound: CompoundConfig = {
-      id: editingCompound?.id || crypto.randomUUID(),
-      name: compoundForm.name || "Unnamed",
-      color: compoundForm.color || PRESET_COLORS[compounds.length % PRESET_COLORS.length],
-      totalMgInVial: Number(compoundForm.totalMgInVial) || 10,
-      prescribedDosageMg: Number(compoundForm.prescribedDosageMg) || 1,
-      bacWaterRatioMl: Number(compoundForm.bacWaterRatioMl) || 2,
-      schedule: compoundForm.schedule || "",
-      frequency: compoundForm.frequency || "",
-      notes: compoundForm.notes || "",
-    };
-
-    if (editingCompound) {
-      onUpdateCompound(compound);
-    } else {
-      onAddCompound(compound);
-    }
-
-    setCompoundForm({
-      color: PRESET_COLORS[compounds.length % PRESET_COLORS.length],
-      totalMgInVial: 10,
-      prescribedDosageMg: 1,
-      bacWaterRatioMl: 2,
+  // Auto-select days when timesPerWeek changes
+  const handleTimesChange = (times: number) => {
+    setForm(prev => {
+      const newForm = { ...prev, timesPerWeek: times };
+      if (times === 7) {
+        newForm.scheduleDays = [...DAYS_OF_WEEK];
+      } else if (times >= (prev.scheduleDays?.length || 0)) {
+        // Keep current selection if it matches
+      }
+      return newForm;
     });
   };
 
-  const handleAddSchedule = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (scheduleCompoundIds.length === 0) return;
-    onAddScheduleEntry(scheduleDay, scheduleTime, scheduleCompoundIds);
-    setScheduleCompoundIds([]);
+  const toggleDay = (day: string) => {
+    setForm(prev => {
+      const current = prev.scheduleDays || [];
+      const newDays = current.includes(day)
+        ? current.filter(d => d !== day)
+        : [...current, day];
+      return { ...prev, scheduleDays: newDays, timesPerWeek: newDays.length };
+    });
   };
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!form.name) return;
+
+    const compound: CompoundConfig = {
+      id: editingCompound?.id || crypto.randomUUID(),
+      name: form.name || "Unnamed",
+      color: form.color || PRESET_COLORS[0],
+      totalMgInVial: Number(form.totalMgInVial) || 10,
+      prescribedDosageMg: Number(form.prescribedDosageMg) || 1,
+      bacWaterRatioMl: Number(form.bacWaterRatioMl) || 2,
+      timesPerWeek: Number(form.timesPerWeek) || 7,
+      scheduleDays: form.scheduleDays || [],
+      scheduleTime: form.scheduleTime || "10am",
+      notes: form.notes || "",
+    };
+
+    if (editingCompound) {
+      onUpdate(compound);
+    } else {
+      onAdd(compound);
+    }
+
+    setForm({
+      ...defaultForm,
+      color: PRESET_COLORS[(compounds.length + 1) % PRESET_COLORS.length],
+    });
+  };
+
+  const calculatedUnits = (form.totalMgInVial && form.prescribedDosageMg && form.bacWaterRatioMl)
+    ? calculateUnits(Number(form.prescribedDosageMg), Number(form.totalMgInVial), Number(form.bacWaterRatioMl))
+    : 0;
+
   return (
-    <div
-      style={{
-        background: "var(--card)",
-        border: "1px solid var(--border)",
-        borderRadius: 12,
-        padding: "24px",
-        marginBottom: 24,
-      }}
-    >
+    <div style={{
+      background: "var(--card)",
+      border: "1px solid var(--border)",
+      borderRadius: 12,
+      padding: "24px",
+      marginBottom: 24,
+    }}>
       <h2 style={{ fontSize: "1.1rem", fontWeight: 700, margin: "0 0 20px", color: "var(--text)" }}>
         {editingCompound ? "Edit Compound" : "Add Compound"}
       </h2>
 
-      <form onSubmit={handleSubmitCompound} style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+      <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+        {/* Row 1: Name + Color */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 12 }}>
           <div>
             <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Compound Name</label>
             <input
               type="text"
-              value={compoundForm.name || ""}
-              onChange={e => setCompoundForm({ ...compoundForm, name: e.target.value })}
+              value={form.name || ""}
+              onChange={e => setForm({ ...form, name: e.target.value })}
               placeholder="e.g., BPC-157"
-              style={{
-                width: "100%",
-                padding: "8px 12px",
-                borderRadius: 8,
-                border: "1px solid var(--border)",
-                background: "var(--bg)",
-                color: "var(--text)",
-                fontSize: "0.875rem",
-              }}
+              style={{ width: "100%", padding: "8px 12px", borderRadius: 8, border: "1px solid var(--border)", background: "var(--bg)", color: "var(--text)", fontSize: "0.875rem" }}
               required
             />
           </div>
-
           <div>
             <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Color</label>
             <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
               {PRESET_COLORS.map(color => (
-                <button
-                  key={color}
-                  type="button"
-                  onClick={() => setCompoundForm({ ...compoundForm, color })}
-                  style={{
-                    width: 28,
-                    height: 28,
-                    borderRadius: 6,
-                    background: color,
-                    border: compoundForm.color === color ? "2px solid #fff" : "2px solid transparent",
-                    cursor: "pointer",
-                  }}
+                <button key={color} type="button" onClick={() => setForm({ ...form, color })}
+                  style={{ width: 28, height: 28, borderRadius: 6, background: color, border: form.color === color ? "2px solid #fff" : "2px solid transparent", cursor: "pointer" }}
                 />
               ))}
             </div>
           </div>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 12 }}>
+        {/* Row 2: Dosing inputs + calculated output */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: 12 }}>
           <div>
-            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>
-              Total mg in Vial
-            </label>
-            <input
-              type="number"
-              step="0.1"
-              value={compoundForm.totalMgInVial || ""}
-              onChange={e => setCompoundForm({ ...compoundForm, totalMgInVial: parseFloat(e.target.value) })}
-              style={{
-                width: "100%",
-                padding: "8px 12px",
-                borderRadius: 8,
-                border: "1px solid var(--border)",
-                background: "var(--bg)",
-                color: "var(--text)",
-                fontSize: "0.875rem",
-              }}
-              required
-            />
+            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Total mg in Vial</label>
+            <input type="number" step="0.1" value={form.totalMgInVial || ""} onChange={e => setForm({ ...form, totalMgInVial: parseFloat(e.target.value) })}
+              style={{ width: "100%", padding: "8px 12px", borderRadius: 8, border: "1px solid var(--border)", background: "var(--bg)", color: "var(--text)", fontSize: "0.875rem" }} required />
           </div>
-
           <div>
-            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>
-              Prescribed Dose (mg)
-            </label>
-            <input
-              type="number"
-              step="0.01"
-              value={compoundForm.prescribedDosageMg || ""}
-              onChange={e => setCompoundForm({ ...compoundForm, prescribedDosageMg: parseFloat(e.target.value) })}
-              style={{
-                width: "100%",
-                padding: "8px 12px",
-                borderRadius: 8,
-                border: "1px solid var(--border)",
-                background: "var(--bg)",
-                color: "var(--text)",
-                fontSize: "0.875rem",
-              }}
-              required
-            />
+            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Prescribed Dose (mg)</label>
+            <input type="number" step="0.01" value={form.prescribedDosageMg || ""} onChange={e => setForm({ ...form, prescribedDosageMg: parseFloat(e.target.value) })}
+              style={{ width: "100%", padding: "8px 12px", borderRadius: 8, border: "1px solid var(--border)", background: "var(--bg)", color: "var(--text)", fontSize: "0.875rem" }} required />
           </div>
-
           <div>
-            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>
-              BAC Water (mL)
-            </label>
-            <input
-              type="number"
-              step="0.1"
-              value={compoundForm.bacWaterRatioMl || ""}
-              onChange={e => setCompoundForm({ ...compoundForm, bacWaterRatioMl: parseFloat(e.target.value) })}
-              style={{
-                width: "100%",
-                padding: "8px 12px",
-                borderRadius: 8,
-                border: "1px solid var(--border)",
-                background: "var(--bg)",
-                color: "var(--text)",
-                fontSize: "0.875rem",
-              }}
-              required
-            />
+            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>BAC Water (mL)</label>
+            <input type="number" step="0.1" value={form.bacWaterRatioMl || ""} onChange={e => setForm({ ...form, bacWaterRatioMl: parseFloat(e.target.value) })}
+              style={{ width: "100%", padding: "8px 12px", borderRadius: 8, border: "1px solid var(--border)", background: "var(--bg)", color: "var(--text)", fontSize: "0.875rem" }} required />
           </div>
-
           <div>
-            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>
-              Dosage (Units on Syringe)
-            </label>
-            <div
-              style={{
-                width: "100%",
-                padding: "8px 12px",
-                borderRadius: 8,
-                border: "1px solid var(--border)",
-                background: "var(--bg)",
-                color: "var(--accent)",
-                fontSize: "0.875rem",
-                fontWeight: 600,
-                fontFamily: "monospace",
-              }}
-            >
-              {compoundForm.totalMgInVial && compoundForm.prescribedDosageMg && compoundForm.bacWaterRatioMl
-                ? calculateUnits(
-                    Number(compoundForm.prescribedDosageMg) || 0,
-                    Number(compoundForm.totalMgInVial) || 0,
-                    Number(compoundForm.bacWaterRatioMl) || 0
-                  ) + " units"
-                : "—"
-              }
+            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Dosage (Units on Syringe)</label>
+            <div style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid var(--border)", background: "var(--bg)", color: "var(--accent)", fontSize: "0.875rem", fontWeight: 600, fontFamily: "monospace" }}>
+              {calculatedUnits > 0 ? `${calculatedUnits} units` : "—"}
             </div>
           </div>
         </div>
 
-        <div>
-          <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Schedule Notes</label>
-          <input
-            type="text"
-            value={compoundForm.schedule || ""}
-            onChange={e => setCompoundForm({ ...compoundForm, schedule: e.target.value })}
-            placeholder="e.g., Mon-Fri mornings"
-            style={{
-              width: "100%",
-              padding: "8px 12px",
-              borderRadius: 8,
-              border: "1px solid var(--border)",
-              background: "var(--bg)",
-              color: "var(--text)",
-              fontSize: "0.875rem",
-            }}
-          />
+        {/* Row 3: Schedule */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 12 }}>
+          <div>
+            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Times per Week</label>
+            <select value={form.timesPerWeek || 7} onChange={e => handleTimesChange(parseInt(e.target.value))}
+              style={{ width: "100%", padding: "8px 12px", borderRadius: 8, border: "1px solid var(--border)", background: "var(--bg)", color: "var(--text)", fontSize: "0.875rem" }}>
+              {[1,2,3,4,5,6,7].map(n => <option key={n} value={n}>{n}x per week</option>)}
+            </select>
+          </div>
+          <div>
+            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>What Time?</label>
+            <select value={form.scheduleTime || "10am"} onChange={e => setForm({ ...form, scheduleTime: e.target.value })}
+              style={{ width: "100%", padding: "8px 12px", borderRadius: 8, border: "1px solid var(--border)", background: "var(--bg)", color: "var(--text)", fontSize: "0.875rem" }}>
+              {TIME_SLOTS.map(t => <option key={t} value={t}>{t}</option>)}
+            </select>
+          </div>
         </div>
 
+        {/* Day Selector */}
+        <div>
+          <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Which Days?</label>
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+            {DAYS_OF_WEEK.map((day, i) => (
+              <button key={day} type="button" onClick={() => toggleDay(day)}
+                style={{
+                  padding: "8px 14px",
+                  borderRadius: 20,
+                  border: `1px solid ${form.scheduleDays?.includes(day) ? (form.color || "var(--accent)") : "var(--border)"}`,
+                  background: form.scheduleDays?.includes(day) ? `${form.color || "var(--accent)"}20` : "var(--bg)",
+                  color: form.scheduleDays?.includes(day) ? (form.color || "var(--accent)") : "var(--muted)",
+                  fontSize: "0.8rem",
+                  fontWeight: 500,
+                  cursor: "pointer",
+                  transition: "all 0.15s",
+                }}>
+                {DAYS_SHORT[i]}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Submit */}
         <div style={{ display: "flex", gap: 10 }}>
-          <button
-            type="submit"
-            style={{
-              padding: "10px 20px",
-              borderRadius: 8,
-              border: "none",
-              background: "var(--accent)",
-              color: "#fff",
-              fontSize: "0.875rem",
-              fontWeight: 600,
-              cursor: "pointer",
-            }}
-          >
-            {editingCompound ? "Update" : "Add Compound"}
+          <button type="submit" style={{
+            padding: "10px 20px", borderRadius: 8, border: "none",
+            background: "var(--accent)", color: "#fff", fontSize: "0.875rem", fontWeight: 600, cursor: "pointer",
+          }}>
+            {editingCompound ? "Update Compound" : "Add Compound"}
           </button>
           {editingCompound && (
-            <button
-              type="button"
-              onClick={() => {
-                setEditingCompound(null);
-                setCompoundForm({
-                  color: PRESET_COLORS[compounds.length % PRESET_COLORS.length],
-                  totalMgInVial: 10,
-                  prescribedDosageMg: 1,
-                  bacWaterRatioMl: 2,
-                });
-              }}
-              style={{
-                padding: "10px 20px",
-                borderRadius: 8,
-                border: "1px solid var(--border)",
-                background: "transparent",
-                color: "var(--text)",
-                fontSize: "0.875rem",
-                cursor: "pointer",
-              }}
-            >
+            <button type="button" onClick={() => { onCancelEdit(); setForm({ ...defaultForm, color: PRESET_COLORS[compounds.length % PRESET_COLORS.length] }); }}
+              style={{ padding: "10px 20px", borderRadius: 8, border: "1px solid var(--border)", background: "transparent", color: "var(--text)", fontSize: "0.875rem", cursor: "pointer" }}>
               Cancel
             </button>
           )}
         </div>
       </form>
-
-      {/* Schedule Builder */}
-      {compounds.length > 0 && (
-        <>
-          <hr style={{ border: "none", borderTop: "1px solid var(--border)", margin: "24px 0" }} />
-
-          <h3 style={{ fontSize: "1rem", fontWeight: 700, margin: "0 0 16px", color: "var(--text)" }}>
-            Schedule Builder
-          </h3>
-
-          <form onSubmit={handleAddSchedule} style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 12 }}>
-              <div>
-                <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Day</label>
-                <select
-                  value={scheduleDay}
-                  onChange={e => setScheduleDay(e.target.value)}
-                  style={{
-                    width: "100%",
-                    padding: "8px 12px",
-                    borderRadius: 8,
-                    border: "1px solid var(--border)",
-                    background: "var(--bg)",
-                    color: "var(--text)",
-                    fontSize: "0.875rem",
-                  }}
-                >
-                  {DAYS_OF_WEEK.map(d => <option key={d} value={d}>{d}</option>)}
-                </select>
-              </div>
-
-              <div>
-                <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Time</label>
-                <select
-                  value={scheduleTime}
-                  onChange={e => setScheduleTime(e.target.value)}
-                  style={{
-                    width: "100%",
-                    padding: "8px 12px",
-                    borderRadius: 8,
-                    border: "1px solid var(--border)",
-                    background: "var(--bg)",
-                    color: "var(--text)",
-                    fontSize: "0.875rem",
-                  }}
-                >
-                  {TIME_SLOTS.map(t => <option key={t} value={t}>{t}</option>)}
-                </select>
-              </div>
-            </div>
-
-            <div>
-              <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Compounds</label>
-              <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                {compounds.map((c, compoundIdx) => (
-                  <button
-                    key={c.id}
-                    type="button"
-                    onClick={() => {
-                      setScheduleCompoundIds(prev =>
-                        prev.includes(c.id) ? prev.filter(id => id !== c.id) : [...prev, c.id]
-                      );
-                    }}
-                    style={{
-                      padding: "6px 12px",
-                      borderRadius: 20,
-                      border: `1px solid ${scheduleCompoundIds.includes(c.id) ? c.color : "var(--border)"}`,
-                      background: scheduleCompoundIds.includes(c.id) ? `${c.color}20` : "var(--bg)",
-                      color: scheduleCompoundIds.includes(c.id) ? c.color : "var(--text)",
-                      fontSize: "0.8rem",
-                      cursor: "pointer",
-                      transition: "all 0.15s",
-                    }}
-                  >
-                    {c.name}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <button
-              type="submit"
-              disabled={scheduleCompoundIds.length === 0}
-              style={{
-                padding: "10px 20px",
-                borderRadius: 8,
-                border: "none",
-                background: scheduleCompoundIds.length > 0 ? "var(--accent)" : "var(--border)",
-                color: "#fff",
-                fontSize: "0.875rem",
-                fontWeight: 600,
-                cursor: scheduleCompoundIds.length > 0 ? "pointer" : "not-allowed",
-                alignSelf: "flex-start",
-              }}
-            >
-              Add to Schedule
-            </button>
-          </form>
-
-          {/* Current Schedule */}
-          {schedule.length > 0 && (
-            <div style={{ marginTop: 20 }}>
-              <h4 style={{ fontSize: "0.875rem", fontWeight: 600, margin: "0 0 12px", color: "var(--text)" }}>
-                Current Schedule
-              </h4>
-              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                {schedule.map(s => (
-                  <div key={s.day} style={{ background: "var(--bg)", borderRadius: 8, padding: "12px" }}>
-                    <div style={{ fontSize: "0.8rem", fontWeight: 600, color: "var(--text)", marginBottom: 6 }}>
-                      {s.day}
-                    </div>
-                    <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-                      {s.entries.map(entry => (
-                        <div key={entry.time} style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
-                          <span style={{ fontSize: "0.75rem", color: "var(--muted)", minWidth: 50 }}>{entry.time}</span>
-                          <div style={{ display: "flex", gap: 6, flexWrap: "wrap", flex: 1 }}>
-                            {entry.compoundIds.map(cid => {
-                              const c = compounds.find(comp => comp.id === cid);
-                              return c ? (
-                                <span
-                                  key={cid}
-                                  style={{
-                                    fontSize: "0.75rem",
-                                    padding: "2px 8px",
-                                    borderRadius: 10,
-                                    background: `${c.color}20`,
-                                    color: c.color,
-                                    display: "flex",
-                                    alignItems: "center",
-                                    gap: 4,
-                                  }}
-                                >
-                                  {c.name}
-                                  <button
-                                    type="button"
-                                    onClick={() => onRemoveScheduleEntry(s.day, entry.time, cid)}
-                                    style={{
-                                      background: "transparent",
-                                      border: "none",
-                                      color: "inherit",
-                                      cursor: "pointer",
-                                      fontSize: "0.7rem",
-                                      padding: 0,
-                                    }}
-                                  >
-                                    ×
-                                  </button>
-                                </span>
-                              ) : null;
-                            })}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-        </>
-      )}
     </div>
   );
 }
@@ -1035,25 +702,15 @@ function ReconstitutionGuide() {
       content: (
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
           <div>The math is simple:</div>
-          <div style={{
-            background: "var(--bg)",
-            borderRadius: 8,
-            padding: "16px",
-            fontFamily: "monospace",
-            fontSize: "0.8rem",
-            lineHeight: 1.8,
-          }}>
-            <div><strong>1. Total volume after reconstitution:</strong></div>
-            <div>   Vial volume (mL) + BAC water added (mL)</div>
-            <div style={{ marginTop: 8 }}><strong>2. Concentration:</strong></div>
-            <div>   Total mg in vial ÷ Total volume (mL) = mg/mL</div>
-            <div style={{ marginTop: 8 }}><strong>3. Units per dose:</strong></div>
+          <div style={{ background: "var(--bg)", borderRadius: 8, padding: "16px", fontFamily: "monospace", fontSize: "0.8rem", lineHeight: 1.8 }}>
+            <div><strong>1. Concentration after reconstitution:</strong></div>
+            <div>   Total mg in vial ÷ BAC water added (mL) = mg/mL</div>
+            <div style={{ marginTop: 8 }}><strong>2. Units per dose:</strong></div>
             <div>   (Desired mg ÷ mg/mL) × 100 units/mL = units to draw</div>
           </div>
           <div style={{ fontSize: "0.8rem", color: "var(--muted)" }}>
-            Example: 10 mg vial, 2 mL vial, add 2 mL BAC water = 4 mL total.
-            Concentration = 10 ÷ 4 = 2.5 mg/mL.
-            For 1 mg dose: (1 ÷ 2.5) × 100 = <strong>40 units</strong>.
+            Example: 10 mg vial + 2 mL BAC water = 5 mg/mL.
+            For 1 mg dose: (1 ÷ 5) × 100 = <strong>20 units</strong>.
           </div>
         </div>
       ),
@@ -1062,14 +719,14 @@ function ReconstitutionGuide() {
       title: "Reconstitute the Vial",
       content: (
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-          <div>1. <strong>Swab</strong> the peptide vial top with alcohol. Let it dry completely — wet rubber can push contaminants inside.</div>
+          <div>1. <strong>Swab</strong> the peptide vial top with alcohol. Let it dry completely.</div>
           <div>2. <strong>Swab</strong> the BAC water vial top with alcohol. Let it dry.</div>
           <div>3. <strong>Using a new insulin syringe</strong>, draw 100 units (1 mL) of BAC water from the BAC vial.</div>
           <div>4. <strong>Pierce the peptide vial</strong> at 90° through the center of the rubber stopper. <strong>Inject water slowly down the inside wall</strong> of the vial — never spray directly onto the powder. Peptide proteins are fragile.</div>
           <div>5. <strong>With needle still in the peptide vial</strong>, <strong>draw 100 units of air</strong> from inside the vial into the syringe.</div>
           <div>6. <strong>Withdraw the needle</strong> from the vial and <strong>expel the air</strong> into the atmosphere (push plunger down with needle in open air).</div>
           <div>7. <strong>Repeat steps 3-6</strong> as needed until you've added the correct total amount of BAC water (e.g., 2 mL = two 100-unit draws).</div>
-          <div>8. <strong>Do not shake.</strong> Gently swirl the vial between your palms until powder fully dissolves. Some take 30-60 seconds. Never agitate or tap forcefully.</div>
+          <div>8. <strong>Do not shake.</strong> Gently swirl the vial between your palms until powder fully dissolves.</div>
           <div>9. <strong>Inspect</strong> — solution should be clear. If cloudy, discolored, or particulate, discard and do not use.</div>
           <div>10. <strong>Swab</strong> the peptide vial stopper again with alcohol after final needle withdrawal.</div>
           <div>11. <strong>Label</strong> the vial with compound name, reconstitution date, total mg, BAC water amount, final concentration, and your initials.</div>
@@ -1088,7 +745,7 @@ function ReconstitutionGuide() {
           <div>3. <strong>Draw air</strong> into syringe equal to your dose units — this prevents vacuum.</div>
           <div>4. <strong>Pierce vial center</strong> at 90° and <strong>inject air</strong> first (creates positive pressure, easier withdrawal).</div>
           <div>5. <strong>Turn vial upside down</strong> — keep needle tip submerged in liquid.</div>
-          <div>6. <strong>Draw slightly more</strong> than your calculated dose (e.g., 45 units if you need 40).</div>
+          <div>6. <strong>Draw slightly more</strong> than your calculated dose (e.g., 25 units if you need 20).</div>
           <div>7. <strong>Remove needle</strong>, hold syringe needle-up, <strong>tap out bubbles</strong> to the top.</div>
           <div>8. <strong>Push plunger slowly</strong> to exact unit mark, expelling air and excess.</div>
           <div>9. <strong>Recap needle</strong> using the one-handed scoop method — never touch the needle.</div>
@@ -1113,53 +770,23 @@ function ReconstitutionGuide() {
   ];
 
   return (
-    <div
-      style={{
-        background: "var(--card)",
-        border: "1px solid var(--border)",
-        borderRadius: 12,
-        padding: "24px",
-        marginBottom: 24,
-      }}
-    >
-      <h2 style={{ fontSize: "1.1rem", fontWeight: 700, margin: "0 0 20px", color: "var(--text)" }}>
-        📖 Reconstitution Guide
-      </h2>
-
-      {/* Step tabs */}
+    <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12, padding: "24px", marginBottom: 24 }}>
+      <h2 style={{ fontSize: "1.1rem", fontWeight: 700, margin: "0 0 20px", color: "var(--text)" }}>📖 Reconstitution Guide</h2>
       <div style={{ display: "flex", gap: 8, marginBottom: 20, flexWrap: "wrap" }}>
         {steps.map((step, idx) => (
-          <button
-            key={idx}
-            onClick={() => setActiveStep(idx)}
+          <button key={idx} onClick={() => setActiveStep(idx)}
             style={{
-              padding: "8px 14px",
-              borderRadius: 20,
+              padding: "8px 14px", borderRadius: 20,
               border: "1px solid var(--border)",
               background: activeStep === idx ? "var(--accent)" : "var(--bg)",
               color: activeStep === idx ? "#fff" : "var(--text)",
-              fontSize: "0.8rem",
-              fontWeight: 500,
-              cursor: "pointer",
-              transition: "all 0.15s",
-            }}
-          >
+              fontSize: "0.8rem", fontWeight: 500, cursor: "pointer", transition: "all 0.15s",
+            }}>
             {idx + 1}. {step.title}
           </button>
         ))}
       </div>
-
-      {/* Step content */}
-      <div
-        style={{
-          background: "var(--bg)",
-          borderRadius: 8,
-          padding: "20px",
-          fontSize: "0.875rem",
-          lineHeight: 1.7,
-          color: "var(--text)",
-        }}
-      >
+      <div style={{ background: "var(--bg)", borderRadius: 8, padding: "20px", fontSize: "0.875rem", lineHeight: 1.7, color: "var(--text)" }}>
         <div style={{ fontWeight: 600, marginBottom: 12, color: "var(--accent)" }}>
           Step {activeStep + 1}: {steps[activeStep].title}
         </div>
