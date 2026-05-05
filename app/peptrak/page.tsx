@@ -7,7 +7,9 @@ interface CompoundConfig {
   name: string;
   color: string;
   totalMgInVial: number;
+  vialUnit: "mg" | "IU";
   prescribedDosageMg: number;
+  doseUnit: "mg" | "mcg";
   bacWaterRatioMl: number;
   timesPerWeek: number;
   scheduleDays: string[];
@@ -333,7 +335,7 @@ export default function PepTrakPage() {
                           </span>
                         </div>
                         <div style={{ fontSize: "0.8rem", color: "var(--muted)" }}>
-                          <strong>{dose.units} units</strong> on syringe ({dose.prescribedDosageMg} mg)
+                          <strong>{dose.units} units</strong> on syringe ({dose.doseUnit === "mcg" ? (dose.prescribedDosageMg * 1000) + " mcg" : dose.prescribedDosageMg + " mg"})
                         </div>
                       </div>
                     </div>
@@ -436,8 +438,8 @@ export default function PepTrakPage() {
                     </div>
                   </div>
                   <div style={{ fontSize: "0.75rem", color: "var(--muted)", lineHeight: 1.7 }}>
-                    <div><strong>Total in Vial:</strong> {compound.totalMgInVial} mg</div>
-                    <div><strong>Dose:</strong> {compound.prescribedDosageMg} mg</div>
+                    <div><strong>Total in Vial:</strong> {compound.totalMgInVial} {compound.vialUnit || "mg"}</div>
+                    <div><strong>Dose:</strong> {compound.doseUnit === "mcg" ? (compound.prescribedDosageMg * 1000) + " mcg" : compound.prescribedDosageMg + " mg"}</div>
                     <div><strong>BAC Water:</strong> {compound.bacWaterRatioMl} mL</div>
                     <div><strong>Units on Syringe:</strong> {units} units</div>
                     <div><strong>Schedule:</strong> {compound.scheduleDays.map(d => d.slice(0, 3)).join(", ")} @ {compound.scheduleTime}</div>
@@ -493,10 +495,29 @@ function CompoundForm({
   };
 
   const [form, setForm] = useState<Partial<CompoundConfig>>(defaultForm);
+  const [vialUnit, setVialUnit] = useState<"mg" | "IU">("mg");
+  const [doseUnit, setDoseUnit] = useState<"mg" | "mcg">("mg");
+
+  // Display values (converted from internal mg)
+  const vialDisplayValue = vialUnit === "IU" ? (form.totalMgInVial || 0) : (form.totalMgInVial || 0);
+  const doseDisplayValue = doseUnit === "mcg" ? ((form.prescribedDosageMg || 0) * 1000) : (form.prescribedDosageMg || 0);
+
+  const handleVialChange = (val: number) => {
+    // IU stored as-is (user handles their own IU-to-mg if needed)
+    setForm({ ...form, totalMgInVial: val });
+  };
+
+  const handleDoseChange = (val: number) => {
+    // Convert mcg to mg for internal storage
+    const mgValue = doseUnit === "mcg" ? val / 1000 : val;
+    setForm({ ...form, prescribedDosageMg: mgValue });
+  };
 
   useEffect(() => {
     if (editingCompound) {
       setForm(editingCompound);
+      setVialUnit(editingCompound.vialUnit || "mg");
+      setDoseUnit(editingCompound.doseUnit || "mg");
     }
   }, [editingCompound]);
 
@@ -532,7 +553,9 @@ function CompoundForm({
       name: form.name || "Unnamed",
       color: form.color || PRESET_COLORS[0],
       totalMgInVial: Number(form.totalMgInVial) || 10,
+      vialUnit: vialUnit,
       prescribedDosageMg: Number(form.prescribedDosageMg) || 1,
+      doseUnit: doseUnit,
       bacWaterRatioMl: Number(form.bacWaterRatioMl) || 2,
       timesPerWeek: Number(form.timesPerWeek) || 7,
       scheduleDays: form.scheduleDays || [],
@@ -597,13 +620,48 @@ function CompoundForm({
         {/* Row 2: Dosing inputs + calculated output */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: 12 }}>
           <div>
-            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Total mg in Vial</label>
-            <input type="number" step="0.1" value={form.totalMgInVial || ""} onChange={e => setForm({ ...form, totalMgInVial: parseFloat(e.target.value) })}
+            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
+              Total in Vial
+              <span style={{ display: "inline-flex", gap: 2, background: "var(--bg)", borderRadius: 12, padding: "1px 2px" }}>
+                {(["mg", "IU"] as const).map(u => (
+                  <button key={u} type="button" onClick={() => setVialUnit(u)}
+                    style={{
+                      padding: "2px 8px", borderRadius: 10, border: "none",
+                      background: vialUnit === u ? "var(--accent)" : "transparent",
+                      color: vialUnit === u ? "#fff" : "var(--muted)",
+                      fontSize: "0.7rem", fontWeight: 600, cursor: "pointer",
+                    }} />
+                ))}
+              </span>
+            </label>
+            <input type="number" step="0.1" value={vialDisplayValue || ""} onChange={e => handleVialChange(parseFloat(e.target.value))}
+              placeholder={vialUnit === "IU" ? "e.g., 5000" : "e.g., 10"}
               style={{ width: "100%", padding: "8px 12px", borderRadius: 8, border: "1px solid var(--border)", background: "var(--bg)", color: "var(--text)", fontSize: "0.875rem" }} required />
           </div>
           <div>
-            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Prescribed Dose (mg)</label>
-            <input type="number" step="0.01" value={form.prescribedDosageMg || ""} onChange={e => setForm({ ...form, prescribedDosageMg: parseFloat(e.target.value) })}
+            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
+              Prescribed Dose
+              <span style={{ display: "inline-flex", gap: 2, background: "var(--bg)", borderRadius: 12, padding: "1px 2px" }}>
+                {(["mg", "mcg"] as const).map(u => (
+                  <button key={u} type="button" onClick={() => {
+                    if (u !== doseUnit) {
+                      // Convert existing value when switching
+                      const currentMg = form.prescribedDosageMg || 0;
+                      setDoseUnit(u);
+                      // Don't change internal value, display will auto-convert
+                    }
+                  }}
+                    style={{
+                      padding: "2px 8px", borderRadius: 10, border: "none",
+                      background: doseUnit === u ? "var(--accent)" : "transparent",
+                      color: doseUnit === u ? "#fff" : "var(--muted)",
+                      fontSize: "0.7rem", fontWeight: 600, cursor: "pointer",
+                    }} />
+                ))}
+              </span>
+            </label>
+            <input type="number" step={doseUnit === "mcg" ? "1" : "0.01"} value={doseDisplayValue || ""} onChange={e => handleDoseChange(parseFloat(e.target.value))}
+              placeholder={doseUnit === "mcg" ? "e.g., 250" : "e.g., 1"}
               style={{ width: "100%", padding: "8px 12px", borderRadius: 8, border: "1px solid var(--border)", background: "var(--bg)", color: "var(--text)", fontSize: "0.875rem" }} required />
           </div>
           <div>
