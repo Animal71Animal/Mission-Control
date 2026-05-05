@@ -7,7 +7,6 @@ interface CompoundConfig {
   name: string;
   color: string;
   totalMgInVial: number;
-  vialVolumeMl: number;
   prescribedDosageMg: number;
   bacWaterRatioMl: number;
   schedule: string;
@@ -44,9 +43,9 @@ const TIME_SLOTS = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "
 
 const DISCLAIMER = "⚠️ NOT FOR HUMAN USE. For research purposes only. We are not medical doctors. This is not a medical device. Consult a licensed physician before use.";
 
-function calculateUnits(dosageMg: number, totalMgInVial: number, bacWaterMl: number, vialVolumeMl: number): number {
-  // After reconstitution: total volume = vial volume + BAC water added
-  const totalVolumeMl = vialVolumeMl + bacWaterMl;
+function calculateUnits(dosageMg: number, totalMgInVial: number, bacWaterMl: number): number {
+  // After reconstitution: total volume = BAC water added (peptide powder has negligible volume)
+  const totalVolumeMl = bacWaterMl;
   // Concentration after reconstitution: mg per ml
   const mgPerMlAfterRecon = totalMgInVial / totalVolumeMl;
   // Units (assuming 100 units = 1ml on U-100 insulin syringe)
@@ -173,8 +172,7 @@ export default function PepTrakPage() {
           const units = calculateUnits(
             compound.prescribedDosageMg,
             compound.totalMgInVial,
-            compound.bacWaterRatioMl,
-            compound.vialVolumeMl
+            compound.bacWaterRatioMl
           );
           doses.push({
             compoundId: compound.id,
@@ -511,10 +509,9 @@ export default function PepTrakPage() {
                 </div>
                 <div style={{ fontSize: "0.75rem", color: "var(--muted)", lineHeight: 1.7 }}>
                   <div><strong>Total in Vial:</strong> {compound.totalMgInVial} mg</div>
-                  <div><strong>Vial:</strong> {compound.vialVolumeMl} mL</div>
                   <div><strong>Dose:</strong> {compound.prescribedDosageMg} mg</div>
                   <div><strong>BAC Water:</strong> {compound.bacWaterRatioMl} mL</div>
-                  <div><strong>Units:</strong> {calculateUnits(compound.prescribedDosageMg, compound.totalMgInVial, compound.bacWaterRatioMl, compound.vialVolumeMl)} units</div>
+                  <div><strong>Units on Syringe:</strong> {calculateUnits(compound.prescribedDosageMg, compound.totalMgInVial, compound.bacWaterRatioMl)} units</div>
                   <div><strong>Schedule:</strong> {compound.schedule}</div>
                 </div>
               </div>
@@ -564,7 +561,6 @@ function SetupPanel({
 }) {
   const [compoundForm, setCompoundForm] = useState<Partial<CompoundConfig>>({
     totalMgInVial: 10,
-    vialVolumeMl: 2,
     prescribedDosageMg: 1,
     bacWaterRatioMl: 2,
   });
@@ -587,7 +583,6 @@ function SetupPanel({
       name: compoundForm.name || "Unnamed",
       color: compoundForm.color || PRESET_COLORS[compounds.length % PRESET_COLORS.length],
       totalMgInVial: Number(compoundForm.totalMgInVial) || 10,
-      vialVolumeMl: Number(compoundForm.vialVolumeMl) || 2,
       prescribedDosageMg: Number(compoundForm.prescribedDosageMg) || 1,
       bacWaterRatioMl: Number(compoundForm.bacWaterRatioMl) || 2,
       schedule: compoundForm.schedule || "",
@@ -604,7 +599,6 @@ function SetupPanel({
     setCompoundForm({
       color: PRESET_COLORS[compounds.length % PRESET_COLORS.length],
       totalMgInVial: 10,
-      vialVolumeMl: 2,
       prescribedDosageMg: 1,
       bacWaterRatioMl: 2,
     });
@@ -685,28 +679,6 @@ function SetupPanel({
               step="0.1"
               value={compoundForm.totalMgInVial || ""}
               onChange={e => setCompoundForm({ ...compoundForm, totalMgInVial: parseFloat(e.target.value) })}
-              style={{
-                width: "100%",
-                padding: "8px 12px",
-                borderRadius: 8,
-                border: "1px solid var(--border)",
-                background: "var(--bg)",
-                color: "var(--text)",
-                fontSize: "0.875rem",
-              }}
-              required
-            />
-          </div>
-
-          <div>
-            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>
-              Vial Volume (mL)
-            </label>
-            <input
-              type="number"
-              step="0.1"
-              value={compoundForm.vialVolumeMl || ""}
-              onChange={e => setCompoundForm({ ...compoundForm, vialVolumeMl: parseFloat(e.target.value) })}
               style={{
                 width: "100%",
                 padding: "8px 12px",
@@ -808,7 +780,6 @@ function SetupPanel({
                 setCompoundForm({
                   color: PRESET_COLORS[compounds.length % PRESET_COLORS.length],
                   totalMgInVial: 10,
-                  vialVolumeMl: 2,
                   prescribedDosageMg: 1,
                   bacWaterRatioMl: 2,
                 });
