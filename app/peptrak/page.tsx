@@ -753,6 +753,34 @@ function SetupPanel({
               required
             />
           </div>
+
+          <div>
+            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>
+              Dosage (Units on Syringe)
+            </label>
+            <div
+              style={{
+                width: "100%",
+                padding: "8px 12px",
+                borderRadius: 8,
+                border: "1px solid var(--border)",
+                background: "var(--bg)",
+                color: "var(--accent)",
+                fontSize: "0.875rem",
+                fontWeight: 600,
+                fontFamily: "monospace",
+              }}
+            >
+              {compoundForm.totalMgInVial && compoundForm.prescribedDosageMg && compoundForm.bacWaterRatioMl
+                ? calculateUnits(
+                    Number(compoundForm.prescribedDosageMg) || 0,
+                    Number(compoundForm.totalMgInVial) || 0,
+                    Number(compoundForm.bacWaterRatioMl) || 0
+                  ) + " units"
+                : "—"
+              }
+            </div>
+          </div>
         </div>
 
         <div>
