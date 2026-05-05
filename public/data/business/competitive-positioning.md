@@ -81,121 +81,50 @@ None of them were built with AI at the core. That's the opening.
 
 #### Switching Pitch
 
-> "Strip Sync runs your club. We run your DJ booth. Use both, or let us handle it all."
+> "We do everything you do for DJ automation, plus we actually automate it. Dancers still manage their own preferences, but we run the booth, not them."
 
 ---
 
-### 🎯 BoothPoint
+### ⚙️ BoothPoint
 
-**Positioning:** "Club management software" with DJ rotation module  
-**Threat Level:** LOW-MEDIUM — Not primarily a DJ product; often used alongside CoverJock
+**Positioning:** "Club operations platform with VIP management focus"  
+**Threat Level:** LOW-MEDIUM — Integrates with CoverJock, not a competitor on DJ automation
 
 #### What They Do Well
 
-- Comprehensive POS and club operations
-- Dancer availability tracking (VIP, private dance)
-- DJ rotation module to keep DJ informed of who's available
-- Widely deployed in strip club chains
+- VIP/private dance tracking and payments
+- Stage and DJ scheduling
+- Integrates with CoverJock
+- Data aggregation across club operations
 
 #### Pain Points
 
 | Pain Point | Impact | Our AI Fix |
 |------------|--------|------------|
-| **DJ rotation module is informational, not automated** — It tells a human DJ who's up; doesn't automate the actual set | High — Still requires a DJ to execute | Our system acts on the information automatically — no human needed in the loop |
-| **No music automation** — BoothPoint doesn't touch music selection at all | High — Clubs using BoothPoint still need a separate DJ system | We handle both ops awareness AND music execution in one system |
-| **Closed ecosystem** — CoverJock ↔ BoothPoint is the official integration pair | Medium — Switching either requires switching both | We integrate with BoothPoint (and others) via API; no forced pairing |
+| **DJ automation is not their focus** — Limited music selection; mostly a scheduling tool | Medium — Clubs can't rely on it for full automation | We fill the gap; works alongside BoothPoint, not instead of it |
+| **Still requires CoverJock** — They're an ops partner, not a DJ automation solution | Medium — Higher overall cost for clubs | We replace the DJ automation layer entirely |
 
 #### Positioning vs. BoothPoint
 
-Don't compete directly — position as the DJ automation layer that works with their existing BoothPoint setup. Reduce friction to adoption by being integration-friendly.
+> "Use BoothPoint for what it's good at (ops and VIP management). Use us for DJ automation. Better together than CoverJock alone."
 
 ---
 
-### 🎯 PCDJ DEX (DEX 3/DEX 4)
+### 🎵 General DJ Software (VirtualDJ, PCDJ DEX, Serato)
 
-**Positioning:** Professional DJ software with club-friendly automix features  
-**Threat Level:** LOW — General-purpose tool, not purpose-built for venue ops
+**Threat Level:** LOW — We run on top of them, don't compete with them
 
-#### What They Do Well
+These are industry-standard DJ tools. Clubs use them because DJs know them. We layer automation on top without replacing them.
 
-- "AutoMix Limit Track" — mixes after elapsed time (e.g., 3 minutes) rather than end of song
-- This feature is specifically marketed as a strip club DJ feature
-- Professional-grade mixing engine
-- Familiar to DJs who already know the software
+#### Our Strategy
 
-#### Pain Points
-
-| Pain Point | Impact | Our AI Fix |
-|------------|--------|------------|
-| **Requires a DJ to operate** — Not automated; a human still selects, loads, and monitors | High — No labor reduction | Fully automated; one head DJ programs the system, walks away |
-| **No rotation management** — No dancer scheduling, no stage coordination | High — Critical for strip club ops | Built-in rotation board: check-in, queue, on deck, on stage, VIP, check-out |
-| **No announcement automation** — Software doesn't handle MC duties | High — Announcements still require a human | Full AI TTS announcement engine |
-| **No venue intelligence** — Plays what it's told; doesn't adapt to room | Medium | AI adaptive engine learns energy curves, crowd patterns |
-| **No content policy** — Manual DJ responsibility | Medium | Multi-layer content filtering built-in |
-
-#### Positioning vs. PCDJ DEX
-
-Not a real competitor for the automation market. Mention it only as a reference point for why "DJ software" isn't the same as "DJ automation."
+> "Your DJs already know VirtualDJ. We add the AI layer that reads the room and makes decisions. No retraining, no software replacement — just better automation."
 
 ---
 
-### 🤝 VirtualDJ
+## Key Differentiators
 
-**Positioning:** The world's most popular DJ software  
-**Relationship:** INFRASTRUCTURE PARTNER — Not a competitor
-
-#### Strategic Decision (Updated v1.1)
-
-We do not compete with VirtualDJ. We build on top of it. Most clubs already run VirtualDJ — we add an intelligence layer that drives it programmatically via SDK and HTTP API. VirtualDJ handles audio output and hardware I/O; we handle rotation, AI music selection, announcements, dancer self-service, content filtering, and reporting.
-
-#### Why This Is the Right Call
-
-- Eliminates the audio engine engineering problem entirely
-- Zero adoption friction — clubs don't replace software they already know
-- Positions us as complementary, not threatening — potential for official partner status
-- VirtualDJ's streaming integrations (SoundCloud Go+, Beatport Link) become our music source layer for venues without a local library
-
-#### Partnership Roadmap
-
-| Stage | Timing | Action |
-|-------|--------|--------|
-| **Now** | Immediate | Use public SDK/HTTP API — no deal, no permission, no revenue share |
-| **After 5-10 customers** | Post-traction | Apply for authorized integration partner status (co-marketing, better API access) |
-| **Later** | Volume | Negotiate bundled license deal if we need to sell to clubs that don't have VirtualDJ yet |
-
-**Switching pitch is irrelevant here** — we're not asking them to switch. We're making what they already have dramatically smarter.
-
----
-
-## Head-to-Head Feature Matrix
-
-| Feature | Us | CoverJock | Strip Sync | BoothPoint DJ | PCDJ DEX |
-|---------|----|-----------|------------|---------------|----------|
-| Purpose-built for strip clubs | ✅ | ✅ | ✅ | ✅ | ❌ |
-| True DJ automation (no human required) | ✅ | ✅ | ❌ | ❌ | ❌ |
-| Multi-stage support | ✅ | ✅ (12 stages) | ❌ unclear | ❌ | ❌ |
-| Dancer rotation management | ✅ | ✅ | ✅ | ✅ | ❌ |
-| AI-adaptive music selection | ✅ | ❌ (rules-based) | ❌ | ❌ | ❌ |
-| Instant AI TTS announcements | ✅ | ❌ (24hr wait) | ❌ | ❌ | ❌ |
-| Offline-first / no internet required | ✅ | ✅ | ❌ (web-based) | ❌ | ✅ |
-| Built on VirtualDJ (no replacement needed) | ✅ | ❌ | ❌ | ❌ | ❌ |
-| Dancer music self-service (Spotify) | ✅ | ❌ | ✅ (basic) | ❌ | ❌ |
-| Manager approval workflow for music | ✅ | ❌ | ❌ | ❌ | ❌ |
-| AI content filtering | ✅ | ❌ (manual) | ❌ | ❌ | ❌ |
-| Setup wizard (<15 min) | ✅ | ❌ (hours) | ❌ | ❌ | ❌ |
-| Open integrations (any POS) | ✅ | ❌ (BoothPoint only) | ❌ | ❌ | ❌ |
-| Failover / watchdog | ✅ | ❌ (unclear) | ❌ | ❌ | ❌ |
-| Curated library + record pool upsell | ✅ | ❌ | ❌ | ❌ | ❌ |
-| Chain/multi-location analytics | ✅ | ❌ unclear | ❌ | ✅ | ❌ |
-| Mobile remote control | ✅ | ✅ | ✅ | ❌ | ❌ |
-
-*Note: VirtualDJ removed from competitor matrix — it is our infrastructure layer, not a competitor.*
-
----
-
-## How AI Specifically Eliminates Each Category of Pain
-
-### 1. Instant Announcements (vs. CoverJock's 24-hour wait)
+### 1. Instant AI Voiceovers (vs. CoverJock's 24-hour wait)
 
 AI TTS (ElevenLabs, Coqui, or similar) generates any announcement in real time:
 
@@ -290,19 +219,28 @@ With multiple locations, AI surfaces patterns no human would catch:
 
 ---
 
-## Pricing Strategy (Suggested Starting Point)
+## Pricing Strategy
 
-Research suggests CoverJock uses a subscription model ("cancel any time"). Recommend:
+**Standard Rate: $2,000/mo per venue**
 
-| Tier | Target | Price (est.) | Features |
-|------|--------|--------------|----------|
-| **Single Stage** | Small clubs, 1 room | $199/mo | 1 stage, basic rotation, TTS, content filter |
-| **Multi-Stage** | Mid-size clubs | $349/mo | Up to 6 stages, full feature set |
-| **Chain** | Multi-location | Custom ($500+/location/mo) | Central management, chain analytics, white-label, SLA |
+Flat subscription covers:
+- Unlimited stages
+- Full feature set (rotation, TTS, content filtering, announcements, adaptive music)
+- Unlimited dancers and sets
+- Offline functionality
+- Support and updates
+
+**Chain discount:** 15% per location when 3+ venues sign up.
+
+**Positioned above CoverJock ($300–500/mo) because:**
+1. AI automation replaces DJs at a rate of $300–500/week per DJ in labor cost savings alone
+2. Adaptive music intelligence increases customer spend
+3. Zero dead air is a contractual guarantee (SLA-backed)
+4. Multi-location chains get enterprise analytics
 
 ---
 
 **Document prepared by PriScylla.**  
-**Last updated:** March 2026
+**Last updated:** May 2026
 
-*Sources: CoverJock website, Strip Sync website, BoothPoint website, PCDJ DEX documentation, VirtualDJ community forums, GPT-5.2/Grok research sessions.*
+*Sources: CoverJock website, Strip Sync website, BoothPoint website, PCDJ DEX documentation, VirtualDJ community forums, competitive research.*

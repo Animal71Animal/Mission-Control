@@ -114,9 +114,9 @@ Billed monthly or annually.
 
 | Tier | Price | Target |
 |------|-------|--------|
-| **Single Stage** | $199/month | Small clubs, first room |
-| **Multi-Stage** | $349/month | Mid-size clubs, up to 6 stages |
-| **Chain (per location)** | $450-600/month | Multi-location operators, includes chain analytics |
+| **Standard Rate** | **$2,000/month per venue** | All clubs, all stages, all features |
+
+| **Chain Discount** | 15% per location when 3+ venues | Recurring revenue scaling |
 
 ### Additional Revenue Streams
 

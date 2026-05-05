@@ -46,7 +46,7 @@ export interface Shortcut {
 // Quick access shortcuts - none currently
 export const shortcuts: Shortcut[] = [];
 
-// Shared access links for external parties — now pointing to live MC pages
+// Shared access links for external parties — isolated public pages
 export interface SharedLink {
   id: string;
   name: string;
@@ -58,12 +58,12 @@ export interface SharedLink {
 
 export const sharedLinks: SharedLink[] = [
   {
-    id: "product-brief-live",
-    name: "DJ Automation — Product Brief (Live)",
-    url: "https://mission-control-cyan-omega.vercel.app/wlp-product",
+    id: "dj-automation-full",
+    name: "DJ Automation — Full Section (Password Protected)",
+    url: "https://mission-control-cyan-omega.vercel.app/shared/dj-automation",
     password: "wlp2025",
-    created: "2026-05-04",
-    description: "Live product brief — always current, updates automatically as changes are made to MC"
+    created: "2026-05-05",
+    description: "Complete DJ Automation section from WLP Business. Password required. Updates live as changes are made"
   }
 ];
 
