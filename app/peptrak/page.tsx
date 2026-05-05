@@ -180,11 +180,11 @@ export default function PepTrakPage() {
       {/* Reconstitution Guide */}
       {showGuide && <ReconstitutionGuide />}
 
-      {/* Add/Edit Compound Form */}
+      {/* Add/Edit Compound Form — Collapsible Card */}
       <div style={{
-        maxHeight: showAddForm ? "2000px" : "0",
+        maxHeight: showAddForm ? "3000px" : "0",
         overflow: "hidden",
-        transition: "max-height 0.3s ease",
+        transition: "max-height 0.4s ease, opacity 0.3s ease",
         opacity: showAddForm ? 1 : 0,
       }}>
         <CompoundForm
