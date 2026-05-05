@@ -1043,16 +1043,19 @@ function ReconstitutionGuide() {
       title: "Reconstitute the Vial",
       content: (
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-          <div>1. <strong>Swab</strong> the vial top with alcohol. Let it dry completely — wet rubber can push contaminants inside.</div>
-          <div>2. <strong>Draw air</strong> into syringe equal to the BAC water you plan to inject. This prevents vacuum pressure.</div>
-          <div>3. <strong>Inject air</strong> into the vial first — pierce center of rubber stopper at 90°, push air in slowly.</div>
-          <div>4. <strong>Draw BAC water</strong> into same syringe, then <strong>flip vial upside down</strong> and inject water slowly down the inside wall — never spray directly onto powder.</div>
-          <div>5. <strong>Do not shake.</strong> Gently swirl or roll between palms until powder fully dissolves. Some take 30-60 seconds.</div>
-          <div>6. <strong>Do not force</strong> water in quickly — peptides are fragile proteins.</div>
-          <div>7. <strong>Withdraw needle</strong> slowly, then <strong>swab</strong> the stopper again.</div>
-          <div>8. <strong>Label</strong> the vial with compound name, reconstitution date, concentration, and your initials.</div>
+          <div>1. <strong>Swab</strong> the peptide vial top with alcohol. Let it dry completely — wet rubber can push contaminants inside.</div>
+          <div>2. <strong>Swab</strong> the BAC water vial top with alcohol. Let it dry.</div>
+          <div>3. <strong>Using a new insulin syringe</strong>, draw 100 units (1 mL) of BAC water from the BAC vial.</div>
+          <div>4. <strong>Pierce the peptide vial</strong> at 90° through the center of the rubber stopper. <strong>Inject water slowly down the inside wall</strong> of the vial — never spray directly onto the powder. Peptide proteins are fragile.</div>
+          <div>5. <strong>Withdraw the needle</strong> slowly. <strong>Draw 100 units of air</strong> into the same syringe from the atmosphere (pull back on plunger with needle in open air).</div>
+          <div>6. <strong>Inject that air</strong> into the peptide vial. This equalizes pressure and makes the next withdrawal easier.</div>
+          <div>7. <strong>Repeat steps 3-6</strong> as needed until you've added the correct total amount of BAC water (e.g., 2 mL = two 100-unit draws).</div>
+          <div>8. <strong>Do not shake.</strong> Gently swirl the vial between your palms until powder fully dissolves. Some take 30-60 seconds. Never agitate or tap forcefully.</div>
+          <div>9. <strong>Inspect</strong> — solution should be clear. If cloudy, discolored, or particulate, discard and do not use.</div>
+          <div>10. <strong>Withdraw needle</strong> slowly, then <strong>swab</strong> the peptide vial stopper again.</div>
+          <div>11. <strong>Label</strong> the vial with compound name, reconstitution date, total mg, BAC water amount, final concentration, and your initials.</div>
           <div style={{ marginTop: 8, fontSize: "0.8rem", color: "#fca5a5" }}>
-            ⚠️ Reconstituted peptides degrade faster. Store refrigerated (2-8°C). Most last 2-4 weeks after mixing.
+            ⚠️ Reconstituted peptides degrade faster. Store refrigerated (2-8°C). Most last 2-4 weeks after mixing. Never freeze after reconstitution.
           </div>
         </div>
       ),
