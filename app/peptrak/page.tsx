@@ -57,27 +57,85 @@ export default function PepTrakPage() {
   const [showAddForm, setShowAddForm] = useState(true);
   const [showGuide, setShowGuide] = useState(false);
   const [editingCompound, setEditingCompound] = useState<CompoundConfig | null>(null);
+  const [isSyncing, setIsSyncing] = useState(false);
 
-  // Load from localStorage
+  // Load from GitHub API on mount
   useEffect(() => {
-    const saved = localStorage.getItem("peptrak-v2-compounds");
-    const savedChecklist = localStorage.getItem("peptrak-v2-checklist");
-    if (saved) {
-      try { setCompounds(JSON.parse(saved)); } catch {}
-    }
-    if (savedChecklist) {
-      try { setChecklist(JSON.parse(savedChecklist)); } catch {}
-    }
+    fetch("/api/peptrak")
+      .then(r => r.json())
+      .then(data => {
+        if (data.compounds && Array.isArray(data.compounds) && data.compounds.length > 0) {
+          setCompounds(data.compounds);
+        } else {
+          // Fallback to localStorage if GitHub is empty
+          const saved = localStorage.getItem("peptrak-v2-compounds");
+          if (saved) {
+            try { setCompounds(JSON.parse(saved)); } catch {}
+          }
+        }
+        if (data.checklist && typeof data.checklist === "object") {
+          setChecklist(data.checklist);
+        } else {
+          const savedChecklist = localStorage.getItem("peptrak-v2-checklist");
+          if (savedChecklist) {
+            try { setChecklist(JSON.parse(savedChecklist)); } catch {}
+          }
+        }
+      })
+      .catch(() => {
+        // Fallback to localStorage on error
+        const saved = localStorage.getItem("peptrak-v2-compounds");
+        const savedChecklist = localStorage.getItem("peptrak-v2-checklist");
+        if (saved) {
+          try { setCompounds(JSON.parse(saved)); } catch {}
+        }
+        if (savedChecklist) {
+          try { setChecklist(JSON.parse(savedChecklist)); } catch {}
+        }
+      });
   }, []);
 
-  // Save compounds
+  // Sync compounds to GitHub (debounced)
   useEffect(() => {
-    localStorage.setItem("peptrak-v2-compounds", JSON.stringify(compounds));
+    if (compounds.length === 0) return;
+    const timer = setTimeout(() => {
+      setIsSyncing(true);
+      fetch("/api/peptrak", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ compounds }),
+      })
+        .then(() => {
+          // Also update localStorage as backup
+          localStorage.setItem("peptrak-v2-compounds", JSON.stringify(compounds));
+        })
+        .catch(() => {
+          localStorage.setItem("peptrak-v2-compounds", JSON.stringify(compounds));
+        })
+        .finally(() => setIsSyncing(false));
+    }, 2000);
+    return () => clearTimeout(timer);
   }, [compounds]);
 
-  // Save checklist
+  // Sync checklist to GitHub (debounced)
   useEffect(() => {
-    localStorage.setItem("peptrak-v2-checklist", JSON.stringify(checklist));
+    if (Object.keys(checklist).length === 0) return;
+    const timer = setTimeout(() => {
+      setIsSyncing(true);
+      fetch("/api/peptrak", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ checklist }),
+      })
+        .then(() => {
+          localStorage.setItem("peptrak-v2-checklist", JSON.stringify(checklist));
+        })
+        .catch(() => {
+          localStorage.setItem("peptrak-v2-checklist", JSON.stringify(checklist));
+        })
+        .finally(() => setIsSyncing(false));
+    }, 1000);
+    return () => clearTimeout(timer);
   }, [checklist]);
 
   const addCompound = (compound: CompoundConfig) => {
@@ -171,6 +229,11 @@ export default function PepTrakPage() {
           >
             {showGuide ? "Close Guide" : "Reconstitution Guide"}
           </button>
+          {isSyncing && (
+            <span style={{ fontSize: "0.75rem", color: "var(--accent)", marginLeft: 8 }}>
+              ↻ Syncing...
+            </span>
+          )}
         </div>
         <p style={{ color: "var(--muted)", margin: 0, fontSize: "0.875rem" }}>
           Research compound tracking — configure your stack, set dosing, track daily
