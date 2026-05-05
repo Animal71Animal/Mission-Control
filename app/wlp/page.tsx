@@ -948,6 +948,23 @@ export default function WLPDashboardPage() {
                   ))}
                 </div>
               </div>
+            {/* ROI Calculator Card */}
+            <Link href="/wlp-dj-roi" style={{
+              display: "block",
+              padding: "16px",
+              background: "linear-gradient(135deg, rgba(100,255,200,0.1), rgba(100,255,200,0.05))",
+              border: "2px solid rgba(100,255,200,0.4)",
+              borderRadius: "6px",
+              textDecoration: "none",
+              marginTop: "24px",
+            }}>
+              <h4 style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em", color: "rgba(100,255,200,1)", margin: "0 0 8px" }}>
+                💰 Annual Savings Calculator
+              </h4>
+              <p style={{ fontSize: "0.75rem", color: "var(--muted)", margin: 0 }}>
+                See how much your venue saves per year. Enter your setup, get instant ROI.
+              </p>
+            </Link>
             </div>
 
 

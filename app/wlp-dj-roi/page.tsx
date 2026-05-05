@@ -3,18 +3,17 @@
 import { useState } from "react";
 
 export default function DJAutomationROI() {
-  const [stages, setStages] = useState(2);
-  const [djsPerShift, setDjsPerShift] = useState(2);
-  const [shiftsPerWeek, setShiftsPerWeek] = useState(7);
-  const [costPerDjPerWeek, setCostPerDjPerWeek] = useState(400);
+  const [numVenues, setNumVenues] = useState(1);
+  const [totalDJs, setTotalDJs] = useState(2);
+  const [hoursReplaced, setHoursReplaced] = useState(40);
+  const [hourlyRate, setHourlyRate] = useState(20);
 
-  const weeklySavings = djsPerShift * shiftsPerWeek * costPerDjPerWeek;
-  const monthlySavings = weeklySavings * 4.33;
-  const annualSavings = weeklySavings * 52;
-  const monthlySoftwareCost = 2000;
+  const annualSavings = totalDJs * hoursReplaced * hourlyRate * 52;
+  const monthlySoftwareCost = 2000 * numVenues;
   const annualSoftwareCost = monthlySoftwareCost * 12;
   const netAnnualSavings = annualSavings - annualSoftwareCost;
-  const roiMonths = monthlySoftwareCost / (monthlySavings - monthlySoftwareCost);
+  const monthlySavings = annualSavings / 12;
+  const roiMonths = monthlySavings > monthlySoftwareCost ? (annualSoftwareCost / (annualSavings - annualSoftwareCost)).toFixed(1) : "N/A";
 
   return (
     <div style={{ maxWidth: "1000px", margin: "0 auto", padding: "40px 20px" }}>
@@ -42,7 +41,7 @@ export default function DJAutomationROI() {
         </h2>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "24px" }}>
-          {/* Number of Stages */}
+          {/* Number of Venues */}
           <div>
             <label
               style={{
@@ -53,14 +52,14 @@ export default function DJAutomationROI() {
                 marginBottom: "8px",
               }}
             >
-              Number of Stages
+              Number of Venues
             </label>
             <input
               type="number"
               min="1"
-              max="12"
-              value={stages}
-              onChange={(e) => setStages(Number(e.target.value))}
+              max="50"
+              value={numVenues}
+              onChange={(e) => setNumVenues(Number(e.target.value))}
               style={{
                 width: "100%",
                 padding: "12px",
@@ -73,7 +72,7 @@ export default function DJAutomationROI() {
             />
           </div>
 
-          {/* DJs Per Shift */}
+          {/* Total DJs */}
           <div>
             <label
               style={{
@@ -84,14 +83,14 @@ export default function DJAutomationROI() {
                 marginBottom: "8px",
               }}
             >
-              DJs Per Shift (Current)
+              Total DJs (All Venues)
             </label>
             <input
               type="number"
               min="1"
-              max="10"
-              value={djsPerShift}
-              onChange={(e) => setDjsPerShift(Number(e.target.value))}
+              max="100"
+              value={totalDJs}
+              onChange={(e) => setTotalDJs(Number(e.target.value))}
               style={{
                 width: "100%",
                 padding: "12px",
@@ -104,7 +103,7 @@ export default function DJAutomationROI() {
             />
           </div>
 
-          {/* Shifts Per Week */}
+          {/* Manual Hours Replaced */}
           <div>
             <label
               style={{
@@ -115,46 +114,14 @@ export default function DJAutomationROI() {
                 marginBottom: "8px",
               }}
             >
-              Shifts Per Week
+              Manual Hours Replaced (Per Year)
             </label>
             <input
               type="number"
               min="1"
-              max="14"
-              value={shiftsPerWeek}
-              onChange={(e) => setShiftsPerWeek(Number(e.target.value))}
-              style={{
-                width: "100%",
-                padding: "12px",
-                borderRadius: "8px",
-                border: "1px solid var(--border)",
-                background: "var(--bg)",
-                color: "var(--text)",
-                fontSize: "1rem",
-              }}
-            />
-          </div>
-
-          {/* Cost Per DJ Per Week */}
-          <div>
-            <label
-              style={{
-                display: "block",
-                fontSize: "0.9rem",
-                fontWeight: 600,
-                color: "var(--text)",
-                marginBottom: "8px",
-              }}
-            >
-              Cost Per DJ Per Week ($)
-            </label>
-            <input
-              type="number"
-              min="100"
-              max="1000"
-              step="50"
-              value={costPerDjPerWeek}
-              onChange={(e) => setCostPerDjPerWeek(Number(e.target.value))}
+              max="2080"
+              value={hoursReplaced}
+              onChange={(e) => setHoursReplaced(Number(e.target.value))}
               style={{
                 width: "100%",
                 padding: "12px",
@@ -166,8 +133,40 @@ export default function DJAutomationROI() {
               }}
             />
             <p style={{ fontSize: "0.75rem", color: "var(--muted)", margin: "8px 0 0" }}>
-              Typical: $300–500
+              Per DJ (e.g. 40 hrs/wk × 52 weeks = 2,080 hrs/yr)
             </p>
+          </div>
+
+          {/* Hourly Rate */}
+          <div>
+            <label
+              style={{
+                display: "block",
+                fontSize: "0.9rem",
+                fontWeight: 600,
+                color: "var(--text)",
+                marginBottom: "8px",
+              }}
+            >
+              Hourly Rate ($)
+            </label>
+            <input
+              type="number"
+              min="5"
+              max="200"
+              step="1"
+              value={hourlyRate}
+              onChange={(e) => setHourlyRate(Number(e.target.value))}
+              style={{
+                width: "100%",
+                padding: "12px",
+                borderRadius: "8px",
+                border: "1px solid var(--border)",
+                background: "var(--bg)",
+                color: "var(--text)",
+                fontSize: "1rem",
+              }}
+            />
           </div>
         </div>
       </div>
