@@ -6,7 +6,7 @@ interface CompoundConfig {
   id: string;
   name: string;
   color: string;
-  concentrationMgPerMl: number;
+  totalMgInVial: number;
   vialVolumeMl: number;
   prescribedDosageMg: number;
   bacWaterRatioMl: number;
@@ -44,12 +44,12 @@ const TIME_SLOTS = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "
 
 const DISCLAIMER = "⚠️ NOT FOR HUMAN USE. For research purposes only. We are not medical doctors. This is not a medical device. Consult a licensed physician before use.";
 
-function calculateUnits(dosageMg: number, concentrationMgPerMl: number, bacWaterMl: number, vialVolumeMl: number): number {
-  // Total mg in vial
-  const totalMg = concentrationMgPerMl * vialVolumeMl;
-  // After reconstitution: mg per ml = totalMg / (vialVolumeMl + bacWaterMl)
-  const mgPerMlAfterRecon = totalMg / (vialVolumeMl + bacWaterMl);
-  // Units (assuming 100 units = 1ml on insulin syringe)
+function calculateUnits(dosageMg: number, totalMgInVial: number, bacWaterMl: number, vialVolumeMl: number): number {
+  // After reconstitution: total volume = vial volume + BAC water added
+  const totalVolumeMl = vialVolumeMl + bacWaterMl;
+  // Concentration after reconstitution: mg per ml
+  const mgPerMlAfterRecon = totalMgInVial / totalVolumeMl;
+  // Units (assuming 100 units = 1ml on U-100 insulin syringe)
   const unitsPerMl = 100;
   const mlNeeded = dosageMg / mgPerMlAfterRecon;
   return Math.round(mlNeeded * unitsPerMl);
@@ -61,6 +61,7 @@ export default function PepTrakPage() {
   const [checklist, setChecklist] = useState<Record<string, boolean>>({});
   const [selectedDay, setSelectedDay] = useState<string>(DAYS_OF_WEEK[new Date().getDay() === 0 ? 6 : new Date().getDay() - 1]);
   const [showSetup, setShowSetup] = useState(false);
+  const [showGuide, setShowGuide] = useState(false);
   const [editingCompound, setEditingCompound] = useState<CompoundConfig | null>(null);
   const [isSyncing, setIsSyncing] = useState(false);
 
@@ -248,11 +249,29 @@ export default function PepTrakPage() {
           >
             {showSetup ? "Close Setup" : "Configure"}
           </button>
+          <button
+            onClick={() => setShowGuide(!showGuide)}
+            style={{
+              padding: "6px 14px",
+              borderRadius: 20,
+              border: "1px solid var(--border)",
+              background: "transparent",
+              color: "var(--muted)",
+              fontSize: "0.8rem",
+              fontWeight: 500,
+              cursor: "pointer",
+            }}
+          >
+            {showGuide ? "Close Guide" : "Reconstitution Guide"}
+          </button>
         </div>
         <p style={{ color: "var(--muted)", margin: 0, fontSize: "0.875rem" }}>
           Research compound tracking — configure your stack, set dosing, track daily
         </p>
       </div>
+
+      {/* Reconstitution Guide */}
+      {showGuide && <ReconstitutionGuide />}
 
       {/* Setup Panel */}
       {showSetup && (
@@ -491,7 +510,7 @@ export default function PepTrakPage() {
                   </button>
                 </div>
                 <div style={{ fontSize: "0.75rem", color: "var(--muted)", lineHeight: 1.7 }}>
-                  <div><strong>Concentration:</strong> {compound.concentrationMgPerMl} mg/mL</div>
+                  <div><strong>Total in Vial:</strong> {compound.totalMgInVial} mg</div>
                   <div><strong>Vial:</strong> {compound.vialVolumeMl} mL</div>
                   <div><strong>Dose:</strong> {compound.prescribedDosageMg} mg</div>
                   <div><strong>BAC Water:</strong> {compound.bacWaterRatioMl} mL</div>
@@ -585,7 +604,7 @@ function SetupPanel({
 
     setCompoundForm({
       color: PRESET_COLORS[compounds.length % PRESET_COLORS.length],
-      concentrationMgPerMl: 5,
+      totalMgInVial: 10,
       vialVolumeMl: 2,
       prescribedDosageMg: 1,
       bacWaterRatioMl: 2,
@@ -660,13 +679,13 @@ function SetupPanel({
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 12 }}>
           <div>
             <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>
-              Concentration (mg/mL)
+              Total mg in Vial
             </label>
             <input
               type="number"
               step="0.1"
-              value={compoundForm.concentrationMgPerMl || ""}
-              onChange={e => setCompoundForm({ ...compoundForm, concentrationMgPerMl: parseFloat(e.target.value) })}
+              value={compoundForm.totalMgInVial || ""}
+              onChange={e => setCompoundForm({ ...compoundForm, totalMgInVial: parseFloat(e.target.value) })}
               style={{
                 width: "100%",
                 padding: "8px 12px",
@@ -971,6 +990,152 @@ function SetupPanel({
           )}
         </>
       )}
+    </div>
+  );
+}
+
+// Reconstitution Guide Component
+function ReconstitutionGuide() {
+  const [activeStep, setActiveStep] = useState(0);
+
+  const steps = [
+    {
+      title: "What You Need",
+      content: (
+        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+          <div>• <strong>Lyophilized peptide vial</strong> — contains powder, labeled with total milligrams (e.g., 10 mg)</div>
+          <div>• <strong>Bacteriostatic water (BAC)</strong> — sterile water with 0.9% benzyl alcohol</div>
+          <div>• <strong>Insulin syringes</strong> — U-100 (100 units = 1 mL)</div>
+          <div>• <strong>Alcohol swabs</strong> — for sterilizing vial tops</div>
+          <div>• <strong>Sharps container</strong> — for safe needle disposal</div>
+        </div>
+      ),
+    },
+    {
+      title: "Calculate Your Mix",
+      content: (
+        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+          <div>The math is simple:</div>
+          <div style={{
+            background: "var(--bg)",
+            borderRadius: 8,
+            padding: "16px",
+            fontFamily: "monospace",
+            fontSize: "0.8rem",
+            lineHeight: 1.8,
+          }}>
+            <div><strong>1. Total volume after reconstitution:</strong></div>
+            <div>   Vial volume (mL) + BAC water added (mL)</div>
+            <div style={{ marginTop: 8 }}><strong>2. Concentration:</strong></div>
+            <div>   Total mg in vial ÷ Total volume (mL) = mg/mL</div>
+            <div style={{ marginTop: 8 }}><strong>3. Units per dose:</strong></div>
+            <div>   (Desired mg ÷ mg/mL) × 100 units/mL = units to draw</div>
+          </div>
+          <div style={{ fontSize: "0.8rem", color: "var(--muted)" }}>
+            Example: 10 mg vial, 2 mL vial, add 2 mL BAC water = 4 mL total.
+            Concentration = 10 ÷ 4 = 2.5 mg/mL.
+            For 1 mg dose: (1 ÷ 2.5) × 100 = <strong>40 units</strong>.
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Reconstitute the Vial",
+      content: (
+        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+          <div>1. <strong>Swab</strong> the vial top with alcohol. Let it dry.</div>
+          <div>2. <strong>Draw BAC water</strong> into syringe — inject slowly down the inside wall of the vial, not directly onto the powder.</div>
+          <div>3. <strong>Do not shake.</strong> Gently swirl or roll the vial until powder dissolves.</div>
+          <div>4. <strong>Do not spray</strong> water forcefully — peptides are fragile.</div>
+          <div>5. <strong>Label</strong> the vial with reconstitution date and concentration.</div>
+          <div style={{ marginTop: 8, fontSize: "0.8rem", color: "#fca5a5" }}>
+            ⚠️ Reconstituted peptides degrade faster. Store refrigerated (2-8°C). Most last 2-4 weeks after mixing.
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Draw Your Dose",
+      content: (
+        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+          <div>1. <strong>Swab</strong> the reconstituted vial top.</div>
+          <div>2. <strong>Draw air</strong> into syringe equal to your dose units.</div>
+          <div>3. <strong>Inject air</strong> into vial (creates pressure, easier withdrawal).</div>
+          <div>4. <strong>Turn vial upside down</strong> and draw slightly more than needed.</div>
+          <div>5. <strong>Tap out bubbles</strong> and push excess back to exact unit mark.</div>
+          <div>6. <strong>Remove needle</strong> carefully, cap it, and you're ready.</div>
+        </div>
+      ),
+    },
+    {
+      title: "Storage & Shelf Life",
+      content: (
+        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+          <div>• <strong>Before mixing:</strong> Store lyophilized powder in freezer (-20°C). Stable for months to years.</div>
+          <div>• <strong>After mixing:</strong> Refrigerate (2-8°C). Use within 2-4 weeks for best potency.</div>
+          <div>• <strong>Light sensitive:</strong> Keep vials in original box or dark container.</div>
+          <div>• <strong>Never freeze</strong> reconstituted peptides — destroys the molecule.</div>
+          <div style={{ marginTop: 8, fontSize: "0.8rem", color: "#fca5a5" }}>
+            ⚠️ If solution turns cloudy or discolored, discard it. Do not use.
+          </div>
+        </div>
+      ),
+    },
+  ];
+
+  return (
+    <div
+      style={{
+        background: "var(--card)",
+        border: "1px solid var(--border)",
+        borderRadius: 12,
+        padding: "24px",
+        marginBottom: 24,
+      }}
+    >
+      <h2 style={{ fontSize: "1.1rem", fontWeight: 700, margin: "0 0 20px", color: "var(--text)" }}>
+        📖 Reconstitution Guide
+      </h2>
+
+      {/* Step tabs */}
+      <div style={{ display: "flex", gap: 8, marginBottom: 20, flexWrap: "wrap" }}>
+        {steps.map((step, idx) => (
+          <button
+            key={idx}
+            onClick={() => setActiveStep(idx)}
+            style={{
+              padding: "8px 14px",
+              borderRadius: 20,
+              border: "1px solid var(--border)",
+              background: activeStep === idx ? "var(--accent)" : "var(--bg)",
+              color: activeStep === idx ? "#fff" : "var(--text)",
+              fontSize: "0.8rem",
+              fontWeight: 500,
+              cursor: "pointer",
+              transition: "all 0.15s",
+            }}
+          >
+            {idx + 1}. {step.title}
+          </button>
+        ))}
+      </div>
+
+      {/* Step content */}
+      <div
+        style={{
+          background: "var(--bg)",
+          borderRadius: 8,
+          padding: "20px",
+          fontSize: "0.875rem",
+          lineHeight: 1.7,
+          color: "var(--text)",
+        }}
+      >
+        <div style={{ fontWeight: 600, marginBottom: 12, color: "var(--accent)" }}>
+          Step {activeStep + 1}: {steps[activeStep].title}
+        </div>
+        {steps[activeStep].content}
+      </div>
     </div>
   );
 }
