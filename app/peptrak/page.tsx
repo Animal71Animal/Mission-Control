@@ -2,248 +2,358 @@
 
 import { useEffect, useState } from "react";
 
-interface Compound {
+interface CompoundConfig {
+  id: string;
   name: string;
-  type: string;
-  concentration: string;
-  dosage_units?: number;
-  dosage_mg?: number;
-  dosage_mcg?: number;
-  dosage_iu?: number;
+  color: string;
+  concentrationMgPerMl: number;
+  vialVolumeMl: number;
+  prescribedDosageMg: number;
+  bacWaterRatioMl: number;
   schedule: string;
   frequency: string;
-  current_vials: number;
   notes: string;
-  status?: string;
-  color?: string;
-}
-
-interface PeptideData {
-  status: string;
-  started: string;
-  current_phase: string;
-  compounds: Compound[];
-  weekly_schedule_loading_phase: Record<string, any>;
-  weekly_totals_loading_phase: Record<string, number>;
-  maintenance_schedule_week_3_plus: Record<string, any>;
-  upcoming_milestones: string[];
 }
 
 interface DailyDose {
-  compound: string;
+  compoundId: string;
+  compoundName: string;
   time: string;
-  dose: string;
+  doseUnits: number;
+  doseMg: number;
   taken: boolean;
 }
 
-const COMPOUND_COLORS: Record<string, { bg: string; text: string; light: string; hex: string }> = {
-  "Tesa": { bg: "bg-cyan-950", text: "text-cyan-200", light: "bg-cyan-900/40", hex: "#0891b2" },
-  "Semax": { bg: "bg-purple-950", text: "text-purple-200", light: "bg-purple-900/40", hex: "#a855f7" },
-  "MT1": { bg: "bg-yellow-950", text: "text-yellow-200", light: "bg-yellow-900/40", hex: "#eab308" },
-  "Reta": { bg: "bg-pink-950", text: "text-pink-200", light: "bg-pink-900/40", hex: "#ec4899" },
-  "HCG": { bg: "bg-lime-950", text: "text-lime-200", light: "bg-lime-900/40", hex: "#84cc16" },
-};
+interface ScheduleEntry {
+  time: string;
+  compoundIds: string[];
+}
+
+interface UserSchedule {
+  day: string;
+  entries: ScheduleEntry[];
+}
+
+const PRESET_COLORS = [
+  "#0891b2", "#a855f7", "#eab308", "#ec4899", "#84cc16",
+  "#f97316", "#06b6d4", "#8b5cf6", "#ef4444", "#10b981"
+];
 
 const DAYS_OF_WEEK = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+const TIME_SLOTS = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm", "9pm", "10pm", "11pm"];
+
+const DISCLAIMER = "⚠️ NOT FOR HUMAN USE. For research purposes only. We are not medical doctors. This is not a medical device. Consult a licensed physician before use.";
+
+function calculateUnits(dosageMg: number, concentrationMgPerMl: number, bacWaterMl: number, vialVolumeMl: number): number {
+  // Total mg in vial
+  const totalMg = concentrationMgPerMl * vialVolumeMl;
+  // After reconstitution: mg per ml = totalMg / (vialVolumeMl + bacWaterMl)
+  const mgPerMlAfterRecon = totalMg / (vialVolumeMl + bacWaterMl);
+  // Units (assuming 100 units = 1ml on insulin syringe)
+  const unitsPerMl = 100;
+  const mlNeeded = dosageMg / mgPerMlAfterRecon;
+  return Math.round(mlNeeded * unitsPerMl);
+}
 
 export default function PepTrakPage() {
-  const [data, setData] = useState<PeptideData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [compounds, setCompounds] = useState<CompoundConfig[]>([]);
+  const [schedule, setSchedule] = useState<UserSchedule[]>([]);
   const [checklist, setChecklist] = useState<Record<string, boolean>>({});
-  const [todayDoses, setTodayDoses] = useState<DailyDose[]>([]);
   const [selectedDay, setSelectedDay] = useState<string>(DAYS_OF_WEEK[new Date().getDay() === 0 ? 6 : new Date().getDay() - 1]);
+  const [showSetup, setShowSetup] = useState(false);
+  const [editingCompound, setEditingCompound] = useState<CompoundConfig | null>(null);
   const [isSyncing, setIsSyncing] = useState(false);
 
-  // Load peptide data and checklist state
+  // Load from localStorage on mount
   useEffect(() => {
-    Promise.all([
-      fetch("/data/peptide-stack.json"),
-      fetch("/api/peptide-checklist")
-    ])
-      .then(async ([res1, res2]) => {
-        const peptideData = await res1.json();
-        const checklistData = await res2.json();
-        setData(peptideData);
-        setChecklist(checklistData);
-        setLoading(false);
-      })
-      .catch((err) => {
-        setError(err.message);
-        setLoading(false);
-      });
+    const savedCompounds = localStorage.getItem("peptrak-compounds");
+    const savedSchedule = localStorage.getItem("peptrak-schedule");
+    const savedChecklist = localStorage.getItem("peptrak-checklist");
+
+    if (savedCompounds) {
+      setCompounds(JSON.parse(savedCompounds));
+    }
+    if (savedSchedule) {
+      setSchedule(JSON.parse(savedSchedule));
+    }
+    if (savedChecklist) {
+      setChecklist(JSON.parse(savedChecklist));
+    }
+
+    // Show setup if no compounds configured
+    if (!savedCompounds || JSON.parse(savedCompounds).length === 0) {
+      setShowSetup(true);
+    }
   }, []);
 
-  // Update today's doses when selected day or data changes
+  // Save to localStorage
   useEffect(() => {
-    if (data && selectedDay) {
-      const daySchedule = data.weekly_schedule_loading_phase[selectedDay.toLowerCase()];
-      if (daySchedule) {
-        const doses: DailyDose[] = [];
-        Object.entries(daySchedule).forEach(([time, compounds]: [string, any]) => {
-          if (Array.isArray(compounds)) {
-            compounds.forEach((c: any) => {
-              doses.push({
-                compound: c.compound,
-                time: time,
-                dose: c.dose,
-                taken: false,
-              });
-            });
-          }
-        });
-        setTodayDoses(doses);
-      }
+    if (compounds.length > 0) {
+      localStorage.setItem("peptrak-compounds", JSON.stringify(compounds));
     }
-  }, [data, selectedDay]);
+  }, [compounds]);
 
-  const toggleDose = async (compound: string, time: string) => {
-    const key = `${compound}-${time}`;
-    const newState = { ...checklist, [key]: !checklist[key] };
-    setChecklist(newState);
-    setIsSyncing(true);
+  useEffect(() => {
+    if (schedule.length > 0) {
+      localStorage.setItem("peptrak-schedule", JSON.stringify(schedule));
+    }
+  }, [schedule]);
 
-    try {
-      await fetch("/api/peptide-checklist", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(newState),
+  useEffect(() => {
+    localStorage.setItem("peptrak-checklist", JSON.stringify(checklist));
+  }, [checklist]);
+
+  const addCompound = (compound: CompoundConfig) => {
+    const newCompounds = [...compounds, compound];
+    setCompounds(newCompounds);
+    setEditingCompound(null);
+  };
+
+  const updateCompound = (updated: CompoundConfig) => {
+    setCompounds(compounds.map(c => c.id === updated.id ? updated : c));
+    setEditingCompound(null);
+  };
+
+  const deleteCompound = (id: string) => {
+    setCompounds(compounds.filter(c => c.id !== id));
+    setSchedule(schedule.map(s => ({
+      ...s,
+      entries: s.entries.map(e => ({
+        ...e,
+        compoundIds: e.compoundIds.filter(cid => cid !== id)
+      })).filter(e => e.compoundIds.length > 0)
+    })));
+  };
+
+  const addScheduleEntry = (day: string, time: string, compoundIds: string[]) => {
+    const existingDay = schedule.find(s => s.day === day);
+    if (existingDay) {
+      const newSchedule = schedule.map(s => {
+        if (s.day !== day) return s;
+        const existingEntry = s.entries.find(e => e.time === time);
+        if (existingEntry) {
+          return {
+            ...s,
+            entries: s.entries.map(e =>
+              e.time === time ? { ...e, compoundIds: [...new Set([...e.compoundIds, ...compoundIds])] } : e
+            )
+          };
+        }
+        return { ...s, entries: [...s.entries, { time, compoundIds }] };
       });
-    } catch (err) {
-      console.error("Failed to sync checklist:", err);
-    } finally {
-      setIsSyncing(false);
+      setSchedule(newSchedule);
+    } else {
+      setSchedule([...schedule, { day, entries: [{ time, compoundIds }] }]);
     }
   };
 
-  const getCompoundColor = (name: string) => {
-    return COMPOUND_COLORS[name] || { bg: "bg-gray-900", text: "text-gray-200", light: "bg-gray-900/40", hex: "#6b7280" };
+  const removeScheduleEntry = (day: string, time: string, compoundId: string) => {
+    setSchedule(schedule.map(s => {
+      if (s.day !== day) return s;
+      return {
+        ...s,
+        entries: s.entries.map(e => {
+          if (e.time !== time) return e;
+          return { ...e, compoundIds: e.compoundIds.filter(id => id !== compoundId) };
+        }).filter(e => e.compoundIds.length > 0)
+      };
+    }));
+  };
+
+  const getTodayDoses = (): DailyDose[] => {
+    const daySchedule = schedule.find(s => s.day === selectedDay);
+    if (!daySchedule) return [];
+
+    const doses: DailyDose[] = [];
+    daySchedule.entries.forEach(entry => {
+      entry.compoundIds.forEach(compoundId => {
+        const compound = compounds.find(c => c.id === compoundId);
+        if (compound) {
+          const units = calculateUnits(
+            compound.prescribedDosageMg,
+            compound.concentrationMgPerMl,
+            compound.bacWaterRatioMl,
+            compound.vialVolumeMl
+          );
+          doses.push({
+            compoundId: compound.id,
+            compoundName: compound.name,
+            time: entry.time,
+            doseUnits: units,
+            doseMg: compound.prescribedDosageMg,
+            taken: false,
+          });
+        }
+      });
+    });
+    return doses;
+  };
+
+  const toggleDose = (compoundId: string, time: string) => {
+    const key = `${compoundId}-${time}-${selectedDay}`;
+    const newState = { ...checklist, [key]: !checklist[key] };
+    setChecklist(newState);
   };
 
   const getProgress = () => {
-    if (todayDoses.length === 0) return 0;
-    const taken = todayDoses.filter(d => checklist[`${d.compound}-${d.time}`]).length;
-    return Math.round((taken / todayDoses.length) * 100);
+    const doses = getTodayDoses();
+    if (doses.length === 0) return 0;
+    const taken = doses.filter(d => checklist[`${d.compoundId}-${d.time}-${selectedDay}`]).length;
+    return Math.round((taken / doses.length) * 100);
   };
 
-  if (loading) {
-    return (
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: "60vh" }}>
-        <div style={{ color: "var(--muted)", fontSize: "0.875rem" }}>Loading peptide data...</div>
-      </div>
-    );
-  }
-
-  if (error || !data) {
-    return (
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: "60vh" }}>
-        <div style={{ color: "#ef4444", fontSize: "0.875rem" }}>Error: {error || "Failed to load data"}</div>
-      </div>
-    );
-  }
+  const getCompoundColor = (id: string) => {
+    const compound = compounds.find(c => c.id === id);
+    return compound?.color || "#6b7280";
+  };
 
   const progress = getProgress();
+  const todayDoses = getTodayDoses();
 
   return (
     <div>
+      {/* Disclaimer - Top */}
+      <div style={{
+        background: "rgba(239,68,68,0.1)",
+        border: "1px solid rgba(239,68,68,0.3)",
+        borderRadius: 8,
+        padding: "12px 16px",
+        marginBottom: 20,
+        fontSize: "0.75rem",
+        color: "#fca5a5",
+        lineHeight: 1.5,
+      }}>
+        {DISCLAIMER}
+      </div>
+
       {/* Header */}
       <div style={{ marginBottom: 28 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8, flexWrap: "wrap" }}>
           <span style={{ fontSize: "1.75rem" }}>💉</span>
           <h1 style={{ fontSize: "1.5rem", fontWeight: 700, margin: 0, color: "var(--text)" }}>
             PepTrak
           </h1>
-          <span
-            style={{
-              fontSize: "0.7rem",
-              fontWeight: 600,
-              textTransform: "uppercase",
-              letterSpacing: "0.05em",
-              padding: "4px 10px",
-              borderRadius: 20,
-              background: data.current_phase === "loading" ? "rgba(34,197,94,0.15)" : "rgba(168,85,247,0.15)",
-              color: data.current_phase === "loading" ? "#4ade80" : "#c084fc",
-              border: `1px solid ${data.current_phase === "loading" ? "rgba(34,197,94,0.3)" : "rgba(168,85,247,0.3)"}`,
-            }}
-          >
-            {data.current_phase === "loading" ? "Loading Phase" : "Maintenance"}
-          </span>
-        </div>
-        <p style={{ color: "var(--muted)", margin: 0, fontSize: "0.875rem" }}>
-          Peptide dosing tracker — daily checklist, vial inventory, and schedule
-        </p>
-      </div>
-
-      {/* Progress Bar */}
-      <div
-        style={{
-          background: "var(--card)",
-          border: "1px solid var(--border)",
-          borderRadius: 12,
-          padding: "20px",
-          marginBottom: 24,
-        }}
-      >
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
-          <span style={{ fontSize: "0.875rem", fontWeight: 600, color: "var(--text)" }}>
-            {selectedDay} Progress
-          </span>
-          <span style={{ fontSize: "0.875rem", fontWeight: 600, color: progress === 100 ? "#4ade80" : "var(--accent)" }}>
-            {progress}%
-          </span>
-        </div>
-        <div
-          style={{
-            width: "100%",
-            height: 8,
-            background: "var(--bg)",
-            borderRadius: 4,
-            overflow: "hidden",
-          }}
-        >
-          <div
-            style={{
-              width: `${progress}%`,
-              height: "100%",
-              background: progress === 100 ? "#4ade80" : "var(--accent)",
-              borderRadius: 4,
-              transition: "width 0.3s ease",
-            }}
-          />
-        </div>
-        {isSyncing && (
-          <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 8, textAlign: "right" }}>
-            Syncing...
-          </div>
-        )}
-      </div>
-
-      {/* Day Selector */}
-      <div style={{ display: "flex", gap: 8, marginBottom: 24, flexWrap: "wrap" }}>
-        {DAYS_OF_WEEK.map((day) => (
           <button
-            key={day}
-            onClick={() => setSelectedDay(day)}
+            onClick={() => setShowSetup(!showSetup)}
             style={{
-              padding: "8px 16px",
+              padding: "6px 14px",
               borderRadius: 20,
-              border: "1px solid var(--border)",
-              background: selectedDay === day ? "var(--accent)" : "var(--card)",
-              color: selectedDay === day ? "#fff" : "var(--text)",
+              border: "1px solid var(--accent)",
+              background: "transparent",
+              color: "var(--accent)",
               fontSize: "0.8rem",
               fontWeight: 500,
               cursor: "pointer",
-              transition: "all 0.15s",
             }}
           >
-            {day.slice(0, 3)}
+            {showSetup ? "Close Setup" : "Configure"}
           </button>
-        ))}
+        </div>
+        <p style={{ color: "var(--muted)", margin: 0, fontSize: "0.875rem" }}>
+          Research compound tracking — configure your stack, set dosing, track daily
+        </p>
       </div>
+
+      {/* Setup Panel */}
+      {showSetup && (
+        <SetupPanel
+          compounds={compounds}
+          schedule={schedule}
+          onAddCompound={addCompound}
+          onUpdateCompound={updateCompound}
+          onDeleteCompound={deleteCompound}
+          onAddScheduleEntry={addScheduleEntry}
+          onRemoveScheduleEntry={removeScheduleEntry}
+          editingCompound={editingCompound}
+          setEditingCompound={setEditingCompound}
+        />
+      )}
+
+      {/* Progress Bar */}
+      {compounds.length > 0 && (
+        <div
+          style={{
+            background: "var(--card)",
+            border: "1px solid var(--border)",
+            borderRadius: 12,
+            padding: "20px",
+            marginBottom: 24,
+          }}
+        >
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
+            <span style={{ fontSize: "0.875rem", fontWeight: 600, color: "var(--text)" }}>
+              {selectedDay} Progress
+            </span>
+            <span style={{ fontSize: "0.875rem", fontWeight: 600, color: progress === 100 ? "#4ade80" : "var(--accent)" }}>
+              {progress}%
+            </span>
+          </div>
+          <div
+            style={{
+              width: "100%",
+              height: 8,
+              background: "var(--bg)",
+              borderRadius: 4,
+              overflow: "hidden",
+            }}
+          >
+            <div
+              style={{
+                width: `${progress}%`,
+                height: "100%",
+                background: progress === 100 ? "#4ade80" : "var(--accent)",
+                borderRadius: 4,
+                transition: "width 0.3s ease",
+              }}
+            />
+          </div>
+        </div>
+      )}
+
+      {/* Day Selector */}
+      {compounds.length > 0 && (
+        <div style={{ display: "flex", gap: 8, marginBottom: 24, flexWrap: "wrap" }}>
+          {DAYS_OF_WEEK.map((day) => (
+            <button
+              key={day}
+              onClick={() => setSelectedDay(day)}
+              style={{
+                padding: "8px 16px",
+                borderRadius: 20,
+                border: "1px solid var(--border)",
+                background: selectedDay === day ? "var(--accent)" : "var(--card)",
+                color: selectedDay === day ? "#fff" : "var(--text)",
+                fontSize: "0.8rem",
+                fontWeight: 500,
+                cursor: "pointer",
+                transition: "all 0.15s",
+              }}
+            >
+              {day.slice(0, 3)}
+            </button>
+          ))}
+        </div>
+      )}
 
       {/* Daily Dose Cards */}
       <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 32 }}>
-        {todayDoses.length === 0 ? (
+        {compounds.length === 0 ? (
+          <div
+            style={{
+              background: "var(--card)",
+              border: "1px solid var(--border)",
+              borderRadius: 12,
+              padding: "32px",
+              textAlign: "center",
+              color: "var(--muted)",
+              fontSize: "0.875rem",
+            }}
+          >
+            <div style={{ fontSize: "2rem", marginBottom: 12 }}>💉</div>
+            <div style={{ fontWeight: 600, marginBottom: 8, color: "var(--text)" }}>No compounds configured</div>
+            <div>Click "Configure" to add your first research compound</div>
+          </div>
+        ) : todayDoses.length === 0 ? (
           <div
             style={{
               background: "var(--card)",
@@ -259,16 +369,16 @@ export default function PepTrakPage() {
           </div>
         ) : (
           todayDoses.map((dose, idx) => {
-            const colors = getCompoundColor(dose.compound);
-            const isTaken = checklist[`${dose.compound}-${dose.time}`];
+            const color = getCompoundColor(dose.compoundId);
+            const isTaken = checklist[`${dose.compoundId}-${dose.time}-${selectedDay}`];
             return (
               <div
                 key={idx}
-                onClick={() => toggleDose(dose.compound, dose.time)}
+                onClick={() => toggleDose(dose.compoundId, dose.time)}
                 style={{
                   background: "var(--card)",
                   border: "1px solid var(--border)",
-                  borderLeft: `3px solid ${colors.hex}`,
+                  borderLeft: `3px solid ${color}`,
                   borderRadius: 12,
                   padding: "16px 20px",
                   display: "flex",
@@ -288,8 +398,8 @@ export default function PepTrakPage() {
                       width: 24,
                       height: 24,
                       borderRadius: 6,
-                      border: `2px solid ${isTaken ? colors.hex : "var(--border)"}`,
-                      background: isTaken ? colors.hex : "transparent",
+                      border: `2px solid ${isTaken ? color : "var(--border)"}`,
+                      background: isTaken ? color : "transparent",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
@@ -306,24 +416,26 @@ export default function PepTrakPage() {
 
                   {/* Dose Info */}
                   <div style={{ flex: 1 }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 4 }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 4, flexWrap: "wrap" }}>
                       <span style={{ fontSize: "1rem", fontWeight: 600, color: "var(--text)" }}>
-                        {dose.compound}
+                        {dose.compoundName}
                       </span>
                       <span
                         style={{
                           fontSize: "0.7rem",
                           padding: "2px 8px",
                           borderRadius: 10,
-                          background: colors.light,
-                          color: colors.text,
+                          background: `${color}20`,
+                          color: color,
                           fontWeight: 500,
                         }}
                       >
                         {dose.time}
                       </span>
                     </div>
-                    <div style={{ fontSize: "0.8rem", color: "var(--muted)" }}>{dose.dose}</div>
+                    <div style={{ fontSize: "0.8rem", color: "var(--muted)" }}>
+                      {dose.doseUnits} units ({dose.doseMg} mg)
+                    </div>
                   </div>
                 </div>
 
@@ -344,92 +456,521 @@ export default function PepTrakPage() {
         )}
       </div>
 
-      {/* Vial Inventory */}
-      <h2 style={{ fontSize: "1.1rem", fontWeight: 700, margin: "0 0 16px", color: "var(--text)" }}>
-        Vial Inventory
+      {/* Compound Inventory */}
+      {compounds.length > 0 && (
+        <>
+          <h2 style={{ fontSize: "1.1rem", fontWeight: 700, margin: "0 0 16px", color: "var(--text)" }}>
+            Compound Inventory
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: 12, marginBottom: 32 }}>
+            {compounds.map((compound) => (
+              <div
+                key={compound.id}
+                style={{
+                  background: "var(--card)",
+                  border: "1px solid var(--border)",
+                  borderTop: `3px solid ${compound.color}`,
+                  borderRadius: 12,
+                  padding: "16px",
+                }}
+              >
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
+                  <span style={{ fontSize: "0.9rem", fontWeight: 600, color: "var(--text)" }}>{compound.name}</span>
+                  <button
+                    onClick={() => setEditingCompound(compound)}
+                    style={{
+                      background: "transparent",
+                      border: "none",
+                      color: "var(--muted)",
+                      cursor: "pointer",
+                      fontSize: "0.75rem",
+                      padding: "2px 6px",
+                    }}
+                  >
+                    Edit
+                  </button>
+                </div>
+                <div style={{ fontSize: "0.75rem", color: "var(--muted)", lineHeight: 1.7 }}>
+                  <div><strong>Concentration:</strong> {compound.concentrationMgPerMl} mg/mL</div>
+                  <div><strong>Vial:</strong> {compound.vialVolumeMl} mL</div>
+                  <div><strong>Dose:</strong> {compound.prescribedDosageMg} mg</div>
+                  <div><strong>BAC Water:</strong> {compound.bacWaterRatioMl} mL</div>
+                  <div><strong>Units:</strong> {calculateUnits(compound.prescribedDosageMg, compound.concentrationMgPerMl, compound.bacWaterRatioMl, compound.vialVolumeMl)} units</div>
+                  <div><strong>Schedule:</strong> {compound.schedule}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+
+      {/* Disclaimer - Bottom */}
+      <div style={{
+        background: "rgba(239,68,68,0.1)",
+        border: "1px solid rgba(239,68,68,0.3)",
+        borderRadius: 8,
+        padding: "12px 16px",
+        marginTop: 20,
+        fontSize: "0.75rem",
+        color: "#fca5a5",
+        lineHeight: 1.5,
+      }}>
+        {DISCLAIMER}
+      </div>
+    </div>
+  );
+}
+
+// Setup Panel Component
+function SetupPanel({
+  compounds,
+  schedule,
+  onAddCompound,
+  onUpdateCompound,
+  onDeleteCompound,
+  onAddScheduleEntry,
+  onRemoveScheduleEntry,
+  editingCompound,
+  setEditingCompound,
+}: {
+  compounds: CompoundConfig[];
+  schedule: UserSchedule[];
+  onAddCompound: (c: CompoundConfig) => void;
+  onUpdateCompound: (c: CompoundConfig) => void;
+  onDeleteCompound: (id: string) => void;
+  onAddScheduleEntry: (day: string, time: string, compoundIds: string[]) => void;
+  onRemoveScheduleEntry: (day: string, time: string, compoundId: string) => void;
+  editingCompound: CompoundConfig | null;
+  setEditingCompound: (c: CompoundConfig | null) => void;
+}) {
+  const [compoundForm, setCompoundForm] = useState<Partial<CompoundConfig>>({
+    color: PRESET_COLORS[0],
+    concentrationMgPerMl: 5,
+    vialVolumeMl: 2,
+    prescribedDosageMg: 1,
+    bacWaterRatioMl: 2,
+  });
+  const [scheduleDay, setScheduleDay] = useState("Monday");
+  const [scheduleTime, setScheduleTime] = useState("10am");
+  const [scheduleCompoundIds, setScheduleCompoundIds] = useState<string[]>([]);
+
+  useEffect(() => {
+    if (editingCompound) {
+      setCompoundForm(editingCompound);
+    }
+  }, [editingCompound]);
+
+  const handleSubmitCompound = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!compoundForm.name) return;
+
+    const compound: CompoundConfig = {
+      id: editingCompound?.id || crypto.randomUUID(),
+      name: compoundForm.name || "Unnamed",
+      color: compoundForm.color || PRESET_COLORS[0],
+      concentrationMgPerMl: Number(compoundForm.concentrationMgPerMl) || 5,
+      vialVolumeMl: Number(compoundForm.vialVolumeMl) || 2,
+      prescribedDosageMg: Number(compoundForm.prescribedDosageMg) || 1,
+      bacWaterRatioMl: Number(compoundForm.bacWaterRatioMl) || 2,
+      schedule: compoundForm.schedule || "",
+      frequency: compoundForm.frequency || "",
+      notes: compoundForm.notes || "",
+    };
+
+    if (editingCompound) {
+      onUpdateCompound(compound);
+    } else {
+      onAddCompound(compound);
+    }
+
+    setCompoundForm({
+      color: PRESET_COLORS[compounds.length % PRESET_COLORS.length],
+      concentrationMgPerMl: 5,
+      vialVolumeMl: 2,
+      prescribedDosageMg: 1,
+      bacWaterRatioMl: 2,
+    });
+  };
+
+  const handleAddSchedule = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (scheduleCompoundIds.length === 0) return;
+    onAddScheduleEntry(scheduleDay, scheduleTime, scheduleCompoundIds);
+    setScheduleCompoundIds([]);
+  };
+
+  return (
+    <div
+      style={{
+        background: "var(--card)",
+        border: "1px solid var(--border)",
+        borderRadius: 12,
+        padding: "24px",
+        marginBottom: 24,
+      }}
+    >
+      <h2 style={{ fontSize: "1.1rem", fontWeight: 700, margin: "0 0 20px", color: "var(--text)" }}>
+        {editingCompound ? "Edit Compound" : "Add Compound"}
       </h2>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 12, marginBottom: 32 }}>
-        {data.compounds.map((compound) => {
-          const colors = getCompoundColor(compound.name);
-          return (
-            <div
-              key={compound.name}
+
+      <form onSubmit={handleSubmitCompound} style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 12 }}>
+          <div>
+            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Compound Name</label>
+            <input
+              type="text"
+              value={compoundForm.name || ""}
+              onChange={e => setCompoundForm({ ...compoundForm, name: e.target.value })}
+              placeholder="e.g., BPC-157"
               style={{
-                background: "var(--card)",
+                width: "100%",
+                padding: "8px 12px",
+                borderRadius: 8,
                 border: "1px solid var(--border)",
-                borderTop: `3px solid ${colors.hex}`,
-                borderRadius: 12,
-                padding: "16px",
+                background: "var(--bg)",
+                color: "var(--text)",
+                fontSize: "0.875rem",
+              }}
+              required
+            />
+          </div>
+
+          <div>
+            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Color</label>
+            <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+              {PRESET_COLORS.map(color => (
+                <button
+                  key={color}
+                  type="button"
+                  onClick={() => setCompoundForm({ ...compoundForm, color })}
+                  style={{
+                    width: 28,
+                    height: 28,
+                    borderRadius: 6,
+                    background: color,
+                    border: compoundForm.color === color ? "2px solid #fff" : "2px solid transparent",
+                    cursor: "pointer",
+                  }}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 12 }}>
+          <div>
+            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>
+              Concentration (mg/mL)
+            </label>
+            <input
+              type="number"
+              step="0.1"
+              value={compoundForm.concentrationMgPerMl || ""}
+              onChange={e => setCompoundForm({ ...compoundForm, concentrationMgPerMl: parseFloat(e.target.value) })}
+              style={{
+                width: "100%",
+                padding: "8px 12px",
+                borderRadius: 8,
+                border: "1px solid var(--border)",
+                background: "var(--bg)",
+                color: "var(--text)",
+                fontSize: "0.875rem",
+              }}
+              required
+            />
+          </div>
+
+          <div>
+            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>
+              Vial Volume (mL)
+            </label>
+            <input
+              type="number"
+              step="0.1"
+              value={compoundForm.vialVolumeMl || ""}
+              onChange={e => setCompoundForm({ ...compoundForm, vialVolumeMl: parseFloat(e.target.value) })}
+              style={{
+                width: "100%",
+                padding: "8px 12px",
+                borderRadius: 8,
+                border: "1px solid var(--border)",
+                background: "var(--bg)",
+                color: "var(--text)",
+                fontSize: "0.875rem",
+              }}
+              required
+            />
+          </div>
+
+          <div>
+            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>
+              Prescribed Dose (mg)
+            </label>
+            <input
+              type="number"
+              step="0.01"
+              value={compoundForm.prescribedDosageMg || ""}
+              onChange={e => setCompoundForm({ ...compoundForm, prescribedDosageMg: parseFloat(e.target.value) })}
+              style={{
+                width: "100%",
+                padding: "8px 12px",
+                borderRadius: 8,
+                border: "1px solid var(--border)",
+                background: "var(--bg)",
+                color: "var(--text)",
+                fontSize: "0.875rem",
+              }}
+              required
+            />
+          </div>
+
+          <div>
+            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>
+              BAC Water (mL)
+            </label>
+            <input
+              type="number"
+              step="0.1"
+              value={compoundForm.bacWaterRatioMl || ""}
+              onChange={e => setCompoundForm({ ...compoundForm, bacWaterRatioMl: parseFloat(e.target.value) })}
+              style={{
+                width: "100%",
+                padding: "8px 12px",
+                borderRadius: 8,
+                border: "1px solid var(--border)",
+                background: "var(--bg)",
+                color: "var(--text)",
+                fontSize: "0.875rem",
+              }}
+              required
+            />
+          </div>
+        </div>
+
+        <div>
+          <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Schedule Notes</label>
+          <input
+            type="text"
+            value={compoundForm.schedule || ""}
+            onChange={e => setCompoundForm({ ...compoundForm, schedule: e.target.value })}
+            placeholder="e.g., Mon-Fri mornings"
+            style={{
+              width: "100%",
+              padding: "8px 12px",
+              borderRadius: 8,
+              border: "1px solid var(--border)",
+              background: "var(--bg)",
+              color: "var(--text)",
+              fontSize: "0.875rem",
+            }}
+          />
+        </div>
+
+        <div style={{ display: "flex", gap: 10 }}>
+          <button
+            type="submit"
+            style={{
+              padding: "10px 20px",
+              borderRadius: 8,
+              border: "none",
+              background: "var(--accent)",
+              color: "#fff",
+              fontSize: "0.875rem",
+              fontWeight: 600,
+              cursor: "pointer",
+            }}
+          >
+            {editingCompound ? "Update" : "Add Compound"}
+          </button>
+          {editingCompound && (
+            <button
+              type="button"
+              onClick={() => {
+                setEditingCompound(null);
+                setCompoundForm({
+                  color: PRESET_COLORS[compounds.length % PRESET_COLORS.length],
+                  concentrationMgPerMl: 5,
+                  vialVolumeMl: 2,
+                  prescribedDosageMg: 1,
+                  bacWaterRatioMl: 2,
+                });
+              }}
+              style={{
+                padding: "10px 20px",
+                borderRadius: 8,
+                border: "1px solid var(--border)",
+                background: "transparent",
+                color: "var(--text)",
+                fontSize: "0.875rem",
+                cursor: "pointer",
               }}
             >
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
-                <span style={{ fontSize: "0.9rem", fontWeight: 600, color: "var(--text)" }}>{compound.name}</span>
-                <span
+              Cancel
+            </button>
+          )}
+        </div>
+      </form>
+
+      {/* Schedule Builder */}
+      {compounds.length > 0 && (
+        <>
+          <hr style={{ border: "none", borderTop: "1px solid var(--border)", margin: "24px 0" }} />
+
+          <h3 style={{ fontSize: "1rem", fontWeight: 700, margin: "0 0 16px", color: "var(--text)" }}>
+            Schedule Builder
+          </h3>
+
+          <form onSubmit={handleAddSchedule} style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 12 }}>
+              <div>
+                <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Day</label>
+                <select
+                  value={scheduleDay}
+                  onChange={e => setScheduleDay(e.target.value)}
                   style={{
-                    fontSize: "0.75rem",
-                    fontWeight: 600,
-                    padding: "2px 8px",
-                    borderRadius: 10,
-                    background: compound.current_vials > 1 ? "rgba(34,197,94,0.15)" : "rgba(239,68,68,0.15)",
-                    color: compound.current_vials > 1 ? "#4ade80" : "#ef4444",
+                    width: "100%",
+                    padding: "8px 12px",
+                    borderRadius: 8,
+                    border: "1px solid var(--border)",
+                    background: "var(--bg)",
+                    color: "var(--text)",
+                    fontSize: "0.875rem",
                   }}
                 >
-                  {compound.current_vials} vial{compound.current_vials !== 1 ? "s" : ""}
-                </span>
+                  {DAYS_OF_WEEK.map(d => <option key={d} value={d}>{d}</option>)}
+                </select>
               </div>
-              <div style={{ fontSize: "0.75rem", color: "var(--muted)", lineHeight: 1.6 }}>
-                <div>{compound.concentration}</div>
-                <div>{compound.schedule}</div>
+
+              <div>
+                <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Time</label>
+                <select
+                  value={scheduleTime}
+                  onChange={e => setScheduleTime(e.target.value)}
+                  style={{
+                    width: "100%",
+                    padding: "8px 12px",
+                    borderRadius: 8,
+                    border: "1px solid var(--border)",
+                    background: "var(--bg)",
+                    color: "var(--text)",
+                    fontSize: "0.875rem",
+                  }}
+                >
+                  {TIME_SLOTS.map(t => <option key={t} value={t}>{t}</option>)}
+                </select>
               </div>
             </div>
-          );
-        })}
-      </div>
 
-      {/* Weekly Schedule Summary */}
-      <h2 style={{ fontSize: "1.1rem", fontWeight: 700, margin: "0 0 16px", color: "var(--text)" }}>
-        Weekly Schedule
-      </h2>
-      <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-        {DAYS_OF_WEEK.map((day) => {
-          const daySchedule = data.weekly_schedule_loading_phase[day.toLowerCase()];
-          if (!daySchedule) return null;
+            <div>
+              <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Compounds</label>
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                {compounds.map(c => (
+                  <button
+                    key={c.id}
+                    type="button"
+                    onClick={() => {
+                      setScheduleCompoundIds(prev =>
+                        prev.includes(c.id) ? prev.filter(id => id !== c.id) : [...prev, c.id]
+                      );
+                    }}
+                    style={{
+                      padding: "6px 12px",
+                      borderRadius: 20,
+                      border: `1px solid ${scheduleCompoundIds.includes(c.id) ? c.color : "var(--border)"}`,
+                      background: scheduleCompoundIds.includes(c.id) ? `${c.color}20` : "var(--bg)",
+                      color: scheduleCompoundIds.includes(c.id) ? c.color : "var(--text)",
+                      fontSize: "0.8rem",
+                      cursor: "pointer",
+                      transition: "all 0.15s",
+                    }}
+                  >
+                    {c.name}
+                  </button>
+                ))}
+              </div>
+            </div>
 
-          const dayDoses: string[] = [];
-          Object.entries(daySchedule).forEach(([time, compounds]: [string, any]) => {
-            if (Array.isArray(compounds)) {
-              compounds.forEach((c: any) => {
-                dayDoses.push(`${c.compound} ${c.dose} @ ${time}`);
-              });
-            }
-          });
-
-          if (dayDoses.length === 0) return null;
-
-          return (
-            <div
-              key={day}
+            <button
+              type="submit"
+              disabled={scheduleCompoundIds.length === 0}
               style={{
-                background: "var(--card)",
-                border: "1px solid var(--border)",
-                borderRadius: 12,
-                padding: "16px 20px",
+                padding: "10px 20px",
+                borderRadius: 8,
+                border: "none",
+                background: scheduleCompoundIds.length > 0 ? "var(--accent)" : "var(--border)",
+                color: "#fff",
+                fontSize: "0.875rem",
+                fontWeight: 600,
+                cursor: scheduleCompoundIds.length > 0 ? "pointer" : "not-allowed",
+                alignSelf: "flex-start",
               }}
             >
-              <div style={{ fontSize: "0.875rem", fontWeight: 600, color: "var(--text)", marginBottom: 8 }}>
-                {day}
-              </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-                {dayDoses.map((dose, idx) => (
-                  <div key={idx} style={{ fontSize: "0.8rem", color: "var(--muted)" }}>
-                    {dose}
+              Add to Schedule
+            </button>
+          </form>
+
+          {/* Current Schedule */}
+          {schedule.length > 0 && (
+            <div style={{ marginTop: 20 }}>
+              <h4 style={{ fontSize: "0.875rem", fontWeight: 600, margin: "0 0 12px", color: "var(--text)" }}>
+                Current Schedule
+              </h4>
+              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                {schedule.map(s => (
+                  <div key={s.day} style={{ background: "var(--bg)", borderRadius: 8, padding: "12px" }}>
+                    <div style={{ fontSize: "0.8rem", fontWeight: 600, color: "var(--text)", marginBottom: 6 }}>
+                      {s.day}
+                    </div>
+                    <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+                      {s.entries.map(entry => (
+                        <div key={entry.time} style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+                          <span style={{ fontSize: "0.75rem", color: "var(--muted)", minWidth: 50 }}>{entry.time}</span>
+                          <div style={{ display: "flex", gap: 6, flexWrap: "wrap", flex: 1 }}>
+                            {entry.compoundIds.map(cid => {
+                              const c = compounds.find(comp => comp.id === cid);
+                              return c ? (
+                                <span
+                                  key={cid}
+                                  style={{
+                                    fontSize: "0.75rem",
+                                    padding: "2px 8px",
+                                    borderRadius: 10,
+                                    background: `${c.color}20`,
+                                    color: c.color,
+                                    display: "flex",
+                                    alignItems: "center",
+                                    gap: 4,
+                                  }}
+                                >
+                                  {c.name}
+                                  <button
+                                    type="button"
+                                    onClick={() => onRemoveScheduleEntry(s.day, entry.time, cid)}
+                                    style={{
+                                      background: "transparent",
+                                      border: "none",
+                                      color: "inherit",
+                                      cursor: "pointer",
+                                      fontSize: "0.7rem",
+                                      padding: 0,
+                                    }}
+                                  >
+                                    ×
+                                  </button>
+                                </span>
+                              ) : null;
+                            })}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
-          );
-        })}
-      </div>
+          )}
+        </>
+      )}
     </div>
   );
 }
