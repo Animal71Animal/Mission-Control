@@ -1043,11 +1043,14 @@ function ReconstitutionGuide() {
       title: "Reconstitute the Vial",
       content: (
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-          <div>1. <strong>Swab</strong> the vial top with alcohol. Let it dry.</div>
-          <div>2. <strong>Draw BAC water</strong> into syringe — inject slowly down the inside wall of the vial, not directly onto the powder.</div>
-          <div>3. <strong>Do not shake.</strong> Gently swirl or roll the vial until powder dissolves.</div>
-          <div>4. <strong>Do not spray</strong> water forcefully — peptides are fragile.</div>
-          <div>5. <strong>Label</strong> the vial with reconstitution date and concentration.</div>
+          <div>1. <strong>Swab</strong> the vial top with alcohol. Let it dry completely — wet rubber can push contaminants inside.</div>
+          <div>2. <strong>Draw air</strong> into syringe equal to the BAC water you plan to inject. This prevents vacuum pressure.</div>
+          <div>3. <strong>Inject air</strong> into the vial first — pierce center of rubber stopper at 90°, push air in slowly.</div>
+          <div>4. <strong>Draw BAC water</strong> into same syringe, then <strong>flip vial upside down</strong> and inject water slowly down the inside wall — never spray directly onto powder.</div>
+          <div>5. <strong>Do not shake.</strong> Gently swirl or roll between palms until powder fully dissolves. Some take 30-60 seconds.</div>
+          <div>6. <strong>Do not force</strong> water in quickly — peptides are fragile proteins.</div>
+          <div>7. <strong>Withdraw needle</strong> slowly, then <strong>swab</strong> the stopper again.</div>
+          <div>8. <strong>Label</strong> the vial with compound name, reconstitution date, concentration, and your initials.</div>
           <div style={{ marginTop: 8, fontSize: "0.8rem", color: "#fca5a5" }}>
             ⚠️ Reconstituted peptides degrade faster. Store refrigerated (2-8°C). Most last 2-4 weeks after mixing.
           </div>
@@ -1058,12 +1061,16 @@ function ReconstitutionGuide() {
       title: "Draw Your Dose",
       content: (
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-          <div>1. <strong>Swab</strong> the reconstituted vial top.</div>
-          <div>2. <strong>Draw air</strong> into syringe equal to your dose units.</div>
-          <div>3. <strong>Inject air</strong> into vial (creates pressure, easier withdrawal).</div>
-          <div>4. <strong>Turn vial upside down</strong> and draw slightly more than needed.</div>
-          <div>5. <strong>Tap out bubbles</strong> and push excess back to exact unit mark.</div>
-          <div>6. <strong>Remove needle</strong> carefully, cap it, and you're ready.</div>
+          <div>1. <strong>Wash hands</strong> thoroughly with soap and water.</div>
+          <div>2. <strong>Swab</strong> the reconstituted vial top with alcohol. Let it dry.</div>
+          <div>3. <strong>Draw air</strong> into syringe equal to your dose units — this prevents vacuum.</div>
+          <div>4. <strong>Pierce vial center</strong> at 90° and <strong>inject air</strong> first (creates positive pressure, easier withdrawal).</div>
+          <div>5. <strong>Turn vial upside down</strong> — keep needle tip submerged in liquid.</div>
+          <div>6. <strong>Draw slightly more</strong> than your calculated dose (e.g., 45 units if you need 40).</div>
+          <div>7. <strong>Remove needle</strong>, hold syringe needle-up, <strong>tap out bubbles</strong> to the top.</div>
+          <div>8. <strong>Push plunger slowly</strong> to exact unit mark, expelling air and excess.</div>
+          <div>9. <strong>Recap needle</strong> using the one-handed scoop method — never touch the needle.</div>
+          <div>10. <strong>Inspect</strong> — liquid should be clear. If cloudy or particulate, discard and start fresh.</div>
         </div>
       ),
     },
