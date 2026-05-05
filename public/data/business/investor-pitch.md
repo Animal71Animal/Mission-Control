@@ -94,15 +94,15 @@ Labor costs are up. The labor shortage in service industries made the case for a
 | Market | Estimate | Notes |
 |--------|----------|-------|
 | **US adult entertainment venues** | ~4,000 clubs | Licensing data; excludes bars with entertainment |
-| **Average addressable spend per club** | $350-600/month | Software + support; vs. $2,000-5,000/month current DJ labor |
-| **US TAM** | ~$17-24M ARR | At 100% penetration |
-| **Realistic US SAM (20% capture in 5 years)** | ~$4-5M ARR | Conservative |
-| **International markets** (Canada, UK, EU, Australia) | 2-3x multiplier | Similar venue density |
-| **Total addressable market (global)** | ~$50-75M ARR | |
+| **Average addressable spend per club** | $1,500/month | Software + support; vs. $3,000-5,000/month current DJ labor |
+| **US TAM** | ~$72M ARR | At 100% penetration |
+| **Realistic US SAM (20% capture in 5 years)** | ~$14M ARR | Conservative |
+| **International markets** (Canada, UK, EU, Australia) | ~6,000+ clubs (excluding US) | 2-3x multiplier | Similar venue density |
+| **Total addressable market (global)** | ~$180M ARR | |
 
-This is a niche SaaS with a highly capturable market — not a billion-dollar swing, but a defensible, recurring-revenue business with 70%+ gross margins at scale and a clear path to $10M ARR in 5 years.
+This is a niche SaaS with a highly capturable market — not a billion-dollar swing, but a defensible, recurring-revenue business with 70%+ gross margins at scale and a clear path to $14M ARR in 5 years.
 
-**Chain contracts accelerate the math significantly.** A single 20-location chain at $500/month/location = $120,000 ARR from one deal.
+**Chain contracts accelerate the math significantly.** A single 20-location chain at $1,500/month/location = $360,000 ARR from one deal.
 
 ---
 
@@ -114,7 +114,7 @@ Billed monthly or annually.
 
 | Tier | Price | Target |
 |------|-------|--------|
-| **Standard Rate** | **$2,000/month per venue** | All clubs, all stages, all features |
+| **Standard Rate** | **$1,500/month per venue** | All clubs, all stages, all features |
 
 | **Chain Discount** | 15% per location when 3+ venues | Recurring revenue scaling |
 

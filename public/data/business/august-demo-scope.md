@@ -67,7 +67,7 @@ Every feature below exists to support one of these three moments:
 
 ### 5. ROI Calculator (Demo Tool)
 - [ ] Simple input form: DJ count, shifts/week, avg DJ pay
-- [ ] Live output: monthly savings vs. our $2,000/month subscription
+- [ ] Live output: monthly savings vs. our $1,500/month subscription
 - [ ] Visual — chart or bold numbers, not a spreadsheet
 
 ---

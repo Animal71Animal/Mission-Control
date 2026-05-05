@@ -221,7 +221,7 @@ With multiple locations, AI surfaces patterns no human would catch:
 
 ## Pricing Strategy
 
-**Standard Rate: $2,000/mo per venue**
+**Standard Rate: $1,500/mo per venue**
 
 Flat subscription covers:
 - Unlimited stages

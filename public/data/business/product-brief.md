@@ -244,7 +244,7 @@ Constraint-based track selection (not just random):
 
 ### Stream 1 — Software License (Core)
 
-- **$2,000/month per venue** (flat rate — all stages, all DJs, all operators included)
+- **$1,500/month per venue** (flat rate — all stages, all DJs, all operators included)
 - Chain discounts for multi-location operators (e.g., 20% off for 3+ locations — TBD)
 - Includes: core platform, all stages, all accounts, dancer self-service, announcements, TTS, shift logs, offline playback
 
