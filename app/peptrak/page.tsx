@@ -6,6 +6,10 @@ interface CompoundConfig {
   id: string;
   name: string;
   color: string;
+  legalName: string;
+  classification: string;
+  intendedEffects: string;
+  overdoseSymptoms: string;
   totalMgInVial: number;
   vialUnit: "mg" | "IU";
   prescribedDosageMg: number;
@@ -437,8 +441,10 @@ export default function PepTrakPage() {
                 }}>
                   <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between" }}>
                     <div>
-                      <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--text)", marginBottom: 4 }}>{compound.name}</div>
-                      <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>
+                      <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--text)", marginBottom: 2 }}>{compound.name}</div>
+                      {compound.legalName && <div style={{ fontSize: "0.7rem", color: "var(--muted)", fontStyle: "italic", marginBottom: 2 }}>{compound.legalName}</div>}
+                      {compound.classification && <div style={{ fontSize: "0.7rem", color: compound.color, fontWeight: 500, marginBottom: 2 }}>{compound.classification}</div>}
+                      <div style={{ fontSize: "0.72rem", color: "var(--muted)" }}>
                         {concentrationDisplay} / {compound.bacWaterRatioMl} mL BAC
                       </div>
                     </div>
@@ -460,6 +466,21 @@ export default function PepTrakPage() {
                     <div><strong>Frequency:</strong> {freqDisplay}</div>
                   </div>
 
+                  {/* Intended Effects */}
+                  {compound.intendedEffects && (
+                    <div style={{ fontSize: "0.75rem", color: "var(--text)", lineHeight: 1.5 }}>
+                      <strong style={{ color: "#4ade80" }}>Effects:</strong> {compound.intendedEffects}
+                    </div>
+                  )}
+
+                  {/* Overdose Symptoms */}
+                  {compound.overdoseSymptoms && (
+                    <div style={{ fontSize: "0.75rem", color: "var(--text)", lineHeight: 1.5 }}>
+                      <strong style={{ color: "#ef4444" }}>⚠️ Watch for:</strong> {compound.overdoseSymptoms}
+                    </div>
+                  )}
+
+                  {/* Notes */}
                   {compound.notes && (
                     <div style={{
                       fontSize: "0.75rem",
@@ -513,6 +534,10 @@ function CompoundForm({
   const defaultForm = {
     name: "",
     color: PRESET_COLORS[compounds.length % PRESET_COLORS.length],
+    legalName: "",
+    classification: "",
+    intendedEffects: "",
+    overdoseSymptoms: "",
     totalMgInVial: 10,
     prescribedDosageMg: 1,
     bacWaterRatioMl: 2,
@@ -580,6 +605,10 @@ function CompoundForm({
       id: editingCompound?.id || crypto.randomUUID(),
       name: form.name || "Unnamed",
       color: form.color || PRESET_COLORS[0],
+      legalName: form.legalName || "",
+      classification: form.classification || "",
+      intendedEffects: form.intendedEffects || "",
+      overdoseSymptoms: form.overdoseSymptoms || "",
       totalMgInVial: Number(form.totalMgInVial) || 10,
       vialUnit: vialUnit,
       prescribedDosageMg: Number(form.prescribedDosageMg) || 1,
@@ -645,49 +674,75 @@ function CompoundForm({
           </div>
         </div>
 
-        {/* Row 2: Dosing inputs + calculated output */}
+        {/* Row 2: Classification info */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 12 }}>
+          <div>
+            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Legal / Scientific Name</label>
+            <input type="text" value={form.legalName || ""} onChange={e => setForm({ ...form, legalName: e.target.value })}
+              placeholder="e.g., Retratrutide (LY3437943)"
+              style={{ width: "100%", padding: "8px 12px", borderRadius: 8, border: "1px solid var(--border)", background: "var(--bg)", color: "var(--text)", fontSize: "0.875rem" }} />
+          </div>
+          <div>
+            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Classification</label>
+            <input type="text" value={form.classification || ""} onChange={e => setForm({ ...form, classification: e.target.value })}
+              placeholder="e.g., GLP-1/GIP/Glucagon Triple Agonist"
+              style={{ width: "100%", padding: "8px 12px", borderRadius: 8, border: "1px solid var(--border)", background: "var(--bg)", color: "var(--text)", fontSize: "0.875rem" }} />
+          </div>
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 12 }}>
+          <div>
+            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Intended Effects</label>
+            <input type="text" value={form.intendedEffects || ""} onChange={e => setForm({ ...form, intendedEffects: e.target.value })}
+              placeholder="e.g., Weight loss, appetite suppression, metabolic support"
+              style={{ width: "100%", padding: "8px 12px", borderRadius: 8, border: "1px solid var(--border)", background: "var(--bg)", color: "var(--text)", fontSize: "0.875rem" }} />
+          </div>
+          <div>
+            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Overdose Symptoms to Watch For</label>
+            <input type="text" value={form.overdoseSymptoms || ""} onChange={e => setForm({ ...form, overdoseSymptoms: e.target.value })}
+              placeholder="e.g., Severe nausea, vomiting, dizziness, hypoglycemia"
+              style={{ width: "100%", padding: "8px 12px", borderRadius: 8, border: "1px solid var(--border)", background: "var(--bg)", color: "var(--text)", fontSize: "0.875rem" }} />
+          </div>
+        </div>
+
+        {/* Row 3: Dosing inputs + calculated output */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: 12 }}>
           <div>
-            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
-              Total in Vial
-              <span style={{ display: "inline-flex", gap: 2, background: "var(--bg)", borderRadius: 12, padding: "1px 2px" }}>
-                {(["mg", "IU"] as const).map(u => (
-                  <button key={u} type="button" onClick={() => setVialUnit(u)}
-                    style={{
-                      padding: "2px 8px", borderRadius: 10, border: "none",
-                      background: vialUnit === u ? "var(--accent)" : "transparent",
-                      color: vialUnit === u ? "#fff" : "var(--muted)",
-                      fontSize: "0.7rem", fontWeight: 600, cursor: "pointer",
-                    }} />
-                ))}
-              </span>
+            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>
+              Total in Vial ({vialUnit})
             </label>
+            <div style={{ display: "flex", gap: 4, marginBottom: 6 }}>
+              {(["mg", "IU"] as const).map(u => (
+                <button key={u} type="button" onClick={() => setVialUnit(u)}
+                  style={{
+                    padding: "4px 12px", borderRadius: 8,
+                    border: `1px solid ${vialUnit === u ? "var(--accent)" : "var(--border)"}`,
+                    background: vialUnit === u ? "var(--accent)" : "transparent",
+                    color: vialUnit === u ? "#fff" : "var(--muted)",
+                    fontSize: "0.75rem", fontWeight: 600, cursor: "pointer",
+                  }}>{u}</button>
+              ))}
+            </div>
             <input type="number" step="0.1" value={vialDisplayValue || ""} onChange={e => handleVialChange(parseFloat(e.target.value))}
               placeholder={vialUnit === "IU" ? "e.g., 5000" : "e.g., 10"}
               style={{ width: "100%", padding: "8px 12px", borderRadius: 8, border: "1px solid var(--border)", background: "var(--bg)", color: "var(--text)", fontSize: "0.875rem" }} required />
           </div>
           <div>
-            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
-              Prescribed Dose
-              <span style={{ display: "inline-flex", gap: 2, background: "var(--bg)", borderRadius: 12, padding: "1px 2px" }}>
-                {(["mg", "mcg"] as const).map(u => (
-                  <button key={u} type="button" onClick={() => {
-                    if (u !== doseUnit) {
-                      // Convert existing value when switching
-                      const currentMg = form.prescribedDosageMg || 0;
-                      setDoseUnit(u);
-                      // Don't change internal value, display will auto-convert
-                    }
-                  }}
-                    style={{
-                      padding: "2px 8px", borderRadius: 10, border: "none",
-                      background: doseUnit === u ? "var(--accent)" : "transparent",
-                      color: doseUnit === u ? "#fff" : "var(--muted)",
-                      fontSize: "0.7rem", fontWeight: 600, cursor: "pointer",
-                    }} />
-                ))}
-              </span>
+            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>
+              Prescribed Dose ({doseUnit})
             </label>
+            <div style={{ display: "flex", gap: 4, marginBottom: 6 }}>
+              {(["mg", "mcg"] as const).map(u => (
+                <button key={u} type="button" onClick={() => setDoseUnit(u)}
+                  style={{
+                    padding: "4px 12px", borderRadius: 8,
+                    border: `1px solid ${doseUnit === u ? "var(--accent)" : "var(--border)"}`,
+                    background: doseUnit === u ? "var(--accent)" : "transparent",
+                    color: doseUnit === u ? "#fff" : "var(--muted)",
+                    fontSize: "0.75rem", fontWeight: 600, cursor: "pointer",
+                  }}>{u}</button>
+              ))}
+            </div>
             <input type="number" step={doseUnit === "mcg" ? "1" : "0.01"} value={doseDisplayValue || ""} onChange={e => handleDoseChange(parseFloat(e.target.value))}
               placeholder={doseUnit === "mcg" ? "e.g., 250" : "e.g., 1"}
               style={{ width: "100%", padding: "8px 12px", borderRadius: 8, border: "1px solid var(--border)", background: "var(--bg)", color: "var(--text)", fontSize: "0.875rem" }} required />
