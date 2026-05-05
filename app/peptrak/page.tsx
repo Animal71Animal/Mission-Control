@@ -80,9 +80,27 @@ export default function PepTrakPage() {
       setChecklist(JSON.parse(savedChecklist));
     }
 
-    // Show setup if no compounds configured
-    if (!savedCompounds || JSON.parse(savedCompounds).length === 0) {
+    // Show setup if no compounds configured, OR if existing data is missing the new fields
+    if (!savedCompounds) {
       setShowSetup(true);
+    } else {
+      try {
+        const parsed = JSON.parse(savedCompounds);
+        if (parsed.length === 0) {
+          setShowSetup(true);
+        } else if (parsed.length > 0 && (parsed[0].vialVolumeMl !== undefined || parsed[0].totalMgInVial === undefined)) {
+          // Old data format detected — clear it
+          localStorage.removeItem("peptrak-compounds");
+          localStorage.removeItem("peptrak-schedule");
+          localStorage.removeItem("peptrak-checklist");
+          setCompounds([]);
+          setSchedule([]);
+          setChecklist({});
+          setShowSetup(true);
+        }
+      } catch {
+        setShowSetup(true);
+      }
     }
   }, []);
 
