@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 interface CompoundConfig {
   id: string;
   name: string;
-  color: string;
   totalMgInVial: number;
   vialVolumeMl: number;
   prescribedDosageMg: number;
@@ -34,10 +33,15 @@ interface UserSchedule {
   entries: ScheduleEntry[];
 }
 
+// Auto-assign colors based on compound index — no user preference needed
 const PRESET_COLORS = [
   "#0891b2", "#a855f7", "#eab308", "#ec4899", "#84cc16",
   "#f97316", "#06b6d4", "#8b5cf6", "#ef4444", "#10b981"
 ];
+
+function getCompoundColorByIndex(index: number): string {
+  return PRESET_COLORS[index % PRESET_COLORS.length];
+}
 
 const DAYS_OF_WEEK = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 const TIME_SLOTS = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm", "9pm", "10pm", "11pm"];
@@ -172,7 +176,7 @@ export default function PepTrakPage() {
         if (compound) {
           const units = calculateUnits(
             compound.prescribedDosageMg,
-            compound.concentrationMgPerMl,
+            compound.totalMgInVial,
             compound.bacWaterRatioMl,
             compound.vialVolumeMl
           );
@@ -204,8 +208,8 @@ export default function PepTrakPage() {
   };
 
   const getCompoundColor = (id: string) => {
-    const compound = compounds.find(c => c.id === id);
-    return compound?.color || "#6b7280";
+    const index = compounds.findIndex(c => c.id === id);
+    return index >= 0 ? getCompoundColorByIndex(index) : "#6b7280";
   };
 
   const progress = getProgress();
@@ -388,7 +392,8 @@ export default function PepTrakPage() {
           </div>
         ) : (
           todayDoses.map((dose, idx) => {
-            const color = getCompoundColor(dose.compoundId);
+            const compoundIndex = compounds.findIndex(c => c.id === dose.compoundId);
+            const color = getCompoundColorByIndex(compoundIndex);
             const isTaken = checklist[`${dose.compoundId}-${dose.time}-${selectedDay}`];
             return (
               <div
@@ -482,13 +487,13 @@ export default function PepTrakPage() {
             Compound Inventory
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: 12, marginBottom: 32 }}>
-            {compounds.map((compound) => (
+            {compounds.map((compound, idx) => (
               <div
                 key={compound.id}
                 style={{
                   background: "var(--card)",
                   border: "1px solid var(--border)",
-                  borderTop: `3px solid ${compound.color}`,
+                  borderTop: `3px solid ${getCompoundColorByIndex(idx)}`,
                   borderRadius: 12,
                   padding: "16px",
                 }}
@@ -514,7 +519,7 @@ export default function PepTrakPage() {
                   <div><strong>Vial:</strong> {compound.vialVolumeMl} mL</div>
                   <div><strong>Dose:</strong> {compound.prescribedDosageMg} mg</div>
                   <div><strong>BAC Water:</strong> {compound.bacWaterRatioMl} mL</div>
-                  <div><strong>Units:</strong> {calculateUnits(compound.prescribedDosageMg, compound.concentrationMgPerMl, compound.bacWaterRatioMl, compound.vialVolumeMl)} units</div>
+                  <div><strong>Units:</strong> {calculateUnits(compound.prescribedDosageMg, compound.totalMgInVial, compound.bacWaterRatioMl, compound.vialVolumeMl)} units</div>
                   <div><strong>Schedule:</strong> {compound.schedule}</div>
                 </div>
               </div>
@@ -563,8 +568,7 @@ function SetupPanel({
   setEditingCompound: (c: CompoundConfig | null) => void;
 }) {
   const [compoundForm, setCompoundForm] = useState<Partial<CompoundConfig>>({
-    color: PRESET_COLORS[0],
-    concentrationMgPerMl: 5,
+    totalMgInVial: 10,
     vialVolumeMl: 2,
     prescribedDosageMg: 1,
     bacWaterRatioMl: 2,
@@ -586,8 +590,7 @@ function SetupPanel({
     const compound: CompoundConfig = {
       id: editingCompound?.id || crypto.randomUUID(),
       name: compoundForm.name || "Unnamed",
-      color: compoundForm.color || PRESET_COLORS[0],
-      concentrationMgPerMl: Number(compoundForm.concentrationMgPerMl) || 5,
+      totalMgInVial: Number(compoundForm.totalMgInVial) || 10,
       vialVolumeMl: Number(compoundForm.vialVolumeMl) || 2,
       prescribedDosageMg: Number(compoundForm.prescribedDosageMg) || 1,
       bacWaterRatioMl: Number(compoundForm.bacWaterRatioMl) || 2,
@@ -603,7 +606,6 @@ function SetupPanel({
     }
 
     setCompoundForm({
-      color: PRESET_COLORS[compounds.length % PRESET_COLORS.length],
       totalMgInVial: 10,
       vialVolumeMl: 2,
       prescribedDosageMg: 1,
@@ -654,25 +656,18 @@ function SetupPanel({
             />
           </div>
 
-          <div>
-            <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Color</label>
-            <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-              {PRESET_COLORS.map(color => (
-                <button
-                  key={color}
-                  type="button"
-                  onClick={() => setCompoundForm({ ...compoundForm, color })}
-                  style={{
-                    width: 28,
-                    height: 28,
-                    borderRadius: 6,
-                    background: color,
-                    border: compoundForm.color === color ? "2px solid #fff" : "2px solid transparent",
-                    cursor: "pointer",
-                  }}
-                />
-              ))}
-            </div>
+          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            <label style={{ fontSize: "0.75rem", color: "var(--muted)" }}>Color:</label>
+            <div
+              style={{
+                width: 20,
+                height: 20,
+                borderRadius: 4,
+                background: getCompoundColorByIndex(compounds.length),
+                border: "1px solid var(--border)",
+              }}
+            />
+            <span style={{ fontSize: "0.75rem", color: "var(--muted)" }}>Auto-assigned</span>
           </div>
         </div>
 
@@ -807,8 +802,7 @@ function SetupPanel({
               onClick={() => {
                 setEditingCompound(null);
                 setCompoundForm({
-                  color: PRESET_COLORS[compounds.length % PRESET_COLORS.length],
-                  concentrationMgPerMl: 5,
+                  totalMgInVial: 10,
                   vialVolumeMl: 2,
                   prescribedDosageMg: 1,
                   bacWaterRatioMl: 2,
@@ -883,7 +877,7 @@ function SetupPanel({
             <div>
               <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Compounds</label>
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                {compounds.map(c => (
+                {compounds.map((c, compoundIdx) => (
                   <button
                     key={c.id}
                     type="button"
@@ -895,9 +889,9 @@ function SetupPanel({
                     style={{
                       padding: "6px 12px",
                       borderRadius: 20,
-                      border: `1px solid ${scheduleCompoundIds.includes(c.id) ? c.color : "var(--border)"}`,
-                      background: scheduleCompoundIds.includes(c.id) ? `${c.color}20` : "var(--bg)",
-                      color: scheduleCompoundIds.includes(c.id) ? c.color : "var(--text)",
+                      border: `1px solid ${scheduleCompoundIds.includes(c.id) ? getCompoundColorByIndex(compoundIdx) : "var(--border)"}`,
+                      background: scheduleCompoundIds.includes(c.id) ? `${getCompoundColorByIndex(compoundIdx)}20` : "var(--bg)",
+                      color: scheduleCompoundIds.includes(c.id) ? getCompoundColorByIndex(compoundIdx) : "var(--text)",
                       fontSize: "0.8rem",
                       cursor: "pointer",
                       transition: "all 0.15s",
@@ -954,8 +948,8 @@ function SetupPanel({
                                     fontSize: "0.75rem",
                                     padding: "2px 8px",
                                     borderRadius: 10,
-                                    background: `${c.color}20`,
-                                    color: c.color,
+                                    background: `${getCompoundColorByIndex(compounds.findIndex(comp => comp.id === cid))}20`,
+                                    color: getCompoundColorByIndex(compounds.findIndex(comp => comp.id === cid)),
                                     display: "flex",
                                     alignItems: "center",
                                     gap: 4,
