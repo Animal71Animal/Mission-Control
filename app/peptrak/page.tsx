@@ -517,6 +517,44 @@ export default function PepTrakPage() {
   );
 }
 
+// Peptide Database for autocomplete
+const PEPTIDE_DATABASE = [
+  { name: "BPC-157", legalName: "Body Protection Compound-157", classification: "Peptide (Gastric)", effects: "Tissue repair, gut healing, tendon/ligament recovery", symptoms: "Nausea, dizziness, headache" },
+  { name: "TB-500", legalName: "Thymosin Beta-4 Fragment", classification: "Peptide (Thymic)", effects: "Tissue repair, reduced inflammation, wound healing", symptoms: "Head rush, nausea, lethargy" },
+  { name: "Semaglutide", legalName: "Semaglutide (Ozempic/Wegovy)", classification: "GLP-1 Receptor Agonist", effects: "Weight loss, appetite suppression, blood sugar control", symptoms: "Severe nausea, vomiting, pancreatitis, hypoglycemia" },
+  { name: "Tirzepatide", legalName: "Tirzepatide (Mounjaro/Zepbound)", classification: "GLP-1/GIP Dual Agonist", effects: "Weight loss, appetite suppression, improved insulin sensitivity", symptoms: "Severe nausea, vomiting, diarrhea, pancreatitis" },
+  { name: "Retatrutide", legalName: "Retatrutide (LY3437943)", classification: "GLP-1/GIP/Glucagon Triple Agonist", effects: "Weight loss, metabolic support, appetite suppression", symptoms: "Severe nausea, vomiting, dizziness, hypoglycemia" },
+  { name: "Tesamorelin", legalName: "Tesamorelin (Egrifta)", classification: "GHRH Analog (Growth Hormone Secretagogue)", effects: "Growth hormone release, fat loss, lean mass support", symptoms: "Joint pain, swelling, numbness, elevated blood sugar" },
+  { name: "CJC-1295", legalName: "CJC-1295 (with or without DAC)", classification: "GHRH Analog", effects: "Growth hormone release, muscle growth, fat loss", symptoms: "Flushing, headache, dizziness, water retention" },
+  { name: "Ipamorelin", legalName: "Ipamorelin", classification: "Growth Hormone Secretagogue (Ghrelin Mimetic)", effects: "Growth hormone pulse, improved sleep, recovery", symptoms: "Headache, dizziness, water retention" },
+  { name: "MK-677", legalName: "Ibutamoren (MK-677)", classification: "Growth Hormone Secretagogue (Oral)", effects: "Growth hormone release, appetite increase, improved sleep", symptoms: "Increased appetite, water retention, numbness, elevated blood sugar" },
+  { name: "HCG", legalName: "Human Chorionic Gonadotropin", classification: "Hormone (Glycoprotein)", effects: "Testicular function, hormone balance, fertility support", symptoms: "Headache, irritability, gynecomastia, blood clots" },
+  { name: "PT-141", legalName: "Bremelanotide (PT-141)", classification: "Melanocortin Receptor Agonist", effects: "Sexual arousal, libido enhancement", symptoms: "Nausea, flushing, headache, elevated blood pressure" },
+  { name: "Melanotan I", legalName: "Afamelanotide (Melanotan I)", classification: "Melanocortin Receptor Agonist (MC1R)", effects: "Skin pigmentation, UV protection", symptoms: "Nausea, facial flushing, fatigue, darkened moles" },
+  { name: "Melanotan II", legalName: "Melanotan II", classification: "Non-selective Melanocortin Agonist", effects: "Skin tanning, libido, appetite suppression", symptoms: "Nausea, facial flushing, spontaneous erections, mole darkening" },
+  { name: "Semax", legalName: "Semax (MEHFPGP)", classification: "Nootropic Peptide (ACTH Fragment)", effects: "Cognitive enhancement, focus, neuroprotection", symptoms: "Hair loss (rare), irritability, insomnia" },
+  { name: "Selank", legalName: "Selank (TP-7)", classification: "Nootropic/Anxiolytic Peptide", effects: "Anxiety reduction, cognitive enhancement, mood stabilization", symptoms: "Fatigue, nasal irritation (if intranasal)" },
+  { name: "Epithalon", legalName: "Epithalon (Epitalon)", classification: "Telomerase Activator Peptide", effects: "Telomere elongation, anti-aging, improved sleep", symptoms: "Generally well-tolerated; rare injection site reactions" },
+  { name: "GHK-Cu", legalName: "Copper Peptide GHK-Cu", classification: "Copper Peptide", effects: "Skin repair, collagen synthesis, wound healing, anti-aging", symptoms: "Skin irritation (topical), nausea (injection)" },
+  { name: "AOD-9604", legalName: "AOD-9604 (Anti-Obesity Drug)", classification: "HGH Fragment (176-191)", effects: "Fat loss, cartilage repair", symptoms: "Headache, indigestion, injection site swelling" },
+  { name: "DSIP", legalName: "Delta Sleep Inducing Peptide", classification: "Neuropeptide", effects: "Improved sleep quality, stress reduction", symptoms: "Morning grogginess, headache" },
+  { name: "Kisspeptin-10", legalName: "Kisspeptin-10", classification: "Hypothalamic Peptide", effects: "LH/FSH release, fertility support, hormone regulation", symptoms: "Headache, injection site reactions" },
+  { name: "Gonadorelin", legalName: "Gonadorelin (GnRH)", classification: "Gonadotropin-Releasing Hormone", effects: "LH/FSH stimulation, fertility, testosterone support", symptoms: "Headache, nausea, flushing" },
+  { name: "Oxytocin", legalName: "Oxytocin", classification: "Neuropeptide Hormone", effects: "Social bonding, trust, stress reduction", symptoms: "Nausea, headache, excessive contractions (high dose)" },
+  { name: "NAD+", legalName: "Nicotinamide Adenine Dinucleotide", classification: "Coenzyme", effects: "Cellular energy, DNA repair, anti-aging", symptoms: "Nausea, flushing, chest pressure (IV), cramping" },
+  { name: "LL-37", legalName: "Cathelicidin LL-37", classification: "Antimicrobial Peptide", effects: "Immune modulation, antimicrobial, wound healing", symptoms: "Injection site redness, mild fever" },
+  { name: "Thymosin Alpha-1", legalName: "Thymalfasin (Thymosin Alpha-1)", classification: "Immune Modulator Peptide", effects: "Immune system enhancement, anti-viral, anti-tumor", symptoms: "Injection site reactions, rash (rare)" },
+  { name: "SS-31", legalName: "Elamipretide (SS-31)", classification: "Mitochondrial Peptide", effects: "Mitochondrial function, cardiac protection, exercise endurance", symptoms: "Injection site reactions, headache" },
+  { name: "MOTS-c", legalName: "MOTS-c (Mitochondrial ORF)", classification: "Mitochondrial-Derived Peptide", effects: "Metabolic regulation, insulin sensitivity, exercise mimetic", symptoms: "Generally well-tolerated; rare GI discomfort" },
+  { name: "Humanin", legalName: "Humanin", classification: "Mitochondrial-Derived Peptide", effects: "Neuroprotection, anti-apoptotic, metabolic regulation", symptoms: "Limited data; generally well-tolerated" },
+  { name: "VIP", legalName: "Vasoactive Intestinal Peptide", classification: "Neuropeptide", effects: "Anti-inflammatory, immune regulation, CIRS treatment", symptoms: "Diarrhea, flushing, nasal congestion" },
+  { name: "KPV", legalName: "KPV (Alpha-MSH Fragment)", classification: "Anti-Inflammatory Peptide", effects: "Gut inflammation reduction, immune modulation", symptoms: "Generally well-tolerated" },
+  { name: "Dihexa", legalName: "Dihexa (N-hexanoic-Tyr-Ile-(6) aminohexanoic amide)", classification: "Nootropic (HGF Modulator)", effects: "Cognitive enhancement, synapse formation, memory", symptoms: "Overstimulation, anxiety, headache" },
+  { name: "PE-22-28", legalName: "PE-22-28 (Spadin Analog)", classification: "Antidepressant Peptide", effects: "Antidepressant, neurogenesis, TREK-1 inhibition", symptoms: "Headache, restlessness" },
+  { name: "Cerebrolysin", legalName: "Cerebrolysin", classification: "Neurotrophic Peptide Mix", effects: "Neuroprotection, stroke recovery, cognitive support", symptoms: "Dizziness, agitation, injection site pain" },
+  { name: "Pentosan Polysulfate", legalName: "Pentosan Polysulfate Sodium", classification: "Glycosaminoglycan", effects: "Joint health, cartilage repair, interstitial cystitis", symptoms: "GI upset, hair thinning, bruising" },
+];
+
 // Compound Form Component
 function CompoundForm({
   compounds,
@@ -550,6 +588,28 @@ function CompoundForm({
   const [form, setForm] = useState<Partial<CompoundConfig>>(defaultForm);
   const [vialUnit, setVialUnit] = useState<"mg" | "IU">("mg");
   const [doseUnit, setDoseUnit] = useState<"mg" | "mcg">("mg");
+  const [nameQuery, setNameQuery] = useState("");
+  const [showSuggestions, setShowSuggestions] = useState(false);
+
+  const filteredPeptides = nameQuery.length > 0
+    ? PEPTIDE_DATABASE.filter(p =>
+        p.name.toLowerCase().includes(nameQuery.toLowerCase()) ||
+        p.legalName.toLowerCase().includes(nameQuery.toLowerCase())
+      ).slice(0, 8)
+    : [];
+
+  const selectPeptide = (peptide: typeof PEPTIDE_DATABASE[0]) => {
+    setForm(prev => ({
+      ...prev,
+      name: peptide.name,
+      legalName: peptide.legalName,
+      classification: peptide.classification,
+      intendedEffects: peptide.effects,
+      overdoseSymptoms: peptide.symptoms,
+    }));
+    setNameQuery(peptide.name);
+    setShowSuggestions(false);
+  };
 
   // Display values (converted from internal mg)
   const vialDisplayValue = vialUnit === "IU" ? (form.totalMgInVial || 0) : (form.totalMgInVial || 0);
@@ -569,6 +629,7 @@ function CompoundForm({
   useEffect(() => {
     if (editingCompound) {
       setForm(editingCompound);
+      setNameQuery(editingCompound.name || "");
       setVialUnit(editingCompound.vialUnit || "mg");
       setDoseUnit(editingCompound.doseUnit || "mg");
     }
@@ -626,6 +687,7 @@ function CompoundForm({
       onAdd(compound);
     }
 
+    setNameQuery("");
     setForm({
       ...defaultForm,
       color: PRESET_COLORS[(compounds.length + 1) % PRESET_COLORS.length],
@@ -651,16 +713,48 @@ function CompoundForm({
       <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 16 }}>
         {/* Row 1: Name + Color */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 12 }}>
-          <div>
+          <div style={{ position: "relative" }}>
             <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Compound Name</label>
             <input
               type="text"
-              value={form.name || ""}
-              onChange={e => setForm({ ...form, name: e.target.value })}
-              placeholder="e.g., BPC-157"
+              value={nameQuery || form.name || ""}
+              onChange={e => {
+                setNameQuery(e.target.value);
+                setForm({ ...form, name: e.target.value });
+                setShowSuggestions(true);
+              }}
+              onFocus={() => { if (nameQuery.length > 0) setShowSuggestions(true); }}
+              placeholder="Start typing peptide name..."
               style={{ width: "100%", padding: "8px 12px", borderRadius: 8, border: "1px solid var(--border)", background: "var(--bg)", color: "var(--text)", fontSize: "0.875rem" }}
               required
             />
+            {showSuggestions && filteredPeptides.length > 0 && (
+              <div style={{
+                position: "absolute", top: "100%", left: 0, right: 0, zIndex: 50,
+                background: "var(--card)", border: "1px solid var(--border)", borderRadius: 8,
+                boxShadow: "0 8px 24px rgba(0,0,0,0.4)", maxHeight: 240, overflowY: "auto",
+                marginTop: 4,
+              }}>
+                {filteredPeptides.map(p => (
+                  <button
+                    key={p.name}
+                    type="button"
+                    onClick={() => selectPeptide(p)}
+                    style={{
+                      display: "block", width: "100%", textAlign: "left",
+                      padding: "10px 14px", border: "none", borderBottom: "1px solid var(--border)",
+                      background: "transparent", color: "var(--text)", cursor: "pointer",
+                      fontSize: "0.8rem",
+                    }}
+                    onMouseEnter={e => (e.currentTarget.style.background = "rgba(155,93,229,0.1)")}
+                    onMouseLeave={e => (e.currentTarget.style.background = "transparent")}
+                  >
+                    <div style={{ fontWeight: 600 }}>{p.name}</div>
+                    <div style={{ fontSize: "0.7rem", color: "var(--muted)" }}>{p.classification}</div>
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
           <div>
             <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Color</label>
@@ -749,11 +843,13 @@ function CompoundForm({
           </div>
           <div>
             <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>BAC Water (mL)</label>
+            <div style={{ height: 30 }} />{/* spacer to align with toggle rows */}
             <input type="number" step="0.1" value={form.bacWaterRatioMl || ""} onChange={e => setForm({ ...form, bacWaterRatioMl: parseFloat(e.target.value) })}
               style={{ width: "100%", padding: "8px 12px", borderRadius: 8, border: "1px solid var(--border)", background: "var(--bg)", color: "var(--text)", fontSize: "0.875rem" }} required />
           </div>
           <div>
             <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>Dosage (Units on Syringe)</label>
+            <div style={{ height: 30 }} />{/* spacer to align with toggle rows */}
             <div style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid var(--border)", background: "var(--bg)", color: "var(--accent)", fontSize: "0.875rem", fontWeight: 600, fontFamily: "monospace" }}>
               {calculatedUnits > 0 ? `${calculatedUnits} units` : "—"}
             </div>
