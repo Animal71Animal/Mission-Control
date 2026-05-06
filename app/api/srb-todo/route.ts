@@ -1,10 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
+import fs from 'fs';
+import path from 'path';
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GITHUB_REPO = 'Animal71Animal/Mission-Control';
 const GITHUB_BRANCH = 'main';
 const FILE_PATH = 'public/data/srb-todo.json';
 const API_URL = `https://api.github.com/repos/${GITHUB_REPO}/contents/${FILE_PATH}`;
+const LOCAL_PATH = path.join(process.cwd(), 'public', 'data', 'srb-todo.json');
 
 function ghHeaders() {
   const h: Record<string, string> = {
@@ -16,7 +19,7 @@ function ghHeaders() {
   return h;
 }
 
-async function fetchFile() {
+async function fetchFromGitHub() {
   const res = await fetch(`${API_URL}?ref=${GITHUB_BRANCH}`, { headers: ghHeaders(), cache: 'no-store' });
   if (!res.ok) throw new Error(`GitHub GET failed: ${res.status}`);
   const data = await res.json();
@@ -24,7 +27,28 @@ async function fetchFile() {
   return { tasks: decoded.tasks, sha: data.sha, last_updated: decoded.last_updated };
 }
 
-async function writeFile(tasks: unknown[], sha: string, msg: string) {
+function fetchFromLocal() {
+  try {
+    if (fs.existsSync(LOCAL_PATH)) {
+      return JSON.parse(fs.readFileSync(LOCAL_PATH, 'utf-8'));
+    }
+  } catch (e) {
+    console.error('[srb-todo] Local read failed:', e);
+  }
+  return null;
+}
+
+function writeToLocal(tasks: unknown[]) {
+  try {
+    fs.writeFileSync(LOCAL_PATH, JSON.stringify({ tasks, last_updated: new Date().toISOString() }, null, 2));
+    return true;
+  } catch (e) {
+    console.error('[srb-todo] Local write failed:', e);
+    return false;
+  }
+}
+
+async function writeToGitHub(tasks: unknown[], sha: string, msg: string) {
   const content = Buffer.from(JSON.stringify({ tasks, last_updated: new Date().toISOString() }, null, 2)).toString('base64');
   const res = await fetch(API_URL, {
     method: 'PUT', headers: ghHeaders(),
@@ -35,9 +59,14 @@ async function writeFile(tasks: unknown[], sha: string, msg: string) {
 
 export async function GET() {
   try {
-    const { tasks } = await fetchFile();
+    const { tasks } = await fetchFromGitHub();
     return NextResponse.json(tasks);
   } catch (err) {
+    console.error('[srb-todo] GitHub failed, falling back to local:', err);
+    const localData = fetchFromLocal();
+    if (localData && localData.tasks) {
+      return NextResponse.json(localData.tasks);
+    }
     return NextResponse.json([], { status: 500 });
   }
 }
@@ -47,11 +76,19 @@ export async function PATCH(request: NextRequest) {
     const body = await request.json();
     const { id, ...changes } = body;
     if (!id) return NextResponse.json({ ok: false, error: 'Missing id' }, { status: 400 });
-    const { tasks, sha } = await fetchFile();
+    let tasks, sha;
+    try {
+      ({ tasks, sha } = await fetchFromGitHub());
+    } catch {
+      const localData = fetchFromLocal();
+      tasks = localData?.tasks || [];
+      sha = null;
+    }
     const idx = tasks.findIndex((t: any) => t.id === id);
     if (idx === -1) return NextResponse.json({ ok: false, error: 'Not found' }, { status: 404 });
     tasks[idx] = { ...tasks[idx], ...changes };
-    await writeFile(tasks, sha, `fix: update srb-todo task ${id}`);
+    if (sha) await writeToGitHub(tasks, sha, `fix: update srb-todo task ${id}`);
+    writeToLocal(tasks);
     return NextResponse.json({ ok: true, task: tasks[idx] });
   } catch (err) {
     return NextResponse.json({ ok: false, error: String(err) }, { status: 500 });
@@ -61,9 +98,17 @@ export async function PATCH(request: NextRequest) {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { tasks, sha } = await fetchFile();
+    let tasks, sha;
+    try {
+      ({ tasks, sha } = await fetchFromGitHub());
+    } catch {
+      const localData = fetchFromLocal();
+      tasks = localData?.tasks || [];
+      sha = null;
+    }
     const newTask = { id: `srb-${Date.now()}`, completed: false, ...body };
-    await writeFile([...tasks, newTask], sha, `feat: add srb-todo task "${newTask.text}"`);
+    if (sha) await writeToGitHub([...tasks, newTask], sha, `feat: add srb-todo task "${newTask.text}"`);
+    writeToLocal([...tasks, newTask]);
     return NextResponse.json({ ok: true, task: newTask });
   } catch (err) {
     return NextResponse.json({ ok: false, error: String(err) }, { status: 500 });
@@ -74,9 +119,17 @@ export async function DELETE(request: NextRequest) {
   try {
     const id = new URL(request.url).searchParams.get('id');
     if (!id) return NextResponse.json({ ok: false, error: 'Missing id' }, { status: 400 });
-    const { tasks, sha } = await fetchFile();
+    let tasks, sha;
+    try {
+      ({ tasks, sha } = await fetchFromGitHub());
+    } catch {
+      const localData = fetchFromLocal();
+      tasks = localData?.tasks || [];
+      sha = null;
+    }
     const updated = tasks.filter((t: any) => t.id !== id);
-    await writeFile(updated, sha, `chore: delete srb-todo task ${id}`);
+    if (sha) await writeToGitHub(updated, sha, `chore: delete srb-todo task ${id}`);
+    writeToLocal(updated);
     return NextResponse.json({ ok: true });
   } catch (err) {
     return NextResponse.json({ ok: false, error: String(err) }, { status: 500 });

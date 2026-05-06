@@ -5,12 +5,15 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
+import fs from 'fs';
+import path from 'path';
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GITHUB_REPO = 'Animal71Animal/Mission-Control';
 const GITHUB_FILE_PATH = 'public/data/personal-tasks.json';
 const GITHUB_BRANCH = 'main';
 const GITHUB_API_BASE = `https://api.github.com/repos/${GITHUB_REPO}/contents/${GITHUB_FILE_PATH}`;
+const LOCAL_PATH = path.join(process.cwd(), 'public', 'data', 'personal-tasks.json');
 
 export interface PersonalTask {
   id: string;
@@ -90,6 +93,27 @@ async function writeToGitHub(
   }
 }
 
+function fetchFromLocal(): PersonalTask[] | null {
+  try {
+    if (fs.existsSync(LOCAL_PATH)) {
+      return JSON.parse(fs.readFileSync(LOCAL_PATH, 'utf-8'));
+    }
+  } catch (e) {
+    console.error('[personal-tasks] Local read failed:', e);
+  }
+  return null;
+}
+
+function writeToLocal(tasks: PersonalTask[]) {
+  try {
+    fs.writeFileSync(LOCAL_PATH, JSON.stringify(tasks, null, 2));
+    return true;
+  } catch (e) {
+    console.error('[personal-tasks] Local write failed:', e);
+    return false;
+  }
+}
+
 // ──────────────────────────────────────────────
 // GET /api/personal-tasks — returns live array
 // ──────────────────────────────────────────────
@@ -98,7 +122,11 @@ export async function GET() {
     const { tasks } = await fetchFromGitHub();
     return NextResponse.json(tasks);
   } catch (err) {
-    console.error('[GET /api/personal-tasks]', err);
+    console.error('[GET /api/personal-tasks] GitHub failed, falling back to local:', err);
+    const localTasks = fetchFromLocal();
+    if (localTasks) {
+      return NextResponse.json(localTasks);
+    }
     return NextResponse.json([], { status: 500 });
   }
 }
@@ -111,11 +139,18 @@ export async function GET() {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { tasks, sha } = await fetchFromGitHub();
+    let tasks: PersonalTask[], sha: string;
+    try {
+      ({ tasks, sha } = await fetchFromGitHub());
+    } catch {
+      tasks = fetchFromLocal() || [];
+      sha = '';
+    }
 
     if (Array.isArray(body)) {
       // Bulk replace / full sync
-      await writeToGitHub(body, sha, 'chore: bulk sync personal-tasks');
+      if (sha) await writeToGitHub(body, sha, 'chore: bulk sync personal-tasks');
+      writeToLocal(body);
       return NextResponse.json({ ok: true, count: body.length });
     }
 
@@ -133,7 +168,8 @@ export async function POST(request: NextRequest) {
     };
 
     const updated = [...tasks, newTask];
-    await writeToGitHub(updated, sha, `feat: add task "${newTask.title}"`);
+    if (sha) await writeToGitHub(updated, sha, `feat: add task "${newTask.title}"`);
+    writeToLocal(updated);
     return NextResponse.json({ ok: true, task: newTask });
   } catch (err) {
     console.error('[POST /api/personal-tasks]', err);
@@ -155,7 +191,13 @@ export async function PATCH(request: NextRequest) {
       return NextResponse.json({ ok: false, error: 'Missing task id' }, { status: 400 });
     }
 
-    const { tasks, sha } = await fetchFromGitHub();
+    let tasks: PersonalTask[], sha: string;
+    try {
+      ({ tasks, sha } = await fetchFromGitHub());
+    } catch {
+      tasks = fetchFromLocal() || [];
+      sha = '';
+    }
     const idx = tasks.findIndex((t) => t.id === id);
 
     if (idx === -1) {
@@ -166,7 +208,8 @@ export async function PATCH(request: NextRequest) {
     const updated = [...tasks];
     updated[idx] = updatedTask;
 
-    await writeToGitHub(updated, sha, `fix: update task "${updatedTask.title}"`);
+    if (sha) await writeToGitHub(updated, sha, `fix: update task "${updatedTask.title}"`);
+    writeToLocal(updated);
     return NextResponse.json({ ok: true, task: updatedTask });
   } catch (err) {
     console.error('[PATCH /api/personal-tasks]', err);
@@ -186,14 +229,21 @@ export async function DELETE(request: NextRequest) {
       return NextResponse.json({ ok: false, error: 'Missing task id' }, { status: 400 });
     }
 
-    const { tasks, sha } = await fetchFromGitHub();
+    let tasks: PersonalTask[], sha: string;
+    try {
+      ({ tasks, sha } = await fetchFromGitHub());
+    } catch {
+      tasks = fetchFromLocal() || [];
+      sha = '';
+    }
     const updated = tasks.filter((t) => t.id !== id);
 
     if (updated.length === tasks.length) {
       return NextResponse.json({ ok: false, error: `Task ${id} not found` }, { status: 404 });
     }
 
-    await writeToGitHub(updated, sha, `chore: delete task ${id}`);
+    if (sha) await writeToGitHub(updated, sha, `chore: delete task ${id}`);
+    writeToLocal(updated);
     return NextResponse.json({ ok: true, deleted: id });
   } catch (err) {
     console.error('[DELETE /api/personal-tasks]', err);

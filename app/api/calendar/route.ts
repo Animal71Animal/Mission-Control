@@ -1,16 +1,42 @@
 import { NextRequest, NextResponse } from "next/server";
+import fs from "fs";
+import path from "path";
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || "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";
 const GITHUB_REPO = "Animal71Animal/Mission-Control";
+const LOCAL_DATA_DIR = path.join(process.cwd(), "public", "data");
 
-async function fetchGitHubJSON(path: string): Promise<any> {
+async function fetchGitHubJSON(filePath: string): Promise<any> {
   const response = await fetch(
-    `https://api.github.com/repos/${GITHUB_REPO}/contents/${path}`,
+    `https://api.github.com/repos/${GITHUB_REPO}/contents/${filePath}`,
     { headers: { Authorization: `token ${GITHUB_TOKEN}` }, cache: "no-store" }
   );
   if (!response.ok) return null;
   const data = await response.json();
   return JSON.parse(Buffer.from(data.content, "base64").toString("utf-8"));
+}
+
+function fetchLocalJSON(filePath: string): any {
+  const localPath = path.join(LOCAL_DATA_DIR, path.basename(filePath));
+  try {
+    if (fs.existsSync(localPath)) {
+      return JSON.parse(fs.readFileSync(localPath, "utf-8"));
+    }
+  } catch (e) {
+    console.error(`[calendar] Local read failed for ${filePath}:`, e);
+  }
+  return null;
+}
+
+function writeLocalJSON(filePath: string, data: any): boolean {
+  const localPath = path.join(LOCAL_DATA_DIR, path.basename(filePath));
+  try {
+    fs.writeFileSync(localPath, JSON.stringify(data, null, 2));
+    return true;
+  } catch (e) {
+    console.error(`[calendar] Local write failed for ${filePath}:`, e);
+    return false;
+  }
 }
 
 // GET /api/calendar?from=YYYY-MM-DD&to=YYYY-MM-DD
@@ -20,12 +46,16 @@ export async function GET(request: NextRequest) {
   const to = searchParams.get("to") || new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
 
   try {
-    // Fetch all sources in parallel
-    const [calendarData, srbTodoData, personalTasksData] = await Promise.all([
+    // Fetch all sources in parallel (GitHub first, fallback to local)
+    const [calendarDataRaw, srbTodoDataRaw, personalTasksDataRaw] = await Promise.all([
       fetchGitHubJSON("public/data/calendar-events.json"),
       fetchGitHubJSON("public/data/srb-todo.json"),
       fetchGitHubJSON("public/data/personal-tasks.json"),
     ]);
+
+    const calendarData = calendarDataRaw ?? fetchLocalJSON("public/data/calendar-events.json");
+    const srbTodoData = srbTodoDataRaw ?? fetchLocalJSON("public/data/srb-todo.json");
+    const personalTasksData = personalTasksDataRaw ?? fetchLocalJSON("public/data/personal-tasks.json");
 
     const allEvents: any[] = [];
 
@@ -94,22 +124,24 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { title, date, time, endTime, location, notes, category } = body;
 
-    // Fetch current events
-    const getResponse = await fetch(
-      `https://api.github.com/repos/${GITHUB_REPO}/contents/public/data/calendar-events.json`,
-      {
-        headers: { Authorization: `token ${GITHUB_TOKEN}` },
-      }
-    );
-
+    // Fetch current events (GitHub first, fallback to local)
     let calendarData = { events: [] };
     let sha = "";
 
-    if (getResponse.ok) {
-      const data = await getResponse.json();
-      sha = data.sha;
-      const content = Buffer.from(data.content, "base64").toString("utf-8");
-      calendarData = JSON.parse(content);
+    try {
+      const getResponse = await fetch(
+        `https://api.github.com/repos/${GITHUB_REPO}/contents/public/data/calendar-events.json`,
+        { headers: { Authorization: `token ${GITHUB_TOKEN}` } }
+      );
+      if (getResponse.ok) {
+        const data = await getResponse.json();
+        sha = data.sha;
+        const content = Buffer.from(data.content, "base64").toString("utf-8");
+        calendarData = JSON.parse(content);
+      }
+    } catch {
+      const localData = fetchLocalJSON("public/data/calendar-events.json");
+      if (localData) calendarData = localData;
     }
 
     // Add new event
@@ -127,26 +159,28 @@ export async function POST(request: NextRequest) {
 
     calendarData.events.push(newEvent);
 
-    // Push to GitHub
-    const updateResponse = await fetch(
-      `https://api.github.com/repos/${GITHUB_REPO}/contents/public/data/calendar-events.json`,
-      {
-        method: "PUT",
-        headers: {
-          Authorization: `token ${GITHUB_TOKEN}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          message: `Add calendar event: ${title}`,
-          content: Buffer.from(JSON.stringify(calendarData, null, 2)).toString("base64"),
-          sha,
-        }),
+    // Push to GitHub if possible, always write local
+    if (sha) {
+      const updateResponse = await fetch(
+        `https://api.github.com/repos/${GITHUB_REPO}/contents/public/data/calendar-events.json`,
+        {
+          method: "PUT",
+          headers: {
+            Authorization: `token ${GITHUB_TOKEN}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            message: `Add calendar event: ${title}`,
+            content: Buffer.from(JSON.stringify(calendarData, null, 2)).toString("base64"),
+            sha,
+          }),
+        }
+      );
+      if (!updateResponse.ok) {
+        console.error("Calendar GitHub write failed, using local only");
       }
-    );
-
-    if (!updateResponse.ok) {
-      throw new Error("Failed to update GitHub");
     }
+    writeLocalJSON("public/data/calendar-events.json", calendarData);
 
     return NextResponse.json({ success: true, event: newEvent });
   } catch (error: any) {
@@ -162,18 +196,24 @@ export async function PUT(request: NextRequest) {
     const body = await request.json();
     const { title, date, time, endTime, location, notes, category } = body;
 
-    // Fetch current events
-    const getResponse = await fetch(
-      `https://api.github.com/repos/${GITHUB_REPO}/contents/public/data/calendar-events.json`,
-      {
-        headers: { Authorization: `token ${GITHUB_TOKEN}` },
+    // Fetch current events (GitHub first, fallback to local)
+    let calendarData: any = { events: [] };
+    let sha = "";
+    try {
+      const getResponse = await fetch(
+        `https://api.github.com/repos/${GITHUB_REPO}/contents/public/data/calendar-events.json`,
+        { headers: { Authorization: `token ${GITHUB_TOKEN}` } }
+      );
+      if (getResponse.ok) {
+        const data = await getResponse.json();
+        sha = data.sha;
+        const content = Buffer.from(data.content, "base64").toString("utf-8");
+        calendarData = JSON.parse(content);
       }
-    );
-
-    const data = await getResponse.json();
-    const sha = data.sha;
-    const content = Buffer.from(data.content, "base64").toString("utf-8");
-    const calendarData = JSON.parse(content);
+    } catch {
+      const localData = fetchLocalJSON("public/data/calendar-events.json");
+      if (localData) calendarData = localData;
+    }
 
     // Find and update event
     const eventIndex = calendarData.events.findIndex((e: any) => e.id === id);
@@ -193,26 +233,28 @@ export async function PUT(request: NextRequest) {
       updated_at: new Date().toISOString(),
     };
 
-    // Push to GitHub
-    const updateResponse = await fetch(
-      `https://api.github.com/repos/${GITHUB_REPO}/contents/public/data/calendar-events.json`,
-      {
-        method: "PUT",
-        headers: {
-          Authorization: `token ${GITHUB_TOKEN}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          message: `Update calendar event: ${title}`,
-          content: Buffer.from(JSON.stringify(calendarData, null, 2)).toString("base64"),
-          sha,
-        }),
+    // Push to GitHub if possible, always write local
+    if (sha) {
+      const updateResponse = await fetch(
+        `https://api.github.com/repos/${GITHUB_REPO}/contents/public/data/calendar-events.json`,
+        {
+          method: "PUT",
+          headers: {
+            Authorization: `token ${GITHUB_TOKEN}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            message: `Update calendar event: ${title}`,
+            content: Buffer.from(JSON.stringify(calendarData, null, 2)).toString("base64"),
+            sha,
+          }),
+        }
+      );
+      if (!updateResponse.ok) {
+        console.error("Calendar GitHub update failed, using local only");
       }
-    );
-
-    if (!updateResponse.ok) {
-      throw new Error("Failed to update GitHub");
     }
+    writeLocalJSON("public/data/calendar-events.json", calendarData);
 
     return NextResponse.json({ success: true, event: calendarData.events[eventIndex] });
   } catch (error: any) {
@@ -226,42 +268,50 @@ export async function DELETE(request: NextRequest) {
   try {
     const id = request.url.split("/").pop();
     
-    // Fetch current events
-    const getResponse = await fetch(
-      `https://api.github.com/repos/${GITHUB_REPO}/contents/public/data/calendar-events.json`,
-      {
-        headers: { Authorization: `token ${GITHUB_TOKEN}` },
+    // Fetch current events (GitHub first, fallback to local)
+    let calendarData: any = { events: [] };
+    let sha = "";
+    try {
+      const getResponse = await fetch(
+        `https://api.github.com/repos/${GITHUB_REPO}/contents/public/data/calendar-events.json`,
+        { headers: { Authorization: `token ${GITHUB_TOKEN}` } }
+      );
+      if (getResponse.ok) {
+        const data = await getResponse.json();
+        sha = data.sha;
+        const content = Buffer.from(data.content, "base64").toString("utf-8");
+        calendarData = JSON.parse(content);
       }
-    );
-
-    const data = await getResponse.json();
-    const sha = data.sha;
-    const content = Buffer.from(data.content, "base64").toString("utf-8");
-    const calendarData = JSON.parse(content);
+    } catch {
+      const localData = fetchLocalJSON("public/data/calendar-events.json");
+      if (localData) calendarData = localData;
+    }
 
     // Remove event
     calendarData.events = calendarData.events.filter((e: any) => e.id !== id);
 
-    // Push to GitHub
-    const updateResponse = await fetch(
-      `https://api.github.com/repos/${GITHUB_REPO}/contents/public/data/calendar-events.json`,
-      {
-        method: "PUT",
-        headers: {
-          Authorization: `token ${GITHUB_TOKEN}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          message: `Delete calendar event: ${id}`,
-          content: Buffer.from(JSON.stringify(calendarData, null, 2)).toString("base64"),
-          sha,
-        }),
+    // Push to GitHub if possible, always write local
+    if (sha) {
+      const updateResponse = await fetch(
+        `https://api.github.com/repos/${GITHUB_REPO}/contents/public/data/calendar-events.json`,
+        {
+          method: "PUT",
+          headers: {
+            Authorization: `token ${GITHUB_TOKEN}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            message: `Delete calendar event: ${id}`,
+            content: Buffer.from(JSON.stringify(calendarData, null, 2)).toString("base64"),
+            sha,
+          }),
+        }
+      );
+      if (!updateResponse.ok) {
+        console.error("Calendar GitHub delete failed, using local only");
       }
-    );
-
-    if (!updateResponse.ok) {
-      throw new Error("Failed to update GitHub");
     }
+    writeLocalJSON("public/data/calendar-events.json", calendarData);
 
     return NextResponse.json({ success: true });
   } catch (error: any) {
