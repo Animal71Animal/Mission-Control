@@ -64,10 +64,24 @@ export default function TeslaPage() {
     fetch("/api/tesla")
       .then((res) => res.json())
       .then((data) => {
-        setData(data);
+        if (data && data.sessions) {
+          setData(data);
+        } else {
+          // Fallback to local JSON
+          fetch("/data/tesla-charging.json")
+            .then((res) => res.json())
+            .then((localData) => { if (localData && localData.sessions) setData(localData); })
+            .catch(() => {});
+        }
         setLoading(false);
       })
-      .catch(() => setLoading(false));
+      .catch(() => {
+        fetch("/data/tesla-charging.json")
+          .then((res) => res.json())
+          .then((localData) => { if (localData && localData.sessions) setData(localData); })
+          .catch(() => {})
+          .finally(() => setLoading(false));
+      });
   }, []);
 
   if (loading) {

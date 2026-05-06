@@ -88,8 +88,17 @@ export default function CalendarPage() {
         setEvents(data.events || []);
       }
     } catch (e) {
-      setError("Failed to connect to calendar service");
-      setEvents([]);
+      setError("Failed to connect to calendar service — using local data");
+      // Fallback: load from local JSON
+      try {
+        const localRes = await fetch("/data/calendar-events.json");
+        const localData = await localRes.json();
+        const calEvents = localData?.events || [];
+        const filtered = calEvents.filter((e: any) => e.date >= fromDate && e.date <= toDate);
+        setEvents(filtered);
+      } catch {
+        setEvents([]);
+      }
     }
   }, [currentYear, currentMonth]);
 

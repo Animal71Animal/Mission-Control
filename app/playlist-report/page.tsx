@@ -79,8 +79,8 @@ export default function PlaylistReportPage() {
   useEffect(() => {
     Promise.all([
       fetch("/data/openclaw-playlist-report-full.md").then(r => r.ok ? r.text() : "").catch(() => ""),
-      fetch("/api/openclaw-episodes").then(r => r.json()).catch(() => ({ episodes: [] })),
-      fetch("/api/openclaw-episodes", { method: 'PUT' }).then(r => r.json()).catch(() => ({ completed: [], important: [] })),
+      fetch("/api/openclaw-episodes").then(r => r.json()).catch(() => null),
+      fetch("/api/openclaw-episodes", { method: 'PUT' }).then(r => r.json()).catch(() => null),
     ]).then(([mdContent, ocData, playlistState]) => {
       const entries = mdContent ? parseReport(mdContent) : [];
       const oc: OcEpisode[] = ocData.episodes || [];

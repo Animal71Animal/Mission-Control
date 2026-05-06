@@ -37,10 +37,26 @@ export default function SrbTipsPage() {
     fetch("/api/srb-tips")
       .then((res) => res.json())
       .then((data) => {
-        setData(data);
+        if (data && data.monthlyTotals && data.monthlyTotals.length > 0) {
+          setData(data);
+        } else {
+          // Fallback to local JSON if API returns empty/error
+          fetch("/data/srb-tips-data.json")
+            .then((r) => r.json())
+            .then((localData) => setData(localData))
+            .catch(() => setData(null));
+        }
         setLoading(false);
       })
-      .catch(() => setLoading(false));
+      .catch(() => {
+        fetch("/data/srb-tips-data.json")
+          .then((r) => r.json())
+          .then((localData) => {
+            setData(localData);
+            setLoading(false);
+          })
+          .catch(() => setLoading(false));
+      });
   }, []);
 
   if (loading || !data) {

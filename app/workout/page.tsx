@@ -129,33 +129,47 @@ export default function WorkoutPage() {
   const todayDay = getDayName();
   const todayPlan = WEEKLY_STRUCTURE.find((d) => d.day === todayDay);
 
-  // Load from GitHub API on mount
+  // Load from GitHub API on mount, fallback to local JSON
   useEffect(() => {
     fetch("/api/workout")
       .then((res) => res.json())
       .then((data: WorkoutData) => {
-        setLogs(data.logs || {});
-        setWeights(data.weights || {});
+        if (data && data.logs) {
+          setLogs(data.logs || {});
+          setWeights(data.weights || {});
 
-        // Restore today's session if it exists
-        if (data.logs && data.logs[todayKey]) {
-          const todayLog = data.logs[todayKey];
-          const r: Record<string, number[]> = {};
-          const c: Record<string, boolean[]> = {};
-          const w: Record<string, number> = {};
-          Object.entries(todayLog.exercises).forEach(([id, exData]: [string, any]) => {
-            r[id] = exData.repsDone || new Array(EXERCISES.find((e) => e.id === id)?.sets || 3).fill(0);
-            c[id] = exData.completed || new Array(EXERCISES.find((e) => e.id === id)?.sets || 3).fill(false);
-            w[id] = exData.weight || 0;
-          });
-          setRepsDone(r);
-          setChecked(c);
-          setWeights((prev) => ({ ...prev, ...w }));
-          setTodayComplete(todayLog.completed);
+          // Restore today's session if it exists
+          if (data.logs && data.logs[todayKey]) {
+            const todayLog = data.logs[todayKey];
+            const r: Record<string, number[]> = {};
+            const c: Record<string, boolean[]> = {};
+            const w: Record<string, number> = {};
+            Object.entries(todayLog.exercises).forEach(([id, exData]: [string, any]) => {
+              r[id] = exData.repsDone || new Array(EXERCISES.find((e) => e.id === id)?.sets || 3).fill(0);
+              c[id] = exData.completed || new Array(EXERCISES.find((e) => e.id === id)?.sets || 3).fill(false);
+              w[id] = exData.weight || 0;
+            });
+            setRepsDone(r);
+            setChecked(c);
+            setWeights((prev) => ({ ...prev, ...w }));
+            setTodayComplete(todayLog.completed);
+          }
         }
         setLoading(false);
       })
-      .catch(() => setLoading(false));
+      .catch(() => {
+        // Fallback to local JSON
+        fetch("/data/workout-logs.json")
+          .then((res) => res.json())
+          .then((data: WorkoutData) => {
+            if (data && data.logs) {
+              setLogs(data.logs || {});
+              setWeights(data.weights || {});
+            }
+            setLoading(false);
+          })
+          .catch(() => setLoading(false));
+      });
   }, []);
 
   // Auto-save to GitHub when state changes (debounced)

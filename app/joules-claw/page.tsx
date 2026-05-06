@@ -36,11 +36,25 @@ export default function JoulesClaw() {
     fetch("/api/joules-claw")
       .then(r => r.json())
       .then(data => {
-        setVideos(data.videos || []);
-        setPairings(data.pairings || []);
+        if (data && data.videos) {
+          setVideos(data.videos || []);
+          setPairings(data.pairings || []);
+        }
         setLoading(false);
       })
-      .catch(() => setLoading(false));
+      .catch(() => {
+        // Fallback: load from local JSON
+        fetch("/data/joules-claw.json")
+          .then(r => r.json())
+          .then(data => {
+            if (data && data.videos) {
+              setVideos(data.videos || []);
+              setPairings(data.pairings || []);
+            }
+            setLoading(false);
+          })
+          .catch(() => setLoading(false));
+      });
   }, []);
 
   // Add video from OpenClaw Videos tab

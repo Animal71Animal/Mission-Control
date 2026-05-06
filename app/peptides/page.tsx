@@ -63,7 +63,10 @@ export default function PeptidesPage() {
     ])
       .then(async ([res1, res2]) => {
         const peptideData = await res1.json();
-        const checklistData = await res2.json();
+        let checklistData = {};
+        if (res2.ok) {
+          try { checklistData = await res2.json(); } catch { /* ignore */ }
+        }
         setData(peptideData);
         setChecklist(checklistData);
         setLoading(false);

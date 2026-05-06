@@ -61,11 +61,15 @@ export default function UberEarningsPage() {
 
   useEffect(() => {
     Promise.all([
-      fetch("/api/uber-profit").then((r) => r.json()).catch(() => ({ uber_shifts: [], expenses: [] })),
-      fetch("/data/uber-earnings.json").then((r) => r.json()).catch(() => ({ dailySummaries: [] }))
+      fetch("/api/uber-profit").then((r) => r.json()).catch(() => null),
+      fetch("/data/uber-earnings.json").then((r) => r.json()).catch(() => null)
     ]).then(([profitData, earningsData]) => {
-      setData(profitData);
-      setEarnings(earningsData.dailySummaries || []);
+      if (profitData && profitData.uber_shifts) {
+        setData(profitData);
+      }
+      if (earningsData && earningsData.dailySummaries) {
+        setEarnings(earningsData.dailySummaries || []);
+      }
       setLoaded(true);
     }).catch(() => setLoaded(true));
   }, []);

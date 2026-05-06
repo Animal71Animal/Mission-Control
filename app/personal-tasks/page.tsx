@@ -64,8 +64,24 @@ export default function PersonalTasksPage() {
   useEffect(() => {
     fetch("/api/personal-tasks")
       .then((r) => r.json())
-      .then((data) => { setTasks(Array.isArray(data) ? data : []); setLoaded(true); })
-      .catch(() => setLoaded(true));
+      .then((data) => {
+        if (Array.isArray(data) && data.length > 0) {
+          setTasks(data);
+        } else {
+          // Fallback to local JSON
+          fetch("/data/personal-tasks.json")
+            .then((r) => r.json())
+            .then((localData) => { setTasks(Array.isArray(localData) ? localData : []); })
+            .catch(() => setTasks([]));
+        }
+        setLoaded(true);
+      })
+      .catch(() => {
+        fetch("/data/personal-tasks.json")
+          .then((r) => r.json())
+          .then((localData) => { setTasks(Array.isArray(localData) ? localData : []); setLoaded(true); })
+          .catch(() => setLoaded(true));
+      });
   }, []);
 
   const resetForm = () => { setTitle(""); setNotes(""); setCategory("Personal"); setPriority("medium"); setDueDate(""); };

@@ -39,7 +39,11 @@ export default function AnalyticsPage() {
     try {
       const res = await fetch("/api/analytics", { cache: "no-store" });
       const json = await res.json();
-      setData(json);
+      if (json && json.hits) {
+        setData(json);
+      } else {
+        setData({ error: "Invalid analytics data" });
+      }
     } catch (err) {
       setData({ error: String(err) });
     } finally {

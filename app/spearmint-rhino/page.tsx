@@ -40,9 +40,21 @@ export default function SpearmintRhinoPage() {
 
   useEffect(() => {
     fetch("/api/srb-todo").then(r => r.json()).then(data => {
-      setTasks(data);
+      if (Array.isArray(data) && data.length > 0) {
+        setTasks(data);
+      } else {
+        // Fallback to local JSON
+        fetch("/data/srb-todo.json").then(r => r.json()).then(localData => {
+          setTasks(Array.isArray(localData) ? localData : []);
+        }).catch(() => setTasks([]));
+      }
       setLoading(false);
-    }).catch(() => setLoading(false));
+    }).catch(() => {
+      fetch("/data/srb-todo.json").then(r => r.json()).then(localData => {
+        setTasks(Array.isArray(localData) ? localData : []);
+        setLoading(false);
+      }).catch(() => setLoading(false));
+    });
   }, []);
 
   const save = async (updated: Task[], msg?: string) => {

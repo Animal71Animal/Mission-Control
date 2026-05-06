@@ -34,10 +34,23 @@ export default function DJAutomationRoadmap() {
     fetch("/api/dj-automation-roadmap")
       .then((r) => r.json())
       .then((d) => {
-        setData(d);
+        if (d && d.phases) {
+          setData(d);
+        } else {
+          fetch("/data/dj-automation-roadmap.json")
+            .then((r) => r.json())
+            .then((localData) => { if (localData && localData.phases) setData(localData); })
+            .catch(() => {});
+        }
         setLoading(false);
       })
-      .catch(() => setLoading(false));
+      .catch(() => {
+        fetch("/data/dj-automation-roadmap.json")
+          .then((r) => r.json())
+          .then((localData) => { if (localData && localData.phases) setData(localData); })
+          .catch(() => {})
+          .finally(() => setLoading(false));
+      });
   }, []);
 
   if (loading || !data) {
