@@ -52,46 +52,41 @@ function getTodayDayName(): string {
 
 export default function PepTrakPage() {
   const [compounds, setCompounds] = useState<CompoundConfig[]>([]);
-  const [checklist, setChecklist] = useState<Record<string, boolean>>({});
+  const [checklist, setChecklist] = useState<Record<string, boolean>>(
+    () => {
+      try {
+        const stored = localStorage.getItem('peptrak-checklist');
+        return stored ? JSON.parse(stored) : {};
+      } catch {
+        return {};
+      }
+    }
+  );
   const [selectedDay, setSelectedDay] = useState<string>(getTodayDayName());
-  const [showAddForm, setShowAddForm] = useState(true);
+  const [showAddForm, setShowAddForm] = useState(false);
   const [showGuide, setShowGuide] = useState(false);
   const [editingCompound, setEditingCompound] = useState<CompoundConfig | null>(null);
   const [isSyncing, setIsSyncing] = useState(false);
 
-  // Load from GitHub API on mount
+  // Load from GitHub API on mount (merge with localStorage as fallback)
   useEffect(() => {
     fetch("/api/peptrak")
       .then(r => r.json())
       .then(data => {
         if (data.compounds && Array.isArray(data.compounds) && data.compounds.length > 0) {
           setCompounds(data.compounds);
-        } else {
-          // Fallback to localStorage if GitHub is empty
-          const saved = localStorage.getItem("peptrak-v2-compounds");
-          if (saved) {
-            try { setCompounds(JSON.parse(saved)); } catch {}
-          }
         }
         if (data.checklist && typeof data.checklist === "object") {
-          setChecklist(data.checklist);
-        } else {
-          const savedChecklist = localStorage.getItem("peptrak-v2-checklist");
-          if (savedChecklist) {
-            try { setChecklist(JSON.parse(savedChecklist)); } catch {}
-          }
+          // Merge GitHub data INTO localStorage state (localStorage is source of truth on load)
+          setChecklist(prev => {
+            const merged = { ...prev, ...data.checklist };
+            try { localStorage.setItem('peptrak-checklist', JSON.stringify(merged)); } catch {}
+            return merged;
+          });
         }
       })
       .catch(() => {
-        // Fallback to localStorage on error
-        const saved = localStorage.getItem("peptrak-v2-compounds");
-        const savedChecklist = localStorage.getItem("peptrak-v2-checklist");
-        if (saved) {
-          try { setCompounds(JSON.parse(saved)); } catch {}
-        }
-        if (savedChecklist) {
-          try { setChecklist(JSON.parse(savedChecklist)); } catch {}
-        }
+        // Silent fail — keep localStorage state
       });
   }, []);
 
@@ -105,38 +100,11 @@ export default function PepTrakPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ compounds }),
       })
-        .then(() => {
-          // Also update localStorage as backup
-          localStorage.setItem("peptrak-v2-compounds", JSON.stringify(compounds));
-        })
-        .catch(() => {
-          localStorage.setItem("peptrak-v2-compounds", JSON.stringify(compounds));
-        })
+        .catch(() => {})
         .finally(() => setIsSyncing(false));
     }, 2000);
     return () => clearTimeout(timer);
   }, [compounds]);
-
-  // Sync checklist to GitHub (debounced)
-  useEffect(() => {
-    if (Object.keys(checklist).length === 0) return;
-    const timer = setTimeout(() => {
-      setIsSyncing(true);
-      fetch("/api/peptrak", {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ checklist }),
-      })
-        .then(() => {
-          localStorage.setItem("peptrak-v2-checklist", JSON.stringify(checklist));
-        })
-        .catch(() => {
-          localStorage.setItem("peptrak-v2-checklist", JSON.stringify(checklist));
-        })
-        .finally(() => setIsSyncing(false));
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, [checklist]);
 
   const addCompound = (compound: CompoundConfig) => {
     setCompounds(prev => [...prev, compound]);
@@ -161,14 +129,26 @@ export default function PepTrakPage() {
   };
 
   const toggleDose = (compoundId: string, day: string) => {
-    const dateKey = new Date().toISOString().split("T")[0];
-    const key = `${compoundId}-${day}-${dateKey}`;
-    setChecklist(prev => ({ ...prev, [key]: !prev[key] }));
+    const key = `${day}-${compoundId}`;
+    setChecklist(prev => {
+      const next = { ...prev, [key]: !prev[key] };
+      // Persist locally first (source of truth)
+      try { localStorage.setItem('peptrak-checklist', JSON.stringify(next)); } catch {}
+      // Best-effort sync to GitHub
+      setIsSyncing(true);
+      fetch("/api/peptrak", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ checklist: { [key]: next[key] } }),
+      })
+        .catch(() => {})
+        .finally(() => setIsSyncing(false));
+      return next;
+    });
   };
 
   const isDoseDone = (compoundId: string, day: string) => {
-    const dateKey = new Date().toISOString().split("T")[0];
-    const key = `${compoundId}-${day}-${dateKey}`;
+    const key = `${day}-${compoundId}`;
     return checklist[key] || false;
   };
 
