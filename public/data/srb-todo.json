@@ -3,7 +3,7 @@
     {
       "id": "1",
       "text": "Rearrange DJ booth",
-      "completed": true,
+      "completed": false,
       "category": "Setup",
       "priority": "high",
       "due_date": "2026-05-05"
@@ -43,7 +43,7 @@
     {
       "id": "6",
       "text": "Fix Dressing Room Speakers",
-      "completed": true,
+      "completed": false,
       "category": "Audio",
       "priority": "high",
       "due_date": "2026-05-05"
@@ -137,14 +137,6 @@
       "due_date": null
     },
     {
-      "id": "18",
-      "text": "Write email to Amanda (thank you + request hazer, Vesuvio fix, lighting programmer)",
-      "completed": true,
-      "category": "Communication",
-      "priority": "high",
-      "due_date": null
-    },
-    {
       "id": "19",
       "text": "Print more Spotify dancer instructions",
       "completed": true,
@@ -185,5 +177,5 @@
       "due_date": "2026-05-05"
     }
   ],
-  "last_updated": "2026-05-08T07:40:38.774Z"
+  "last_updated": "2026-04-30T06:53:49.865Z"
 }
