@@ -24,14 +24,12 @@ export const modules: Module[] = [
 
 
   { href: "/peptrak", icon: "💉", title: "PepTrak", desc: "Peptide dosing tracker — daily checklist, vial inventory, and schedule.", status: "active", group: "business" },
-  { href: "/peptides", icon: "💉", title: "Peptide Stack", desc: "Mission Control — peptide dosing, schedule, and tracking.", status: "active", group: "personal" },
+
   { href: "/tesla", icon: "🚗", title: "Tesla", desc: "Charging session log and cost tracker.", status: "active", group: "personal" },
   { href: "/uber-profit", icon: "💰", title: "Uber Earnings", desc: "Dashboard earnings + shift tracking with charging deduction.", status: "active", group: "personal" },
   { href: "/workout", icon: "🏋️", title: "Workout", desc: "Daily full-body routine with exercise tracking and progressive overload.", status: "active", group: "personal" },
   
-  { href: "/ableton", icon: "🎛️", title: "Ableton", desc: "AbletonOSC, live PA template, MIDI controller config.", status: "pending", group: "creative" },
-  { href: "/joules-claw", icon: "⚡", title: "Joules Claw", desc: "Production and creative workflow management.", status: "active", group: "creative" },
-  { href: "/playlist-report", icon: "🎬", title: "OpenClaw Videos", desc: "OpenClaw video playlist summaries with tools and insights.", status: "active", group: "creative" },
+
   
   { href: "/brief", icon: "☀️", title: "Morning Brief", desc: "Daily weather, news, and task rundown. Delivered at 10 AM.", status: "active", group: "external" },
   { href: "/drive", icon: "📁", title: "Google Drive", desc: "12-folder organized Drive. Snapshot + restore available.", status: "active", group: "external" },
