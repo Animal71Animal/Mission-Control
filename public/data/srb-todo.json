@@ -3,7 +3,7 @@
     {
       "id": "1",
       "text": "Rearrange DJ booth",
-      "completed": false,
+      "completed": true,
       "category": "Setup",
       "priority": "high",
       "due_date": "2026-05-05"
@@ -177,5 +177,5 @@
       "due_date": "2026-05-05"
     }
   ],
-  "last_updated": "2026-04-30T06:53:49.865Z"
+  "last_updated": "2026-05-08T07:48:50.564Z"
 }
