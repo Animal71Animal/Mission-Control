@@ -359,6 +359,7 @@ const djSoftwareDocs: DocItem[] = [
   { emoji: "🗺️", name: "DJ Automation Roadmap", desc: "May–Aug 2026 · MVP May 31 · Testing June–July · ED Expo August · $100K MRR (6-month)", href: "/wlp-dj-roadmap" },
   { emoji: "🔍", name: "Manager Pain Points", desc: "9 pain points from 25+ club managers + how we beat them", href: "/wlp-pain-points" },
   { emoji: "🖥️", name: "Interface Spec", desc: "Manager console, dancer app, backend architecture", href: "/wlp-interface-spec" },
+  { emoji: "🔐", name: "Dancer Auth System", desc: "Dancer login, My Music, manager approval workflow", href: "/wlp-dancer-auth" },
 ];
 
 const djAutomationFeatures = [
