@@ -150,7 +150,7 @@
       "completed": false,
       "category": "Marketing",
       "priority": "high",
-      "due_date": "2026-05-05"
+      "due_date": "2026-05-13"
     },
     {
       "id": "21",
@@ -177,5 +177,5 @@
       "due_date": "2026-05-05"
     }
   ],
-  "last_updated": "2026-05-08T12:47:51.593Z"
+  "last_updated": "2026-05-08T12:49:58.106Z"
 }
