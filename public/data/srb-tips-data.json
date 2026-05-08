@@ -17,7 +17,7 @@
     },
     {
       "month": "May",
-      "amount": 625,
+      "amount": 630,
       "nights": 4
     }
   ],
@@ -3529,7 +3529,7 @@
       },
       {
         "date": "Thu May 7",
-        "total": 96,
+        "total": 101,
         "dancers": [
           {
             "name": "Taylor",
@@ -3558,6 +3558,10 @@
           {
             "name": "Zara",
             "amount": 10
+          },
+          {
+            "name": "Hazel",
+            "amount": 5
           }
         ]
       }
