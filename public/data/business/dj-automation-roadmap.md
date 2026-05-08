@@ -16,8 +16,8 @@ Live testing with Eric running the room at SRB. Real-world validation, bug fixes
 ### 🧪 July 1 – July 31 — Testing Phase 2 (Extended)
 Continued live testing and polish. Edge case handling, feature refinement, and pre-launch hardening. Product stabilization.
 
-### 🎪 August 2026 — ED Expo Premiere (Las Vegas Convention Center)
-Finished, production-ready software premieres at DJ booth at the ED Expo in Las Vegas. Live demo to industry attendees. 10-club rollout outreach begins.
+### 🎪 August 2026 — Production Launch
+Finished, production-ready software launches. Live demo to industry attendees. 10-club rollout outreach begins.
 
 ---
 
@@ -25,7 +25,7 @@ Finished, production-ready software premieres at DJ booth at the ED Expo in Las 
 
 | Phase | Clubs | MRR |
 |-------|-------|-----|
-| Post-Expo (Sept 2026) | 10 | $2,000 |
+| Post-Launch (Sept 2026) | 10 | $1,500 |
 | Growth (Q4 2026) | 25 | $5,000 |
 | Scale (2027) | 50+ | $10,000+ |
 
@@ -37,4 +37,4 @@ Finished, production-ready software premieres at DJ booth at the ED Expo in Las 
 - ✅ Concept validated at Spearmint Rhino
 - 📅 MVP delivery: May 31, 2026
 - 🧪 Testing: June – July 2026 (live at SRB)
-- 🎯 Target: Premier at ED Expo in August 2026
+- 🎯 Target: Production launch August 2026

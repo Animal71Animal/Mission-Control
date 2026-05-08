@@ -3,7 +3,7 @@
 
 **Date:** 2026-05-08
 **Status:** Draft — Eric review needed before investor pitch
-**Pricing:** $2,000/month per venue (flat rate, all stages and DJs included)
+**Pricing:** $1,500/month per venue (flat rate, all stages and DJs included)
 **Platform:** Cross-platform from day one (macOS + Windows via Tauri)
 
 ---
@@ -153,14 +153,12 @@ We asked 25+ club managers what broke with existing automation. Here's what they
 ## 5. Go-to-Market
 
 ### Primary Channels
-1. **RCI Relationships** — Eric's existing network (needs rehab before August)
-2. **ED Expo Booth** — Las Vegas, August 2026. Three demo moments:
-   - Financial hook: "This costs $2K/mo vs. $6K/mo for a DJ"
-   - AI DJ personality: Show energy slider + scenario modes live
-   - Reliability signal: Pull the network cable, show failover
+1. **RCI Relationships** — Eric's existing network (needs rehab)
+2. **DJ Community Word-of-Mouth** — DJ operators are the economic buyers in disguise. They convince management.
+3. **Direct Chain Sales** — Founders close chain deals directly. Pilot data from early venues is the sales deck.
 
 ### Pricing
-- **$2,000/month per venue** — flat rate, all stages and DJs included
+- **$1,500/month per venue** — flat rate, all stages and DJs included
 - No per-DJ upsell, no per-stage upsell
 - Annual contract with quarterly reviews
 
@@ -177,11 +175,11 @@ We asked 25+ club managers what broke with existing automation. Here's what they
 | 90-day plan | ❌ Not started |
 | Micah scope alignment | ❌ Pending |
 | RCI relationship rehab | ❌ Eric's action |
-| ED Expo demo prep | ❌ August deadline |
+| Chain outreach | ❌ Pending Eric's RCI rehab |
 
 **Immediate Actions:**
 1. Eric: Review this brief, confirm accuracy
-2. Eric: Send Micah `august-demo-scope.md` + this brief — align on scope
+2. Eric: Send Micah this brief — align on scope and dancer auth system
 3. Eric: Begin RCI relationship rehab (low-key message, plant seed)
 4. PriScylla: Draft investor pitch once Eric confirms brief
 

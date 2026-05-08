@@ -40,7 +40,7 @@ See `/business/dj-software/PRODUCT-BRIEF.md` for detailed product roadmap.
 - Developer: Micah
 - MVP delivery: May 31, 2026
 - Testing: June–July 2026 (live at Spearmint Rhino)
-- Launch: ED Expo August 2026 (Las Vegas Convention Center)
+- Launch: Production launch August 2026
 - Revenue Target: 50 clubs × $1,500/month = $75K MRR
 
 ---
