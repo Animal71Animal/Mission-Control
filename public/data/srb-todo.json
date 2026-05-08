@@ -43,7 +43,7 @@
     {
       "id": "6",
       "text": "Fix Dressing Room Speakers",
-      "completed": false,
+      "completed": true,
       "category": "Audio",
       "priority": "high",
       "due_date": "2026-05-05"
@@ -177,5 +177,5 @@
       "due_date": "2026-05-05"
     }
   ],
-  "last_updated": "2026-05-08T07:48:50.564Z"
+  "last_updated": "2026-05-08T07:48:59.905Z"
 }
