@@ -1,6 +1,6 @@
 /**
  * Mission Control - PepTrak API
- * GitHub API-backed: always live, no deploy needed
+ * Flat key format: "Day-compoundId" e.g. "Monday-reta-001"
  */
 import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
@@ -68,7 +68,7 @@ async function writeToGitHub(filePath: string, content: unknown, sha: string | n
 const COMPOUNDS_PATH = "public/data/peptrak-compounds.json";
 const CHECKLIST_PATH = "public/data/peptrak-checklist.json";
 
-// GET - returns both compounds and checklist
+// GET - returns both compounds and checklist (flat key format)
 export async function GET() {
   try {
     const [compoundsGH, checklistGH] = await Promise.all([
@@ -111,7 +111,7 @@ export async function POST(request: NextRequest) {
   }
 }
 
-// PATCH - update checklist
+// PATCH - update checklist (merge into existing flat key store)
 export async function PATCH(request: NextRequest) {
   try {
     const body = await request.json();
@@ -119,15 +119,25 @@ export async function PATCH(request: NextRequest) {
     if (typeof checklist !== "object" || checklist === null) {
       return NextResponse.json({ error: "checklist must be an object" }, { status: 400 });
     }
-    let sha = null;
+
+    // Fetch current flat key store
+    let currentData: Record<string, boolean> = {};
+    let sha: string | null = null;
     try {
       const gh = await fetchFromGitHub(CHECKLIST_PATH);
+      if (gh.content && typeof gh.content === "object") {
+        currentData = gh.content as Record<string, boolean>;
+      }
       sha = gh.sha;
     } catch {}
+
+    // Merge: new values override existing
+    const merged = { ...currentData, ...checklist };
+
     if (sha) {
-      await writeToGitHub(CHECKLIST_PATH, checklist, sha, "fix: update peptrak checklist");
+      await writeToGitHub(CHECKLIST_PATH, merged, sha, "fix: update peptrak checklist");
     }
-    writeToLocal(CHECKLIST_PATH, checklist);
+    writeToLocal(CHECKLIST_PATH, merged);
     return NextResponse.json({ ok: true });
   } catch (err) {
     return NextResponse.json({ error: String(err) }, { status: 500 });
