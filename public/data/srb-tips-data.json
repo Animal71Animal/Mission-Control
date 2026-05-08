@@ -17,7 +17,7 @@
     },
     {
       "month": "May",
-      "amount": 635,
+      "amount": 577,
       "nights": 3
     }
   ],
@@ -1375,7 +1375,7 @@
           "amount": 10
         }
       ],
-      "total": 68
+      "total": 106
     }
   ],
   "lastUpdated": "2026-05-08T04:33:00.000000",
@@ -3443,7 +3443,7 @@
       },
       {
         "date": "Sat May 2",
-        "total": 371,
+        "total": 381,
         "dancers": [
           {
             "name": "Georgia",
