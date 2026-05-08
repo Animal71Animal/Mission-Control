@@ -1,1 +1,6 @@
-{"test-key":true}
+{
+  "test-key": true,
+  "Monday-reta-001": true,
+  "Tuesday-tesa-001": true,
+  "Monday-semax-001": true
+}
