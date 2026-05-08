@@ -361,6 +361,7 @@ const djSoftwareDocs: DocItem[] = [
   { emoji: "🖥️", name: "Interface Spec", desc: "Manager console, dancer app, backend architecture", href: "/wlp-interface-spec" },
   { emoji: "🔐", name: "Dancer Auth System", desc: "Dancer login, My Music, manager approval workflow", href: "/wlp-dancer-auth" },
   { emoji: "🛠️", name: "Dev Check-In Protocol", desc: "Daily, twice-weekly, weekly check-in structure for Eric + Micah", href: "/wlp-dev-checkin" },
+  { emoji: "📋", name: "Task Board Template", desc: "15 starter tasks with card templates for Trello/Notion", href: "/wlp-task-board" },
 ];
 
 const djAutomationFeatures = [
