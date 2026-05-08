@@ -46,10 +46,10 @@
     "title": "Trello Workflow",
     "category": "Work",
     "priority": "medium",
-    "completed": false,
+    "completed": true,
     "createdAt": "2026-03-30T03:36:42.162Z",
     "owner": "animal",
-    "completed_at": null
+    "completed_at": "2026-05-08T07:57:04.432Z"
   },
   {
     "id": "task-1774841641981",
