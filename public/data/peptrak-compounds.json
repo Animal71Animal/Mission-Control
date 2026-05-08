@@ -13,7 +13,9 @@
     "doseUnit": "mg",
     "bacWaterRatioMl": 2,
     "timesPerWeek": 1,
-    "scheduleDays": ["Monday"],
+    "scheduleDays": [
+      "Monday"
+    ],
     "scheduleTime": "11pm",
     "notes": "Late night injection. 60 units on U-100 syringe."
   },
@@ -31,7 +33,13 @@
     "doseUnit": "mg",
     "bacWaterRatioMl": 2,
     "timesPerWeek": 5,
-    "scheduleDays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "scheduleDays": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
     "scheduleTime": "10am",
     "notes": "5-day cycle weekdays only. 20 units on U-100 syringe."
   },
@@ -49,7 +57,10 @@
     "doseUnit": "mcg",
     "bacWaterRatioMl": 2,
     "timesPerWeek": 2,
-    "scheduleDays": ["Tuesday", "Friday"],
+    "scheduleDays": [
+      "Tuesday",
+      "Friday"
+    ],
     "scheduleTime": "morning",
     "notes": "10 units on U-100 syringe. 250 IU dose."
   },
@@ -67,7 +78,13 @@
     "doseUnit": "mg",
     "bacWaterRatioMl": 2,
     "timesPerWeek": 5,
-    "scheduleDays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "scheduleDays": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
     "scheduleTime": "10am",
     "notes": "Start at 5 units. Can increase to 8-10 units after 3-5 days if effects mild. Optional second dose 2-3pm (4-6 units)."
   },
@@ -85,7 +102,15 @@
     "doseUnit": "mg",
     "bacWaterRatioMl": 2,
     "timesPerWeek": 7,
-    "scheduleDays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "scheduleDays": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
     "scheduleTime": "10am",
     "notes": "LOADING PHASE: 5 units daily for 10-14 days (approx May 4-18). After loading: switch to 10 units (500mcg) 2x weekly Tue/Fri mornings."
   }
