@@ -5,7 +5,7 @@ export default function Page() {
     <WLPDocPage
       title="📋 Product Brief"
       subtitle="Full product spec, features, roadmap"
-      fileName="product-brief.md"
+      fileName="PRODUCT-BRIEF-v2.md"
     />
   );
 }

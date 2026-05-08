@@ -352,11 +352,13 @@ const businessDocs: DocItem[] = [
 ];
 
 const djSoftwareDocs: DocItem[] = [
-  { emoji: "📋", name: "Product Brief", desc: "Full product spec, features, roadmap", href: "/wlp-product" },
+  { emoji: "📋", name: "Product Brief v2", desc: "Full product spec, features, roadmap — May 2026", href: "/wlp-product" },
   { emoji: "⚔️", name: "Competitive Positioning", desc: "vs. CoverJock, BoothPoint & others", href: "/wlp-competitive" },
   { emoji: "💼", name: "Investor Pitch", desc: "Seed round deck — formatted markdown", href: "/wlp-investor" },
   { emoji: "🎯", name: "Investor Target List", desc: "Tiered investor targets with contact paths", href: "/wlp-investor" },
   { emoji: "🗺️", name: "DJ Automation Roadmap", desc: "May–Aug 2026 · MVP May 31 · Testing June–July · ED Expo August · $100K MRR (6-month)", href: "/wlp-dj-roadmap" },
+  { emoji: "🔍", name: "Manager Pain Points", desc: "9 pain points from 25+ club managers + how we beat them", href: "/wlp-pain-points" },
+  { emoji: "🖥️", name: "Interface Spec", desc: "Manager console, dancer app, backend architecture", href: "/wlp-interface-spec" },
 ];
 
 const djAutomationFeatures = [
