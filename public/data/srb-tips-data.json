@@ -17,8 +17,8 @@
     },
     {
       "month": "May",
-      "amount": 529,
-      "nights": 3
+      "amount": 635,
+      "nights": 4
     }
   ],
   "topTippers": [
@@ -3529,15 +3529,23 @@
       },
       {
         "date": "Thu May 7",
-        "total": 68,
+        "total": 106,
         "dancers": [
           {
-            "name": "Nala",
-            "amount": 40
+            "name": "Taylor",
+            "amount": 10
+          },
+          {
+            "name": "Amy",
+            "amount": 8
           },
           {
             "name": "Erica",
             "amount": 5
+          },
+          {
+            "name": "Nala",
+            "amount": 40
           },
           {
             "name": "Customers",
@@ -3546,6 +3554,18 @@
           {
             "name": "Berlin",
             "amount": 10
+          },
+          {
+            "name": "Zara",
+            "amount": 10
+          },
+          {
+            "name": "Hazel",
+            "amount": 5
+          },
+          {
+            "name": "Suki",
+            "amount": 5
           }
         ]
       }
