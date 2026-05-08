@@ -25,6 +25,8 @@ export const modules: Module[] = [
 
   { href: "/peptrak", icon: "💉", title: "PepTrak", desc: "Peptide dosing tracker — daily checklist, vial inventory, and schedule.", status: "active", group: "business" },
 
+  { href: "/ableton", icon: "🎛️", title: "Ableton", desc: "Ableton Live setup, plugin inventory, and session notes.", status: "active", group: "creative" },
+
   { href: "/tesla", icon: "🚗", title: "Tesla", desc: "Charging session log and cost tracker.", status: "active", group: "personal" },
   { href: "/uber-profit", icon: "💰", title: "Uber Earnings", desc: "Dashboard earnings + shift tracking with charging deduction.", status: "active", group: "personal" },
   { href: "/workout", icon: "🏋️", title: "Workout", desc: "Daily full-body routine with exercise tracking and progressive overload.", status: "active", group: "personal" },
