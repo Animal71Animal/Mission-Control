@@ -78,7 +78,7 @@ export default function SharedDJAutomationPage() {
       {/* Document Links */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "16px", marginBottom: "40px" }}>
         <a
-          href="/shared/product-brief-full"
+          href="/wlp-product"
           target="_blank"
           rel="noopener noreferrer"
           style={{
@@ -101,15 +101,15 @@ export default function SharedDJAutomationPage() {
           }}
         >
           <h3 style={{ fontSize: "1rem", fontWeight: 600, margin: "0 0 8px", color: "inherit" }}>
-            📋 Product Brief
+            📋 Product Brief v2
           </h3>
           <p style={{ fontSize: "0.85rem", color: "var(--muted)", margin: 0 }}>
-            Full product spec, features, roadmap
+            Full product spec, features, roadmap — May 2026
           </p>
         </a>
 
         <a
-          href="/shared/competitive-positioning"
+          href="/wlp-competitive"
           target="_blank"
           rel="noopener noreferrer"
           style={{
@@ -140,7 +140,7 @@ export default function SharedDJAutomationPage() {
         </a>
 
         <a
-          href="/shared/investor-pitch"
+          href="/wlp-investor"
           target="_blank"
           rel="noopener noreferrer"
           style={{
@@ -166,12 +166,12 @@ export default function SharedDJAutomationPage() {
             💼 Investor Pitch
           </h3>
           <p style={{ fontSize: "0.85rem", color: "var(--muted)", margin: 0 }}>
-            Seed round deck — formatted markdown
+            Seed round deck — $1,500/mo pricing, no ED Expo
           </p>
         </a>
 
         <a
-          href="/shared/dj-roadmap"
+          href="/wlp-dj-roadmap"
           target="_blank"
           rel="noopener noreferrer"
           style={{
@@ -197,7 +197,193 @@ export default function SharedDJAutomationPage() {
             🗺️ DJ Automation Roadmap
           </h3>
           <p style={{ fontSize: "0.85rem", color: "var(--muted)", margin: 0 }}>
-            May–Aug 2026 · MVP May 31 · Testing June–July · ED Expo August · $100K MRR
+            May–Aug 2026 · MVP May 31 · Testing June–July · Production Launch August · $1,500/mo
+          </p>
+        </a>
+
+        <a
+          href="/wlp-pain-points"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "block",
+            padding: "20px",
+            background: "var(--card)",
+            border: "2px solid var(--accent)",
+            borderRadius: "8px",
+            textDecoration: "none",
+            transition: "all 0.2s",
+            cursor: "pointer",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = "var(--accent)";
+            e.currentTarget.style.color = "var(--bg)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = "var(--card)";
+            e.currentTarget.style.color = "var(--text)";
+          }}
+        >
+          <h3 style={{ fontSize: "1rem", fontWeight: 600, margin: "0 0 8px", color: "inherit" }}>
+            🔍 Manager Pain Points
+          </h3>
+          <p style={{ fontSize: "0.85rem", color: "var(--muted)", margin: 0 }}>
+            9 pain points from 25+ club managers + how we beat them
+          </p>
+        </a>
+
+        <a
+          href="/wlp-interface-spec"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "block",
+            padding: "20px",
+            background: "var(--card)",
+            border: "2px solid var(--accent)",
+            borderRadius: "8px",
+            textDecoration: "none",
+            transition: "all 0.2s",
+            cursor: "pointer",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = "var(--accent)";
+            e.currentTarget.style.color = "var(--bg)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = "var(--card)";
+            e.currentTarget.style.color = "var(--text)";
+          }}
+        >
+          <h3 style={{ fontSize: "1rem", fontWeight: 600, margin: "0 0 8px", color: "inherit" }}>
+            🖥️ Interface Spec
+          </h3>
+          <p style={{ fontSize: "0.85rem", color: "var(--muted)", margin: 0 }}>
+            Manager console, dancer app, backend architecture
+          </p>
+        </a>
+
+        <a
+          href="/wlp-dancer-auth"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "block",
+            padding: "20px",
+            background: "var(--card)",
+            border: "2px solid var(--accent)",
+            borderRadius: "8px",
+            textDecoration: "none",
+            transition: "all 0.2s",
+            cursor: "pointer",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = "var(--accent)";
+            e.currentTarget.style.color = "var(--bg)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = "var(--card)";
+            e.currentTarget.style.color = "var(--text)";
+          }}
+        >
+          <h3 style={{ fontSize: "1rem", fontWeight: 600, margin: "0 0 8px", color: "inherit" }}>
+            🔐 Dancer Auth System
+          </h3>
+          <p style={{ fontSize: "0.85rem", color: "var(--muted)", margin: 0 }}>
+            Dancer login, My Music, manager approval workflow
+          </p>
+        </a>
+
+        <a
+          href="/wlp-dev-checkin"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "block",
+            padding: "20px",
+            background: "var(--card)",
+            border: "2px solid var(--accent)",
+            borderRadius: "8px",
+            textDecoration: "none",
+            transition: "all 0.2s",
+            cursor: "pointer",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = "var(--accent)";
+            e.currentTarget.style.color = "var(--bg)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = "var(--card)";
+            e.currentTarget.style.color = "var(--text)";
+          }}
+        >
+          <h3 style={{ fontSize: "1rem", fontWeight: 600, margin: "0 0 8px", color: "inherit" }}>
+            🛠️ Dev Check-In Protocol
+          </h3>
+          <p style={{ fontSize: "0.85rem", color: "var(--muted)", margin: 0 }}>
+            Daily, twice-weekly, weekly check-in structure for Eric + Micah
+          </p>
+        </a>
+
+        <a
+          href="/wlp-task-board"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "block",
+            padding: "20px",
+            background: "var(--card)",
+            border: "2px solid var(--accent)",
+            borderRadius: "8px",
+            textDecoration: "none",
+            transition: "all 0.2s",
+            cursor: "pointer",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = "var(--accent)";
+            e.currentTarget.style.color = "var(--bg)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = "var(--card)";
+            e.currentTarget.style.color = "var(--text)";
+          }}
+        >
+          <h3 style={{ fontSize: "1rem", fontWeight: 600, margin: "0 0 8px", color: "inherit" }}>
+            📋 Task Board Template
+          </h3>
+          <p style={{ fontSize: "0.85rem", color: "var(--muted)", margin: 0 }}>
+            15 starter tasks with card templates for Trello/Notion
+          </p>
+        </a>
+
+        <a
+          href="/wlp-trello-setup"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "block",
+            padding: "20px",
+            background: "var(--card)",
+            border: "2px solid var(--accent)",
+            borderRadius: "8px",
+            textDecoration: "none",
+            transition: "all 0.2s",
+            cursor: "pointer",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = "var(--accent)";
+            e.currentTarget.style.color = "var(--bg)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = "var(--card)";
+            e.currentTarget.style.color = "var(--text)";
+          }}
+        >
+          <h3 style={{ fontSize: "1rem", fontWeight: 600, margin: "0 0 8px", color: "inherit" }}>
+            🎯 Trello Setup Guide
+          </h3>
+          <p style={{ fontSize: "0.85rem", color: "var(--muted)", margin: 0 }}>
+            Step-by-step: create board, invite Micah, add starter cards
           </p>
         </a>
       </div>
