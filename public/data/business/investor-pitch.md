@@ -2,7 +2,7 @@
 
 **The AI-Powered Automated DJ Platform for Gentlemen's Clubs**
 
-Seed Round | March 2026
+Seed Round | May 2026
 
 ---
 
@@ -134,7 +134,7 @@ Billed monthly or annually.
 | Metric | Value |
 |--------|-------|
 | **CAC** | ~$800-1,200 (low-touch inbound + DJ community word-of-mouth) |
-| **LTV** | ~$15,000-25,000 (3-5 year average contract at $350/month) |
+| **LTV** | ~$54,000-90,000 (3-5 year average contract at $1,500/month) |
 | **LTV:CAC Ratio** | ~15:1 |
 
 ---
@@ -192,11 +192,11 @@ Target DJ forums, Facebook groups, and direct outreach to club DJs who hate main
 
 Founders close chain deals directly. Pilot data from Phase 1 is the sales deck.
 
-One chain = 10-30 locations = $60,000-$200,000+ ARR.
+One chain = 10-30 locations = $180,000-$540,000+ ARR.
 
 ### Phase 3 — Inbound + Referral (Year 2+)
 
-Case studies, PR in industry trades (ED Publications, Exotic Dancer magazine), conference presence (Gentlemen's Club Owners Expo).
+Case studies, PR in industry trades (ED Publications, Exotic Dancer magazine), direct outreach.
 
 Industry is small and word travels fast.
 
