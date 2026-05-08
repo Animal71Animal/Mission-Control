@@ -261,10 +261,6 @@ export default function SpearmintRhinoTasks() {
         </div>
       )}
 
-      <div style={{ marginTop: 24, background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12, padding: 16 }}>
-        <h3 style={{ fontSize: "0.9rem", fontWeight: 700, color: "var(--accent2)", margin: "0 0 8px" }}>📧 Email to Amanda</h3>
-        <a href="/spearmint-rhino/amanda-email" style={{ color: "var(--accent2)", fontSize: "0.85rem" }}>View & Edit Email →</a>
-      </div>
     </div>
   );
 }

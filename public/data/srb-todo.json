@@ -137,14 +137,6 @@
       "due_date": null
     },
     {
-      "id": "18",
-      "text": "Write email to Amanda (thank you + request hazer, Vesuvio fix, lighting programmer)",
-      "completed": true,
-      "category": "Communication",
-      "priority": "high",
-      "due_date": null
-    },
-    {
       "id": "19",
       "text": "Print more Spotify dancer instructions",
       "completed": true,
