@@ -17,7 +17,7 @@
     },
     {
       "month": "May",
-      "amount": 592,
+      "amount": 615,
       "nights": 4
     }
   ],
@@ -3529,7 +3529,7 @@
       },
       {
         "date": "Thu May 7",
-        "total": 63,
+        "total": 86,
         "dancers": [
           {
             "name": "Taylor",
@@ -3546,6 +3546,14 @@
           {
             "name": "Nala",
             "amount": 40
+          },
+          {
+            "name": "Customers",
+            "amount": 13
+          },
+          {
+            "name": "Berlin",
+            "amount": 10
           }
         ]
       }
