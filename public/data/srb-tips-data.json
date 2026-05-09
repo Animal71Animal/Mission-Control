@@ -1257,36 +1257,6 @@
       "total": 223
     },
     {
-      "date": "2026-05-08",
-      "day": "Friday",
-      "tips": [
-        {
-          "dancer": "Taylor",
-          "amount": 6
-        }
-      ],
-      "total": 129
-    },
-    {
-      "date": "2026-05-06",
-      "day": "Wednesday",
-      "tips": [
-        {
-          "dancer": "Customers",
-          "amount": 70
-        },
-        {
-          "dancer": "Kody",
-          "amount": 5
-        },
-        {
-          "dancer": "Amy",
-          "amount": 15
-        }
-      ],
-      "total": 90
-    },
-    {
       "date": "2026-05-02",
       "day": "Saturday",
       "tips": [
@@ -1374,6 +1344,25 @@
       "total": 371
     },
     {
+      "date": "2026-05-06",
+      "day": "Wednesday",
+      "tips": [
+        {
+          "dancer": "Customers",
+          "amount": 70
+        },
+        {
+          "dancer": "Kody",
+          "amount": 5
+        },
+        {
+          "dancer": "Amy",
+          "amount": 15
+        }
+      ],
+      "total": 90
+    },
+    {
       "date": "2026-05-07",
       "day": "Thursday",
       "tips": [
@@ -1395,6 +1384,17 @@
         }
       ],
       "total": 106
+    },
+    {
+      "date": "2026-05-08",
+      "day": "Friday",
+      "tips": [
+        {
+          "dancer": "Taylor",
+          "amount": 6
+        }
+      ],
+      "total": 129
     }
   ],
   "lastUpdated": "2026-05-08T04:33:00.000000",
@@ -3443,70 +3443,6 @@
     ],
     "May": [
       {
-        "date": "Fri May 8",
-        "total": 129,
-        "dancers": [
-          {
-            "name": "Taylor",
-            "amount": 6
-          },
-          {
-            "name": "Macy",
-            "amount": 10
-          },
-          {
-            "name": "Dior",
-            "amount": 13
-          },
-          {
-            "name": "Amy",
-            "amount": 20
-          },
-          {
-            "name": "Amity",
-            "amount": 20
-          },
-          {
-            "name": "Suki",
-            "amount": 30
-          },
-          {
-            "name": "Natasha",
-            "amount": 5
-          },
-          {
-            "name": "Erica",
-            "amount": 10
-          },
-          {
-            "name": "Lillith",
-            "amount": 10
-          },
-          {
-            "name": "Shiiva",
-            "amount": 5
-          }
-        ]
-      },
-      {
-        "date": "Wed May 6",
-        "total": 90,
-        "dancers": [
-          {
-            "name": "Customers",
-            "amount": 70
-          },
-          {
-            "name": "Kody",
-            "amount": 5
-          },
-          {
-            "name": "Amy",
-            "amount": 15
-          }
-        ]
-      },
-      {
         "date": "Sat May 2",
         "total": 381,
         "dancers": [
@@ -3593,6 +3529,24 @@
         ]
       },
       {
+        "date": "Wed May 6",
+        "total": 90,
+        "dancers": [
+          {
+            "name": "Customers",
+            "amount": 70
+          },
+          {
+            "name": "Kody",
+            "amount": 5
+          },
+          {
+            "name": "Amy",
+            "amount": 15
+          }
+        ]
+      },
+      {
         "date": "Thu May 7",
         "total": 106,
         "dancers": [
@@ -3630,6 +3584,52 @@
           },
           {
             "name": "Suki",
+            "amount": 5
+          }
+        ]
+      },
+      {
+        "date": "Fri May 8",
+        "total": 129,
+        "dancers": [
+          {
+            "name": "Taylor",
+            "amount": 6
+          },
+          {
+            "name": "Macy",
+            "amount": 10
+          },
+          {
+            "name": "Dior",
+            "amount": 13
+          },
+          {
+            "name": "Amy",
+            "amount": 20
+          },
+          {
+            "name": "Amity",
+            "amount": 20
+          },
+          {
+            "name": "Suki",
+            "amount": 30
+          },
+          {
+            "name": "Natasha",
+            "amount": 5
+          },
+          {
+            "name": "Erica",
+            "amount": 10
+          },
+          {
+            "name": "Lillith",
+            "amount": 10
+          },
+          {
+            "name": "Shiiva",
             "amount": 5
           }
         ]
