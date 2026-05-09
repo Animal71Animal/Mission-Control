@@ -277,6 +277,13 @@ export const artistAssets: ArtistAssets[] = [
     },
     lastUpdated: "2026-03-27",
   },
+];
+
+export function getCompletionPercentage(artist: ArtistAssets): number {
+  const assets = [
+    artist.logo.status,
+    artist.photos.status,
+    artist.bio.status,
     artist.social.status,
     artist.music.status,
     artist.pressKit.status,
