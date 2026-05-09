@@ -277,56 +277,6 @@ export const artistAssets: ArtistAssets[] = [
     },
     lastUpdated: "2026-03-27",
   },
-  ,
-  {
-    id: "jusniiga",
-    name: "JusNiiga",
-    genre: "Afro EDM",
-    badge: "wlp",
-    logo: {
-      status: "missing",
-    },
-    photos: {
-      status: "complete",
-      count: 3,
-      paths: ["/artists/jusniiga.jpg", "/artists/jusniiga-2.jpg", "/artists/jusniiga-3.jpg"],
-    },
-    bio: {
-      status: "pending",
-      wordCount: 0,
-      versions: {
-        short: "Afro EDM fusion — infectious rhythms meet electronic energy.",
-        medium: "Afro EDM fusion — infectious rhythms layered over electronic energy that moves between continents and crowds.",
-        long: "JusNiiga brings Afro EDM fusion to the dancefloor — infectious rhythms layered over electronic energy that moves between continents and crowds. A sound that feels both rooted and forward-moving, built for stages and streaming alike.",
-      },
-    },
-    social: {
-      status: "missing",
-      links: {},
-      verified: false,
-    },
-    music: {
-      status: "pending",
-      trackCount: 1,
-      releases: [
-        { title: "Love is Rare", status: "pending", releaseDate: "2026-05-06" },
-      ],
-    },
-    pressKit: {
-      status: "missing",
-    },
-    brandGuidelines: {
-      status: "missing",
-    },
-    lastUpdated: "2026-04-06",
-  },
-];
-
-export function getCompletionPercentage(artist: ArtistAssets): number {
-  const assets = [
-    artist.logo.status,
-    artist.photos.status,
-    artist.bio.status,
     artist.social.status,
     artist.music.status,
     artist.pressKit.status,

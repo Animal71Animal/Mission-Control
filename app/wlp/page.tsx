@@ -342,12 +342,7 @@ const syncLinks: LinkItem[] = [
 
 const businessDocs: DocItem[] = [
   { emoji: "🎭", name: "DOE Pitch Deck", desc: "Director of Entertainment — live pitch site", href: "https://my-nvj2gsssh-ericmills71-8100s-projects.vercel.app" },
-  { emoji: "🏗️", name: "Org Structure", desc: "Entity, divisions, AI roster, decision flow", href: "/wlp-org" },
-  { emoji: "💰", name: "Revenue Tracker", desc: "12-month tracker, P&L, KPIs, per-gig log", href: "/wlp-revenue" },
   { emoji: "🗺️", name: "DJ Automation Roadmap", desc: "May–Aug 2026 · MVP May 31 · Testing June–July · ED Expo August · $100K MRR (6-month)", href: "/wlp-dj-roadmap" },
-  { emoji: "🎵", name: "Release Pipeline", desc: "12-week checklist, distro, sync, calendar", href: "/wlp-release" },
-  { emoji: "🤖", name: "AI Workflow", desc: "Agent stack, tools, 25-prompt library", href: "/wlp-ai" },
-  { emoji: "📣", name: "Marketing Plan", desc: "Brand USP, social, PR, ads, quick wins", href: "/wlp-marketing" },
   { emoji: "📊", name: "WLP Full Business Deck", desc: "Full WLP business deck — all divisions", href: "/wlp-deck.html" },
 ];
 
@@ -361,8 +356,6 @@ const djSoftwareDocs: DocItem[] = [
   { emoji: "🖥️", name: "Interface Spec", desc: "Manager console, dancer app, backend architecture", href: "/wlp-interface-spec" },
   { emoji: "🔐", name: "Dancer Auth System", desc: "Dancer login, My Music, manager approval workflow", href: "/wlp-dancer-auth" },
   { emoji: "🛠️", name: "Dev Check-In Protocol", desc: "Daily, twice-weekly, weekly check-in structure for Eric + Micah", href: "/wlp-dev-checkin" },
-  { emoji: "📋", name: "Task Board Template", desc: "15 starter tasks with card templates for Trello/Notion", href: "/wlp-task-board" },
-  { emoji: "🎯", name: "Trello Setup Guide", desc: "Step-by-step: create board, invite Micah, add starter cards", href: "/wlp-trello-setup" },
 ];
 
 const djAutomationFeatures = [

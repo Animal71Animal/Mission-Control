@@ -12,8 +12,8 @@ export interface Module {
 
 // Order matches Sidebar navigation (excluding Overview which is home page)
 export const modules: Module[] = [
-  { href: "/wlp", icon: "💼", title: "WLP Business", desc: "Business docs, AI artists, streaming, social, analytics, and industry links.", status: "active", group: "business" },
-  { href: "/artists", icon: "🎤", title: "Artists", desc: "ANIMAL, Kade Rivers, Madison Blair, Aria Vale, JusNiiga — WLP roster.", status: "active", group: "business", children: [
+  { href: "/wlp", icon: "💼", title: "WLP Business", desc: "Business docs, AI artists, streaming, social, and industry links.", status: "active", group: "business" },
+  { href: "/artists", icon: "🎤", title: "Artists", desc: "ANIMAL, Kade Rivers, Madison Blair, Aria Vale — WLP roster.", status: "active", group: "business", children: [
     { href: "/artist-assets", icon: "🎨", title: "Artist Assets", desc: "Unified asset tracking for WLP artist roster.", status: "active", group: "business" },
     { href: "/content-pipeline", icon: "📱", title: "Content Pipeline", desc: "TikTok, Reels & Shorts management for WLP AI Artists.", status: "active", group: "business" },
   ] },
@@ -22,7 +22,6 @@ export const modules: Module[] = [
   { href: "/tasks", icon: "📋", title: "Action Items", desc: "All action items — SRB club operations and personal tasks in one hub.", status: "active", group: "business" },
   { href: "/agents", icon: "🤖", title: "AI Office", desc: "Live view of AI agents working in the virtual office.", status: "active", group: "business" },
 
-
   { href: "/peptrak", icon: "💉", title: "PepTrak", desc: "Peptide dosing tracker — daily checklist, vial inventory, and schedule.", status: "active", group: "business" },
 
   { href: "/ableton", icon: "🎛️", title: "Ableton", desc: "Ableton Live setup, plugin inventory, and session notes.", status: "active", group: "creative" },
@@ -30,9 +29,7 @@ export const modules: Module[] = [
   { href: "/tesla", icon: "🚗", title: "Tesla", desc: "Charging session log and cost tracker.", status: "active", group: "personal" },
   { href: "/uber-profit", icon: "💰", title: "Uber Earnings", desc: "Dashboard earnings + shift tracking with charging deduction.", status: "active", group: "personal" },
   { href: "/workout", icon: "🏋️", title: "Workout", desc: "Daily full-body routine with exercise tracking and progressive overload.", status: "active", group: "personal" },
-  
 
-  
   { href: "/brief", icon: "☀️", title: "Morning Brief", desc: "Daily weather, news, and task rundown. Delivered at 10 AM.", status: "active", group: "external" },
   { href: "/drive", icon: "📁", title: "Google Drive", desc: "12-folder organized Drive. Snapshot + restore available.", status: "active", group: "external" },
   { href: "/shared-links", icon: "🔗", title: "Shared Links", desc: "Password-protected links shared with partners, developers, and investors.", status: "active", group: "external" },
