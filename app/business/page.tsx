@@ -2,7 +2,7 @@ import Card from "@/components/Card";
 import Link from "next/link";
 
 const HOME = process.env.HOME || "/home/ubuntu";
-const INTERNAL_LINKS = ["/docs/live-pa", "/docs/plugins", "/wlp"];
+const INTERNAL_LINKS = ["/ableton", "/wlp"];
 
 const docs = [
   {
@@ -36,7 +36,7 @@ const docs = [
   {
     title: "Live PA Setup",
     path: "business/live-pa-setup.md",
-    link: `/docs/live-pa`,
+    link: `/ableton`,
     linkLabel: "Open Doc ↗",
     desc: "Full live PA documentation — gear, signal chain, templates.",
     badge: "local",
@@ -45,7 +45,7 @@ const docs = [
   {
     title: "Plugin Install Checklist",
     path: "business/plugin-install-checklist.md",
-    link: `/docs/plugins`,
+    link: `/ableton`,
     linkLabel: "Open Checklist ↗",
     desc: "Serum, Rob Papen, Splice, Loopcloud install guide.",
     badge: "local",

@@ -49,9 +49,9 @@ export default function KadeRiversPage() {
 
             <Card title="Video Prompts">
               <p style={{ fontSize: "0.8rem", color: "var(--muted)", margin: 0 }}>
-                <a href="/docs/video-prompts" style={{color:"var(--accent2)",textDecoration:"none",fontWeight:600}}>📄 View Kling AI Video Prompts ↗</a>
+                
                 <code style={{ color: "var(--accent2)", background: "var(--bg)", padding: "1px 6px", borderRadius: 4 }}>
-                  /docs/video-prompts
+                  
                 </code>
               </p>
             </Card>
