@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ableton MajorVersion="5" MinorVersion="11.0_11300" SchemaChangeCount="3" Creator="Ableton Live 11.3.2" Revision="">
+  <LiveSet>
+    <MasterTrack>
+      <Name>Master</Name>
+      <DeviceChain>
+        <Mixer>
+          <Tempo>
+            <LomId Value="0"/>
+            <Manual Value="128"/>
+          </Tempo>
+        </Mixer>
+      </DeviceChain>
+    </MasterTrack>
+    <Transport>
+      <PhaseNudgeTempo Value="10"/>
+      <LoopOn Value="false"/>
+      <LoopStart Value="8"/>
+      <LoopLength Value="16"/>
+    </Transport>
+    <Tracks>
+      <AudioTrack Id="0">
+        <Name>
+          <EffectiveName Value="DRUMS"/>
+          <UserName Value="DRUMS"/>
+        </Name>
+        <ColorIndex Value="11"/>
+        <DeviceChain>
+          <AutomationLanes/>
+          <Mixer>
+            <Volume>
+              <Manual Value="0.85"/>
+            </Volume>
+            <Pan>
+              <Manual Value="0"/>
+            </Pan>
+            <Sends>
+              <TrackSendHolder Id="0">
+                <Send Value="0"/>
+              </TrackSendHolder>
+              <TrackSendHolder Id="1">
+                <Send Value="0"/>
+              </TrackSendHolder>
+            </Sends>
+          </Mixer>
+        </DeviceChain>
+        <ClipSlotList>
+          <ClipSlot Id="0">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="1">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="2">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="3">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="4">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="5">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="6">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+        </ClipSlotList>
+      </AudioTrack>
+      <AudioTrack Id="1">
+        <Name>
+          <EffectiveName Value="PERC"/>
+          <UserName Value="PERC"/>
+        </Name>
+        <ColorIndex Value="11"/>
+        <DeviceChain>
+          <AutomationLanes/>
+          <Mixer>
+            <Volume>
+              <Manual Value="0.85"/>
+            </Volume>
+            <Pan>
+              <Manual Value="0"/>
+            </Pan>
+            <Sends>
+              <TrackSendHolder Id="0">
+                <Send Value="0"/>
+              </TrackSendHolder>
+              <TrackSendHolder Id="1">
+                <Send Value="0"/>
+              </TrackSendHolder>
+            </Sends>
+          </Mixer>
+        </DeviceChain>
+        <ClipSlotList>
+          <ClipSlot Id="0">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="1">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="2">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="3">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="4">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="5">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="6">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+        </ClipSlotList>
+      </AudioTrack>
+      <AudioTrack Id="2">
+        <Name>
+          <EffectiveName Value="BASS"/>
+          <UserName Value="BASS"/>
+        </Name>
+        <ColorIndex Value="14"/>
+        <DeviceChain>
+          <AutomationLanes/>
+          <Mixer>
+            <Volume>
+              <Manual Value="0.85"/>
+            </Volume>
+            <Pan>
+              <Manual Value="0"/>
+            </Pan>
+            <Sends>
+              <TrackSendHolder Id="0">
+                <Send Value="0"/>
+              </TrackSendHolder>
+              <TrackSendHolder Id="1">
+                <Send Value="0"/>
+              </TrackSendHolder>
+            </Sends>
+          </Mixer>
+        </DeviceChain>
+        <ClipSlotList>
+          <ClipSlot Id="0">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="1">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="2">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="3">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="4">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="5">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="6">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+        </ClipSlotList>
+      </AudioTrack>
+      <AudioTrack Id="3">
+        <Name>
+          <EffectiveName Value="CHORDS"/>
+          <UserName Value="CHORDS"/>
+        </Name>
+        <ColorIndex Value="5"/>
+        <DeviceChain>
+          <AutomationLanes/>
+          <Mixer>
+            <Volume>
+              <Manual Value="0.85"/>
+            </Volume>
+            <Pan>
+              <Manual Value="0"/>
+            </Pan>
+            <Sends>
+              <TrackSendHolder Id="0">
+                <Send Value="0"/>
+              </TrackSendHolder>
+              <TrackSendHolder Id="1">
+                <Send Value="0"/>
+              </TrackSendHolder>
+            </Sends>
+          </Mixer>
+        </DeviceChain>
+        <ClipSlotList>
+          <ClipSlot Id="0">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="1">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="2">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="3">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="4">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="5">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="6">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+        </ClipSlotList>
+      </AudioTrack>
+      <AudioTrack Id="4">
+        <Name>
+          <EffectiveName Value="LEAD"/>
+          <UserName Value="LEAD"/>
+        </Name>
+        <ColorIndex Value="5"/>
+        <DeviceChain>
+          <AutomationLanes/>
+          <Mixer>
+            <Volume>
+              <Manual Value="0.85"/>
+            </Volume>
+            <Pan>
+              <Manual Value="0"/>
+            </Pan>
+            <Sends>
+              <TrackSendHolder Id="0">
+                <Send Value="0"/>
+              </TrackSendHolder>
+              <TrackSendHolder Id="1">
+                <Send Value="0"/>
+              </TrackSendHolder>
+            </Sends>
+          </Mixer>
+        </DeviceChain>
+        <ClipSlotList>
+          <ClipSlot Id="0">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="1">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="2">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="3">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="4">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="5">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="6">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+        </ClipSlotList>
+      </AudioTrack>
+      <AudioTrack Id="5">
+        <Name>
+          <EffectiveName Value="VOCALS"/>
+          <UserName Value="VOCALS"/>
+        </Name>
+        <ColorIndex Value="9"/>
+        <DeviceChain>
+          <AutomationLanes/>
+          <Mixer>
+            <Volume>
+              <Manual Value="0.85"/>
+            </Volume>
+            <Pan>
+              <Manual Value="0"/>
+            </Pan>
+            <Sends>
+              <TrackSendHolder Id="0">
+                <Send Value="0"/>
+              </TrackSendHolder>
+              <TrackSendHolder Id="1">
+                <Send Value="0"/>
+              </TrackSendHolder>
+            </Sends>
+          </Mixer>
+        </DeviceChain>
+        <ClipSlotList>
+          <ClipSlot Id="0">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="1">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="2">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="3">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="4">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="5">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="6">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+        </ClipSlotList>
+      </AudioTrack>
+      <AudioTrack Id="6">
+        <Name>
+          <EffectiveName Value="FX"/>
+          <UserName Value="FX"/>
+        </Name>
+        <ColorIndex Value="7"/>
+        <DeviceChain>
+          <AutomationLanes/>
+          <Mixer>
+            <Volume>
+              <Manual Value="0.85"/>
+            </Volume>
+            <Pan>
+              <Manual Value="0"/>
+            </Pan>
+            <Sends>
+              <TrackSendHolder Id="0">
+                <Send Value="0"/>
+              </TrackSendHolder>
+              <TrackSendHolder Id="1">
+                <Send Value="0"/>
+              </TrackSendHolder>
+            </Sends>
+          </Mixer>
+        </DeviceChain>
+        <ClipSlotList>
+          <ClipSlot Id="0">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="1">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="2">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="3">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="4">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="5">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="6">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+        </ClipSlotList>
+      </AudioTrack>
+      <AudioTrack Id="7">
+        <Name>
+          <EffectiveName Value="LOOPS"/>
+          <UserName Value="LOOPS"/>
+        </Name>
+        <ColorIndex Value="7"/>
+        <DeviceChain>
+          <AutomationLanes/>
+          <Mixer>
+            <Volume>
+              <Manual Value="0.85"/>
+            </Volume>
+            <Pan>
+              <Manual Value="0"/>
+            </Pan>
+            <Sends>
+              <TrackSendHolder Id="0">
+                <Send Value="0"/>
+              </TrackSendHolder>
+              <TrackSendHolder Id="1">
+                <Send Value="0"/>
+              </TrackSendHolder>
+            </Sends>
+          </Mixer>
+        </DeviceChain>
+        <ClipSlotList>
+          <ClipSlot Id="0">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="1">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="2">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="3">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="4">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="5">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+          <ClipSlot Id="6">
+            <HasStopButton Value="true"/>
+            <NoteOrMidiClip/>
+          </ClipSlot>
+        </ClipSlotList>
+      </AudioTrack>
+    </Tracks>
+    <Scenes>
+      <Scene Id="0">
+        <Name Value="INTRO (Low Energy)"/>
+        <Annotation Value=""/>
+        <IsEmpty Value="true"/>
+      </Scene>
+      <Scene Id="1">
+        <Name Value="BUILD 1"/>
+        <Annotation Value=""/>
+        <IsEmpty Value="true"/>
+      </Scene>
+      <Scene Id="2">
+        <Name Value="DROP 1 (Peak)"/>
+        <Annotation Value=""/>
+        <IsEmpty Value="true"/>
+      </Scene>
+      <Scene Id="3">
+        <Name Value="BREAKDOWN"/>
+        <Annotation Value=""/>
+        <IsEmpty Value="true"/>
+      </Scene>
+      <Scene Id="4">
+        <Name Value="BUILD 2"/>
+        <Annotation Value=""/>
+        <IsEmpty Value="true"/>
+      </Scene>
+      <Scene Id="5">
+        <Name Value="DROP 2 (Peak)"/>
+        <Annotation Value=""/>
+        <IsEmpty Value="true"/>
+      </Scene>
+      <Scene Id="6">
+        <Name Value="OUTRO"/>
+        <Annotation Value=""/>
+        <IsEmpty Value="true"/>
+      </Scene>
+    </Scenes>
+    <ReturnTracks>
+      <ReturnTrack Id="100">
+        <Name>
+          <EffectiveName Value="REVERB"/>
+          <UserName Value="REVERB"/>
+        </Name>
+        <ColorIndex Value="7"/>
+      </ReturnTrack>
+      <ReturnTrack Id="101">
+        <Name>
+          <EffectiveName Value="DELAY"/>
+          <UserName Value="DELAY"/>
+        </Name>
+        <ColorIndex Value="9"/>
+      </ReturnTrack>
+    </ReturnTracks>
+    <Locators>
+      <Locator Id="0">
+        <Time Value="0"/>
+        <Name Value="INTRO (Low Energy)"/>
+        <Annotation Value=""/>
+      </Locator>
+      <Locator Id="1">
+        <Time Value="64"/>
+        <Name Value="BUILD 1"/>
+        <Annotation Value=""/>
+      </Locator>
+      <Locator Id="2">
+        <Time Value="128"/>
+        <Name Value="DROP 1 (Peak)"/>
+        <Annotation Value=""/>
+      </Locator>
+      <Locator Id="3">
+        <Time Value="192"/>
+        <Name Value="BREAKDOWN"/>
+        <Annotation Value=""/>
+      </Locator>
+      <Locator Id="4">
+        <Time Value="256"/>
+        <Name Value="BUILD 2"/>
+        <Annotation Value=""/>
+      </Locator>
+      <Locator Id="5">
+        <Time Value="320"/>
+        <Name Value="DROP 2 (Peak)"/>
+        <Annotation Value=""/>
+      </Locator>
+      <Locator Id="6">
+        <Time Value="384"/>
+        <Name Value="OUTRO"/>
+        <Annotation Value=""/>
+      </Locator>
+    </Locators>
+  </LiveSet>
+</Ableton>
