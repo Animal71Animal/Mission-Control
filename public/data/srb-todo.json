@@ -175,6 +175,70 @@
       "category": "Video",
       "priority": "medium",
       "due_date": "2026-05-05"
+    },
+    {
+      "id": "srb-flyers-001",
+      "completed": false,
+      "text": "Design flyer for Industry Night (Sundays)",
+      "category": "Marketing",
+      "priority": "medium",
+      "due_date": null
+    },
+    {
+      "id": "srb-flyers-002",
+      "completed": false,
+      "text": "Design flyer for Swingers & Poker Night (Mondays)",
+      "category": "Marketing",
+      "priority": "medium",
+      "due_date": null
+    },
+    {
+      "id": "srb-flyers-003",
+      "completed": false,
+      "text": "Design flyer for Teddy Tuesdays",
+      "category": "Marketing",
+      "priority": "medium",
+      "due_date": null
+    },
+    {
+      "id": "srb-flyers-004",
+      "completed": false,
+      "text": "Design flyer for Girls Gone Wild Wednesdays",
+      "category": "Marketing",
+      "priority": "medium",
+      "due_date": null
+    },
+    {
+      "id": "srb-flyers-005",
+      "completed": false,
+      "text": "Design flyer for Chicks in Kicks (Thursdays)",
+      "category": "Marketing",
+      "priority": "medium",
+      "due_date": null
+    },
+    {
+      "id": "srb-flyers-006",
+      "completed": false,
+      "text": "Design flyer for Femme Fatale Fridays",
+      "category": "Marketing",
+      "priority": "medium",
+      "due_date": null
+    },
+    {
+      "id": "srb-flyers-007",
+      "completed": false,
+      "text": "Design flyer for Late Night Saturdays",
+      "category": "Marketing",
+      "priority": "medium",
+      "due_date": null
+    },
+    {
+      "id": "srb-flyers-008",
+      "completed": false,
+      "text": "Design flyer for Animal House (Monthly — 4th Saturday)",
+      "category": "Marketing",
+      "priority": "medium",
+      "due_date": null
     }
   ],
   "last_updated": "2026-05-08T12:50:14.493Z"
