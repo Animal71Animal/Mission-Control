@@ -3639,6 +3639,11 @@
             "amount": 5
           }
         ]
+      },
+      {
+        "date": "Sun May 10",
+        "total": 0,
+        "dancers": []
       }
     ]
   }
