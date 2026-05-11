@@ -1,5 +1,5 @@
 {
-  "concepts": [
+  "weeklyMonthlyParties": [
     {
       "id": "industry-night",
       "name": "Industry Night",
@@ -113,6 +113,7 @@
       "dayAssigned": "4th Saturday"
     }
   ],
+  "oneOffParties": [],
   "promotionalIdeas": [
     {
       "id": "monthly-podcast",
@@ -139,7 +140,7 @@
       "integration": "Influencers attend events, post organically, get featured on podcast and social channels",
       "status": "Idea",
       "approved": false,
-      "notes": "Comp: Free admission for influencer + 3 guests + $50 bar tab (or $2 kickback per signed entry card turned in). Need tracking system: signed entry cards attributed to each influencer. Budget TBD based on comp structure chosen."},{
+      "notes": "Comp: Free admission for influencer + 3 guests + $50 bar tab (or $2 kickback per signed entry card turned in). Need tracking system: signed entry cards attributed to each influencer. Budget TBD based on comp structure chosen."
     },
     {
       "id": "street-team",

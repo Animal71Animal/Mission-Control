@@ -19,24 +19,22 @@ interface PartyConcept {
 }
 
 interface PartyConceptsData {
-  concepts: PartyConcept[];
+  weeklyMonthlyParties?: PartyConcept[];
+  oneOffParties?: PartyConcept[];
   lastUpdated: string;
 }
 
 export default function PartyConceptsPage() {
   const [data, setData] = useState<PartyConceptsData | null>(null);
   const [loading, setLoading] = useState(true);
-  const [editingId, setEditingId] = useState<string | null>(null);
-  const [editForm, setEditForm] = useState<Partial<PartyConcept>>({});
 
   useEffect(() => {
     fetch("/api/party-concepts")
       .then((res) => res.json())
       .then((data) => {
-        if (data && data.concepts) {
+        if (data && (data.weeklyMonthlyParties || data.oneOffParties)) {
           setData(data);
         } else {
-          // Fallback to local JSON
           fetch("/data/party-concepts-data.json")
             .then((r) => r.json())
             .then((localData) => setData(localData))
@@ -55,93 +53,6 @@ export default function PartyConceptsPage() {
       });
   }, []);
 
-  const handleEdit = (concept: PartyConcept) => {
-    setEditingId(concept.id);
-    setEditForm({ ...concept });
-  };
-
-  const handleSave = async () => {
-    if (!data || !editingId) return;
-
-    const updatedConcepts = data.concepts.map((c) =>
-      c.id === editingId ? { ...c, ...editForm } : c
-    );
-
-    const updatedData = { ...data, concepts: updatedConcepts, lastUpdated: new Date().toISOString() };
-
-    try {
-      const res = await fetch("/api/party-concepts", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ concepts: updatedConcepts }),
-      });
-
-      if (res.ok) {
-        setData(updatedData);
-        setEditingId(null);
-        setEditForm({});
-      } else {
-        alert("Failed to save changes");
-      }
-    } catch (err) {
-      console.error("Save failed:", err);
-      alert("Failed to save changes");
-    }
-  };
-
-  const handleCancel = () => {
-    setEditingId(null);
-    setEditForm({});
-  };
-
-  const toggleApproved = async (concept: PartyConcept) => {
-    if (!data) return;
-
-    const updatedConcepts = data.concepts.map((c) =>
-      c.id === concept.id ? { ...c, approved: !c.approved } : c
-    );
-
-    const updatedData = { ...data, concepts: updatedConcepts, lastUpdated: new Date().toISOString() };
-
-    try {
-      const res = await fetch("/api/party-concepts", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ concepts: updatedConcepts }),
-      });
-
-      if (res.ok) {
-        setData(updatedData);
-      }
-    } catch (err) {
-      console.error("Toggle failed:", err);
-    }
-  };
-
-  const toggleFlyer = async (concept: PartyConcept) => {
-    if (!data) return;
-
-    const updatedConcepts = data.concepts.map((c) =>
-      c.id === concept.id ? { ...c, flyerDone: !c.flyerDone } : c
-    );
-
-    const updatedData = { ...data, concepts: updatedConcepts, lastUpdated: new Date().toISOString() };
-
-    try {
-      const res = await fetch("/api/party-concepts", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ concepts: updatedConcepts }),
-      });
-
-      if (res.ok) {
-        setData(updatedData);
-      }
-    } catch (err) {
-      console.error("Toggle failed:", err);
-    }
-  };
-
   if (loading || !data) {
     return (
       <div>
@@ -151,9 +62,111 @@ export default function PartyConceptsPage() {
     );
   }
 
-  const { concepts } = data;
-  const approvedCount = concepts.filter((c) => c.approved).length;
-  const flyerCount = concepts.filter((c) => c.flyerDone).length;
+  const weeklyMonthly = data.weeklyMonthlyParties || [];
+  const oneOff = data.oneOffParties || [];
+  const approvedCount = [...weeklyMonthly, ...oneOff].filter((c) => c.approved).length;
+  const flyerCount = [...weeklyMonthly, ...oneOff].filter((c) => c.flyerDone).length;
+
+  const renderConceptCard = (concept: PartyConcept) => (
+    <div
+      key={concept.id}
+      style={{
+        background: "var(--card)",
+        border: "1px solid var(--border)",
+        borderRadius: 12,
+        padding: 24,
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          alignItems: "flex-start",
+          justifyContent: "space-between",
+          marginBottom: 16,
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <span style={{ fontSize: "2rem" }}>{concept.icon}</span>
+          <div>
+            <h2 style={{ fontSize: "1.2rem", fontWeight: 600, margin: 0, color: "var(--text)" }}>
+              {concept.name}
+            </h2>
+            <span style={{ fontSize: "0.8rem", color: "var(--muted)" }}>{concept.frequency}</span>
+          </div>
+        </div>
+        <div style={{ display: "flex", gap: 8 }}>
+          <span
+            style={{
+              padding: "6px 12px",
+              borderRadius: 20,
+              fontSize: "0.75rem",
+              fontWeight: 600,
+              background: concept.approved
+                ? "rgba(0,200,124,0.2)"
+                : "rgba(255,193,7,0.2)",
+              color: concept.approved ? "#00c87c" : "#ffc107",
+            }}
+          >
+            {concept.approved ? "✓ Approved" : "Pending"}
+          </span>
+          <span
+            style={{
+              padding: "6px 12px",
+              borderRadius: 20,
+              fontSize: "0.75rem",
+              fontWeight: 600,
+              background: concept.flyerDone
+                ? "rgba(0,200,124,0.2)"
+                : "rgba(128,128,128,0.2)",
+              color: concept.flyerDone ? "#00c87c" : "var(--muted)",
+            }}
+          >
+            {concept.flyerDone ? "✓ Flyer Done" : "No Flyer"}
+          </span>
+        </div>
+      </div>
+
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: 12,
+          fontSize: "0.9rem",
+        }}
+      >
+        <div>
+          <span style={{ color: "var(--muted)", display: "block", marginBottom: 4, fontSize: "0.8rem" }}>
+            Who
+          </span>
+          <span style={{ color: "var(--text)" }}>{concept.who}</span>
+        </div>
+        <div>
+          <span style={{ color: "var(--muted)", display: "block", marginBottom: 4, fontSize: "0.8rem" }}>
+            Format
+          </span>
+          <span style={{ color: "var(--text)" }}>{concept.format}</span>
+        </div>
+        <div>
+          <span style={{ color: "var(--muted)", display: "block", marginBottom: 4, fontSize: "0.8rem" }}>
+            Drink Specials
+          </span>
+          <span style={{ color: "var(--text)" }}>{concept.drinks}</span>
+        </div>
+        <div>
+          <span style={{ color: "var(--muted)", display: "block", marginBottom: 4, fontSize: "0.8rem" }}>
+            Games/Activities
+          </span>
+          <span style={{ color: "var(--text)" }}>{concept.games}</span>
+        </div>
+        <div style={{ gridColumn: "span 2" }}>
+          <span style={{ color: "var(--muted)", display: "block", marginBottom: 4, fontSize: "0.8rem" }}>
+            Costuming
+          </span>
+          <span style={{ color: "var(--text)" }}>{concept.costuming}</span>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <div>
@@ -184,7 +197,7 @@ export default function PartyConceptsPage() {
           </Link>
         </div>
         <p style={{ color: "var(--muted)", marginTop: 6, fontSize: "0.9rem" }}>
-          Weekly and monthly event ideas for Spearmint Rhino Boise
+          Weekly, monthly, and one-off event ideas for Spearmint Rhino Boise
         </p>
       </div>
 
@@ -197,327 +210,61 @@ export default function PartyConceptsPage() {
           marginBottom: 28,
         }}
       >
-        <div
-          style={{
-            background: "var(--card)",
-            border: "1px solid var(--border)",
-            borderRadius: 12,
-            padding: 20,
-          }}
-        >
-          <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: 4 }}>Total Concepts</div>
-          <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)" }}>{concepts.length}</div>
+        <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12, padding: 20 }}>
+          <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: 4 }}>Weekly/Monthly</div>
+          <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)" }}>{weeklyMonthly.length}</div>
         </div>
-        <div
-          style={{
-            background: "var(--card)",
-            border: "1px solid var(--border)",
-            borderRadius: 12,
-            padding: 20,
-          }}
-        >
+        <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12, padding: 20 }}>
+          <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: 4 }}>One-Off</div>
+          <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)" }}>{oneOff.length}</div>
+        </div>
+        <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12, padding: 20 }}>
           <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: 4 }}>Approved</div>
           <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "#00c87c" }}>{approvedCount}</div>
         </div>
-        <div
-          style={{
-            background: "var(--card)",
-            border: "1px solid var(--border)",
-            borderRadius: 12,
-            padding: 20,
-          }}
-        >
+        <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12, padding: 20 }}>
           <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: 4 }}>Flyers Done</div>
           <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--accent2)" }}>{flyerCount}</div>
         </div>
-        <div
-          style={{
-            background: "var(--card)",
-            border: "1px solid var(--border)",
-            borderRadius: 12,
-            padding: 20,
-          }}
-        >
-          <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: 4 }}>Monthly Events</div>
-          <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--accent)" }}>
-            {concepts.filter((c) => c.frequency.includes("Monthly")).length}
-          </div>
+      </div>
+
+      {/* Weekly/Monthly Section */}
+      <div style={{ marginBottom: 32 }}>
+        <h2 style={{ fontSize: "1.3rem", fontWeight: 600, marginBottom: 16, color: "var(--text)" }}>
+          📅 Weekly & Monthly Parties
+        </h2>
+        <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+          {weeklyMonthly.map(renderConceptCard)}
         </div>
       </div>
 
-      {/* Concepts List */}
-      <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-        {concepts.map((concept) => (
+      {/* One-Off Section */}
+      <div style={{ marginBottom: 32 }}>
+        <h2 style={{ fontSize: "1.3rem", fontWeight: 600, marginBottom: 16, color: "var(--text)" }}>
+          🎯 One-Off Parties
+        </h2>
+        {oneOff.length > 0 ? (
+          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+            {oneOff.map(renderConceptCard)}
+          </div>
+        ) : (
           <div
-            key={concept.id}
             style={{
               background: "var(--card)",
               border: "1px solid var(--border)",
               borderRadius: 12,
               padding: 24,
+              textAlign: "center",
+              color: "var(--muted)",
             }}
           >
-            {/* Header Row */}
-            <div
-              style={{
-                display: "flex",
-                alignItems: "flex-start",
-                justifyContent: "space-between",
-                marginBottom: 16,
-              }}
-            >
-              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                <span style={{ fontSize: "2rem" }}>{concept.icon}</span>
-                <div>
-                  <h2 style={{ fontSize: "1.2rem", fontWeight: 600, margin: 0, color: "var(--text)" }}>
-                    {concept.name}
-                  </h2>
-                  <span style={{ fontSize: "0.8rem", color: "var(--muted)" }}>{concept.frequency}</span>
-                </div>
-              </div>
-              <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-                <button
-                  onClick={() => toggleApproved(concept)}
-                  style={{
-                    padding: "6px 12px",
-                    borderRadius: 20,
-                    border: "none",
-                    fontSize: "0.75rem",
-                    fontWeight: 600,
-                    cursor: "pointer",
-                    background: concept.approved
-                      ? "rgba(0,200,124,0.2)"
-                      : "rgba(255,193,7,0.2)",
-                    color: concept.approved ? "#00c87c" : "#ffc107",
-                  }}
-                >
-                  {concept.approved ? "✓ Approved" : "Pending"}
-                </button>
-                <button
-                  onClick={() => toggleFlyer(concept)}
-                  style={{
-                    padding: "6px 12px",
-                    borderRadius: 20,
-                    border: "none",
-                    fontSize: "0.75rem",
-                    fontWeight: 600,
-                    cursor: "pointer",
-                    background: concept.flyerDone
-                      ? "rgba(0,200,124,0.2)"
-                      : "rgba(128,128,128,0.2)",
-                    color: concept.flyerDone ? "#00c87c" : "var(--muted)",
-                  }}
-                >
-                  {concept.flyerDone ? "✓ Flyer Done" : "No Flyer"}
-                </button>
-                <button
-                  onClick={() => handleEdit(concept)}
-                  style={{
-                    padding: "6px 12px",
-                    borderRadius: 20,
-                    border: "1px solid var(--border)",
-                    fontSize: "0.75rem",
-                    fontWeight: 600,
-                    cursor: "pointer",
-                    background: "var(--bg)",
-                    color: "var(--text)",
-                  }}
-                >
-                  Edit
-                </button>
-              </div>
-            </div>
-
-            {/* Edit Form */}
-            {editingId === concept.id ? (
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "1fr 1fr",
-                  gap: 12,
-                  marginBottom: 16,
-                }}
-              >
-                <div>
-                  <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>
-                    Who
-                  </label>
-                  <textarea
-                    value={editForm.who || ""}
-                    onChange={(e) => setEditForm({ ...editForm, who: e.target.value })}
-                    style={{
-                      width: "100%",
-                      padding: 8,
-                      background: "var(--bg)",
-                      border: "1px solid var(--border)",
-                      borderRadius: 6,
-                      color: "var(--text)",
-                      fontSize: "0.85rem",
-                      minHeight: 60,
-                    }}
-                  />
-                </div>
-                <div>
-                  <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>
-                    Format
-                  </label>
-                  <textarea
-                    value={editForm.format || ""}
-                    onChange={(e) => setEditForm({ ...editForm, format: e.target.value })}
-                    style={{
-                      width: "100%",
-                      padding: 8,
-                      background: "var(--bg)",
-                      border: "1px solid var(--border)",
-                      borderRadius: 6,
-                      color: "var(--text)",
-                      fontSize: "0.85rem",
-                      minHeight: 60,
-                    }}
-                  />
-                </div>
-                <div>
-                  <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>
-                    Drink Specials
-                  </label>
-                  <textarea
-                    value={editForm.drinks || ""}
-                    onChange={(e) => setEditForm({ ...editForm, drinks: e.target.value })}
-                    style={{
-                      width: "100%",
-                      padding: 8,
-                      background: "var(--bg)",
-                      border: "1px solid var(--border)",
-                      borderRadius: 6,
-                      color: "var(--text)",
-                      fontSize: "0.85rem",
-                      minHeight: 60,
-                    }}
-                  />
-                </div>
-                <div>
-                  <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>
-                    Games/Activities
-                  </label>
-                  <textarea
-                    value={editForm.games || ""}
-                    onChange={(e) => setEditForm({ ...editForm, games: e.target.value })}
-                    style={{
-                      width: "100%",
-                      padding: 8,
-                      background: "var(--bg)",
-                      border: "1px solid var(--border)",
-                      borderRadius: 6,
-                      color: "var(--text)",
-                      fontSize: "0.85rem",
-                      minHeight: 60,
-                    }}
-                  />
-                </div>
-                <div style={{ gridColumn: "span 2" }}>
-                  <label style={{ fontSize: "0.75rem", color: "var(--muted)", display: "block", marginBottom: 4 }}>
-                    Costuming
-                  </label>
-                  <textarea
-                    value={editForm.costuming || ""}
-                    onChange={(e) => setEditForm({ ...editForm, costuming: e.target.value })}
-                    style={{
-                      width: "100%",
-                      padding: 8,
-                      background: "var(--bg)",
-                      border: "1px solid var(--border)",
-                      borderRadius: 6,
-                      color: "var(--text)",
-                      fontSize: "0.85rem",
-                      minHeight: 60,
-                    }}
-                  />
-                </div>
-                <div style={{ gridColumn: "span 2", display: "flex", gap: 8, justifyContent: "flex-end" }}>
-                  <button
-                    onClick={handleCancel}
-                    style={{
-                      padding: "8px 16px",
-                      borderRadius: 6,
-                      border: "1px solid var(--border)",
-                      background: "var(--bg)",
-                      color: "var(--text)",
-                      cursor: "pointer",
-                    }}
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    onClick={handleSave}
-                    style={{
-                      padding: "8px 16px",
-                      borderRadius: 6,
-                      border: "none",
-                      background: "var(--accent)",
-                      color: "#fff",
-                      cursor: "pointer",
-                      fontWeight: 600,
-                    }}
-                  >
-                    Save Changes
-                  </button>
-                </div>
-              </div>
-            ) : (
-              /* Display Mode */
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "1fr 1fr",
-                  gap: 12,
-                  fontSize: "0.9rem",
-                }}
-              >
-                <div>
-                  <span style={{ color: "var(--muted)", display: "block", marginBottom: 4, fontSize: "0.8rem" }}>
-                    Who
-                  </span>
-                  <span style={{ color: "var(--text)" }}>{concept.who}</span>
-                </div>
-                <div>
-                  <span style={{ color: "var(--muted)", display: "block", marginBottom: 4, fontSize: "0.8rem" }}>
-                    Format
-                  </span>
-                  <span style={{ color: "var(--text)" }}>{concept.format}</span>
-                </div>
-                <div>
-                  <span style={{ color: "var(--muted)", display: "block", marginBottom: 4, fontSize: "0.8rem" }}>
-                    Drink Specials
-                  </span>
-                  <span style={{ color: "var(--text)" }}>{concept.drinks}</span>
-                </div>
-                <div>
-                  <span style={{ color: "var(--muted)", display: "block", marginBottom: 4, fontSize: "0.8rem" }}>
-                    Games/Activities
-                  </span>
-                  <span style={{ color: "var(--text)" }}>{concept.games}</span>
-                </div>
-                <div style={{ gridColumn: "span 2" }}>
-                  <span style={{ color: "var(--muted)", display: "block", marginBottom: 4, fontSize: "0.8rem" }}>
-                    Costuming
-                  </span>
-                  <span style={{ color: "var(--text)" }}>{concept.costuming}</span>
-                </div>
-              </div>
-            )}
+            No one-off parties added yet. Ideas: Halloween Bash, New Year's Eve, Valentine's Special, St. Patrick's Day, etc.
           </div>
-        ))}
+        )}
       </div>
 
       {/* Last Updated */}
-      <p
-        style={{
-          marginTop: 24,
-          fontSize: "0.75rem",
-          color: "var(--muted)",
-          textAlign: "right",
-        }}
-      >
+      <p style={{ marginTop: 24, fontSize: "0.75rem", color: "var(--muted)", textAlign: "right" }}>
         Last updated: {new Date(data.lastUpdated).toLocaleString()}
       </p>
     </div>
