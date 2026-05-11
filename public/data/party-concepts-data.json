@@ -258,13 +258,13 @@
       "name": "Featured Entertainer Weekends",
       "icon": "⭐",
       "category": "Talent Spotlight",
-      "concept": "Feature a different entertainer every weekend starting July 10 with Allie. Builds star power, gives customers a reason to return, and creates social media content around featured talent.",
-      "format": "Weekly rotating featured entertainer — promoted on social media, podcast shoutout, special intro during set, VIP experience packages.",
-      "distribution": "Instagram, TikTok, in-club announcements, podcast mentions",
-      "integration": "Featured entertainers become content for podcast and social. Flyers already created for Allie (July 10 kickoff).",
+      "concept": "Feature a different entertainer every weekend starting July 10 with Allie. Each featured entertainer gets their own custom flyer, promoted across all channels, and a dedicated VIP experience package for customers. Builds star power, gives customers a reason to return, and creates ongoing social media content.",
+      "format": "Weekly rotating featured entertainer — custom flyer per entertainer, promoted on social media, podcast shoutout, special intro during DJ set, VIP table packages, meet & greet opportunities.",
+      "distribution": "Instagram, TikTok, in-club announcements, podcast mentions, flyer distribution at local bars",
+      "integration": "Featured entertainers become content for podcast and social. Flyers already created for Allie (July 10 kickoff). Sign-up sheet tracks which entertainers are featured each weekend.",
       "status": "Idea",
       "approved": false,
-      "notes": "Kickoff: July 10 with Allie. Flyer already made — link to featured-entertainer.vercel.app for full roster."
+      "notes": "Kickoff: July 10 with Allie. Flyer: https://featured-entertainer.vercel.app"
     }
   ],
   "lastUpdated": "2026-05-11T05:00:00Z"

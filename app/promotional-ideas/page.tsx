@@ -208,7 +208,23 @@ export default function PromotionalIdeasPage() {
                 <span style={{ color: "var(--muted)", display: "block", marginBottom: 4, fontSize: "0.8rem" }}>
                   Notes
                 </span>
-                <span style={{ color: "var(--text)" }}>{idea.notes}</span>
+                <span style={{ color: "var(--text)" }}>
+                  {idea.notes?.includes("http") ? (
+                    <>
+                      {idea.notes.split("https://")[0]}
+                      <a
+                        href={`https://${idea.notes.split("https://")[1]}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: "var(--accent2)", textDecoration: "underline" }}
+                      >
+                        https://{idea.notes.split("https://")[1]}
+                      </a>
+                    </>
+                  ) : (
+                    idea.notes
+                  )}
+                </span>
               </div>
             </div>
           </div>
