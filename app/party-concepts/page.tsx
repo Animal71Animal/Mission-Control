@@ -63,9 +63,9 @@ export default function PartyConceptsPage() {
   }
 
   const weeklyMonthly = data.weeklyMonthlyParties || [];
-  const oneOff = data.oneOffParties || [];
-  const approvedCount = [...weeklyMonthly, ...oneOff].filter((c) => c.approved).length;
-  const flyerCount = [...weeklyMonthly, ...oneOff].filter((c) => c.flyerDone).length;
+  const yearly = data.yearlyParties || [];
+  const approvedCount = [...weeklyMonthly, ...yearly].filter((c) => c.approved).length;
+  const flyerCount = [...weeklyMonthly, ...yearly].filter((c) => c.flyerDone).length;
 
   const renderConceptCard = (concept: PartyConcept) => (
     <div
@@ -215,8 +215,8 @@ export default function PartyConceptsPage() {
           <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)" }}>{weeklyMonthly.length}</div>
         </div>
         <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12, padding: 20 }}>
-          <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: 4 }}>One-Off</div>
-          <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)" }}>{oneOff.length}</div>
+          <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: 4 }}>Yearly</div>
+          <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)" }}>{yearly.length}</div>
         </div>
         <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12, padding: 20 }}>
           <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: 4 }}>Approved</div>
@@ -238,14 +238,14 @@ export default function PartyConceptsPage() {
         </div>
       </div>
 
-      {/* One-Off Section */}
+      {/* Yearly Parties Section */}
       <div style={{ marginBottom: 32 }}>
         <h2 style={{ fontSize: "1.3rem", fontWeight: 600, marginBottom: 16, color: "var(--text)" }}>
-          🎯 One-Off Parties
+          🗓️ Yearly Parties
         </h2>
-        {oneOff.length > 0 ? (
+        {yearly.length > 0 ? (
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-            {oneOff.map(renderConceptCard)}
+            {yearly.map(renderConceptCard)}
           </div>
         ) : (
           <div
@@ -258,7 +258,7 @@ export default function PartyConceptsPage() {
               color: "var(--muted)",
             }}
           >
-            No one-off parties added yet. Ideas: Halloween Bash, New Year's Eve, Valentine's Special, St. Patrick's Day, etc.
+            No yearly parties added yet.
           </div>
         )}
       </div>

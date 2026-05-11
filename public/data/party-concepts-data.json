@@ -113,7 +113,92 @@
       "dayAssigned": "4th Saturday"
     }
   ],
-  "oneOffParties": [],
+  "yearlyParties": [
+    {
+      "id": "blacklight-party",
+      "name": "Blacklight Party",
+      "icon": "💜",
+      "who": "Everyone — high-energy crowd who loves neon, UV glow, and visual spectacle",
+      "format": "Full club UV/blacklight transformation. Neon body paint station, glow sticks, white clothing encouraged. DJ plays high-energy EDM and hip-hop.",
+      "drinks": "Glow-in-the-dark cocktails (tonic water base), Neon Margaritas, Blacklight Beer specials",
+      "games": "Best glow outfit contest, neon body paint competition, glow stick dance-off",
+      "costuming": "White or neon clothing required for full effect. Body paint available at entry.",
+      "approved": false,
+      "flyerDone": false,
+      "frequency": "Yearly",
+      "dayAssigned": "TBD"
+    },
+    {
+      "id": "pole-competition",
+      "name": "Pole Competition",
+      "icon": "🥇",
+      "who": "Entertainers, pole fitness community, fans of athletic performance art",
+      "format": "Multi-round pole dancing competition with judges panel. Amateur and pro divisions. Audience voting + professional scoring.",
+      "drinks": "Champagne specials, VIP bottle service for judges/sponsors, themed cocktails per round",
+      "games": "Competition rounds (technical, artistic, freestyle), audience vote, judges' choice awards",
+      "costuming": "Competition-appropriate athletic wear. Judges in formal attire.",
+      "approved": false,
+      "flyerDone": false,
+      "frequency": "Yearly",
+      "dayAssigned": "TBD"
+    },
+    {
+      "id": "halloween-bash",
+      "name": "Halloween Bash",
+      "icon": "🎃",
+      "who": "Everyone — costume contest draws all demographics",
+      "format": "Full club Halloween decor, haunted house elements, costume contest with cash prizes. DJ plays spooky remixes and party hits.",
+      "drinks": "Witch's Brew (green punch), Vampire's Kiss (red champagne cocktail), Candy Corn Shots",
+      "games": "Costume contest (scariest, sexiest, most creative, best couple), pumpkin carving station, horror movie trivia",
+      "costuming": "Costumes mandatory for contest entry. Full Halloween theme encouraged.",
+      "approved": false,
+      "flyerDone": false,
+      "frequency": "Yearly — October 31",
+      "dayAssigned": "October 31"
+    },
+    {
+      "id": "new-years-eve",
+      "name": "New Year's Eve Gala",
+      "icon": "🎆",
+      "who": "Couples, groups, anyone looking for a premium NYE experience",
+      "format": "Premium open bar packages, champagne toast at midnight, countdown celebration, special NYE menu. Higher cover, VIP tables available.",
+      "drinks": "Champagne packages, Midnight Kiss (champagne + strawberry), Resolution cocktails",
+      "games": "Countdown celebration, midnight kiss contest, resolution wall, photo booth",
+      "costuming": "Formal/cocktail attire encouraged. Black tie optional VIP section.",
+      "approved": false,
+      "flyerDone": false,
+      "frequency": "Yearly — December 31",
+      "dayAssigned": "December 31"
+    },
+    {
+      "id": "valentines-special",
+      "name": "Valentine's Special",
+      "icon": "❤️",
+      "who": "Couples, singles, anyone looking for a romantic or anti-Valentine's night out",
+      "format": "Couples packages, singles mingle games, romantic decor, red and pink theme. Special couples dances and VIP experiences.",
+      "drinks": "Love Potion (pink cocktail), Broken Heart (whiskey + bitters), Cupid's Arrow (champagne + raspberry)",
+      "games": "Singles mingle speed dating, couples dance contest, love song request hour",
+      "costuming": "Red, pink, or black attire. Romantic or anti-romantic theme encouraged.",
+      "approved": false,
+      "flyerDone": false,
+      "frequency": "Yearly — February 14",
+      "dayAssigned": "February 14"
+    },
+    {
+      "id": "st-patricks-day",
+      "name": "St. Patrick's Day Bash",
+      "icon": "☘️",
+      "who": "Everyone — green beer and Irish whiskey draws all crowds",
+      "format": "Full green decor, Irish whiskey specials, green beer, shamrock everything. DJ plays Irish rock remixes and party hits.",
+      "drinks": "Green Beer, Irish Car Bombs, Jameson specials, Shamrock Shots",
+      "games": "Best green outfit contest, Irish trivia, pot of gold raffle",
+      "costuming": "Green mandatory. Leprechaun hats, shamrock accessories encouraged.",
+      "approved": false,
+      "flyerDone": false,
+      "frequency": "Yearly — March 17",
+      "dayAssigned": "March 17"
+    }
+  ],
   "promotionalIdeas": [
     {
       "id": "monthly-podcast",
