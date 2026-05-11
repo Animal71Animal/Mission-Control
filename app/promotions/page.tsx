@@ -1,69 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
-
-interface PartyConcept {
-  id: string;
-  name: string;
-  icon: string;
-  approved: boolean;
-  flyerDone: boolean;
-  frequency: string;
-}
-
-interface PartyConceptsData {
-  weeklyMonthlyParties?: PartyConcept[];
-  yearlyParties?: PartyConcept[];
-  promotionalIdeas?: any[];
-  lastUpdated: string;
-}
 
 export default function PromotionsPage() {
-  const [data, setData] = useState<PartyConceptsData | null>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch("/api/party-concepts")
-      .then((res) => res.json())
-      .then((data) => {
-        if (data && (data.weeklyMonthlyParties || data.yearlyParties)) {
-          setData(data);
-        } else {
-          fetch("/data/party-concepts-data.json")
-            .then((r) => r.json())
-            .then((localData) => setData(localData))
-            .catch(() => setData(null));
-        }
-        setLoading(false);
-      })
-      .catch(() => {
-        fetch("/data/party-concepts-data.json")
-          .then((r) => r.json())
-          .then((localData) => {
-            setData(localData);
-            setLoading(false);
-          })
-          .catch(() => setLoading(false));
-      });
-  }, []);
-
-  if (loading || !data) {
-    return (
-      <div>
-        <h1 style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)" }}>📢 Promotions & Marketing</h1>
-        <p style={{ color: "var(--muted)", marginTop: 20 }}>Loading...</p>
-      </div>
-    );
-  }
-
-  const weeklyMonthly = data.weeklyMonthlyParties || [];
-  const yearly = data.yearlyParties || [];
-  const allConcepts = [...weeklyMonthly, ...yearly];
-  const approvedCount = allConcepts.filter((c) => c.approved).length;
-  const flyerCount = allConcepts.filter((c) => c.flyerDone).length;
-  const promoIdeas = data.promotionalIdeas || [];
-
   return (
     <div>
       {/* Header */}
@@ -83,63 +22,6 @@ export default function PromotionsPage() {
         <p style={{ color: "var(--muted)", marginTop: 6, fontSize: "0.9rem" }}>
           Weekly party concepts, event planning, and promotional assets for Spearmint Rhino Boise.
         </p>
-      </div>
-
-      {/* Quick Stats */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
-          gap: 16,
-          marginBottom: 28,
-        }}
-      >
-        <div
-          style={{
-            background: "var(--card)",
-            border: "1px solid var(--border)",
-            borderRadius: 12,
-            padding: 20,
-          }}
-        >
-          <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: 4 }}>Party Concepts</div>
-          <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)" }}>{allConcepts.length}</div>
-        </div>
-        <div
-          style={{
-            background: "var(--card)",
-            border: "1px solid var(--border)",
-            borderRadius: 12,
-            padding: 20,
-          }}
-        >
-          <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: 4 }}>Approved</div>
-          <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "#00c87c" }}>{approvedCount}</div>
-        </div>
-        <div
-          style={{
-            background: "var(--card)",
-            border: "1px solid var(--border)",
-            borderRadius: 12,
-            padding: 20,
-          }}
-        >
-          <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: 4 }}>Flyers Done</div>
-          <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--accent2)" }}>{flyerCount}</div>
-        </div>
-        <div
-          style={{
-            background: "var(--card)",
-            border: "1px solid var(--border)",
-            borderRadius: 12,
-            padding: 20,
-          }}
-        >
-          <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: 4 }}>Promo Ideas</div>
-          <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--accent)" }}>
-            {promoIdeas.length}
-          </div>
-        </div>
       </div>
 
       {/* Navigation Cards */}
@@ -193,18 +75,6 @@ export default function PromotionsPage() {
           </p>
         </Link>
       </div>
-
-      {/* Last Updated */}
-      <p
-        style={{
-          marginTop: 24,
-          fontSize: "0.75rem",
-          color: "var(--muted)",
-          textAlign: "right",
-        }}
-      >
-        Last updated: {new Date(data.lastUpdated).toLocaleString()}
-      </p>
     </div>
   );
 }
