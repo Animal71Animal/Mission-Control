@@ -13,7 +13,9 @@ interface PartyConcept {
 }
 
 interface PartyConceptsData {
-  concepts: PartyConcept[];
+  weeklyMonthlyParties?: PartyConcept[];
+  yearlyParties?: PartyConcept[];
+  promotionalIdeas?: any[];
   lastUpdated: string;
 }
 
@@ -25,7 +27,7 @@ export default function PromotionsPage() {
     fetch("/api/party-concepts")
       .then((res) => res.json())
       .then((data) => {
-        if (data && data.concepts) {
+        if (data && (data.weeklyMonthlyParties || data.yearlyParties)) {
           setData(data);
         } else {
           fetch("/data/party-concepts-data.json")
@@ -55,9 +57,12 @@ export default function PromotionsPage() {
     );
   }
 
-  const { concepts } = data;
-  const approvedCount = concepts.filter((c) => c.approved).length;
-  const flyerCount = concepts.filter((c) => c.flyerDone).length;
+  const weeklyMonthly = data.weeklyMonthlyParties || [];
+  const yearly = data.yearlyParties || [];
+  const allConcepts = [...weeklyMonthly, ...yearly];
+  const approvedCount = allConcepts.filter((c) => c.approved).length;
+  const flyerCount = allConcepts.filter((c) => c.flyerDone).length;
+  const promoIdeas = data.promotionalIdeas || [];
 
   return (
     <div>
@@ -98,7 +103,7 @@ export default function PromotionsPage() {
           }}
         >
           <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: 4 }}>Party Concepts</div>
-          <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)" }}>{concepts.length}</div>
+          <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)" }}>{allConcepts.length}</div>
         </div>
         <div
           style={{
@@ -130,9 +135,9 @@ export default function PromotionsPage() {
             padding: 20,
           }}
         >
-          <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: 4 }}>Monthly Events</div>
+          <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: 4 }}>Promo Ideas</div>
           <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--accent)" }}>
-            {concepts.filter((c) => c.frequency.includes("Monthly")).length}
+            {promoIdeas.length}
           </div>
         </div>
       </div>
@@ -163,7 +168,28 @@ export default function PromotionsPage() {
             Party Concepts
           </h2>
           <p style={{ fontSize: "0.85rem", color: "var(--muted)", margin: 0 }}>
-            Weekly and monthly event ideas — industry night, teddy tuesdays, chicks in kicks, and more.
+            Weekly, monthly, and yearly event ideas — industry night, teddy tuesdays, chicks in kicks, and more.
+          </p>
+        </Link>
+        <Link
+          href="/promotional-ideas"
+          style={{
+            display: "block",
+            padding: 24,
+            borderRadius: 12,
+            border: "1px solid var(--border)",
+            background: "var(--card)",
+            textDecoration: "none",
+            color: "inherit",
+            transition: "all 0.2s",
+          }}
+        >
+          <div style={{ fontSize: "2rem", marginBottom: 12 }}>💡</div>
+          <h2 style={{ fontSize: "1.2rem", fontWeight: 600, margin: "0 0 8px", color: "var(--text)" }}>
+            Promotional Ideas
+          </h2>
+          <p style={{ fontSize: "0.85rem", color: "var(--muted)", margin: 0 }}>
+            Podcast, influencer marketing, street team, content creation strategies.
           </p>
         </Link>
       </div>
