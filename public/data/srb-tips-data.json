@@ -17,8 +17,8 @@
     },
     {
       "month": "May",
-      "amount": 706,
-      "nights": 4
+      "amount": 696,
+      "nights": 5
     }
   ],
   "topTippers": [
@@ -1395,6 +1395,12 @@
         }
       ],
       "total": 129
+    },
+    {
+      "date": "2026-05-10",
+      "day": "Sunday",
+      "tips": [],
+      "total": 0
     }
   ],
   "lastUpdated": "2026-05-08T04:33:00.000000",
