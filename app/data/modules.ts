@@ -15,6 +15,7 @@ export const modules: Module[] = [
   { href: "/wlp", icon: "💼", title: "WLP Business", desc: "Business docs, AI artists, streaming, social, and industry links.", status: "active", group: "business" },
   { href: "/promotions", icon: "📢", title: "Spearmint Rhino Promotions & Marketing", desc: "Weekly party concepts, event planning, and promotional assets for SRB.", status: "active", group: "business", children: [
     { href: "/party-concepts", icon: "🎉", title: "Party Concepts", desc: "Weekly and monthly event ideas — industry night, teddy tuesdays, chicks in kicks, and more.", status: "active", group: "business" },
+    { href: "/promotional-ideas", icon: "💡", title: "Promotional Ideas", desc: "Podcast, influencer marketing, street team, content creation, and paid advertising strategies.", status: "active", group: "business" },
   ] },
   { href: "/artists", icon: "🎤", title: "Artists", desc: "ANIMAL, Kade Rivers, Madison Blair, Aria Vale — WLP roster.", status: "active", group: "business", children: [
     { href: "/artist-assets", icon: "🎨", title: "Artist Assets", desc: "Unified asset tracking for WLP artist roster.", status: "active", group: "business" },

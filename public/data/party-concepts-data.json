@@ -113,5 +113,142 @@
       "dayAssigned": "4th Saturday"
     }
   ],
+  ],
+  "promotionalIdeas": [
+    {
+      "id": "monthly-podcast",
+      "name": "Monthly Podcast — 'The Late Shift'",
+      "icon": "🎙️",
+      "category": "Content Marketing",
+      "concept": "Monthly podcast showcasing the music we play in the club, interviews with entertainers, guests, and music artists. Downloadable from designated website. Keeps us top-of-mind.",
+      "format": "30–45 min episodes. Behind-the-scenes interviews, industry talk, entertainment culture, track highlights from Saturday nights.",
+      "distribution": "Spotify, Apple Podcasts, YouTube (audio + clips)",
+      "integration": "Clips feed social media; influencers get podcast feature as comp; promotes upcoming events",
+      "copyrightSolution": "Use Mixcloud as primary host — they have blanket licenses for music. For podcast platforms: use short music clips (under 30 seconds) with commentary, or license-free/podcast-safe music for intro/outro. Interview segments and talking content are 100% original and copyright-free.",
+      "status": "Idea",
+      "approved": false,
+      "notes": "Need to verify: episode length, host (Eric vs rotating), production workflow, equipment budget"
+    },
+    {
+      "id": "influencer-program",
+      "name": "Influencer Marketing Program",
+      "icon": "📱",
+      "category": "Social Media",
+      "concept": "20–30 local influencers activated per month. Free admission + guest passes + podcast feature as comp. No forced posts — authentic experience first.",
+      "format": "Discovery via Instagram/TikTok hashtags (#BoiseNightlife, #BoiseParty). Tiered: Micro (5K–15K) → Mid (15K–50K) → Macro (50K+)",
+      "distribution": "Instagram (primary), TikTok (secondary)",
+      "integration": "Influencers attend events, post organically, get featured on podcast and social channels",
+      "status": "Idea",
+      "approved": false,
+      "notes": "Budget: $400/mo for comp admission + drinks. Need influencer tracking spreadsheet."
+    },
+    {
+      "id": "street-team",
+      "name": "Street Team Activation",
+      "icon": "🃏",
+      "category": "Grassroots",
+      "concept": "Activate Ish's network (bars, bouncers, promoters). Comp structure: $5–10 per head for verified referrals. Target downtown bars at last call (1:30–2am).",
+      "format": "Flyers/cards with QR code to Instagram/podcast. Referral tracking sheet.",
+      "distribution": "Downtown Boise bars: The Bastion, Neurolux, other 2am-close spots",
+      "integration": "Drives late-night crowd to SRB after other bars close. Especially effective for Saturday Late Night.",
+      "status": "Idea",
+      "approved": false,
+      "notes": "Budget: $300/mo for street team incentives. Need QR landing page."
+    },
+    {
+      "id": "content-creation",
+      "name": "Content Creation & Social Media",
+      "icon": "📸",
+      "category": "Digital Marketing",
+      "concept": "Behind-the-scenes, crowd moments, DJ highlights, influencer collabs. Daily stories + 3–5 posts/week on Instagram, 2–3 videos/week on TikTok.",
+      "format": "Content pillars: Behind the Scenes, Guest Moments, DJ Sets, Influencer Collabs, Podcast Clips",
+      "distribution": "Instagram (primary), TikTok (secondary), Podcast clips (long-form)",
+      "integration": "All content feeds back into event promotion and podcast content engine",
+      "status": "Idea",
+      "approved": false,
+      "notes": "Budget: $400/mo for content production. May need videographer if quality demands increase."
+    },
+    {
+      "id": "paid-ads",
+      "name": "Paid Social Advertising",
+      "icon": "💰",
+      "category": "Paid Media",
+      "concept": "Meta/TikTok targeted ads to Boise 21–35, nightlife interests. Awareness → Consideration → Conversion funnel.",
+      "format": "Awareness (video views), Consideration (traffic to IG/podcast), Conversion (event promotion)",
+      "distribution": "Instagram/Facebook Ads, TikTok Ads",
+      "integration": "Supplements organic reach. Scales if ROAS positive.",
+      "status": "Idea",
+      "approved": false,
+      "notes": "Budget: $300/mo. Small tests first, scale winners, kill losers fast."
+    }
+  ],
+  "promotionalIdeas": [
+    {
+      "id": "monthly-podcast",
+      "name": "Monthly Podcast — 'The Late Shift'",
+      "icon": "🎙️",
+      "category": "Content Marketing",
+      "concept": "Monthly podcast showcasing the music we play in the club, interviews with entertainers, guests, and music artists. Downloadable from designated website. Keeps us top-of-mind.",
+      "format": "30–45 min episodes. Behind-the-scenes interviews, industry talk, entertainment culture, track highlights from Saturday nights.",
+      "distribution": "Spotify, Apple Podcasts, YouTube (audio + clips)",
+      "integration": "Clips feed social media; influencers get podcast feature as comp; promotes upcoming events",
+      "copyrightSolution": "Use Mixcloud as primary host — they have blanket licenses for music. For podcast platforms: use short music clips (under 30 seconds) with commentary, or license-free/podcast-safe music for intro/outro. Interview segments and talking content are 100% original and copyright-free.",
+      "status": "Idea",
+      "approved": false,
+      "notes": "Need to verify: episode length, host (Eric vs rotating), production workflow, equipment budget"
+    },
+    {
+      "id": "influencer-program",
+      "name": "Influencer Marketing Program",
+      "icon": "📱",
+      "category": "Social Media",
+      "concept": "20–30 local influencers activated per month. Free admission + guest passes + podcast feature as comp. No forced posts — authentic experience first.",
+      "format": "Discovery via Instagram/TikTok hashtags (#BoiseNightlife, #BoiseParty). Tiered: Micro (5K–15K) → Mid (15K–50K) → Macro (50K+)",
+      "distribution": "Instagram (primary), TikTok (secondary)",
+      "integration": "Influencers attend events, post organically, get featured on podcast and social channels",
+      "status": "Idea",
+      "approved": false,
+      "notes": "Budget: $400/mo for comp admission + drinks. Need influencer tracking spreadsheet."
+    },
+    {
+      "id": "street-team",
+      "name": "Street Team Activation",
+      "icon": "🃏",
+      "category": "Grassroots",
+      "concept": "Activate Ish's network (bars, bouncers, promoters). Comp structure: $5–10 per head for verified referrals. Target downtown bars at last call (1:30–2am).",
+      "format": "Flyers/cards with QR code to Instagram/podcast. Referral tracking sheet.",
+      "distribution": "Downtown Boise bars: The Bastion, Neurolux, other 2am-close spots",
+      "integration": "Drives late-night crowd to SRB after other bars close. Especially effective for Saturday Late Night.",
+      "status": "Idea",
+      "approved": false,
+      "notes": "Budget: $300/mo for street team incentives. Need QR landing page."
+    },
+    {
+      "id": "content-creation",
+      "name": "Content Creation & Social Media",
+      "icon": "📸",
+      "category": "Digital Marketing",
+      "concept": "Behind-the-scenes, crowd moments, DJ highlights, influencer collabs. Daily stories + 3–5 posts/week on Instagram, 2–3 videos/week on TikTok.",
+      "format": "Content pillars: Behind the Scenes, Guest Moments, DJ Sets, Influencer Collabs, Podcast Clips",
+      "distribution": "Instagram (primary), TikTok (secondary), Podcast clips (long-form)",
+      "integration": "All content feeds back into event promotion and podcast content engine",
+      "status": "Idea",
+      "approved": false,
+      "notes": "Budget: $400/mo for content production. May need videographer if quality demands increase."
+    },
+    {
+      "id": "paid-ads",
+      "name": "Paid Social Advertising",
+      "icon": "💰",
+      "category": "Paid Media",
+      "concept": "Meta/TikTok targeted ads to Boise 21–35, nightlife interests. Awareness → Consideration → Conversion funnel.",
+      "format": "Awareness (video views), Consideration (traffic to IG/podcast), Conversion (event promotion)",
+      "distribution": "Instagram/Facebook Ads, TikTok Ads",
+      "integration": "Supplements organic reach. Scales if ROAS positive.",
+      "status": "Idea",
+      "approved": false,
+      "notes": "Budget: $300/mo. Small tests first, scale winners, kill losers fast."
+    }
+  ],
   "lastUpdated": "2026-05-11T05:00:00Z"
 }

@@ -59,16 +59,28 @@ export async function GET() {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { concepts } = body;
+    const { concepts, promotionalIdeas } = body;
     
-    if (!Array.isArray(concepts)) {
-      return NextResponse.json({ error: 'concepts array required' }, { status: 400 });
+    // Fetch current data to merge updates
+    let currentData: any = {};
+    try {
+      currentData = await fetchFromGitHub();
+    } catch {
+      const local = fetchFromLocal();
+      if (local) currentData = local;
     }
 
-    const payload = {
-      concepts,
+    const payload: any = {
+      ...currentData,
       lastUpdated: new Date().toISOString(),
     };
+
+    if (concepts) {
+      payload.concepts = concepts;
+    }
+    if (promotionalIdeas) {
+      payload.promotionalIdeas = promotionalIdeas;
+    }
 
     // Try GitHub first
     if (GITHUB_TOKEN) {
