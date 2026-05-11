@@ -11,7 +11,7 @@
       "costuming": "NEED IDEAS",
       "approved": false,
       "flyerDone": false,
-      "frequency": "Weekly",
+      "frequency": "Sunday",
       "dayAssigned": "Sunday"
     },
     {
@@ -20,12 +20,12 @@
       "icon": "♠️",
       "who": "Swingers and open relationship couples. Mingle Mondays crowd (social, open-minded, looking to connect).",
       "format": "Poker runs 7pm–10pm as the icebreaker/early crowd draw. Swinger atmosphere takes over after 10pm.",
-      "drinks": "Cards and Billiards Themed Drinks, 50 Shades/Swinger Themed Drinks",
+      "drinks": "Cards Themed Drinks, 50 Shades/Swinger Themed Drinks",
       "games": "Poker (7pm–10pm), mingling, open atmosphere",
       "costuming": "Gowns and/or BDSM/50 Shades of Grey aesthetic",
       "approved": false,
       "flyerDone": false,
-      "frequency": "Weekly",
+      "frequency": "Monday",
       "dayAssigned": "Monday"
     },
     {
@@ -39,7 +39,7 @@
       "costuming": "Entertainers in teddys and lingerie wear. More like a Victoria's Secret Runway Fashion Show",
       "approved": false,
       "flyerDone": false,
-      "frequency": "Weekly",
+      "frequency": "Tuesday",
       "dayAssigned": "Tuesday"
     },
     {
@@ -53,7 +53,7 @@
       "costuming": "Bikinis, beach, spring break decor",
       "approved": false,
       "flyerDone": false,
-      "frequency": "Weekly",
+      "frequency": "Wednesday",
       "dayAssigned": "Wednesday"
     },
     {
@@ -67,8 +67,8 @@
       "costuming": "Girls in cool sneakers with matching outfits, different shoe store each week with vendor table",
       "approved": false,
       "flyerDone": false,
-      "frequency": "Weekly",
-      "dayAssigned": null
+      "frequency": "Thursday",
+      "dayAssigned": "Thursday"
     },
     {
       "id": "femme-fatale",
@@ -81,8 +81,22 @@
       "costuming": "Evening Gowns, Pencil Dresses, Fitted Suits. Think elegant and sexy (James Bond, female)",
       "approved": false,
       "flyerDone": false,
-      "frequency": "Weekly",
+      "frequency": "Friday",
       "dayAssigned": "Friday"
+    },
+    {
+      "id": "late-night",
+      "name": "Late Night",
+      "icon": "🌙",
+      "who": "The after-hours crowd — people who want to keep the party going when everything else closes",
+      "format": "2am–6am, limited capacity, no phones (staff bags them at door), no requests, proper sound system. Underground vibe.",
+      "drinks": "NEED IDEAS",
+      "games": "NEED IDEAS",
+      "costuming": "NEED IDEAS",
+      "approved": false,
+      "flyerDone": false,
+      "frequency": "Saturday",
+      "dayAssigned": "Saturday"
     },
     {
       "id": "animal-house",
@@ -99,5 +113,5 @@
       "dayAssigned": "4th Saturday"
     }
   ],
-  "lastUpdated": "2026-05-11T04:45:00Z"
+  "lastUpdated": "2026-05-11T05:00:00Z"
 }
