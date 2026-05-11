@@ -1,0 +1,103 @@
+{
+  "concepts": [
+    {
+      "id": "industry-night",
+      "name": "Industry Night",
+      "icon": "🍸",
+      "who": "Service workers, bartenders, dancers, staff from other spots",
+      "format": "Late start (11pm+), drink specials, no cover with paystub or staff ID",
+      "drinks": "Good Beer Specials, Jamison Special",
+      "games": "Entertainer vs Customer Spelling Bee",
+      "costuming": "NEED IDEAS",
+      "approved": false,
+      "flyerDone": false,
+      "frequency": "Weekly",
+      "dayAssigned": null
+    },
+    {
+      "id": "teddy-tuesdays",
+      "name": "Teddy Tuesdays",
+      "icon": "🧸",
+      "who": "Gentleman / business owner / executive who doesn't have to worry about work on Tuesday",
+      "format": "Lingerie night with a sophisticated, upscale vibe. Think Victoria's Secret runway meets speakeasy.",
+      "drinks": "Martinis, Scotch, Bourbon, Whiskey, Bottled Wine Specials, Victoria's Secret Themed Drinks",
+      "games": "Newlywed Game",
+      "costuming": "Entertainers in teddys and lingerie wear. More like a Victoria's Secret Runway Fashion Show",
+      "approved": false,
+      "flyerDone": false,
+      "frequency": "Weekly",
+      "dayAssigned": null
+    },
+    {
+      "id": "girls-gone-wild",
+      "name": "Girls Gone Wild Wednesdays",
+      "icon": "🎉",
+      "who": "Younger crowd (21–mid 30s), college energy",
+      "format": "High-energy, exciting atmosphere. The 'in-crowd.' Essentially the gentleman's club version of a college night.",
+      "drinks": "Spring Break Type Drinks, Beach Themed Drinks",
+      "games": "Spring Break Type Games, Playstation Games (Mario Kart etc)",
+      "costuming": "Bikinis, beach, spring break decor",
+      "approved": false,
+      "flyerDone": false,
+      "frequency": "Weekly",
+      "dayAssigned": null
+    },
+    {
+      "id": "chicks-in-kicks",
+      "name": "Chicks in Kicks",
+      "icon": "👟",
+      "who": "Sneakerhead culture — people who love a high energy, exciting atmosphere who have disposable income. The 'in-crowd.'",
+      "format": "All night (7pm–2am). Standalone sneaker culture night.",
+      "drinks": "Sneakertini, My Adidas, The Air Force One, etc",
+      "games": "Sneaker Trivia",
+      "costuming": "Girls in cool sneakers with matching outfits, different shoe store each week with vendor table",
+      "approved": false,
+      "flyerDone": false,
+      "frequency": "Weekly",
+      "dayAssigned": null
+    },
+    {
+      "id": "femme-fatale",
+      "name": "Femme Fatale Fridays",
+      "icon": "💋",
+      "who": "People who love a high energy, exciting atmosphere who have disposable income. The 'in-crowd.' Music programming leans slightly towards EDM.",
+      "format": "High-end, glamorous night out.",
+      "drinks": "NEED IDEAS",
+      "games": "NEED IDEAS",
+      "costuming": "Evening Gowns, Pencil Dresses, Fitted Suits. Entertainers can wear whatever",
+      "approved": false,
+      "flyerDone": false,
+      "frequency": "Weekly",
+      "dayAssigned": null
+    },
+    {
+      "id": "swingers-poker",
+      "name": "Swingers & Poker Night",
+      "icon": "♠️",
+      "who": "Swingers and open relationship couples. Mingle Mondays crowd (social, open-minded, looking to connect).",
+      "format": "Poker runs 7pm–10pm as the icebreaker/early crowd draw. Swinger atmosphere takes over after 10pm.",
+      "drinks": "Cards and Billiards Themed Drinks, 50 Shades/Swinger Themed Drinks",
+      "games": "Poker (7pm–10pm), mingling, open atmosphere",
+      "costuming": "Gowns and/or BDSM/50 Shades of Grey aesthetic",
+      "approved": false,
+      "flyerDone": false,
+      "frequency": "Weekly",
+      "dayAssigned": null
+    },
+    {
+      "id": "animal-house",
+      "name": "Animal House",
+      "icon": "🎪",
+      "who": "Everyone — the big monthly blowout",
+      "format": "Carnival/Freak Show with drummers, aerialists, poi/LED performers, singers, choreographed dancers, freak show performances (light hearted), etc.",
+      "drinks": "Bottle Specials on High End Liquors, Circus and Drummer inspired drinks, Animal themed drink special",
+      "games": "Carnival/Freak Show performances",
+      "costuming": "Circus/Freak Show type costuming for show performers",
+      "approved": false,
+      "flyerDone": false,
+      "frequency": "Monthly — 4th Saturday",
+      "dayAssigned": "4th Saturday"
+    }
+  ],
+  "lastUpdated": "2026-05-11T04:30:00Z"
+}
