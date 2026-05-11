@@ -104,9 +104,9 @@ export default function TeslaPage() {
     total_cost_usd: sessions.reduce((sum, s) => sum + (s.cost || 0), 0),
     total_kwh: sessions.reduce((sum, s) => sum + (s.kwh || 0), 0),
     total_miles: sessions.reduce((sum, s) => sum + (s.kwh || 0), 0) * MILES_PER_KWH,
-    total_minutes: sessions.reduce((sum, s) => sum + (s.duration_minutes || 0), 0),
+    total_minutes: sessions.reduce((sum, s) => sum + (s.duration_minutes || s.duration_min || 0), 0),
     avg_cost_per_session: sessions.length > 0 ? sessions.reduce((sum, s) => sum + (s.cost || 0), 0) / sessions.length : 0,
-    avg_duration_minutes: sessions.length > 0 ? sessions.reduce((sum, s) => sum + (s.duration_minutes || 0), 0) / sessions.length : 0,
+    avg_duration_minutes: sessions.length > 0 ? sessions.reduce((sum, s) => sum + (s.duration_minutes || s.duration_min || 0), 0) / sessions.length : 0,
   };
 
   const sortedSessions = [...sessions].sort((a, b) => b.date.localeCompare(a.date));
@@ -208,7 +208,7 @@ export default function TeslaPage() {
                 }}
               >
                 <span>{s.date}{s.time ? ` · ${formatTime(s.time)}` : ""}</span>
-                <span style={{ color: "var(--muted)" }}>{formatDuration(s.duration_minutes)}</span>
+                <span style={{ color: "var(--muted)" }}>{formatDuration(s.duration_minutes || s.duration_min || 0)}</span>
                 <span style={{ color: "var(--muted)" }}>${s.rate_per_kwh}/kWh</span>
                 <span>{s.kwh}</span>
                 <span style={{ color: "var(--muted)" }}>{(s.kwh * MILES_PER_KWH).toFixed(1)}</span>
