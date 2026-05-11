@@ -120,8 +120,8 @@
       "icon": "🎙️",
       "category": "Content Marketing",
       "concept": "Monthly podcast showcasing the music we play in the club, interviews with entertainers, guests, and music artists. Downloadable from designated website. Keeps us top-of-mind.",
-      "format": "30–45 min episodes. Behind-the-scenes interviews, industry talk, entertainment culture, track highlights from Saturday nights.",
-      "distribution": "Spotify, Apple Podcasts, YouTube (audio + clips)",
+      "format": "~1 hour episodes. Behind-the-scenes interviews, industry talk, entertainment culture, track highlights from Saturday nights.",
+      "distribution": "Mixcloud (primary) — blanket music license coverage. Spotify/Apple Podcasts TBD if we can secure proper licensing.",
       "integration": "Clips feed social media; influencers get podcast feature as comp; promotes upcoming events",
       "copyrightSolution": "Use Mixcloud as primary host — they have blanket licenses for music. For podcast platforms: use short music clips (under 30 seconds) with commentary, or license-free/podcast-safe music for intro/outro. Interview segments and talking content are 100% original and copyright-free.",
       "status": "Idea",
@@ -139,7 +139,7 @@
       "integration": "Influencers attend events, post organically, get featured on podcast and social channels",
       "status": "Idea",
       "approved": false,
-      "notes": "Budget: $400/mo for comp admission + drinks. Need influencer tracking spreadsheet."
+      "notes": "Comp: Free admission for influencer + 3 guests + $50 bar tab (or $2 kickback per signed entry card turned in). Need tracking system: signed entry cards attributed to each influencer. Budget TBD based on comp structure chosen."},{
     },
     {
       "id": "street-team",
@@ -148,7 +148,7 @@
       "category": "Grassroots",
       "concept": "Activate Ish's network (bars, bouncers, promoters). Comp structure: $5–10 per head for verified referrals. Target downtown bars at last call (1:30–2am).",
       "format": "Flyers/cards with QR code to Instagram/podcast. Referral tracking sheet.",
-      "distribution": "Downtown Boise bars: The Bastion, Neurolux, other 2am-close spots",
+      "distribution": "Local bars and clubs within 5 miles of SRB.",
       "integration": "Drives late-night crowd to SRB after other bars close. Especially effective for Saturday Late Night.",
       "status": "Idea",
       "approved": false,
