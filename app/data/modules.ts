@@ -19,6 +19,9 @@ export const modules: Module[] = [
   ] },
   { href: "/calendar", icon: "📅", title: "Calendar", desc: "Gigs, studio sessions, meetings, and deadlines.", status: "active", group: "business" },
   { href: "/srb-tips", icon: "💰", title: "SRB Tips", desc: "Spearmint Rhino tip tracking — monthly totals, top tippers, dancer stats.", status: "active", group: "business" },
+  { href: "/promotions", icon: "📢", title: "Promotions & Marketing", desc: "Weekly party concepts, event planning, and promotional assets for SRB.", status: "active", group: "business", children: [
+    { href: "/party-concepts", icon: "🎉", title: "Party Concepts", desc: "Weekly and monthly event ideas — industry night, teddy tuesdays, chicks in kicks, and more.", status: "active", group: "business" },
+  ] },
   { href: "/tasks", icon: "📋", title: "Action Items", desc: "All action items — SRB club operations and personal tasks in one hub.", status: "active", group: "business" },
   { href: "/agents", icon: "🤖", title: "AI Office", desc: "Live view of AI agents working in the virtual office.", status: "active", group: "business" },
 
