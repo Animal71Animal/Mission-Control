@@ -15,6 +15,20 @@
       "dayAssigned": null
     },
     {
+      "id": "swingers-poker",
+      "name": "Swingers & Poker Night",
+      "icon": "♠️",
+      "who": "Swingers and open relationship couples. Mingle Mondays crowd (social, open-minded, looking to connect).",
+      "format": "Poker runs 7pm–10pm as the icebreaker/early crowd draw. Swinger atmosphere takes over after 10pm.",
+      "drinks": "Cards and Billiards Themed Drinks, 50 Shades/Swinger Themed Drinks",
+      "games": "Poker (7pm–10pm), mingling, open atmosphere",
+      "costuming": "Gowns and/or BDSM/50 Shades of Grey aesthetic",
+      "approved": false,
+      "flyerDone": false,
+      "frequency": "Weekly",
+      "dayAssigned": "Monday"
+    },
+    {
       "id": "teddy-tuesdays",
       "name": "Teddy Tuesdays",
       "icon": "🧸",
@@ -26,7 +40,7 @@
       "approved": false,
       "flyerDone": false,
       "frequency": "Weekly",
-      "dayAssigned": null
+      "dayAssigned": "Tuesday"
     },
     {
       "id": "girls-gone-wild",
@@ -40,7 +54,7 @@
       "approved": false,
       "flyerDone": false,
       "frequency": "Weekly",
-      "dayAssigned": null
+      "dayAssigned": "Wednesday"
     },
     {
       "id": "chicks-in-kicks",
@@ -68,21 +82,7 @@
       "approved": false,
       "flyerDone": false,
       "frequency": "Weekly",
-      "dayAssigned": null
-    },
-    {
-      "id": "swingers-poker",
-      "name": "Swingers & Poker Night",
-      "icon": "♠️",
-      "who": "Swingers and open relationship couples. Mingle Mondays crowd (social, open-minded, looking to connect).",
-      "format": "Poker runs 7pm–10pm as the icebreaker/early crowd draw. Swinger atmosphere takes over after 10pm.",
-      "drinks": "Cards and Billiards Themed Drinks, 50 Shades/Swinger Themed Drinks",
-      "games": "Poker (7pm–10pm), mingling, open atmosphere",
-      "costuming": "Gowns and/or BDSM/50 Shades of Grey aesthetic",
-      "approved": false,
-      "flyerDone": false,
-      "frequency": "Weekly",
-      "dayAssigned": null
+      "dayAssigned": "Friday"
     },
     {
       "id": "animal-house",
@@ -99,5 +99,5 @@
       "dayAssigned": "4th Saturday"
     }
   ],
-  "lastUpdated": "2026-05-11T04:30:00Z"
+  "lastUpdated": "2026-05-11T04:45:00Z"
 }
