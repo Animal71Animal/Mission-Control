@@ -28,53 +28,14 @@ export default function PromotionalIdeasPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/api/party-concepts")
-      .then((res) => res.json())
-      .then((data) => {
-        if (data && data.promotionalIdeas) {
-          setData(data);
-        } else {
-          fetch("/data/party-concepts-data.json")
-            .then((r) => r.json())
-            .then((localData) => setData(localData))
-            .catch(() => setData(null));
-        }
+    fetch("/data/party-concepts-data.json")
+      .then((r) => r.json())
+      .then((localData) => {
+        setData(localData);
         setLoading(false);
       })
-      .catch(() => {
-        fetch("/data/party-concepts-data.json")
-          .then((r) => r.json())
-          .then((localData) => {
-            setData(localData);
-            setLoading(false);
-          })
-          .catch(() => setLoading(false));
-      });
+      .catch(() => setLoading(false));
   }, []);
-
-  const toggleApproved = async (idea: PromotionalIdea) => {
-    if (!data) return;
-
-    const updatedIdeas = data.promotionalIdeas.map((i) =>
-      i.id === idea.id ? { ...i, approved: !i.approved } : i
-    );
-
-    const updatedData = { ...data, promotionalIdeas: updatedIdeas, lastUpdated: new Date().toISOString() };
-
-    try {
-      const res = await fetch("/api/party-concepts", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ promotionalIdeas: updatedIdeas }),
-      });
-
-      if (res.ok) {
-        setData(updatedData);
-      }
-    } catch (err) {
-      console.error("Toggle failed:", err);
-    }
-  };
 
   if (loading || !data) {
     return (
@@ -85,7 +46,7 @@ export default function PromotionalIdeasPage() {
     );
   }
 
-  const { promotionalIdeas } = data;
+  const promotionalIdeas = data.promotionalIdeas || [];
   const approvedCount = promotionalIdeas.filter((i) => i.approved).length;
 
   return (
@@ -185,15 +146,12 @@ export default function PromotionalIdeasPage() {
                 </div>
               </div>
               <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-                <button
-                  onClick={() => toggleApproved(idea)}
+                <span
                   style={{
                     padding: "6px 12px",
                     borderRadius: 20,
-                    border: "none",
                     fontSize: "0.75rem",
                     fontWeight: 600,
-                    cursor: "pointer",
                     background: idea.approved
                       ? "rgba(0,200,124,0.2)"
                       : "rgba(255,193,7,0.2)",
@@ -201,7 +159,7 @@ export default function PromotionalIdeasPage() {
                   }}
                 >
                   {idea.approved ? "✓ Approved" : "Pending"}
-                </button>
+                </span>
               </div>
             </div>
 
@@ -266,7 +224,7 @@ export default function PromotionalIdeasPage() {
           textAlign: "right",
         }}
       >
-        Last updated: {new Date(data.lastUpdated).toLocaleString()}
+        Last updated: {data.lastUpdated ? new Date(data.lastUpdated).toLocaleString() : "Unknown"}
       </p>
     </div>
   );

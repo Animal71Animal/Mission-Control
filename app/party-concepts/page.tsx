@@ -20,7 +20,7 @@ interface PartyConcept {
 
 interface PartyConceptsData {
   weeklyMonthlyParties?: PartyConcept[];
-  oneOffParties?: PartyConcept[];
+  yearlyParties?: PartyConcept[];
   lastUpdated: string;
 }
 
@@ -29,28 +29,13 @@ export default function PartyConceptsPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/api/party-concepts")
-      .then((res) => res.json())
-      .then((data) => {
-        if (data && (data.weeklyMonthlyParties || data.oneOffParties)) {
-          setData(data);
-        } else {
-          fetch("/data/party-concepts-data.json")
-            .then((r) => r.json())
-            .then((localData) => setData(localData))
-            .catch(() => setData(null));
-        }
+    fetch("/data/party-concepts-data.json")
+      .then((r) => r.json())
+      .then((localData) => {
+        setData(localData);
         setLoading(false);
       })
-      .catch(() => {
-        fetch("/data/party-concepts-data.json")
-          .then((r) => r.json())
-          .then((localData) => {
-            setData(localData);
-            setLoading(false);
-          })
-          .catch(() => setLoading(false));
-      });
+      .catch(() => setLoading(false));
   }, []);
 
   if (loading || !data) {
@@ -197,7 +182,7 @@ export default function PartyConceptsPage() {
           </Link>
         </div>
         <p style={{ color: "var(--muted)", marginTop: 6, fontSize: "0.9rem" }}>
-          Weekly, monthly, and one-off event ideas for Spearmint Rhino Boise
+          Weekly, monthly, and yearly event ideas for Spearmint Rhino Boise
         </p>
       </div>
 
@@ -265,7 +250,7 @@ export default function PartyConceptsPage() {
 
       {/* Last Updated */}
       <p style={{ marginTop: 24, fontSize: "0.75rem", color: "var(--muted)", textAlign: "right" }}>
-        Last updated: {new Date(data.lastUpdated).toLocaleString()}
+        Last updated: {data.lastUpdated ? new Date(data.lastUpdated).toLocaleString() : "Unknown"}
       </p>
     </div>
   );
