@@ -253,19 +253,6 @@
       "approved": false,
       "notes": "Budget: $400/mo for content production. May need videographer if quality demands increase."
     },
-    {
-      "id": "paid-ads",
-      "name": "Paid Social Advertising",
-      "icon": "💰",
-      "category": "Paid Media",
-      "concept": "Meta/TikTok targeted ads to Boise 21–35, nightlife interests. Awareness → Consideration → Conversion funnel.",
-      "format": "Awareness (video views), Consideration (traffic to IG/podcast), Conversion (event promotion)",
-      "distribution": "Instagram/Facebook Ads, TikTok Ads",
-      "integration": "Supplements organic reach. Scales if ROAS positive.",
-      "status": "Idea",
-      "approved": false,
-      "notes": "Budget: $300/mo. Small tests first, scale winners, kill losers fast."
-    }
   ],
   "lastUpdated": "2026-05-11T05:00:00Z"
 }
