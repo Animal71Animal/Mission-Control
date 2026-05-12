@@ -256,6 +256,27 @@ export default function SrbTipsPage() {
             Apr-Jun 2026 · {q2Nights} nights
           </div>
         </button>
+
+        {/* 2026 Annual Total */}
+        <button
+          onClick={() => setSelectedMonth("2026")}
+          style={{
+            background: selectedMonth === "2026" ? "linear-gradient(135deg, rgba(255,204,0,0.4), rgba(255,230,0,0.4))" : "linear-gradient(135deg, rgba(255,204,0,0.2), rgba(255,230,0,0.2))",
+            border: selectedMonth === "2026" ? "1px solid #ffcc00" : "1px solid #ffcc00",
+            borderRadius: 12,
+            padding: 20,
+            cursor: "pointer",
+            textAlign: "left",
+          }}
+        >
+          <div style={{ fontSize: "0.8rem", color: "#ffcc00", marginBottom: 4 }}>2026 Annual Total</div>
+          <div style={{ fontSize: "1.8rem", fontWeight: 700, color: "#ffcc00" }}>
+            ${(quarterTotal + q2Total).toLocaleString()}
+          </div>
+          <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 4 }}>
+            Jan-May 2026 · {q1Nights + q2Nights} nights
+          </div>
+        </button>
       </div>
 
       {/* Month Detail View */}
@@ -470,6 +491,89 @@ export default function SrbTipsPage() {
                 <span style={{ fontWeight: 600, minWidth: 50, textAlign: "right" }}>${t.q1Total}</span>
               </div>
             ))}
+          </div>
+        </Card>
+      )}
+
+      {/* 2026 Annual Summary View */}
+      {selectedMonth === "2026" && (
+        <Card style={{ marginBottom: 24 }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
+            <h2 style={{ fontSize: "1.2rem", fontWeight: 600, margin: 0, color: "var(--text)" }}>
+              2026 Annual Summary
+            </h2>
+            <button
+              onClick={() => setSelectedMonth(null)}
+              style={{
+                background: "transparent",
+                border: "none",
+                color: "var(--muted)",
+                cursor: "pointer",
+                fontSize: "0.85rem",
+              }}
+            >
+              ✕ Close
+            </button>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 16, marginBottom: 20 }}>
+            {monthlyTotals.map((m) => (
+              <div key={m.month} style={{
+                background: "var(--bg)",
+                border: "1px solid var(--border)",
+                borderRadius: 8,
+                padding: 16,
+                textAlign: "center",
+              }}>
+                <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>{m.month}</div>
+                <div style={{ fontSize: "1.3rem", fontWeight: 700, color: "var(--text)" }}>${m.amount.toLocaleString()}</div>
+                <div style={{ fontSize: "0.7rem", color: "var(--muted)" }}>{m.nights} nights</div>
+              </div>
+            ))}
+          </div>
+
+          <div style={{ 
+            background: "linear-gradient(135deg, rgba(255,204,0,0.2), rgba(255,230,0,0.1))", 
+            border: "1px solid #ffcc00", 
+            borderRadius: 12, 
+            padding: 24,
+            textAlign: "center",
+            marginBottom: 20,
+          }}>
+            <div style={{ fontSize: "0.8rem", color: "#ffcc00", marginBottom: 4 }}>2026 TOTAL (Jan-May)</div>
+            <div style={{ fontSize: "2.5rem", fontWeight: 700, color: "#ffcc00" }}>
+              ${(quarterTotal + q2Total).toLocaleString()}
+            </div>
+            <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 4 }}>
+              {q1Nights + q2Nights} total nights
+            </div>
+          </div>
+
+          <h3 style={{ fontSize: "0.85rem", color: "var(--muted)", marginBottom: 12, textTransform: "uppercase", letterSpacing: "0.05em" }}>
+            🏆 2026 Top Entertainers
+          </h3>
+          <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+            {allDancers.filter(d => d.total > 0).sort((a, b) => b.total - a.total).slice(0, 10).map((d, i) => {
+              const badge = i === 0 ? "gold" : i === 1 ? "gold" : i === 2 ? "silver" : i < 5 ? "silver" : "bronze";
+              return (
+                <div key={d.name} style={{ display: "flex", alignItems: "center", gap: 8, padding: "6px 0", borderBottom: "1px solid var(--border)" }}>
+                  <span style={{
+                    display: "inline-block",
+                    padding: "1px 6px",
+                    borderRadius: 4,
+                    fontSize: "0.65rem",
+                    fontWeight: 700,
+                    background: badge === "gold" ? "#ffd700" : badge === "silver" ? "#c0c0c0" : "#cd7f32",
+                    color: "#000",
+                  }}>
+                    {i + 1}
+                  </span>
+                  <span style={{ flex: 1 }}>{d.name}</span>
+                  <span style={{ color: "var(--muted)", fontSize: "0.75rem" }}>J:${d.jan || 0} F:${d.feb || 0} M:${d.mar || 0} A:${d.apr || 0} M:${d.may || 0}</span>
+                  <span style={{ fontWeight: 600, minWidth: 50, textAlign: "right" }}>${d.total}</span>
+                </div>
+              );
+            })}
           </div>
         </Card>
       )}
