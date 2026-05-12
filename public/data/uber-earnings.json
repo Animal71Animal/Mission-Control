@@ -1,12 +1,42 @@
 {
   "dailySummaries": [
     {
+      "date": "2026-05-12",
+      "earnings": 71.59,
+      "gross": 71.59,
+      "trips": 6,
+      "miles": 33.67,
+      "tips": 20.0,
+      "surge": 0.0,
+      "pro_perk": 2.46,
+      "charging_cost": 1.18,
+      "netPayout": 70.41,
+      "basefare": 49.13,
+      "promotions": 0.0,
+      "expenses": 1.18
+    },
+    {
+      "date": "2026-05-11",
+      "earnings": 235.32,
+      "gross": 235.32,
+      "trips": 18,
+      "miles": 116.37,
+      "tips": 49.0,
+      "surge": 0.0,
+      "pro_perk": 6.68,
+      "charging_cost": 4.07,
+      "netPayout": 231.25,
+      "basefare": 186.32,
+      "promotions": 0.0,
+      "expenses": 4.07
+    },
+    {
       "date": "2026-05-10",
       "earnings": 84.14,
       "gross": 84.14,
       "trips": 10,
       "miles": 28.85,
-      "tips": 13.00,
+      "tips": 13.0,
       "surge": 5.25,
       "pro_perk": 2.84,
       "charging_cost": 1.01,
@@ -21,13 +51,13 @@
       "gross": 23.26,
       "trips": 2,
       "miles": 11.26,
-      "tips": 4.00,
+      "tips": 4.0,
       "surge": 1.75,
       "pro_perk": 0.92,
       "charging_cost": 0.39,
       "netPayout": 22.87,
       "basefare": 15.01,
-      "promotions": 0.00,
+      "promotions": 0.0,
       "expenses": 0.39
     },
     {
@@ -36,13 +66,13 @@
       "gross": 28.34,
       "trips": 3,
       "miles": 16.47,
-      "tips": 2.00,
-      "surge": 0.00,
+      "tips": 2.0,
+      "surge": 0.0,
       "pro_perk": 0.82,
       "charging_cost": 0.58,
       "netPayout": 27.76,
       "basefare": 28.34,
-      "promotions": 0.00,
+      "promotions": 0.0,
       "expenses": 0.58
     },
     {
@@ -51,14 +81,14 @@
       "gross": 18.76,
       "trips": 1,
       "miles": 8.59,
-      "tips": 2.00,
-      "surge": 0.00,
-      "pro_perk": 0.80,
-      "charging_cost": 0.30,
+      "tips": 2.0,
+      "surge": 0.0,
+      "pro_perk": 0.8,
+      "charging_cost": 0.3,
       "netPayout": 18.46,
       "basefare": 18.76,
-      "promotions": 0.00,
-      "expenses": 0.30
+      "promotions": 0.0,
+      "expenses": 0.3
     },
     {
       "date": "2026-05-04",
@@ -66,13 +96,13 @@
       "gross": 17.73,
       "trips": 1,
       "miles": 8.17,
-      "tips": 3.00,
-      "surge": 0.00,
-      "pro_perk": 0.00,
+      "tips": 3.0,
+      "surge": 0.0,
+      "pro_perk": 0.0,
       "charging_cost": 0.29,
       "netPayout": 17.44,
       "basefare": 17.73,
-      "promotions": 0.00,
+      "promotions": 0.0,
       "expenses": 0.29
     },
     {
@@ -81,13 +111,13 @@
       "gross": 39.23,
       "trips": 2,
       "miles": 26.13,
-      "tips": 7.00,
-      "surge": 1.50,
+      "tips": 7.0,
+      "surge": 1.5,
       "pro_perk": 1.53,
       "charging_cost": 0.91,
       "netPayout": 38.32,
-      "basefare": 30.70,
-      "promotions": 0.00,
+      "basefare": 30.7,
+      "promotions": 0.0,
       "expenses": 0.91
     },
     {
@@ -219,14 +249,14 @@
   ],
   "monthlyTotals": {
     "2026-05": {
-      "total_earnings": 211.46,
-      "total_net": 207.98,
-      "total_trips": 19,
-      "total_miles": 99.47,
-      "total_tips": 31.00,
-      "total_charging_cost": 3.48,
-      "total_surge": 7.00,
-      "total_pro_perk": 4.58,
+      "total_earnings": 518.37,
+      "total_net": 509.64,
+      "total_trips": 43,
+      "total_miles": 249.51,
+      "total_tips": 100.0,
+      "total_charging_cost": 8.73,
+      "total_surge": 8.5,
+      "total_pro_perk": 16.05,
       "total_promotions": 1.58
     },
     "2026-04": {
@@ -234,15 +264,18 @@
       "total_net": 734.23,
       "total_trips": 77,
       "total_miles": 327.18,
-      "total_tips": 96.00,
-      "total_charging_cost": 27.86
+      "total_tips": 96.0,
+      "total_charging_cost": 32.86,
+      "total_surge": 94.18,
+      "total_pro_perk": 0,
+      "total_promotions": 140.04
     }
   },
   "metadata": {
     "source": "drivers.uber.com",
     "scrape_method": "manual_entry",
     "charging_cost_per_mile": 0.035,
-    "last_scrape_attempt": "2026-05-11T09:30:00Z"
+    "last_scrape_attempt": "2026-05-12T15:27:00Z"
   },
-  "last_updated": "2026-05-11T09:30:00Z"
+  "last_updated": "2026-05-12T15:27:00Z"
 }
