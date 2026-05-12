@@ -106,6 +106,46 @@ export default function PepTrakPage() {
     return () => clearTimeout(timer);
   }, [compounds]);
 
+  // Auto-reset checklist every Monday at 6:00 AM
+  useEffect(() => {
+    const checkAndReset = () => {
+      const now = new Date();
+      const dayOfWeek = now.getDay(); // 0 = Sunday, 1 = Monday
+      const hour = now.getHours();
+      const minute = now.getMinutes();
+      
+      // Check if it's Monday (day 1) and between 6:00 and 6:01 AM
+      if (dayOfWeek === 1 && hour === 6 && minute === 0) {
+        // Reset all checklist items to unchecked
+        setChecklist({});
+        try { localStorage.setItem('peptrak-checklist', JSON.stringify({})); } catch {}
+        
+        // Also sync to GitHub
+        fetch("/api/peptrak", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ checklist: {} }),
+        }).catch(() => {});
+      }
+    };
+
+    // Check immediately and then every minute
+    checkAndReset();
+    const interval = setInterval(checkAndReset, 60000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Manual reset function (for "Reset Now" button)
+  const resetChecklist = () => {
+    setChecklist({});
+    try { localStorage.setItem('peptrak-checklist', JSON.stringify({})); } catch {}
+    fetch("/api/peptrak", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ checklist: {} }),
+    }).catch(() => {});
+  };
+
   const addCompound = (compound: CompoundConfig) => {
     setCompounds(prev => [...prev, compound]);
     setEditingCompound(null);
@@ -214,6 +254,22 @@ export default function PepTrakPage() {
               ↻ Syncing...
             </span>
           )}
+          <button
+            onClick={resetChecklist}
+            style={{
+              padding: "6px 14px",
+              borderRadius: 20,
+              border: "1px solid #ef4444",
+              background: "transparent",
+              color: "#ef4444",
+              fontSize: "0.8rem",
+              fontWeight: 500,
+              cursor: "pointer",
+              marginLeft: 8,
+            }}
+          >
+            🔄 Reset Checklist
+          </button>
         </div>
         <p style={{ color: "var(--muted)", margin: 0, fontSize: "0.875rem" }}>
           Research compound tracking — configure your stack, set dosing, track daily
