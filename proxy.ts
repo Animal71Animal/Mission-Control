@@ -4,7 +4,7 @@ import type { NextRequest } from 'next/server';
 // Password protection for Mission Control
 const PASSWORD = 'wlp2026';
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   // Skip password check for API routes (they have their own auth)
   if (request.nextUrl.pathname.startsWith('/api/')) {
     return NextResponse.next();
