@@ -335,7 +335,7 @@
       "location": "Boise, ID - North Orchard St",
       "address": "851 N Orchard St, Boise, ID 83706",
       "type": "Supercharging",
-      "kwh": 65.72,
+      "kwh": 65.7705,
       "rate_per_kwh": 0.18,
       "cost": 11.83,
       "duration_min": 0
@@ -720,7 +720,7 @@
     },
     "2026-03": {
       "cost": 213.41,
-      "kwh": 958.762,
+      "kwh": 958.813,
       "sessions": 15,
       "minutes": 0
     },
