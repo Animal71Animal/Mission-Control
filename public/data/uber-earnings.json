@@ -248,6 +248,39 @@
     }
   ],
   "monthlyTotals": {
+    "2026-01": {
+      "total_gross": 2869.82,
+      "total_net": 1829.46,
+      "total_trips": 165,
+      "online_miles": 1773,
+      "total_tips": 285.40,
+      "total_incentives": 348.50,
+      "total_expenses": 1040.36,
+      "trip_earnings": 2235.92,
+      "source": "uber_tax_summary"
+    },
+    "2026-02": {
+      "total_gross": 1304.84,
+      "total_net": 863.99,
+      "total_trips": 78,
+      "online_miles": 839,
+      "total_tips": 133.39,
+      "total_incentives": 150.14,
+      "total_expenses": 440.85,
+      "trip_earnings": 1021.31,
+      "source": "uber_tax_summary"
+    },
+    "2026-03": {
+      "total_gross": 2910.45,
+      "total_net": 1925.92,
+      "total_trips": 175,
+      "online_miles": 1891,
+      "total_tips": 286.44,
+      "total_incentives": 354.07,
+      "total_expenses": 984.53,
+      "trip_earnings": 2269.94,
+      "source": "uber_tax_summary"
+    },
     "2026-05": {
       "total_earnings": 584.02,
       "total_net": 573.87,
@@ -260,15 +293,16 @@
       "total_promotions": 1.58
     },
     "2026-04": {
-      "total_earnings": 767.09,
-      "total_net": 734.23,
-      "total_trips": 77,
-      "total_miles": 327.18,
-      "total_tips": 96.0,
-      "total_charging_cost": 32.86,
-      "total_surge": 94.18,
-      "total_pro_perk": 0,
-      "total_promotions": 140.04
+      "total_gross": 2286.72,
+      "total_net": 1446.98,
+      "total_trips": 147,
+      "online_miles": 1270,
+      "total_tips": 228.87,
+      "total_incentives": 209.78,
+      "total_expenses": 839.74,
+      "trip_earnings": 1848.07,
+      "source": "uber_tax_summary",
+      "note": "Daily entries below reflect manually tracked shifts only (77 of 147 trips)"
     }
   },
   "metadata": {
@@ -277,5 +311,5 @@
     "charging_cost_per_mile": 0.035,
     "last_scrape_attempt": "2026-05-12T15:27:00Z"
   },
-  "last_updated": "2026-05-13T08:06:00Z"
+  "last_updated": "2026-05-14T02:30:00Z"
 }
