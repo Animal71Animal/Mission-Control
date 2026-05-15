@@ -56,7 +56,6 @@ export default function PromotionalIdeasPage() {
   }
 
   const promotionalIdeas = data.promotionalIdeas || [];
-  const approvedCount = promotionalIdeas.filter((i) => i.approved).length;
 
   return (
     <div>
@@ -91,38 +90,7 @@ export default function PromotionalIdeasPage() {
         </p>
       </div>
 
-      {/* Stats */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
-          gap: 16,
-          marginBottom: 28,
-        }}
-      >
-        <div
-          style={{
-            background: "var(--card)",
-            border: "1px solid var(--border)",
-            borderRadius: 12,
-            padding: 20,
-          }}
-        >
-          <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: 4 }}>Total Ideas</div>
-          <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)" }}>{promotionalIdeas.length}</div>
-        </div>
-        <div
-          style={{
-            background: "var(--card)",
-            border: "1px solid var(--border)",
-            borderRadius: 12,
-            padding: 20,
-          }}
-        >
-          <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: 4 }}>Approved</div>
-          <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "#00c87c" }}>{approvedCount}</div>
-        </div>
-      </div>
+
 
       {/* Ideas List */}
       <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
