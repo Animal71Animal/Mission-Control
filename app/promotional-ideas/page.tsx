@@ -19,6 +19,7 @@ interface PromotionalIdea {
   distribution: string;
   integration: string;
   copyrightSolution?: string;
+  logoUrl?: string;
   details?: PromotionalIdeaDetail;
   flyerUrl?: string;
   status: string;
@@ -145,7 +146,15 @@ export default function PromotionalIdeasPage() {
               }}
             >
               <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                <span style={{ fontSize: "2rem" }}>{idea.icon}</span>
+                {idea.logoUrl ? (
+                  <img
+                    src={idea.logoUrl}
+                    alt={`${idea.name} logo`}
+                    style={{ width: 56, height: 56, objectFit: "contain", borderRadius: 8, background: "#111" }}
+                  />
+                ) : (
+                  <span style={{ fontSize: "2rem" }}>{idea.icon}</span>
+                )}
                 <div>
                   <h2 style={{ fontSize: "1.2rem", fontWeight: 600, margin: 0, color: "var(--text)" }}>
                     {idea.name}

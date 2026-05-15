@@ -226,7 +226,8 @@
       "copyrightSolution": "Use Mixcloud as primary host \u2014 they have blanket licenses for music. For podcast platforms: use short music clips (under 30 seconds) with commentary, or license-free/podcast-safe music for intro/outro. Interview segments and talking content are 100% original and copyright-free.",
       "status": "Idea",
       "approved": false,
-      "notes": ""
+      "notes": "",
+      "logoUrl": "/rhino-radio-logo.jpg"
     },
     {
       "id": "influencer-program",
