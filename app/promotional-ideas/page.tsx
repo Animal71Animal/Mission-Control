@@ -3,6 +3,12 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
+interface PromotionalIdeaDetail {
+  starts?: string;
+  performance?: string;
+  commitment?: string;
+}
+
 interface PromotionalIdea {
   id: string;
   name: string;
@@ -13,6 +19,8 @@ interface PromotionalIdea {
   distribution: string;
   integration: string;
   copyrightSolution?: string;
+  details?: PromotionalIdeaDetail;
+  flyerUrl?: string;
   status: string;
   approved: boolean;
   notes: string;
@@ -202,6 +210,59 @@ export default function PromotionalIdeasPage() {
                     🛡️ Copyright / Legal Solution
                   </span>
                   <span style={{ color: "var(--text)" }}>{idea.copyrightSolution}</span>
+                </div>
+              )}
+              {idea.details && (
+                <div style={{ gridColumn: "span 2" }}>
+                  <span style={{ color: "var(--muted)", display: "block", marginBottom: 8, fontSize: "0.8rem" }}>
+                    📋 Event Details
+                  </span>
+                  <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                    {idea.details.starts && (
+                      <div style={{ background: "rgba(201,168,76,0.08)", border: "1px solid rgba(201,168,76,0.3)", borderRadius: 8, padding: "8px 14px", textAlign: "center" }}>
+                        <div style={{ fontSize: "0.7rem", color: "rgba(201,168,76,0.7)", letterSpacing: 2, textTransform: "uppercase", marginBottom: 4 }}>Starts</div>
+                        <div style={{ fontSize: "0.9rem", fontWeight: 600, color: "#e8d5b0" }}>{idea.details.starts}</div>
+                      </div>
+                    )}
+                    {idea.details.performance && (
+                      <div style={{ background: "rgba(201,168,76,0.08)", border: "1px solid rgba(201,168,76,0.3)", borderRadius: 8, padding: "8px 14px", textAlign: "center" }}>
+                        <div style={{ fontSize: "0.7rem", color: "rgba(201,168,76,0.7)", letterSpacing: 2, textTransform: "uppercase", marginBottom: 4 }}>Performance</div>
+                        <div style={{ fontSize: "0.9rem", fontWeight: 600, color: "#e8d5b0" }}>{idea.details.performance}</div>
+                      </div>
+                    )}
+                    {idea.details.commitment && (
+                      <div style={{ background: "rgba(201,168,76,0.08)", border: "1px solid rgba(201,168,76,0.3)", borderRadius: 8, padding: "8px 14px", textAlign: "center" }}>
+                        <div style={{ fontSize: "0.7rem", color: "rgba(201,168,76,0.7)", letterSpacing: 2, textTransform: "uppercase", marginBottom: 4 }}>Commitment</div>
+                        <div style={{ fontSize: "0.9rem", fontWeight: 600, color: "#e8d5b0" }}>{idea.details.commitment}</div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+              {idea.flyerUrl && (
+                <div style={{ gridColumn: "span 2", marginTop: 8 }}>
+                  <span style={{ color: "var(--muted)", display: "block", marginBottom: 10, fontSize: "0.8rem" }}>
+                    🪧 Official Flyer
+                  </span>
+                  <iframe
+                    src={idea.flyerUrl}
+                    style={{
+                      width: "100%",
+                      height: 700,
+                      border: "1px solid rgba(201,168,76,0.35)",
+                      borderRadius: 8,
+                      background: "#080808",
+                    }}
+                    title="Featured Entertainer Flyer"
+                  />
+                  <a
+                    href={idea.flyerUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ display: "inline-block", marginTop: 8, fontSize: "0.8rem", color: "rgba(201,168,76,0.8)", textDecoration: "none" }}
+                  >
+                    ↗ Open flyer full screen
+                  </a>
                 </div>
               )}
               <div style={{ gridColumn: "span 2" }}>
