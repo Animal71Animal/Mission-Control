@@ -5,38 +5,38 @@
       "name": "Industry Night",
       "icon": "🍸",
       "who": "Service workers, bartenders, dancers, staff from other spots",
-      "format": "Late start (11pm+), drink specials, no cover with paystub or staff ID",
+      "format": "7pm-3am. Drink specials, no cover with paystub or staff ID.",
       "drinks": "The Shift Change (whiskey + cola), The Last Call (tequila sunrise), Bartender's Breakfast (Irish coffee), Well Drink Specials (50% off all well drinks), Beer + Shot Combo ($8), Jamison Special",
-      "games": "Entertainer vs Customer Spelling Bee",
-      "costuming": "Open to the entertainer's choice",
+      "games": "",
+      "costuming": "",
       "approved": false,
       "flyerDone": false,
       "frequency": "Sunday",
       "dayAssigned": "Sunday"
     },
     {
-      "id": "swingers-poker",
-      "name": "Swingers & Poker Night",
+      "id": "no-limit-mondays",
+      "name": "No Limit Mondays",
       "icon": "♠️",
-      "who": "Swingers and open relationship couples. Mingle Mondays crowd (social, open-minded, looking to connect).",
-      "format": "Poker runs 7pm–10pm as the icebreaker/early crowd draw. Swinger atmosphere takes over after 10pm. Cross-promotion with Adam & Eve or similar local adult retail — they promote in-store, we give them a vendor table.",
+      "who": "Gentlemen who don't have to worry about being to work early on Tuesday — business owners, executives, self-employed",
+      "format": "Poker runs 7pm–10pm as the icebreaker/early crowd draw. Swinger atmosphere takes over after 10pm.",
       "drinks": "The Royal Flush (layered red/purple/black cocktail), Pocket Aces (double shot special), The Swing (champagne + bourbon), Red Room (red velvet martini), Safe Word (sweet + spicy margarita), The Mingle (shared punch bowl for 2+)",
       "games": "Poker (7pm–10pm), mingling, open atmosphere",
-      "costuming": "Open to the entertainer's choice",
+      "costuming": "",
       "approved": false,
       "flyerDone": false,
       "frequency": "Monday",
       "dayAssigned": "Monday"
     },
     {
-      "id": "teddy-tuesdays",
-      "name": "Teddy Tuesdays",
+      "id": "lingerie-lounge",
+      "name": "Lingerie Lounge",
       "icon": "🧸",
-      "who": "Gentleman / business owner / executive who doesn't have to worry about work on Tuesday",
-      "format": "Lingerie night with a sophisticated, upscale vibe. Think Victoria's Secret runway meets speakeasy.",
+      "who": "TBD — open crowd, no specific demographic target",
+      "format": "Lingerie night with a sophisticated, upscale vibe. Think Victoria's Secret runway meets speakeasy. Cross-promotion with Hustler Adult Stores and local apparel companies — they promote in-store, we give them a vendor table.",
       "drinks": "The Teddy (white chocolate + raspberry martini), Silk Sheets (vanilla vodka + cream), Lace & Leather (smoky mezcal + honey), Champagne Room (bottle service special), The Runway (glitter champagne cocktail), Black Lace (blackberry + gin + activated charcoal)",
       "games": "Newlywed Game",
-      "costuming": "Entertainers in teddys and lingerie wear. More like a Victoria's Secret Runway Fashion Show",
+      "costuming": "Entertainers in teddys, lingerie, and bedroom wear",
       "approved": false,
       "flyerDone": false,
       "frequency": "Tuesday",
@@ -44,9 +44,9 @@
     },
     {
       "id": "girls-gone-wild",
-      "name": "Girls Gone Wild Wednesdays",
+      "name": "TBD — Cheat Code / 1UP / Press Start (in consideration)",
       "icon": "🎉",
-      "who": "Younger crowd (21–mid 30s), college energy",
+      "who": "Semi-upscale college crowd — 21-28, elevated energy without going full club",
       "format": "High-energy, exciting atmosphere. The 'in-crowd.' Essentially the gentleman's club version of a college night.",
       "drinks": "The Keg Stand (beer tower special), Jungle Juice (fruit punch + vodka), Body Shots (tequila + lime + salt), The Funnel (shared cocktail pitcher), Beach Bum (malibu + pineapple), Red Solo Cup (mixed drink in a giant cup), The Dorm Room (cheap beer bucket special)",
       "games": "Spring Break Type Games. MAIN EVENT: Video Games on LED Screen — Mario Kart vs Entertainer. Sign-up sheet with time slots (customer vs dancer). 2-3 min races. Customer wins = 1 free lapdance. Entertainer wins = customer buys 2 lapdances at normal price.",
@@ -86,10 +86,10 @@
     },
     {
       "id": "late-night",
-      "name": "Late Night",
+      "name": "TBD — Saturday Late Night",
       "icon": "🌙",
       "who": "The after-hours crowd — people who want to keep the party going when everything else closes",
-      "format": "2am–6am. Underground vibe. Guest DJs regularly from 3am–5am. The only spot to BE after 2am in Boise on Saturdays — full kitchen serving breakfast items. Higher cover charge ($15–$20 after 2am). Revenue from breakfast + cover.",
+      "format": "After hours — we go until the early hours of the morning. Underground vibe. Guest DJs regularly. The only spot to BE after 2am in Boise on Saturdays — full kitchen serving breakfast items. Higher cover charge after 2am. Revenue from breakfast + cover.",
       "drinks": "NEED IDEAS",
       "games": "NEED IDEAS",
       "costuming": "Open to the entertainer's choice",
@@ -103,14 +103,14 @@
       "name": "Animal House",
       "icon": "🎪",
       "who": "Everyone — the big monthly blowout",
-      "format": "Carnival/Freak Show with drummers, aerialists, poi/LED performers, singers, choreographed dancers, freak show performances (light hearted), etc.",
+      "format": "Carnival/Freak Show with drummers, aerialists, poi/LED performers, singers, choreographed dancers, freak show performances (light hearted), etc. Special performances each month.",
       "drinks": "Bottle Specials on High End Liquors, Circus and Drummer inspired drinks, Animal themed drink special",
       "games": "Carnival/Freak Show performances",
       "costuming": "Circus/Freak Show type costuming for show performers",
       "approved": false,
       "flyerDone": false,
-      "frequency": "Monthly — 4th Saturday",
-      "dayAssigned": "4th Saturday"
+      "frequency": "Monthly — 4th Saturday (launching Fall 2026)",
+      "dayAssigned": "4th Saturday — launching Fall 2026"
     }
   ],
   "yearlyParties": [
@@ -197,6 +197,20 @@
       "flyerDone": false,
       "frequency": "Yearly — March 17",
       "dayAssigned": "March 17"
+    },
+    {
+      "id": "tailgate-touchdown",
+      "name": "Tailgate & Touchdown",
+      "icon": "🏈",
+      "who": "Sports fans, local crowd, football-season regulars — all demographics, 21+",
+      "format": "Daytime parking lot party kicking off football season. Beer tubs, food trucks, lawn games. Party moves inside after dark for the late-night set. Think: NFL season opener energy meets block party.",
+      "drinks": "NEED IDEAS",
+      "games": "Cornhole, beer pong, giant Jenga, fantasy football draft board, jersey raffle",
+      "costuming": "Jerseys, team gear encouraged — entertainers in team colors or cheerleader-style outfits",
+      "approved": false,
+      "flyerDone": false,
+      "frequency": "Yearly",
+      "dayAssigned": "Late August / Labor Day Weekend"
     }
   ],
   "promotionalIdeas": [
@@ -216,29 +230,73 @@
     },
     {
       "id": "influencer-program",
-      "name": "Influencer Marketing Program",
-      "icon": "📱",
-      "category": "Social Media",
-      "concept": "20–30 local influencers activated per month. Free admission + guest passes + podcast feature as comp. No forced posts — authentic experience first.",
-      "format": "Discovery via Instagram/TikTok hashtags (#BoiseNightlife, #BoiseParty). Tiered: Micro (5K–15K) → Mid (15K–50K) → Macro (50K+)",
-      "distribution": "Instagram (primary), TikTok (secondary)",
-      "integration": "Influencers attend events, post organically, get featured on podcast and social channels",
+      "name": "Influencer & Street Team Program",
+      "icon": "📣",
+      "category": "Marketing & Promotions",
+      "concept": "A unified outreach program targeting three groups: social media influencers, nightlife insiders (bouncers and bartenders at other clubs), and grassroots street team activators. All three drive new traffic through authentic relationships — not paid ads.",
+      "tiers": [
+        {
+          "id": "social-influencers",
+          "label": "Tier 1 — Social Media Influencers",
+          "who": "Local Instagram and TikTok creators. Micro (5K–15K), Mid (15K–50K), Macro (50K+).",
+          "discovery": "Hashtag search: #BoiseNightlife, #BoiseParty, #DowntownBoise, #BoiseStyle, #BoiseFitness",
+          "goal": "20–30 active influencers per month posting organic content about their SRB experience."
+        },
+        {
+          "id": "nightlife-insiders",
+          "label": "Tier 2 — Nightlife Insiders (Bouncers & Bartenders)",
+          "who": "Door staff and bartenders at downtown Boise bars and clubs. These people talk to hundreds of guests every weekend — they are the most trusted referral source in nightlife.",
+          "discovery": "Direct outreach to The Bastion, Neurolux, and other bars within 5 miles. Ish's existing network is the starting point.",
+          "goal": "Turn industry workers into organic ambassadors who mention SRB to guests looking for where to go next."
+        },
+        {
+          "id": "street-team",
+          "label": "Tier 3 — Street Team",
+          "who": "Promoters, regulars, and motivated guests who want to hustle for perks. Activated at last call (1:30–2am) near downtown bars.",
+          "discovery": "Ish's promoter network. Regulars who already love the venue.",
+          "goal": "Drive last-call crowd directly to SRB. Especially effective for Saturday Late Night."
+        }
+      ],
+      "valueExchange": {
+        "description": "What we offer in exchange for presence and organic promotion. Mix and match by tier:",
+        "options": [
+          {
+            "id": "vip-experience",
+            "label": "Option A — VIP Experience Package",
+            "details": "Free admission + up to 3 guests. Reserved seating or VIP table. 0 bar tab. Personal DJ intro for behind-the-scenes content.",
+            "bestFor": "Social influencers (Tier 1). High perceived value, low actual cost."
+          },
+          {
+            "id": "podcast-feature",
+            "label": "Option B — Rhino Radio Feature",
+            "details": "Guest spot on Rhino Radio podcast. Promoted on SRB social channels before and after. Cross-audience exposure.",
+            "bestFor": "Lifestyle/personality influencers building their own brand."
+          },
+          {
+            "id": "social-collab",
+            "label": "Option C — Social Media Collaboration",
+            "details": "SRB reposts and tags their content. Co-created Reel or TikTok — we provide the venue, they own the content.",
+            "bestFor": "Mid and macro influencers who want premium content."
+          },
+          {
+            "id": "industry-perks",
+            "label": "Option D — Industry Perks (Bouncers & Bartenders)",
+            "details": "Industry rate or free admission on their night off. Drink specials. Treated like VIPs when they walk in. Reciprocal relationship — we support their venue, they support ours.",
+            "bestFor": "Tier 2 nightlife insiders. No cash — just mutual respect and access."
+          },
+          {
+            "id": "referral-comp",
+            "label": "Option E — Referral / Affiliate Comp",
+            "details": "Unique QR code or entry card per person. –10 credit per verified guest brought in. Top referrers get escalating perks.",
+            "bestFor": "Street team (Tier 3) and performance-minded promoters."
+          }
+        ]
+      },
+      "activation": "Flyers and QR code cards for street team. Direct DMs for influencer outreach. In-person visits to neighboring bars to build bouncer/bartender relationships.",
+      "tracking": "Each person gets a unique QR code or entry card. We log who came in, who posted, guests attributed, and reach/impressions. Weekly review. Monthly rollup shows ROI per person. Full dashboard tracking planned — ready to build when volume justifies it.",
+      "notes": "Relationship-first across all three tiers. Never require a post. Never force a referral. The experience sells itself — our job is to make sure the right people are in the room.",
       "status": "Idea",
-      "approved": false,
-      "notes": "Comp: Free admission for influencer + 3 guests + $50 bar tab (or $2 kickback per signed entry card turned in). Need tracking system: signed entry cards attributed to each influencer. Budget TBD based on comp structure chosen."
-    },
-    {
-      "id": "street-team",
-      "name": "Street Team Activation",
-      "icon": "🃏",
-      "category": "Grassroots",
-      "concept": "Activate Ish's network (bars, bouncers, promoters). Target downtown bars at last call (1:30–2am).", 
-      "format": "Flyers/cards with QR code to Instagram/podcast. Referral tracking sheet.",
-      "distribution": "Local bars and clubs within 5 miles of SRB.",
-      "integration": "Drives late-night crowd to SRB after other bars close. Especially effective for Saturday Late Night.",
-      "status": "Idea",
-      "approved": false,
-      "notes": "Need QR landing page."
+      "approved": false
     },
     {
       "id": "content-creation",
