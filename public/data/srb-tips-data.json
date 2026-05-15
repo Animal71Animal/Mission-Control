@@ -22,8 +22,8 @@
     },
     {
       "month": "May",
-      "amount": 706,
-      "nights": 5
+      "amount": 836,
+      "nights": 6
     }
   ],
   "topTippers": [
@@ -96,8 +96,8 @@
       "feb": 95,
       "mar": 87,
       "apr": 46,
-      "may": 20,
-      "total": 268
+      "may": 30,
+      "total": 278
     },
     {
       "name": "Willow",
@@ -150,8 +150,8 @@
       "feb": 27,
       "mar": 4,
       "apr": 38,
-      "may": 0,
-      "total": 158
+      "may": 10,
+      "total": 168
     },
     {
       "name": "Natasha",
@@ -186,8 +186,8 @@
       "feb": 5,
       "mar": 0,
       "apr": 105,
-      "may": 0,
-      "total": 135
+      "may": 10,
+      "total": 145
     },
     {
       "name": "Noelle",
@@ -213,8 +213,8 @@
       "feb": 45,
       "mar": 35,
       "apr": 10,
-      "may": 10,
-      "total": 128
+      "may": 20,
+      "total": 138
     },
     {
       "name": "Kendall",
@@ -303,8 +303,8 @@
       "feb": 8,
       "mar": 0,
       "apr": 5,
-      "may": 5,
-      "total": 82
+      "may": 55,
+      "total": 132
     },
     {
       "name": "Star",
@@ -555,8 +555,8 @@
       "feb": 0,
       "mar": 0,
       "apr": 0,
-      "may": 15,
-      "total": 15
+      "may": 20,
+      "total": 20
     },
     {
       "name": "Jazmin",
@@ -667,7 +667,7 @@
     },
     {
       "month": "May",
-      "amount": 83,
+      "amount": 108,
       "topNight": "Wed May 6 ($70)"
     }
   ],
@@ -741,8 +741,8 @@
       "feb": 95,
       "mar": 87,
       "apr": 46,
-      "may": 20,
-      "total": 268
+      "may": 30,
+      "total": 278
     },
     {
       "name": "Willow",
@@ -795,8 +795,8 @@
       "feb": 27,
       "mar": 4,
       "apr": 38,
-      "may": 0,
-      "total": 158
+      "may": 10,
+      "total": 168
     },
     {
       "name": "Natasha",
@@ -831,8 +831,8 @@
       "feb": 5,
       "mar": 0,
       "apr": 105,
-      "may": 0,
-      "total": 135
+      "may": 10,
+      "total": 145
     },
     {
       "name": "Noelle",
@@ -858,8 +858,8 @@
       "feb": 45,
       "mar": 35,
       "apr": 10,
-      "may": 10,
-      "total": 128
+      "may": 20,
+      "total": 138
     },
     {
       "name": "Kendall",
@@ -948,8 +948,8 @@
       "feb": 8,
       "mar": 0,
       "apr": 5,
-      "may": 5,
-      "total": 82
+      "may": 55,
+      "total": 132
     },
     {
       "name": "Star",
@@ -1200,8 +1200,8 @@
       "feb": 0,
       "mar": 0,
       "apr": 0,
-      "may": 15,
-      "total": 15
+      "may": 20,
+      "total": 20
     },
     {
       "name": "Jazmin",
@@ -2300,9 +2300,48 @@
       "day": "Sunday",
       "tips": [],
       "total": 0
+    },
+    {
+      "date": "2026-05-14",
+      "day": "Thursday",
+      "tips": [
+        {
+          "dancer": "Berlin",
+          "amount": 10
+        },
+        {
+          "dancer": "Customers",
+          "amount": 25
+        },
+        {
+          "dancer": "Erica",
+          "amount": 5
+        },
+        {
+          "dancer": "Ari",
+          "amount": 10
+        },
+        {
+          "dancer": "Shelby",
+          "amount": 10
+        },
+        {
+          "dancer": "Allie",
+          "amount": 10
+        },
+        {
+          "dancer": "Kody",
+          "amount": 50
+        },
+        {
+          "dancer": "Mia",
+          "amount": 10
+        }
+      ],
+      "total": 130
     }
   ],
-  "lastUpdated": "2026-04-25T06:42:00.000Z",
+  "lastUpdated": "2026-05-15T12:41:24Z",
   "nightlyData": {
     "January": [
       {
@@ -5102,6 +5141,44 @@
         "date": "Sun May 10",
         "total": 0,
         "dancers": []
+      },
+      {
+        "date": "Thu May 14",
+        "total": 130,
+        "dancers": [
+          {
+            "name": "Berlin",
+            "amount": 10
+          },
+          {
+            "name": "Customers",
+            "amount": 25
+          },
+          {
+            "name": "Erica",
+            "amount": 5
+          },
+          {
+            "name": "Ari",
+            "amount": 10
+          },
+          {
+            "name": "Shelby",
+            "amount": 10
+          },
+          {
+            "name": "Allie",
+            "amount": 10
+          },
+          {
+            "name": "Kody",
+            "amount": 50
+          },
+          {
+            "name": "Mia",
+            "amount": 10
+          }
+        ]
       }
     ]
   }
