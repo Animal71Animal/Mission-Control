@@ -57,7 +57,7 @@ export default function PartyConceptsPage() {
       key={concept.id}
       style={{
         background: "var(--card)",
-        border: "1px solid var(--border)",
+        border: "1px solid rgba(155, 93, 229, 0.4)",
         borderRadius: 12,
         padding: 24,
       }}
