@@ -1,26 +1,36 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function RhinoRadioPage() {
   return (
     <div>
-      {/* Header */}
-      <div style={{ marginBottom: 28 }}>
-        <h1
+      {/* Hero Logo */}
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          marginBottom: 36,
+          padding: "32px 0 20px",
+        }}
+      >
+        <Image
+          src="/images/rhino-radio-logo.jpg"
+          alt="ANIMAL Rhino Radio"
+          width={340}
+          height={340}
+          priority
           style={{
-            fontSize: "1.8rem",
-            fontWeight: 700,
-            margin: 0,
-            background: "linear-gradient(135deg, #9b5de5, #c77dff)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
+            borderRadius: 20,
+            boxShadow: "0 0 60px rgba(180, 30, 30, 0.45), 0 0 20px rgba(201,168,76,0.25)",
+            objectFit: "cover",
           }}
-        >
-          📻 Rhino Radio
-        </h1>
-        <p style={{ color: "var(--muted)", marginTop: 6, fontSize: "0.9rem" }}>
-          Rhino Radio broadcast management, promotions, and complimentary entry code tracking.
+        />
+        <p style={{ color: "var(--muted)", marginTop: 18, fontSize: "0.9rem", textAlign: "center" }}>
+          Broadcast management, promotions, and complimentary entry code tracking.
         </p>
       </div>
 
