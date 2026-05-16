@@ -273,24 +273,6 @@ export default function PromotionalIdeasPage() {
       <p style={{ marginTop: 24, fontSize: "0.75rem", color: "var(--muted)", textAlign: "right" }}>
         Last updated: {data.lastUpdated ? new Date(data.lastUpdated).toLocaleString() : "Unknown"}
       </p>
-
-      {/* Rhino Radio */}
-      <div style={{ marginTop: 32, borderTop: "1px solid var(--border)", paddingTop: 28 }}>
-        <Link
-          href="/rhino-radio"
-          style={{ display: "flex", alignItems: "center", gap: 20, padding: 24, borderRadius: 12, border: "1px solid var(--border)", background: "var(--card)", textDecoration: "none", color: "inherit" }}
-        >
-          <img
-            src="/images/rhino-radio-logo.jpg"
-            alt="ANIMAL Rhino Radio"
-            style={{ width: 64, height: 64, objectFit: "cover", borderRadius: 10 }}
-          />
-          <div>
-            <h2 style={{ fontSize: "1.2rem", fontWeight: 600, margin: "0 0 4px", color: "var(--text)" }}>ANIMAL Rhino Radio w/ANIMAL</h2>
-            <p style={{ fontSize: "0.85rem", color: "var(--muted)", margin: 0 }}>Broadcast management, promotions, and complimentary entry code tracking.</p>
-          </div>
-        </Link>
-      </div>
     </div>
   );
 }
