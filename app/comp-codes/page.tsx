@@ -139,8 +139,8 @@ export default function CompCodesPage() {
           >
             🎟️ Complimentary Entry Codes
           </h1>
-          <Link href="/influencer-list" style={{ fontSize: "0.85rem", color: "var(--muted)", textDecoration: "none" }}>
-            ← Back to Influencer List
+          <Link href="/rhino-radio" style={{ fontSize: "0.85rem", color: "var(--muted)", textDecoration: "none" }}>
+            ← Back to Rhino Radio
           </Link>
         </div>
         <p style={{ color: "var(--muted)", marginTop: 6, fontSize: "0.9rem" }}>
