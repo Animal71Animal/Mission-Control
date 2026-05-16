@@ -278,11 +278,17 @@ export default function PromotionalIdeasPage() {
       <div style={{ marginTop: 32, borderTop: "1px solid var(--border)", paddingTop: 28 }}>
         <Link
           href="/rhino-radio"
-          style={{ display: "block", padding: 24, borderRadius: 12, border: "1px solid var(--border)", background: "var(--card)", textDecoration: "none", color: "inherit" }}
+          style={{ display: "flex", alignItems: "center", gap: 20, padding: 24, borderRadius: 12, border: "1px solid var(--border)", background: "var(--card)", textDecoration: "none", color: "inherit" }}
         >
-          <div style={{ fontSize: "2rem", marginBottom: 12 }}>📻</div>
-          <h2 style={{ fontSize: "1.2rem", fontWeight: 600, margin: "0 0 8px", color: "var(--text)" }}>Rhino Radio</h2>
-          <p style={{ fontSize: "0.85rem", color: "var(--muted)", margin: 0 }}>Broadcast management, promotions, and complimentary entry code tracking.</p>
+          <img
+            src="/images/rhino-radio-logo.jpg"
+            alt="ANIMAL Rhino Radio"
+            style={{ width: 64, height: 64, objectFit: "cover", borderRadius: 10 }}
+          />
+          <div>
+            <h2 style={{ fontSize: "1.2rem", fontWeight: 600, margin: "0 0 4px", color: "var(--text)" }}>ANIMAL Rhino Radio w/ANIMAL</h2>
+            <p style={{ fontSize: "0.85rem", color: "var(--muted)", margin: 0 }}>Broadcast management, promotions, and complimentary entry code tracking.</p>
+          </div>
         </Link>
       </div>
     </div>
