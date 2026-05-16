@@ -145,7 +145,7 @@ export default function PartyConceptsPage() {
         </div>
         <div style={{ gridColumn: "span 2" }}>
           <span style={{ color: "var(--muted)", display: "block", marginBottom: 4, fontSize: "0.8rem" }}>
-            Costuming
+            Entertainer Costuming
           </span>
           <span style={{ color: "var(--text)" }}>{concept.costuming}</span>
         </div>
