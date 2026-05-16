@@ -37,10 +37,10 @@ export default function PromotionalIdeasPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/data/party-concepts-data.json")
+    fetch("/api/party-concepts")
       .then((r) => r.json())
-      .then((localData) => {
-        setData(localData);
+      .then((apiData) => {
+        setData(apiData);
         setLoading(false);
       })
       .catch(() => setLoading(false));
