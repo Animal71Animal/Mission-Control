@@ -41,7 +41,7 @@ export default function PartyConceptsPage() {
   if (loading || !data) {
     return (
       <div>
-        <h1 style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)" }}>🎉 Weekly Party Concepts</h1>
+        <h1 style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)" }}>🎉 Party Concepts</h1>
         <p style={{ color: "var(--muted)", marginTop: 20 }}>Loading...</p>
       </div>
     );
@@ -168,7 +168,7 @@ export default function PartyConceptsPage() {
               WebkitTextFillColor: "transparent",
             }}
           >
-            🎉 Weekly Party Concepts
+            🎉 Party Concepts
           </h1>
           <Link
             href="/promotions"
