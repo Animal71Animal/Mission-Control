@@ -78,7 +78,7 @@
       "format": "High-end, glamorous night out.",
       "drinks": "The Femme Fatale (dark rum + blackberry + gold leaf), Diamonds Are Forever (champagne + vodka + edible glitter), The Secret Agent (gin + cucumber + elderflower), Red Lipstick (red wine + bourbon + cherry), Silk & Dagger (sake + lychee + rose), The Executive (scotch + smoked orange peel + bitters)",
       "games": "Performances & Activities: Showtime Showcase every Friday and Saturday at midnight \u2014 entertainers are introduced one by one and each takes a spin around the stage. Immediately following introductions: dance special 2 for $40. Featured Entertainer of the weekend takes the stage both Friday and Saturday nights for a carefully curated, high-production performance.",
-      "costuming": "Cocktail dresses, gowns, classy and elegant. James Bond heroine / villain energy \u2014 think sophisticated, powerful, stunning.",
+      "costuming": "Entertainer's choice",
       "approved": false,
       "flyerDone": false,
       "frequency": "Friday",
@@ -216,18 +216,17 @@
   "promotionalIdeas": [
     {
       "id": "monthly-podcast",
-      "name": "Rhino Radio w/ANIMAL",
+      "name": "Monthly Podcast \u2014 'The Late Shift'",
       "icon": "\ud83c\udf99\ufe0f",
       "category": "Content Marketing",
-      "concept": "Monthly podcast showcasing the music we play in the club, interviews with entertainers, guests, and music artists. Downloadable from designated website. Keeps us top-of-mind.",
+      "concept": "Monthly podcast showcasing the music we play in the club, interviews with entertainers, guests, and music artists. The Late Shift goes straight to the people already in our orbit — and gives them a reason to stay there.",
       "format": "~1 hour episodes. Behind-the-scenes interviews, industry talk, entertainment culture, track highlights from Saturday nights.",
       "distribution": "Mixcloud (primary) \u2014 blanket music license coverage. Spotify/Apple Podcasts TBD if we can secure proper licensing.",
       "integration": "Clips feed social media; influencers get podcast feature as comp; promotes upcoming events",
       "copyrightSolution": "Use Mixcloud as primary host \u2014 they have blanket licenses for music. For podcast platforms: use short music clips (under 30 seconds) with commentary, or license-free/podcast-safe music for intro/outro. Interview segments and talking content are 100% original and copyright-free.",
       "status": "Idea",
       "approved": false,
-      "notes": "",
-      "logoUrl": "/rhino-radio-logo.jpg"
+      "notes": ""
     },
     {
       "id": "influencer-program",
