@@ -168,7 +168,7 @@ export default function PartyConceptsPage() {
               WebkitTextFillColor: "transparent",
             }}
           >
-            🎉 Party Concepts
+            🎉 Weekly Party Concepts
           </h1>
           <Link
             href="/promotions"
