@@ -218,7 +218,7 @@ export default function PartyConceptsPage() {
         <h2 style={{ fontSize: "1.3rem", fontWeight: 600, marginBottom: 16, color: "var(--text)" }}>
           📅 Weekly & Monthly Parties
         </h2>
-        <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
           {weeklyMonthly.map(renderConceptCard)}
         </div>
       </div>
@@ -229,7 +229,7 @@ export default function PartyConceptsPage() {
           🗓️ Yearly Parties
         </h2>
         {yearly.length > 0 ? (
-          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
             {yearly.map(renderConceptCard)}
           </div>
         ) : (
