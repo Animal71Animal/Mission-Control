@@ -239,7 +239,7 @@ export default function InfluencerListPage() {
             {s}
           </button>
         ))}
-        {saving && <span style={{ fontSize: "0.8rem", color: "var(--muted)" }}>Saving to GitHub...</span>}
+          {saving && <span style={{ fontSize: "0.8rem", color: "var(--muted)" }}>Saving to GitHub...</span>}
       </div>
 
       {/* Influencer Cards */}
@@ -302,6 +302,30 @@ export default function InfluencerListPage() {
           ))}
         </div>
       )}
+
+      {/* Comp Codes sub-section */}
+      <div style={{ marginTop: 32, borderTop: "1px solid var(--border)", paddingTop: 28 }}>
+        <Link
+          href="/comp-codes"
+          style={{
+            display: "block",
+            padding: 24,
+            borderRadius: 12,
+            border: "1px solid var(--border)",
+            background: "var(--card)",
+            textDecoration: "none",
+            color: "inherit",
+          }}
+        >
+          <div style={{ fontSize: "2rem", marginBottom: 12 }}>🎟️</div>
+          <h2 style={{ fontSize: "1.2rem", fontWeight: 600, margin: "0 0 8px", color: "var(--text)" }}>
+            Complimentary Entry Codes
+          </h2>
+          <p style={{ fontSize: "0.85rem", color: "var(--muted)", margin: 0 }}>
+            Track and manage complimentary entry codes issued to guests, partners, and VIPs.
+          </p>
+        </Link>
+      </div>
 
       {/* Add/Edit Modal */}
       {showModal && (

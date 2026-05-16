@@ -32,6 +32,7 @@ export default function RhinoRadioPage() {
         <p style={{ color: "var(--muted)", marginTop: 18, fontSize: "0.9rem", textAlign: "center" }}>
           Broadcast management, promotions, and complimentary entry code tracking.
         </p>
+        <Link href="/party-concepts" style={{ fontSize: "0.85rem", color: "var(--muted)", textDecoration: "none", marginTop: 8, display: "inline-block" }}>← Back to Party Concepts</Link>
       </div>
 
       {/* Navigation Cards */}
