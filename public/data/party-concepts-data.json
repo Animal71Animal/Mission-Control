@@ -217,17 +217,16 @@
     {
       "id": "monthly-podcast",
       "name": "Rhino Radio w/ANIMAL",
-      "icon": "📻",
+      "icon": "🎙️",
       "category": "Content Marketing",
-      "concept": "Monthly podcast showcasing the music we play in the club, interviews with entertainers, guests, and music artists. The Late Shift goes straight to the people already in our orbit — and gives them a reason to stay there.",
+      "concept": "Monthly podcast showcasing the music we play in the club, interviews with entertainers, guests, and music artists. Downloadable from designated website. Keeps us top-of-mind.",
       "format": "~1 hour episodes. Behind-the-scenes interviews, industry talk, entertainment culture, track highlights from Saturday nights.",
       "distribution": "Mixcloud (primary) — blanket music license coverage. Spotify/Apple Podcasts TBD if we can secure proper licensing.",
       "integration": "Clips feed social media; influencers get podcast feature as comp; promotes upcoming events",
       "copyrightSolution": "Use Mixcloud as primary host — they have blanket licenses for music. For podcast platforms: use short music clips (under 30 seconds) with commentary, or license-free/podcast-safe music for intro/outro. Interview segments and talking content are 100% original and copyright-free.",
       "status": "Idea",
       "approved": false,
-      "notes": "",
-      "logoUrl": "/rhino-logo.jpg"
+      "notes": ""
     },
     {
       "id": "influencer-program",
