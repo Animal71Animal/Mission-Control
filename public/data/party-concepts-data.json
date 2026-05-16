@@ -3,7 +3,7 @@
     {
       "id": "industry-night",
       "name": "Industry Night",
-      "icon": "\ud83c\udf78",
+      "icon": "🍸",
       "who": "Service workers, bartenders, dancers, staff from other spots",
       "format": "7pm-3am. Drink specials, no cover with paystub or staff ID.",
       "drinks": "The Shift Change (whiskey + cola), The Last Call (tequila sunrise), Bartender's Breakfast (Irish coffee), Well Drink Specials (50% off all well drinks), Beer + Shot Combo ($8), Jamison Special",
@@ -17,12 +17,12 @@
     {
       "id": "no-limit-mondays",
       "name": "No Limit Mondays",
-      "icon": "\u2660\ufe0f",
-      "who": "Gentlemen who don't have to worry about being to work early on Tuesday \u2014 business owners, executives, self-employed",
-      "format": "Poker runs 7pm\u201310pm as the icebreaker/early crowd draw. Swinger atmosphere takes over after 10pm.",
+      "icon": "♠️",
+      "who": "Gentlemen who don't have to worry about being to work early on Tuesday — business owners, executives, self-employed",
+      "format": "Poker runs 7pm–10pm as the icebreaker/early crowd draw. Swinger atmosphere takes over after 10pm.",
       "drinks": "The Royal Flush (layered red/purple/black cocktail), Pocket Aces (double shot special), The Swing (champagne + bourbon), Red Room (red velvet martini), Safe Word (sweet + spicy margarita), The Mingle (shared punch bowl for 2+)",
-      "games": "Poker (7pm\u201310pm), mingling, open atmosphere",
-      "costuming": "50 Shades of Grey aesthetic \u2014 think sleek, dominant, and sensual. Greys, blacks, leather, silk, restraint-inspired accessories.",
+      "games": "Poker (7pm–10pm), mingling, open atmosphere",
+      "costuming": "50 Shades of Grey aesthetic — think sleek, dominant, and sensual. Greys, blacks, leather, silk, restraint-inspired accessories.",
       "approved": false,
       "flyerDone": false,
       "frequency": "Monday",
@@ -31,9 +31,9 @@
     {
       "id": "lingerie-lounge",
       "name": "Lingerie Lounge",
-      "icon": "\ud83e\uddf8",
-      "who": "TBD \u2014 open crowd, no specific demographic target",
-      "format": "Lingerie night with a sophisticated, upscale vibe. Think Victoria's Secret runway meets speakeasy. Cross-promotion with Hustler Adult Stores and local apparel companies \u2014 they promote in-store, we give them a vendor table.",
+      "icon": "🧸",
+      "who": "TBD — open crowd, no specific demographic target",
+      "format": "Lingerie night with a sophisticated, upscale vibe. Think Victoria's Secret runway meets speakeasy. Cross-promotion with Hustler Adult Stores and local apparel companies — they promote in-store, we give them a vendor table.",
       "drinks": "The Teddy (white chocolate + raspberry martini), Silk Sheets (vanilla vodka + cream), Lace & Leather (smoky mezcal + honey), Champagne Room (bottle service special), The Runway (glitter champagne cocktail), Black Lace (blackberry + gin + activated charcoal)",
       "games": "",
       "costuming": "Entertainers in teddys, lingerie, and bedroom wear",
@@ -44,12 +44,12 @@
     },
     {
       "id": "girls-gone-wild",
-      "name": "TBD \u2014 Cheat Code / 1UP / Press Start (in consideration)",
-      "icon": "\ud83c\udf89",
-      "who": "Semi-upscale college crowd \u2014 21-28, elevated energy without going full club",
+      "name": "TBD — Cheat Code / 1UP / Press Start (in consideration)",
+      "icon": "🎉",
+      "who": "Semi-upscale college crowd — 21-28, elevated energy without going full club",
       "format": "High-energy, exciting atmosphere. The 'in-crowd.' Essentially the gentleman's club version of a college night.",
       "drinks": "The Keg Stand (beer tower special), Jungle Juice (fruit punch + vodka), Body Shots (tequila + lime + salt), The Funnel (shared cocktail pitcher), Beach Bum (malibu + pineapple), Red Solo Cup (mixed drink in a giant cup), The Dorm Room (cheap beer bucket special)",
-      "games": "Spring Break Type Games. MAIN EVENT: Video Games on LED Screen \u2014 Mario Kart vs Entertainer. Sign-up sheet with time slots (customer vs dancer). 2-3 min races. Customer wins = 1 free lapdance. Entertainer wins = customer buys 2 lapdances at normal price.",
+      "games": "Spring Break Type Games. MAIN EVENT: Video Games on LED Screen — Mario Kart vs Entertainer. Sign-up sheet with time slots (customer vs dancer). 2-3 min races. Customer wins = 1 free lapdance. Entertainer wins = customer buys 2 lapdances at normal price.",
       "costuming": "Entertainer's choice",
       "approved": false,
       "flyerDone": false,
@@ -59,12 +59,12 @@
     {
       "id": "chicks-in-kicks",
       "name": "Chicks in Kicks",
-      "icon": "\ud83d\udc5f",
-      "who": "Sneakerhead culture \u2014 people who love a high energy, exciting atmosphere who have disposable income. The 'in-crowd.'",
-      "format": "Throwbacks in all genres pre-2010. Sneaker culture night. Cross-promotion with local high-end sneaker stores \u2014 they promote with flyers in-store, we give them a booth to sell their shoes.",
+      "icon": "👟",
+      "who": "Sneakerhead culture — people who love a high energy, exciting atmosphere who have disposable income. The 'in-crowd.'",
+      "format": "Throwbacks in all genres pre-2010. Sneaker culture night. Cross-promotion with local high-end sneaker stores — they promote with flyers in-store, we give them a booth to sell their shoes.",
       "drinks": "Sneakertini, My Adidas, The Air Force One, etc",
       "games": "Sneaker Trivia",
-      "costuming": "The whole point \u2014 entertainers wear dope sneakers with coordinating outfits. This is a sneaker culture night and the girls should look the part. Think fresh kicks front and center with fits that match the energy.",
+      "costuming": "The whole point — entertainers wear dope sneakers with coordinating outfits. This is a sneaker culture night and the girls should look the part. Think fresh kicks front and center with fits that match the energy.",
       "approved": false,
       "flyerDone": false,
       "frequency": "Thursday",
@@ -73,11 +73,11 @@
     {
       "id": "femme-fatale",
       "name": "Femme Fatale Fridays",
-      "icon": "\ud83d\udc8b",
-      "who": "Guests who appreciate sophistication \u2014 people who come for the experience of seeing entertainers dressed and performing as polished, sexy, elegant women. Less about a specific demographic, more about a taste level.",
+      "icon": "💋",
+      "who": "Guests who appreciate sophistication — people who come for the experience of seeing entertainers dressed and performing as polished, sexy, elegant women. Less about a specific demographic, more about a taste level.",
       "format": "High-end, glamorous night out.",
       "drinks": "The Femme Fatale (dark rum + blackberry + gold leaf), Diamonds Are Forever (champagne + vodka + edible glitter), The Secret Agent (gin + cucumber + elderflower), Red Lipstick (red wine + bourbon + cherry), Silk & Dagger (sake + lychee + rose), The Executive (scotch + smoked orange peel + bitters)",
-      "games": "Performances & Activities: Showtime Showcase every Friday and Saturday at midnight \u2014 entertainers are introduced one by one and each takes a spin around the stage. Immediately following introductions: dance special 2 for $40. Featured Entertainer of the weekend takes the stage both Friday and Saturday nights for a carefully curated, high-production performance.",
+      "games": "Performances & Activities: Showtime Showcase every Friday and Saturday at midnight — entertainers are introduced one by one and each takes a spin around the stage. Immediately following introductions: dance special 2 for $40. Featured Entertainer of the weekend takes the stage both Friday and Saturday nights for a carefully curated, high-production performance.",
       "costuming": "Entertainer's choice",
       "approved": false,
       "flyerDone": false,
@@ -87,11 +87,11 @@
     {
       "id": "late-night",
       "name": "Saturday Night",
-      "icon": "\ud83c\udf19",
-      "who": "The after-hours crowd \u2014 people who want to keep the party going when everything else closes",
-      "format": "After hours \u2014 we go until the early hours of the morning. Underground vibe. Guest DJs regularly. The only spot to BE after 2am in Boise on Saturdays \u2014 full kitchen serving breakfast items. Higher cover charge after 2am. Revenue from breakfast + cover.",
-      "drinks": "Breakfast Specials \u2014 push food sales hard. Full kitchen open after 2am: breakfast items, late-night bites. Food revenue is a key profit driver for this night.",
-      "games": "Performances & Activities: Showtime Showcase at midnight \u2014 entertainers introduced one by one, each takes a spin around the stage. Immediately following: dance special 2 for $40. Featured Entertainer of the weekend performs a carefully curated, high-production set. After 2am \u2014 Late Night kicks in: guest DJs, full kitchen open with Breakfast Specials, after-hours energy until the early morning.",
+      "icon": "🌙",
+      "who": "The after-hours crowd — people who want to keep the party going when everything else closes",
+      "format": "After hours — we go until the early hours of the morning. Underground vibe. Guest DJs regularly. The only spot to BE after 2am in Boise on Saturdays — full kitchen serving breakfast items. Higher cover charge after 2am. Revenue from breakfast + cover.",
+      "drinks": "Breakfast Specials — push food sales hard. Full kitchen open after 2am: breakfast items, late-night bites. Food revenue is a key profit driver for this night.",
+      "games": "Performances & Activities: Showtime Showcase at midnight — entertainers introduced one by one, each takes a spin around the stage. Immediately following: dance special 2 for $40. Featured Entertainer of the weekend performs a carefully curated, high-production set. After 2am — Late Night kicks in: guest DJs, full kitchen open with Breakfast Specials, after-hours energy until the early morning.",
       "costuming": "Entertainer's choice",
       "approved": false,
       "flyerDone": false,
@@ -101,24 +101,24 @@
     {
       "id": "animal-house",
       "name": "Animal House",
-      "icon": "\ud83c\udfaa",
-      "who": "Everyone \u2014 the big monthly blowout",
+      "icon": "🎪",
+      "who": "Everyone — the big monthly blowout",
       "format": "Carnival/Freak Show with drummers, aerialists, poi/LED performers, singers, choreographed dancers, freak show performances (light hearted), etc. Special performances each month.",
       "drinks": "Bottle Specials on High End Liquors, Circus and Drummer inspired drinks, Animal themed drink special",
       "games": "Carnival/Freak Show performances",
       "costuming": "Circus/Freak Show type costuming for show performers",
       "approved": false,
       "flyerDone": false,
-      "frequency": "Monthly \u2014 4th Saturday (launching Fall 2026)",
-      "dayAssigned": "4th Saturday \u2014 launching Fall 2026"
+      "frequency": "Monthly — 4th Saturday (launching Fall 2026)",
+      "dayAssigned": "4th Saturday — launching Fall 2026"
     }
   ],
   "yearlyParties": [
     {
       "id": "blacklight-party",
       "name": "Blacklight Party",
-      "icon": "\ud83d\udc9c",
-      "who": "Everyone \u2014 high-energy crowd who loves neon, UV glow, and visual spectacle",
+      "icon": "💜",
+      "who": "Everyone — high-energy crowd who loves neon, UV glow, and visual spectacle",
       "format": "Full club UV/blacklight transformation. Neon body paint station, glow sticks, white clothing encouraged. DJ plays high-energy EDM and hip-hop.",
       "drinks": "Glow-in-the-dark cocktails (tonic water base), Neon Margaritas, Blacklight Beer specials",
       "games": "Best glow outfit contest, neon body paint competition, glow stick dance-off",
@@ -131,7 +131,7 @@
     {
       "id": "pole-competition",
       "name": "Pole Competition",
-      "icon": "\ud83e\udd47",
+      "icon": "🥇",
       "who": "Entertainers, pole fitness community, fans of athletic performance art",
       "format": "Multi-round pole dancing competition with judges panel. Amateur and pro divisions. Audience voting + professional scoring.",
       "drinks": "Champagne specials, VIP bottle service for judges/sponsors, themed cocktails per round",
@@ -145,21 +145,21 @@
     {
       "id": "halloween-bash",
       "name": "Halloween Bash",
-      "icon": "\ud83c\udf83",
-      "who": "Everyone \u2014 costume contest draws all demographics",
+      "icon": "🎃",
+      "who": "Everyone — costume contest draws all demographics",
       "format": "Full club Halloween decor, haunted house elements, costume contest with cash prizes. DJ plays spooky remixes and party hits.",
       "drinks": "Witch's Brew (green punch), Vampire's Kiss (red champagne cocktail), Candy Corn Shots",
       "games": "Costume contest (scariest, sexiest, most creative, best couple), pumpkin carving station, horror movie trivia",
       "costuming": "Costumes mandatory for contest entry. Full Halloween theme encouraged.",
       "approved": false,
       "flyerDone": false,
-      "frequency": "Yearly \u2014 October 31",
+      "frequency": "Yearly — October 31",
       "dayAssigned": "October 31"
     },
     {
       "id": "new-years-eve",
       "name": "New Year's Eve Gala",
-      "icon": "\ud83c\udf86",
+      "icon": "🎆",
       "who": "Couples, groups, anyone looking for a premium NYE experience",
       "format": "Premium open bar packages, champagne toast at midnight, countdown celebration, special NYE menu. Higher cover, VIP tables available.",
       "drinks": "Champagne packages, Midnight Kiss (champagne + strawberry), Resolution cocktails",
@@ -167,13 +167,13 @@
       "costuming": "Formal/cocktail attire encouraged. Black tie optional VIP section.",
       "approved": false,
       "flyerDone": false,
-      "frequency": "Yearly \u2014 December 31",
+      "frequency": "Yearly — December 31",
       "dayAssigned": "December 31"
     },
     {
       "id": "valentines-special",
       "name": "Valentine's Special",
-      "icon": "\u2764\ufe0f",
+      "icon": "❤️",
       "who": "Couples, singles, anyone looking for a romantic or anti-Valentine's night out",
       "format": "Couples packages, singles mingle games, romantic decor, red and pink theme. Special couples dances and VIP experiences.",
       "drinks": "Love Potion (pink cocktail), Broken Heart (whiskey + bitters), Cupid's Arrow (champagne + raspberry)",
@@ -181,32 +181,32 @@
       "costuming": "Red, pink, or black attire. Romantic or anti-romantic theme encouraged.",
       "approved": false,
       "flyerDone": false,
-      "frequency": "Yearly \u2014 February 14",
+      "frequency": "Yearly — February 14",
       "dayAssigned": "February 14"
     },
     {
       "id": "st-patricks-day",
       "name": "St. Patrick's Day Bash",
-      "icon": "\u2618\ufe0f",
-      "who": "Everyone \u2014 green beer and Irish whiskey draws all crowds",
+      "icon": "☘️",
+      "who": "Everyone — green beer and Irish whiskey draws all crowds",
       "format": "Full green decor, Irish whiskey specials, green beer, shamrock everything. DJ plays Irish rock remixes and party hits.",
       "drinks": "Green Beer, Irish Car Bombs, Jameson specials, Shamrock Shots",
       "games": "Best green outfit contest, Irish trivia, pot of gold raffle",
       "costuming": "Green mandatory. Leprechaun hats, shamrock accessories encouraged.",
       "approved": false,
       "flyerDone": false,
-      "frequency": "Yearly \u2014 March 17",
+      "frequency": "Yearly — March 17",
       "dayAssigned": "March 17"
     },
     {
       "id": "tailgate-touchdown",
       "name": "Tailgate & Touchdown",
-      "icon": "\ud83c\udfc8",
-      "who": "Sports fans, local crowd, football-season regulars \u2014 all demographics, 21+",
+      "icon": "🏈",
+      "who": "Sports fans, local crowd, football-season regulars — all demographics, 21+",
       "format": "Daytime parking lot party kicking off football season. Beer tubs, food trucks, lawn games. Party moves inside after dark for the late-night set. Think: NFL season opener energy meets block party.",
       "drinks": "NEED IDEAS",
       "games": "Cornhole, beer pong, giant Jenga, fantasy football draft board, jersey raffle",
-      "costuming": "Jerseys, team gear encouraged \u2014 entertainers in team colors or cheerleader-style outfits",
+      "costuming": "Jerseys, team gear encouraged — entertainers in team colors or cheerleader-style outfits",
       "approved": false,
       "flyerDone": false,
       "frequency": "Yearly",
@@ -216,43 +216,44 @@
   "promotionalIdeas": [
     {
       "id": "monthly-podcast",
-      "name": "Monthly Podcast \u2014 'The Late Shift'",
-      "icon": "\ud83c\udf99\ufe0f",
+      "name": "Rhino Radio w/ANIMAL",
+      "icon": "📻",
       "category": "Content Marketing",
       "concept": "Monthly podcast showcasing the music we play in the club, interviews with entertainers, guests, and music artists. The Late Shift goes straight to the people already in our orbit — and gives them a reason to stay there.",
       "format": "~1 hour episodes. Behind-the-scenes interviews, industry talk, entertainment culture, track highlights from Saturday nights.",
-      "distribution": "Mixcloud (primary) \u2014 blanket music license coverage. Spotify/Apple Podcasts TBD if we can secure proper licensing.",
+      "distribution": "Mixcloud (primary) — blanket music license coverage. Spotify/Apple Podcasts TBD if we can secure proper licensing.",
       "integration": "Clips feed social media; influencers get podcast feature as comp; promotes upcoming events",
-      "copyrightSolution": "Use Mixcloud as primary host \u2014 they have blanket licenses for music. For podcast platforms: use short music clips (under 30 seconds) with commentary, or license-free/podcast-safe music for intro/outro. Interview segments and talking content are 100% original and copyright-free.",
+      "copyrightSolution": "Use Mixcloud as primary host — they have blanket licenses for music. For podcast platforms: use short music clips (under 30 seconds) with commentary, or license-free/podcast-safe music for intro/outro. Interview segments and talking content are 100% original and copyright-free.",
       "status": "Idea",
       "approved": false,
-      "notes": ""
+      "notes": "",
+      "logoUrl": "/images/rhino-radio-logo.jpg"
     },
     {
       "id": "influencer-program",
       "name": "Influencer & Street Team Program",
-      "icon": "\ud83d\udce3",
+      "icon": "📣",
       "category": "Marketing & Promotions",
-      "concept": "A unified outreach program targeting three groups: social media influencers, nightlife insiders (bouncers and bartenders at other clubs), and grassroots street team activators. All three drive new traffic through authentic relationships \u2014 not paid ads.",
+      "concept": "A unified outreach program targeting three groups: social media influencers, nightlife insiders (bouncers and bartenders at other clubs), and grassroots street team activators. All three drive new traffic through authentic relationships — not paid ads.",
       "tiers": [
         {
           "id": "social-influencers",
-          "label": "Tier 1 \u2014 Social Media Influencers",
-          "who": "Local Instagram and TikTok creators. Micro (5K\u201315K), Mid (15K\u201350K), Macro (50K+).",
+          "label": "Tier 1 — Social Media Influencers",
+          "who": "Local Instagram and TikTok creators. Micro (5K–15K), Mid (15K–50K), Macro (50K+).",
           "discovery": "Hashtag search: #BoiseNightlife, #BoiseParty, #DowntownBoise, #BoiseStyle, #BoiseFitness",
-          "goal": "20\u201330 active influencers per month posting organic content about their SRB experience."
+          "goal": "20–30 active influencers per month posting organic content about their SRB experience."
         },
         {
           "id": "nightlife-insiders",
-          "label": "Tier 2 \u2014 Nightlife Insiders (Bouncers & Bartenders)",
-          "who": "Door staff and bartenders at downtown Boise bars and clubs. These people talk to hundreds of guests every weekend \u2014 they are the most trusted referral source in nightlife.",
+          "label": "Tier 2 — Nightlife Insiders (Bouncers & Bartenders)",
+          "who": "Door staff and bartenders at downtown Boise bars and clubs. These people talk to hundreds of guests every weekend — they are the most trusted referral source in nightlife.",
           "discovery": "Direct outreach to The Bastion, Neurolux, and other bars within 5 miles. Ish's existing network is the starting point.",
           "goal": "Turn industry workers into organic ambassadors who mention SRB to guests looking for where to go next."
         },
         {
           "id": "street-team",
-          "label": "Tier 3 \u2014 Street Team",
-          "who": "Promoters, regulars, and motivated guests who want to hustle for perks. Activated at last call (1:30\u20132am) near downtown bars.",
+          "label": "Tier 3 — Street Team",
+          "who": "Promoters, regulars, and motivated guests who want to hustle for perks. Activated at last call (1:30–2am) near downtown bars.",
           "discovery": "Ish's promoter network. Regulars who already love the venue.",
           "goal": "Drive last-call crowd directly to SRB. Especially effective for Saturday Late Night."
         }
@@ -262,48 +263,48 @@
         "options": [
           {
             "id": "vip-experience",
-            "label": "Option A \u2014 VIP Experience Package",
+            "label": "Option A — VIP Experience Package",
             "details": "Free admission + up to 3 guests. Reserved seating or VIP table. 0 bar tab. Personal DJ intro for behind-the-scenes content.",
             "bestFor": "Social influencers (Tier 1). High perceived value, low actual cost."
           },
           {
             "id": "podcast-feature",
-            "label": "Option B \u2014 Rhino Radio Feature",
+            "label": "Option B — Rhino Radio Feature",
             "details": "Guest spot on Rhino Radio podcast. Promoted on SRB social channels before and after. Cross-audience exposure.",
             "bestFor": "Lifestyle/personality influencers building their own brand."
           },
           {
             "id": "social-collab",
-            "label": "Option C \u2014 Social Media Collaboration",
-            "details": "SRB reposts and tags their content. Co-created Reel or TikTok \u2014 we provide the venue, they own the content.",
+            "label": "Option C — Social Media Collaboration",
+            "details": "SRB reposts and tags their content. Co-created Reel or TikTok — we provide the venue, they own the content.",
             "bestFor": "Mid and macro influencers who want premium content."
           },
           {
             "id": "industry-perks",
-            "label": "Option D \u2014 Industry Perks (Bouncers & Bartenders)",
-            "details": "Industry rate or free admission on their night off. Drink specials. Treated like VIPs when they walk in. Reciprocal relationship \u2014 we support their venue, they support ours.",
-            "bestFor": "Tier 2 nightlife insiders. No cash \u2014 just mutual respect and access."
+            "label": "Option D — Industry Perks (Bouncers & Bartenders)",
+            "details": "Industry rate or free admission on their night off. Drink specials. Treated like VIPs when they walk in. Reciprocal relationship — we support their venue, they support ours.",
+            "bestFor": "Tier 2 nightlife insiders. No cash — just mutual respect and access."
           },
           {
             "id": "referral-comp",
-            "label": "Option E \u2014 Referral / Affiliate Comp",
-            "details": "Unique QR code or entry card per person. \u201310 credit per verified guest brought in. Top referrers get escalating perks.",
+            "label": "Option E — Referral / Affiliate Comp",
+            "details": "Unique QR code or entry card per person. –10 credit per verified guest brought in. Top referrers get escalating perks.",
             "bestFor": "Street team (Tier 3) and performance-minded promoters."
           }
         ]
       },
       "activation": "Flyers and QR code cards for street team. Direct DMs for influencer outreach. In-person visits to neighboring bars to build bouncer/bartender relationships.",
-      "tracking": "Each person gets a unique QR code or entry card. We log who came in, who posted, guests attributed, and reach/impressions. Weekly review. Monthly rollup shows ROI per person. Full dashboard tracking planned \u2014 ready to build when volume justifies it.",
-      "notes": "Relationship-first across all three tiers. Never require a post. Never force a referral. The experience sells itself \u2014 our job is to make sure the right people are in the room.",
+      "tracking": "Each person gets a unique QR code or entry card. We log who came in, who posted, guests attributed, and reach/impressions. Weekly review. Monthly rollup shows ROI per person. Full dashboard tracking planned — ready to build when volume justifies it.",
+      "notes": "Relationship-first across all three tiers. Never require a post. Never force a referral. The experience sells itself — our job is to make sure the right people are in the room.",
       "status": "Idea",
       "approved": false
     },
     {
       "id": "content-creation",
       "name": "Content Creation & Social Media",
-      "icon": "\ud83d\udcf8",
+      "icon": "📸",
       "category": "Digital Marketing",
-      "concept": "Behind-the-scenes, crowd moments, DJ highlights, influencer collabs. Daily stories + 3\u20135 posts/week on Instagram, 2\u20133 videos/week on TikTok.",
+      "concept": "Behind-the-scenes, crowd moments, DJ highlights, influencer collabs. Daily stories + 3–5 posts/week on Instagram, 2–3 videos/week on TikTok.",
       "format": "Content pillars: Behind the Scenes, Guest Moments, DJ Sets, Influencer Collabs, Podcast Clips",
       "distribution": "Instagram (primary), TikTok (secondary), Podcast clips (long-form)",
       "integration": "All content feeds back into event promotion and podcast content engine",
@@ -314,11 +315,11 @@
     {
       "id": "featured-entertainer",
       "name": "Featured Entertainer Weekends",
-      "icon": "\u2b50",
+      "icon": "⭐",
       "category": "Talent Spotlight",
-      "concept": "We're selecting one entertainer per weekend to take the stage as our Featured Entertainer \u2014 a dedicated, fully produced showcase designed to captivate our guests on both Friday and Saturday night. Your performance takes place after Midnight Showtime, during the Dance Special. Selected entertainers will join 1\u20132 rehearsal & strategy sessions with Animal to create a fully themed, immersive show experience for our guests.",
-      "format": "One entertainer per weekend \u00b7 Both Friday & Saturday \u00b7 After Midnight Showtime \u00b7 1\u20132 rehearsal & strategy sessions with Animal \u00b7 Fully themed, immersive show experience",
-      "distribution": "Custom flyer per entertainer \u00b7 Instagram \u00b7 TikTok \u00b7 In-club announcements \u00b7 Podcast shoutouts",
+      "concept": "We're selecting one entertainer per weekend to take the stage as our Featured Entertainer — a dedicated, fully produced showcase designed to captivate our guests on both Friday and Saturday night. Your performance takes place after Midnight Showtime, during the Dance Special. Selected entertainers will join 1–2 rehearsal & strategy sessions with Animal to create a fully themed, immersive show experience for our guests.",
+      "format": "One entertainer per weekend · Both Friday & Saturday · After Midnight Showtime · 1–2 rehearsal & strategy sessions with Animal · Fully themed, immersive show experience",
+      "distribution": "Custom flyer per entertainer · Instagram · TikTok · In-club announcements · Podcast shoutouts",
       "integration": "Featured entertainers feed podcast and social content. Builds star power and gives guests a reason to return every weekend.",
       "status": "Idea",
       "approved": true,
@@ -326,7 +327,7 @@
       "details": {
         "starts": "July 10 & 11, 2026",
         "performance": "After Midnight Showtime",
-        "commitment": "Fri & Sat \u2014 Both Nights"
+        "commitment": "Fri & Sat — Both Nights"
       },
       "flyerUrl": "https://featured-entertainer.vercel.app/flyer.html"
     }
