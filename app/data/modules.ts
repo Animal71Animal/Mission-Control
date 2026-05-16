@@ -22,9 +22,9 @@ export const modules: Module[] = [
     { href: "/party-concepts", icon: "🎉", title: "Party Concepts", desc: "Weekly and monthly event ideas — industry night, teddy tuesdays, chicks in kicks, and more.", status: "active", group: "business" },
     { href: "/promotional-ideas", icon: "💡", title: "Promotional Ideas", desc: "Podcast, influencer marketing, street team, content creation, and paid advertising strategies.", status: "active", group: "business" },
     { href: "/influencer-list", icon: "⭐", title: "Influencer List", desc: "Local and regional influencers with social media stats for partnership targeting.", status: "active", group: "business" },
-  ] },
-  { href: "/rhino-radio", icon: "📻", title: "Rhino Radio", desc: "Rhino Radio broadcast management, promotions, and complimentary entry code tracking.", status: "active", group: "business", children: [
-    { href: "/comp-codes", icon: "🎟️", title: "Complimentary Entry Codes", desc: "Track and manage complimentary entry codes issued to guests and partners.", status: "active", group: "business" },
+    { href: "/rhino-radio", icon: "📻", title: "Rhino Radio", desc: "Rhino Radio broadcast management, promotions, and complimentary entry code tracking.", status: "active", group: "business", children: [
+      { href: "/comp-codes", icon: "🎟️", title: "Complimentary Entry Codes", desc: "Track and manage complimentary entry codes issued to guests and partners.", status: "active", group: "business" },
+    ] },
   ] },
   { href: "/calendar", icon: "📅", title: "Calendar", desc: "Gigs, studio sessions, meetings, and deadlines.", status: "active", group: "business" },
   { href: "/srb-tips", icon: "💰", title: "SRB Tips", desc: "Spearmint Rhino tip tracking — monthly totals, top tippers, dancer stats.", status: "active", group: "business" },
