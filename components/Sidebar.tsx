@@ -32,10 +32,16 @@ function ChevronIcon({ expanded }: { expanded: boolean }) {
 function NavItem({ item, pathname, onClose, depth = 0 }: { item: Module; pathname: string; onClose: () => void; depth?: number }) {
   const active = pathname === item.href;
   const hasChildren = item.children && item.children.length > 0;
-  const childActive = hasChildren && item.children!.some((c) => pathname === c.href);
+
+  // Recursively check if any descendant matches the current path
+  function isDescendantActive(items: Module[]): boolean {
+    return items.some((c) => pathname === c.href || (c.children ? isDescendantActive(c.children) : false));
+  }
+
+  const childActive = hasChildren && isDescendantActive(item.children!);
   const [open, setOpen] = useState(childActive || active);
 
-  // Auto-open if a child becomes active
+  // Auto-open if a descendant becomes active
   useEffect(() => {
     if (childActive) setOpen(true);
   }, [childActive]);
@@ -90,9 +96,9 @@ function NavItem({ item, pathname, onClose, depth = 0 }: { item: Module; pathnam
         </div>
         <div
           style={{
-            maxHeight: open ? "400px" : "0",
+            maxHeight: open ? "2000px" : "0",
             overflow: "hidden",
-            transition: "max-height 0.25s ease, opacity 0.2s ease",
+            transition: "max-height 0.35s ease, opacity 0.2s ease",
             opacity: open ? 1 : 0,
           }}
         >
@@ -269,7 +275,7 @@ export default function Sidebar() {
               {/* Group items */}
               <div
                 style={{
-                  maxHeight: expandedGroups[group] ? "500px" : "0",
+                  maxHeight: expandedGroups[group] ? "2000px" : "0",
                   overflow: "hidden",
                   transition: "max-height 0.25s ease, opacity 0.2s ease",
                   opacity: expandedGroups[group] ? 1 : 0,
