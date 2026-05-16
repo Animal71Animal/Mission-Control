@@ -96,7 +96,6 @@ async function writeToGitHub(data: object): Promise<boolean> {
       return false;
     }
 
-    console.log('[agent-status] Successfully wrote to GitHub');
     return true;
   } catch (err) {
     console.error('[agent-status] GitHub write error:', err);
@@ -109,7 +108,6 @@ function writeToJson(data: object): boolean {
   try {
     const localPath = LOCAL_JSON_PATHS[0];
     fs.writeFileSync(localPath, JSON.stringify(data, null, 2));
-    console.log('[agent-status] Wrote to local JSON:', localPath);
     return true;
   } catch (err) {
     console.error('[agent-status] Local JSON write error:', err);

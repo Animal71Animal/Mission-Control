@@ -55,7 +55,7 @@ function writeToLocal(filePath: string, content: unknown) {
 
 async function writeToGitHub(filePath: string, content: unknown, sha: string | null, msg: string) {
   const encoded = Buffer.from(JSON.stringify(content, null, 2)).toString("base64");
-  const body: any = { message: msg, content: encoded, branch: GITHUB_BRANCH };
+  const body: Record<string, string> = { message: msg, content: encoded, branch: GITHUB_BRANCH };
   if (sha) body.sha = sha;
   const res = await fetch(`${BASE}/${filePath}`, {
     method: "PUT",

@@ -74,6 +74,27 @@ export default function PromotionsPage() {
             Podcast, influencer marketing, street team, content creation strategies.
           </p>
         </Link>
+        <Link
+          href="/influencer-list"
+          style={{
+            display: "block",
+            padding: 24,
+            borderRadius: 12,
+            border: "1px solid var(--border)",
+            background: "var(--card)",
+            textDecoration: "none",
+            color: "inherit",
+            transition: "all 0.2s",
+          }}
+        >
+          <div style={{ fontSize: "2rem", marginBottom: 12 }}>⭐</div>
+          <h2 style={{ fontSize: "1.2rem", fontWeight: 600, margin: "0 0 8px", color: "var(--text)" }}>
+            Influencer List
+          </h2>
+          <p style={{ fontSize: "0.85rem", color: "var(--muted)", margin: 0 }}>
+            Local and regional influencers with social media stats for partnership targeting.
+          </p>
+        </Link>
       </div>
     </div>
   );

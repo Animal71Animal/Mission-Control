@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN || "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";
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GITHUB_REPO = "Animal71Animal/Mission-Control";
 const LOCAL_DATA_DIR = path.join(process.cwd(), "public", "data");
 
@@ -125,7 +125,7 @@ export async function POST(request: NextRequest) {
     const { title, date, time, endTime, location, notes, category } = body;
 
     // Fetch current events (GitHub first, fallback to local)
-    let calendarData = { events: [] };
+    let calendarData: { events: Record<string, unknown>[] } = { events: [] };
     let sha = "";
 
     try {
@@ -321,16 +321,6 @@ export async function DELETE(request: NextRequest) {
 }
 
 // Helper functions
-function categorizeEvent(title: string): string {
-  const t = title.toLowerCase();
-  if (t.includes("gig") || t.includes("set") || t.includes("show") || t.includes("performance")) return "gig";
-  if (t.includes("studio") || t.includes("recording") || t.includes("production")) return "studio";
-  if (t.includes("meeting") || t.includes("call") || t.includes("zoom")) return "meeting";
-  if (t.includes("deadline") || t.includes("due") || t.includes("submit")) return "deadline";
-  if (t.includes("personal") || t.includes("appointment") || t.includes("dentist") || t.includes("doctor")) return "personal";
-  return "other";
-}
-
 function getCategoryColor(category: string): string {
   const colors: Record<string, string> = {
     gig: "#9b5de5",

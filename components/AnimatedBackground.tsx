@@ -12,12 +12,15 @@ export default function AnimatedBackground() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
+    // Capture non-null references for use inside the Particle class
+    const canvasEl: HTMLCanvasElement = canvas;
+
     let animationId: number;
     let particles: Particle[] = [];
 
     const resize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvasEl.width = window.innerWidth;
+      canvasEl.height = window.innerHeight;
     };
 
     class Particle {
@@ -29,8 +32,8 @@ export default function AnimatedBackground() {
       alpha: number;
 
       constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
+        this.x = Math.random() * canvasEl.width;
+        this.y = Math.random() * canvasEl.height;
         this.vx = (Math.random() - 0.5) * 0.5;
         this.vy = (Math.random() - 0.5) * 0.5;
         this.size = Math.random() * 2 + 1;
@@ -41,8 +44,8 @@ export default function AnimatedBackground() {
         this.x += this.vx;
         this.y += this.vy;
 
-        if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-        if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+        if (this.x < 0 || this.x > canvasEl.width) this.vx *= -1;
+        if (this.y < 0 || this.y > canvasEl.height) this.vy *= -1;
       }
 
       draw() {
@@ -56,7 +59,7 @@ export default function AnimatedBackground() {
 
     const init = () => {
       particles = [];
-      const particleCount = Math.min(50, Math.floor((canvas.width * canvas.height) / 20000));
+      const particleCount = Math.min(50, Math.floor((canvasEl.width * canvasEl.height) / 20000));
       for (let i = 0; i < particleCount; i++) {
         particles.push(new Particle());
       }
@@ -84,15 +87,15 @@ export default function AnimatedBackground() {
     };
 
     const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvasEl.width, canvasEl.height);
 
       // Draw gradient background
-      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+      const gradient = ctx.createLinearGradient(0, 0, canvasEl.width, canvasEl.height);
       gradient.addColorStop(0, "rgba(10, 10, 15, 1)");
       gradient.addColorStop(0.5, "rgba(15, 15, 25, 1)");
       gradient.addColorStop(1, "rgba(10, 10, 15, 1)");
       ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillRect(0, 0, canvasEl.width, canvasEl.height);
 
       particles.forEach((particle) => {
         particle.update();

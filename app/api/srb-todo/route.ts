@@ -2,6 +2,16 @@ import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
+interface SrbTask {
+  id: string;
+  text: string;
+  completed: boolean;
+  category: string;
+  priority: string;
+  due_date?: string | null;
+  [key: string]: unknown;
+}
+
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GITHUB_REPO = 'Animal71Animal/Mission-Control';
 const GITHUB_BRANCH = 'main';
@@ -84,7 +94,7 @@ export async function PATCH(request: NextRequest) {
       tasks = localData?.tasks || [];
       sha = null;
     }
-    const idx = tasks.findIndex((t: any) => t.id === id);
+    const idx = tasks.findIndex((t: SrbTask) => t.id === id);
     if (idx === -1) return NextResponse.json({ ok: false, error: 'Not found' }, { status: 404 });
     tasks[idx] = { ...tasks[idx], ...changes };
     if (sha) await writeToGitHub(tasks, sha, `fix: update srb-todo task ${id}`);
@@ -127,7 +137,7 @@ export async function DELETE(request: NextRequest) {
       tasks = localData?.tasks || [];
       sha = null;
     }
-    const updated = tasks.filter((t: any) => t.id !== id);
+    const updated = tasks.filter((t: SrbTask) => t.id !== id);
     if (sha) await writeToGitHub(updated, sha, `chore: delete srb-todo task ${id}`);
     writeToLocal(updated);
     return NextResponse.json({ ok: true });

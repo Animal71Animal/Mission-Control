@@ -55,23 +55,23 @@ const MONTH_LABELS: Record<string, string> = {
 
 const MONTH_ORDER = ["2026-01", "2026-02", "2026-03", "2026-04", "2026-05"];
 
-function getNet(key: string, m: MonthlyTotal): number {
+function getNet(_key: string, m: MonthlyTotal): number {
   return m.total_net ?? 0;
 }
 
-function getGross(key: string, m: MonthlyTotal): number {
+function getGross(_key: string, m: MonthlyTotal): number {
   return m.total_gross ?? m.total_earnings ?? 0;
 }
 
-function getTrips(key: string, m: MonthlyTotal): number {
+function getTrips(_key: string, m: MonthlyTotal): number {
   return m.total_trips ?? 0;
 }
 
-function getTips(key: string, m: MonthlyTotal): number {
+function getTips(_key: string, m: MonthlyTotal): number {
   return m.total_tips ?? 0;
 }
 
-function getMiles(key: string, m: MonthlyTotal): number {
+function getMiles(_key: string, m: MonthlyTotal): number {
   return m.online_miles ?? m.total_miles ?? 0;
 }
 

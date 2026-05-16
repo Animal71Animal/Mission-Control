@@ -6,7 +6,7 @@ import Card from "@/components/Card";
 interface SrbTipsData {
   monthlyTotals: { month: string; amount: number; nights: number }[];
   topTippers: { rank: number; name: string; jan: number; feb: number; mar: number; apr?: number; may?: number; jun?: number; total: number; badge: string | null }[];
-  allDancers: { name: string; jan: number; feb: number; mar: number; apr?: number; may?: number; jun?: number }[];
+  allDancers: { name: string; jan: number; feb: number; mar: number; apr?: number; may?: number; jun?: number; total?: number }[];
   customerTips: { month: string; amount: number; topNight: string }[];
   dailyTips?: { date: string; amount: number; dancers: { name: string; amount: number }[] }[];
   nightlyData?: Record<string, { date: string; total: number; dancers: { name: string; amount: number }[] }[]>;
@@ -407,8 +407,8 @@ export default function SrbTipsPage() {
                 may: d.may || 0,
                 jun: d.jun || 0
               }))
-              .filter(d => d.total > 0)
-              .sort((a, b) => b.total - a.total)
+              .filter(d => (d.total ?? 0) > 0)
+              .sort((a, b) => (b.total ?? 0) - (a.total ?? 0))
               .slice(0, 10)
               .map((t, i) => (
                 <div key={t.name} style={{ display: "flex", alignItems: "center", gap: 8, padding: "6px 0", borderBottom: "1px solid var(--border)" }}>
@@ -554,7 +554,7 @@ export default function SrbTipsPage() {
             🏆 2026 Top Entertainers
           </h3>
           <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-            {allDancers.filter(d => d.total > 0).sort((a, b) => b.total - a.total).slice(0, 10).map((d, i) => {
+            {allDancers.filter(d => (d.total ?? 0) > 0).sort((a, b) => (b.total ?? 0) - (a.total ?? 0)).slice(0, 10).map((d, i) => {
               const badge = i === 0 ? "gold" : i === 1 ? "gold" : i === 2 ? "silver" : i < 5 ? "silver" : "bronze";
               return (
                 <div key={d.name} style={{ display: "flex", alignItems: "center", gap: 8, padding: "6px 0", borderBottom: "1px solid var(--border)" }}>

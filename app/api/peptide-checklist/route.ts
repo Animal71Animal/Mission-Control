@@ -54,7 +54,7 @@ function writeToLocal(data: Record<string, boolean>) {
 
 async function writeToGitHub(data: Record<string, boolean>, sha: string | null, msg: string) {
   const encoded = Buffer.from(JSON.stringify(data, null, 2)).toString("base64");
-  const body: any = { message: msg, content: encoded, branch: GITHUB_BRANCH };
+  const body: Record<string, string> = { message: msg, content: encoded, branch: GITHUB_BRANCH };
   if (sha) body.sha = sha;
   const res = await fetch(API_URL, {
     method: "PUT",
