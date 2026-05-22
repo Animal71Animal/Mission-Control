@@ -1186,8 +1186,7 @@
       "total_incentives": 209.78,
       "total_expenses": 839.74,
       "trip_earnings": 1848.07,
-      "source": "uber_tax_summary",
-      "note": "Daily entries below reflect manually tracked shifts only (77 of 147 trips)"
+      "source": "uber_tax_summary"
     }
   },
   "metadata": {
