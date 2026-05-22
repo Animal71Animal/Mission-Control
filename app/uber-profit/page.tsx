@@ -381,14 +381,17 @@ export default function UberEarningsPage() {
               const m = monthlyTotals[key];
               if (!m) return null;
               const net = getNet(key, m);
+              const trips = getTrips(key, m);
+              const gross = getGross(key, m);
               const pct = ytdNet > 0 ? (net / ytdNet) * 100 : 0;
+              const source = m.source === "uber_tax_summary" ? " 🏛" : "";
               return (
                 <div key={key} style={{ padding: "12px 0", borderBottom: "1px solid var(--border)" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
-                    <span style={{ fontWeight: 600, fontSize: "0.9rem" }}>{MONTH_LABELS[key]}</span>
+                    <span style={{ fontWeight: 600, fontSize: "0.9rem" }}>{MONTH_LABELS[key]}{source}</span>
                     <div style={{ textAlign: "right" }}>
                       <span style={{ fontWeight: 700, color: "#00c87c" }}>${net.toFixed(2)}</span>
-                      <span style={{ fontSize: "0.75rem", color: "var(--muted)", marginLeft: 8 }}>{pct.toFixed(1)}%</span>
+                      <span style={{ fontSize: "0.75rem", color: "var(--muted)", marginLeft: 8 }}>{trips} trips · {pct.toFixed(1)}%</span>
                     </div>
                   </div>
                   <div style={{ height: 6, background: "var(--border)", borderRadius: 3, overflow: "hidden" }}>
