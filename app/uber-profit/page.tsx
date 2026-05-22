@@ -159,7 +159,7 @@ export default function UberEarningsPage() {
           🚗 Uber Earnings
         </h1>
         <p style={{ color: "var(--muted)", marginTop: 6, fontSize: "0.9rem" }}>
-          2026 earnings · Jan–May · official Uber tax summaries
+          2026 earnings · Jan–May · official Uber tax summaries + manual tracking
         </p>
       </div>
 
@@ -427,11 +427,14 @@ export default function UberEarningsPage() {
         </div>
 
         {MONTH_ORDER.slice().reverse().map((key) => {
+          const m = monthlyTotals[key];
+          const isOfficial = m?.source === "uber_tax_summary";
           const entries = (dailyByMonth[key] ?? []).sort((a, b) => b.date.localeCompare(a.date));
-          if (entries.length === 0) return null;
+          // For official tax summary months, use monthlyTotals directly
+          const monthNet = isOfficial ? getNet(key, m) : entries.reduce((s, e) => s + (e.netPayout ?? e.earnings), 0);
+          const monthTrips = isOfficial ? getTrips(key, m) : entries.reduce((s, e) => s + e.trips, 0);
+          if (!isOfficial && entries.length === 0) return null;
           const isOpen = expandedMonths[key];
-          const monthNet = entries.reduce((s, e) => s + (e.netPayout ?? e.earnings), 0);
-          const monthTrips = entries.reduce((s, e) => s + e.trips, 0);
 
           return (
             <div key={key} style={{ borderBottom: "1px solid var(--border)" }}>
@@ -451,9 +454,9 @@ export default function UberEarningsPage() {
                     transform: isOpen ? "rotate(90deg)" : "rotate(0deg)",
                     transition: "transform 0.2s", fontSize: "0.8rem", color: "var(--muted)",
                   }}>▶</span>
-                  <span>{MONTH_LABELS[key]} 2026</span>
+                  <span>{MONTH_LABELS[key]} 2026 {isOfficial ? "🏛" : ""}</span>
                   <span style={{ fontSize: "0.72rem", color: "var(--muted)", fontWeight: 400 }}>
-                    {entries.length} shifts · {monthTrips} trips
+                    {monthTrips} trips · {isOfficial ? "official" : `${entries.length} shifts`}
                   </span>
                 </div>
                 <span style={{ fontSize: "0.9rem", fontWeight: 700, color: "#00f5d4" }}>
