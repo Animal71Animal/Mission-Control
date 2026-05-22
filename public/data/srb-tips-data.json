@@ -33,8 +33,8 @@
       "feb": 224,
       "mar": 154,
       "apr": 68,
-      "may": 371,
-      "total": 1095
+      "may": 351,
+      "total": 1075
     },
     {
       "name": "Suki",
@@ -78,8 +78,8 @@
       "feb": 35,
       "mar": 196,
       "apr": 0,
-      "may": 20,
-      "total": 286
+      "may": 40,
+      "total": 306
     },
     {
       "name": "Allie",
@@ -714,8 +714,8 @@
       "feb": 224,
       "mar": 154,
       "apr": 68,
-      "may": 371,
-      "total": 1095
+      "may": 351,
+      "total": 1075
     },
     {
       "name": "Suki",
@@ -759,8 +759,8 @@
       "feb": 35,
       "mar": 196,
       "apr": 0,
-      "may": 20,
-      "total": 286
+      "may": 40,
+      "total": 306
     },
     {
       "name": "Allie",
@@ -2413,7 +2413,7 @@
       "total": 130
     }
   ],
-  "lastUpdated": "2026-05-22T09:39:57Z",
+  "lastUpdated": "2026-05-22T09:42:38Z",
   "nightlyData": {
     "January": [
       {
@@ -5294,7 +5294,11 @@
           },
           {
             "name": "Customers",
-            "amount": 222
+            "amount": 202
+          },
+          {
+            "name": "Amity",
+            "amount": 20
           }
         ]
       },
