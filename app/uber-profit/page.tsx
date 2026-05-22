@@ -299,8 +299,8 @@ export default function UberEarningsPage() {
             </div>
           )}
 
-          {/* Daily entries for this month if available */}
-          {selectedDailyEntries.length > 0 && (
+          {/* Daily entries for this month (manual tracking only — not shown for official tax summary months) */}
+          {selectedDailyEntries.length > 0 && selectedMonthData.source !== "uber_tax_summary" && (
             <div>
               <h3 style={{ fontSize: "0.85rem", color: "var(--muted)", marginBottom: 10, textTransform: "uppercase", letterSpacing: "0.05em" }}>
                 📋 Tracked Shifts ({selectedDailyEntries.length})
