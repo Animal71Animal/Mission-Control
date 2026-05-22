@@ -22,8 +22,8 @@
     },
     {
       "month": "May",
-      "amount": 996,
-      "nights": 7
+      "amount": 1109,
+      "nights": 8
     }
   ],
   "topTippers": [
@@ -46,6 +46,15 @@
       "total": 381
     },
     {
+      "name": "Genesis",
+      "jan": 74,
+      "feb": 48,
+      "mar": 138,
+      "apr": 20,
+      "may": 83,
+      "total": 363
+    },
+    {
       "name": "Nala",
       "jan": 20,
       "feb": 240,
@@ -62,15 +71,6 @@
       "apr": 60,
       "may": 20,
       "total": 335
-    },
-    {
-      "name": "Genesis",
-      "jan": 74,
-      "feb": 48,
-      "mar": 138,
-      "apr": 20,
-      "may": 48,
-      "total": 328
     },
     {
       "name": "Amity",
@@ -100,6 +100,15 @@
       "total": 277
     },
     {
+      "name": "Amy",
+      "jan": 0,
+      "feb": 25,
+      "mar": 0,
+      "apr": 113,
+      "may": 73,
+      "total": 211
+    },
+    {
       "name": "Willow",
       "jan": 48,
       "feb": 22,
@@ -107,15 +116,6 @@
       "apr": 85,
       "may": 0,
       "total": 207
-    },
-    {
-      "name": "Amy",
-      "jan": 0,
-      "feb": 25,
-      "mar": 0,
-      "apr": 113,
-      "may": 63,
-      "total": 201
     },
     {
       "name": "Adelia",
@@ -136,6 +136,15 @@
       "total": 168
     },
     {
+      "name": "Berlin",
+      "jan": 28,
+      "feb": 45,
+      "mar": 35,
+      "apr": 10,
+      "may": 43,
+      "total": 161
+    },
+    {
       "name": "Athena",
       "jan": 65,
       "feb": 10,
@@ -152,15 +161,6 @@
       "apr": 40,
       "may": 20,
       "total": 159
-    },
-    {
-      "name": "Berlin",
-      "jan": 28,
-      "feb": 45,
-      "mar": 35,
-      "apr": 10,
-      "may": 33,
-      "total": 151
     },
     {
       "name": "Shelby",
@@ -253,6 +253,15 @@
       "total": 120
     },
     {
+      "name": "Quinn",
+      "jan": 10,
+      "feb": 14,
+      "mar": 50,
+      "apr": 33,
+      "may": 11,
+      "total": 118
+    },
+    {
       "name": "Macy",
       "jan": 20,
       "feb": 0,
@@ -260,15 +269,6 @@
       "apr": 40,
       "may": 20,
       "total": 110
-    },
-    {
-      "name": "Quinn",
-      "jan": 10,
-      "feb": 14,
-      "mar": 50,
-      "apr": 33,
-      "may": 0,
-      "total": 107
     },
     {
       "name": "Dior",
@@ -298,6 +298,15 @@
       "total": 93
     },
     {
+      "name": "Tiana",
+      "jan": 7,
+      "feb": 0,
+      "mar": 28,
+      "apr": 35,
+      "may": 20,
+      "total": 90
+    },
+    {
       "name": "Ella",
       "jan": 0,
       "feb": 66,
@@ -307,6 +316,15 @@
       "total": 86
     },
     {
+      "name": "Effie",
+      "jan": 40,
+      "feb": 0,
+      "mar": 10,
+      "apr": 22,
+      "may": 5,
+      "total": 77
+    },
+    {
       "name": "Star",
       "jan": 6,
       "feb": 21,
@@ -314,24 +332,6 @@
       "apr": 40,
       "may": 0,
       "total": 73
-    },
-    {
-      "name": "Effie",
-      "jan": 40,
-      "feb": 0,
-      "mar": 10,
-      "apr": 22,
-      "may": 0,
-      "total": 72
-    },
-    {
-      "name": "Tiana",
-      "jan": 7,
-      "feb": 0,
-      "mar": 28,
-      "apr": 35,
-      "may": 0,
-      "total": 70
     },
     {
       "name": "Kiki",
@@ -404,6 +404,15 @@
       "apr": 15,
       "may": 0,
       "total": 45
+    },
+    {
+      "name": "Ari",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 42,
+      "total": 42
     },
     {
       "name": "Shiiva",
@@ -538,15 +547,6 @@
       "mar": 0,
       "apr": 20,
       "may": 0,
-      "total": 20
-    },
-    {
-      "name": "Ari",
-      "jan": 0,
-      "feb": 0,
-      "mar": 0,
-      "apr": 0,
-      "may": 20,
       "total": 20
     },
     {
@@ -709,6 +709,15 @@
       "total": 381
     },
     {
+      "name": "Genesis",
+      "jan": 74,
+      "feb": 48,
+      "mar": 138,
+      "apr": 20,
+      "may": 83,
+      "total": 363
+    },
+    {
       "name": "Nala",
       "jan": 20,
       "feb": 240,
@@ -725,15 +734,6 @@
       "apr": 60,
       "may": 20,
       "total": 335
-    },
-    {
-      "name": "Genesis",
-      "jan": 74,
-      "feb": 48,
-      "mar": 138,
-      "apr": 20,
-      "may": 48,
-      "total": 328
     },
     {
       "name": "Amity",
@@ -763,6 +763,15 @@
       "total": 277
     },
     {
+      "name": "Amy",
+      "jan": 0,
+      "feb": 25,
+      "mar": 0,
+      "apr": 113,
+      "may": 73,
+      "total": 211
+    },
+    {
       "name": "Willow",
       "jan": 48,
       "feb": 22,
@@ -770,15 +779,6 @@
       "apr": 85,
       "may": 0,
       "total": 207
-    },
-    {
-      "name": "Amy",
-      "jan": 0,
-      "feb": 25,
-      "mar": 0,
-      "apr": 113,
-      "may": 63,
-      "total": 201
     },
     {
       "name": "Adelia",
@@ -799,6 +799,15 @@
       "total": 168
     },
     {
+      "name": "Berlin",
+      "jan": 28,
+      "feb": 45,
+      "mar": 35,
+      "apr": 10,
+      "may": 43,
+      "total": 161
+    },
+    {
       "name": "Athena",
       "jan": 65,
       "feb": 10,
@@ -815,15 +824,6 @@
       "apr": 40,
       "may": 20,
       "total": 159
-    },
-    {
-      "name": "Berlin",
-      "jan": 28,
-      "feb": 45,
-      "mar": 35,
-      "apr": 10,
-      "may": 33,
-      "total": 151
     },
     {
       "name": "Shelby",
@@ -916,6 +916,15 @@
       "total": 120
     },
     {
+      "name": "Quinn",
+      "jan": 10,
+      "feb": 14,
+      "mar": 50,
+      "apr": 33,
+      "may": 11,
+      "total": 118
+    },
+    {
       "name": "Macy",
       "jan": 20,
       "feb": 0,
@@ -923,15 +932,6 @@
       "apr": 40,
       "may": 20,
       "total": 110
-    },
-    {
-      "name": "Quinn",
-      "jan": 10,
-      "feb": 14,
-      "mar": 50,
-      "apr": 33,
-      "may": 0,
-      "total": 107
     },
     {
       "name": "Dior",
@@ -961,6 +961,15 @@
       "total": 93
     },
     {
+      "name": "Tiana",
+      "jan": 7,
+      "feb": 0,
+      "mar": 28,
+      "apr": 35,
+      "may": 20,
+      "total": 90
+    },
+    {
       "name": "Ella",
       "jan": 0,
       "feb": 66,
@@ -970,6 +979,15 @@
       "total": 86
     },
     {
+      "name": "Effie",
+      "jan": 40,
+      "feb": 0,
+      "mar": 10,
+      "apr": 22,
+      "may": 5,
+      "total": 77
+    },
+    {
       "name": "Star",
       "jan": 6,
       "feb": 21,
@@ -977,24 +995,6 @@
       "apr": 40,
       "may": 0,
       "total": 73
-    },
-    {
-      "name": "Effie",
-      "jan": 40,
-      "feb": 0,
-      "mar": 10,
-      "apr": 22,
-      "may": 0,
-      "total": 72
-    },
-    {
-      "name": "Tiana",
-      "jan": 7,
-      "feb": 0,
-      "mar": 28,
-      "apr": 35,
-      "may": 0,
-      "total": 70
     },
     {
       "name": "Kiki",
@@ -1067,6 +1067,15 @@
       "apr": 15,
       "may": 0,
       "total": 45
+    },
+    {
+      "name": "Ari",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 42,
+      "total": 42
     },
     {
       "name": "Shiiva",
@@ -1201,15 +1210,6 @@
       "mar": 0,
       "apr": 20,
       "may": 0,
-      "total": 20
-    },
-    {
-      "name": "Ari",
-      "jan": 0,
-      "feb": 0,
-      "mar": 0,
-      "apr": 0,
-      "may": 20,
       "total": 20
     },
     {
@@ -2377,7 +2377,7 @@
       "total": 130
     }
   ],
-  "lastUpdated": "2026-05-22T07:52:03Z",
+  "lastUpdated": "2026-05-22T09:28:48Z",
   "nightlyData": {
     "January": [
       {
@@ -5213,6 +5213,40 @@
           {
             "name": "Mia",
             "amount": 10
+          }
+        ]
+      },
+      {
+        "date": "Wed May 20",
+        "total": 113,
+        "dancers": [
+          {
+            "name": "Ari",
+            "amount": 22
+          },
+          {
+            "name": "Tiana",
+            "amount": 20
+          },
+          {
+            "name": "Berlin",
+            "amount": 10
+          },
+          {
+            "name": "Amy",
+            "amount": 10
+          },
+          {
+            "name": "Effie",
+            "amount": 5
+          },
+          {
+            "name": "Genesis",
+            "amount": 35
+          },
+          {
+            "name": "Quinn",
+            "amount": 11
           }
         ]
       },
