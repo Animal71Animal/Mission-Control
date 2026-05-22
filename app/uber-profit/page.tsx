@@ -145,7 +145,7 @@ export default function UberEarningsPage() {
   }, MONTH_ORDER[0]);
 
   const selectedMonthData = selectedMonth ? monthlyTotals[selectedMonth] : null;
-  const selectedDailyEntries = selectedMonth ? (dailyByMonth[selectedMonth] ?? []) : [];
+  const selectedDailyEntries = selectedMonth ? (dailyByMonth[selectedMonth] ?? []).sort((a, b) => a.date.localeCompare(b.date)) : [];
 
   return (
     <div>
@@ -424,7 +424,7 @@ export default function UberEarningsPage() {
         </div>
 
         {MONTH_ORDER.slice().reverse().map((key) => {
-          const entries = dailyByMonth[key] ?? [];
+          const entries = (dailyByMonth[key] ?? []).sort((a, b) => a.date.localeCompare(b.date));
           if (entries.length === 0) return null;
           const isOpen = expandedMonths[key];
           const monthNet = entries.reduce((s, e) => s + (e.netPayout ?? e.earnings), 0);
