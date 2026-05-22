@@ -21,9 +21,15 @@
       "djs": {
         "Kody": 5,
         "Customer": 66,
-        "Berlin": 13
+        "Berlin": 13,
+        "Indie": 20,
+        "Nova": 20,
+        "Shelby": 5,
+        "Shea": 6,
+        "Erica": 5,
+        "Ari": 20
       },
-      "total": 84,
+      "total": 160,
       "notes": ""
     }
   ],
