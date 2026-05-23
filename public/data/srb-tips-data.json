@@ -22,8 +22,8 @@
     },
     {
       "month": "May",
-      "amount": 1449,
-      "nights": 9
+      "amount": 1874,
+      "nights": 10
     }
   ],
   "topTippers": [
@@ -42,8 +42,8 @@
       "feb": 60,
       "mar": 0,
       "apr": 86,
-      "may": 50,
-      "total": 396
+      "may": 150,
+      "total": 496
     },
     {
       "name": "Genesis",
@@ -69,8 +69,8 @@
       "feb": 115,
       "mar": 120,
       "apr": 60,
-      "may": 20,
-      "total": 335
+      "may": 60,
+      "total": 375
     },
     {
       "name": "Amity",
@@ -87,8 +87,8 @@
       "feb": 95,
       "mar": 87,
       "apr": 46,
-      "may": 30,
-      "total": 278
+      "may": 55,
+      "total": 303
     },
     {
       "name": "Georgia",
@@ -105,8 +105,8 @@
       "feb": 25,
       "mar": 0,
       "apr": 113,
-      "may": 83,
-      "total": 221
+      "may": 103,
+      "total": 241
     },
     {
       "name": "Willow",
@@ -150,8 +150,8 @@
       "feb": 45,
       "mar": 35,
       "apr": 10,
-      "may": 43,
-      "total": 161
+      "may": 56,
+      "total": 174
     },
     {
       "name": "Athena",
@@ -177,8 +177,8 @@
       "feb": 5,
       "mar": 0,
       "apr": 105,
-      "may": 15,
-      "total": 150
+      "may": 20,
+      "total": 155
     },
     {
       "name": "Nova",
@@ -186,8 +186,8 @@
       "feb": 40,
       "mar": 35,
       "apr": 35,
-      "may": 20,
-      "total": 150
+      "may": 40,
+      "total": 170
     },
     {
       "name": "Kendall",
@@ -195,8 +195,8 @@
       "feb": 15,
       "mar": 50,
       "apr": 20,
-      "may": 40,
-      "total": 145
+      "may": 80,
+      "total": 185
     },
     {
       "name": "Zara",
@@ -213,8 +213,8 @@
       "feb": 8,
       "mar": 0,
       "apr": 5,
-      "may": 60,
-      "total": 137
+      "may": 65,
+      "total": 142
     },
     {
       "name": "Giovanna",
@@ -240,8 +240,8 @@
       "feb": 5,
       "mar": 6,
       "apr": 73,
-      "may": 20,
-      "total": 129
+      "may": 40,
+      "total": 149
     },
     {
       "name": "Milan",
@@ -276,8 +276,8 @@
       "feb": 0,
       "mar": 20,
       "apr": 55,
-      "may": 30,
-      "total": 105
+      "may": 40,
+      "total": 115
     },
     {
       "name": "Dior",
@@ -330,8 +330,8 @@
       "feb": 21,
       "mar": 6,
       "apr": 40,
-      "may": 0,
-      "total": 73
+      "may": 25,
+      "total": 98
     },
     {
       "name": "Lilly",
@@ -411,8 +411,8 @@
       "feb": 0,
       "mar": 0,
       "apr": 0,
-      "may": 42,
-      "total": 42
+      "may": 67,
+      "total": 67
     },
     {
       "name": "Shiiva",
@@ -501,8 +501,8 @@
       "feb": 0,
       "mar": 0,
       "apr": 0,
-      "may": 25,
-      "total": 25
+      "may": 30,
+      "total": 30
     },
     {
       "name": "Ava",
@@ -627,8 +627,8 @@
       "feb": 0,
       "mar": 0,
       "apr": 0,
-      "may": 6,
-      "total": 6
+      "may": 12,
+      "total": 12
     },
     {
       "name": "Hazel",
@@ -683,6 +683,15 @@
       "apr": 0,
       "may": 0,
       "total": 0
+    },
+    {
+      "name": "Customer",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 66,
+      "total": 66
     }
   ],
   "customerTips": [
@@ -723,8 +732,8 @@
       "feb": 60,
       "mar": 0,
       "apr": 86,
-      "may": 50,
-      "total": 396
+      "may": 150,
+      "total": 496
     },
     {
       "name": "Genesis",
@@ -750,8 +759,8 @@
       "feb": 115,
       "mar": 120,
       "apr": 60,
-      "may": 20,
-      "total": 335
+      "may": 60,
+      "total": 375
     },
     {
       "name": "Amity",
@@ -768,8 +777,8 @@
       "feb": 95,
       "mar": 87,
       "apr": 46,
-      "may": 30,
-      "total": 278
+      "may": 55,
+      "total": 303
     },
     {
       "name": "Georgia",
@@ -786,8 +795,8 @@
       "feb": 25,
       "mar": 0,
       "apr": 113,
-      "may": 83,
-      "total": 221
+      "may": 103,
+      "total": 241
     },
     {
       "name": "Willow",
@@ -831,8 +840,8 @@
       "feb": 45,
       "mar": 35,
       "apr": 10,
-      "may": 43,
-      "total": 161
+      "may": 56,
+      "total": 174
     },
     {
       "name": "Athena",
@@ -858,8 +867,8 @@
       "feb": 5,
       "mar": 0,
       "apr": 105,
-      "may": 15,
-      "total": 150
+      "may": 20,
+      "total": 155
     },
     {
       "name": "Nova",
@@ -867,8 +876,8 @@
       "feb": 40,
       "mar": 35,
       "apr": 35,
-      "may": 20,
-      "total": 150
+      "may": 40,
+      "total": 170
     },
     {
       "name": "Kendall",
@@ -876,8 +885,8 @@
       "feb": 15,
       "mar": 50,
       "apr": 20,
-      "may": 40,
-      "total": 145
+      "may": 80,
+      "total": 185
     },
     {
       "name": "Zara",
@@ -894,8 +903,8 @@
       "feb": 8,
       "mar": 0,
       "apr": 5,
-      "may": 60,
-      "total": 137
+      "may": 65,
+      "total": 142
     },
     {
       "name": "Giovanna",
@@ -921,8 +930,8 @@
       "feb": 5,
       "mar": 6,
       "apr": 73,
-      "may": 20,
-      "total": 129
+      "may": 40,
+      "total": 149
     },
     {
       "name": "Milan",
@@ -957,8 +966,8 @@
       "feb": 0,
       "mar": 20,
       "apr": 55,
-      "may": 30,
-      "total": 105
+      "may": 40,
+      "total": 115
     },
     {
       "name": "Dior",
@@ -1011,8 +1020,8 @@
       "feb": 21,
       "mar": 6,
       "apr": 40,
-      "may": 0,
-      "total": 73
+      "may": 25,
+      "total": 98
     },
     {
       "name": "Lilly",
@@ -1092,8 +1101,8 @@
       "feb": 0,
       "mar": 0,
       "apr": 0,
-      "may": 42,
-      "total": 42
+      "may": 67,
+      "total": 67
     },
     {
       "name": "Shiiva",
@@ -1182,8 +1191,8 @@
       "feb": 0,
       "mar": 0,
       "apr": 0,
-      "may": 25,
-      "total": 25
+      "may": 30,
+      "total": 30
     },
     {
       "name": "Ava",
@@ -1308,8 +1317,8 @@
       "feb": 0,
       "mar": 0,
       "apr": 0,
-      "may": 6,
-      "total": 6
+      "may": 12,
+      "total": 12
     },
     {
       "name": "Hazel",
@@ -1364,6 +1373,15 @@
       "apr": 0,
       "may": 0,
       "total": 0
+    },
+    {
+      "name": "Customer",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 66,
+      "total": 66
     }
   ],
   "dailyTips": [
@@ -2413,7 +2431,7 @@
       "total": 130
     }
   ],
-  "lastUpdated": "2026-05-22T09:42:38Z",
+  "lastUpdated": "2026-05-22",
   "nightlyData": {
     "January": [
       {
@@ -5375,6 +5393,76 @@
           {
             "name": "Ari",
             "amount": 20
+          }
+        ]
+      },
+      {
+        "date": "Fri May 22",
+        "total": 425,
+        "dancers": [
+          {
+            "name": "Kody",
+            "amount": 5
+          },
+          {
+            "name": "Customer",
+            "amount": 66
+          },
+          {
+            "name": "Berlin",
+            "amount": 13
+          },
+          {
+            "name": "Indie",
+            "amount": 20
+          },
+          {
+            "name": "Nova",
+            "amount": 20
+          },
+          {
+            "name": "Shelby",
+            "amount": 5
+          },
+          {
+            "name": "Shea",
+            "amount": 6
+          },
+          {
+            "name": "Erica",
+            "amount": 5
+          },
+          {
+            "name": "Ari",
+            "amount": 25
+          },
+          {
+            "name": "Allie",
+            "amount": 25
+          },
+          {
+            "name": "Star",
+            "amount": 25
+          },
+          {
+            "name": "Suki",
+            "amount": 100
+          },
+          {
+            "name": "Amy",
+            "amount": 20
+          },
+          {
+            "name": "Kendall",
+            "amount": 40
+          },
+          {
+            "name": "Hunter",
+            "amount": 40
+          },
+          {
+            "name": "Maria",
+            "amount": 10
           }
         ]
       }
