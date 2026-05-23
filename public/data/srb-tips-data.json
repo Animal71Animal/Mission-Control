@@ -22,7 +22,7 @@
     },
     {
       "month": "May",
-      "amount": 1894,
+      "amount": 1899,
       "nights": 10
     }
   ],
@@ -501,8 +501,8 @@
       "feb": 0,
       "mar": 0,
       "apr": 0,
-      "may": 30,
-      "total": 30
+      "may": 35,
+      "total": 35
     },
     {
       "name": "Ava",
@@ -1191,8 +1191,8 @@
       "feb": 0,
       "mar": 0,
       "apr": 0,
-      "may": 30,
-      "total": 30
+      "may": 35,
+      "total": 35
     },
     {
       "name": "Ava",
@@ -5440,7 +5440,7 @@
       },
       {
         "date": "Fri May 22",
-        "total": 285,
+        "total": 290,
         "dancers": [
           {
             "name": "Ari",
@@ -5473,6 +5473,10 @@
           {
             "name": "Maria",
             "amount": 10
+          },
+          {
+            "name": "Erica",
+            "amount": 5
           }
         ]
       }
