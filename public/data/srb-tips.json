@@ -16,17 +16,26 @@
       "notes": ""
     },
     {
-      "date": "2026-05-22",
+      "date": "2026-05-21",
       "day": "Thu",
       "djs": {
-        "Kody": 5,
-        "Customer": 66,
-        "Berlin": 13,
+        "Customers": 66,
         "Indie": 20,
         "Nova": 20,
-        "Shelby": 5,
+        "Ari": 20,
+        "Berlin": 13,
         "Shea": 6,
-        "Erica": 5,
+        "Kody": 5,
+        "Shelby": 5,
+        "Erica": 5
+      },
+      "total": 160,
+      "notes": ""
+    },
+    {
+      "date": "2026-05-22",
+      "day": "Fri",
+      "djs": {
         "Ari": 25,
         "Allie": 25,
         "Star": 25,
@@ -34,9 +43,10 @@
         "Amy": 20,
         "Kendall": 40,
         "Hunter": 40,
-        "Maria": 10
+        "Maria": 10,
+        "Erica": 5
       },
-      "total": 425,
+      "total": 290,
       "notes": ""
     }
   ],
