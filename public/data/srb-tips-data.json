@@ -33,8 +33,8 @@
       "feb": 224,
       "mar": 154,
       "apr": 68,
-      "may": 351,
-      "total": 1075
+      "may": 442,
+      "total": 1166
     },
     {
       "name": "Suki",
@@ -411,8 +411,8 @@
       "feb": 0,
       "mar": 0,
       "apr": 0,
-      "may": 67,
-      "total": 67
+      "may": 77,
+      "total": 77
     },
     {
       "name": "Shiiva",
@@ -690,8 +690,8 @@
       "feb": 0,
       "mar": 0,
       "apr": 0,
-      "may": 66,
-      "total": 66
+      "may": 0,
+      "total": 0
     }
   ],
   "customerTips": [
@@ -723,8 +723,8 @@
       "feb": 224,
       "mar": 154,
       "apr": 68,
-      "may": 351,
-      "total": 1075
+      "may": 442,
+      "total": 1166
     },
     {
       "name": "Suki",
@@ -1101,8 +1101,8 @@
       "feb": 0,
       "mar": 0,
       "apr": 0,
-      "may": 67,
-      "total": 67
+      "may": 77,
+      "total": 77
     },
     {
       "name": "Shiiva",
@@ -1380,8 +1380,8 @@
       "feb": 0,
       "mar": 0,
       "apr": 0,
-      "may": 66,
-      "total": 66
+      "may": 0,
+      "total": 0
     }
   ],
   "dailyTips": [
@@ -5397,20 +5397,12 @@
         ]
       },
       {
-        "date": "Fri May 22",
-        "total": 425,
+        "date": "Thu May 21",
+        "total": 160,
         "dancers": [
           {
-            "name": "Kody",
-            "amount": 5
-          },
-          {
-            "name": "Customer",
+            "name": "Customers",
             "amount": 66
-          },
-          {
-            "name": "Berlin",
-            "amount": 13
           },
           {
             "name": "Indie",
@@ -5421,20 +5413,38 @@
             "amount": 20
           },
           {
-            "name": "Shelby",
-            "amount": 5
+            "name": "Ari",
+            "amount": 20
+          },
+          {
+            "name": "Berlin",
+            "amount": 13
           },
           {
             "name": "Shea",
             "amount": 6
           },
           {
-            "name": "Erica",
+            "name": "Kody",
             "amount": 5
           },
           {
+            "name": "Shelby",
+            "amount": 5
+          },
+          {
+            "name": "Erica",
+            "amount": 5
+          }
+        ]
+      },
+      {
+        "date": "Fri May 22",
+        "total": 265,
+        "dancers": [
+          {
             "name": "Ari",
-            "amount": 25
+            "amount": 5
           },
           {
             "name": "Allie",
