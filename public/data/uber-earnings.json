@@ -31,6 +31,21 @@
       "expenses": 0.0
     },
     {
+      "date": "2026-05-21",
+      "earnings": 62.96,
+      "gross": 62.96,
+      "trips": 6,
+      "miles": 27.62,
+      "tips": 7.0,
+      "surge": 0.0,
+      "pro_perk": 2.67,
+      "charging_cost": 0.0,
+      "netPayout": 62.96,
+      "basefare": 51.44,
+      "promotions": 1.85,
+      "expenses": 0.0
+    },
+    {
       "earnings": 114.39,
       "gross": 114.39,
       "trips": 13,
