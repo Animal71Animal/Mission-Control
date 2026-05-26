@@ -417,15 +417,17 @@
       "source": "uber_tax_summary"
     },
     "2026-05": {
-      "total_earnings": 1140.34,
-      "total_net": 573.87,
-      "total_trips": 110,
-      "total_miles": 517.4000000000001,
-      "total_tips": 232.70000000000002,
-      "total_charging_cost": 11.33,
-      "total_surge": 8.5,
-      "total_pro_perk": 18.98,
-      "total_promotions": 1.58
+      "total_gross": 1667.32,
+      "total_earnings": 1667.32,
+      "total_net": 1657.17,
+      "total_trips": 159,
+      "total_tips": 296.7,
+      "total_miles": 769.23,
+      "online_miles": 769.23,
+      "total_surge": 42.25,
+      "total_pro_perk": 62.12,
+      "total_charging_cost": 10.15,
+      "total_promotions": 3.43
     },
     "2026-04": {
       "total_gross": 2286.72,
