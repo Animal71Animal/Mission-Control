@@ -1,6 +1,21 @@
 {
   "dailySummaries": [
     {
+      "date": "2026-05-24",
+      "earnings": 38.44,
+      "gross": 38.44,
+      "trips": 2,
+      "miles": 16.11,
+      "tips": 9.00,
+      "surge": 7.75,
+      "pro_perk": 1.40,
+      "charging_cost": 0.0,
+      "netPayout": 38.44,
+      "basefare": 20.29,
+      "promotions": 0.0,
+      "expenses": 0.0
+    },
+    {
       "date": "2026-05-25",
       "earnings": 172.44,
       "gross": 172.44,
