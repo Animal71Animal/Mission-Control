@@ -1,0 +1,4896 @@
+{
+  "transactions": [
+    {
+      "id": "65182d02c6e7",
+      "date": "05/22/2026",
+      "description": "ATLASFINANCIAL SMARTPAY 11N10M989YS2ZJJ ERIC MILLS",
+      "amount": -112.0,
+      "category": "Fixed Bills",
+      "subcategory": "Credit Card Payment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "ec6a547d9d9a",
+      "date": "05/22/2026",
+      "description": "ATLASFINANCIAL SMARTPAY 11N10M959YS2Y2K ERIC MILLS",
+      "amount": -0.54,
+      "category": "Fixed Bills",
+      "subcategory": "Credit Card Payment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "a75d2ea1747b",
+      "date": "05/22/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/21 CHEVRON 0205344 BOISE ID S386141746222023 CARD 5484",
+      "amount": -8.48,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "820020e7396a",
+      "date": "05/22/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/21 TESLA SUPERCHARGER 877-7983752 CA S586141673292946 CARD 5484",
+      "amount": -24.03,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "d0ed20b3a8eb",
+      "date": "05/22/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/21 TESLA SUPERCHARGER 877-7983752 CA S346141656442530 CARD 5484",
+      "amount": -15.2,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "5d7c061195e2",
+      "date": "05/22/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 05/21 DAVE INC DAVE.COM CA S466141617030514 CARD 5484",
+      "amount": -368.67,
+      "category": "Debt Repayment",
+      "subcategory": "Cash Advance Repayment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "ae93cb6031f0",
+      "date": "05/22/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 05/21 LALAL.AI HOLZHAUSERN CHE S306141466444458 CARD 5484",
+      "amount": -9.99,
+      "category": "Subscriptions",
+      "subcategory": "DJ - LALAL.AI",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "3ffc1cdd4f2b",
+      "date": "05/22/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 05/20 BEATSOURCE.COM 720-974-9500 CA S586141221549196 CARD 5484",
+      "amount": -34.99,
+      "category": "Subscriptions",
+      "subcategory": "DJ - Beatsource",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "179b3ad52cbe",
+      "date": "05/22/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 05/22 FROM ERIC MILLS CA S586142667210452 CARD 5484",
+      "amount": 75.0,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "838ccb748e71",
+      "date": "05/22/2026",
+      "description": "LCM LLC PAYROLL 260515 LCMLLC 129 ERIC SCOTT MILLS",
+      "amount": 654.73,
+      "category": "Income",
+      "subcategory": "SRB Paycheck",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "546a5d92b6b5",
+      "date": "05/21/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/19 MAVERIK #00572 BOI BOISE ID S306140189606438 CARD 5484",
+      "amount": -3.06,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "6b4baa235e39",
+      "date": "05/21/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 05/21 FROM ERIC MILLS CA S586141617327769 CARD 5484",
+      "amount": 225.0,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "c6125676da4a",
+      "date": "05/20/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/18 JERSEY MIKES 43009 BOISE ID S386138726653979 CARD 5484",
+      "amount": -12.48,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "1c253e9b3af9",
+      "date": "05/20/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/18 MAVERIK #00503 BOI BOISE ID S386138694386740 CARD 5484",
+      "amount": -6.36,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "1ac97dbdf030",
+      "date": "05/20/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/17 MAVERIK #00198 BOI BOISE ID S386138237817793 CARD 5484",
+      "amount": -10.46,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "eafefb2ec366",
+      "date": "05/19/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/17 MAVERIK #00503 BOI BOISE ID S306138107289879 CARD 5484",
+      "amount": -4.02,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "45910787192b",
+      "date": "05/19/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/17 SLICE*TRAINOPIZZA BOISE ID S586138023124931 CARD 5484",
+      "amount": -10.87,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "abd7ea52cd2e",
+      "date": "05/19/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/17 MAVERIK #00503 BOI BOISE ID S466138005710532 CARD 5484",
+      "amount": -15.74,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "f381e745750a",
+      "date": "05/19/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/17 MAVERIK #00503 BOI BOISE ID S586137418736663 CARD 5484",
+      "amount": -11.21,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "2fc5cc324db5",
+      "date": "05/18/2026",
+      "description": "ATLASFINANCIAL SMARTSAVE 11N0P2RX9X4TWWS ERIC MILLS",
+      "amount": -65.0,
+      "category": "Savings",
+      "subcategory": "Atlas SmartSave",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "a5d7cf2f7051",
+      "date": "05/18/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/17 GOOGLE*SUNO AI MUS SUPPORT.GOOGL CA S356138132481532 CARD 5484",
+      "amount": -10.73,
+      "category": "Subscriptions",
+      "subcategory": "DJ - Suno AI",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "0a4a5b1c4ebd",
+      "date": "05/18/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/17 TESLA SUPERCHARGER 877-7983752 CA S466138045432499 CARD 5484",
+      "amount": -22.96,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "2cdc4c36c7fe",
+      "date": "05/18/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/17 TESLA SUPERCHARGER 877-7983752 CA S356138020388098 CARD 5484",
+      "amount": -8.91,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "18c3c8edc64f",
+      "date": "05/18/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/17 ACI*FARM BUREAU IN 208-239-7915 ID S386137438058318 CARD 5484",
+      "amount": -300.0,
+      "category": "Fixed Bills",
+      "subcategory": "Insurance",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "987d442d7563",
+      "date": "05/18/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 05/17 FROM UBER PRO CARD*ERIC MILLS CA S586138012497487 CARD 5484",
+      "amount": 17.01,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "2d65a4aebe09",
+      "date": "05/18/2026",
+      "description": "ATM CASH DEPOSIT ON 05/17 5161 W OVERLAND ROAD BOISE ID 0005638 ATM ID 7541D CARD 5484",
+      "amount": 469.0,
+      "category": "Income",
+      "subcategory": "Cash Tips (SRB)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "63b683a7cd18",
+      "date": "05/15/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/14 MAVERIK #00503 BOI BOISE ID S586134724974260 CARD 5484",
+      "amount": -10.05,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "6ebbd631e2bd",
+      "date": "05/15/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/14 TESLA SUPERCHARGER 877-7983752 CA S466134401143650 CARD 5484",
+      "amount": -10.82,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "e6d6ecc7f227",
+      "date": "05/15/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/14 MAVERIK #00503 BOI BOISE ID S356134364673824 CARD 5484",
+      "amount": -18.8,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "42996e80994f",
+      "date": "05/15/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 05/14 NETFLIX.COM 408-5403700 CA S356134305291715 CARD 5484",
+      "amount": -8.99,
+      "category": "Subscriptions",
+      "subcategory": "Entertainment - Netflix",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "a506dc377ca1",
+      "date": "05/15/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/12 GOOGLE*SPOTIFY MUS SUPPORT.GOOGL CA S306132807501814 CARD 5484",
+      "amount": -13.93,
+      "category": "Subscriptions",
+      "subcategory": "Entertainment - Spotify",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "38c3986edcde",
+      "date": "05/14/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 05/13 ABACUS.AI ABACUS.AI CA S386134233789517 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "7b3e65735be6",
+      "date": "05/14/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 05/13 ABACUS.AI ABACUS.AI CA S356134169912897 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "6eaf511879af",
+      "date": "05/14/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 05/13 ABACUS.AI ABACUS.AI CA S356134116000834 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "3cf3ad0df62a",
+      "date": "05/14/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 05/13 ABACUS.AI ABACUS.AI CA S586134106213334 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "f9f5a2418ee6",
+      "date": "05/14/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/13 ETT*THEFRANKLINREN 801-8775491 UT S386134069354197 CARD 5484",
+      "amount": -30.0,
+      "category": "Personal",
+      "subcategory": "Housing Application",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "a05b54eb7efb",
+      "date": "05/14/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/13 CHEVRON 0092348 BOISE ID S586133669504081 CARD 5484",
+      "amount": -6.36,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "04c578785e4a",
+      "date": "05/14/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/13 TESLA SUPERCHARGER 877-7983752 CA S466133606889387 CARD 5484",
+      "amount": -12.0,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "2aed70d0b1c0",
+      "date": "05/14/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/13 TESLA SUPERCHARGER 877-7983752 CA S346133593911237 CARD 5484",
+      "amount": -17.85,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "83b82d6cdbac",
+      "date": "05/14/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/13 MAVERIK #00503 BOI BOISE ID S306133562278513 CARD 5484",
+      "amount": -2.43,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "0283c620331c",
+      "date": "05/14/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/12 JACK IN THE BOX 60 BOISE ID S356133223823451 CARD 5484",
+      "amount": -14.3,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "594164c2bedd",
+      "date": "05/14/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/12 THE PRIME TACO LLC MERIDIAN ID S586132863093885 CARD 5484",
+      "amount": -5.98,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "647d8df744ad",
+      "date": "05/13/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/12 ABLETON AG BERLIN DEU S306133249643016 CARD 5484",
+      "amount": -27.1,
+      "category": "Subscriptions",
+      "subcategory": "DJ - Ableton",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "42fca76b1979",
+      "date": "05/13/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 05/12 ABACUS.AI ABACUS.AI CA S586132545751577 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "9378178dce57",
+      "date": "05/13/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/12 TESLA SUPERCHARGER 877-7983752 CA S306132283519964 CARD 5484",
+      "amount": -10.94,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "1fe402801f84",
+      "date": "05/13/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 05/13 FROM UBER PRO CARD*ERIC MILLS CA S346133806872018 CARD 5484",
+      "amount": 98.74,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "f0b3295b794d",
+      "date": "05/13/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 05/12 FROM UBER PRO CARD*ERIC MILLS CA S386133217650815 CARD 5484",
+      "amount": 101.84,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "6d065bf2113f",
+      "date": "05/12/2026",
+      "description": "ATLASFINANCIAL SMARTPAY 11N067NW9V8XY7M ERIC MILLS",
+      "amount": -150.0,
+      "category": "Fixed Bills",
+      "subcategory": "Credit Card Payment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "757fe8c05922",
+      "date": "05/12/2026",
+      "description": "SANTANDER BILLPAY XXXXX2054 ERIC MILLS",
+      "amount": -745.99,
+      "category": "Fixed Bills",
+      "subcategory": "Car Payment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "775e957c2929",
+      "date": "05/12/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/11 MAVERIK #503 BOISE ID S346131632812989 CARD 5484",
+      "amount": -6.36,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "de1a1978d393",
+      "date": "05/12/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 05/11 MISTER CAR WASH #0 866-2543229 ID S586131364487531 CARD 5484",
+      "amount": -22.99,
+      "category": "Fixed Bills",
+      "subcategory": "Car Wash Subscription",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "91aec8dbaa29",
+      "date": "05/12/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/11 TESLA SUPERCHARGER 877-7983752 CA S586131334667990 CARD 5484",
+      "amount": -9.57,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "0173ca1ebb0a",
+      "date": "05/12/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 05/12 FROM UBER PRO CARD*ERIC MILLS CA S386132478071586 CARD 5484",
+      "amount": 97.01,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "f2188ecbd2be",
+      "date": "05/12/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 05/12 FROM UBER PRO CARD*ERIC MILLS CA S346132463729595 CARD 5484",
+      "amount": 67.79,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "7d6275f53d64",
+      "date": "05/12/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 05/12 FROM UBER PRO CARD*ERIC MILLS CA S386132349642294 CARD 5484",
+      "amount": 43.07,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "72401d4844c9",
+      "date": "05/12/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 05/12 FROM UBER PRO CARD*ERIC MILLS CA S356132274136657 CARD 5484",
+      "amount": 108.71,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "144803b70c7b",
+      "date": "05/12/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 05/11 FROM UBER PRO CARD*ERIC MILLS CA S586132103828099 CARD 5484",
+      "amount": 86.97,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "323239c86e89",
+      "date": "05/12/2026",
+      "description": "ATM CASH DEPOSIT ON 05/11 5161 W OVERLAND ROAD BOISE ID 0004926 ATM ID 7541D CARD 5484",
+      "amount": 140.0,
+      "category": "Income",
+      "subcategory": "Cash Tips (SRB)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "7f457b700d77",
+      "date": "05/12/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 05/11 FROM ERIC SCOTT MILLS ID S466132102471042 CARD 5484",
+      "amount": 110.31,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "b1b76b173804",
+      "date": "05/11/2026",
+      "description": "SNAP FINANCE PAYMENT P5074256203 ERIC MILLS",
+      "amount": -14.13,
+      "category": "Fixed Bills",
+      "subcategory": "Snap Finance Loan",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "65ab2ef2420c",
+      "date": "05/11/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 05/10 ABACUS.AI ABACUS.AI CA S356131248239531 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "58cfb2187762",
+      "date": "05/11/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 05/10 SOUNDCLOUD INC 176-3257837 NY S346131201319793 CARD 5484",
+      "amount": -6.25,
+      "category": "Subscriptions",
+      "subcategory": "DJ - SoundCloud",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "2e7c55f92f2e",
+      "date": "05/11/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 05/10 ABACUS.AI ABACUS.AI CA S586131133532882 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "8a3d720714ec",
+      "date": "05/11/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 05/09 ABACUS.AI ABACUS.AI CA S356129587839981 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "39fa9f088c66",
+      "date": "05/11/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/08 RAVE LAUNDRY 4 BOISE ID S386128717888493 CARD 5484",
+      "amount": -10.0,
+      "category": "Personal",
+      "subcategory": "Laundry",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "fb0afd87f3fa",
+      "date": "05/11/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/08 RAVE LAUNDRY 4 BOISE ID S346128714845815 CARD 5484",
+      "amount": -10.0,
+      "category": "Personal",
+      "subcategory": "Laundry",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "3399378df55f",
+      "date": "05/11/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/08 MAVERIK #503 BOISE ID S386128697428924 CARD 5484",
+      "amount": -9.52,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "ac97fc031bcf",
+      "date": "05/11/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/08 CASH APP*ERIC MILL CASH.APP CA S346128677195708 CARD 5484",
+      "amount": -24.61,
+      "category": "Transfer",
+      "subcategory": "Internal - Out",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "bada1abcdbd3",
+      "date": "05/11/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/08 CASH APP*ERIC MILL CASH.APP CA S466128662761015 CARD 5484",
+      "amount": -39.38,
+      "category": "Transfer",
+      "subcategory": "Internal - Out",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "b8e3b373aef3",
+      "date": "05/11/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 05/08 ABACUS.AI ABACUS.AI CA S306128550204225 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "545b7ec8887d",
+      "date": "05/11/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 05/08 CASH APP*RYAN HERM OAKLAND CA S466128451791796 CARD 5484",
+      "amount": -65.98,
+      "category": "Debt Repayment",
+      "subcategory": "Personal Debt",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "8fd1d565f934",
+      "date": "05/11/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/08 MAVERIK #503 BOISE ID S586128337323639 CARD 5484",
+      "amount": -9.31,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "4ff068a522d0",
+      "date": "05/11/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/08 TESLA SUPERCHARGER 877-7983752 CA S586128333532746 CARD 5484",
+      "amount": -13.62,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "1630dc031332",
+      "date": "05/11/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 05/07 DAVE INC DAVE.COM CA S466128170003991 CARD 5484",
+      "amount": -215.5,
+      "category": "Debt Repayment",
+      "subcategory": "Cash Advance Repayment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "b0384790e0a8",
+      "date": "05/11/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 05/07 BEATSOURCE.COM 720-974-9500 CA S466127833622810 CARD 5484",
+      "amount": -34.99,
+      "category": "Subscriptions",
+      "subcategory": "DJ - Beatsource",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "64cbf466a739",
+      "date": "05/11/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 05/11 FROM UBER PRO CARD*ERIC MILLS CA S346131304204355 CARD 5484",
+      "amount": 82.34,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "3fe289591653",
+      "date": "05/11/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 05/09 FROM ERIC MILLS CA S356130013912378 CARD 5484",
+      "amount": 75.0,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "414b478449be",
+      "date": "05/08/2026",
+      "description": "ATLASFINANCIAL SMARTSAVE 11MZVQGW9T5TCD4 ERIC MILLS",
+      "amount": -65.0,
+      "category": "Savings",
+      "subcategory": "Atlas SmartSave",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "5331fabae86b",
+      "date": "05/08/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/08 WALGREENS STORE 4924 W OV BOISE ID P586128707088540 CARD 5484",
+      "amount": -6.35,
+      "category": "Health",
+      "subcategory": "Medication",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "1a6ab8b486ab",
+      "date": "05/08/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 05/07 ABACUS.AI ABACUS.AI CA S356128104357823 CARD 5484",
+      "amount": -20.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "bd8ad4ce6406",
+      "date": "05/08/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/07 TESLA SUPERCHARGER 877-7983752 CA S586127694977192 CARD 5484",
+      "amount": -5.69,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "ddf5c2d7d751",
+      "date": "05/08/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/07 CASH APP*ERIC MILL CASH.APP CA S386127688409244 CARD 5484",
+      "amount": -9.84,
+      "category": "Transfer",
+      "subcategory": "Internal - Out",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "3102d40a4f83",
+      "date": "05/08/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 05/08 FROM ERIC MILLS CA S356128391829862 CARD 5484",
+      "amount": 270.0,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "18edc8b657d0",
+      "date": "05/08/2026",
+      "description": "LCM LLC PAYROLL 260430 LCMLLC 129 ERIC SCOTT MILLS",
+      "amount": 582.75,
+      "category": "Income",
+      "subcategory": "SRB Paycheck",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "9131767bc7d4",
+      "date": "05/07/2026",
+      "description": "DAVE DAVESUBFEE 260507 96062BF049D311F1B3F5D510C1C3A0BD",
+      "amount": -1.0,
+      "category": "Debt Repayment",
+      "subcategory": "Cash Advance Fee",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "95c17fb63094",
+      "date": "05/07/2026",
+      "description": "ATLASFINANCIAL SMARTPAY 11MZS2J49SR1PHR ERIC MILLS",
+      "amount": -76.0,
+      "category": "Fixed Bills",
+      "subcategory": "Credit Card Payment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "f66099edff40",
+      "date": "05/07/2026",
+      "description": "ATLASFINANCIAL SMARTPAY 11MZS2J19SR1MPA ERIC MILLS",
+      "amount": -0.1,
+      "category": "Fixed Bills",
+      "subcategory": "Credit Card Payment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "4fc724ba56d3",
+      "date": "05/06/2026",
+      "description": "MIXCLOUD PURCHASE M ST-W5Z4X1B3V7O5 ERIC MILLS",
+      "amount": -15.0,
+      "category": "Subscriptions",
+      "subcategory": "DJ - Mixcloud",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "e3ecdd1fa05d",
+      "date": "05/06/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 05/05 ABACUS.AI ABACUS.AI CA S466126088076204 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "6ca0aca4786e",
+      "date": "05/06/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/05 TESLA SUPERCHARGER 877-7983752 CA S346126087907805 CARD 5484",
+      "amount": -11.44,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "908460621b81",
+      "date": "05/06/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 05/05 AMAZON PRIME*ZA09R AMZN.COM/BILL WA S306125855716609 CARD 5484",
+      "amount": -15.89,
+      "category": "Subscriptions",
+      "subcategory": "Entertainment - Amazon Prime",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "18ab4e6bd8c4",
+      "date": "05/06/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/05 MAVERIK #503 BOISE ID S466125735211528 CARD 5484",
+      "amount": -10.05,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "7a65720c15c5",
+      "date": "05/06/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 05/05 CASH APP*CAMPBELL OAKLAND CA S346125724179187 CARD 5484",
+      "amount": -100.0,
+      "category": "Personal",
+      "subcategory": "Recreation",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "c6e6c0495044",
+      "date": "05/06/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 05/05 CASH APP*CAMPBELL OAKLAND CA S586125468914001 CARD 5484",
+      "amount": -70.0,
+      "category": "Personal",
+      "subcategory": "Recreation",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "3aa3c45a5912",
+      "date": "05/05/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/05 WALGREENS STORE 4924 W OV BOISE ID P346125731394062 CARD 5484",
+      "amount": -6.76,
+      "category": "Health",
+      "subcategory": "Medication",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "f8777fd2d41b",
+      "date": "05/05/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/04 ABACUS.AI ABACUS.AI CA S306125108561268 CARD 5484",
+      "amount": -20.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "4e79f36efa23",
+      "date": "05/05/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/03 FIVE GUYS ID 441 E 208-658-4930 ID S346124083872322 CARD 5484",
+      "amount": -20.85,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "ad197c946e84",
+      "date": "05/05/2026",
+      "description": "ATM CASH DEPOSIT ON 05/05 5161 W OVERLAND ROAD BOISE ID 0003968 ATM ID 7541D CARD 5484",
+      "amount": 155.0,
+      "category": "Income",
+      "subcategory": "Cash Tips (SRB)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "6709a02eca3e",
+      "date": "05/05/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 05/04 FROM UBER PRO CARD*ERIC MILLS CA S346125107003279 CARD 5484",
+      "amount": 97.01,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "5cc17cbbecad",
+      "date": "05/04/2026",
+      "description": "ATLASFINANCIAL SMARTPAY 11MZH4XT9RN3GR7 ERIC MILLS",
+      "amount": -17.06,
+      "category": "Fixed Bills",
+      "subcategory": "Credit Card Payment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "7d02f0444e65",
+      "date": "05/04/2026",
+      "description": "MIXCLOUD RETRY PYMT ST-Y3A4V1C2K5M8 ERIC MILLS",
+      "amount": -15.0,
+      "category": "Subscriptions",
+      "subcategory": "DJ - Mixcloud",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "9c1bf68dee27",
+      "date": "05/04/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 05/03 ABACUS.AI ABACUS.AI CA S586123403735334 CARD 5484",
+      "amount": -30.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "67350f7bd6a0",
+      "date": "05/04/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 05/02 ABACUS.AI ABACUS.AI CA S586123012301745 CARD 5484",
+      "amount": -20.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "a39668ca1514",
+      "date": "05/04/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/02 MAVERIK #503 BOISE ID S466122849545733 CARD 5484",
+      "amount": -20.5,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "01f84ad6b342",
+      "date": "05/04/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/02 U-HAUL MOVING & ST 800-789-3638 NC S586122695495341 CARD 5484",
+      "amount": -99.95,
+      "category": "Personal",
+      "subcategory": "Storage / Moving",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "c1fe6dee7b62",
+      "date": "05/04/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/02 GOOGLE*FI 4VMHZG SUPPORT.GOOGL CA S466122435659512 CARD 5484",
+      "amount": -81.21,
+      "category": "Fixed Bills",
+      "subcategory": "Phone - Google Fi",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "bb9a08790af2",
+      "date": "05/04/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 05/01 SXM*SIRIUSXM.COM/A 888-635-5144 NY S346122082415860 CARD 5484",
+      "amount": -12.86,
+      "category": "Subscriptions",
+      "subcategory": "Entertainment - SiriusXM",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "590fe8829b2b",
+      "date": "05/04/2026",
+      "description": "PURCHASE AUTHORIZED ON 05/01 IDRIVE.COM 855-815 IDRIVE.COM CA S586122011932004 CARD 5484",
+      "amount": -11.99,
+      "category": "Subscriptions",
+      "subcategory": "Tech - iDrive",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "34d49daa031c",
+      "date": "05/04/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 05/01 ABACUS.AI ABACUS.AI CA S346121785202275 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "3692419b2279",
+      "date": "05/04/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 05/01 ABACUS.AI ABACUS.AI CA S386121696564437 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "cba1d71dda62",
+      "date": "05/04/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 05/03 FROM UBER PRO CARD*ERIC MILLS CA S306124082999252 CARD 5484",
+      "amount": 33.62,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "cd40dadc92e7",
+      "date": "05/04/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 05/03 FROM UBER PRO CARD*ERIC MILLS CA S346123403506532 CARD 5484",
+      "amount": 37.01,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "49ce241130e1",
+      "date": "05/04/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 05/02 FROM UBER PRO CARD*ERIC MILLS CA S386123012092683 CARD 5484",
+      "amount": 22.01,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "86a5dbfc8343",
+      "date": "05/04/2026",
+      "description": "ATM CASH DEPOSIT ON 05/02 5161 W OVERLAND ROAD BOISE ID 0003474 ATM ID 7541D CARD 5484",
+      "amount": 208.0,
+      "category": "Income",
+      "subcategory": "Cash Tips (SRB)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "de4ec7ed3784",
+      "date": "05/01/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/30 ABACUS.AI ABACUS.AI CA S356121174861742 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "d75cba54cb12",
+      "date": "05/01/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/29 AMAZON MARK* BJ8ZE AMAZON.COM/MA WA S586119655306579 CARD 5484",
+      "amount": -63.58,
+      "category": "Personal",
+      "subcategory": "Shopping - Amazon",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "4489eb1e9ea0",
+      "date": "05/01/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 05/01 FROM UBER PRO CARD*ERIC MILLS CA S356122011492491 CARD 5484",
+      "amount": 17.01,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "14f838c9201c",
+      "date": "05/01/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 05/01 FROM UBER PRO CARD*ERIC MILLS CA S346121696433088 CARD 5484",
+      "amount": 19.61,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "1c73dee59976",
+      "date": "05/01/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/30 FROM UBER PRO CARD*ERIC MILLS CA S356121173517015 CARD 5484",
+      "amount": 17.01,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "eeb1c5f10995",
+      "date": "04/30/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/30 ABACUS.AI ABACUS.AI CA S586120262216443 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "d502b9bfc7df",
+      "date": "04/30/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/29 MAVERIK #503 BOISE ID S466119779311967 CARD 5484",
+      "amount": -15.76,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "4ec0a8392406",
+      "date": "04/30/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/29 TAGADAPAY* PEPKITS TAGADAPAY.COM TX S386119684745831 CARD 5484",
+      "amount": -57.0,
+      "category": "Health",
+      "subcategory": "Peptides",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "27bf451579e3",
+      "date": "04/30/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/29 ABACUS.AI ABACUS.AI CA S346119651294931 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "2d74c71b206f",
+      "date": "04/30/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/29 AUDIBLE*9T3W43ZZ3 AMZN.COM/BILL NJ S586119319338081 CARD 5484",
+      "amount": -15.85,
+      "category": "Subscriptions",
+      "subcategory": "Entertainment - Audible",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "c5a9cbd42497",
+      "date": "04/30/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/28 THE PRIME TACO LLC MERIDIAN ID S386118727126988 CARD 5484",
+      "amount": -6.36,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "3fd8bcb6d21e",
+      "date": "04/30/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/30 FROM UBER PRO CARD*ERIC MILLS CA S356120262007835 CARD 5484",
+      "amount": 17.01,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "4d08dde259b4",
+      "date": "04/29/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/28 MAVERIK #503 BOISE ID S586119158745634 CARD 5484",
+      "amount": -10.15,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "bac48974c23a",
+      "date": "04/29/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/28 ABACUS.AI ABACUS.AI CA S356119139785285 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "57854ff94e94",
+      "date": "04/29/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/28 ABACUS.AI ABACUS.AI CA S466119139768835 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "d4040736cffb",
+      "date": "04/29/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/28 MAVERIK #503 BOISE ID S386118819070692 CARD 5484",
+      "amount": -7.4,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "ebade8f9c9fe",
+      "date": "04/29/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/28 TESLA SUPERCHARGER 877-7983752 CA S586118746341389 CARD 5484",
+      "amount": -26.65,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "b34b3c8e70c8",
+      "date": "04/29/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/28 ABACUS.AI ABACUS.AI CA S466118735710977 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "fd3971579dd1",
+      "date": "04/29/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/28 MAVERIK #503 BOISE ID S356118665823761 CARD 5484",
+      "amount": -4.24,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "2cf3cfc8724a",
+      "date": "04/29/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/28 EFICHECKOUT* PEPKI EFICHECKOUT.C TX S386118347119312 CARD 5484",
+      "amount": -47.0,
+      "category": "Health",
+      "subcategory": "Peptides",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "6ebdfa7ec163",
+      "date": "04/29/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/28 CHEVRON 0387801 BOISE ID S466118272213872 CARD 5484",
+      "amount": -13.23,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "e6b22e9030b4",
+      "date": "04/29/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/27 CHEVRON 0200189 BOISE ID S386118217267303 CARD 5484",
+      "amount": -11.74,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "019233aa2e64",
+      "date": "04/29/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/27 DEL TACO 1152 BOISE ID S586117856852860 CARD 5484",
+      "amount": -15.34,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "303d67c73cd5",
+      "date": "04/29/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/29 FROM UBER PRO CARD*ERIC MILLS CA S386119778682291 CARD 5484",
+      "amount": 7.01,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "7aa2d3f3df07",
+      "date": "04/29/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/29 FROM UBER PRO CARD*ERIC MILLS CA S356119683053695 CARD 5484",
+      "amount": 60.72,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "e49b0e980f3f",
+      "date": "04/29/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/29 FROM UBER PRO CARD*ERIC MILLS CA S466119644260537 CARD 5484",
+      "amount": 72.01,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "dc8ae6b713dd",
+      "date": "04/28/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/27 MAVERIK #503 BOISE ID S356118181880730 CARD 5484",
+      "amount": -17.97,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "d13b25b5729e",
+      "date": "04/28/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/27 USPS CHANGE OF ADD 800-238-3150 TN S466117717056666 CARD 5484",
+      "amount": -1.25,
+      "category": "Personal",
+      "subcategory": "Misc",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "a468c2d582f2",
+      "date": "04/28/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/27 MAVERIK #503 BOISE ID S306117704039648 CARD 5484",
+      "amount": -14.49,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "96ee1ff6edd3",
+      "date": "04/28/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/27 ABACUS.AI ABACUS.AI CA S356117692980637 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "7af2665ab630",
+      "date": "04/28/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/27 ADA COUNTY COURT 888-8916064 ID S356117667832088 CARD 5484",
+      "amount": -51.75,
+      "category": "Fixed Bills",
+      "subcategory": "Court Fee (Monthly)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "5eb0ede2ba31",
+      "date": "04/28/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/26 SHELL OIL100110570 NAMPA ID S356116834009349 CARD 5484",
+      "amount": -9.52,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "3d63bb4afe7b",
+      "date": "04/28/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/28 FROM ERIC MILLS CA S346118818939858 CARD 5484",
+      "amount": 50.0,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "941604ab80c9",
+      "date": "04/27/2026",
+      "description": "SNAP FINANCE PAYMENT P5041987331 ERIC MILLS",
+      "amount": -14.13,
+      "category": "Fixed Bills",
+      "subcategory": "Snap Finance Loan",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "e0779bd63209",
+      "date": "04/27/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/26 MAVERIK #5409 MERIDIAN ID S306117237117874 CARD 5484",
+      "amount": -11.84,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "6375f4b1a4a7",
+      "date": "04/27/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/26 TESLA SUPERCHARGER 877-7983752 CA S386117160726685 CARD 5484",
+      "amount": -5.12,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "ecdf109f0f0c",
+      "date": "04/27/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/26 TESLA SUPERCHARGER 877-7983752 CA S466117145374580 CARD 5484",
+      "amount": -14.64,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "5dced82f38d1",
+      "date": "04/27/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/26 ABACUS.AI ABACUS.AI CA S586117135082762 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "af97b6199ce6",
+      "date": "04/27/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/26 MAVERIK #503 BOISE ID S306117042581566 CARD 5484",
+      "amount": -6.36,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "47a8537f05d9",
+      "date": "04/27/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/26 MAVERIK #503 BOISE ID S466116701689812 CARD 5484",
+      "amount": -4.24,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "3f6533d4b327",
+      "date": "04/27/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/26 CASH APP*ERIC MILL OAKLAND CA S386116700081925 CARD 5484",
+      "amount": -300.0,
+      "category": "Transfer",
+      "subcategory": "Internal - Out",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "6130dee84c53",
+      "date": "04/27/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/25 SQ *MONGOLIAN STIR BOISE ID S586116053251681 CARD 5484",
+      "amount": -33.8,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "4d70104d1bd7",
+      "date": "04/27/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/25 ABACUS.AI ABACUS.AI CA S346116038284138 CARD 5484",
+      "amount": -20.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "2a31b7107286",
+      "date": "04/27/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/25 TESLA SUPERCHARGER 877-7983752 CA S356115781016840 CARD 5484",
+      "amount": -22.77,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "608d16dadff1",
+      "date": "04/27/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/25 TESLA SUPERCHARGER 877-7983752 CA S346115757646357 CARD 5484",
+      "amount": -3.41,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "8187348fa736",
+      "date": "04/27/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/25 IDAGO 2 BOISE ID S346115748765987 CARD 5484",
+      "amount": -14.28,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "457ff0f0e44a",
+      "date": "04/27/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/25 VENMO *JULIE TETRAULT VISA DIRECT NY S386115745634373 CARD 5484",
+      "amount": -50.0,
+      "category": "Debt Repayment",
+      "subcategory": "Personal Debt",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "c2eea2652132",
+      "date": "04/27/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/25 TESLA SUPERCHARGER 877-7983752 CA S586115744173300 CARD 5484",
+      "amount": -15.93,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "52fce04fdfc7",
+      "date": "04/27/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/25 MAVERIK #503 BOISE ID S356115739979085 CARD 5484",
+      "amount": -5.29,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "e4383fca9ffc",
+      "date": "04/27/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/24 CASH APP*ERIC MILL CASH.APP CA S346115001028941 CARD 5484",
+      "amount": -19.68,
+      "category": "Transfer",
+      "subcategory": "Internal - Out",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "08a41647c656",
+      "date": "04/27/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/24 CASH APP*ERIC MILL CASH.APP CA S306114815724132 CARD 5484",
+      "amount": -24.61,
+      "category": "Transfer",
+      "subcategory": "Internal - Out",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "3fd4ebfc5b16",
+      "date": "04/27/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/24 CHEVRON 0202626 ONTARIO OR S466114769566481 CARD 5484",
+      "amount": -9.59,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "63f54fe3fe84",
+      "date": "04/27/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/24 ABACUS.AI ABACUS.AI CA S356114747691438 CARD 5484",
+      "amount": -20.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "462e968f68ba",
+      "date": "04/27/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/24 CASH APP*ERIC MILL CASH.APP CA S586114702363485 CARD 5484",
+      "amount": -78.75,
+      "category": "Transfer",
+      "subcategory": "Internal - Out",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "621de4036f9d",
+      "date": "04/27/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/24 LALAL.AI HOLZHAUSERN CHE S306114527081393 CARD 5484",
+      "amount": -9.99,
+      "category": "Subscriptions",
+      "subcategory": "DJ - LALAL.AI",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "df30deb1b7dd",
+      "date": "04/27/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/23 DAVE INC DAVE.COM CA S356114185715452 CARD 5484",
+      "amount": -215.5,
+      "category": "Debt Repayment",
+      "subcategory": "Cash Advance Repayment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "8c4edfd5fdf8",
+      "date": "04/27/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/27 FROM ERIC SCOTT MILLS ID S356117666738393 CARD 5484",
+      "amount": 245.12,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "d3d25f871bb7",
+      "date": "04/27/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/26 FROM ERIC SCOTT MILLS ID S586117134514517 CARD 5484",
+      "amount": 39.3,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "177fd95b891f",
+      "date": "04/27/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/26 FROM ERIC SCOTT MILLS ID S386117042422388 CARD 5484",
+      "amount": 9.75,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "6ebb89869eb1",
+      "date": "04/27/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/26 FROM ERIC MILLS CA S466116699304729 CARD 5484",
+      "amount": 150.0,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "a6db03ff7218",
+      "date": "04/27/2026",
+      "description": "ATM CASH DEPOSIT ON 04/25 5161 W OVERLAND ROAD BOISE ID 0002607 ATM ID 7541D CARD 5484",
+      "amount": 321.0,
+      "category": "Income",
+      "subcategory": "Cash Tips (SRB)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "36f15a4f524c",
+      "date": "04/24/2026",
+      "description": "NON-WELLS FARGO ATM TRANSACTION FEE",
+      "amount": -3.0,
+      "category": "Fixed Bills",
+      "subcategory": "ATM Fee",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "1dbb5e3b6fde",
+      "date": "04/24/2026",
+      "description": "NON-WF ATM WITHDRAWAL AUTHORIZED ON 04/24 297 SE 10TH ST. ONTARIO OR 466114797090897 ATM ID RT97582 CARD 5484",
+      "amount": -63.0,
+      "category": "Personal",
+      "subcategory": "ATM Cash Withdrawal",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "cb3dd48d2583",
+      "date": "04/24/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/23 GALAXYAI GALAXY.AI DE S306114012591921 CARD 5484",
+      "amount": -14.99,
+      "category": "Subscriptions",
+      "subcategory": "AI - GalaxyAI",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "264e84eb2c77",
+      "date": "04/24/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/23 CASH APP*FRANKIE P OAKLAND CA S306113704442661 CARD 5484",
+      "amount": -145.0,
+      "category": "Debt Repayment",
+      "subcategory": "Personal Debt",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "1518b739ca4d",
+      "date": "04/24/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/24 FROM ERIC SCOTT MILLS ID S466114795986227 CARD 5484",
+      "amount": 73.54,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "ba0362a3f1ff",
+      "date": "04/24/2026",
+      "description": "LCM LLC PAYROLL 260415 LCMLLC 129 ERIC SCOTT MILLS",
+      "amount": 539.82,
+      "category": "Income",
+      "subcategory": "SRB Paycheck",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "4e8244a3e9ec",
+      "date": "04/22/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/21 MAVERIK #503 BOISE ID S346111731629881 CARD 5484",
+      "amount": -12.32,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "3a88f379681b",
+      "date": "04/21/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/21 FROM ERIC SCOTT MILLS ID S356111728657624 CARD 5484",
+      "amount": 8.78,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "af979f909147",
+      "date": "04/20/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/19 ABACUS.AI ABACUS.AI CA S306109736026531 CARD 5484",
+      "amount": -20.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "845f27bb9b32",
+      "date": "04/20/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/19 DOLLAR TREE MERIDIAN ID S356109624281241 CARD 5484",
+      "amount": -86.36,
+      "category": "Personal",
+      "subcategory": "Shopping",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "71299489d0ab",
+      "date": "04/20/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/19 MAVERIK #503 BOISE ID S346109534621338 CARD 5484",
+      "amount": -9.66,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "e47511b76e6e",
+      "date": "04/20/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/19 TESLA SUPERCHARGER 877-7983752 CA S586109449964768 CARD 5484",
+      "amount": -22.39,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "df2cb0f703e5",
+      "date": "04/20/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/19 CHEVRON 0092348 BOISE ID S466109442015168 CARD 5484",
+      "amount": -5.29,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "e00787587467",
+      "date": "04/20/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/19 CASH APP*ERIC MILL OAKLAND CA S306109436724991 CARD 5484",
+      "amount": -25.0,
+      "category": "Transfer",
+      "subcategory": "Internal - Out",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "42fbe6ebe213",
+      "date": "04/20/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/19 CASH APP*ERIC MILL OAKLAND CA S306109424250836 CARD 5484",
+      "amount": -25.0,
+      "category": "Transfer",
+      "subcategory": "Internal - Out",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "5316b8c03e96",
+      "date": "04/20/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/19 CASH APP*ERIC MILL OAKLAND CA S586109417041029 CARD 5484",
+      "amount": -10.0,
+      "category": "Transfer",
+      "subcategory": "Internal - Out",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "2d4ea81ab5d9",
+      "date": "04/20/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/19 CASH APP*ERIC MILL OAKLAND CA S586109416830141 CARD 5484",
+      "amount": -31.0,
+      "category": "Transfer",
+      "subcategory": "Internal - Out",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "304ec845193f",
+      "date": "04/20/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/19 ABACUS.AI ABACUS.AI CA S466109343005486 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "52cacc2603d8",
+      "date": "04/20/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/18 GOOGLE *SUNO AI MU 855-836-3987 CA S466109132674171 CARD 5484",
+      "amount": -10.73,
+      "category": "Subscriptions",
+      "subcategory": "DJ - Suno AI",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "735b0b798af2",
+      "date": "04/20/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/18 ABACUS.AI ABACUS.AI CA S346109070668986 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "7e37f9137e26",
+      "date": "04/20/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/18 ABACUS.AI ABACUS.AI CA S386109051805570 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "c3b8f8059767",
+      "date": "04/20/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/18 CHEVRON 0094698 BOISE ID S356108848104164 CARD 5484",
+      "amount": -13.76,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "48a3b22c57c5",
+      "date": "04/20/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/18 GUITAR CENTER #251 BOISE ID S586108842249998 CARD 5484",
+      "amount": -42.39,
+      "category": "DJ/Music",
+      "subcategory": "Equipment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "f0f9497ca100",
+      "date": "04/20/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/18 ABACUS.AI ABACUS.AI CA S346108765331993 CARD 5484",
+      "amount": -20.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "890fff3159b0",
+      "date": "04/20/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/18 ABACUS.AI ABACUS.AI CA S346108672649011 CARD 5484",
+      "amount": -30.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "ad34b07d6558",
+      "date": "04/20/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/18 EFICHECKOUT* PEPKI EFICHECKOUT.C TX S586108431776215 CARD 5484",
+      "amount": -152.0,
+      "category": "Health",
+      "subcategory": "Peptides",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "f50154ce06f3",
+      "date": "04/20/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/18 DAVE INC DAVE.COM CA S306108420610465 CARD 5484",
+      "amount": -147.03,
+      "category": "Debt Repayment",
+      "subcategory": "Cash Advance Repayment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "325f52a97cd6",
+      "date": "04/20/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/17 ABACUS.AI ABACUS.AI CA S306107713532316 CARD 5484",
+      "amount": -20.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "51c5a60ef972",
+      "date": "04/20/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/17 TESLA SUPERCHARGER 877-7983752 CA S466107712255172 CARD 5484",
+      "amount": -8.27,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "208be61cf183",
+      "date": "04/20/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/17 DAVE INC DAVE.COM CA S346107577550671 CARD 5484",
+      "amount": -2.72,
+      "category": "Debt Repayment",
+      "subcategory": "Cash Advance Repayment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "7153bcfbc864",
+      "date": "04/20/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/17 DAVE INC DAVE.COM CA S306107310246923 CARD 5484",
+      "amount": -10.0,
+      "category": "Debt Repayment",
+      "subcategory": "Cash Advance Repayment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "f9cc56618fa7",
+      "date": "04/20/2026",
+      "description": "ATM CASH DEPOSIT ON 04/19 5161 W OVERLAND ROAD BOISE ID 0001795 ATM ID 7541D CARD 5484",
+      "amount": 234.0,
+      "category": "Income",
+      "subcategory": "Cash Tips (SRB)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "493440be76d6",
+      "date": "04/20/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/18 FROM ERIC MILLS CA S586108421234516 CARD 5484",
+      "amount": 50.0,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "d259bf691c11",
+      "date": "04/20/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/18 FROM ERIC MILLS CA S386108420918499 CARD 5484",
+      "amount": 150.0,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "c0d1c65eed1c",
+      "date": "04/20/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/18 FROM UBER PRO CARD*ERIC MILLS CA S466108420222351 CARD 5484",
+      "amount": 191.92,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "81caa965eb3a",
+      "date": "04/20/2026",
+      "description": "ATM CASH DEPOSIT ON 04/18 7700 W FAIRVIEW AVE BOISE ID 0008373 ATM ID 1076B CARD 5484",
+      "amount": 56.0,
+      "category": "Income",
+      "subcategory": "Cash Tips (SRB)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "9e1a90ccab8a",
+      "date": "04/17/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/16 MAVERIK #503 BOISE ID S306106785595344 CARD 5484",
+      "amount": -2.7,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "99735e04ed54",
+      "date": "04/17/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/16 TESLA SUPERCHARGER 877-7983752 CA S356106763976775 CARD 5484",
+      "amount": -14.26,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "ccc347402ce4",
+      "date": "04/17/2026",
+      "description": "ATM CASH DEPOSIT ON 04/17 7700 W FAIRVIEW AVE BOISE ID 0008222 ATM ID 1076B CARD 5484",
+      "amount": 22.0,
+      "category": "Income",
+      "subcategory": "Cash Tips (SRB)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "ab74c6593b40",
+      "date": "04/17/2026",
+      "description": "ATM CASH DEPOSIT ON 04/17 7700 W FAIRVIEW AVE BOISE ID 0008221 ATM ID 1076B CARD 5484",
+      "amount": 10.0,
+      "category": "Income",
+      "subcategory": "Cash Tips (SRB)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "58fe0cf169ee",
+      "date": "04/16/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/15 UMAI BOISE ID S466105840096466 CARD 5484",
+      "amount": -19.0,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "a6d9ea983c09",
+      "date": "04/16/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/15 MAVERIK #503 BOISE ID S386105829158498 CARD 5484",
+      "amount": -16.31,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "f433702e7fec",
+      "date": "04/16/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/15 ABACUS.AI ABACUS.AI CA S346105767594069 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "56e2ca48eca4",
+      "date": "04/16/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/15 TST* LEMON TREE CO BOISE ID S346105710435114 CARD 5484",
+      "amount": -16.17,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "f23388ccf260",
+      "date": "04/16/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/15 CASH APP*ERIC MILL OAKLAND CA S346105672991144 CARD 5484",
+      "amount": -120.0,
+      "category": "Transfer",
+      "subcategory": "Internal - Out",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "2e63d7bfed8d",
+      "date": "04/16/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/14 SHELL OIL126673450 BOISE ID S466104762388086 CARD 5484",
+      "amount": -20.11,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "a0483df721d0",
+      "date": "04/16/2026",
+      "description": "ATM CASH DEPOSIT ON 04/16 5161 W OVERLAND ROAD BOISE ID 0001413 ATM ID 7541D CARD 5484",
+      "amount": 23.0,
+      "category": "Income",
+      "subcategory": "Cash Tips (SRB)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "7580f8ed4d80",
+      "date": "04/15/2026",
+      "description": "SANTANDER BILLPAY XXXXX3136 ERIC MILLS",
+      "amount": -745.99,
+      "category": "Fixed Bills",
+      "subcategory": "Car Payment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "ecc010b95a99",
+      "date": "04/15/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/14 CHEVRON 0094698 BOISE ID S586105005365140 CARD 5484",
+      "amount": -9.66,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "c448636c5f03",
+      "date": "04/15/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/14 CHEVRON 0094698 BOISE ID S306105004994602 CARD 5484",
+      "amount": -10.48,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "dfc96afc6743",
+      "date": "04/15/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/14 ABACUS.AI ABACUS.AI CA S346104819456000 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "17a715fab1fa",
+      "date": "04/15/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/14 NETFLIX.COM NETFLIX.COM CA S586104700921353 CARD 5484",
+      "amount": -7.99,
+      "category": "Subscriptions",
+      "subcategory": "Entertainment - Netflix",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "33b46f6fbab3",
+      "date": "04/15/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/14 ABACUS.AI ABACUS.AI CA S466104691262255 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "5f895918b613",
+      "date": "04/15/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/14 TESLA SUPERCHARGER 877-7983752 CA S586104685965397 CARD 5484",
+      "amount": -11.23,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "7fa4fd28a2d3",
+      "date": "04/15/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/14 MAVERIK #503 BOISE ID S346104676168200 CARD 5484",
+      "amount": -4.02,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "077e1f58e2a6",
+      "date": "04/15/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/14 DAVE INC DAVE.COM CA S466104335096644 CARD 5484",
+      "amount": -145.5,
+      "category": "Debt Repayment",
+      "subcategory": "Cash Advance Repayment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "417db0036b60",
+      "date": "04/15/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/14 DAVE INC DAVE.COM CA S356104285909938 CARD 5484",
+      "amount": -60.0,
+      "category": "Debt Repayment",
+      "subcategory": "Cash Advance Repayment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "53a8f837d9c3",
+      "date": "04/15/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/13 DAVE INC DAVE.COM CA S386104163979846 CARD 5484",
+      "amount": -10.0,
+      "category": "Debt Repayment",
+      "subcategory": "Cash Advance Repayment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "0b284a164103",
+      "date": "04/15/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/13 PY *BOISE RUSH BOW BOISE ID S386103745200364 CARD 5484",
+      "amount": -16.37,
+      "category": "Personal",
+      "subcategory": "Recreation",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "7980e67d7103",
+      "date": "04/15/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/15 FROM PLAYOCTOPUS.COM MD S346105830789815 CARD 5484",
+      "amount": 23.75,
+      "category": "Income",
+      "subcategory": "Other Income",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "1fdec4be6be6",
+      "date": "04/15/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/15 FROM ERIC SCOTT MILLS ID S306105828992351 CARD 5484",
+      "amount": 4.75,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "77798c2e3667",
+      "date": "04/15/2026",
+      "description": "ATM CASH DEPOSIT ON 04/15 5161 W OVERLAND ROAD BOISE ID 0001300 ATM ID 7541D CARD 5484",
+      "amount": 159.0,
+      "category": "Income",
+      "subcategory": "Cash Tips (SRB)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "97e2eb3786a5",
+      "date": "04/14/2026",
+      "description": "ATLASFINANCIAL SMARTPAY 11MXWDXE9HE0M1Y ERIC MILLS",
+      "amount": -66.0,
+      "category": "Fixed Bills",
+      "subcategory": "Credit Card Payment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "a5f4e3f43682",
+      "date": "04/14/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/14 THE PRIME TACO LLC MERIDIAN ID P466104702543583 CARD 5484",
+      "amount": -6.36,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "85bbbdf9836c",
+      "date": "04/14/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/13 UBER TECHNOLOGIES, INC WILMINGTON DE P000000746918086 CARD 5484",
+      "amount": -13.95,
+      "category": "Business Expense",
+      "subcategory": "Uber - Tablet/Fees",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "24927aa0dd46",
+      "date": "04/14/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/13 ABACUS.AI ABACUS.AI CA S586104196457397 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "30ffe450ae5e",
+      "date": "04/14/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/13 UMAI BOISE ID S466103841203534 CARD 5484",
+      "amount": -17.0,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "67d42ff129f5",
+      "date": "04/14/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/13 MAVERIK #503 BOISE ID S466103692995148 CARD 5484",
+      "amount": -9.66,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "d2ec52f0e08b",
+      "date": "04/14/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/13 MAVERIK #503 BOISE ID S466103689539425 CARD 5484",
+      "amount": -12.69,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "398928f42c94",
+      "date": "04/14/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/13 CHEVRON 0200189 BOISE ID S386103330111563 CARD 5484",
+      "amount": -10.67,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "d41940ed1ea4",
+      "date": "04/14/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/12 TESLA SUPERCHARGER 877-7983752 CA S386103249218777 CARD 5484",
+      "amount": -27.26,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "efa58ab95de1",
+      "date": "04/14/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/12 MAVERIK #503 BOISE ID S386103244764283 CARD 5484",
+      "amount": -3.81,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "9de1e9d0156e",
+      "date": "04/14/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/12 WOODY CREEK 303-3429000 CO S586103107018750 CARD 5484",
+      "amount": -22.14,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "080e24487307",
+      "date": "04/14/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/14 FROM UBER PRO CARD*ERIC MILLS CA S306104789077131 CARD 5484",
+      "amount": 147.53,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "340fe28a3c37",
+      "date": "04/14/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/14 FROM ERIC MILLS CA S346104335946102 CARD 5484",
+      "amount": 150.0,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "b0e9a1490dc1",
+      "date": "04/14/2026",
+      "description": "ATM CASH DEPOSIT ON 04/14 5161 W OVERLAND ROAD BOISE ID 0001157 ATM ID 7541D CARD 5484",
+      "amount": 425.0,
+      "category": "Income",
+      "subcategory": "Cash Tips (SRB)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "99c6ba4f123b",
+      "date": "04/14/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/14 FROM ERIC SCOTT MILLS ID S306104333750918 CARD 5484",
+      "amount": 324.43,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "443ac8c2c70a",
+      "date": "04/14/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/13 FROM ERIC SCOTT MILLS ID S586104195967906 CARD 5484",
+      "amount": 13.5,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "c5e93026edbd",
+      "date": "04/13/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/12 ABACUS.AI ABACUS.AI CA S356103128864205 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "744889b5c663",
+      "date": "04/13/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/12 ABACUS.AI ABACUS.AI CA S586102806592315 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "b627e0a34a38",
+      "date": "04/13/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/11 CASH APP*ERIC MILL OAKLAND CA S346102103322233 CARD 5484",
+      "amount": -448.0,
+      "category": "Transfer",
+      "subcategory": "Internal - Out",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "ad4eb3206765",
+      "date": "04/13/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/11 CVS/PHARMACY #07 07548--6 FUQUAY-VARINA NC P466101662898329 CARD 5484",
+      "amount": -19.51,
+      "category": "Health",
+      "subcategory": "Medication",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "fc9402290346",
+      "date": "04/13/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/11 MISTER CAR WASH #0 866-2543229 ID S356101363963607 CARD 5484",
+      "amount": -22.99,
+      "category": "Fixed Bills",
+      "subcategory": "Car Wash Subscription",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "95787b390159",
+      "date": "04/13/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/10 SOUNDCLOUD INC 176-3257837 NY S586101201347921 CARD 5484",
+      "amount": -6.25,
+      "category": "Subscriptions",
+      "subcategory": "DJ - SoundCloud",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "9dc166168cac",
+      "date": "04/13/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/10 MARATHON 19505 RALEIGH NC S466101134561857 CARD 5484",
+      "amount": -12.25,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "a3afd542688e",
+      "date": "04/13/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/10 ABACUS.AI ABACUS.AI CA S586101064963768 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "518d9fc7767d",
+      "date": "04/13/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/10 CASH APP*ERIC MILL CASH.APP CA S586100851350900 CARD 5484",
+      "amount": -9.85,
+      "category": "Transfer",
+      "subcategory": "Internal - Out",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "1870365fb9df",
+      "date": "04/13/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/10 CASH APP*ERIC MILL CASH.APP CA S386100662020445 CARD 5484",
+      "amount": -39.37,
+      "category": "Transfer",
+      "subcategory": "Internal - Out",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "ca1f8231a93e",
+      "date": "04/13/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/10 AMERICAS BEST WING 919-7479440 NC S586100660469728 CARD 5484",
+      "amount": -11.36,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "13184907dae3",
+      "date": "04/13/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/10 GIENC #2 919-2819207 NC S346100647050532 CARD 5484",
+      "amount": -9.11,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "91b0996e9467",
+      "date": "04/13/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/09 TST* THE RALEIGH B RALEIGH NC S586099605482891 CARD 5484",
+      "amount": -26.05,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "f9a3e8b6fdb1",
+      "date": "04/13/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/13 FROM ERIC SCOTT MILLS ID S306103840969883 CARD 5484",
+      "amount": 19.5,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "724addccb86d",
+      "date": "04/13/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/13 FROM ERIC SCOTT MILLS ID S386103741641572 CARD 5484",
+      "amount": 19.5,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "bcae34861b0e",
+      "date": "04/13/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/13 FROM ERIC SCOTT MILLS ID S586103689352429 CARD 5484",
+      "amount": 19.65,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "d2d506f33b40",
+      "date": "04/13/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/13 FROM ERIC SCOTT MILLS ID S466103329970320 CARD 5484",
+      "amount": 10.5,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "d6bb899beca1",
+      "date": "04/13/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/12 FROM ERIC SCOTT MILLS ID S346103249092354 CARD 5484",
+      "amount": 29.48,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "1a749026b684",
+      "date": "04/13/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/12 FROM ERIC SCOTT MILLS ID S386103244417993 CARD 5484",
+      "amount": 4.75,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "e04d332bd449",
+      "date": "04/13/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/12 FROM ERIC SCOTT MILLS ID S386103128747181 CARD 5484",
+      "amount": 2.75,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "b60fe5dd019c",
+      "date": "04/13/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/12 FROM ERIC SCOTT MILLS ID S346103106902514 CARD 5484",
+      "amount": 29.48,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "2b255a22c4d5",
+      "date": "04/13/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/12 FROM ERIC SCOTT MILLS ID S386102806480782 CARD 5484",
+      "amount": 10.75,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "68ad3a837a28",
+      "date": "04/13/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/11 FROM UBER PRO CARD*ERIC MILLS CA S586102102024230 CARD 5484",
+      "amount": 189.9,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "5a473f2d6f1f",
+      "date": "04/13/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/11 FROM ERIC MILLS CA S346102100024260 CARD 5484",
+      "amount": 50.0,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "a6c667e63983",
+      "date": "04/13/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/11 FROM ERIC MILLS CA S356102099362452 CARD 5484",
+      "amount": 150.0,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "6501a0502445",
+      "date": "04/13/2026",
+      "description": "PURCHASE RETURN AUTHORIZED ON 04/09 SOUTHWES 526432 800-435-9792 TX S616101710091041 CARD 5484",
+      "amount": 74.0,
+      "category": "Personal",
+      "subcategory": "Travel - Personal",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "644b830ad3d9",
+      "date": "04/10/2026",
+      "description": "ATLASFINANCIAL SMARTPAY 11MXHWQM9FXJRPE ERIC MILLS",
+      "amount": -70.0,
+      "category": "Fixed Bills",
+      "subcategory": "Credit Card Payment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "4bffe22e5663",
+      "date": "04/10/2026",
+      "description": "ATLASFINANCIAL SMARTPAY 11MXHWQH9FXJPZ0 ERIC MILLS",
+      "amount": -0.68,
+      "category": "Fixed Bills",
+      "subcategory": "Credit Card Payment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "65523118e1e2",
+      "date": "04/10/2026",
+      "description": "SNAP FINANCE PAYMENT P5008236028 ERIC MILLS",
+      "amount": -14.13,
+      "category": "Fixed Bills",
+      "subcategory": "Snap Finance Loan",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "0937847b5663",
+      "date": "04/10/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/10 WALGREENS STORE 3911 CAPI RALEIGH NC P356100655260539 CARD 5484",
+      "amount": -29.62,
+      "category": "Health",
+      "subcategory": "Medication",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "a35af641ea80",
+      "date": "04/10/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/09 ABACUS.AI ABACUS.AI CA S386099802692754 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "8e745db11be5",
+      "date": "04/10/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/09 UBER TECHNOLOGIES, INC WILMINGTON DE P000000441463193 CARD 5484",
+      "amount": -7.93,
+      "category": "Business Expense",
+      "subcategory": "Uber - Tablet/Fees",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "c53e6cf0c212",
+      "date": "04/10/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/08 DAVE INC DAVE.COM CA S356099156430453 CARD 5484",
+      "amount": -209.29,
+      "category": "Debt Repayment",
+      "subcategory": "Cash Advance Repayment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "98d549331f0f",
+      "date": "04/10/2026",
+      "description": "LCM LLC PAYROLL 260331 LCMLLC 129 ERIC SCOTT MILLS",
+      "amount": 565.21,
+      "category": "Income",
+      "subcategory": "SRB Paycheck",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "7fb2031edee6",
+      "date": "04/09/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/08 DAVE INC DAVE.COM CA S586098707095732 CARD 5484",
+      "amount": -5.0,
+      "category": "Debt Repayment",
+      "subcategory": "Cash Advance Repayment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "c81004a41265",
+      "date": "04/09/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/08 CASH APP*ERIC MILL OAKLAND CA S586098586900195 CARD 5484",
+      "amount": -50.0,
+      "category": "Transfer",
+      "subcategory": "Internal - Out",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "73dff8bd866a",
+      "date": "04/08/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/07 DAVE INC DAVE.COM CA S306097569984116 CARD 5484",
+      "amount": -1.21,
+      "category": "Debt Repayment",
+      "subcategory": "Cash Advance Repayment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "85c99a3012e2",
+      "date": "04/08/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/08 FROM UBER PRO CARD*ERIC MILLS CA S386098586634390 CARD 5484",
+      "amount": 57.01,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "6df744bd9f8f",
+      "date": "04/06/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/05 ABACUS.AI ABACUS.AI CA S586095367997419 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "d3d1840d8714",
+      "date": "04/06/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/05 CHEVRON 0390308 BOISE ID S356095359233498 CARD 5484",
+      "amount": -7.72,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "b2b4207d9deb",
+      "date": "04/06/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/04 ABACUS.AI ABACUS.AI CA S356095126294085 CARD 5484",
+      "amount": -20.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "a3f2331c9f34",
+      "date": "04/06/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/04 MAVERIK #503 BOISE ID S586095104148400 CARD 5484",
+      "amount": -8.99,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "579887a258c6",
+      "date": "04/06/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/04 SLICE*TRAINOPIZZA BOISE ID S466094816626833 CARD 5484",
+      "amount": -14.28,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "9e8bb6fb83c7",
+      "date": "04/06/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/04 SWA*PREMSEAT526432 800-435-9792 TX S356094799107841 CARD 5484",
+      "amount": -128.0,
+      "category": "Personal",
+      "subcategory": "Travel - Personal",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "4355c055c0ab",
+      "date": "04/06/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/04 SOUTHWES 526214 800-435-9792 TX S386094799061262 CARD 5484",
+      "amount": -843.4,
+      "category": "Personal",
+      "subcategory": "Travel - Personal",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "86221fc7c777",
+      "date": "04/06/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/04 TESLA SUPERCHARGER 877-7983752 CA S386094780335496 CARD 5484",
+      "amount": -8.7,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "99c7568b5428",
+      "date": "04/06/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/04 MAVERIK #503 BOISE ID S356094765803514 CARD 5484",
+      "amount": -14.49,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "8dd51edcec42",
+      "date": "04/06/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/04 MAVERIK #503 BOISE ID P356094474228940 CARD 5484",
+      "amount": -19.39,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "4b6210306f03",
+      "date": "04/06/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/04 DAVE INC DAVE.COM CA S306094470340227 CARD 5484",
+      "amount": -215.5,
+      "category": "Debt Repayment",
+      "subcategory": "Cash Advance Repayment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "adbc4ff7d5fa",
+      "date": "04/06/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/03 MAVERIK #503 BOISE ID S386093799802552 CARD 5484",
+      "amount": -7.93,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "ac4038d343ff",
+      "date": "04/06/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/03 GOOGLE *FI MCWPG2 G.CO/HELPPAY# CA S466093716158828 CARD 5484",
+      "amount": -11.48,
+      "category": "Fixed Bills",
+      "subcategory": "Phone - Google Fi",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "29f03a73f6e0",
+      "date": "04/06/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/03 GOOGLE*FI NQ5W9W SUPPORT.GOOGL CA S306093715961010 CARD 5484",
+      "amount": -86.94,
+      "category": "Fixed Bills",
+      "subcategory": "Phone - Google Fi",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "67c7fc570c03",
+      "date": "04/06/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/03 MAVERIK #503 BOISE ID S306093709453669 CARD 5484",
+      "amount": -3.06,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "0c001c4f212d",
+      "date": "04/06/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/03 CASH APP*ERIC MILL CASH.APP CA S466093664139862 CARD 5484",
+      "amount": -39.38,
+      "category": "Transfer",
+      "subcategory": "Internal - Out",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "d7943cf8ff9c",
+      "date": "04/06/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/05 FROM UBER PRO CARD*ERIC MILLS CA S306095367481958 CARD 5484",
+      "amount": 9.04,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "0c8d139e0425",
+      "date": "04/06/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/04 FROM UBER PRO CARD*ERIC MILLS CA S356094779629265 CARD 5484",
+      "amount": 157.11,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "0e3bd614abc8",
+      "date": "04/06/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/04 FROM ERIC MILLS CA S586094761518054 CARD 5484",
+      "amount": 50.0,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "2c89c0a8fd3c",
+      "date": "04/06/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/04 FROM ERIC MILLS CA S356094761264750 CARD 5484",
+      "amount": 150.0,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "403501c0d5df",
+      "date": "04/06/2026",
+      "description": "ATM CASH DEPOSIT ON 04/04 5161 W OVERLAND ROAD BOISE ID 0009810 ATM ID 7541D CARD 5484",
+      "amount": 327.0,
+      "category": "Income",
+      "subcategory": "Cash Tips (SRB)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "cd562d2f67c9",
+      "date": "04/03/2026",
+      "description": "ATLASFINANCIAL SMARTSAVE 11MWZDT99C6YQPP ERIC MILLS",
+      "amount": -55.0,
+      "category": "Savings",
+      "subcategory": "Atlas SmartSave",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "edbc413b0a9b",
+      "date": "04/03/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/03 ABACUS.AI ABACUS.AI CA S386093270176746 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "0e5560f532c3",
+      "date": "04/03/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/02 MAVERIK #503 BOISE ID S386092827250088 CARD 5484",
+      "amount": -3.81,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "900ff4d02343",
+      "date": "04/03/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/01 IDAGO 2 BOISE ID S356091776777810 CARD 5484",
+      "amount": -9.21,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "035373c597f4",
+      "date": "04/03/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/31 SHELL OIL100075680 BOISE ID S356091240925442 CARD 5484",
+      "amount": -13.31,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "941d6a5a2bb7",
+      "date": "04/03/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/31 U-HAUL MOVING & ST BOISE ID S466091026434660 CARD 5484",
+      "amount": -85.08,
+      "category": "Personal",
+      "subcategory": "Storage / Moving",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "f39446a16ed5",
+      "date": "04/03/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/03 FROM ERIC SCOTT MILLS ID S466093719269261 CARD 5484",
+      "amount": 36.77,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "8197f858b81d",
+      "date": "04/03/2026",
+      "description": "ATM CASH DEPOSIT ON 04/03 5161 W OVERLAND ROAD BOISE ID 0009707 ATM ID 7541D CARD 5484",
+      "amount": 262.0,
+      "category": "Income",
+      "subcategory": "Cash Tips (SRB)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "e6e306209910",
+      "date": "04/03/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/03 FROM ERIC MILLS CA S306093344997436 CARD 5484",
+      "amount": 50.0,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "7d2605eb355a",
+      "date": "04/03/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/03 FROM ERIC MILLS CA S356093344783015 CARD 5484",
+      "amount": 150.0,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "1dfa4975da27",
+      "date": "04/02/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 04/01 SXM*SIRIUSXM.COM/A 888-635-5144 NY S346092002493677 CARD 5484",
+      "amount": -12.86,
+      "category": "Subscriptions",
+      "subcategory": "Entertainment - SiriusXM",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "de05bd7adb94",
+      "date": "04/02/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/01 TROPICAL SMOOTHIE BOISE ID S386091788521351 CARD 5484",
+      "amount": -13.4,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "c58ab0d1ea2a",
+      "date": "04/02/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/01 A.Z. PHARMACY LLC AMZN.COM/BILL WA S466091281409127 CARD 5484",
+      "amount": -24.8,
+      "category": "Health",
+      "subcategory": "Medication",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "14cde24693a0",
+      "date": "04/02/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/01 A.Z. PHARMACY LLC AMZN.COM/BILL WA S466091281409032 CARD 5484",
+      "amount": -17.6,
+      "category": "Health",
+      "subcategory": "Medication",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "8bc203038096",
+      "date": "04/02/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 04/01 DAVE INC DAVE.COM CA S356091255462007 CARD 5484",
+      "amount": -111.5,
+      "category": "Debt Repayment",
+      "subcategory": "Cash Advance Repayment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "921332e78d6e",
+      "date": "04/02/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/31 TESLA SUPERCHARGER 877-7983752 CA S386091250713995 CARD 5484",
+      "amount": -11.25,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "447824ec37b9",
+      "date": "04/02/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/31 U-HAUL MOVING & ST 800-789-3638 ID S386090787577524 CARD 5484",
+      "amount": -129.95,
+      "category": "Personal",
+      "subcategory": "Storage / Moving",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "eccbb6788273",
+      "date": "04/02/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/31 STINKER #30 BOISE ID S356090726917249 CARD 5484",
+      "amount": -8.78,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "23fe1e1f5304",
+      "date": "04/01/2026",
+      "description": "PURCHASE AUTHORIZED ON 04/01 WALGREENS STORE 4924 W OV BOISE ID P586091834212427 CARD 5484",
+      "amount": -6.34,
+      "category": "Health",
+      "subcategory": "Medication",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "78f380c720f4",
+      "date": "04/01/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/31 WINCO FOODS #1 WINCO110 E BOISE ID P466091232878002 CARD 5484",
+      "amount": -3.22,
+      "category": "Personal",
+      "subcategory": "Groceries",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "ebc61a439dcd",
+      "date": "04/01/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/31 TESLA SUPERCHARGER 877-7983752 CA S306090261907820 CARD 5484",
+      "amount": -14.92,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "74977dcc26f8",
+      "date": "04/01/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/30 ALBERTSONS #0101 BOISE ID S356089858237733 CARD 5484",
+      "amount": -41.83,
+      "category": "Personal",
+      "subcategory": "Groceries",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "081526fabdb0",
+      "date": "03/31/2026",
+      "description": "ATLASFINANCIAL SMARTPAY 11MWQG989AD2SJ3 ERIC MILLS",
+      "amount": -46.0,
+      "category": "Fixed Bills",
+      "subcategory": "Credit Card Payment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "aebdfb7ebe84",
+      "date": "03/31/2026",
+      "description": "ATLASFINANCIAL SMARTPAY 11MWQG8X9AD2PJJ ERIC MILLS",
+      "amount": -0.94,
+      "category": "Fixed Bills",
+      "subcategory": "Credit Card Payment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "9d34ed2f90c3",
+      "date": "03/31/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/30 ABACUS.AI ABACUS.AI CA S386090128934797 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "5d38042ace31",
+      "date": "03/31/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/30 GALAXYAI GALAXY.AI DE S466090012926874 CARD 5484",
+      "amount": -14.99,
+      "category": "Subscriptions",
+      "subcategory": "AI - GalaxyAI",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "849d95d2830f",
+      "date": "03/31/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/30 ABACUS.AI ABACUS.AI CA S306089423832121 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "b9247d499fef",
+      "date": "03/31/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/30 ABACUS.AI ABACUS.AI CA S586089423802026 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "3295fa2d1e17",
+      "date": "03/31/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/30 ABACUS.AI ABACUS.AI CA S586089423764020 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "337b708a97b4",
+      "date": "03/31/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/29 U-HAUL MOVING & ST 800-789-3638 NC S346089194698415 CARD 5484",
+      "amount": -99.95,
+      "category": "Personal",
+      "subcategory": "Storage / Moving",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "78b05cd22051",
+      "date": "03/31/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/30 FROM ERIC MILLS CA S466090129625781 CARD 5484",
+      "amount": 50.0,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "99ba6681175e",
+      "date": "03/31/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/30 FROM ERIC MILLS CA S346090129446344 CARD 5484",
+      "amount": 50.0,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "53747006af75",
+      "date": "03/30/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/30 ABACUS.AI ABACUS.AI CA S586089274148685 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "46c366f78d5b",
+      "date": "03/30/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/29 ABACUS.AI ABACUS.AI CA S466089177428340 CARD 5484",
+      "amount": -20.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "0e5e1449dacd",
+      "date": "03/30/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/29 ABACUS.AI ABACUS.AI CA S586088669938437 CARD 5484",
+      "amount": -30.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "185230b59697",
+      "date": "03/30/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/29 ABACUS.AI ABACUS.AI CA S386088393120522 CARD 5484",
+      "amount": -20.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "db8c7bf5e105",
+      "date": "03/30/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/29 AUDIBLE*XF2HJ7WW3 AMZN.COM/BILL NJ S466088313992369 CARD 5484",
+      "amount": -15.85,
+      "category": "Subscriptions",
+      "subcategory": "Entertainment - Audible",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "ac096a74bcf8",
+      "date": "03/30/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/28 ABACUS.AI ABACUS.AI CA S586088018180638 CARD 5484",
+      "amount": -20.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "52afeec73cc5",
+      "date": "03/30/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/28 MONGOLIAN BISTRO BOISE ID S466087842150929 CARD 5484",
+      "amount": -25.0,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "78af5dbe117e",
+      "date": "03/30/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/28 DAVE INC DAVE.COM CA S306087835007508 CARD 5484",
+      "amount": -310.75,
+      "category": "Debt Repayment",
+      "subcategory": "Cash Advance Repayment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "4f9621671baa",
+      "date": "03/30/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/26 DAVE INC DAVE.COM CA S356086153322546 CARD 5484",
+      "amount": -10.0,
+      "category": "Debt Repayment",
+      "subcategory": "Cash Advance Repayment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "1a3a12710c80",
+      "date": "03/30/2026",
+      "description": "ATM CASH DEPOSIT ON 03/30 877 W MAIN ST STE 100 BOISE ID 0008623 ATM ID 6383A CARD 5484",
+      "amount": 30.0,
+      "category": "Income",
+      "subcategory": "Cash Tips (SRB)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "f55847fb79ed",
+      "date": "03/30/2026",
+      "description": "ATM CASH DEPOSIT ON 03/30 877 W MAIN ST STE 100 BOISE ID 0008622 ATM ID 6383A CARD 5484",
+      "amount": 176.0,
+      "category": "Income",
+      "subcategory": "Cash Tips (SRB)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "fad6c3efdcca",
+      "date": "03/30/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/29 FROM UBER PRO CARD*ERIC MILLS CA S306089054062889 CARD 5484",
+      "amount": 227.74,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "037e0dbf9a6b",
+      "date": "03/30/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/28 FROM ERIC SCOTT MILLS ID S386088011018212 CARD 5484",
+      "amount": 394.51,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "91420cdf396e",
+      "date": "03/30/2026",
+      "description": "ATM CASH DEPOSIT ON 03/28 5161 W OVERLAND ROAD BOISE ID 0008901 ATM ID 7541D CARD 5484",
+      "amount": 546.0,
+      "category": "Income",
+      "subcategory": "Cash Tips (SRB)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "c59db9e7ac79",
+      "date": "03/25/2026",
+      "description": "ATLASFINANCIAL SMARTPAY 11MW7NMT97NGM8R ERIC MILLS",
+      "amount": -2.05,
+      "category": "Fixed Bills",
+      "subcategory": "Credit Card Payment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "affc12b75556",
+      "date": "03/25/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/24 CASH APP*ERIC MILL OAKLAND CA S356084200929286 CARD 5484",
+      "amount": -400.0,
+      "category": "Transfer",
+      "subcategory": "Internal - Out",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "63ead65d9a30",
+      "date": "03/25/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/24 AMAZON RETA* B51HG WWW.AMAZON.CO WA S386084036698276 CARD 5484",
+      "amount": -32.77,
+      "category": "Personal",
+      "subcategory": "Shopping - Amazon",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "8eaf3af202ba",
+      "date": "03/25/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/24 AMAZON MKTPL*BG5FQ AMZN.COM/BILL WA S466084026895258 CARD 5484",
+      "amount": -31.79,
+      "category": "Personal",
+      "subcategory": "Shopping - Amazon",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "a94a2b95a190",
+      "date": "03/25/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/24 TESLA SUPERCHARGER 877-7983752 CA S586084010740629 CARD 5484",
+      "amount": -15.47,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "e0478d67d190",
+      "date": "03/25/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/24 ABACUS.AI ABACUS.AI CA S306083848087526 CARD 5484",
+      "amount": -20.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "c319f0cdf5d5",
+      "date": "03/25/2026",
+      "description": "LCM LLC PAYROLL 260315 LCMLLC 129 ERIC SCOTT MILLS",
+      "amount": 519.34,
+      "category": "Income",
+      "subcategory": "SRB Paycheck",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "2616ea61664a",
+      "date": "03/24/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/24 ABACUS.AI ABACUS.AI CA S346083281382089 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "8e6190c4d3b0",
+      "date": "03/24/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/23 ABACUS.AI ABACUS.AI CA S356083022973331 CARD 5484",
+      "amount": -20.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "f986028a4553",
+      "date": "03/23/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/22 ABACUS.AI ABACUS.AI CA S356082061229212 CARD 5484",
+      "amount": -20.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "f89bedf0c429",
+      "date": "03/23/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/21 MAVERIK #405 MERIDIAN ID S466081212657183 CARD 5484",
+      "amount": -7.29,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "56e22bde83b3",
+      "date": "03/23/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/21 LALAL.AI HOLZHAUSERN CHE S306080466003060 CARD 5484",
+      "amount": -9.99,
+      "category": "Subscriptions",
+      "subcategory": "DJ - LALAL.AI",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "891a49ef1168",
+      "date": "03/23/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/21 TESLA SUPERCHARGER 877-7983752 CA S386080431475127 CARD 5484",
+      "amount": -10.44,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "dd5bd2b9adea",
+      "date": "03/23/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/21 SHELL OIL100075510 BOISE ID S466080390529322 CARD 5484",
+      "amount": -16.68,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "ac5f53f962c8",
+      "date": "03/23/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/20 CASH APP*ERIC MILL CASH.APP CA S466079619052405 CARD 5484",
+      "amount": -9.85,
+      "category": "Transfer",
+      "subcategory": "Internal - Out",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "c62531030da5",
+      "date": "03/23/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/20 ABACUS.AI ABACUS.AI CA S386079327962096 CARD 5484",
+      "amount": -30.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "e942358fe4cf",
+      "date": "03/23/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/20 SHELL OIL100075680 BOISE ID S356079312367829 CARD 5484",
+      "amount": -19.86,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "fb58e2d2c437",
+      "date": "03/23/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/23 FROM UBER PRO CARD*ERIC MILLS CA S346083022716961 CARD 5484",
+      "amount": 17.01,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "91d03fca9edf",
+      "date": "03/23/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/22 FROM PLAYOCTOPUS.COM MD S386081366884986 CARD 5484",
+      "amount": 25.0,
+      "category": "Income",
+      "subcategory": "Other Income",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "944f2623dc60",
+      "date": "03/20/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/19 ABACUS.AI ABACUS.AI CA S586079013926336 CARD 5484",
+      "amount": -20.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "8c787672a875",
+      "date": "03/20/2026",
+      "description": "ATM CASH DEPOSIT ON 03/20 877 W MAIN ST STE 100 BOISE ID 0008039 ATM ID 6383A CARD 5484",
+      "amount": 97.0,
+      "category": "Income",
+      "subcategory": "Cash Tips (SRB)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "bd04fd3e5bf4",
+      "date": "03/19/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/18 ABACUS.AI ABACUS.AI CA S586077349340525 CARD 5484",
+      "amount": -20.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "950669a574f9",
+      "date": "03/19/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/18 ACI*FARM BUREAU IN 208-239-7915 ID S306077346381103 CARD 5484",
+      "amount": -424.76,
+      "category": "Fixed Bills",
+      "subcategory": "Insurance",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "9618c2888fa4",
+      "date": "03/19/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/18 TESLA SUPERCHARGER 877-7983752 CA S346077313174256 CARD 5484",
+      "amount": -5.61,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "4f4b198b6b42",
+      "date": "03/19/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/18 TESLA SUPERCHARGER 877-7983752 CA S386077303993852 CARD 5484",
+      "amount": -12.83,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "2ad5471aebdb",
+      "date": "03/19/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/17 GOOGLE *SUNO AI MU 855-836-3987 CA S586077132494364 CARD 5484",
+      "amount": -10.73,
+      "category": "Subscriptions",
+      "subcategory": "DJ - Suno AI",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "32e55c891bc2",
+      "date": "03/19/2026",
+      "description": "ATM CASH DEPOSIT ON 03/19 877 W MAIN ST STE 100 BOISE ID 0008030 ATM ID 6383A CARD 5484",
+      "amount": 26.0,
+      "category": "Income",
+      "subcategory": "Cash Tips (SRB)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "a9d996a4d7c4",
+      "date": "03/18/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/17 ABACUS.AI ABACUS.AI CA S306077109343848 CARD 5484",
+      "amount": -20.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "cead312f99fd",
+      "date": "03/18/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/16 BEATSOURCE.COM 720-974-9500 CA S306075545515436 CARD 5484",
+      "amount": -34.99,
+      "category": "Subscriptions",
+      "subcategory": "DJ - Beatsource",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "183154986da2",
+      "date": "03/18/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/18 FROM UBER PRO CARD*ERIC MILLS CA S356077318901025 CARD 5484",
+      "amount": 313.55,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "485a7bad2560",
+      "date": "03/18/2026",
+      "description": "ATM CASH DEPOSIT ON 03/18 10342 W OVERLAND RD BOISE ID 0004685 ATM ID 4502A CARD 5484",
+      "amount": 132.0,
+      "category": "Income",
+      "subcategory": "Cash Tips (SRB)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "ec8ed924b4bc",
+      "date": "03/18/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/17 FROM UBER PRO CARD*ERIC MILLS CA S356077059778186 CARD 5484",
+      "amount": 49.56,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "857990303b19",
+      "date": "03/17/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/16 ANTHROPIC ANTHROPIC.COM CA S386076119543904 CARD 5484",
+      "amount": -15.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Anthropic",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "a68f52f9254a",
+      "date": "03/17/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/16 TESLA SUPERCHARGER 877-7983752 CA S466075589698436 CARD 5484",
+      "amount": -15.6,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "cb254c4fafba",
+      "date": "03/17/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/16 FROM ERIC SCOTT MILLS ID S356076118340077 CARD 5484",
+      "amount": 36.77,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "c660796e3bea",
+      "date": "03/16/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/16 ANTHROPIC ANTHROPIC.COM CA S466075310439212 CARD 5484",
+      "amount": -50.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Anthropic",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "7a6f39f46bb9",
+      "date": "03/16/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/14 ANTHROPIC ANTHROPIC.COM CA S466073791349626 CARD 5484",
+      "amount": -10.01,
+      "category": "Subscriptions",
+      "subcategory": "AI - Anthropic",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "3828701ece66",
+      "date": "03/16/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/14 ANTHROPIC ANTHROPIC.COM CA S346073722045678 CARD 5484",
+      "amount": -10.17,
+      "category": "Subscriptions",
+      "subcategory": "AI - Anthropic",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "7735b99f7e27",
+      "date": "03/16/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/14 WWW.PERPLEXITY.AI WWW.PERPLEXIT CA S466073721216947 CARD 5484",
+      "amount": -5.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Perplexity",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "9a16bbd87e99",
+      "date": "03/16/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/14 WWW.PERPLEXITY.AI WWW.PERPLEXIT CA S386073720863864 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Perplexity",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "0eef32c329d0",
+      "date": "03/16/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/14 ANTHROPIC ANTHROPIC.COM CA S466073614149967 CARD 5484",
+      "amount": -10.26,
+      "category": "Subscriptions",
+      "subcategory": "AI - Anthropic",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "5baa3e780c34",
+      "date": "03/16/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/14 ANTHROPIC ANTHROPIC.COM CA S306073400296026 CARD 5484",
+      "amount": -10.59,
+      "category": "Subscriptions",
+      "subcategory": "AI - Anthropic",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "1ae4433256ea",
+      "date": "03/16/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/14 NETFLIX.COM NETFLIX.COM CA S306073293585550 CARD 5484",
+      "amount": -7.99,
+      "category": "Subscriptions",
+      "subcategory": "Entertainment - Netflix",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "63dd8633581b",
+      "date": "03/16/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/13 ANTHROPIC ANTHROPIC.COM CA S346073200778830 CARD 5484",
+      "amount": -10.3,
+      "category": "Subscriptions",
+      "subcategory": "AI - Anthropic",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "8025ee9d556c",
+      "date": "03/16/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/13 ANTHROPIC ANTHROPIC.COM CA S306073108010795 CARD 5484",
+      "amount": -14.43,
+      "category": "Subscriptions",
+      "subcategory": "AI - Anthropic",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "4f145c351c8f",
+      "date": "03/16/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/13 CASH APP*ERIC MILL CASH.APP CA S356072861260758 CARD 5484",
+      "amount": -39.37,
+      "category": "Transfer",
+      "subcategory": "Internal - Out",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "417cee0b9057",
+      "date": "03/16/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/13 ANTHROPIC ANTHROPIC.COM CA S346072761158590 CARD 5484",
+      "amount": -10.08,
+      "category": "Subscriptions",
+      "subcategory": "AI - Anthropic",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "174dc43c8c8d",
+      "date": "03/16/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/13 ANTHROPIC ANTHROPIC.COM CA S386072651163813 CARD 5484",
+      "amount": -10.01,
+      "category": "Subscriptions",
+      "subcategory": "AI - Anthropic",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "13d831fae448",
+      "date": "03/16/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/13 ANTHROPIC ANTHROPIC.COM CA S586072583339410 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Anthropic",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "ce67c54974c6",
+      "date": "03/16/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/13 AMAZON RETA* BD5T1 WWW.AMAZON.CO WA S586072507730555 CARD 5484",
+      "amount": -26.94,
+      "category": "Personal",
+      "subcategory": "Shopping - Amazon",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "5f208d4c9645",
+      "date": "03/16/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/13 AMAZON MKTPL*BD8TJ AMZN.COM/BILL WA S586072506191434 CARD 5484",
+      "amount": -21.19,
+      "category": "Personal",
+      "subcategory": "Shopping - Amazon",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "19c5a93c565f",
+      "date": "03/16/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/13 ANTHROPIC ANTHROPIC.COM CA S346072403333051 CARD 5484",
+      "amount": -10.31,
+      "category": "Subscriptions",
+      "subcategory": "AI - Anthropic",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "7df970678043",
+      "date": "03/16/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/12 SLICE*TRAINOPIZZA BOISE ID S306071744566039 CARD 5484",
+      "amount": -14.28,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "47bd785ec780",
+      "date": "03/16/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/08 RISEGUIDE 256-7925777 NV S346068200484238 CARD 5484",
+      "amount": -49.99,
+      "category": "Subscriptions",
+      "subcategory": "Education",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "1d7965f0d0db",
+      "date": "03/16/2026",
+      "description": "INSTANT PMT FROM VENMO ON 03/16 REF#20260316021000021P1BRJPC09730015687",
+      "amount": 4.75,
+      "category": "Income",
+      "subcategory": "Other Income",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "e92fc5c54fbe",
+      "date": "03/16/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/16 FROM UBER PRO CARD*ERIC MILLS CA S586075296940480 CARD 5484",
+      "amount": 115.46,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "3ad6c7304b93",
+      "date": "03/13/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/12 ANTHROPIC ANTHROPIC.COM CA S346072155600851 CARD 5484",
+      "amount": -10.34,
+      "category": "Subscriptions",
+      "subcategory": "AI - Anthropic",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "6c86fb614877",
+      "date": "03/13/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/12 E 470 EXPRESS TOLL 303-5373470 CO S386071737275383 CARD 5484",
+      "amount": -49.3,
+      "category": "Personal",
+      "subcategory": "Travel - Toll",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "2b03ca8b2b09",
+      "date": "03/13/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/12 ANTHROPIC ANTHROPIC.COM CA S356071567535798 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Anthropic",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "96fe653c6598",
+      "date": "03/13/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/12 ANTHROPIC ANTHROPIC.COM CA S586071558626125 CARD 5484",
+      "amount": -10.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Anthropic",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "2015f9ec58a3",
+      "date": "03/13/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/12 PHOTOBUCKET DOVER DE S346071389874359 CARD 5484",
+      "amount": -5.0,
+      "category": "Subscriptions",
+      "subcategory": "Entertainment - Photobucket",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "cc14719b81e3",
+      "date": "03/12/2026",
+      "description": "SANTANDER BILLPAY XXXXX7284 ERIC MILLS",
+      "amount": -745.99,
+      "category": "Fixed Bills",
+      "subcategory": "Car Payment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "03519b8346cf",
+      "date": "03/12/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/11 MISTER CAR WASH #0 866-2543229 ID S386070364693100 CARD 5484",
+      "amount": -22.99,
+      "category": "Fixed Bills",
+      "subcategory": "Car Wash Subscription",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "110eb62c6e77",
+      "date": "03/12/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/09 SHELL OIL100548380 BOISE ID S386069215316819 CARD 5484",
+      "amount": -4.24,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "c3e8da16165a",
+      "date": "03/12/2026",
+      "description": "ATM CASH DEPOSIT ON 03/12 5161 W OVERLAND ROAD BOISE ID 0006815 ATM ID 7541D CARD 5484",
+      "amount": 250.0,
+      "category": "Income",
+      "subcategory": "Cash Tips (SRB)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "68438bc2f633",
+      "date": "03/11/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/10 TESLA SUPERCHARGER 877-7983752 CA S586070232986469 CARD 5484",
+      "amount": -8.21,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "1f2e685fedb6",
+      "date": "03/11/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/10 TESLA SUPERCHARGER 877-7983752 CA S346070206374477 CARD 5484",
+      "amount": -8.56,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "d330482bf1b4",
+      "date": "03/11/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/10 SOUNDCLOUD INC 176-3257837 NY S346070201309932 CARD 5484",
+      "amount": -6.25,
+      "category": "Subscriptions",
+      "subcategory": "DJ - SoundCloud",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "7a2adf7c937e",
+      "date": "03/11/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/10 JACKSONS FOOD ST BOISE ID P306070044274571 CARD 5484",
+      "amount": -6.36,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "2950e5c4ca6f",
+      "date": "03/11/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/10 UMAI BOISE ID S346070040408902 CARD 5484",
+      "amount": -20.0,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "c530b9b7f0e0",
+      "date": "03/11/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/10 ANTHROPIC ANTHROPIC.COM CA S466069365296946 CARD 5484",
+      "amount": -5.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Anthropic",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "fcd063a9bae6",
+      "date": "03/11/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/10 STINKER #44 NAMPA ID S386069297681773 CARD 5484",
+      "amount": -5.06,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "3f3b0f79538b",
+      "date": "03/11/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/09 PSIFI PSIFI.APP POL S466069248999898 CARD 5484",
+      "amount": -98.64,
+      "category": "Personal",
+      "subcategory": "Recreation",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "aeb3af542938",
+      "date": "03/11/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/09 SHELL OIL100110520 BOISE ID S386069156366117 CARD 5484",
+      "amount": -10.58,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "5b428b4a74b1",
+      "date": "03/11/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/11 FROM UBER PRO CARD*ERIC MILLS CA S306070771792327 CARD 5484",
+      "amount": 471.85,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "5c00ef7a653d",
+      "date": "03/11/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/11 FROM ERIC SCOTT MILLS ID S466070641893887 CARD 5484",
+      "amount": 81.96,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "7df86eefdb6e",
+      "date": "03/10/2026",
+      "description": "SNAP FINANCE PAYMENT P4921709784 ERIC MILLS",
+      "amount": -14.13,
+      "category": "Fixed Bills",
+      "subcategory": "Snap Finance Loan",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "c304d9307e06",
+      "date": "03/10/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/09 CHEVRON 0304211 BOISE ID S386069091929475 CARD 5484",
+      "amount": -8.67,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "6d3dbab241ee",
+      "date": "03/10/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/09 JIMMY JOHNS 2783 MERIDIAN ID S466068760447787 CARD 5484",
+      "amount": -18.27,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "303e1454ea70",
+      "date": "03/10/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/09 DAVE INC DAVE.COM CA S306068759300114 CARD 5484",
+      "amount": -320.75,
+      "category": "Debt Repayment",
+      "subcategory": "Cash Advance Repayment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "fb1f85bd511e",
+      "date": "03/10/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/10 FROM ERIC MILLS CA S466070012238927 CARD 5484",
+      "amount": 75.0,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "2116bdf81e20",
+      "date": "03/10/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/10 FROM ERIC MILLS CA S466070011856358 CARD 5484",
+      "amount": 225.0,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "f45ab6e04b8b",
+      "date": "03/10/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/09 FROM UBER PRO CARD*ERIC MILLS CA S386069248510482 CARD 5484",
+      "amount": 17.01,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "f1d6b3990499",
+      "date": "03/10/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/09 FROM UBER PRO CARD*ERIC MILLS CA S386069244097413 CARD 5484",
+      "amount": 21.33,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "02493fd2ef26",
+      "date": "03/10/2026",
+      "description": "LCM LLC PAYROLL 260228 LCMLLC 129 ERIC SCOTT MILLS",
+      "amount": 450.92,
+      "category": "Income",
+      "subcategory": "SRB Paycheck",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "e91ed8ce00cd",
+      "date": "03/09/2026",
+      "description": "DAVE DAVESUBFEE 260309 33C659901B4011F18CF02D701E1FCB2F",
+      "amount": -1.0,
+      "category": "Debt Repayment",
+      "subcategory": "Cash Advance Fee",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "2af9a0ccd331",
+      "date": "03/09/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/08 CASH APP*CAMPBELL OAKLAND CA S346068166983224 CARD 5484",
+      "amount": -100.0,
+      "category": "Personal",
+      "subcategory": "Recreation",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "9ddbd8cd2a85",
+      "date": "03/09/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/08 ROBBINS RESEARCH I WWW.TONYROBBI CA S356067593534436 CARD 5484",
+      "amount": -39.0,
+      "category": "Subscriptions",
+      "subcategory": "Education",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "273a0e0e97f0",
+      "date": "03/09/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/07 CHICK-FIL-A #03089 BOISE ID S306067176009252 CARD 5484",
+      "amount": -11.29,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "3d4ba94ccb16",
+      "date": "03/09/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/06 A.Z. PHARMACY LLC AMZN.COM/BILL WA S356066265994448 CARD 5484",
+      "amount": -13.4,
+      "category": "Health",
+      "subcategory": "Medication",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "cddc6f5585ff",
+      "date": "03/09/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/06 A.Z. PHARMACY LLC AMZN.COM/BILL WA S386066265994184 CARD 5484",
+      "amount": -11.9,
+      "category": "Health",
+      "subcategory": "Medication",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "7987845b11c6",
+      "date": "03/09/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/06 CASH APP*ERIC MILL CASH.APP CA S356066014343575 CARD 5484",
+      "amount": -39.38,
+      "category": "Transfer",
+      "subcategory": "Internal - Out",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "884cfe239bcc",
+      "date": "03/09/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/06 CHEVRON 0094698 BOISE ID S306065806593785 CARD 5484",
+      "amount": -8.6,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "04f7eafe3e37",
+      "date": "03/09/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/06 MAVERIK CNTRY STRE BOISE ID S586065797422513 CARD 5484",
+      "amount": -11.0,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "fe6eeffa4014",
+      "date": "03/09/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/06 GOOGLE *FI 3XBXDW G.CO/HELPPAY# CA S356065760916381 CARD 5484",
+      "amount": -98.97,
+      "category": "Fixed Bills",
+      "subcategory": "Phone - Google Fi",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "4b42c03dcfdb",
+      "date": "03/09/2026",
+      "description": "ATM CASH DEPOSIT ON 03/09 1205 S BROADWAY AVE BOISE ID 0009302 ATM ID 4502F CARD 5484",
+      "amount": 135.0,
+      "category": "Income",
+      "subcategory": "Cash Tips (SRB)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "230c844ea8c7",
+      "date": "03/09/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/09 FROM ERIC SCOTT MILLS ID S356068697964553 CARD 5484",
+      "amount": 34.32,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "6913345f6b64",
+      "date": "03/06/2026",
+      "description": "MIXCLOUD MIXCLOUD ST-F7J9W3J6Y0G8 ERIC MILLS",
+      "amount": -15.0,
+      "category": "Subscriptions",
+      "subcategory": "DJ - Mixcloud",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "988cf16c4e44",
+      "date": "03/06/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/05 AMAZON PRIME*K55UW AMZN.COM/BILL WA S586064850881471 CARD 5484",
+      "amount": -15.89,
+      "category": "Subscriptions",
+      "subcategory": "Entertainment - Amazon Prime",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "35738ed9294b",
+      "date": "03/06/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/05 TROPICAL SMOOTHIE BOISE ID S586064765632743 CARD 5484",
+      "amount": -20.86,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "f067e03f59f5",
+      "date": "03/06/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/05 TESLA SERVICE US 877-7983752 CA S466064735292786 CARD 5484",
+      "amount": -497.1,
+      "category": "Vehicle",
+      "subcategory": "Repair - Tires (One-time)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "b814a26b354a",
+      "date": "03/06/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/05 DAVE INC DAVE.COM CA S346064732983259 CARD 5484",
+      "amount": -287.55,
+      "category": "Debt Repayment",
+      "subcategory": "Cash Advance Repayment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "5ae3656ee46f",
+      "date": "03/06/2026",
+      "description": "ATM CASH DEPOSIT ON 03/06 3150 N FIVE MILE RD BOISE ID 0003995 ATM ID 1090D CARD 5484",
+      "amount": 61.0,
+      "category": "Income",
+      "subcategory": "Cash Tips (SRB)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "6b13912b467e",
+      "date": "03/06/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/06 FROM UBER PRO CARD*ERIC MILLS CA S586065760689503 CARD 5484",
+      "amount": 149.94,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "c94f3436be5f",
+      "date": "03/05/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/05 NORTH END CHEVRO BOISE ID P346065054893336 CARD 5484",
+      "amount": -12.37,
+      "category": "Vehicle",
+      "subcategory": "Vehicle - Other",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "28ee3f85a4b2",
+      "date": "03/05/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/04 ABACUS.AI ABACUS.AI CA S306064076632457 CARD 5484",
+      "amount": -20.0,
+      "category": "Subscriptions",
+      "subcategory": "AI - Abacus",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "8cfc111581b6",
+      "date": "03/05/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/05 FROM ERIC SCOTT MILLS ID S346064734973674 CARD 5484",
+      "amount": 83.34,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "2202ed19bf8d",
+      "date": "03/05/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/05 FROM ERIC MILLS CA S356064733456788 CARD 5484",
+      "amount": 75.0,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "ff8ee8a2cc09",
+      "date": "03/05/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/05 FROM ERIC MILLS CA S586064733261496 CARD 5484",
+      "amount": 225.0,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "31b7919a85a1",
+      "date": "03/05/2026",
+      "description": "ATM CASH DEPOSIT ON 03/05 5161 W OVERLAND ROAD BOISE ID 0005889 ATM ID 7541D CARD 5484",
+      "amount": 167.0,
+      "category": "Income",
+      "subcategory": "Cash Tips (SRB)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "779fde6900dd",
+      "date": "03/05/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/05 FROM UBER PRO CARD*ERIC MILLS CA S386064732428464 CARD 5484",
+      "amount": 287.38,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "7fd9c7b683e5",
+      "date": "03/05/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/04 FROM ERIC SCOTT MILLS ID S356064076372178 CARD 5484",
+      "amount": 4.75,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "0c91bc7c4045",
+      "date": "03/05/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/04 FROM ERIC SCOTT MILLS ID S466064075123714 CARD 5484",
+      "amount": 19.61,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "04acc6cb1c4c",
+      "date": "03/04/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/02 STINKER #106 BOISE ID S386061518527991 CARD 5484",
+      "amount": -6.55,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "39e168a0b742",
+      "date": "03/03/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/01 U-HAUL MOVING & ST 800-789-3638 NC S386061238341848 CARD 5484",
+      "amount": -99.95,
+      "category": "Personal",
+      "subcategory": "Storage / Moving",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "fcf666b5d28f",
+      "date": "03/03/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/01 CHEVRON 0207908 NAMPA ID S356061227776165 CARD 5484",
+      "amount": -7.93,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "810d9bcdfa9b",
+      "date": "03/03/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/01 SHELL OIL100053790 BOISE ID S386061184166590 CARD 5484",
+      "amount": -8.55,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "1234377c6833",
+      "date": "03/03/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/01 SHELL OIL100075510 BOISE ID S356060735894944 CARD 5484",
+      "amount": -19.14,
+      "category": "Personal",
+      "subcategory": "Convenience Store",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "6b4cf8ce4e38",
+      "date": "03/03/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/01 BEATSOURCE.COM 720-974-9500 CA S466060725578598 CARD 5484",
+      "amount": -34.99,
+      "category": "Subscriptions",
+      "subcategory": "DJ - Beatsource",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "3f9c472edee4",
+      "date": "03/03/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/01 MONGOLIAN BISTRO BOISE ID S346060691435238 CARD 5484",
+      "amount": -20.0,
+      "category": "Personal",
+      "subcategory": "Food & Dining",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "14207cf96dcf",
+      "date": "03/03/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/01 TESLA SUPERCHARGER 877-7983752 CA S356060671660428 CARD 5484",
+      "amount": -20.47,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "1ad5576a7b18",
+      "date": "03/02/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/01 CASH APP*ERIC MILL OAKLAND CA S466061273990926 CARD 5484",
+      "amount": -160.0,
+      "category": "Transfer",
+      "subcategory": "Internal - Out",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "756c944f36cd",
+      "date": "03/02/2026",
+      "description": "RECURRING PAYMENT AUTHORIZED ON 03/01 SXM*SIRIUSXM.COM/A 888-635-5144 NY S346061080372316 CARD 5484",
+      "amount": -12.86,
+      "category": "Subscriptions",
+      "subcategory": "Entertainment - SiriusXM",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "7df5bc9641de",
+      "date": "03/02/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/01 CONTROLLA, INC. CONTROLLA.XYZ CA S466060779350551 CARD 5484",
+      "amount": -48.0,
+      "category": "Personal",
+      "subcategory": "Recreation",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "ebb8e7bdf821",
+      "date": "03/02/2026",
+      "description": "PURCHASE AUTHORIZED ON 03/01 TESLA SUPERCHARGER 877-7983752 CA S356060728518666 CARD 5484",
+      "amount": -23.39,
+      "category": "Business Expense",
+      "subcategory": "Uber - Charging",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "a31b4bbdf727",
+      "date": "03/02/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/01 DAVE INC DAVE.COM CA S586060679330652 CARD 5484",
+      "amount": -317.5,
+      "category": "Debt Repayment",
+      "subcategory": "Cash Advance Repayment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "ff4ada5155be",
+      "date": "03/02/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 02/27 DAVE INC DAVE.COM CA S386058579518405 CARD 5484",
+      "amount": -3.25,
+      "category": "Debt Repayment",
+      "subcategory": "Cash Advance Repayment",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "76f7bc7889ff",
+      "date": "03/02/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/01 FROM ERIC MILLS CA S346060679660826 CARD 5484",
+      "amount": 270.0,
+      "category": "Transfer",
+      "subcategory": "Internal - In",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "4bd3db1850c9",
+      "date": "03/02/2026",
+      "description": "ATM CASH DEPOSIT ON 03/01 5161 W OVERLAND ROAD BOISE ID 0005291 ATM ID 7541D CARD 5484",
+      "amount": 359.0,
+      "category": "Income",
+      "subcategory": "Cash Tips (SRB)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
+      "id": "18c2276bb59b",
+      "date": "03/02/2026",
+      "description": "MONEY TRANSFER AUTHORIZED ON 03/01 FROM UBER PRO CARD*ERIC MILLS CA S586060669775494 CARD 5484",
+      "amount": 147.4,
+      "category": "Income",
+      "subcategory": "Uber Earnings",
+      "is_business": true,
+      "status": "Posted"
+    },
+    {
+      "id": "b34342af16f6",
+      "date": "02/26/2026",
+      "description": "PURCHASE AUTHORIZED ON 02/25 AUDIBLE*773I23W83 AMZN.COM/BILL NJ S386056326778103 CARD 5484",
+      "amount": -15.85,
+      "category": "Subscriptions",
+      "subcategory": "Entertainment - Audible",
+      "is_business": false,
+      "status": "Posted"
+    }
+  ],
+  "last_updated": "2026-05-26T21:00:09.000Z",
+  "source": "Wells Fargo Checking - Card 5484"
+}
