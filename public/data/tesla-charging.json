@@ -689,6 +689,96 @@
       "rate_per_kwh": 0.4,
       "cost": 12.0,
       "duration_min": 0
+    },
+    {
+      "date": "2026-05-14",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "N Orchard St 851, Boise ID 83706",
+      "type": "DC Fast",
+      "kwh": 56.9675,
+      "rate_per_kwh": 0.19,
+      "cost": 10.82,
+      "duration_min": 0
+    },
+    {
+      "date": "2026-05-15",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "N Orchard St 851, Boise ID 83706",
+      "type": "DC Fast",
+      "kwh": 22.2976,
+      "rate_per_kwh": 0.4,
+      "cost": 8.91,
+      "duration_min": 0
+    },
+    {
+      "date": "2026-05-17",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "N Orchard St 851, Boise ID 83706",
+      "type": "DC Fast",
+      "kwh": 57.4063,
+      "rate_per_kwh": 0.4,
+      "cost": 22.96,
+      "duration_min": 0
+    },
+    {
+      "date": "2026-05-18",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "N Orchard St 851, Boise ID 83706",
+      "type": "DC Fast",
+      "kwh": 80.0032,
+      "rate_per_kwh": 0.19,
+      "cost": 15.2,
+      "duration_min": 0
+    },
+    {
+      "date": "2026-05-21",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "N Orchard St 851, Boise ID 83706",
+      "type": "DC Fast",
+      "kwh": 55.8969,
+      "rate_per_kwh": 0.43,
+      "cost": 24.03,
+      "duration_min": 0
+    },
+    {
+      "date": "2026-05-22",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "N Orchard St 851, Boise ID 83706",
+      "type": "DC Fast",
+      "kwh": 30.0477,
+      "rate_per_kwh": 0.43,
+      "cost": 12.92,
+      "duration_min": 0
+    },
+    {
+      "date": "2026-05-23",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "N Orchard St 851, Boise ID 83706",
+      "type": "DC Fast",
+      "kwh": 74.3658,
+      "rate_per_kwh": 0.2,
+      "cost": 14.87,
+      "duration_min": 0
+    },
+    {
+      "date": "2026-05-24",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "N Orchard St 851, Boise ID 83706",
+      "type": "DC Fast",
+      "kwh": 88.721,
+      "rate_per_kwh": 0.2,
+      "cost": 17.74,
+      "duration_min": 0
+    },
+    {
+      "date": "2026-05-25",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "N Orchard St 851, Boise ID 83706",
+      "type": "DC Fast",
+      "kwh": 66.64,
+      "rate_per_kwh": 0.2,
+      "cost": 13.32,
+      "duration_min": 0
     }
   ],
   "summary": {
