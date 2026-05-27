@@ -39,11 +39,13 @@ const CAT_COLORS: Record<string, string> = {
   "Savings":          "#00c87c",
   "DJ/Music":         "#cc5de8",
   "Transfer":         "#9b5de5",
+  "Fees & Interest":  "#ff8c00",
 };
 
 const EXPENSE_CATS = [
   "Fixed Bills","Debt Repayment","Subscriptions",
-  "Personal","Business Expense","Vehicle","Health","Savings","DJ/Music"
+  "Personal","Business Expense","Vehicle","Health","Savings","DJ/Music",
+  "Fees & Interest",
 ];
 
 const MONTH_LABELS: Record<string, string> = {
@@ -76,6 +78,13 @@ export default function BudgetPage() {
 
   const months = useMemo(() =>
     data ? Object.keys(data.monthly_summaries).sort() : [], [data]);
+
+  // Subcategories that belong to the Transfer category (Dave advances/repayments)
+  // These are excluded from expense line-item displays — only Dave fees show as real costs
+  const transferSubcats = useMemo(() => {
+    if (!data) return new Set<string>();
+    return new Set(data.transactions.filter(t => t.category === "Transfer").map(t => t.subcategory));
+  }, [data]);
 
   // All-time totals (exclude Feb which is just a carryover)
   const activeMonths = useMemo(() => months.filter(m => m >= "2026-03"), [months]);
@@ -140,7 +149,7 @@ export default function BudgetPage() {
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: 10, marginBottom: 24 }}>
         {[
           { label: "Total Income",   value: fmt(allTimeSummary.income),   color: "#00f5d4", sub: `${activeMonths.length} months` },
-          { label: "Total Expenses", value: fmt(allTimeSummary.expenses),  color: "#ff6b6b", sub: "excl. transfers" },
+          { label: "Total Expenses", value: fmt(allTimeSummary.expenses),  color: "#ff6b6b", sub: "excl. Dave advances" },
           { label: "Net Cash Flow",  value: fmtS(allTimeSummary.net),      color: allTimeSummary.net >= 0 ? "#00c87c" : "#ff4444",
             sub: allTimeSummary.net >= 0 ? "✅ Positive" : "⚠️ Spending > Income" },
           { label: "Avg Monthly",    value: fmt(allTimeSummary.expenses / activeMonths.length), color: "#fd8b50", sub: "expenses/month" },
@@ -222,11 +231,11 @@ export default function BudgetPage() {
                     </div>
                   );
                 })}
-                {/* Top subcategories */}
+                {/* Top subcategories — Transfer (Dave advances/repayments) excluded; only real expenses shown */}
                 <div style={{ marginTop: 16, paddingTop: 16, borderTop: "1px solid var(--border)" }}>
                   <div style={{ fontSize: "0.72rem", color: "var(--muted)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 10 }}>Top Line Items</div>
                   {Object.entries(s.by_subcategory)
-                    .filter(([, v]) => v < 0)
+                    .filter(([k, v]) => v < 0 && !transferSubcats.has(k))
                     .sort((a, b) => a[1] - b[1])
                     .slice(0, 8)
                     .map(([k, v]) => (
@@ -342,7 +351,8 @@ export default function BudgetPage() {
             <h3 style={{ color: "#fee440", fontSize: "0.78rem", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: 12 }}>⚠️ Where Your Money Is Going</h3>
             {[
               allTimeSummary.net < 0 && { color: "#ff4444", bg: "#ff444420", msg: `🚨 Spending exceeds income by ${fmt(Math.abs(allTimeSummary.net))} over ${activeMonths.length} months` },
-              Math.abs(allTimeSummary.by_category["Debt Repayment"] || 0) > 500 && { color: "#ff6b6b", bg: "#ff444415", msg: `💸 ${fmt(Math.abs(allTimeSummary.by_category["Debt Repayment"] || 0))} in debt/advance repayments — cash advances are expensive` },
+              Math.abs(allTimeSummary.by_category["Fees & Interest"] || 0) > 0 && { color: "#ff8c00", bg: "#ff8c0020", msg: `💳 ${fmt(Math.abs(allTimeSummary.by_category["Fees & Interest"] || 0))} in Dave cash advance fees — this is your true cost of using Dave` },
+              Math.abs(allTimeSummary.by_category["Debt Repayment"] || 0) > 500 && { color: "#ff6b6b", bg: "#ff444415", msg: `💸 ${fmt(Math.abs(allTimeSummary.by_category["Debt Repayment"] || 0))} in debt repayments` },
               Math.abs(allTimeSummary.by_category["Subscriptions"] || 0) > 400 && { color: "#f15bb5", bg: "#f15bb520", msg: `🔄 ${fmt(Math.abs(allTimeSummary.by_category["Subscriptions"] || 0))} in subscriptions — review Subscriptions tab` },
               Math.abs(allTimeSummary.by_category["Personal"] || 0) > 1000 && { color: "#fee440", bg: "#fee44015", msg: `🛍️ ${fmt(Math.abs(allTimeSummary.by_category["Personal"] || 0))} in personal spending — largest variable category` },
             ].filter(Boolean).map((alert: any, i) => (
