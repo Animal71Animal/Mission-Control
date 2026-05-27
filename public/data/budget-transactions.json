@@ -71,16 +71,6 @@
       "status": "Posted"
     },
     {
-      "id": "5d7c061195e2",
-      "date": "05/22/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 05/21 DAVE INC DAVE.COM CA S466141617030514 CARD 5484",
-      "amount": -368.67,
-      "category": "Transfer",
-      "subcategory": "Dave Repayment (Loan Out)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
       "id": "ae93cb6031f0",
       "date": "05/22/2026",
       "description": "RECURRING PAYMENT AUTHORIZED ON 05/21 LALAL.AI HOLZHAUSERN CHE S306141466444458 CARD 5484",
@@ -101,16 +91,6 @@
       "status": "Posted"
     },
     {
-      "id": "179b3ad52cbe",
-      "date": "05/22/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 05/22 FROM ERIC MILLS CA S586142667210452 CARD 5484",
-      "amount": 75.0,
-      "category": "Transfer",
-      "subcategory": "Dave Advance (Loan In)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
       "id": "838ccb748e71",
       "date": "05/22/2026",
       "description": "LCM LLC PAYROLL 260515 LCMLLC 129 ERIC SCOTT MILLS",
@@ -127,16 +107,6 @@
       "amount": -3.06,
       "category": "Personal",
       "subcategory": "Convenience Store",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
-      "id": "6b4baa235e39",
-      "date": "05/21/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 05/21 FROM ERIC MILLS CA S586141617327769 CARD 5484",
-      "amount": 225.0,
-      "category": "Transfer",
-      "subcategory": "Dave Advance (Loan In)",
       "is_business": false,
       "status": "Posted"
     },
@@ -751,16 +721,6 @@
       "status": "Posted"
     },
     {
-      "id": "1630dc031332",
-      "date": "05/11/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 05/07 DAVE INC DAVE.COM CA S466128170003991 CARD 5484",
-      "amount": -215.5,
-      "category": "Transfer",
-      "subcategory": "Dave Repayment (Loan Out)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
       "id": "b0384790e0a8",
       "date": "05/11/2026",
       "description": "RECURRING PAYMENT AUTHORIZED ON 05/07 BEATSOURCE.COM 720-974-9500 CA S466127833622810 CARD 5484",
@@ -778,16 +738,6 @@
       "category": "Income",
       "subcategory": "Uber Earnings",
       "is_business": true,
-      "status": "Posted"
-    },
-    {
-      "id": "3fe289591653",
-      "date": "05/11/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 05/09 FROM ERIC MILLS CA S356130013912378 CARD 5484",
-      "amount": 75.0,
-      "category": "Transfer",
-      "subcategory": "Dave Advance (Loan In)",
-      "is_business": false,
       "status": "Posted"
     },
     {
@@ -837,16 +787,6 @@
       "amount": -9.84,
       "category": "Transfer",
       "subcategory": "Internal - Out",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
-      "id": "3102d40a4f83",
-      "date": "05/08/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 05/08 FROM ERIC MILLS CA S356128391829862 CARD 5484",
-      "amount": 270.0,
-      "category": "Transfer",
-      "subcategory": "Dave Advance (Loan In)",
       "is_business": false,
       "status": "Posted"
     },
@@ -1511,16 +1451,6 @@
       "status": "Posted"
     },
     {
-      "id": "3d63bb4afe7b",
-      "date": "04/28/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 04/28 FROM ERIC MILLS CA S346118818939858 CARD 5484",
-      "amount": 50.0,
-      "category": "Transfer",
-      "subcategory": "Dave Advance (Loan In)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
       "id": "941604ab80c9",
       "date": "04/27/2026",
       "description": "SNAP FINANCE PAYMENT P5041987331 ERIC MILLS",
@@ -1741,16 +1671,6 @@
       "status": "Posted"
     },
     {
-      "id": "df30deb1b7dd",
-      "date": "04/27/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 04/23 DAVE INC DAVE.COM CA S356114185715452 CARD 5484",
-      "amount": -215.5,
-      "category": "Transfer",
-      "subcategory": "Dave Repayment (Loan Out)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
       "id": "8c4edfd5fdf8",
       "date": "04/27/2026",
       "description": "MONEY TRANSFER AUTHORIZED ON 04/27 FROM ERIC SCOTT MILLS ID S356117666738393 CARD 5484",
@@ -1777,16 +1697,6 @@
       "amount": 9.75,
       "category": "Transfer",
       "subcategory": "Internal - In",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
-      "id": "6ebb89869eb1",
-      "date": "04/27/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 04/26 FROM ERIC MILLS CA S466116699304729 CARD 5484",
-      "amount": 150.0,
-      "category": "Transfer",
-      "subcategory": "Dave Advance (Loan In)",
       "is_business": false,
       "status": "Posted"
     },
@@ -2061,16 +1971,6 @@
       "status": "Posted"
     },
     {
-      "id": "f50154ce06f3",
-      "date": "04/20/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 04/18 DAVE INC DAVE.COM CA S306108420610465 CARD 5484",
-      "amount": -147.03,
-      "category": "Transfer",
-      "subcategory": "Dave Repayment (Loan Out)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
       "id": "325f52a97cd6",
       "date": "04/20/2026",
       "description": "RECURRING PAYMENT AUTHORIZED ON 04/17 ABACUS.AI ABACUS.AI CA S306107713532316 CARD 5484",
@@ -2091,52 +1991,12 @@
       "status": "Posted"
     },
     {
-      "id": "208be61cf183",
-      "date": "04/20/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 04/17 DAVE INC DAVE.COM CA S346107577550671 CARD 5484",
-      "amount": -2.72,
-      "category": "Transfer",
-      "subcategory": "Dave Repayment (Loan Out)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
-      "id": "7153bcfbc864",
-      "date": "04/20/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 04/17 DAVE INC DAVE.COM CA S306107310246923 CARD 5484",
-      "amount": -10.0,
-      "category": "Transfer",
-      "subcategory": "Dave Repayment (Loan Out)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
       "id": "f9cc56618fa7",
       "date": "04/20/2026",
       "description": "ATM CASH DEPOSIT ON 04/19 5161 W OVERLAND ROAD BOISE ID 0001795 ATM ID 7541D CARD 5484",
       "amount": 234.0,
       "category": "Transfer",
       "subcategory": "Cash Deposit - SRB Tips (see SRB tracker)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
-      "id": "493440be76d6",
-      "date": "04/20/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 04/18 FROM ERIC MILLS CA S586108421234516 CARD 5484",
-      "amount": 50.0,
-      "category": "Transfer",
-      "subcategory": "Dave Advance (Loan In)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
-      "id": "d259bf691c11",
-      "date": "04/20/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 04/18 FROM ERIC MILLS CA S386108420918499 CARD 5484",
-      "amount": 150.0,
-      "category": "Transfer",
-      "subcategory": "Dave Advance (Loan In)",
       "is_business": false,
       "status": "Posted"
     },
@@ -2351,36 +2211,6 @@
       "status": "Posted"
     },
     {
-      "id": "077e1f58e2a6",
-      "date": "04/15/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 04/14 DAVE INC DAVE.COM CA S466104335096644 CARD 5484",
-      "amount": -145.5,
-      "category": "Transfer",
-      "subcategory": "Dave Repayment (Loan Out)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
-      "id": "417db0036b60",
-      "date": "04/15/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 04/14 DAVE INC DAVE.COM CA S356104285909938 CARD 5484",
-      "amount": -60.0,
-      "category": "Transfer",
-      "subcategory": "Dave Repayment (Loan Out)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
-      "id": "53a8f837d9c3",
-      "date": "04/15/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 04/13 DAVE INC DAVE.COM CA S386104163979846 CARD 5484",
-      "amount": -10.0,
-      "category": "Transfer",
-      "subcategory": "Dave Repayment (Loan Out)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
       "id": "0b284a164103",
       "date": "04/15/2026",
       "description": "PURCHASE AUTHORIZED ON 04/13 PY *BOISE RUSH BOW BOISE ID S386103745200364 CARD 5484",
@@ -2538,16 +2368,6 @@
       "category": "Income",
       "subcategory": "Uber Earnings",
       "is_business": true,
-      "status": "Posted"
-    },
-    {
-      "id": "340fe28a3c37",
-      "date": "04/14/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 04/14 FROM ERIC MILLS CA S346104335946102 CARD 5484",
-      "amount": 150.0,
-      "category": "Transfer",
-      "subcategory": "Dave Advance (Loan In)",
-      "is_business": false,
       "status": "Posted"
     },
     {
@@ -2811,26 +2631,6 @@
       "status": "Posted"
     },
     {
-      "id": "5a473f2d6f1f",
-      "date": "04/13/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 04/11 FROM ERIC MILLS CA S346102100024260 CARD 5484",
-      "amount": 50.0,
-      "category": "Transfer",
-      "subcategory": "Dave Advance (Loan In)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
-      "id": "a6c667e63983",
-      "date": "04/13/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 04/11 FROM ERIC MILLS CA S356102099362452 CARD 5484",
-      "amount": 150.0,
-      "category": "Transfer",
-      "subcategory": "Dave Advance (Loan In)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
       "id": "6501a0502445",
       "date": "04/13/2026",
       "description": "PURCHASE RETURN AUTHORIZED ON 04/09 SOUTHWES 526432 800-435-9792 TX S616101710091041 CARD 5484",
@@ -2901,16 +2701,6 @@
       "status": "Posted"
     },
     {
-      "id": "c53e6cf0c212",
-      "date": "04/10/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 04/08 DAVE INC DAVE.COM CA S356099156430453 CARD 5484",
-      "amount": -209.29,
-      "category": "Transfer",
-      "subcategory": "Dave Repayment (Loan Out)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
       "id": "98d549331f0f",
       "date": "04/10/2026",
       "description": "LCM LLC PAYROLL 260331 LCMLLC 129 ERIC SCOTT MILLS",
@@ -2921,32 +2711,12 @@
       "status": "Posted"
     },
     {
-      "id": "7fb2031edee6",
-      "date": "04/09/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 04/08 DAVE INC DAVE.COM CA S586098707095732 CARD 5484",
-      "amount": -5.0,
-      "category": "Transfer",
-      "subcategory": "Dave Repayment (Loan Out)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
       "id": "c81004a41265",
       "date": "04/09/2026",
       "description": "MONEY TRANSFER AUTHORIZED ON 04/08 CASH APP*ERIC MILL OAKLAND CA S586098586900195 CARD 5484",
       "amount": -50.0,
       "category": "Transfer",
       "subcategory": "Internal - Out",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
-      "id": "73dff8bd866a",
-      "date": "04/08/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 04/07 DAVE INC DAVE.COM CA S306097569984116 CARD 5484",
-      "amount": -1.21,
-      "category": "Transfer",
-      "subcategory": "Dave Repayment (Loan Out)",
       "is_business": false,
       "status": "Posted"
     },
@@ -3061,16 +2831,6 @@
       "status": "Posted"
     },
     {
-      "id": "4b6210306f03",
-      "date": "04/06/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 04/04 DAVE INC DAVE.COM CA S306094470340227 CARD 5484",
-      "amount": -215.5,
-      "category": "Transfer",
-      "subcategory": "Dave Repayment (Loan Out)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
       "id": "adbc4ff7d5fa",
       "date": "04/06/2026",
       "description": "PURCHASE AUTHORIZED ON 04/03 MAVERIK #503 BOISE ID S386093799802552 CARD 5484",
@@ -3138,26 +2898,6 @@
       "category": "Income",
       "subcategory": "Uber Earnings",
       "is_business": true,
-      "status": "Posted"
-    },
-    {
-      "id": "0e3bd614abc8",
-      "date": "04/06/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 04/04 FROM ERIC MILLS CA S586094761518054 CARD 5484",
-      "amount": 50.0,
-      "category": "Transfer",
-      "subcategory": "Dave Advance (Loan In)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
-      "id": "2c89c0a8fd3c",
-      "date": "04/06/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 04/04 FROM ERIC MILLS CA S356094761264750 CARD 5484",
-      "amount": 150.0,
-      "category": "Transfer",
-      "subcategory": "Dave Advance (Loan In)",
-      "is_business": false,
       "status": "Posted"
     },
     {
@@ -3251,26 +2991,6 @@
       "status": "Posted"
     },
     {
-      "id": "e6e306209910",
-      "date": "04/03/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 04/03 FROM ERIC MILLS CA S306093344997436 CARD 5484",
-      "amount": 50.0,
-      "category": "Transfer",
-      "subcategory": "Dave Advance (Loan In)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
-      "id": "7d2605eb355a",
-      "date": "04/03/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 04/03 FROM ERIC MILLS CA S356093344783015 CARD 5484",
-      "amount": 150.0,
-      "category": "Transfer",
-      "subcategory": "Dave Advance (Loan In)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
       "id": "1dfa4975da27",
       "date": "04/02/2026",
       "description": "RECURRING PAYMENT AUTHORIZED ON 04/01 SXM*SIRIUSXM.COM/A 888-635-5144 NY S346092002493677 CARD 5484",
@@ -3307,16 +3027,6 @@
       "amount": -17.6,
       "category": "Health",
       "subcategory": "Medication",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
-      "id": "8bc203038096",
-      "date": "04/02/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 04/01 DAVE INC DAVE.COM CA S356091255462007 CARD 5484",
-      "amount": -111.5,
-      "category": "Transfer",
-      "subcategory": "Dave Repayment (Loan Out)",
       "is_business": false,
       "status": "Posted"
     },
@@ -3471,26 +3181,6 @@
       "status": "Posted"
     },
     {
-      "id": "78b05cd22051",
-      "date": "03/31/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 03/30 FROM ERIC MILLS CA S466090129625781 CARD 5484",
-      "amount": 50.0,
-      "category": "Transfer",
-      "subcategory": "Dave Advance (Loan In)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
-      "id": "99ba6681175e",
-      "date": "03/31/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 03/30 FROM ERIC MILLS CA S346090129446344 CARD 5484",
-      "amount": 50.0,
-      "category": "Transfer",
-      "subcategory": "Dave Advance (Loan In)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
       "id": "2cd62370eceb",
       "date": "03/31/2026",
       "description": "DAVE EXTRACASH OVERDRAFT FEES - MARCH (OFFICIAL STMT)",
@@ -3587,26 +3277,6 @@
       "amount": -25.0,
       "category": "Personal",
       "subcategory": "Food & Dining",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
-      "id": "78af5dbe117e",
-      "date": "03/30/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 03/28 DAVE INC DAVE.COM CA S306087835007508 CARD 5484",
-      "amount": -310.75,
-      "category": "Transfer",
-      "subcategory": "Dave Repayment (Loan Out)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
-      "id": "4f9621671baa",
-      "date": "03/30/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 03/26 DAVE INC DAVE.COM CA S356086153322546 CARD 5484",
-      "amount": -10.0,
-      "category": "Transfer",
-      "subcategory": "Dave Repayment (Loan Out)",
       "is_business": false,
       "status": "Posted"
     },
@@ -4461,36 +4131,6 @@
       "status": "Posted"
     },
     {
-      "id": "303e1454ea70",
-      "date": "03/10/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 03/09 DAVE INC DAVE.COM CA S306068759300114 CARD 5484",
-      "amount": -320.75,
-      "category": "Transfer",
-      "subcategory": "Dave Repayment (Loan Out)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
-      "id": "fb1f85bd511e",
-      "date": "03/10/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 03/10 FROM ERIC MILLS CA S466070012238927 CARD 5484",
-      "amount": 75.0,
-      "category": "Transfer",
-      "subcategory": "Dave Advance (Loan In)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
-      "id": "2116bdf81e20",
-      "date": "03/10/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 03/10 FROM ERIC MILLS CA S466070011856358 CARD 5484",
-      "amount": 225.0,
-      "category": "Transfer",
-      "subcategory": "Dave Advance (Loan In)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
       "id": "f45ab6e04b8b",
       "date": "03/10/2026",
       "description": "MONEY TRANSFER AUTHORIZED ON 03/09 FROM UBER PRO CARD*ERIC MILLS CA S386069248510482 CARD 5484",
@@ -4681,16 +4321,6 @@
       "status": "Posted"
     },
     {
-      "id": "b814a26b354a",
-      "date": "03/06/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 03/05 DAVE INC DAVE.COM CA S346064732983259 CARD 5484",
-      "amount": -287.55,
-      "category": "Transfer",
-      "subcategory": "Dave Repayment (Loan Out)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
       "id": "5ae3656ee46f",
       "date": "03/06/2026",
       "description": "ATM CASH DEPOSIT ON 03/06 3150 N FIVE MILE RD BOISE ID 0003995 ATM ID 1090D CARD 5484",
@@ -4737,26 +4367,6 @@
       "amount": 83.34,
       "category": "Transfer",
       "subcategory": "Internal - In",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
-      "id": "2202ed19bf8d",
-      "date": "03/05/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 03/05 FROM ERIC MILLS CA S356064733456788 CARD 5484",
-      "amount": 75.0,
-      "category": "Transfer",
-      "subcategory": "Dave Advance (Loan In)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
-      "id": "ff8ee8a2cc09",
-      "date": "03/05/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 03/05 FROM ERIC MILLS CA S586064733261496 CARD 5484",
-      "amount": 225.0,
-      "category": "Transfer",
-      "subcategory": "Dave Advance (Loan In)",
       "is_business": false,
       "status": "Posted"
     },
@@ -4921,36 +4531,6 @@
       "status": "Posted"
     },
     {
-      "id": "a31b4bbdf727",
-      "date": "03/02/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 03/01 DAVE INC DAVE.COM CA S586060679330652 CARD 5484",
-      "amount": -317.5,
-      "category": "Transfer",
-      "subcategory": "Dave Repayment (Loan Out)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
-      "id": "ff4ada5155be",
-      "date": "03/02/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 02/27 DAVE INC DAVE.COM CA S386058579518405 CARD 5484",
-      "amount": -3.25,
-      "category": "Transfer",
-      "subcategory": "Dave Repayment (Loan Out)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
-      "id": "76f7bc7889ff",
-      "date": "03/02/2026",
-      "description": "MONEY TRANSFER AUTHORIZED ON 03/01 FROM ERIC MILLS CA S346060679660826 CARD 5484",
-      "amount": 270.0,
-      "category": "Transfer",
-      "subcategory": "Dave Advance (Loan In)",
-      "is_business": false,
-      "status": "Posted"
-    },
-    {
       "id": "4bd3db1850c9",
       "date": "03/02/2026",
       "description": "ATM CASH DEPOSIT ON 03/01 5161 W OVERLAND ROAD BOISE ID 0005291 ATM ID 7541D CARD 5484",
@@ -4983,7 +4563,7 @@
   ],
   "monthly_summaries": {
     "2026-02": {
-      "income": 0,
+      "income": 0.0,
       "expenses": 15.85,
       "net": -15.85,
       "by_category": {
@@ -5002,9 +4582,9 @@
         "Fixed Bills": -1407.58,
         "Subscriptions": -863.02,
         "Personal": -744.47,
-        "Transfer": 1705.86,
         "Fees & Interest": -71.55,
         "Income": 4814.24,
+        "Transfer": 1985.66,
         "Business Expense": -120.58,
         "Health": -123.94,
         "Vehicle": -497.1
@@ -5014,13 +4594,11 @@
         "AI - Abacus": -320.0,
         "AI - GalaxyAI": -14.99,
         "Storage / Moving": -199.9,
-        "Dave Advance (Loan In)": 970.0,
         "Cash Advance Fee (Overdraft)": -56.0,
         "Cash Advance Fee (Express)": -14.55,
         "SRB Tips (Actual)": 1996.0,
         "Entertainment - Audible": -15.85,
         "Food & Dining": -129.7,
-        "Dave Repayment (Loan Out)": -1249.8,
         "Cash Deposit - SRB Tips (see SRB tracker)": 1979.0,
         "Uber Earnings": 1818.23,
         "Internal - In": 655.26,
@@ -5056,7 +4634,7 @@
         "Entertainment - SiriusXM": -12.86,
         "AI - Controlla": -48.0
       },
-      "transaction_count": 158
+      "transaction_count": 145
     },
     "2026-04": {
       "income": 3640.04,
@@ -5070,7 +4648,7 @@
         "Fees & Interest": -87.25,
         "Business Expense": -228.68,
         "Fixed Bills": -1087.09,
-        "Transfer": 1537.41,
+        "Transfer": 1520.66,
         "Debt Repayment": -50.0,
         "DJ/Music": -42.39,
         "Savings": -55.0
@@ -5088,12 +4666,10 @@
         "Uber - Charging": -206.8,
         "Misc": -1.25,
         "Court Fee (Monthly)": -51.75,
-        "Dave Advance (Loan In)": 1150.0,
         "Snap Finance Loan": -28.26,
         "Internal - Out": -1220.64,
         "Personal Debt": -50.0,
         "DJ - LALAL.AI": -9.99,
-        "Dave Repayment (Loan Out)": -1133.25,
         "Internal - In": 902.3,
         "Cash Deposit - SRB Tips (see SRB tracker)": 1839.0,
         "ATM Fee": -3.0,
@@ -5119,7 +4695,7 @@
         "Entertainment - SiriusXM": -12.86,
         "Groceries": -45.05
       },
-      "transaction_count": 218
+      "transaction_count": 195
     },
     "2026-05": {
       "income": 3923.24,
@@ -5130,9 +4706,9 @@
         "Fixed Bills": -1571.77,
         "Personal": -600.72,
         "Business Expense": -163.03,
-        "Transfer": 1069.31,
         "Subscriptions": -437.71,
         "Savings": -130.0,
+        "Transfer": 1008.48,
         "Health": -79.09,
         "Fees & Interest": -1.0
       },
@@ -5142,10 +4718,8 @@
         "Credit Card Payment": -355.7,
         "Convenience Store": -152.71,
         "Uber - Charging": -163.03,
-        "Dave Repayment (Loan Out)": -584.17,
         "DJ - LALAL.AI": -9.99,
         "DJ - Beatsource": -69.98,
-        "Dave Advance (Loan In)": 645.0,
         "SRB Paycheck": 1237.48,
         "Food & Dining": -64.48,
         "Atlas SmartSave": -130.0,
@@ -5177,10 +4751,10 @@
         "Tech - iDrive": -11.99,
         "Shopping - Amazon": -63.58
       },
-      "transaction_count": 121
+      "transaction_count": 115
     }
   },
-  "last_updated": "2026-05-27T01:17:02.000Z",
+  "last_updated": "2026-05-27T21:14:37.000Z",
   "source": "Wells Fargo Checking - Card 5484",
   "dave_summary": {
     "march": {
