@@ -1271,6 +1271,26 @@
       "status": "Posted"
     },
     {
+      "id": "09384ee3c9c2",
+      "date": "04/30/2026",
+      "description": "DAVE EXTRACASH OVERDRAFT FEES - APRIL (OFFICIAL STMT)",
+      "amount": -70.0,
+      "category": "Debt Repayment",
+      "subcategory": "Cash Advance Fee (Overdraft)",
+      "is_business": false,
+      "status": "Statement"
+    },
+    {
+      "id": "81d9aa102245",
+      "date": "04/30/2026",
+      "description": "DAVE EXTRACASH EXPRESS FEES - APRIL (OFFICIAL STMT)",
+      "amount": -17.25,
+      "category": "Debt Repayment",
+      "subcategory": "Cash Advance Fee (Express)",
+      "is_business": false,
+      "status": "Statement"
+    },
+    {
       "id": "4d08dde259b4",
       "date": "04/29/2026",
       "description": "PURCHASE AUTHORIZED ON 04/28 MAVERIK #503 BOISE ID S586119158745634 CARD 5484",
@@ -3451,6 +3471,26 @@
       "status": "Posted"
     },
     {
+      "id": "2cd62370eceb",
+      "date": "03/31/2026",
+      "description": "DAVE EXTRACASH OVERDRAFT FEES - MARCH (OFFICIAL STMT)",
+      "amount": -56.0,
+      "category": "Debt Repayment",
+      "subcategory": "Cash Advance Fee (Overdraft)",
+      "is_business": false,
+      "status": "Statement"
+    },
+    {
+      "id": "55ca0a2d7c1d",
+      "date": "03/31/2026",
+      "description": "DAVE EXTRACASH EXPRESS FEES - MARCH (OFFICIAL STMT)",
+      "amount": -14.55,
+      "category": "Debt Repayment",
+      "subcategory": "Cash Advance Fee (Express)",
+      "is_business": false,
+      "status": "Statement"
+    },
+    {
       "id": "53747006af75",
       "date": "03/30/2026",
       "description": "RECURRING PAYMENT AUTHORIZED ON 03/30 ABACUS.AI ABACUS.AI CA S586089274148685 CARD 5484",
@@ -4926,14 +4966,14 @@
     },
     "2026-03": {
       "income": 5767.24,
-      "expenses": 5007.49,
-      "net": 759.75,
+      "expenses": 5078.04,
+      "net": 689.2,
       "by_category": {
         "Fixed Bills": -1407.58,
         "Subscriptions": -863.02,
         "Personal": -744.47,
         "Income": 5767.24,
-        "Debt Repayment": -1250.8,
+        "Debt Repayment": -1321.35,
         "Transfer": 6.66,
         "Business Expense": -120.58,
         "Health": -123.94,
@@ -4945,6 +4985,8 @@
         "AI - GalaxyAI": -14.99,
         "Storage / Moving": -199.9,
         "Cash Advance - Dave": 970.0,
+        "Cash Advance Fee (Overdraft)": -56.0,
+        "Cash Advance Fee (Express)": -14.55,
         "Entertainment - Audible": -15.85,
         "Food & Dining": -129.7,
         "Cash Advance Repayment": -1249.8,
@@ -4983,21 +5025,21 @@
         "Entertainment - SiriusXM": -12.86,
         "AI - Controlla": -48.0
       },
-      "transaction_count": 155
+      "transaction_count": 157
     },
     "2026-04": {
       "income": 5027.04,
-      "expenses": 5464.95,
-      "net": -437.91,
+      "expenses": 5552.2,
+      "net": -525.16,
       "by_category": {
         "Subscriptions": -428.66,
         "Personal": -1941.01,
         "Health": -353.87,
         "Income": 5027.04,
+        "Debt Repayment": -1415.5,
         "Business Expense": -228.68,
         "Fixed Bills": -1087.09,
         "Transfer": -318.34,
-        "Debt Repayment": -1328.25,
         "DJ/Music": -42.39,
         "Savings": -55.0
       },
@@ -5008,6 +5050,8 @@
         "Entertainment - Audible": -15.85,
         "Food & Dining": -210.37,
         "Uber Earnings": 909.26,
+        "Cash Advance Fee (Overdraft)": -70.0,
+        "Cash Advance Fee (Express)": -17.25,
         "Uber - Charging": -206.8,
         "Misc": -1.25,
         "Court Fee (Monthly)": -51.75,
@@ -5042,7 +5086,7 @@
         "Entertainment - SiriusXM": -12.86,
         "Groceries": -45.05
       },
-      "transaction_count": 215
+      "transaction_count": 217
     },
     "2026-05": {
       "income": 3801.24,
@@ -5102,6 +5146,34 @@
       "transaction_count": 120
     }
   },
-  "last_updated": "2026-05-27T00:26:09.000Z",
-  "source": "Wells Fargo Checking - Card 5484"
+  "last_updated": "2026-05-27T00:35:52.000Z",
+  "source": "Wells Fargo Checking - Card 5484",
+  "dave_summary": {
+    "march": {
+      "advanced": 970.0,
+      "fees_overdraft": 56.0,
+      "fees_express": 14.55,
+      "total_fees": 70.55,
+      "ending_balance": -111.5
+    },
+    "april": {
+      "advanced": 1150.0,
+      "fees_overdraft": 70.0,
+      "fees_express": 17.25,
+      "total_fees": 87.25,
+      "ending_balance": -215.5
+    },
+    "may": {
+      "advanced": null,
+      "fees_overdraft": null,
+      "fees_express": null,
+      "total_fees": null,
+      "ending_balance": null,
+      "note": "Statement not yet available"
+    },
+    "confirmed_total_fees": 157.8,
+    "confirmed_total_advanced": 2120.0,
+    "fee_rate_pct": 7.44,
+    "balance_owed_may1": -215.5
+  }
 }
