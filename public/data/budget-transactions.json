@@ -1,6 +1,16 @@
 {
   "transactions": [
     {
+      "id": "63789130a058",
+      "date": "05/31/2026",
+      "description": "SRB TIPS - MAY 2026 (from SRB tracker, partial)",
+      "amount": 1739.0,
+      "category": "Income",
+      "subcategory": "SRB Tips (Actual)",
+      "is_business": false,
+      "status": "Tracker"
+    },
+    {
       "id": "69acd0f26ab7",
       "date": "05/27/2026",
       "description": "ADA COUNTY COURT 888-8916064 ID (MANUAL - MONTHLY)",
@@ -265,8 +275,8 @@
       "date": "05/18/2026",
       "description": "ATM CASH DEPOSIT ON 05/17 5161 W OVERLAND ROAD BOISE ID 0005638 ATM ID 7541D CARD 5484",
       "amount": 469.0,
-      "category": "Income",
-      "subcategory": "Cash Tips (SRB)",
+      "category": "Transfer",
+      "subcategory": "Cash Deposit - SRB Tips (see SRB tracker)",
       "is_business": false,
       "status": "Posted"
     },
@@ -585,8 +595,8 @@
       "date": "05/12/2026",
       "description": "ATM CASH DEPOSIT ON 05/11 5161 W OVERLAND ROAD BOISE ID 0004926 ATM ID 7541D CARD 5484",
       "amount": 140.0,
-      "category": "Income",
-      "subcategory": "Cash Tips (SRB)",
+      "category": "Transfer",
+      "subcategory": "Cash Deposit - SRB Tips (see SRB tracker)",
       "is_business": false,
       "status": "Posted"
     },
@@ -985,8 +995,8 @@
       "date": "05/05/2026",
       "description": "ATM CASH DEPOSIT ON 05/05 5161 W OVERLAND ROAD BOISE ID 0003968 ATM ID 7541D CARD 5484",
       "amount": 155.0,
-      "category": "Income",
-      "subcategory": "Cash Tips (SRB)",
+      "category": "Transfer",
+      "subcategory": "Cash Deposit - SRB Tips (see SRB tracker)",
       "is_business": false,
       "status": "Posted"
     },
@@ -1145,8 +1155,8 @@
       "date": "05/04/2026",
       "description": "ATM CASH DEPOSIT ON 05/02 5161 W OVERLAND ROAD BOISE ID 0003474 ATM ID 7541D CARD 5484",
       "amount": 208.0,
-      "category": "Income",
-      "subcategory": "Cash Tips (SRB)",
+      "category": "Transfer",
+      "subcategory": "Cash Deposit - SRB Tips (see SRB tracker)",
       "is_business": false,
       "status": "Posted"
     },
@@ -1289,6 +1299,16 @@
       "subcategory": "Cash Advance Fee (Express)",
       "is_business": false,
       "status": "Statement"
+    },
+    {
+      "id": "0a3ab60f8aac",
+      "date": "04/30/2026",
+      "description": "SRB TIPS - APRIL 2026 (from SRB tracker)",
+      "amount": 1602.0,
+      "category": "Income",
+      "subcategory": "SRB Tips (Actual)",
+      "is_business": false,
+      "status": "Tracker"
     },
     {
       "id": "4d08dde259b4",
@@ -1775,8 +1795,8 @@
       "date": "04/27/2026",
       "description": "ATM CASH DEPOSIT ON 04/25 5161 W OVERLAND ROAD BOISE ID 0002607 ATM ID 7541D CARD 5484",
       "amount": 321.0,
-      "category": "Income",
-      "subcategory": "Cash Tips (SRB)",
+      "category": "Transfer",
+      "subcategory": "Cash Deposit - SRB Tips (see SRB tracker)",
       "is_business": false,
       "status": "Posted"
     },
@@ -2095,8 +2115,8 @@
       "date": "04/20/2026",
       "description": "ATM CASH DEPOSIT ON 04/19 5161 W OVERLAND ROAD BOISE ID 0001795 ATM ID 7541D CARD 5484",
       "amount": 234.0,
-      "category": "Income",
-      "subcategory": "Cash Tips (SRB)",
+      "category": "Transfer",
+      "subcategory": "Cash Deposit - SRB Tips (see SRB tracker)",
       "is_business": false,
       "status": "Posted"
     },
@@ -2135,8 +2155,8 @@
       "date": "04/20/2026",
       "description": "ATM CASH DEPOSIT ON 04/18 7700 W FAIRVIEW AVE BOISE ID 0008373 ATM ID 1076B CARD 5484",
       "amount": 56.0,
-      "category": "Income",
-      "subcategory": "Cash Tips (SRB)",
+      "category": "Transfer",
+      "subcategory": "Cash Deposit - SRB Tips (see SRB tracker)",
       "is_business": false,
       "status": "Posted"
     },
@@ -2165,8 +2185,8 @@
       "date": "04/17/2026",
       "description": "ATM CASH DEPOSIT ON 04/17 7700 W FAIRVIEW AVE BOISE ID 0008222 ATM ID 1076B CARD 5484",
       "amount": 22.0,
-      "category": "Income",
-      "subcategory": "Cash Tips (SRB)",
+      "category": "Transfer",
+      "subcategory": "Cash Deposit - SRB Tips (see SRB tracker)",
       "is_business": false,
       "status": "Posted"
     },
@@ -2175,8 +2195,8 @@
       "date": "04/17/2026",
       "description": "ATM CASH DEPOSIT ON 04/17 7700 W FAIRVIEW AVE BOISE ID 0008221 ATM ID 1076B CARD 5484",
       "amount": 10.0,
-      "category": "Income",
-      "subcategory": "Cash Tips (SRB)",
+      "category": "Transfer",
+      "subcategory": "Cash Deposit - SRB Tips (see SRB tracker)",
       "is_business": false,
       "status": "Posted"
     },
@@ -2245,8 +2265,8 @@
       "date": "04/16/2026",
       "description": "ATM CASH DEPOSIT ON 04/16 5161 W OVERLAND ROAD BOISE ID 0001413 ATM ID 7541D CARD 5484",
       "amount": 23.0,
-      "category": "Income",
-      "subcategory": "Cash Tips (SRB)",
+      "category": "Transfer",
+      "subcategory": "Cash Deposit - SRB Tips (see SRB tracker)",
       "is_business": false,
       "status": "Posted"
     },
@@ -2395,8 +2415,8 @@
       "date": "04/15/2026",
       "description": "ATM CASH DEPOSIT ON 04/15 5161 W OVERLAND ROAD BOISE ID 0001300 ATM ID 7541D CARD 5484",
       "amount": 159.0,
-      "category": "Income",
-      "subcategory": "Cash Tips (SRB)",
+      "category": "Transfer",
+      "subcategory": "Cash Deposit - SRB Tips (see SRB tracker)",
       "is_business": false,
       "status": "Posted"
     },
@@ -2535,8 +2555,8 @@
       "date": "04/14/2026",
       "description": "ATM CASH DEPOSIT ON 04/14 5161 W OVERLAND ROAD BOISE ID 0001157 ATM ID 7541D CARD 5484",
       "amount": 425.0,
-      "category": "Income",
-      "subcategory": "Cash Tips (SRB)",
+      "category": "Transfer",
+      "subcategory": "Cash Deposit - SRB Tips (see SRB tracker)",
       "is_business": false,
       "status": "Posted"
     },
@@ -3145,8 +3165,8 @@
       "date": "04/06/2026",
       "description": "ATM CASH DEPOSIT ON 04/04 5161 W OVERLAND ROAD BOISE ID 0009810 ATM ID 7541D CARD 5484",
       "amount": 327.0,
-      "category": "Income",
-      "subcategory": "Cash Tips (SRB)",
+      "category": "Transfer",
+      "subcategory": "Cash Deposit - SRB Tips (see SRB tracker)",
       "is_business": false,
       "status": "Posted"
     },
@@ -3225,8 +3245,8 @@
       "date": "04/03/2026",
       "description": "ATM CASH DEPOSIT ON 04/03 5161 W OVERLAND ROAD BOISE ID 0009707 ATM ID 7541D CARD 5484",
       "amount": 262.0,
-      "category": "Income",
-      "subcategory": "Cash Tips (SRB)",
+      "category": "Transfer",
+      "subcategory": "Cash Deposit - SRB Tips (see SRB tracker)",
       "is_business": false,
       "status": "Posted"
     },
@@ -3491,6 +3511,16 @@
       "status": "Statement"
     },
     {
+      "id": "1a2c83e1920a",
+      "date": "03/31/2026",
+      "description": "SRB TIPS - MARCH 2026 (from SRB tracker)",
+      "amount": 1996.0,
+      "category": "Income",
+      "subcategory": "SRB Tips (Actual)",
+      "is_business": false,
+      "status": "Tracker"
+    },
+    {
       "id": "53747006af75",
       "date": "03/30/2026",
       "description": "RECURRING PAYMENT AUTHORIZED ON 03/30 ABACUS.AI ABACUS.AI CA S586089274148685 CARD 5484",
@@ -3585,8 +3615,8 @@
       "date": "03/30/2026",
       "description": "ATM CASH DEPOSIT ON 03/30 877 W MAIN ST STE 100 BOISE ID 0008623 ATM ID 6383A CARD 5484",
       "amount": 30.0,
-      "category": "Income",
-      "subcategory": "Cash Tips (SRB)",
+      "category": "Transfer",
+      "subcategory": "Cash Deposit - SRB Tips (see SRB tracker)",
       "is_business": false,
       "status": "Posted"
     },
@@ -3595,8 +3625,8 @@
       "date": "03/30/2026",
       "description": "ATM CASH DEPOSIT ON 03/30 877 W MAIN ST STE 100 BOISE ID 0008622 ATM ID 6383A CARD 5484",
       "amount": 176.0,
-      "category": "Income",
-      "subcategory": "Cash Tips (SRB)",
+      "category": "Transfer",
+      "subcategory": "Cash Deposit - SRB Tips (see SRB tracker)",
       "is_business": false,
       "status": "Posted"
     },
@@ -3625,8 +3655,8 @@
       "date": "03/30/2026",
       "description": "ATM CASH DEPOSIT ON 03/28 5161 W OVERLAND ROAD BOISE ID 0008901 ATM ID 7541D CARD 5484",
       "amount": 546.0,
-      "category": "Income",
-      "subcategory": "Cash Tips (SRB)",
+      "category": "Transfer",
+      "subcategory": "Cash Deposit - SRB Tips (see SRB tracker)",
       "is_business": false,
       "status": "Posted"
     },
@@ -3845,8 +3875,8 @@
       "date": "03/20/2026",
       "description": "ATM CASH DEPOSIT ON 03/20 877 W MAIN ST STE 100 BOISE ID 0008039 ATM ID 6383A CARD 5484",
       "amount": 97.0,
-      "category": "Income",
-      "subcategory": "Cash Tips (SRB)",
+      "category": "Transfer",
+      "subcategory": "Cash Deposit - SRB Tips (see SRB tracker)",
       "is_business": false,
       "status": "Posted"
     },
@@ -3905,8 +3935,8 @@
       "date": "03/19/2026",
       "description": "ATM CASH DEPOSIT ON 03/19 877 W MAIN ST STE 100 BOISE ID 0008030 ATM ID 6383A CARD 5484",
       "amount": 26.0,
-      "category": "Income",
-      "subcategory": "Cash Tips (SRB)",
+      "category": "Transfer",
+      "subcategory": "Cash Deposit - SRB Tips (see SRB tracker)",
       "is_business": false,
       "status": "Posted"
     },
@@ -3945,8 +3975,8 @@
       "date": "03/18/2026",
       "description": "ATM CASH DEPOSIT ON 03/18 10342 W OVERLAND RD BOISE ID 0004685 ATM ID 4502A CARD 5484",
       "amount": 132.0,
-      "category": "Income",
-      "subcategory": "Cash Tips (SRB)",
+      "category": "Transfer",
+      "subcategory": "Cash Deposit - SRB Tips (see SRB tracker)",
       "is_business": false,
       "status": "Posted"
     },
@@ -4285,8 +4315,8 @@
       "date": "03/12/2026",
       "description": "ATM CASH DEPOSIT ON 03/12 5161 W OVERLAND ROAD BOISE ID 0006815 ATM ID 7541D CARD 5484",
       "amount": 250.0,
-      "category": "Income",
-      "subcategory": "Cash Tips (SRB)",
+      "category": "Transfer",
+      "subcategory": "Cash Deposit - SRB Tips (see SRB tracker)",
       "is_business": false,
       "status": "Posted"
     },
@@ -4595,8 +4625,8 @@
       "date": "03/09/2026",
       "description": "ATM CASH DEPOSIT ON 03/09 1205 S BROADWAY AVE BOISE ID 0009302 ATM ID 4502F CARD 5484",
       "amount": 135.0,
-      "category": "Income",
-      "subcategory": "Cash Tips (SRB)",
+      "category": "Transfer",
+      "subcategory": "Cash Deposit - SRB Tips (see SRB tracker)",
       "is_business": false,
       "status": "Posted"
     },
@@ -4665,8 +4695,8 @@
       "date": "03/06/2026",
       "description": "ATM CASH DEPOSIT ON 03/06 3150 N FIVE MILE RD BOISE ID 0003995 ATM ID 1090D CARD 5484",
       "amount": 61.0,
-      "category": "Income",
-      "subcategory": "Cash Tips (SRB)",
+      "category": "Transfer",
+      "subcategory": "Cash Deposit - SRB Tips (see SRB tracker)",
       "is_business": false,
       "status": "Posted"
     },
@@ -4735,8 +4765,8 @@
       "date": "03/05/2026",
       "description": "ATM CASH DEPOSIT ON 03/05 5161 W OVERLAND ROAD BOISE ID 0005889 ATM ID 7541D CARD 5484",
       "amount": 167.0,
-      "category": "Income",
-      "subcategory": "Cash Tips (SRB)",
+      "category": "Transfer",
+      "subcategory": "Cash Deposit - SRB Tips (see SRB tracker)",
       "is_business": false,
       "status": "Posted"
     },
@@ -4925,8 +4955,8 @@
       "date": "03/02/2026",
       "description": "ATM CASH DEPOSIT ON 03/01 5161 W OVERLAND ROAD BOISE ID 0005291 ATM ID 7541D CARD 5484",
       "amount": 359.0,
-      "category": "Income",
-      "subcategory": "Cash Tips (SRB)",
+      "category": "Transfer",
+      "subcategory": "Cash Deposit - SRB Tips (see SRB tracker)",
       "is_business": false,
       "status": "Posted"
     },
@@ -4965,16 +4995,16 @@
       "transaction_count": 1
     },
     "2026-03": {
-      "income": 5767.24,
+      "income": 5784.24,
       "expenses": 5078.04,
-      "net": 689.2,
+      "net": 706.2,
       "by_category": {
         "Fixed Bills": -1407.58,
         "Subscriptions": -863.02,
         "Personal": -744.47,
-        "Income": 5767.24,
+        "Income": 5784.24,
         "Debt Repayment": -1321.35,
-        "Transfer": 6.66,
+        "Transfer": 1985.66,
         "Business Expense": -120.58,
         "Health": -123.94,
         "Vehicle": -497.1
@@ -4987,10 +5017,11 @@
         "Cash Advance - Dave": 970.0,
         "Cash Advance Fee (Overdraft)": -56.0,
         "Cash Advance Fee (Express)": -14.55,
+        "SRB Tips (Actual)": 1996.0,
         "Entertainment - Audible": -15.85,
         "Food & Dining": -129.7,
         "Cash Advance Repayment": -1249.8,
-        "Cash Tips (SRB)": 1979.0,
+        "Cash Deposit - SRB Tips (see SRB tracker)": 1979.0,
         "Uber Earnings": 1818.23,
         "Internal - In": 655.26,
         "Court Fee (Monthly)": -51.75,
@@ -5025,21 +5056,21 @@
         "Entertainment - SiriusXM": -12.86,
         "AI - Controlla": -48.0
       },
-      "transaction_count": 157
+      "transaction_count": 158
     },
     "2026-04": {
-      "income": 5027.04,
+      "income": 4790.04,
       "expenses": 5552.2,
-      "net": -525.16,
+      "net": -762.16,
       "by_category": {
         "Subscriptions": -428.66,
         "Personal": -2086.01,
         "Health": -353.87,
-        "Income": 5027.04,
+        "Income": 4790.04,
         "Debt Repayment": -1270.5,
         "Business Expense": -228.68,
         "Fixed Bills": -1087.09,
-        "Transfer": -318.34,
+        "Transfer": 1520.66,
         "DJ/Music": -42.39,
         "Savings": -55.0
       },
@@ -5052,6 +5083,7 @@
         "Uber Earnings": 909.26,
         "Cash Advance Fee (Overdraft)": -70.0,
         "Cash Advance Fee (Express)": -17.25,
+        "SRB Tips (Actual)": 1602.0,
         "Uber - Charging": -206.8,
         "Misc": -1.25,
         "Court Fee (Monthly)": -51.75,
@@ -5062,7 +5094,7 @@
         "DJ - LALAL.AI": -9.99,
         "Cash Advance Repayment": -1133.25,
         "Internal - In": 902.3,
-        "Cash Tips (SRB)": 1839.0,
+        "Cash Deposit - SRB Tips (see SRB tracker)": 1839.0,
         "ATM Fee": -3.0,
         "ATM Cash Withdrawal": -63.0,
         "AI - GalaxyAI": -14.99,
@@ -5086,24 +5118,25 @@
         "Entertainment - SiriusXM": -12.86,
         "Groceries": -45.05
       },
-      "transaction_count": 217
+      "transaction_count": 218
     },
     "2026-05": {
-      "income": 3801.24,
+      "income": 4568.24,
       "expenses": 3567.49,
-      "net": 233.75,
+      "net": 1000.75,
       "by_category": {
+        "Income": 4568.24,
         "Fixed Bills": -1571.77,
         "Personal": -600.72,
         "Business Expense": -163.03,
         "Debt Repayment": -585.17,
         "Subscriptions": -437.71,
-        "Income": 3801.24,
         "Savings": -130.0,
-        "Transfer": 36.48,
+        "Transfer": 1008.48,
         "Health": -79.09
       },
       "by_subcategory": {
+        "SRB Tips (Actual)": 1739.0,
         "Court Fee (Monthly)": -51.75,
         "Credit Card Payment": -355.7,
         "Convenience Store": -152.71,
@@ -5118,7 +5151,7 @@
         "DJ - Suno AI": -10.73,
         "Insurance": -300.0,
         "Uber Earnings": 946.76,
-        "Cash Tips (SRB)": 972.0,
+        "Cash Deposit - SRB Tips (see SRB tracker)": 972.0,
         "Entertainment - Netflix": -8.99,
         "Entertainment - Spotify": -13.93,
         "AI - Abacus": -220.0,
@@ -5143,10 +5176,10 @@
         "Tech - iDrive": -11.99,
         "Shopping - Amazon": -63.58
       },
-      "transaction_count": 120
+      "transaction_count": 121
     }
   },
-  "last_updated": "2026-05-27T00:42:24.000Z",
+  "last_updated": "2026-05-27T01:05:59.000Z",
   "source": "Wells Fargo Checking - Card 5484",
   "dave_summary": {
     "march": {
@@ -5175,5 +5208,14 @@
     "confirmed_total_advanced": 2120.0,
     "fee_rate_pct": 7.44,
     "balance_owed_may1": -215.5
+  },
+  "declared_tips_note": {
+    "explanation": "Option A: SRB tracker is source of truth for tips. ATM deposits reclassified as transfers. Declared tips on W-2 are subset of SRB totals \u2014 not separate income.",
+    "declared_by_month": {
+      "2026-02": 400.0,
+      "2026-03": 875.0,
+      "2026-04": 730.0,
+      "2026-05": 355.0
+    }
   }
 }
