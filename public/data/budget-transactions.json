@@ -1,6 +1,16 @@
 {
   "transactions": [
     {
+      "id": "69acd0f26ab7",
+      "date": "05/27/2026",
+      "description": "ADA COUNTY COURT 888-8916064 ID (MANUAL - MONTHLY)",
+      "amount": -51.75,
+      "category": "Fixed Bills",
+      "subcategory": "Court Fee (Monthly)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
       "id": "65182d02c6e7",
       "date": "05/22/2026",
       "description": "ATLASFINANCIAL SMARTPAY 11N10M989YS2ZJJ ERIC MILLS",
@@ -3581,6 +3591,16 @@
       "status": "Posted"
     },
     {
+      "id": "887de388c74c",
+      "date": "03/27/2026",
+      "description": "ADA COUNTY COURT 888-8916064 ID (MANUAL - MONTHLY)",
+      "amount": -51.75,
+      "category": "Fixed Bills",
+      "subcategory": "Court Fee (Monthly)",
+      "is_business": false,
+      "status": "Posted"
+    },
+    {
       "id": "c59db9e7ac79",
       "date": "03/25/2026",
       "description": "ATLASFINANCIAL SMARTPAY 11MW7NMT97NGM8R ERIC MILLS",
@@ -4906,17 +4926,16 @@
     },
     "2026-03": {
       "income": 4797.24,
-      "expenses": 4950.74,
-      "net": -153.5,
+      "expenses": 5007.49,
+      "net": -210.25,
       "by_category": {
-        "Fixed Bills": -1355.83,
-        "Subscriptions": -858.02,
+        "Fixed Bills": -1407.58,
+        "Subscriptions": -863.02,
         "Personal": -744.47,
         "Transfer": 976.66,
         "Debt Repayment": -1250.8,
         "Income": 4797.24,
         "Business Expense": -120.58,
-        "\u2753 Uncategorized": -5.0,
         "Health": -123.94,
         "Vehicle": -497.1
       },
@@ -4931,6 +4950,7 @@
         "Cash Advance Repayment": -1249.8,
         "Cash Tips (SRB)": 1979.0,
         "Uber Earnings": 1818.23,
+        "Court Fee (Monthly)": -51.75,
         "Internal - Out": -648.6,
         "Shopping - Amazon": -112.69,
         "Uber - Charging": -120.58,
@@ -4946,7 +4966,7 @@
         "Entertainment - Netflix": -7.99,
         "Education": -88.99,
         "Travel - Toll": -49.3,
-        "RECURRING PAYMENT AUTHORIZED ON 03/12 PHOTOBUCKET ": -5.0,
+        "\u26a0\ufe0f Photobucket (CANCEL - not using)": -5.0,
         "Car Payment": -745.99,
         "Car Wash Subscription": -22.99,
         "DJ - SoundCloud": -6.25,
@@ -4962,7 +4982,7 @@
         "Entertainment - SiriusXM": -12.86,
         "AI - Controlla": -48.0
       },
-      "transaction_count": 154
+      "transaction_count": 155
     },
     "2026-04": {
       "income": 3877.04,
@@ -5024,10 +5044,10 @@
     },
     "2026-05": {
       "income": 3156.24,
-      "expenses": 3515.74,
-      "net": -359.5,
+      "expenses": 3567.49,
+      "net": -411.25,
       "by_category": {
-        "Fixed Bills": -1520.02,
+        "Fixed Bills": -1571.77,
         "Personal": -600.72,
         "Business Expense": -163.03,
         "Debt Repayment": -585.17,
@@ -5038,6 +5058,7 @@
         "Health": -79.09
       },
       "by_subcategory": {
+        "Court Fee (Monthly)": -51.75,
         "Credit Card Payment": -355.7,
         "Convenience Store": -152.71,
         "Uber - Charging": -163.03,
@@ -5075,9 +5096,9 @@
         "Tech - iDrive": -11.99,
         "Shopping - Amazon": -63.58
       },
-      "transaction_count": 119
+      "transaction_count": 120
     }
   },
-  "last_updated": "2026-05-27T00:01:09.000Z",
+  "last_updated": "2026-05-27T00:16:24.000Z",
   "source": "Wells Fargo Checking - Card 5484"
 }
