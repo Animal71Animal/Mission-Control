@@ -1815,8 +1815,8 @@
       "date": "04/24/2026",
       "description": "MONEY TRANSFER AUTHORIZED ON 04/23 CASH APP*FRANKIE P OAKLAND CA S306113704442661 CARD 5484",
       "amount": -145.0,
-      "category": "Debt Repayment",
-      "subcategory": "Personal Debt",
+      "category": "Personal",
+      "subcategory": "Recreation",
       "is_business": false,
       "status": "Posted"
     },
@@ -5033,10 +5033,10 @@
       "net": -525.16,
       "by_category": {
         "Subscriptions": -428.66,
-        "Personal": -1941.01,
+        "Personal": -2086.01,
         "Health": -353.87,
         "Income": 5027.04,
-        "Debt Repayment": -1415.5,
+        "Debt Repayment": -1270.5,
         "Business Expense": -228.68,
         "Fixed Bills": -1087.09,
         "Transfer": -318.34,
@@ -5058,7 +5058,7 @@
         "Cash Advance - Dave": 1150.0,
         "Snap Finance Loan": -28.26,
         "Internal - Out": -1220.64,
-        "Personal Debt": -195.0,
+        "Personal Debt": -50.0,
         "DJ - LALAL.AI": -9.99,
         "Cash Advance Repayment": -1133.25,
         "Internal - In": 902.3,
@@ -5066,13 +5066,13 @@
         "ATM Fee": -3.0,
         "ATM Cash Withdrawal": -63.0,
         "AI - GalaxyAI": -14.99,
+        "Recreation": -161.37,
         "SRB Paycheck": 1105.03,
         "Shopping": -86.36,
         "DJ - Suno AI": -10.73,
         "Equipment": -42.39,
         "Car Payment": -745.99,
         "Entertainment - Netflix": -7.99,
-        "Recreation": -16.37,
         "Other Income": 23.75,
         "Credit Card Payment": -136.68,
         "Uber - Tablet/Fees": -21.88,
@@ -5146,7 +5146,7 @@
       "transaction_count": 120
     }
   },
-  "last_updated": "2026-05-27T00:35:52.000Z",
+  "last_updated": "2026-05-27T00:42:24.000Z",
   "source": "Wells Fargo Checking - Card 5484",
   "dave_summary": {
     "march": {
