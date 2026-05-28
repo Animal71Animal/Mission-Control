@@ -22,7 +22,7 @@
     },
     {
       "month": "May",
-      "amount": 1954,
+      "amount": 1989,
       "nights": 12
     }
   ],
@@ -777,8 +777,8 @@
       "feb": 95,
       "mar": 87,
       "apr": 46,
-      "may": 55,
-      "total": 303
+      "may": 80,
+      "total": 328
     },
     {
       "name": "Georgia",
@@ -849,8 +849,8 @@
       "feb": 10,
       "mar": 85,
       "apr": 0,
-      "may": 0,
-      "total": 160
+      "may": 10,
+      "total": 170
     },
     {
       "name": "Natasha",
@@ -5491,7 +5491,7 @@
       },
       {
         "date": "Wed May 28",
-        "total": 55,
+        "total": 90,
         "dancers": [
           {
             "name": "Berlin",
@@ -5512,6 +5512,14 @@
           {
             "name": "Asia",
             "amount": 15
+          },
+          {
+            "name": "Allie",
+            "amount": 25
+          },
+          {
+            "name": "Athena",
+            "amount": 10
           }
         ]
       }
