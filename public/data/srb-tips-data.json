@@ -22,8 +22,8 @@
     },
     {
       "month": "May",
-      "amount": 1899,
-      "nights": 10
+      "amount": 1954,
+      "nights": 12
     }
   ],
   "topTippers": [
@@ -840,8 +840,8 @@
       "feb": 45,
       "mar": 35,
       "apr": 10,
-      "may": 56,
-      "total": 174
+      "may": 66,
+      "total": 184
     },
     {
       "name": "Athena",
@@ -984,8 +984,8 @@
       "feb": 45,
       "mar": 35,
       "apr": 0,
-      "may": 13,
-      "total": 93
+      "may": 28,
+      "total": 108
     },
     {
       "name": "Tiana",
@@ -1038,8 +1038,8 @@
       "feb": 0,
       "mar": 5,
       "apr": 25,
-      "may": 0,
-      "total": 61
+      "may": 15,
+      "total": 76
     },
     {
       "name": "Brittany",
@@ -1191,8 +1191,8 @@
       "feb": 0,
       "mar": 0,
       "apr": 0,
-      "may": 35,
-      "total": 35
+      "may": 40,
+      "total": 40
     },
     {
       "name": "Ava",
@@ -1382,6 +1382,15 @@
       "apr": 0,
       "may": 0,
       "total": 0
+    },
+    {
+      "name": "Poppy",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 10,
+      "total": 10
     }
   ],
   "dailyTips": [
