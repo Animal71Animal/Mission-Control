@@ -82,7 +82,7 @@ export default function UberEarningsPage() {
   const [expandedMonths, setExpandedMonths] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
-    fetch("/api/uber-profit")
+    fetch("/api/uber-earnings")
       .then((r) => r.json())
       .then((d) => {
         // API returns uber-earnings.json directly

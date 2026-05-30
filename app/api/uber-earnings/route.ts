@@ -37,7 +37,7 @@ function fetchFromLocal() {
       return JSON.parse(fs.readFileSync(LOCAL_PATH, 'utf-8'));
     }
   } catch (e) {
-    console.error('[uber-profit] Local read failed:', e);
+    console.error('[uber-earnings] Local read failed:', e);
   }
   return null;
 }
@@ -47,7 +47,7 @@ export async function GET() {
     const data = await fetchFromGitHub();
     return NextResponse.json(data);
   } catch (err) {
-    console.error('[uber-profit] GitHub failed, falling back to local:', err);
+    console.error('[uber-earnings] GitHub failed, falling back to local:', err);
     const localData = fetchFromLocal();
     if (localData) {
       return NextResponse.json(localData);
