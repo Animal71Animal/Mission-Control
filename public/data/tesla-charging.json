@@ -728,7 +728,7 @@
     "average_cost_per_session": 15.45,
     "last_updated": "2026-05-14T04:30:00.000Z"
   },
-  "last_updated": "2026-05-30T21:15:00Z",
+  "last_updated": "2026-05-30T21:30:17.268832+00:00",
   "monthly_summary": {
     "2025-12": {
       "cost": 19.14,
@@ -768,9 +768,47 @@
     }
   },
   "totals": {
-    "total_cost": 1111.54,
-    "total_kwh": 3922.45,
     "total_sessions": 72,
+    "total_cost": 1111.54,
+    "total_kwh": 3922.4477,
     "avg_cost_per_session": 15.44
+  },
+  "monthlyTotals": {
+    "2025-12": {
+      "sessions": 1,
+      "cost": 19.14,
+      "kwh": 49.0797,
+      "avg_cost_per_session": 19.14
+    },
+    "2026-01": {
+      "sessions": 23,
+      "cost": 358.61,
+      "kwh": 1141.0938,
+      "avg_cost_per_session": 15.59
+    },
+    "2026-02": {
+      "sessions": 8,
+      "cost": 156.48,
+      "kwh": 521.4308,
+      "avg_cost_per_session": 19.56
+    },
+    "2026-03": {
+      "sessions": 15,
+      "cost": 213.41,
+      "kwh": 958.8128,
+      "avg_cost_per_session": 14.23
+    },
+    "2026-04": {
+      "sessions": 15,
+      "cost": 237.2,
+      "kwh": 788.335,
+      "avg_cost_per_session": 15.81
+    },
+    "2026-05": {
+      "sessions": 10,
+      "cost": 126.7,
+      "kwh": 463.6956,
+      "avg_cost_per_session": 12.67
+    }
   }
 }
