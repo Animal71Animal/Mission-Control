@@ -80,7 +80,7 @@ export default function PartyConceptsPage() {
               left: 0,
               right: 0,
               bottom: 0,
-              background: "linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.6) 100%)",
+              background: "linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.80) 100%)",
               zIndex: 1,
             }}
           />
@@ -119,7 +119,7 @@ export default function PartyConceptsPage() {
                 <span
                   style={{
                     fontSize: "0.8rem",
-                    color: concept.flyerImage ? "rgba(255,255,255,0.8)" : "var(--muted)",
+                    color: concept.flyerImage ? "rgba(255,255,255,1)" : "var(--muted)",
                   }}
                 >
                   {concept.frequency}
@@ -165,7 +165,7 @@ export default function PartyConceptsPage() {
             <div>
               <span
                 style={{
-                  color: concept.flyerImage ? "rgba(255,255,255,0.7)" : "var(--muted)",
+                  color: concept.flyerImage ? "rgba(255,255,255,0.95)" : "var(--muted)",
                   display: "block",
                   marginBottom: 4,
                   fontSize: "0.8rem",
@@ -178,7 +178,7 @@ export default function PartyConceptsPage() {
             <div>
               <span
                 style={{
-                  color: concept.flyerImage ? "rgba(255,255,255,0.7)" : "var(--muted)",
+                  color: concept.flyerImage ? "rgba(255,255,255,0.95)" : "var(--muted)",
                   display: "block",
                   marginBottom: 4,
                   fontSize: "0.8rem",
@@ -191,7 +191,7 @@ export default function PartyConceptsPage() {
             <div>
               <span
                 style={{
-                  color: concept.flyerImage ? "rgba(255,255,255,0.7)" : "var(--muted)",
+                  color: concept.flyerImage ? "rgba(255,255,255,0.95)" : "var(--muted)",
                   display: "block",
                   marginBottom: 4,
                   fontSize: "0.8rem",
@@ -204,7 +204,7 @@ export default function PartyConceptsPage() {
             <div>
               <span
                 style={{
-                  color: concept.flyerImage ? "rgba(255,255,255,0.7)" : "var(--muted)",
+                  color: concept.flyerImage ? "rgba(255,255,255,0.95)" : "var(--muted)",
                   display: "block",
                   marginBottom: 4,
                   fontSize: "0.8rem",
@@ -217,7 +217,7 @@ export default function PartyConceptsPage() {
             <div style={{ gridColumn: "span 2" }}>
               <span
                 style={{
-                  color: concept.flyerImage ? "rgba(255,255,255,0.7)" : "var(--muted)",
+                  color: concept.flyerImage ? "rgba(255,255,255,0.95)" : "var(--muted)",
                   display: "block",
                   marginBottom: 4,
                   fontSize: "0.8rem",
