@@ -38,7 +38,6 @@ export const modules: Module[] = [
   { href: "/tesla", icon: "🚗", title: "Tesla", desc: "Charging session log and cost tracker.", status: "active", group: "personal" },
   { href: "/uber-earnings", icon: "💰", title: "Uber Earnings", desc: "Dashboard earnings + shift tracking with charging deduction.", status: "active", group: "personal" },
   { href: "/peptrak", icon: "💉", title: "PepTrak", desc: "Peptide dosing tracker — daily checklist, vial inventory, and schedule.", status: "active", group: "personal" },
-  { href: "/workout", icon: "🏋️", title: "Workout", desc: "Daily full-body routine with exercise tracking and progressive overload.", status: "active", group: "personal" },
 
   { href: "/brief", icon: "☀️", title: "Morning Brief", desc: "Daily weather, news, and task rundown. Delivered at 10 AM.", status: "active", group: "external" },
   { href: "/drive", icon: "📁", title: "Google Drive", desc: "12-folder organized Drive. Snapshot + restore available.", status: "active", group: "external" },
