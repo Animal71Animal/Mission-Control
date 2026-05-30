@@ -22,7 +22,7 @@
     },
     {
       "month": "May",
-      "amount": 1989,
+      "amount": 2027,
       "nights": 12
     }
   ],
@@ -141,8 +141,8 @@
       "feb": 27,
       "mar": 4,
       "apr": 38,
-      "may": 10,
-      "total": 168
+      "may": 48,
+      "total": 206
     },
     {
       "name": "Berlin",
@@ -831,8 +831,8 @@
       "feb": 27,
       "mar": 4,
       "apr": 38,
-      "may": 10,
-      "total": 168
+      "may": 48,
+      "total": 206
     },
     {
       "name": "Berlin",
@@ -2440,7 +2440,7 @@
       "total": 130
     }
   ],
-  "lastUpdated": "2026-05-28",
+  "lastUpdated": "2026-05-30",
   "nightlyData": {
     "January": [
       {
@@ -5491,7 +5491,7 @@
       },
       {
         "date": "Wed May 28",
-        "total": 90,
+        "total": 128,
         "dancers": [
           {
             "name": "Berlin",
@@ -5520,6 +5520,10 @@
           {
             "name": "Athena",
             "amount": 10
+          },
+          {
+            "name": "Mia",
+            "amount": 38
           }
         ]
       }
