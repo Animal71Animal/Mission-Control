@@ -22,8 +22,8 @@
     },
     {
       "month": "May",
-      "amount": 2027,
-      "nights": 12
+      "amount": 2234,
+      "nights": 13
     }
   ],
   "topTippers": [
@@ -141,8 +141,8 @@
       "feb": 27,
       "mar": 4,
       "apr": 38,
-      "may": 48,
-      "total": 206
+      "may": 53,
+      "total": 211
     },
     {
       "name": "Berlin",
@@ -159,8 +159,8 @@
       "feb": 10,
       "mar": 85,
       "apr": 0,
-      "may": 0,
-      "total": 160
+      "may": 50,
+      "total": 210
     },
     {
       "name": "Natasha",
@@ -168,8 +168,8 @@
       "feb": 15,
       "mar": 40,
       "apr": 60,
-      "may": 15,
-      "total": 155
+      "may": 20,
+      "total": 160
     },
     {
       "name": "Shelby",
@@ -186,8 +186,8 @@
       "feb": 40,
       "mar": 35,
       "apr": 35,
-      "may": 40,
-      "total": 170
+      "may": 45,
+      "total": 175
     },
     {
       "name": "Kendall",
@@ -204,8 +204,8 @@
       "feb": 25,
       "mar": 20,
       "apr": 65,
-      "may": 10,
-      "total": 144
+      "may": 30,
+      "total": 164
     },
     {
       "name": "Kody",
@@ -240,8 +240,8 @@
       "feb": 5,
       "mar": 6,
       "apr": 73,
-      "may": 40,
-      "total": 149
+      "may": 69,
+      "total": 178
     },
     {
       "name": "Milan",
@@ -258,8 +258,8 @@
       "feb": 14,
       "mar": 50,
       "apr": 33,
-      "may": 11,
-      "total": 118
+      "may": 31,
+      "total": 138
     },
     {
       "name": "Macy",
@@ -285,8 +285,8 @@
       "feb": 15,
       "mar": 15,
       "apr": 33,
-      "may": 13,
-      "total": 96
+      "may": 18,
+      "total": 101
     },
     {
       "name": "Asia",
@@ -411,8 +411,8 @@
       "feb": 0,
       "mar": 0,
       "apr": 0,
-      "may": 97,
-      "total": 97
+      "may": 137,
+      "total": 137
     },
     {
       "name": "Shiiva",
@@ -537,8 +537,8 @@
       "feb": 0,
       "mar": 0,
       "apr": 20,
-      "may": 0,
-      "total": 20
+      "may": 20,
+      "total": 40
     },
     {
       "name": "Viviana",
@@ -600,8 +600,8 @@
       "feb": 10,
       "mar": 0,
       "apr": 0,
-      "may": 0,
-      "total": 10
+      "may": 3,
+      "total": 13
     },
     {
       "name": "Jasmin",
@@ -692,6 +692,24 @@
       "apr": 0,
       "may": 0,
       "total": 0
+    },
+    {
+      "name": "Raven",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 5,
+      "total": 5
+    },
+    {
+      "name": "Shay",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 10,
+      "total": 10
     }
   ],
   "customerTips": [
@@ -831,8 +849,8 @@
       "feb": 27,
       "mar": 4,
       "apr": 38,
-      "may": 48,
-      "total": 206
+      "may": 53,
+      "total": 211
     },
     {
       "name": "Berlin",
@@ -849,8 +867,8 @@
       "feb": 10,
       "mar": 85,
       "apr": 0,
-      "may": 10,
-      "total": 170
+      "may": 50,
+      "total": 210
     },
     {
       "name": "Natasha",
@@ -858,8 +876,8 @@
       "feb": 15,
       "mar": 40,
       "apr": 60,
-      "may": 15,
-      "total": 155
+      "may": 20,
+      "total": 160
     },
     {
       "name": "Shelby",
@@ -876,8 +894,8 @@
       "feb": 40,
       "mar": 35,
       "apr": 35,
-      "may": 40,
-      "total": 170
+      "may": 45,
+      "total": 175
     },
     {
       "name": "Kendall",
@@ -894,8 +912,8 @@
       "feb": 25,
       "mar": 20,
       "apr": 65,
-      "may": 10,
-      "total": 144
+      "may": 30,
+      "total": 164
     },
     {
       "name": "Kody",
@@ -930,8 +948,8 @@
       "feb": 5,
       "mar": 6,
       "apr": 73,
-      "may": 40,
-      "total": 149
+      "may": 69,
+      "total": 178
     },
     {
       "name": "Milan",
@@ -948,8 +966,8 @@
       "feb": 14,
       "mar": 50,
       "apr": 33,
-      "may": 11,
-      "total": 118
+      "may": 31,
+      "total": 138
     },
     {
       "name": "Macy",
@@ -975,8 +993,8 @@
       "feb": 15,
       "mar": 15,
       "apr": 33,
-      "may": 13,
-      "total": 96
+      "may": 18,
+      "total": 101
     },
     {
       "name": "Asia",
@@ -1101,8 +1119,8 @@
       "feb": 0,
       "mar": 0,
       "apr": 0,
-      "may": 97,
-      "total": 97
+      "may": 137,
+      "total": 137
     },
     {
       "name": "Shiiva",
@@ -1227,8 +1245,8 @@
       "feb": 0,
       "mar": 0,
       "apr": 20,
-      "may": 0,
-      "total": 20
+      "may": 20,
+      "total": 40
     },
     {
       "name": "Viviana",
@@ -1290,8 +1308,8 @@
       "feb": 10,
       "mar": 0,
       "apr": 0,
-      "may": 0,
-      "total": 10
+      "may": 3,
+      "total": 13
     },
     {
       "name": "Jasmin",
@@ -1385,6 +1403,24 @@
     },
     {
       "name": "Poppy",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 10,
+      "total": 10
+    },
+    {
+      "name": "Raven",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 5,
+      "total": 5
+    },
+    {
+      "name": "Shay",
       "jan": 0,
       "feb": 0,
       "mar": 0,
@@ -5524,6 +5560,64 @@
           {
             "name": "Mia",
             "amount": 38
+          }
+        ]
+      },
+      {
+        "date": "Thu May 28",
+        "total": 207,
+        "dancers": [
+          {
+            "name": "Dior",
+            "amount": 5
+          },
+          {
+            "name": "Russia",
+            "amount": 3
+          },
+          {
+            "name": "Raven",
+            "amount": 5
+          },
+          {
+            "name": "Nova",
+            "amount": 5
+          },
+          {
+            "name": "Indie",
+            "amount": 29
+          },
+          {
+            "name": "Shay",
+            "amount": 10
+          },
+          {
+            "name": "Ari",
+            "amount": 40
+          },
+          {
+            "name": "Lilith",
+            "amount": 20
+          },
+          {
+            "name": "Mia",
+            "amount": 5
+          },
+          {
+            "name": "Quinn",
+            "amount": 20
+          },
+          {
+            "name": "Zara",
+            "amount": 20
+          },
+          {
+            "name": "Natasha",
+            "amount": 5
+          },
+          {
+            "name": "Athena",
+            "amount": 40
           }
         ]
       }
