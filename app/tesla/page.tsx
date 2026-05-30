@@ -108,7 +108,10 @@ export default function TeslaPage() {
     );
   }
 
-  const { sessions, monthly_summary } = data;
+  const { sessions, monthlyTotals, monthly_summary } = data;
+  
+  // Use monthlyTotals (authoritative) if available, fall back to monthly_summary (legacy)
+  const totalsData = monthlyTotals || monthly_summary || {};
 
   // Build session lookup by month
   const sessionsByMonth: Record<string, ChargingSession[]> = {};
@@ -118,19 +121,19 @@ export default function TeslaPage() {
     sessionsByMonth[mk].push(s);
   }
 
-  // YTD totals
-  const ytdCost = MONTH_ORDER.reduce((sum, k) => sum + (monthly_summary[k]?.cost ?? 0), 0);
-  const ytdKwh = MONTH_ORDER.reduce((sum, k) => sum + (monthly_summary[k]?.kwh ?? 0), 0);
-  const ytdSessions = MONTH_ORDER.reduce((sum, k) => sum + (monthly_summary[k]?.sessions ?? 0), 0);
-  const ytdMinutes = MONTH_ORDER.reduce((sum, k) => sum + (monthly_summary[k]?.minutes ?? 0), 0);
+  // YTD totals (from authoritative monthlyTotals)
+  const ytdCost = MONTH_ORDER.reduce((sum, k) => sum + (totalsData[k]?.cost ?? 0), 0);
+  const ytdKwh = MONTH_ORDER.reduce((sum, k) => sum + (totalsData[k]?.kwh ?? 0), 0);
+  const ytdSessions = MONTH_ORDER.reduce((sum, k) => sum + (totalsData[k]?.sessions ?? 0), 0);
+  const ytdMinutes = MONTH_ORDER.reduce((sum, k) => sum + (totalsData[k]?.minutes ?? 0), 0);
   const ytdMiles = ytdKwh * MILES_PER_KWH;
 
   // Best month (most kWh)
   const bestMonthKey = MONTH_ORDER.reduce((best, k) => {
-    return (monthly_summary[k]?.kwh ?? 0) > (monthly_summary[best]?.kwh ?? 0) ? k : best;
+    return (totalsData[k]?.kwh ?? 0) > (totalsData[best]?.kwh ?? 0) ? k : best;
   }, MONTH_ORDER[0]);
 
-  const selectedMonthData = selectedMonth ? monthly_summary[selectedMonth] : null;
+  const selectedMonthData = selectedMonth ? totalsData[selectedMonth] : null;
   const selectedSessions = selectedMonth ? (sessionsByMonth[selectedMonth] ?? []) : [];
 
   return (
@@ -157,7 +160,7 @@ export default function TeslaPage() {
         marginBottom: 28,
       }}>
         {MONTH_ORDER.map((key) => {
-          const m = monthly_summary[key];
+          const m = totalsData[key];
           if (!m) return null;
           const isSelected = selectedMonth === key;
           const isBest = key === bestMonthKey;
@@ -196,7 +199,7 @@ export default function TeslaPage() {
                 ${m.cost.toFixed(2)}
               </div>
               <div style={{ fontSize: "0.72rem", color: "var(--muted)", marginTop: 4 }}>
-                {m.sessions} sessions · {m.kwh.toFixed(0)} kWh
+                {m.sessions} sessions · {m.kwh.toFixed(1)} kWh
               </div>
             </button>
           );
