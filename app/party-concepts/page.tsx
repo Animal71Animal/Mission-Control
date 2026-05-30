@@ -16,6 +16,7 @@ interface PartyConcept {
   flyerDone: boolean;
   frequency: string;
   dayAssigned: string | null;
+  flyerImage?: string;
 }
 
 interface PartyConceptsData {
@@ -52,106 +53,185 @@ export default function PartyConceptsPage() {
   const approvedCount = [...weeklyMonthly, ...yearly].filter((c) => c.approved).length;
   const flyerCount = [...weeklyMonthly, ...yearly].filter((c) => c.flyerDone).length;
 
-  const renderConceptCard = (concept: PartyConcept) => (
-    <div
-      key={concept.id}
-      style={{
-        background: "var(--card)",
-        border: "1px solid rgba(155, 93, 229, 0.4)",
-        borderRadius: 12,
-        padding: 24,
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          alignItems: "flex-start",
-          justifyContent: "space-between",
-          marginBottom: 16,
-        }}
-      >
-        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          <span style={{ fontSize: "2rem" }}>{concept.icon}</span>
-          <div>
-            <h2 style={{ fontSize: "1.2rem", fontWeight: 600, margin: 0, color: "var(--text)" }}>
-              {concept.name}
-            </h2>
-            <span style={{ fontSize: "0.8rem", color: "var(--muted)" }}>{concept.frequency}</span>
+  const renderConceptCard = (concept: PartyConcept) => {
+    const cardStyle: React.CSSProperties = {
+      borderRadius: 12,
+      border: "1px solid rgba(155, 93, 229, 0.4)",
+      overflow: "hidden",
+      position: "relative",
+      minHeight: concept.flyerImage ? 500 : "auto",
+    };
+
+    // If flyer image exists, use it as background with overlay
+    if (concept.flyerImage) {
+      cardStyle.backgroundImage = `url(${concept.flyerImage})`;
+      cardStyle.backgroundSize = "cover";
+      cardStyle.backgroundPosition = "center";
+    }
+
+    return (
+      <div key={concept.id} style={cardStyle}>
+        {/* Dark overlay for text legibility on flyer background */}
+        {concept.flyerImage && (
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              background: "linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.6) 100%)",
+              zIndex: 1,
+            }}
+          />
+        )}
+
+        {/* Content */}
+        <div
+          style={{
+            position: "relative",
+            zIndex: 2,
+            padding: 24,
+            background: !concept.flyerImage ? "var(--card)" : "transparent",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              alignItems: "flex-start",
+              justifyContent: "space-between",
+              marginBottom: 16,
+            }}
+          >
+            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+              <span style={{ fontSize: "2rem" }}>{concept.icon}</span>
+              <div>
+                <h2
+                  style={{
+                    fontSize: "1.2rem",
+                    fontWeight: 600,
+                    margin: 0,
+                    color: concept.flyerImage ? "#fff" : "var(--text)",
+                  }}
+                >
+                  {concept.name}
+                </h2>
+                <span
+                  style={{
+                    fontSize: "0.8rem",
+                    color: concept.flyerImage ? "rgba(255,255,255,0.8)" : "var(--muted)",
+                  }}
+                >
+                  {concept.frequency}
+                </span>
+              </div>
+            </div>
+            <div style={{ display: "flex", gap: 8 }}>
+              <span
+                style={{
+                  padding: "6px 12px",
+                  borderRadius: 20,
+                  fontSize: "0.75rem",
+                  fontWeight: 600,
+                  background: concept.approved ? "rgba(0,200,124,0.2)" : "rgba(255,193,7,0.2)",
+                  color: concept.approved ? "#00c87c" : "#ffc107",
+                }}
+              >
+                {concept.approved ? "✓ Approved" : "Pending"}
+              </span>
+              <span
+                style={{
+                  padding: "6px 12px",
+                  borderRadius: 20,
+                  fontSize: "0.75rem",
+                  fontWeight: 600,
+                  background: concept.flyerDone ? "rgba(0,200,124,0.2)" : "rgba(128,128,128,0.2)",
+                  color: concept.flyerDone ? "#00c87c" : "var(--muted)",
+                }}
+              >
+                {concept.flyerDone ? "✓ Flyer Done" : "No Flyer"}
+              </span>
+            </div>
+          </div>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: 12,
+              fontSize: "0.9rem",
+            }}
+          >
+            <div>
+              <span
+                style={{
+                  color: concept.flyerImage ? "rgba(255,255,255,0.7)" : "var(--muted)",
+                  display: "block",
+                  marginBottom: 4,
+                  fontSize: "0.8rem",
+                }}
+              >
+                Who
+              </span>
+              <span style={{ color: concept.flyerImage ? "#fff" : "var(--text)" }}>{concept.who}</span>
+            </div>
+            <div>
+              <span
+                style={{
+                  color: concept.flyerImage ? "rgba(255,255,255,0.7)" : "var(--muted)",
+                  display: "block",
+                  marginBottom: 4,
+                  fontSize: "0.8rem",
+                }}
+              >
+                Format
+              </span>
+              <span style={{ color: concept.flyerImage ? "#fff" : "var(--text)" }}>{concept.format}</span>
+            </div>
+            <div>
+              <span
+                style={{
+                  color: concept.flyerImage ? "rgba(255,255,255,0.7)" : "var(--muted)",
+                  display: "block",
+                  marginBottom: 4,
+                  fontSize: "0.8rem",
+                }}
+              >
+                Drink Specials
+              </span>
+              <span style={{ color: concept.flyerImage ? "#fff" : "var(--text)" }}>{concept.drinks}</span>
+            </div>
+            <div>
+              <span
+                style={{
+                  color: concept.flyerImage ? "rgba(255,255,255,0.7)" : "var(--muted)",
+                  display: "block",
+                  marginBottom: 4,
+                  fontSize: "0.8rem",
+                }}
+              >
+                Games/Activities
+              </span>
+              <span style={{ color: concept.flyerImage ? "#fff" : "var(--text)" }}>{concept.games}</span>
+            </div>
+            <div style={{ gridColumn: "span 2" }}>
+              <span
+                style={{
+                  color: concept.flyerImage ? "rgba(255,255,255,0.7)" : "var(--muted)",
+                  display: "block",
+                  marginBottom: 4,
+                  fontSize: "0.8rem",
+                }}
+              >
+                Entertainer Costuming
+              </span>
+              <span style={{ color: concept.flyerImage ? "#fff" : "var(--text)" }}>{concept.costuming}</span>
+            </div>
           </div>
         </div>
-        <div style={{ display: "flex", gap: 8 }}>
-          <span
-            style={{
-              padding: "6px 12px",
-              borderRadius: 20,
-              fontSize: "0.75rem",
-              fontWeight: 600,
-              background: concept.approved
-                ? "rgba(0,200,124,0.2)"
-                : "rgba(255,193,7,0.2)",
-              color: concept.approved ? "#00c87c" : "#ffc107",
-            }}
-          >
-            {concept.approved ? "✓ Approved" : "Pending"}
-          </span>
-          <span
-            style={{
-              padding: "6px 12px",
-              borderRadius: 20,
-              fontSize: "0.75rem",
-              fontWeight: 600,
-              background: concept.flyerDone
-                ? "rgba(0,200,124,0.2)"
-                : "rgba(128,128,128,0.2)",
-              color: concept.flyerDone ? "#00c87c" : "var(--muted)",
-            }}
-          >
-            {concept.flyerDone ? "✓ Flyer Done" : "No Flyer"}
-          </span>
-        </div>
       </div>
-
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: 12,
-          fontSize: "0.9rem",
-        }}
-      >
-        <div>
-          <span style={{ color: "var(--muted)", display: "block", marginBottom: 4, fontSize: "0.8rem" }}>
-            Who
-          </span>
-          <span style={{ color: "var(--text)" }}>{concept.who}</span>
-        </div>
-        <div>
-          <span style={{ color: "var(--muted)", display: "block", marginBottom: 4, fontSize: "0.8rem" }}>
-            Format
-          </span>
-          <span style={{ color: "var(--text)" }}>{concept.format}</span>
-        </div>
-        <div>
-          <span style={{ color: "var(--muted)", display: "block", marginBottom: 4, fontSize: "0.8rem" }}>
-            Drink Specials
-          </span>
-          <span style={{ color: "var(--text)" }}>{concept.drinks}</span>
-        </div>
-        <div>
-          <span style={{ color: "var(--muted)", display: "block", marginBottom: 4, fontSize: "0.8rem" }}>
-            Games/Activities
-          </span>
-          <span style={{ color: "var(--text)" }}>{concept.games}</span>
-        </div>
-        <div style={{ gridColumn: "span 2" }}>
-          <span style={{ color: "var(--muted)", display: "block", marginBottom: 4, fontSize: "0.8rem" }}>
-            Entertainer Costuming
-          </span>
-          <span style={{ color: "var(--text)" }}>{concept.costuming}</span>
-        </div>
-      </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <div>
@@ -252,7 +332,6 @@ export default function PartyConceptsPage() {
       <p style={{ marginTop: 24, fontSize: "0.75rem", color: "var(--muted)", textAlign: "right" }}>
         Last updated: {data.lastUpdated ? new Date(data.lastUpdated).toLocaleString() : "Unknown"}
       </p>
-
     </div>
   );
 }
