@@ -691,104 +691,44 @@
       "duration_min": 0
     },
     {
-      "date": "2026-05-14",
-      "location": "Boise, ID - North Orchard Street",
-      "address": "N Orchard St 851, Boise ID 83706",
-      "type": "DC Fast",
-      "kwh": 56.9675,
-      "rate_per_kwh": 0.19,
-      "cost": 10.82,
-      "duration_min": 0
+      "date": "2026-05-26",
+      "location": "Boise, ID - North Orchard St",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 53.7963,
+      "rate_per_kwh": 0.2,
+      "cost": 10.75,
+      "duration_min": 29
     },
     {
-      "date": "2026-05-15",
-      "location": "Boise, ID - North Orchard Street",
-      "address": "N Orchard St 851, Boise ID 83706",
-      "type": "DC Fast",
-      "kwh": 22.2976,
-      "rate_per_kwh": 0.4,
-      "cost": 8.91,
-      "duration_min": 0
-    },
-    {
-      "date": "2026-05-17",
-      "location": "Boise, ID - North Orchard Street",
-      "address": "N Orchard St 851, Boise ID 83706",
-      "type": "DC Fast",
-      "kwh": 57.4063,
-      "rate_per_kwh": 0.4,
-      "cost": 22.96,
-      "duration_min": 0
-    },
-    {
-      "date": "2026-05-18",
-      "location": "Boise, ID - North Orchard Street",
-      "address": "N Orchard St 851, Boise ID 83706",
-      "type": "DC Fast",
-      "kwh": 80.0032,
-      "rate_per_kwh": 0.19,
-      "cost": 15.2,
-      "duration_min": 0
-    },
-    {
-      "date": "2026-05-21",
-      "location": "Boise, ID - North Orchard Street",
-      "address": "N Orchard St 851, Boise ID 83706",
-      "type": "DC Fast",
-      "kwh": 55.8969,
+      "date": "2026-05-29",
+      "location": "Boise, ID - North Orchard St",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 41.6337,
       "rate_per_kwh": 0.43,
-      "cost": 24.03,
-      "duration_min": 0
+      "cost": 17.9,
+      "duration_min": 21
     },
     {
-      "date": "2026-05-22",
-      "location": "Boise, ID - North Orchard Street",
-      "address": "N Orchard St 851, Boise ID 83706",
-      "type": "DC Fast",
-      "kwh": 30.0477,
+      "date": "2026-05-30",
+      "location": "Boise, ID - North Orchard St",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 39.4135,
       "rate_per_kwh": 0.43,
-      "cost": 12.92,
-      "duration_min": 0
-    },
-    {
-      "date": "2026-05-23",
-      "location": "Boise, ID - North Orchard Street",
-      "address": "N Orchard St 851, Boise ID 83706",
-      "type": "DC Fast",
-      "kwh": 74.3658,
-      "rate_per_kwh": 0.2,
-      "cost": 14.87,
-      "duration_min": 0
-    },
-    {
-      "date": "2026-05-24",
-      "location": "Boise, ID - North Orchard Street",
-      "address": "N Orchard St 851, Boise ID 83706",
-      "type": "DC Fast",
-      "kwh": 88.721,
-      "rate_per_kwh": 0.2,
-      "cost": 17.74,
-      "duration_min": 0
-    },
-    {
-      "date": "2026-05-25",
-      "location": "Boise, ID - North Orchard Street",
-      "address": "N Orchard St 851, Boise ID 83706",
-      "type": "DC Fast",
-      "kwh": 66.64,
-      "rate_per_kwh": 0.2,
-      "cost": 13.32,
-      "duration_min": 0
+      "cost": 16.94,
+      "duration_min": 16
     }
   ],
   "summary": {
-    "total_cost": 1206.72,
-    "total_kwh": 4319.9511,
-    "total_sessions": 78,
-    "average_cost_per_session": 15.47,
-    "last_updated": "2026-05-26T18:19:53.000Z"
+    "total_cost": 1065.95,
+    "total_kwh": 3787.554,
+    "total_sessions": 69,
+    "average_cost_per_session": 15.45,
+    "last_updated": "2026-05-14T04:30:00.000Z"
   },
-  "last_updated": "2026-05-26T18:19:53.000Z",
+  "last_updated": "2026-05-30T21:15:00Z",
   "monthly_summary": {
     "2025-12": {
       "cost": 19.14,
@@ -821,10 +761,16 @@
       "minutes": 37
     },
     "2026-05": {
-      "cost": 221.88,
-      "kwh": 861.1981,
-      "sessions": 16,
+      "cost": 81.11,
+      "kwh": 328.852,
+      "sessions": 7,
       "minutes": 141
     }
+  },
+  "totals": {
+    "total_cost": 1111.54,
+    "total_kwh": 3922.45,
+    "total_sessions": 72,
+    "avg_cost_per_session": 15.44
   }
 }
