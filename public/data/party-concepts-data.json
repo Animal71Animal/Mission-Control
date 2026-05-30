@@ -12,7 +12,8 @@
       "approved": false,
       "flyerDone": false,
       "frequency": "Sunday",
-      "dayAssigned": "Sunday"
+      "dayAssigned": "Sunday",
+      "flyerImage": "/images/party-flyers/clocked-out-sundays.jpg"
     },
     {
       "id": "no-limit-mondays",
@@ -26,7 +27,8 @@
       "approved": false,
       "flyerDone": false,
       "frequency": "Monday",
-      "dayAssigned": "Monday"
+      "dayAssigned": "Monday",
+      "flyerImage": "/images/party-flyers/no-limit-mondays.jpg"
     },
     {
       "id": "lingerie-lounge",
@@ -40,7 +42,8 @@
       "approved": false,
       "flyerDone": false,
       "frequency": "Tuesday",
-      "dayAssigned": "Tuesday"
+      "dayAssigned": "Tuesday",
+      "flyerImage": "/images/party-flyers/lingerie-lounge.jpg"
     },
     {
       "id": "girls-gone-wild",
@@ -54,7 +57,8 @@
       "approved": false,
       "flyerDone": false,
       "frequency": "Wednesday",
-      "dayAssigned": "Wednesday"
+      "dayAssigned": "Wednesday",
+      "flyerImage": "/images/party-flyers/level-up.jpg"
     },
     {
       "id": "chicks-in-kicks",
@@ -68,7 +72,8 @@
       "approved": false,
       "flyerDone": false,
       "frequency": "Thursday",
-      "dayAssigned": "Thursday"
+      "dayAssigned": "Thursday",
+      "flyerImage": "/images/party-flyers/chicks-n-kicks.jpg"
     },
     {
       "id": "femme-fatale",
@@ -82,7 +87,8 @@
       "approved": false,
       "flyerDone": false,
       "frequency": "Friday",
-      "dayAssigned": "Friday"
+      "dayAssigned": "Friday",
+      "flyerImage": "/images/party-flyers/femme-fatale-fridays.jpg"
     },
     {
       "id": "late-night",
@@ -96,7 +102,8 @@
       "approved": false,
       "flyerDone": false,
       "frequency": "Saturday",
-      "dayAssigned": "Saturday"
+      "dayAssigned": "Saturday",
+      "flyerImage": "/images/party-flyers/after-dark.jpg"
     },
     {
       "id": "animal-house",
@@ -333,5 +340,5 @@
     }
   ],
   "lastUpdated": "2026-05-11T05:00:00Z",
-  "last_updated": "2026-05-30T21:49:01.883690+00:00"
+  "last_updated": "2026-05-30T21:54:35.574973+00:00"
 }
