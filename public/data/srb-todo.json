@@ -226,7 +226,7 @@
     },
     {
       "id": "srb-flyers-007",
-      "completed": false,
+      "completed": true,
       "text": "Design flyer for Late Night Saturdays",
       "category": "Marketing",
       "priority": "medium",
@@ -257,5 +257,5 @@
       "due_date": "2026-06-04"
     }
   ],
-  "last_updated": "2026-05-30T05:58:14.514Z"
+  "last_updated": "2026-05-30T05:58:16.490Z"
 }
