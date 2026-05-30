@@ -86,7 +86,7 @@
     },
     {
       "id": "late-night",
-      "name": "Saturday Night",
+      "name": "AFTER DARK presented by Rhino Radio",
       "icon": "\ud83c\udf19",
       "who": "The after-hours crowd \u2014 people who want to keep the party going when everything else closes",
       "format": "After hours \u2014 we go until the early hours of the morning. Underground vibe. Guest DJs regularly. The only spot to BE after 2am in Boise on Saturdays \u2014 full kitchen serving breakfast items. Higher cover charge after 2am. Revenue from breakfast + cover.",
@@ -333,5 +333,5 @@
     }
   ],
   "lastUpdated": "2026-05-11T05:00:00Z",
-  "last_updated": "2026-05-30T21:45:39.924763+00:00"
+  "last_updated": "2026-05-30T21:49:01.883690+00:00"
 }
