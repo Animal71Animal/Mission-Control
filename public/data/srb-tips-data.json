@@ -5417,48 +5417,6 @@
         ]
       },
       {
-        "date": "Thu May 21",
-        "total": 160,
-        "dancers": [
-          {
-            "name": "Customers",
-            "amount": 66
-          },
-          {
-            "name": "Indie",
-            "amount": 20
-          },
-          {
-            "name": "Nova",
-            "amount": 20
-          },
-          {
-            "name": "Ari",
-            "amount": 20
-          },
-          {
-            "name": "Berlin",
-            "amount": 13
-          },
-          {
-            "name": "Shea",
-            "amount": 6
-          },
-          {
-            "name": "Kody",
-            "amount": 5
-          },
-          {
-            "name": "Shelby",
-            "amount": 5
-          },
-          {
-            "name": "Erica",
-            "amount": 5
-          }
-        ]
-      },
-      {
         "date": "Fri May 22",
         "total": 290,
         "dancers": [
@@ -5501,6 +5459,11 @@
         ]
       },
       {
+        "date": "Sat May 27",
+        "total": 0,
+        "dancers": []
+      },
+      {
         "date": "Wed May 28",
         "total": 128,
         "dancers": [
@@ -5535,6 +5498,17 @@
           {
             "name": "Mia",
             "amount": 38
+          }
+        ]
+      },
+      {
+        "date": "Sat May 30",
+        "total": 125,
+        "dancers": [
+          {
+            "dancer": "Customers",
+            "amount": 125,
+            "name": "Customers"
           }
         ]
       }
