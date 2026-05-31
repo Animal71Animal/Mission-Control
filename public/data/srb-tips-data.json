@@ -22,7 +22,7 @@
     },
     {
       "month": "May",
-      "amount": 2152,
+      "amount": 2359,
       "nights": 13
     }
   ],
@@ -33,8 +33,8 @@
       "feb": 224,
       "mar": 154,
       "apr": 68,
-      "may": 567,
-      "total": 1291
+      "may": 899,
+      "total": 1623
     },
     {
       "name": "Suki",
@@ -723,8 +723,8 @@
       "feb": 224,
       "mar": 154,
       "apr": 68,
-      "may": 567,
-      "total": 1291
+      "may": 899,
+      "total": 1623
     },
     {
       "name": "Suki",
@@ -5459,12 +5459,7 @@
         ]
       },
       {
-        "date": "Sat May 27",
-        "total": 0,
-        "dancers": []
-      },
-      {
-        "date": "Wed May 28",
+        "date": "Wed May 27",
         "total": 128,
         "dancers": [
           {
@@ -5498,6 +5493,64 @@
           {
             "name": "Mia",
             "amount": 38
+          }
+        ]
+      },
+      {
+        "date": "Thu May 28",
+        "total": 207,
+        "dancers": [
+          {
+            "name": "Dior",
+            "amount": 5
+          },
+          {
+            "name": "Russia",
+            "amount": 3
+          },
+          {
+            "name": "Raven",
+            "amount": 5
+          },
+          {
+            "name": "Nova",
+            "amount": 5
+          },
+          {
+            "name": "Indie",
+            "amount": 29
+          },
+          {
+            "name": "Shae",
+            "amount": 10
+          },
+          {
+            "name": "Ari",
+            "amount": 40
+          },
+          {
+            "name": "Lilith",
+            "amount": 20
+          },
+          {
+            "name": "Mia",
+            "amount": 5
+          },
+          {
+            "name": "Quinn",
+            "amount": 20
+          },
+          {
+            "name": "Zara",
+            "amount": 20
+          },
+          {
+            "name": "Natasha",
+            "amount": 5
+          },
+          {
+            "name": "Athena",
+            "amount": 40
           }
         ]
       },
