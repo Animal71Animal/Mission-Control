@@ -22,7 +22,7 @@
     },
     {
       "month": "May",
-      "amount": 2359,
+      "amount": 2629,
       "nights": 13
     }
   ],
@@ -33,8 +33,8 @@
       "feb": 224,
       "mar": 154,
       "apr": 68,
-      "may": 899,
-      "total": 1623
+      "may": 939,
+      "total": 1663
     },
     {
       "name": "Suki",
@@ -51,8 +51,8 @@
       "feb": 48,
       "mar": 138,
       "apr": 20,
-      "may": 83,
-      "total": 363
+      "may": 113,
+      "total": 393
     },
     {
       "name": "Nala",
@@ -69,8 +69,8 @@
       "feb": 115,
       "mar": 120,
       "apr": 60,
-      "may": 60,
-      "total": 375
+      "may": 80,
+      "total": 395
     },
     {
       "name": "Amity",
@@ -78,8 +78,8 @@
       "feb": 35,
       "mar": 196,
       "apr": 0,
-      "may": 40,
-      "total": 306
+      "may": 65,
+      "total": 331
     },
     {
       "name": "Allie",
@@ -87,8 +87,8 @@
       "feb": 95,
       "mar": 87,
       "apr": 46,
-      "may": 55,
-      "total": 303
+      "may": 75,
+      "total": 323
     },
     {
       "name": "Georgia",
@@ -168,8 +168,8 @@
       "feb": 15,
       "mar": 40,
       "apr": 60,
-      "may": 15,
-      "total": 155
+      "may": 35,
+      "total": 175
     },
     {
       "name": "Shelby",
@@ -204,8 +204,8 @@
       "feb": 25,
       "mar": 20,
       "apr": 65,
-      "may": 10,
-      "total": 144
+      "may": 15,
+      "total": 149
     },
     {
       "name": "Kody",
@@ -213,8 +213,8 @@
       "feb": 8,
       "mar": 0,
       "apr": 5,
-      "may": 65,
-      "total": 142
+      "may": 105,
+      "total": 182
     },
     {
       "name": "Giovanna",
@@ -294,8 +294,8 @@
       "feb": 45,
       "mar": 35,
       "apr": 0,
-      "may": 13,
-      "total": 93
+      "may": 48,
+      "total": 128
     },
     {
       "name": "Tiana",
@@ -303,8 +303,8 @@
       "feb": 0,
       "mar": 28,
       "apr": 35,
-      "may": 20,
-      "total": 90
+      "may": 40,
+      "total": 110
     },
     {
       "name": "Ella",
@@ -366,8 +366,8 @@
       "feb": 5,
       "mar": 7,
       "apr": 0,
-      "may": 10,
-      "total": 56
+      "may": 20,
+      "total": 66
     },
     {
       "name": "Alaska",
@@ -528,8 +528,8 @@
       "feb": 5,
       "mar": 10,
       "apr": 0,
-      "may": 5,
-      "total": 20
+      "may": 15,
+      "total": 30
     },
     {
       "name": "Lilith",
@@ -627,8 +627,8 @@
       "feb": 0,
       "mar": 0,
       "apr": 0,
-      "may": 12,
-      "total": 12
+      "may": 22,
+      "total": 22
     },
     {
       "name": "Hazel",
@@ -712,8 +712,8 @@
     },
     {
       "month": "May",
-      "amount": 233,
-      "topNight": "Sat May 30 ($125)"
+      "amount": 273,
+      "topNight": "Sat May 30 ($165)"
     }
   ],
   "allDancers": [
@@ -723,8 +723,8 @@
       "feb": 224,
       "mar": 154,
       "apr": 68,
-      "may": 899,
-      "total": 1623
+      "may": 939,
+      "total": 1663
     },
     {
       "name": "Suki",
@@ -741,8 +741,8 @@
       "feb": 48,
       "mar": 138,
       "apr": 20,
-      "may": 83,
-      "total": 363
+      "may": 113,
+      "total": 393
     },
     {
       "name": "Nala",
@@ -759,8 +759,8 @@
       "feb": 115,
       "mar": 120,
       "apr": 60,
-      "may": 60,
-      "total": 375
+      "may": 80,
+      "total": 395
     },
     {
       "name": "Amity",
@@ -768,8 +768,8 @@
       "feb": 35,
       "mar": 196,
       "apr": 0,
-      "may": 40,
-      "total": 306
+      "may": 65,
+      "total": 331
     },
     {
       "name": "Allie",
@@ -777,8 +777,8 @@
       "feb": 95,
       "mar": 87,
       "apr": 46,
-      "may": 80,
-      "total": 328
+      "may": 100,
+      "total": 348
     },
     {
       "name": "Georgia",
@@ -858,8 +858,8 @@
       "feb": 15,
       "mar": 40,
       "apr": 60,
-      "may": 15,
-      "total": 155
+      "may": 35,
+      "total": 175
     },
     {
       "name": "Shelby",
@@ -894,8 +894,8 @@
       "feb": 25,
       "mar": 20,
       "apr": 65,
-      "may": 10,
-      "total": 144
+      "may": 15,
+      "total": 149
     },
     {
       "name": "Kody",
@@ -903,8 +903,8 @@
       "feb": 8,
       "mar": 0,
       "apr": 5,
-      "may": 65,
-      "total": 142
+      "may": 105,
+      "total": 182
     },
     {
       "name": "Giovanna",
@@ -984,8 +984,8 @@
       "feb": 45,
       "mar": 35,
       "apr": 0,
-      "may": 28,
-      "total": 108
+      "may": 48,
+      "total": 128
     },
     {
       "name": "Tiana",
@@ -993,8 +993,8 @@
       "feb": 0,
       "mar": 28,
       "apr": 35,
-      "may": 20,
-      "total": 90
+      "may": 40,
+      "total": 110
     },
     {
       "name": "Ella",
@@ -1056,8 +1056,8 @@
       "feb": 5,
       "mar": 7,
       "apr": 0,
-      "may": 10,
-      "total": 56
+      "may": 20,
+      "total": 66
     },
     {
       "name": "Alaska",
@@ -1218,8 +1218,8 @@
       "feb": 5,
       "mar": 10,
       "apr": 0,
-      "may": 5,
-      "total": 20
+      "may": 15,
+      "total": 30
     },
     {
       "name": "Lilith",
@@ -1317,8 +1317,8 @@
       "feb": 0,
       "mar": 0,
       "apr": 0,
-      "may": 12,
-      "total": 12
+      "may": 22,
+      "total": 22
     },
     {
       "name": "Hazel",
@@ -2445,13 +2445,61 @@
       "tips": [
         {
           "dancer": "Customers",
-          "amount": 125
+          "amount": 165
+        },
+        {
+          "dancer": "Kody",
+          "amount": 40
+        },
+        {
+          "dancer": "Shae",
+          "amount": 10
+        },
+        {
+          "dancer": "Zara",
+          "amount": 5
+        },
+        {
+          "dancer": "Jamira",
+          "amount": 10
+        },
+        {
+          "dancer": "Amity",
+          "amount": 25
+        },
+        {
+          "dancer": "Allie",
+          "amount": 20
+        },
+        {
+          "dancer": "Baby",
+          "amount": 10
+        },
+        {
+          "dancer": "Genesis",
+          "amount": 30
+        },
+        {
+          "dancer": "Tiana",
+          "amount": 20
+        },
+        {
+          "dancer": "Hunter",
+          "amount": 20
+        },
+        {
+          "dancer": "Asia",
+          "amount": 20
+        },
+        {
+          "dancer": "Natasha",
+          "amount": 20
         }
       ],
-      "total": 125
+      "total": 395
     }
   ],
-  "lastUpdated": "2026-05-30",
+  "lastUpdated": "2026-05-31",
   "nightlyData": {
     "January": [
       {
@@ -5556,12 +5604,59 @@
       },
       {
         "date": "Sat May 30",
-        "total": 125,
+        "total": 395,
         "dancers": [
           {
-            "dancer": "Customers",
-            "amount": 125,
-            "name": "Customers"
+            "name": "Customers",
+            "amount": 165
+          },
+          {
+            "name": "Kody",
+            "amount": 40
+          },
+          {
+            "name": "Shae",
+            "amount": 10
+          },
+          {
+            "name": "Zara",
+            "amount": 5
+          },
+          {
+            "name": "Jamira",
+            "amount": 10
+          },
+          {
+            "name": "Amity",
+            "amount": 25
+          },
+          {
+            "name": "Allie",
+            "amount": 20
+          },
+          {
+            "name": "Baby",
+            "amount": 10
+          },
+          {
+            "name": "Genesis",
+            "amount": 30
+          },
+          {
+            "name": "Tiana",
+            "amount": 20
+          },
+          {
+            "name": "Hunter",
+            "amount": 20
+          },
+          {
+            "name": "Asia",
+            "amount": 20
+          },
+          {
+            "name": "Natasha",
+            "amount": 20
           }
         ]
       }
