@@ -51,9 +51,16 @@ const MONTH_LABELS: Record<string, string> = {
   "2026-03": "March",
   "2026-04": "April",
   "2026-05": "May",
+  "2026-06": "June",
+  "2026-07": "July",
+  "2026-08": "August",
+  "2026-09": "September",
+  "2026-10": "October",
+  "2026-11": "November",
+  "2026-12": "December",
 };
 
-const MONTH_ORDER = ["2026-01", "2026-02", "2026-03", "2026-04", "2026-05"];
+const MONTH_ORDER = ["2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07", "2026-08", "2026-09", "2026-10", "2026-11", "2026-12"];
 
 function getNet(_key: string, m: MonthlyTotal): number {
   return m.total_net ?? 0;
