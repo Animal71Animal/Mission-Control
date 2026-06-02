@@ -382,6 +382,7 @@ export default function UberEarningsPage() {
               { label: "Gross Payment", value: `$${ytdGross.toFixed(2)}`, color: "#00f5d4" },
               { label: "Total Trips", value: ytdTrips, color: "#00bbf9" },
               { label: "Total Tips", value: `$${ytdTips.toFixed(2)}`, color: "#fee440" },
+              { label: "Total Miles", value: `${ytdMiles.toLocaleString()} mi`, color: "#9b5de5" },
             ].map(s => (
               <div key={s.label} style={{ background: "var(--bg)", border: "1px solid var(--border)", borderRadius: 10, padding: 16, textAlign: "center" }}>
                 <div style={{ fontSize: "1.4rem", fontWeight: 700, color: s.color }}>{String(s.value)}</div>
@@ -476,14 +477,7 @@ export default function UberEarningsPage() {
                   <span style={{ fontSize: "0.72rem", color: "var(--muted)", fontWeight: 400 }}>
                     {monthTrips} trips · {isOfficial ? "official" : `${entries.length} shifts`}
                   </span>
-                  {!isOpen && !isOfficial && entries.length > 0 && (
-                    <span style={{ fontSize: "0.68rem", color: "var(--muted)", fontWeight: 400 }}>
-                      {entries.map(e => {
-                        const d = new Date(e.date + 'T12:00:00');
-                        return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-                      }).join(' · ')}
-                    </span>
-                  )}
+
                 </div>
                 <span style={{ fontSize: "0.9rem", fontWeight: 700, color: "#00f5d4" }}>
                   ${monthNet.toFixed(2)}
