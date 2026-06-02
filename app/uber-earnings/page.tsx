@@ -143,6 +143,7 @@ export default function UberEarningsPage() {
   const ytdGross = MONTH_ORDER.reduce((sum, k) => sum + getGross(k, monthlyTotals[k] ?? {}), 0);
   const ytdTrips = MONTH_ORDER.reduce((sum, k) => sum + getTrips(k, monthlyTotals[k] ?? {}), 0);
   const ytdTips = MONTH_ORDER.reduce((sum, k) => sum + getTips(k, monthlyTotals[k] ?? {}), 0);
+  const ytdMiles = MONTH_ORDER.reduce((sum, k) => sum + getMiles(k, monthlyTotals[k] ?? {}), 0);
 
   // Best month by net
   const bestMonthKey = MONTH_ORDER.reduce((best, k) => {
@@ -256,6 +257,11 @@ export default function UberEarningsPage() {
           <div style={{ fontSize: "0.72rem", color: "var(--muted)", marginTop: 4 }}>
             {ytdTrips} trips · net payout
           </div>
+          {ytdMiles > 0 && (
+            <div style={{ fontSize: "0.68rem", color: "var(--muted)", marginTop: 2 }}>
+              {ytdMiles.toLocaleString()} mi
+            </div>
+          )}
         </button>
       </div>
 
