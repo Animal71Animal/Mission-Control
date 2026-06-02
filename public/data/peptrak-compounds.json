@@ -18,29 +18,5 @@
     ],
     "scheduleTime": "11pm",
     "notes": "Late night injection. 60 units on U-100 syringe."
-  },
-  {
-    "id": "tesa-001",
-    "name": "Tesa",
-    "color": "#a855f7",
-    "legalName": "Tesamorelin (GHRH Analog)",
-    "classification": "Growth Hormone Secretagogue",
-    "intendedEffects": "Lean mass support, fat loss, metabolic function",
-    "overdoseSymptoms": "Joint pain, water retention, carpal tunnel symptoms",
-    "totalMgInVial": 10,
-    "vialUnit": "mg",
-    "prescribedDosageMg": 1,
-    "doseUnit": "mg",
-    "bacWaterRatioMl": 2,
-    "timesPerWeek": 5,
-    "scheduleDays": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday"
-    ],
-    "scheduleTime": "10am",
-    "notes": "5-day cycle weekdays only. 20 units on U-100 syringe."
   }
 ]
