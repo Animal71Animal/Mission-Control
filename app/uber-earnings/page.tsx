@@ -222,6 +222,11 @@ export default function UberEarningsPage() {
               <div style={{ fontSize: "0.72rem", color: "var(--muted)", marginTop: 4 }}>
                 {trips} trips · net payout
               </div>
+              {getMiles(key, m) > 0 && (
+                <div style={{ fontSize: "0.68rem", color: "var(--muted)", marginTop: 2 }}>
+                  {getMiles(key, m).toLocaleString()} mi
+                </div>
+              )}
               {!isOfficial && (
                 <div style={{ fontSize: "0.65rem", color: "#fee440", marginTop: 4 }}>⚠ partial / manual</div>
               )}
@@ -456,7 +461,7 @@ export default function UberEarningsPage() {
                   cursor: "pointer", textAlign: "left",
                 }}
               >
-                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
                   <span style={{
                     transform: isOpen ? "rotate(90deg)" : "rotate(0deg)",
                     transition: "transform 0.2s", fontSize: "0.8rem", color: "var(--muted)",
@@ -465,6 +470,14 @@ export default function UberEarningsPage() {
                   <span style={{ fontSize: "0.72rem", color: "var(--muted)", fontWeight: 400 }}>
                     {monthTrips} trips · {isOfficial ? "official" : `${entries.length} shifts`}
                   </span>
+                  {!isOpen && !isOfficial && entries.length > 0 && (
+                    <span style={{ fontSize: "0.68rem", color: "var(--muted)", fontWeight: 400 }}>
+                      {entries.map(e => {
+                        const d = new Date(e.date + 'T12:00:00');
+                        return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                      }).join(' · ')}
+                    </span>
+                  )}
                 </div>
                 <span style={{ fontSize: "0.9rem", fontWeight: 700, color: "#00f5d4" }}>
                   ${monthNet.toFixed(2)}
