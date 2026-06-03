@@ -2,6 +2,23 @@
 
 import { useEffect, useState } from "react";
 
+interface WeeklyEntry {
+  week_start: string;
+  week_end: string;
+  label: string;
+  total_earnings: number;
+  trips: number;
+  tips: number;
+  fare: number;
+  pro_perk: number;
+  boost_plus: number;
+  expenses: number;
+  prev_week_events?: number;
+  net_payout: number;
+  source: string;
+  note?: string;
+}
+
 interface DailyEntry {
   date: string;
   earnings: number;
@@ -41,6 +58,7 @@ interface MonthlyTotal {
 
 interface UberEarningsData {
   dailySummaries: DailyEntry[];
+  weeklySummaries?: WeeklyEntry[];
   monthlyTotals: Record<string, MonthlyTotal>;
   last_updated?: string;
 }
@@ -93,7 +111,7 @@ export default function UberEarningsPage() {
       .then((r) => r.json())
       .then((d) => {
         // API returns uber-earnings.json directly
-        if (d && d.dailySummaries) {
+        if (d && (d.dailySummaries || d.weeklySummaries)) {
           setData(d);
         } else {
           // fallback to static
@@ -128,14 +146,22 @@ export default function UberEarningsPage() {
     );
   }
 
-  const { dailySummaries, monthlyTotals } = data;
+  const { dailySummaries, weeklySummaries, monthlyTotals } = data;
 
   // Build daily lookup by month key
   const dailyByMonth: Record<string, DailyEntry[]> = {};
-  for (const entry of dailySummaries) {
-    const mk = entry.date.slice(0, 7); // "2026-05"
+  for (const entry of (dailySummaries ?? [])) {
+    const mk = entry.date.slice(0, 7);
     if (!dailyByMonth[mk]) dailyByMonth[mk] = [];
     dailyByMonth[mk].push(entry);
+  }
+
+  // Build weekly lookup by month key (week_start month determines which month this week belongs to)
+  const weeklyByMonth: Record<string, WeeklyEntry[]> = {};
+  for (const entry of (weeklySummaries ?? [])) {
+    const mk = entry.week_start.slice(0, 7);
+    if (!weeklyByMonth[mk]) weeklyByMonth[mk] = [];
+    weeklyByMonth[mk].push(entry);
   }
 
   // YTD totals from official sources
@@ -154,6 +180,7 @@ export default function UberEarningsPage() {
 
   const selectedMonthData = selectedMonth ? monthlyTotals[selectedMonth] : null;
   const selectedDailyEntries = selectedMonth ? (dailyByMonth[selectedMonth] ?? []).sort((a, b) => b.date.localeCompare(a.date)) : [];
+  const selectedWeeklyEntries = selectedMonth ? (weeklyByMonth[selectedMonth] ?? []).sort((a, b) => b.week_start.localeCompare(a.week_start)) : [];
 
   return (
     <div>
@@ -167,7 +194,7 @@ export default function UberEarningsPage() {
           🚗 Uber Earnings
         </h1>
         <p style={{ color: "var(--muted)", marginTop: 6, fontSize: "0.9rem" }}>
-          2026 earnings · Jan–May · official Uber tax summaries + manual tracking
+          2026 earnings · Jan–Jun · Uber weekly statements (Mon 4AM – Mon 4AM)
         </p>
       </div>
 
@@ -317,6 +344,34 @@ export default function UberEarningsPage() {
             </div>
           )}
 
+          {/* Weekly statement entries for selected month */}
+          {selectedWeeklyEntries.length > 0 && (
+            <div style={{ marginTop: 4 }}>
+              <h3 style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: 10, textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                📅 Weekly Statements
+              </h3>
+              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                {selectedWeeklyEntries.map((w, i) => (
+                  <div key={i} style={{ background: "var(--bg)", border: "1px solid var(--border)", borderRadius: 8, padding: "12px 16px" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
+                      <span style={{ fontWeight: 600, fontSize: "0.88rem" }}>{w.label}</span>
+                      <span style={{ fontWeight: 700, color: "#51cf66" }}>${w.net_payout.toFixed(2)} net</span>
+                    </div>
+                    <div style={{ display: "flex", gap: 16, flexWrap: "wrap", fontSize: "0.75rem", color: "var(--muted)" }}>
+                      <span style={{ color: "#00f5d4" }}>${w.total_earnings.toFixed(2)} earnings</span>
+                      <span>{w.trips} trips</span>
+                      <span style={{ color: "#fee440" }}>${w.tips.toFixed(2)} tips</span>
+                      {w.boost_plus > 0 && <span style={{ color: "#9b5de5" }}>Boost+ ${w.boost_plus.toFixed(2)}</span>}
+                      {w.pro_perk > 0 && <span style={{ color: "#9b5de5" }}>Pro Perk ${w.pro_perk.toFixed(2)}</span>}
+                      {w.expenses > 0 && <span style={{ color: "#ff6b6b" }}>Ins −${w.expenses.toFixed(2)}</span>}
+                    </div>
+                    {w.note && <div style={{ fontSize: "0.68rem", color: "#fee440", marginTop: 4 }}>⚠ {w.note}</div>}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Daily entries for this month (manual tracking only — not shown for official tax summary months) */}
           {selectedDailyEntries.length > 0 && selectedMonthData.source !== "uber_tax_summary" && (
             <div>
@@ -438,10 +493,10 @@ export default function UberEarningsPage() {
       }}>
         <div style={{ padding: "16px 20px", borderBottom: "1px solid var(--border)" }}>
           <h2 style={{ fontSize: "1.05rem", fontWeight: 600, margin: 0, color: "var(--text)" }}>
-            📅 Daily Shift Log
+            📅 Weekly Statement Log
           </h2>
           <p style={{ fontSize: "0.78rem", color: "var(--muted)", margin: "4px 0 0" }}>
-            Manually tracked shifts — click a month to expand
+            Uber weeks (Mon 4AM – Mon 4AM) — click a month to expand
           </p>
         </div>
 
@@ -449,10 +504,12 @@ export default function UberEarningsPage() {
           const m = monthlyTotals[key];
           const isOfficial = m?.source === "uber_tax_summary";
           const entries = (dailyByMonth[key] ?? []).sort((a, b) => b.date.localeCompare(a.date));
+          const weeklyEntries = (weeklyByMonth[key] ?? []).sort((a, b) => b.week_start.localeCompare(a.week_start));
+          const hasWeekly = weeklyEntries.length > 0;
           // For official tax summary months, use monthlyTotals directly
-          const monthNet = isOfficial ? getNet(key, m) : entries.reduce((s, e) => s + (e.netPayout ?? e.earnings), 0);
-          const monthTrips = isOfficial ? getTrips(key, m) : entries.reduce((s, e) => s + e.trips, 0);
-          if (!isOfficial && entries.length === 0) return null;
+          const monthNet = isOfficial ? getNet(key, m) : hasWeekly ? weeklyEntries.reduce((s, e) => s + e.net_payout, 0) : entries.reduce((s, e) => s + (e.netPayout ?? e.earnings), 0);
+          const monthTrips = isOfficial ? getTrips(key, m) : hasWeekly ? weeklyEntries.reduce((s, e) => s + e.trips, 0) : entries.reduce((s, e) => s + e.trips, 0);
+          if (!isOfficial && entries.length === 0 && weeklyEntries.length === 0) return null;
           const isOpen = expandedMonths[key];
 
           return (
@@ -487,35 +544,74 @@ export default function UberEarningsPage() {
               {isOpen && (
                 <div style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
                   <div style={{ overflowX: "auto" }}>
-                    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.82rem" }}>
-                      <thead>
-                        <tr style={{ borderBottom: "1px solid var(--border)" }}>
-                          {["Date", "Earnings", "Trips", "Tips", "Miles", "Surge", "Pro Perk", "Net"].map(h => (
-                            <th key={h} style={{
-                              padding: "8px 14px", textAlign: h === "Date" ? "left" : "right",
-                              color: "var(--muted)", fontWeight: 600,
-                              fontSize: "0.7rem", textTransform: "uppercase", letterSpacing: "0.04em",
-                            }}>{h}</th>
-                          ))}
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {entries.map((e, i) => (
-                          <tr key={i} style={{ borderBottom: "1px solid var(--border)" }}>
-                            <td style={{ padding: "10px 14px", color: "var(--text)", fontWeight: 500 }}>{e.date}</td>
-                            <td style={{ padding: "10px 14px", textAlign: "right", color: "#00f5d4", fontWeight: 600 }}>${e.earnings.toFixed(2)}</td>
-                            <td style={{ padding: "10px 14px", textAlign: "right", color: "var(--text)" }}>{e.trips}</td>
-                            <td style={{ padding: "10px 14px", textAlign: "right", color: "#fee440" }}>${e.tips.toFixed(2)}</td>
-                            <td style={{ padding: "10px 14px", textAlign: "right", color: "var(--muted)" }}>{(e.miles ?? 0).toFixed(1)}</td>
-                            <td style={{ padding: "10px 14px", textAlign: "right", color: "var(--muted)" }}>${(e.surge ?? 0).toFixed(2)}</td>
-                            <td style={{ padding: "10px 14px", textAlign: "right", color: "#9b5de5" }}>${(e.pro_perk ?? 0).toFixed(2)}</td>
-                            <td style={{ padding: "10px 14px", textAlign: "right", color: "#51cf66", fontWeight: 600 }}>
-                              ${(e.netPayout ?? e.earnings - (e.charging_cost ?? 0)).toFixed(2)}
-                            </td>
+                    {hasWeekly ? (
+                      <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.82rem" }}>
+                        <thead>
+                          <tr style={{ borderBottom: "1px solid var(--border)" }}>
+                            {["Week (Mon 4AM)", "Earnings", "Trips", "Fare", "Boost+", "Pro Perk", "Tips", "Net Payout"].map(h => (
+                              <th key={h} style={{
+                                padding: "8px 14px", textAlign: h === "Week (Mon 4AM)" ? "left" : "right",
+                                color: "var(--muted)", fontWeight: 600,
+                                fontSize: "0.7rem", textTransform: "uppercase", letterSpacing: "0.04em",
+                              }}>{h}</th>
+                            ))}
                           </tr>
-                        ))}
-                      </tbody>
-                    </table>
+                        </thead>
+                        <tbody>
+                          {weeklyEntries.map((e, i) => (
+                            <tr key={i} style={{ borderBottom: "1px solid var(--border)" }}>
+                              <td style={{ padding: "10px 14px", color: "var(--text)", fontWeight: 500 }}>
+                                {e.label}
+                                {e.note && <div style={{ fontSize: "0.68rem", color: "#fee440", marginTop: 2 }}>⚠ {e.note}</div>}
+                              </td>
+                              <td style={{ padding: "10px 14px", textAlign: "right", color: "#00f5d4", fontWeight: 600 }}>${e.total_earnings.toFixed(2)}</td>
+                              <td style={{ padding: "10px 14px", textAlign: "right", color: "var(--text)" }}>{e.trips}</td>
+                              <td style={{ padding: "10px 14px", textAlign: "right", color: "var(--muted)" }}>${e.fare.toFixed(2)}</td>
+                              <td style={{ padding: "10px 14px", textAlign: "right", color: "#9b5de5" }}>${e.boost_plus.toFixed(2)}</td>
+                              <td style={{ padding: "10px 14px", textAlign: "right", color: "#9b5de5" }}>${e.pro_perk.toFixed(2)}</td>
+                              <td style={{ padding: "10px 14px", textAlign: "right", color: "#fee440" }}>${e.tips.toFixed(2)}</td>
+                              <td style={{ padding: "10px 14px", textAlign: "right", color: "#51cf66", fontWeight: 600 }}>${e.net_payout.toFixed(2)}</td>
+                            </tr>
+                          ))}
+                          {entries.length > 0 && (
+                            <tr style={{ borderBottom: "1px solid var(--border)", opacity: 0.7 }}>
+                              <td style={{ padding: "10px 14px", color: "var(--muted)", fontStyle: "italic", fontSize: "0.78rem" }}
+                                colSpan={8}>+ {entries.length} manual daily {entries.length === 1 ? "entry" : "entries"} (not in a full statement period)</td>
+                            </tr>
+                          )}
+                        </tbody>
+                      </table>
+                    ) : (
+                      <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.82rem" }}>
+                        <thead>
+                          <tr style={{ borderBottom: "1px solid var(--border)" }}>
+                            {["Date", "Earnings", "Trips", "Tips", "Miles", "Surge", "Pro Perk", "Net"].map(h => (
+                              <th key={h} style={{
+                                padding: "8px 14px", textAlign: h === "Date" ? "left" : "right",
+                                color: "var(--muted)", fontWeight: 600,
+                                fontSize: "0.7rem", textTransform: "uppercase", letterSpacing: "0.04em",
+                              }}>{h}</th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {entries.map((e, i) => (
+                            <tr key={i} style={{ borderBottom: "1px solid var(--border)" }}>
+                              <td style={{ padding: "10px 14px", color: "var(--text)", fontWeight: 500 }}>{e.date}</td>
+                              <td style={{ padding: "10px 14px", textAlign: "right", color: "#00f5d4", fontWeight: 600 }}>${e.earnings.toFixed(2)}</td>
+                              <td style={{ padding: "10px 14px", textAlign: "right", color: "var(--text)" }}>{e.trips}</td>
+                              <td style={{ padding: "10px 14px", textAlign: "right", color: "#fee440" }}>${e.tips.toFixed(2)}</td>
+                              <td style={{ padding: "10px 14px", textAlign: "right", color: "var(--muted)" }}>{(e.miles ?? 0).toFixed(1)}</td>
+                              <td style={{ padding: "10px 14px", textAlign: "right", color: "var(--muted)" }}>${(e.surge ?? 0).toFixed(2)}</td>
+                              <td style={{ padding: "10px 14px", textAlign: "right", color: "#9b5de5" }}>${(e.pro_perk ?? 0).toFixed(2)}</td>
+                              <td style={{ padding: "10px 14px", textAlign: "right", color: "#51cf66", fontWeight: 600 }}>
+                                ${(e.netPayout ?? e.earnings - (e.charging_cost ?? 0)).toFixed(2)}
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    )}
                   </div>
                 </div>
               )}
@@ -527,7 +623,7 @@ export default function UberEarningsPage() {
       {/* Footer note */}
       <div style={{ padding: 14, background: "rgba(0,187,249,0.05)", border: "1px solid rgba(0,187,249,0.15)", borderRadius: 10 }}>
         <p style={{ margin: 0, fontSize: "0.78rem", color: "var(--muted)" }}>
-          ℹ️ Monthly totals (Jan–Apr) sourced from official Uber Tax Summaries. May reflects manually tracked shifts only and may be incomplete.
+          ℹ️ Jan–Apr from official Uber Tax Summaries 🏛. May–Jun from weekly PDF statements (Mon 4AM – Mon 4AM). Trip counts for May weeks 2–4 are estimated from transaction analysis.
         </p>
       </div>
 
