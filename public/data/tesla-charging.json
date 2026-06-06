@@ -628,7 +628,8 @@
       "kwh": 60.2544,
       "rate_per_kwh": 0.19,
       "cost": 11.44,
-      "duration_min": 40
+      "duration_min": 0,
+      "id": "3000P0302252661"
     },
     {
       "date": "2026-05-07",
@@ -638,7 +639,8 @@
       "kwh": 14.2374,
       "rate_per_kwh": 0.4,
       "cost": 5.69,
-      "duration_min": 5
+      "duration_min": 0,
+      "id": "3000P0304279146"
     },
     {
       "date": "2026-05-08",
@@ -648,7 +650,8 @@
       "kwh": 71.719,
       "rate_per_kwh": 0.19,
       "cost": 13.62,
-      "duration_min": 38
+      "duration_min": 0,
+      "id": "3000P0304515491"
     },
     {
       "date": "2026-05-11",
@@ -658,17 +661,8 @@
       "kwh": 50.403,
       "rate_per_kwh": 0.19,
       "cost": 9.57,
-      "duration_min": 58
-    },
-    {
-      "date": "2026-05-12",
-      "location": "Boise, ID - North Orchard St",
-      "address": "851 N Orchard St, Boise, ID 83706",
-      "type": "Supercharging",
-      "kwh": 57.603,
-      "rate_per_kwh": 0.19,
-      "cost": 10.94,
-      "duration_min": 0
+      "duration_min": 0,
+      "id": "3000P0305837153"
     },
     {
       "date": "2026-05-12",
@@ -678,7 +672,19 @@
       "kwh": 44.6324,
       "rate_per_kwh": 0.4,
       "cost": 17.85,
-      "duration_min": 0
+      "duration_min": 0,
+      "id": "3000P0306440132"
+    },
+    {
+      "date": "2026-05-12",
+      "location": "Boise, ID - North Orchard St",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 57.603,
+      "rate_per_kwh": 0.19,
+      "cost": 10.94,
+      "duration_min": 0,
+      "id": "3000P0306198179"
     },
     {
       "date": "2026-05-13",
@@ -688,7 +694,107 @@
       "kwh": 30.0029,
       "rate_per_kwh": 0.4,
       "cost": 12.0,
-      "duration_min": 0
+      "duration_min": 0,
+      "id": "3000P0306633580"
+    },
+    {
+      "date": "2026-05-14",
+      "location": "Boise, ID - North Orchard St",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 56.9675,
+      "rate_per_kwh": 0.19,
+      "cost": 10.82,
+      "duration_min": 0,
+      "id": "3000P0306917012"
+    },
+    {
+      "date": "2026-05-15",
+      "location": "Boise, ID - North Orchard St",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 22.2976,
+      "rate_per_kwh": 0.4,
+      "cost": 8.91,
+      "duration_min": 0,
+      "id": "3000P0307618206"
+    },
+    {
+      "date": "2026-05-17",
+      "location": "Boise, ID - North Orchard St",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 57.4063,
+      "rate_per_kwh": 0.4,
+      "cost": 22.96,
+      "duration_min": 0,
+      "id": "3000P0308556266"
+    },
+    {
+      "date": "2026-05-18",
+      "location": "Boise, ID - North Orchard St",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 80.0032,
+      "rate_per_kwh": 0.19,
+      "cost": 15.2,
+      "duration_min": 0,
+      "id": "3000P0309022770"
+    },
+    {
+      "date": "2026-05-21",
+      "location": "Boise, ID - North Orchard St",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 55.8969,
+      "rate_per_kwh": 0.43,
+      "cost": 24.03,
+      "duration_min": 0,
+      "id": "3000P0309920217"
+    },
+    {
+      "date": "2026-05-22",
+      "location": "Boise, ID - North Orchard St",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 30.0477,
+      "rate_per_kwh": 0.43,
+      "cost": 12.92,
+      "duration_min": 0,
+      "id": "3000P0310383186"
+    },
+    {
+      "date": "2026-05-23",
+      "location": "Boise, ID - North Orchard St",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 74.3658,
+      "rate_per_kwh": 0.2,
+      "cost": 14.87,
+      "duration_min": 0,
+      "id": "3000P0311131002"
+    },
+    {
+      "date": "2026-05-24",
+      "location": "Boise, ID - North Orchard St",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 88.721,
+      "rate_per_kwh": 0.2,
+      "cost": 17.74,
+      "duration_min": 0,
+      "id": "3000P0311577424"
+    },
+    {
+      "date": "2026-05-25",
+      "location": "Boise, ID - North Orchard St",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 66.64,
+      "rate_per_kwh": 0.2,
+      "cost": 13.32,
+      "duration_min": 0,
+      "id": "3000P0312045659"
     },
     {
       "date": "2026-05-26",
@@ -698,7 +804,8 @@
       "kwh": 53.7963,
       "rate_per_kwh": 0.2,
       "cost": 10.75,
-      "duration_min": 29
+      "duration_min": 0,
+      "id": "3000P0312422458"
     },
     {
       "date": "2026-05-29",
@@ -708,7 +815,8 @@
       "kwh": 41.6337,
       "rate_per_kwh": 0.43,
       "cost": 17.9,
-      "duration_min": 21
+      "duration_min": 0,
+      "id": "3000P0313372870"
     },
     {
       "date": "2026-05-30",
@@ -718,7 +826,8 @@
       "kwh": 39.4135,
       "rate_per_kwh": 0.43,
       "cost": 16.94,
-      "duration_min": 16
+      "duration_min": 0,
+      "id": "3000P0313722683"
     },
     {
       "date": "2026-05-31",
@@ -751,12 +860,12 @@
       "duration_min": 26
     }
   ],
-  "last_updated": "2026-06-02T09:00:00.000Z",
+  "last_updated": "2026-06-06T22:29:19.524330+00:00",
   "totals": {
-    "total_sessions": 75,
-    "total_cost": 1164.17,
-    "total_kwh": 4048.8679,
-    "avg_cost_per_session": 15.52
+    "total_sessions": 84,
+    "total_cost": 1304.94,
+    "total_kwh": 4581.4139,
+    "avg_cost_per_session": 15.54
   },
   "monthlyTotals": {
     "2025-12": {
@@ -790,10 +899,10 @@
       "avg_cost_per_session": 15.81
     },
     "2026-05": {
-      "sessions": 11,
-      "cost": 142.25,
-      "kwh": 499.8805,
-      "avg_cost_per_session": 12.93
+      "sessions": 20,
+      "cost": 283.02,
+      "kwh": 1032.2265,
+      "avg_cost_per_session": 14.15
     },
     "2026-06": {
       "sessions": 2,
