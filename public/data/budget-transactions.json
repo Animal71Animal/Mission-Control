@@ -1,6 +1,16 @@
 {
   "transactions": [
     {
+      "id": "dab1627408ba",
+      "date": "06/07/2026",
+      "description": "SRB TIPS - JUNE 2026 (Manual Add)",
+      "amount": 431.0,
+      "category": "Income",
+      "subcategory": "SRB Tips (Actual)",
+      "is_business": false,
+      "status": "Tracker"
+    },
+    {
       "id": "63789130a058",
       "date": "05/31/2026",
       "description": "SRB TIPS - MAY 2026 (from SRB tracker, partial)",
