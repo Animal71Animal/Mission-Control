@@ -51,6 +51,7 @@ const EXPENSE_CATS = [
 const MONTH_LABELS: Record<string, string> = {
   "2026-02": "Feb '26", "2026-03": "Mar '26",
   "2026-04": "Apr '26", "2026-05": "May '26",
+  "2026-06": "Jun '26",
 };
 
 const fmt  = (n: number) => `$${Math.abs(n).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
