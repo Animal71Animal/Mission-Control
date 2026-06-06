@@ -500,7 +500,7 @@ export default function UberEarningsPage() {
           </p>
         </div>
 
-        {MONTH_ORDER.slice().reverse().map((key) => {
+        {MONTH_ORDER.slice().map((key) => {
           const m = monthlyTotals[key];
           const isOfficial = m?.source === "uber_tax_summary";
           const entries = (dailyByMonth[key] ?? []).sort((a, b) => b.date.localeCompare(a.date));
