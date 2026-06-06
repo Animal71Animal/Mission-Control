@@ -396,7 +396,7 @@ export default function TeslaPage() {
           </p>
         </div>
 
-        {MONTH_ORDER.slice().reverse().map(key => {
+        {MONTH_ORDER.slice().map(key => {
           const entries = sessionsByMonth[key] ?? [];
           if (entries.length === 0) return null;
           const isOpen = expandedMonths[key];
