@@ -179,8 +179,8 @@ export default function UberEarningsPage() {
   }, MONTH_ORDER[0]);
 
   const selectedMonthData = selectedMonth ? monthlyTotals[selectedMonth] : null;
-  const selectedDailyEntries = selectedMonth ? (dailyByMonth[selectedMonth] ?? []).sort((a, b) => b.date.localeCompare(a.date)) : [];
-  const selectedWeeklyEntries = selectedMonth ? (weeklyByMonth[selectedMonth] ?? []).sort((a, b) => b.week_start.localeCompare(a.week_start)) : [];
+  const selectedDailyEntries = selectedMonth ? (dailyByMonth[selectedMonth] ?? []).sort((a, b) => a.date.localeCompare(b.date)) : [];
+  const selectedWeeklyEntries = selectedMonth ? (weeklyByMonth[selectedMonth] ?? []).sort((a, b) => a.week_start.localeCompare(b.week_start)) : [];
 
   return (
     <div>

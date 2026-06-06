@@ -159,7 +159,7 @@ export default function TeslaPage() {
         gap: 14,
         marginBottom: 28,
       }}>
-        {[...MONTH_ORDER].reverse().map((key) => {
+        {MONTH_ORDER.map((key) => {
           const m = totalsData[key];
           if (!m) return null;
           const isSelected = selectedMonth === key;
@@ -289,7 +289,7 @@ export default function TeslaPage() {
                     </tr>
                   </thead>
                   <tbody>
-                    {[...selectedSessions].sort((a, b) => b.date.localeCompare(a.date)).map((s, i) => (
+                    {[...selectedSessions].sort((a, b) => a.date.localeCompare(b.date)).map((s, i) => (
                       <tr key={i} style={{ borderBottom: "1px solid var(--border)" }}>
                         <td style={{ padding: "10px 12px", color: "var(--text)", fontWeight: 500 }}>{s.date}</td>
                         <td style={{ padding: "10px 12px", color: "var(--muted)", fontSize: "0.8rem" }}>{s.time ? formatTime(s.time) : "—"}</td>
@@ -396,7 +396,7 @@ export default function TeslaPage() {
           </p>
         </div>
 
-        {[...MONTH_ORDER].reverse().map(key => {
+        {MONTH_ORDER.map(key => {
           const entries = sessionsByMonth[key] ?? [];
           if (entries.length === 0) return null;
           const isOpen = expandedMonths[key];
@@ -447,7 +447,7 @@ export default function TeslaPage() {
                         </tr>
                       </thead>
                       <tbody>
-                        {[...entries].sort((a, b) => b.date.localeCompare(a.date)).map((s, i) => (
+                        {[...entries].sort((a, b) => a.date.localeCompare(b.date)).map((s, i) => (
                           <tr key={i} style={{ borderBottom: "1px solid var(--border)" }}>
                             <td style={{ padding: "10px 14px", color: "var(--text)", fontWeight: 500 }}>{s.date}</td>
                             <td style={{ padding: "10px 14px", color: "var(--muted)", fontSize: "0.8rem" }}>{s.time ? formatTime(s.time) : "—"}</td>

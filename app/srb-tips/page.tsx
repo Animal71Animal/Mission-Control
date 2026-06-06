@@ -38,6 +38,9 @@ export default function SrbTipsPage() {
       .then((res) => res.json())
       .then((data) => {
         if (data && data.monthlyTotals && data.monthlyTotals.length > 0) {
+          // Ensure months are in chronological order
+          const monthOrder = ['January', 'February', 'March', 'April', 'May', 'June'];
+          data.monthlyTotals.sort((a: any, b: any) => monthOrder.indexOf(a.month) - monthOrder.indexOf(b.month));
           setData(data);
         } else {
           // Fallback to local JSON if API returns empty/error

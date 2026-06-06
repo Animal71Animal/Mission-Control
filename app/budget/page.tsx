@@ -107,12 +107,18 @@ export default function BudgetPage() {
 
   const filteredTx = useMemo(() => {
     if (!data) return [];
-    return txFilter === "all"
+    const txs = txFilter === "all"
       ? data.transactions
       : data.transactions.filter(t => {
           const parts = t.date.split("/");
           return `${parts[2]}-${parts[0]}` === txFilter;
         });
+    // Sort transactions by date (earliest to most recent)
+    return [...txs].sort((a, b) => {
+        const ad = a.date.split("/");
+        const bd = b.date.split("/");
+        return new Date(`${ad[2]}-${ad[0]}-${ad[1]}`).getTime() - new Date(`${bd[2]}-${bd[0]}-${bd[1]}`).getTime();
+    });
   }, [data, txFilter]);
 
   if (!loaded) return (
