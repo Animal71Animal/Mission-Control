@@ -159,7 +159,7 @@ export default function TeslaPage() {
         gap: 14,
         marginBottom: 28,
       }}>
-        {MONTH_ORDER.map((key) => {
+        {[...MONTH_ORDER].reverse().map((key) => {
           const m = totalsData[key];
           if (!m) return null;
           const isSelected = selectedMonth === key;
@@ -396,7 +396,7 @@ export default function TeslaPage() {
           </p>
         </div>
 
-        {MONTH_ORDER.slice().map(key => {
+        {[...MONTH_ORDER].reverse().map(key => {
           const entries = sessionsByMonth[key] ?? [];
           if (entries.length === 0) return null;
           const isOpen = expandedMonths[key];
