@@ -136,19 +136,21 @@ export default function SrbTipsPage() {
     let mar = dancer.mar || 0;
     let apr = (dancer as any).apr || 0;
     let may = (dancer as any).may || 0;
+    let jun = (dancer as any).jun || 0;
 
     // Apply date range filter
-    if (dateRange === "jan") { feb = 0; mar = 0; apr = 0; may = 0; }
-    else if (dateRange === "feb") { jan = 0; mar = 0; apr = 0; may = 0; }
-    else if (dateRange === "mar") { jan = 0; feb = 0; apr = 0; may = 0; }
-    else if (dateRange === "q1") { apr = 0; may = 0; }
-    else if (dateRange === "apr") { jan = 0; feb = 0; mar = 0; may = 0; }
-    else if (dateRange === "may") { jan = 0; feb = 0; mar = 0; apr = 0; }
+    if (dateRange === "jan") { feb = 0; mar = 0; apr = 0; may = 0; jun = 0; }
+    else if (dateRange === "feb") { jan = 0; mar = 0; apr = 0; may = 0; jun = 0; }
+    else if (dateRange === "mar") { jan = 0; feb = 0; apr = 0; may = 0; jun = 0; }
+    else if (dateRange === "q1") { apr = 0; may = 0; jun = 0; }
+    else if (dateRange === "apr") { jan = 0; feb = 0; mar = 0; may = 0; jun = 0; }
+    else if (dateRange === "may") { jan = 0; feb = 0; mar = 0; apr = 0; jun = 0; }
+    else if (dateRange === "jun") { jan = 0; feb = 0; mar = 0; apr = 0; may = 0; }
     else if (dateRange === "q2") { jan = 0; feb = 0; mar = 0; }
 
-    const total = jan + feb + mar + apr + may;
+    const total = jan + feb + mar + apr + may + jun;
     
-    return { name: dancer.name, jan, feb, mar, apr, may, total };
+    return { name: dancer.name, jan, feb, mar, apr, may, jun, total };
   };
 
   const toggleMonth = (month: string) => {
@@ -181,7 +183,7 @@ export default function SrbTipsPage() {
           💰 SRB Tips
         </h1>
         <p style={{ color: "var(--muted)", marginTop: 6, fontSize: "0.9rem" }}>
-          Spearmint Rhino Boise tip tracking · Jan-May 2026
+          Spearmint Rhino Boise tip tracking · Jan–Jun 2026
         </p>
       </div>
 
@@ -275,7 +277,7 @@ export default function SrbTipsPage() {
             ${(quarterTotal + q2Total).toLocaleString()}
           </div>
           <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 4 }}>
-            Jan-May 2026 · {q1Nights + q2Nights} nights
+            Jan–Jun 2026 · {q1Nights + q2Nights} nights
           </div>
         </button>
       </div>
@@ -541,7 +543,7 @@ export default function SrbTipsPage() {
             textAlign: "center",
             marginBottom: 20,
           }}>
-            <div style={{ fontSize: "0.8rem", color: "#ffcc00", marginBottom: 4 }}>2026 TOTAL (Jan-May)</div>
+            <div style={{ fontSize: "0.8rem", color: "#ffcc00", marginBottom: 4 }}>2026 TOTAL (Jan–Jun)</div>
             <div style={{ fontSize: "2.5rem", fontWeight: 700, color: "#ffcc00" }}>
               ${(quarterTotal + q2Total).toLocaleString()}
             </div>
@@ -570,7 +572,7 @@ export default function SrbTipsPage() {
                     {i + 1}
                   </span>
                   <span style={{ flex: 1 }}>{d.name}</span>
-                  <span style={{ color: "var(--muted)", fontSize: "0.75rem" }}>J:${d.jan || 0} F:${d.feb || 0} M:${d.mar || 0} A:${d.apr || 0} M:${d.may || 0}</span>
+                  <span style={{ color: "var(--muted)", fontSize: "0.75rem" }}>J:${d.jan || 0} F:${d.feb || 0} M:${d.mar || 0} A:${d.apr || 0} M:${d.may || 0} J:${(d as any).jun || 0}</span>
                   <span style={{ fontWeight: 600, minWidth: 50, textAlign: "right" }}>${d.total}</span>
                 </div>
               );
@@ -798,13 +800,15 @@ export default function SrbTipsPage() {
                   cursor: "pointer",
                 }}
               >
-                <option value="q1">Q1 Total (Jan-Mar)</option>
+                <option value="all">All Months YTD</option>
+                <option value="q1">Q1 Total (Jan–Mar)</option>
                 <option value="jan">January Only</option>
                 <option value="feb">February Only</option>
                 <option value="mar">March Only</option>
+                <option value="q2">Q2 Total (Apr–Jun)</option>
                 <option value="apr">April Only</option>
                 <option value="may">May Only</option>
-                <option value="q2">Q2 Total (Apr-Jun)</option>
+                <option value="jun">June Only</option>
               </select>
             </div>
 
@@ -845,14 +849,18 @@ export default function SrbTipsPage() {
                         <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>May</div>
                         <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.may}</div>
                       </div>
+                      <div>
+                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>June</div>
+                        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${(dancerResult as any).jun || 0}</div>
+                      </div>
                     </>
                   ) : (
                     <div style={{ gridColumn: "span 3" }}>
                       <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>
-                        {dateRange === "jan" ? "January" : dateRange === "feb" ? "February" : dateRange === "mar" ? "March" : dateRange === "apr" ? "April" : "May"}
+                        {dateRange === "jan" ? "January" : dateRange === "feb" ? "February" : dateRange === "mar" ? "March" : dateRange === "apr" ? "April" : dateRange === "jun" ? "June" : "May"}
                       </div>
                       <div style={{ fontSize: "2rem", fontWeight: 700, color: "var(--accent2)" }}>
-                        ${dateRange === "jan" ? dancerResult.jan : dateRange === "feb" ? dancerResult.feb : dateRange === "mar" ? dancerResult.mar : dateRange === "apr" ? dancerResult.apr : dancerResult.may}
+                        ${dateRange === "jan" ? dancerResult.jan : dateRange === "feb" ? dancerResult.feb : dateRange === "mar" ? dancerResult.mar : dateRange === "apr" ? dancerResult.apr : dateRange === "jun" ? (dancerResult as any).jun || 0 : dancerResult.may}
                       </div>
                     </div>
                   )}
