@@ -141,16 +141,15 @@
       "source": "uber_tax_summary"
     },
     "2026-05": {
-      "total_earnings": 2331.97,
-      "total_net": 2306.64,
-      "total_trips": 199,
-      "total_tips": 370.70,
-      "total_fare": 1830.99,
-      "total_pro_perk": 86.18,
-      "total_boost_plus": 44.10,
-      "total_expenses": 25.33,
-      "source": "uber_statements_weekly",
-      "note": "4 confirmed PDF statements (May 4–Jun 1) + May 1 manual. Earnings = driver payout before insurance."
+      "total_gross": 3578.94,
+      "total_net": 2323.02,
+      "total_trips": 216,
+      "online_miles": 2029,
+      "total_tips": 387.70,
+      "total_incentives": 401.02,
+      "total_expenses": 1255.92,
+      "trip_earnings": 2790.22,
+      "source": "uber_tax_summary"
     },
     "2026-06": {
       "total_earnings": 119.23,
