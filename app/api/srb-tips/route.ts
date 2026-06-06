@@ -9,9 +9,9 @@ import path from 'path';
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GITHUB_REPO = 'Animal71Animal/Mission-Control';
 const GITHUB_BRANCH = 'main';
-const FILE_PATH = 'public/data/srb-tips-data.json';
+const FILE_PATH = 'public/data/srb-tips.json';
 const API_URL = `https://api.github.com/repos/${GITHUB_REPO}/contents/${FILE_PATH}`;
-const LOCAL_PATH = path.join(process.cwd(), 'public', 'data', 'srb-tips-data.json');
+const LOCAL_PATH = path.join(process.cwd(), 'public', 'data', 'srb-tips.json');
 
 function ghHeaders() {
   const h: Record<string, string> = {
