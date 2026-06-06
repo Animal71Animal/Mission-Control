@@ -27,8 +27,8 @@
     },
     {
       "month": "June",
-      "amount": 346,
-      "nights": 2
+      "amount": 431,
+      "nights": 3
     }
   ],
   "topTippers": [
@@ -5821,6 +5821,16 @@
       }
     ],
     "June": [
+      {
+        "date": "Wed Jun 3",
+        "total": 85,
+        "dancers": [
+          {
+            "name": "Misc",
+            "amount": 85
+          }
+        ]
+      },
       {
         "date": "Thu Jun 4",
         "total": 150,
