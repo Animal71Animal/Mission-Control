@@ -27,8 +27,8 @@
     },
     {
       "month": "June",
-      "amount": 704,
-      "nights": 4
+      "amount": 799,
+      "nights": 6
     }
   ],
   "topTippers": [
@@ -189,8 +189,8 @@
       "mar": 40,
       "apr": 60,
       "may": 35,
-      "total": 185,
-      "jun": 10
+      "total": 190,
+      "jun": 15
     },
     {
       "name": "Shelby",
@@ -279,8 +279,8 @@
       "mar": 5,
       "apr": 25,
       "may": 0,
-      "total": 160,
-      "jun": 40
+      "total": 200,
+      "jun": 80
     },
     {
       "name": "Quinn",
@@ -389,8 +389,8 @@
       "mar": 5,
       "apr": 25,
       "may": 15,
-      "total": 76,
-      "jun": 0
+      "total": 101,
+      "jun": 25
     },
     {
       "name": "Brittany",
@@ -439,8 +439,8 @@
       "mar": 21,
       "apr": 10,
       "may": 0,
-      "total": 45,
-      "jun": 0
+      "total": 50,
+      "jun": 5
     },
     {
       "name": "Mixie",
@@ -769,8 +769,8 @@
       "mar": 0,
       "apr": 0,
       "may": 0,
-      "total": 0,
-      "jun": 0
+      "total": 20,
+      "jun": 20
     },
     {
       "name": "Poppy",
@@ -921,6 +921,24 @@
             "name": "Ari",
             "amount": 25
           }
+        ]
+      },
+      {
+        "date": "Sun Jun 7",
+        "total": 90,
+        "partial": true,
+        "dancers": [
+          { "name": "Natasha", "amount": 5 },
+          { "name": "Kiki", "amount": 25 },
+          { "name": "Customer", "amount": 20 },
+          { "name": "Milan", "amount": 40 }
+        ]
+      },
+      {
+        "date": "Mon Jun 8",
+        "total": 5,
+        "dancers": [
+          { "name": "Kitty", "amount": 5 }
         ]
       },
       {
