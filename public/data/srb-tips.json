@@ -783,14 +783,14 @@
       "jun": 20
     },
     {
-        "name": "Raven",
-        "jan": 0,
-        "feb": 0,
-        "mar": 0,
-        "apr": 0,
-        "may": 5,
-        "total": 35,
-        "jun": 30
+      "name": "Raven",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 5,
+      "total": 35,
+      "jun": 30
     },
     {
       "name": "Gemini",
@@ -924,82 +924,103 @@
         ]
       },
       {
+        "date": "Sat Jun 6",
+        "total": 253,
+        "dancers": [
+          {
+            "name": "Shae",
+            "amount": 10
+          },
+          {
+            "name": "Raven",
+            "amount": 10
+          },
+          {
+            "name": "Amy",
+            "amount": 11
+          },
+          {
+            "name": "Customers",
+            "amount": 20
+          },
+          {
+            "name": "Hunter",
+            "amount": 20
+          },
+          {
+            "name": "Kendall",
+            "amount": 20
+          },
+          {
+            "name": "Erica",
+            "amount": 9
+          },
+          {
+            "name": "Allie",
+            "amount": 20
+          },
+          {
+            "name": "Jamira",
+            "amount": 15
+          },
+          {
+            "name": "Effie",
+            "amount": 25
+          },
+          {
+            "name": "Gemini",
+            "amount": 43
+          },
+          {
+            "name": "Milan",
+            "amount": 40
+          },
+          {
+            "name": "Natasha",
+            "amount": 10
+          }
+        ]
+      },
+      {
         "date": "Sun Jun 7",
         "total": 170,
         "partial": true,
         "dancers": [
-          { "name": "Natasha", "amount": 5 },
-          { "name": "Kiki", "amount": 25 },
-          { "name": "Customer", "amount": 20 },
-          { "name": "Milan", "amount": 20 },
-          { "name": "Alaska", "amount": 40 },
-          { "name": "Customers", "amount": 60 }
+          {
+            "name": "Natasha",
+            "amount": 5
+          },
+          {
+            "name": "Kiki",
+            "amount": 25
+          },
+          {
+            "name": "Customer",
+            "amount": 20
+          },
+          {
+            "name": "Milan",
+            "amount": 20
+          },
+          {
+            "name": "Alaska",
+            "amount": 40
+          },
+          {
+            "name": "Customers",
+            "amount": 60
+          }
         ]
       },
       {
         "date": "Mon Jun 8",
         "total": 5,
         "dancers": [
-          { "name": "Kitty", "amount": 5 }
+          {
+            "name": "Kitty",
+            "amount": 5
+          }
         ]
-      },
-      {
-          "date": "Sat Jun 6",
-          "total": 253,
-          "dancers": [
-              {
-                  "name": "Shae",
-                  "amount": 10
-              },
-              {
-                  "name": "Raven",
-                  "amount": 10
-              },
-              {
-                  "name": "Amy",
-                  "amount": 11
-              },
-              {
-                  "name": "Customers",
-                  "amount": 20
-              },
-              {
-                  "name": "Hunter",
-                  "amount": 20
-              },
-              {
-                  "name": "Kendall",
-                  "amount": 20
-              },
-              {
-                  "name": "Erica",
-                  "amount": 9
-              },
-              {
-                  "name": "Allie",
-                  "amount": 20
-              },
-              {
-                  "name": "Jamira",
-                  "amount": 15
-              },
-              {
-                  "name": "Effie",
-                  "amount": 25
-              },
-              {
-                "name": "Gemini",
-                "amount": 43
-              },
-              {
-                "name": "Milan",
-                "amount": 40
-              },
-              {
-                "name": "Natasha",
-                "amount": 10
-              }
-          ]
       }
     ]
   }
