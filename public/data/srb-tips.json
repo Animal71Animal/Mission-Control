@@ -27,7 +27,7 @@
     },
     {
       "month": "June",
-      "amount": 964,
+      "amount": 984,
       "nights": 6
     }
   ],
@@ -769,8 +769,8 @@
       "mar": 0,
       "apr": 0,
       "may": 0,
-      "total": 20,
-      "jun": 20
+      "total": 40,
+      "jun": 40
     },
     {
       "name": "Poppy",
@@ -1014,7 +1014,7 @@
       },
       {
         "date": "Mon Jun 8",
-        "total": 90,
+        "total": 110,
         "dancers": [
           {
             "name": "Kitty",
@@ -1035,6 +1035,10 @@
           {
             "name": "Milan",
             "amount": 40
+          },
+          {
+            "name": "Customer",
+            "amount": 20
           }
         ]
       }
