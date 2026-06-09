@@ -27,7 +27,7 @@
     },
     {
       "month": "June",
-      "amount": 879,
+      "amount": 889,
       "nights": 6
     }
   ],
@@ -209,8 +209,8 @@
       "mar": 35,
       "apr": 35,
       "may": 40,
-      "total": 170,
-      "jun": 0
+      "total": 180,
+      "jun": 10
     },
     {
       "name": "Kendall",
@@ -1014,11 +1014,15 @@
       },
       {
         "date": "Mon Jun 8",
-        "total": 5,
+        "total": 15,
         "dancers": [
           {
             "name": "Kitty",
             "amount": 5
+          },
+          {
+            "name": "Nova",
+            "amount": 10
           }
         ]
       }
