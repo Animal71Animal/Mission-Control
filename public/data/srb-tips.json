@@ -27,7 +27,7 @@
     },
     {
       "month": "June",
-      "amount": 819,
+      "amount": 879,
       "nights": 6
     }
   ],
@@ -39,8 +39,8 @@
       "mar": 154,
       "apr": 68,
       "may": 939,
-      "total": 1688,
-      "jun": 25
+      "total": 1748,
+      "jun": 85
     },
     {
       "name": "Suki",
@@ -925,14 +925,15 @@
       },
       {
         "date": "Sun Jun 7",
-        "total": 110,
+        "total": 170,
         "partial": true,
         "dancers": [
           { "name": "Natasha", "amount": 5 },
           { "name": "Kiki", "amount": 25 },
           { "name": "Customer", "amount": 20 },
           { "name": "Milan", "amount": 20 },
-          { "name": "Alaska", "amount": 40 }
+          { "name": "Alaska", "amount": 40 },
+          { "name": "Customers", "amount": 60 }
         ]
       },
       {
