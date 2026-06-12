@@ -3966,6 +3966,66 @@
     ],
     "June": [
       {
+        "date": "Wed Jun 3",
+        "total": 85,
+        "dancers": [
+          {
+            "name": "Misc",
+            "amount": 85
+          }
+        ]
+      },
+      {
+        "date": "Thu Jun 4",
+        "total": 150,
+        "dancers": [
+          {
+            "name": "Customers",
+            "amount": 5
+          },
+          {
+            "name": "Berlin",
+            "amount": 20
+          },
+          {
+            "name": "Amy",
+            "amount": 6
+          },
+          {
+            "name": "Indie",
+            "amount": 31
+          },
+          {
+            "name": "Poppy",
+            "amount": 10
+          },
+          {
+            "name": "Mia",
+            "amount": 10
+          },
+          {
+            "name": "Erica",
+            "amount": 5
+          },
+          {
+            "name": "Allie",
+            "amount": 20
+          },
+          {
+            "name": "Shiva",
+            "amount": 13
+          },
+          {
+            "name": "Effie",
+            "amount": 5
+          },
+          {
+            "name": "Ari",
+            "amount": 25
+          }
+        ]
+      },
+      {
         "date": "Fri Jun 5",
         "total": 196,
         "dancers": [
@@ -4020,36 +4080,6 @@
           {
             "name": "Ari",
             "amount": 25
-          }
-        ]
-      },
-      {
-        "date": "Mon Jun 8",
-        "total": 110,
-        "dancers": [
-          {
-            "name": "Kitty",
-            "amount": 5
-          },
-          {
-            "name": "Nova",
-            "amount": 10
-          },
-          {
-            "name": "Mia",
-            "amount": 10
-          },
-          {
-            "name": "Shelby",
-            "amount": 25
-          },
-          {
-            "name": "Milan",
-            "amount": 40
-          },
-          {
-            "name": "Customer",
-            "amount": 20
           }
         ]
       },
@@ -4143,27 +4173,15 @@
         ]
       },
       {
-        "date": "Thu Jun 4",
-        "total": 150,
+        "date": "Mon Jun 8",
+        "total": 110,
         "dancers": [
           {
-            "name": "Customers",
+            "name": "Kitty",
             "amount": 5
           },
           {
-            "name": "Berlin",
-            "amount": 20
-          },
-          {
-            "name": "Amy",
-            "amount": 6
-          },
-          {
-            "name": "Indie",
-            "amount": 31
-          },
-          {
-            "name": "Poppy",
+            "name": "Nova",
             "amount": 10
           },
           {
@@ -4171,34 +4189,16 @@
             "amount": 10
           },
           {
-            "name": "Erica",
-            "amount": 5
-          },
-          {
-            "name": "Allie",
-            "amount": 20
-          },
-          {
-            "name": "Shiva",
-            "amount": 13
-          },
-          {
-            "name": "Effie",
-            "amount": 5
-          },
-          {
-            "name": "Ari",
+            "name": "Shelby",
             "amount": 25
-          }
-        ]
-      },
-      {
-        "date": "Wed Jun 3",
-        "total": 85,
-        "dancers": [
+          },
           {
-            "name": "Misc",
-            "amount": 85
+            "name": "Milan",
+            "amount": 40
+          },
+          {
+            "name": "Customer",
+            "amount": 20
           }
         ]
       },
@@ -5013,5 +5013,5 @@
     }
   ],
   "customerTips": [],
-  "last_updated": "2026-06-12T23:35:45.124280+00:00"
+  "last_updated": "2026-06-12T23:36:24.860326+00:00"
 }
