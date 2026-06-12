@@ -75,6 +75,22 @@
       "net_payout": 119.23,
       "source": "partial_manual",
       "note": "Jun 1 only \u2014 full week statement pending"
+    },
+    {
+      "week_start": "2026-06-08T04:00:00",
+      "week_end": "2026-06-15T04:00:00",
+      "label": "Jun 8 \u2013 Jun 14",
+      "total_earnings": 343.57,
+      "trips": 33,
+      "tips": 72.0,
+      "fare": 258.86,
+      "pro_perk": 12.71,
+      "boost_plus": 0.0,
+      "expenses": 0.0,
+      "prev_week_events": 0.0,
+      "net_payout": 343.57,
+      "source": "partial_manual",
+      "note": "Jun 9\u201311 only \u2014 week in progress"
     }
   ],
   "dailySummaries": [
@@ -216,5 +232,5 @@
     "scrape_method": "manual_entry_from_pdf_statements",
     "last_scrape_attempt": "2026-06-03T22:00:00Z"
   },
-  "last_updated": "2026-06-12T00:32:22.212855+00:00"
+  "last_updated": "2026-06-12T00:39:50.479098+00:00"
 }
