@@ -3,22 +3,22 @@
     {
       "week_start": "2026-05-04T04:00:00",
       "week_end": "2026-05-11T04:00:00",
-      "label": "May 4 – May 11",
+      "label": "May 4 \u2013 May 11",
       "total_earnings": 183.06,
       "trips": 17,
-      "tips": 22.00,
-      "fare": 154.70,
+      "tips": 22.0,
+      "fare": 154.7,
       "pro_perk": 6.36,
-      "boost_plus": 0.00,
+      "boost_plus": 0.0,
       "expenses": 1.73,
-      "prev_week_events": 4.00,
+      "prev_week_events": 4.0,
       "net_payout": 185.33,
       "source": "uber_statement"
     },
     {
       "week_start": "2026-05-11T04:00:00",
       "week_end": "2026-05-18T04:00:00",
-      "label": "May 11 – May 18",
+      "label": "May 11 \u2013 May 18",
       "total_earnings": 772.38,
       "trips": 66,
       "tips": 147.11,
@@ -26,14 +26,14 @@
       "pro_perk": 27.28,
       "boost_plus": 27.25,
       "expenses": 8.49,
-      "prev_week_events": 1.00,
+      "prev_week_events": 1.0,
       "net_payout": 764.89,
       "source": "uber_statement"
     },
     {
       "week_start": "2026-05-18T04:00:00",
       "week_end": "2026-05-25T04:00:00",
-      "label": "May 18 – May 25",
+      "label": "May 18 \u2013 May 25",
       "total_earnings": 844.73,
       "trips": 76,
       "tips": 111.59,
@@ -41,40 +41,40 @@
       "pro_perk": 33.18,
       "boost_plus": 16.85,
       "expenses": 9.08,
-      "prev_week_events": 2.00,
+      "prev_week_events": 2.0,
       "net_payout": 837.65,
       "source": "uber_statement"
     },
     {
       "week_start": "2026-05-25T04:00:00",
       "week_end": "2026-06-01T04:00:00",
-      "label": "May 25 – Jun 1",
+      "label": "May 25 \u2013 Jun 1",
       "total_earnings": 492.57,
       "trips": 38,
-      "tips": 83.00,
+      "tips": 83.0,
       "fare": 390.21,
       "pro_perk": 19.36,
-      "boost_plus": 0.00,
+      "boost_plus": 0.0,
       "expenses": 6.03,
-      "prev_week_events": 7.00,
+      "prev_week_events": 7.0,
       "net_payout": 493.54,
       "source": "uber_statement"
     },
     {
       "week_start": "2026-06-01T04:00:00",
       "week_end": "2026-06-08T04:00:00",
-      "label": "Jun 1 – Jun 8",
+      "label": "Jun 1 \u2013 Jun 8",
       "total_earnings": 119.23,
       "trips": 8,
-      "tips": 0.00,
+      "tips": 0.0,
       "fare": 110.99,
       "pro_perk": 5.41,
       "boost_plus": 2.83,
-      "expenses": 0.00,
-      "prev_week_events": 0.00,
+      "expenses": 0.0,
+      "prev_week_events": 0.0,
       "net_payout": 119.23,
       "source": "partial_manual",
-      "note": "Jun 1 only — full week statement pending"
+      "note": "Jun 1 only \u2014 full week statement pending"
     }
   ],
   "dailySummaries": [
@@ -84,15 +84,46 @@
       "gross": 39.23,
       "trips": 2,
       "miles": 26.13,
-      "tips": 7.00,
+      "tips": 7.0,
       "surge": 1.5,
       "pro_perk": 1.53,
       "charging_cost": 0.91,
       "netPayout": 38.32,
-      "basefare": 30.70,
+      "basefare": 30.7,
       "promotions": 0.0,
       "expenses": 0.91,
-      "note": "In Apr 27-May 4 statement period — no PDF available"
+      "note": "In Apr 27-May 4 statement period \u2014 no PDF available"
+    },
+    {
+      "date": "2026-06-09",
+      "earnings": 39.2,
+      "gross": 39.2,
+      "trips": 6,
+      "miles": 16.12,
+      "tips": 9.0,
+      "surge": 0.0,
+      "pro_perk": 1.44,
+      "charging_cost": 0.0,
+      "netPayout": 39.2,
+      "basefare": 28.76,
+      "promotions": 0.0,
+      "expenses": 0.0
+    },
+    {
+      "date": "2026-06-10",
+      "earnings": 133.95,
+      "gross": 133.95,
+      "trips": 11,
+      "miles": 59.14,
+      "tips": 34.0,
+      "surge": 0.0,
+      "pro_perk": 4.55,
+      "charging_cost": 0.0,
+      "netPayout": 133.95,
+      "basefare": 95.4,
+      "promotions": 0.0,
+      "expenses": 0.0,
+      "note": "Includes Boost+ ride ($28.64)"
     }
   ],
   "monthlyTotals": {
@@ -101,8 +132,8 @@
       "total_net": 1829.46,
       "total_trips": 165,
       "online_miles": 1773,
-      "total_tips": 285.40,
-      "total_incentives": 348.50,
+      "total_tips": 285.4,
+      "total_incentives": 348.5,
       "total_expenses": 1040.36,
       "trip_earnings": 2235.92,
       "source": "uber_tax_summary"
@@ -145,23 +176,23 @@
       "total_net": 2323.02,
       "total_trips": 216,
       "online_miles": 2029,
-      "total_tips": 387.70,
+      "total_tips": 387.7,
       "total_incentives": 401.02,
       "total_expenses": 1255.92,
       "trip_earnings": 2790.22,
       "source": "uber_tax_summary"
     },
     "2026-06": {
-      "total_earnings": 119.23,
-      "total_net": 119.23,
-      "total_trips": 8,
-      "total_tips": 0.00,
-      "total_fare": 110.99,
-      "total_pro_perk": 5.41,
+      "total_earnings": 292.38,
+      "total_net": 292.38,
+      "total_trips": 25,
+      "total_tips": 43.0,
+      "total_fare": 235.15,
+      "total_pro_perk": 11.4,
       "total_boost_plus": 2.83,
-      "total_expenses": 0.00,
-      "source": "partial_manual",
-      "note": "Jun 1 only — full June pending"
+      "total_expenses": 0.0,
+      "source": "manual_screenshots",
+      "note": "Jun 1 (8 trips) + Jun 9 (6 trips) + Jun 10 (11 trips)"
     }
   },
   "metadata": {
@@ -170,5 +201,5 @@
     "scrape_method": "manual_entry_from_pdf_statements",
     "last_scrape_attempt": "2026-06-03T22:00:00Z"
   },
-  "last_updated": "2026-06-03T22:00:00Z"
+  "last_updated": "2026-06-12T00:30:02.169117+00:00"
 }
