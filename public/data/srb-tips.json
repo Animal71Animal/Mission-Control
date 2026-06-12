@@ -4203,5 +4203,768 @@
         ]
       }
     ]
-  }
+  },
+  "allDancers": [
+    {
+      "name": "Customers",
+      "jan": 278.0,
+      "feb": 224.0,
+      "mar": 154.0,
+      "apr": 68.0,
+      "may": 541.0,
+      "jun": 85.0,
+      "total": 1350.0
+    },
+    {
+      "name": "Suki",
+      "jan": 200.0,
+      "feb": 60.0,
+      "mar": 0.0,
+      "apr": 86.0,
+      "may": 150.0,
+      "jun": 0,
+      "total": 496.0
+    },
+    {
+      "name": "Hunter",
+      "jan": 20.0,
+      "feb": 115.0,
+      "mar": 120.0,
+      "apr": 60.0,
+      "may": 80.0,
+      "jun": 40.0,
+      "total": 435.0
+    },
+    {
+      "name": "Genesis",
+      "jan": 74.0,
+      "feb": 48.0,
+      "mar": 138.0,
+      "apr": 20.0,
+      "may": 113.0,
+      "jun": 0,
+      "total": 393.0
+    },
+    {
+      "name": "Allie",
+      "jan": 20.0,
+      "feb": 95.0,
+      "mar": 87.0,
+      "apr": 46.0,
+      "may": 100.0,
+      "jun": 40.0,
+      "total": 388.0
+    },
+    {
+      "name": "Nala",
+      "jan": 20.0,
+      "feb": 240.0,
+      "mar": 0,
+      "apr": 0,
+      "may": 80.0,
+      "jun": 0,
+      "total": 340.0
+    },
+    {
+      "name": "Amity",
+      "jan": 35.0,
+      "feb": 35.0,
+      "mar": 196.0,
+      "apr": 0,
+      "may": 65.0,
+      "jun": 0,
+      "total": 331.0
+    },
+    {
+      "name": "Georgia",
+      "jan": 26.0,
+      "feb": 49.0,
+      "mar": 47.0,
+      "apr": 125.0,
+      "may": 30.0,
+      "jun": 0,
+      "total": 277.0
+    },
+    {
+      "name": "Amy",
+      "jan": 0,
+      "feb": 25.0,
+      "mar": 0,
+      "apr": 113.0,
+      "may": 103.0,
+      "jun": 32.0,
+      "total": 273.0
+    },
+    {
+      "name": "Kendall",
+      "jan": 20.0,
+      "feb": 15.0,
+      "mar": 50.0,
+      "apr": 20.0,
+      "may": 80.0,
+      "jun": 60.0,
+      "total": 245.0
+    },
+    {
+      "name": "Mia",
+      "jan": 89.0,
+      "feb": 27.0,
+      "mar": 4.0,
+      "apr": 38.0,
+      "may": 53.0,
+      "jun": 20.0,
+      "total": 231.0
+    },
+    {
+      "name": "Milan",
+      "jan": 70.0,
+      "feb": 20.0,
+      "mar": 5.0,
+      "apr": 25.0,
+      "may": 0,
+      "jun": 100.0,
+      "total": 220.0
+    },
+    {
+      "name": "Athena",
+      "jan": 65.0,
+      "feb": 10.0,
+      "mar": 85.0,
+      "apr": 0,
+      "may": 50.0,
+      "jun": 0,
+      "total": 210.0
+    },
+    {
+      "name": "Willow",
+      "jan": 48.0,
+      "feb": 22.0,
+      "mar": 52.0,
+      "apr": 85.0,
+      "may": 0,
+      "jun": 0,
+      "total": 207.0
+    },
+    {
+      "name": "Natasha",
+      "jan": 25.0,
+      "feb": 15.0,
+      "mar": 40.0,
+      "apr": 60.0,
+      "may": 40.0,
+      "jun": 15.0,
+      "total": 195.0
+    },
+    {
+      "name": "Berlin",
+      "jan": 28.0,
+      "feb": 45.0,
+      "mar": 35.0,
+      "apr": 10.0,
+      "may": 53.0,
+      "jun": 20.0,
+      "total": 191.0
+    },
+    {
+      "name": "Indie",
+      "jan": 25.0,
+      "feb": 5.0,
+      "mar": 6.0,
+      "apr": 73.0,
+      "may": 49.0,
+      "jun": 31.0,
+      "total": 189.0
+    },
+    {
+      "name": "Adelia",
+      "jan": 60.0,
+      "feb": 20.0,
+      "mar": 50.0,
+      "apr": 30.0,
+      "may": 25.0,
+      "jun": 0,
+      "total": 185.0
+    },
+    {
+      "name": "Skylar",
+      "jan": 0,
+      "feb": 10.0,
+      "mar": 89.0,
+      "apr": 40.0,
+      "may": 40.0,
+      "jun": 0,
+      "total": 179.0
+    },
+    {
+      "name": "Kody",
+      "jan": 64.0,
+      "feb": 8.0,
+      "mar": 0,
+      "apr": 5.0,
+      "may": 100.0,
+      "jun": 0,
+      "total": 177.0
+    },
+    {
+      "name": "Shelby",
+      "jan": 25.0,
+      "feb": 5.0,
+      "mar": 0.0,
+      "apr": 105.0,
+      "may": 15.0,
+      "jun": 25.0,
+      "total": 175.0
+    },
+    {
+      "name": "Zara",
+      "jan": 24.0,
+      "feb": 25.0,
+      "mar": 20.0,
+      "apr": 65.0,
+      "may": 35.0,
+      "jun": 0,
+      "total": 169.0
+    },
+    {
+      "name": "Ari",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 117.0,
+      "jun": 50.0,
+      "total": 167.0
+    },
+    {
+      "name": "Nova",
+      "jan": 20.0,
+      "feb": 40.0,
+      "mar": 35.0,
+      "apr": 35.0,
+      "may": 25.0,
+      "jun": 10.0,
+      "total": 165.0
+    },
+    {
+      "name": "Giovanna",
+      "jan": 0,
+      "feb": 0,
+      "mar": 75.0,
+      "apr": 40.0,
+      "may": 20.0,
+      "jun": 20.0,
+      "total": 155.0
+    },
+    {
+      "name": "Quinn",
+      "jan": 10.0,
+      "feb": 14.0,
+      "mar": 50.0,
+      "apr": 33.0,
+      "may": 31.0,
+      "jun": 0,
+      "total": 138.0
+    },
+    {
+      "name": "Noelle",
+      "jan": 20.0,
+      "feb": 110.0,
+      "mar": 0,
+      "apr": 0,
+      "may": 0,
+      "jun": 0,
+      "total": 130.0
+    },
+    {
+      "name": "Asia",
+      "jan": 0,
+      "feb": 45.0,
+      "mar": 35.0,
+      "apr": 0,
+      "may": 48.0,
+      "jun": 0,
+      "total": 128.0
+    },
+    {
+      "name": "Macy",
+      "jan": 20.0,
+      "feb": 0.0,
+      "mar": 30.0,
+      "apr": 40.0,
+      "may": 20.0,
+      "jun": 15.0,
+      "total": 125.0
+    },
+    {
+      "name": "Maria",
+      "jan": 0,
+      "feb": 0,
+      "mar": 20.0,
+      "apr": 55.0,
+      "may": 40.0,
+      "jun": 0,
+      "total": 115.0
+    },
+    {
+      "name": "Tiana",
+      "jan": 7.0,
+      "feb": 0.0,
+      "mar": 28.0,
+      "apr": 35.0,
+      "may": 40.0,
+      "jun": 0,
+      "total": 110.0
+    },
+    {
+      "name": "Effie",
+      "jan": 40.0,
+      "feb": 0,
+      "mar": 10.0,
+      "apr": 22.0,
+      "may": 5.0,
+      "jun": 30.0,
+      "total": 107.0
+    },
+    {
+      "name": "Dior",
+      "jan": 20.0,
+      "feb": 15.0,
+      "mar": 15.0,
+      "apr": 33.0,
+      "may": 18.0,
+      "jun": 5.0,
+      "total": 106.0
+    },
+    {
+      "name": "Kiki",
+      "jan": 31.0,
+      "feb": 0,
+      "mar": 5.0,
+      "apr": 25.0,
+      "may": 15.0,
+      "jun": 25.0,
+      "total": 101.0
+    },
+    {
+      "name": "Star",
+      "jan": 6.0,
+      "feb": 21.0,
+      "mar": 6.0,
+      "apr": 40.0,
+      "may": 25.0,
+      "jun": 0,
+      "total": 98.0
+    },
+    {
+      "name": "Alaska",
+      "jan": 25.0,
+      "feb": 0.0,
+      "mar": 15.0,
+      "apr": 10.0,
+      "may": 0,
+      "jun": 40.0,
+      "total": 90.0
+    },
+    {
+      "name": "Ella",
+      "jan": 0,
+      "feb": 66.0,
+      "mar": 20.0,
+      "apr": 0,
+      "may": 0,
+      "jun": 0,
+      "total": 86.0
+    },
+    {
+      "name": "Misc",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 0,
+      "jun": 85.0,
+      "total": 85.0
+    },
+    {
+      "name": "Lilly",
+      "jan": 12.0,
+      "feb": 10.0,
+      "mar": 30.0,
+      "apr": 0,
+      "may": 20.0,
+      "jun": 0,
+      "total": 72.0
+    },
+    {
+      "name": "Baby",
+      "jan": 34.0,
+      "feb": 5.0,
+      "mar": 7.0,
+      "apr": 0,
+      "may": 20.0,
+      "jun": 0,
+      "total": 66.0
+    },
+    {
+      "name": "Brittany",
+      "jan": 0,
+      "feb": 0,
+      "mar": 25.0,
+      "apr": 20.0,
+      "may": 15.0,
+      "jun": 0,
+      "total": 60.0
+    },
+    {
+      "name": "Erica",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 35.0,
+      "jun": 21.0,
+      "total": 56.0
+    },
+    {
+      "name": "Kitty",
+      "jan": 14.0,
+      "feb": 0,
+      "mar": 21.0,
+      "apr": 10.0,
+      "may": 0,
+      "jun": 5.0,
+      "total": 50.0
+    },
+    {
+      "name": "London",
+      "jan": 0,
+      "feb": 0,
+      "mar": 50.0,
+      "apr": 0,
+      "may": 0,
+      "jun": 0,
+      "total": 50.0
+    },
+    {
+      "name": "Mixie",
+      "jan": 5.0,
+      "feb": 10.0,
+      "mar": 15.0,
+      "apr": 15.0,
+      "may": 0,
+      "jun": 0,
+      "total": 45.0
+    },
+    {
+      "name": "Jamira",
+      "jan": 0,
+      "feb": 5.0,
+      "mar": 10.0,
+      "apr": 0,
+      "may": 15.0,
+      "jun": 15.0,
+      "total": 45.0
+    },
+    {
+      "name": "Gemini",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 0,
+      "jun": 43.0,
+      "total": 43.0
+    },
+    {
+      "name": "Lilith",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 20.0,
+      "may": 20.0,
+      "jun": 0,
+      "total": 40.0
+    },
+    {
+      "name": "Customer",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 0,
+      "jun": 40.0,
+      "total": 40.0
+    },
+    {
+      "name": "Cassandra",
+      "jan": 18.0,
+      "feb": 0.0,
+      "mar": 8.0,
+      "apr": 5.0,
+      "may": 0,
+      "jun": 8.0,
+      "total": 39.0
+    },
+    {
+      "name": "Shiiva",
+      "jan": 3.0,
+      "feb": 10.0,
+      "mar": 20.0,
+      "apr": 0,
+      "may": 5.0,
+      "jun": 0,
+      "total": 38.0
+    },
+    {
+      "name": "Kimberly",
+      "jan": 7.0,
+      "feb": 21.0,
+      "mar": 8.0,
+      "apr": 0,
+      "may": 0,
+      "jun": 0,
+      "total": 36.0
+    },
+    {
+      "name": "Raven",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 5.0,
+      "jun": 30.0,
+      "total": 35.0
+    },
+    {
+      "name": "Shae",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 20.0,
+      "jun": 15.0,
+      "total": 35.0
+    },
+    {
+      "name": "Ruby",
+      "jan": 29.0,
+      "feb": 4.0,
+      "mar": 0,
+      "apr": 0,
+      "may": 0,
+      "jun": 0,
+      "total": 33.0
+    },
+    {
+      "name": "Nadia",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 10.0,
+      "may": 20.0,
+      "jun": 0,
+      "total": 30.0
+    },
+    {
+      "name": "Poppy",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 10.0,
+      "jun": 20.0,
+      "total": 30.0
+    },
+    {
+      "name": "Kylie",
+      "jan": 0,
+      "feb": 0,
+      "mar": 20.0,
+      "apr": 7.0,
+      "may": 0,
+      "jun": 0,
+      "total": 27.0
+    },
+    {
+      "name": "Taylor",
+      "jan": 0,
+      "feb": 5.0,
+      "mar": 0,
+      "apr": 5.0,
+      "may": 16.0,
+      "jun": 0,
+      "total": 26.0
+    },
+    {
+      "name": "Val",
+      "jan": 0,
+      "feb": 0,
+      "mar": 25.0,
+      "apr": 0,
+      "may": 0,
+      "jun": 0,
+      "total": 25.0
+    },
+    {
+      "name": "Kodi",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 25.0,
+      "may": 0,
+      "jun": 0,
+      "total": 25.0
+    },
+    {
+      "name": "Ava",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 24.0,
+      "may": 0,
+      "jun": 0,
+      "total": 24.0
+    },
+    {
+      "name": "Lola",
+      "jan": 0,
+      "feb": 0,
+      "mar": 23.0,
+      "apr": 0,
+      "may": 0,
+      "jun": 0,
+      "total": 23.0
+    },
+    {
+      "name": "Viviana",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 20.0,
+      "may": 0,
+      "jun": 0,
+      "total": 20.0
+    },
+    {
+      "name": "Shiva",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 5.0,
+      "jun": 13.0,
+      "total": 18.0
+    },
+    {
+      "name": "Karina",
+      "jan": 7.0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 10.0,
+      "jun": 0,
+      "total": 17.0
+    },
+    {
+      "name": "Brooke",
+      "jan": 0,
+      "feb": 0,
+      "mar": 8.0,
+      "apr": 9.0,
+      "may": 0,
+      "jun": 0,
+      "total": 17.0
+    },
+    {
+      "name": "Jazmin",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 15.0,
+      "jun": 0,
+      "total": 15.0
+    },
+    {
+      "name": "Jasmin",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 8.0,
+      "jun": 6.0,
+      "total": 14.0
+    },
+    {
+      "name": "Russia",
+      "jan": 0,
+      "feb": 10.0,
+      "mar": 0,
+      "apr": 0,
+      "may": 3.0,
+      "jun": 0,
+      "total": 13.0
+    },
+    {
+      "name": "Dakota",
+      "jan": 0,
+      "feb": 0.0,
+      "mar": 10.0,
+      "apr": 0,
+      "may": 0,
+      "jun": 0,
+      "total": 10.0
+    },
+    {
+      "name": "Lillith",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 10.0,
+      "jun": 0,
+      "total": 10.0
+    },
+    {
+      "name": "Natalie",
+      "jan": 6.0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 0,
+      "jun": 0,
+      "total": 6.0
+    },
+    {
+      "name": "Shea",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 6.0,
+      "jun": 0,
+      "total": 6.0
+    },
+    {
+      "name": "Jocelyn",
+      "jan": 5.0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 0,
+      "jun": 0,
+      "total": 5.0
+    },
+    {
+      "name": "Hazel",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 5.0,
+      "jun": 0,
+      "total": 5.0
+    }
+  ],
+  "customerTips": []
 }

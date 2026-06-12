@@ -71,7 +71,7 @@ export default function SrbTipsPage() {
     );
   }
 
-  const { monthlyTotals, topTippers, allDancers, nightlyData } = data;
+  const { monthlyTotals, topTippers, allDancers = [], nightlyData = {} } = data;
   
   // Q1 = January, February, March
   const q1Months = monthlyTotals.filter(m => ['January', 'February', 'March'].includes(m.month));
