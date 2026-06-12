@@ -111,6 +111,22 @@
       "note": "In Apr 27-May 4 statement period \u2014 no PDF available"
     },
     {
+      "date": "2026-06-01",
+      "earnings": 119.23,
+      "gross": 119.23,
+      "trips": 8,
+      "miles": 0.0,
+      "tips": 0.0,
+      "surge": 0.0,
+      "pro_perk": 0.0,
+      "charging_cost": 0.0,
+      "netPayout": 119.23,
+      "basefare": 119.23,
+      "promotions": 0.0,
+      "expenses": 0.0,
+      "note": "Restored from MEMORY.md \u2014 details not captured"
+    },
+    {
       "date": "2026-06-09",
       "earnings": 39.2,
       "gross": 39.2,
@@ -143,16 +159,31 @@
     },
     {
       "date": "2026-06-11",
-      "earnings": 165.29,
-      "gross": 165.29,
-      "trips": 15,
-      "miles": 71.77,
+      "earnings": 175.98,
+      "gross": 175.98,
+      "trips": 16,
+      "miles": 74.45,
       "tips": 29.0,
       "surge": 4.0,
-      "pro_perk": 6.48,
+      "pro_perk": 6.99,
       "charging_cost": 0.0,
-      "netPayout": 165.29,
-      "basefare": 129.81,
+      "netPayout": 175.98,
+      "basefare": 140.5,
+      "promotions": 0.0,
+      "expenses": 0.0
+    },
+    {
+      "date": "2026-06-12",
+      "earnings": 68.05,
+      "gross": 68.05,
+      "trips": 3,
+      "miles": 37.15,
+      "tips": 12.0,
+      "surge": 2.75,
+      "pro_perk": 2.67,
+      "charging_cost": 0.0,
+      "netPayout": 68.05,
+      "basefare": 53.3,
       "promotions": 0.0,
       "expenses": 0.0
     }
@@ -214,16 +245,15 @@
       "source": "uber_tax_summary"
     },
     "2026-06": {
-      "total_earnings": 462.8,
-      "total_net": 462.8,
-      "total_trips": 41,
-      "total_tips": 72.0,
-      "total_fare": 369.85,
-      "total_pro_perk": 18.12,
-      "total_boost_plus": 2.83,
+      "total_earnings": 541.54,
+      "total_net": 541.54,
+      "total_trips": 45,
+      "total_tips": 84.0,
+      "total_fare": 442.08,
+      "total_pro_perk": 15.89,
+      "total_boost_plus": 0.0,
       "total_expenses": 0.0,
-      "source": "manual_screenshots",
-      "note": "Jun 1 (8) + Jun 9 (6) + Jun 10 (12) + Jun 11 (15)"
+      "source": "manual_screenshots"
     }
   },
   "metadata": {
@@ -232,5 +262,5 @@
     "scrape_method": "manual_entry_from_pdf_statements",
     "last_scrape_attempt": "2026-06-03T22:00:00Z"
   },
-  "last_updated": "2026-06-12T00:39:50.479098+00:00"
+  "last_updated": "2026-06-12T23:46:53.259751+00:00"
 }
