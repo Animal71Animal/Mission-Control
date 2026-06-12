@@ -27,8 +27,8 @@
     },
     {
       "month": "June",
-      "amount": 984,
-      "nights": 6
+      "amount": 999,
+      "nights": 7
     }
   ],
   "topTippers": [
@@ -39,8 +39,8 @@
       "mar": 154,
       "apr": 68,
       "may": 939,
-      "total": 1748,
-      "jun": 85
+      "total": 1763,
+      "jun": 100
     },
     {
       "name": "Suki",
@@ -4201,6 +4201,20 @@
             "amount": 85
           }
         ]
+      },
+      {
+        "date": "Thu Jun 11",
+        "total": 35,
+        "dancers": [
+          {
+            "name": "Re",
+            "amount": 20
+          },
+          {
+            "name": "Customer",
+            "amount": 15
+          }
+        ]
       }
     ]
   },
@@ -4966,5 +4980,6 @@
       "total": 5.0
     }
   ],
-  "customerTips": []
+  "customerTips": [],
+  "last_updated": "2026-06-12T07:31:39.754462+00:00"
 }
