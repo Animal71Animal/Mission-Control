@@ -24,8 +24,8 @@ interface MonthlySummary {
 
 interface TeslaData {
   sessions: ChargingSession[];
-  summary: Record<string, any>;
-  monthly_summary: Record<string, MonthlySummary>;
+  totals?: Record<string, any>;
+  monthlyTotals?: Record<string, MonthlySummary>;
   last_updated?: string;
 }
 
@@ -108,10 +108,10 @@ export default function TeslaPage() {
     );
   }
 
-  const { sessions, monthlyTotals, monthly_summary } = data;
+  const { sessions, monthlyTotals } = data;
   
-  // Use monthlyTotals (authoritative) if available, fall back to monthly_summary (legacy)
-  const totalsData = monthlyTotals || monthly_summary || {};
+  // Use monthlyTotals as authoritative source
+  const totalsData = monthlyTotals || {};
 
   // Build session lookup by month
   const sessionsByMonth: Record<string, ChargingSession[]> = {};
@@ -352,7 +352,7 @@ export default function TeslaPage() {
           </h3>
           <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
             {MONTH_ORDER.map(key => {
-              const m = monthly_summary[key];
+              const m = totalsData[key];
               if (!m) return null;
               const pct = ytdCost > 0 ? (m.cost / ytdCost) * 100 : 0;
               return (
