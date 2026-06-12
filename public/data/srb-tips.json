@@ -27,7 +27,7 @@
     },
     {
       "month": "June",
-      "amount": 999,
+      "amount": 1069,
       "nights": 7
     }
   ],
@@ -4204,7 +4204,7 @@
       },
       {
         "date": "Thu Jun 11",
-        "total": 35,
+        "total": 105,
         "dancers": [
           {
             "name": "Re",
@@ -4213,6 +4213,18 @@
           {
             "name": "Customer",
             "amount": 15
+          },
+          {
+            "name": "Shae",
+            "amount": 5
+          },
+          {
+            "name": "Kendall",
+            "amount": 40
+          },
+          {
+            "name": "Hunter",
+            "amount": 25
           }
         ]
       }
@@ -4981,5 +4993,5 @@
     }
   ],
   "customerTips": [],
-  "last_updated": "2026-06-12T07:31:39.754462+00:00"
+  "last_updated": "2026-06-12T07:41:21.382646+00:00"
 }
