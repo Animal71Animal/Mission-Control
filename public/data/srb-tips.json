@@ -4204,7 +4204,7 @@
       },
       {
         "date": "Fri Jun 12",
-        "total": 73,
+        "total": 98,
         "dancers": [
           {
             "name": "Customers",
@@ -4213,6 +4213,18 @@
           {
             "name": "Dior",
             "amount": 12
+          },
+          {
+            "name": "Jamira",
+            "amount": 10
+          },
+          {
+            "name": "Nova",
+            "amount": 5
+          },
+          {
+            "name": "Giovanna",
+            "amount": 10
           }
         ]
       }
