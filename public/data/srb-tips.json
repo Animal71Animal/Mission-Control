@@ -4204,7 +4204,7 @@
       },
       {
         "date": "Fri Jun 12",
-        "total": 98,
+        "total": 130,
         "dancers": [
           {
             "name": "Customers",
@@ -4225,6 +4225,14 @@
           {
             "name": "Giovanna",
             "amount": 10
+          },
+          {
+            "name": "Erica",
+            "amount": 7
+          },
+          {
+            "name": "Athena",
+            "amount": 25
           }
         ]
       }
