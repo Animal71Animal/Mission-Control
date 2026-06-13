@@ -4203,50 +4203,19 @@
         ]
       },
       {
-        "date": "Thu Jun 11",
-        "total": 137,
+        "date": "Fri Jun 12",
+        "total": 7,
         "dancers": [
           {
-            "name": "Ari",
-            "amount": 20
-          },
-          {
-            "name": "Customer",
-            "amount": 15
-          },
-          {
-            "name": "Shae",
-            "amount": 5
-          },
-          {
-            "name": "Kendall",
-            "amount": 40
-          },
-          {
-            "name": "Hunter",
-            "amount": 25
-          },
-          {
-            "name": "Tiana",
-            "amount": 10
-          },
-          {
-            "name": "Erica",
+            "name": "Customers",
             "amount": 7
-          },
-          {
-            "name": "Maria",
-            "amount": 5
-          },
-          {
-            "name": "Customer",
-            "amount": 5
-          },
-          {
-            "name": "Allie",
-            "amount": 5
           }
         ]
+      },
+      {
+        "date": "Sat Jun 13",
+        "total": 0,
+        "dancers": []
       }
     ]
   },
