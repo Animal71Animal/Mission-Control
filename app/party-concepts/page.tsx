@@ -42,7 +42,7 @@ export default function PartyConceptsPage() {
   if (loading || !data) {
     return (
       <div>
-        <h1 style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)" }}>🎉 Party Concepts</h1>
+        <h1 style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)" }}>💡 Concept Ideas</h1>
         <p style={{ color: "var(--muted)", marginTop: 20 }}>Loading...</p>
       </div>
     );
@@ -50,8 +50,9 @@ export default function PartyConceptsPage() {
 
   const weeklyMonthly = data.weeklyMonthlyParties || [];
   const yearly = data.yearlyParties || [];
-  const approvedCount = [...weeklyMonthly, ...yearly].filter((c) => c.approved).length;
-  const flyerCount = [...weeklyMonthly, ...yearly].filter((c) => c.flyerDone).length;
+  const allConcepts = [...weeklyMonthly, ...yearly];
+  const approvedCount = allConcepts.filter((c) => c.approved).length;
+  const flyerCount = allConcepts.filter((c) => c.flyerDone).length;
 
   const renderConceptCard = (concept: PartyConcept) => {
     const cardStyle: React.CSSProperties = {
@@ -248,7 +249,7 @@ export default function PartyConceptsPage() {
               WebkitTextFillColor: "transparent",
             }}
           >
-            🎉 Party Concepts
+            💡 Concept Ideas
           </h1>
           <Link
             href="/promotions"
@@ -262,7 +263,7 @@ export default function PartyConceptsPage() {
           </Link>
         </div>
         <p style={{ color: "var(--muted)", marginTop: 6, fontSize: "0.9rem" }}>
-          Weekly, monthly, and yearly event ideas for Spearmint Rhino Boise
+          Event concept ideas for Spearmint Rhino Boise
         </p>
       </div>
 
@@ -276,12 +277,8 @@ export default function PartyConceptsPage() {
         }}
       >
         <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12, padding: 20 }}>
-          <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: 4 }}>Weekly/Monthly</div>
-          <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)" }}>{weeklyMonthly.length}</div>
-        </div>
-        <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12, padding: 20 }}>
-          <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: 4 }}>Yearly</div>
-          <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)" }}>{yearly.length}</div>
+          <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: 4 }}>Total Concepts</div>
+          <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)" }}>{allConcepts.length}</div>
         </div>
         <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12, padding: 20 }}>
           <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: 4 }}>Approved</div>
@@ -293,39 +290,11 @@ export default function PartyConceptsPage() {
         </div>
       </div>
 
-      {/* Weekly/Monthly Section */}
+      {/* All Concepts */}
       <div style={{ marginBottom: 32 }}>
-        <h2 style={{ fontSize: "1.3rem", fontWeight: 600, marginBottom: 16, color: "var(--text)" }}>
-          📅 Weekly & Monthly Parties
-        </h2>
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-          {weeklyMonthly.map(renderConceptCard)}
+          {allConcepts.map(renderConceptCard)}
         </div>
-      </div>
-
-      {/* Yearly Parties Section */}
-      <div style={{ marginBottom: 32 }}>
-        <h2 style={{ fontSize: "1.3rem", fontWeight: 600, marginBottom: 16, color: "var(--text)" }}>
-          🗓️ Yearly Parties
-        </h2>
-        {yearly.length > 0 ? (
-          <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-            {yearly.map(renderConceptCard)}
-          </div>
-        ) : (
-          <div
-            style={{
-              background: "var(--card)",
-              border: "1px solid var(--border)",
-              borderRadius: 12,
-              padding: 24,
-              textAlign: "center",
-              color: "var(--muted)",
-            }}
-          >
-            No yearly parties added yet.
-          </div>
-        )}
       </div>
 
       {/* Last Updated */}
