@@ -4204,11 +4204,15 @@
       },
       {
         "date": "Fri Jun 12",
-        "total": 61,
+        "total": 73,
         "dancers": [
           {
             "name": "Customers",
             "amount": 61
+          },
+          {
+            "name": "Dior",
+            "amount": 12
           }
         ]
       }
