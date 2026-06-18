@@ -908,14 +908,44 @@
       "rate_per_kwh": 0.43,
       "cost": 28.77,
       "duration_min": 32
+    },
+    {
+      "date": "2026-06-13",
+      "location": "Boise, ID - North Orchard St",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 65.3246,
+      "rate_per_kwh": 0.2,
+      "cost": 13.06,
+      "duration_min": 30
+    },
+    {
+      "date": "2026-06-14",
+      "location": "Boise, ID - North Orchard St",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 67.9158,
+      "rate_per_kwh": 0.43,
+      "cost": 29.2,
+      "duration_min": 33
+    },
+    {
+      "date": "2026-06-15",
+      "location": "Boise, ID - North Orchard St",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 70.3632,
+      "rate_per_kwh": 0.2,
+      "cost": 14.07,
+      "duration_min": 38
     }
   ],
-  "last_updated": "2026-06-12T23:41:49.207009+00:00",
+  "last_updated": "2026-06-18T02:20:01Z",
   "totals": {
-    "total_sessions": 89,
-    "total_cost": 1387.58,
-    "total_kwh": 4808.8603,
-    "avg_cost_per_session": 15.59
+    "total_sessions": 92,
+    "total_cost": 1443.91,
+    "total_kwh": 5012.4639,
+    "avg_cost_per_session": 15.69
   },
   "monthlyTotals": {
     "2025-12": {
@@ -955,10 +985,10 @@
       "avg_cost_per_session": 14.15
     },
     "2026-06": {
-      "sessions": 7,
-      "cost": 119.72,
-      "kwh": 317.8817,
-      "avg_cost_per_session": 17.1
+      "sessions": 10,
+      "cost": 176.05,
+      "kwh": 521.4853,
+      "avg_cost_per_session": 17.61
     }
   }
 }
