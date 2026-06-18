@@ -186,6 +186,36 @@
       "basefare": 53.3,
       "promotions": 0.0,
       "expenses": 0.0
+    },
+    {
+      "date": "2026-06-15",
+      "earnings": 158.21,
+      "gross": 158.21,
+      "trips": 11,
+      "miles": 99.46,
+      "tips": 12.0,
+      "surge": 11.25,
+      "pro_perk": 0.0,
+      "charging_cost": 0.0,
+      "netPayout": 158.21,
+      "basefare": 134.96,
+      "promotions": 0.0,
+      "expenses": 0.0
+    },
+    {
+      "date": "2026-06-16",
+      "earnings": 80.88,
+      "gross": 80.88,
+      "trips": 8,
+      "miles": 38.02,
+      "tips": 10.0,
+      "surge": 0.0,
+      "pro_perk": 0.0,
+      "charging_cost": 0.0,
+      "netPayout": 80.88,
+      "basefare": 70.88,
+      "promotions": 0.0,
+      "expenses": 0.0
     }
   ],
   "monthlyTotals": {
@@ -245,11 +275,12 @@
       "source": "uber_tax_summary"
     },
     "2026-06": {
-      "total_earnings": 530.85,
-      "total_net": 530.85,
-      "total_trips": 44,
-      "total_tips": 84.0,
-      "total_fare": 431.39,
+      "total_earnings": 769.94,
+      "total_net": 769.94,
+      "total_trips": 63,
+      "total_tips": 106.0,
+      "total_fare": 637.23,
+      "total_surge": 18.0,
       "total_pro_perk": 15.38,
       "total_boost_plus": 0.0,
       "total_expenses": 0.0,
@@ -262,5 +293,5 @@
     "scrape_method": "manual_entry_from_pdf_statements",
     "last_scrape_attempt": "2026-06-03T22:00:00Z"
   },
-  "last_updated": "2026-06-12T23:52:56.694199+00:00"
+  "last_updated": "2026-06-18T02:27:56Z"
 }
