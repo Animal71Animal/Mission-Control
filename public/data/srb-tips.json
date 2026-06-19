@@ -27,7 +27,7 @@
     },
     {
       "month": "June",
-      "amount": 1788,
+      "amount": 1858,
       "nights": 10
     }
   ],
@@ -4856,7 +4856,7 @@
       },
       {
         "date": "Thu Jun 18",
-        "total": 149,
+        "total": 219,
         "dancers": [
           {
             "name": "Berlin",
@@ -4881,6 +4881,22 @@
           {
             "name": "Hunter",
             "amount": 40
+          },
+          {
+            "name": "Athena",
+            "amount": 20
+          },
+          {
+            "name": "Ari",
+            "amount": 20
+          },
+          {
+            "name": "Poppy",
+            "amount": 20
+          },
+          {
+            "name": "Essence",
+            "amount": 10
           }
         ]
       }
@@ -6153,5 +6169,5 @@
     }
   ],
   "customerTips": [],
-  "last_updated": "2026-06-19T09:21:50.997448+00:00"
+  "last_updated": "2026-06-19T09:28:32.825407+00:00"
 }
