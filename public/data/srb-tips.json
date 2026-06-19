@@ -27,7 +27,7 @@
     },
     {
       "month": "June",
-      "amount": 1644,
+      "amount": 1659,
       "nights": 10
     }
   ],
@@ -4860,11 +4860,15 @@
       },
       {
         "date": "Thu Jun 18",
-        "total": 5,
+        "total": 20,
         "dancers": [
           {
             "name": "Berlin",
             "amount": 5
+          },
+          {
+            "name": "Zara",
+            "amount": 15
           }
         ]
       }
@@ -6137,5 +6141,5 @@
     }
   ],
   "customerTips": [],
-  "last_updated": "2026-06-19T04:48:20.764806+00:00"
+  "last_updated": "2026-06-19T05:57:29.924685+00:00"
 }
