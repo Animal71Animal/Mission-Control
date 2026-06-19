@@ -27,8 +27,8 @@
     },
     {
       "month": "June",
-      "amount": 1678,
-      "nights": 10
+      "amount": 1788,
+      "nights": 11
     }
   ],
   "topTippers": [
@@ -4871,6 +4871,24 @@
             "amount": 9
           }
         ]
+      },
+      {
+        "date": "Fri Jun 19",
+        "total": 110,
+        "dancers": [
+          {
+            "name": "Roxie",
+            "amount": 30
+          },
+          {
+            "name": "Kendall",
+            "amount": 40
+          },
+          {
+            "name": "Hunter",
+            "amount": 40
+          }
+        ]
       }
     ]
   },
@@ -6141,5 +6159,5 @@
     }
   ],
   "customerTips": [],
-  "last_updated": "2026-06-19T08:01:14.919885+00:00"
+  "last_updated": "2026-06-19T09:13:59.228671+00:00"
 }
