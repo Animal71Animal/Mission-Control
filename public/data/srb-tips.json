@@ -27,7 +27,7 @@
     },
     {
       "month": "June",
-      "amount": 1496,
+      "amount": 1639,
       "nights": 9
     }
   ],
@@ -4806,11 +4806,55 @@
       },
       {
         "date": "Wed Jun 17",
-        "total": 20,
+        "total": 163,
         "dancers": [
           {
             "name": "Customers",
             "amount": 20
+          },
+          {
+            "name": "Kody",
+            "amount": 5
+          },
+          {
+            "name": "Shae",
+            "amount": 6
+          },
+          {
+            "name": "Kylie",
+            "amount": 5
+          },
+          {
+            "name": "Indie",
+            "amount": 20
+          },
+          {
+            "name": "Customer",
+            "amount": 25
+          },
+          {
+            "name": "Zara",
+            "amount": 20
+          },
+          {
+            "name": "Allie",
+            "amount": 5
+          },
+          {
+            "name": "Genesis",
+            "amount": 5
+          },
+          {
+            "name": "Athena",
+            "amount": 40
+          },
+          {
+            "name": "Katty",
+            "amount": 7
+          },
+          {
+            "name": "Essence",
+            "amount": 5
           }
         ]
       }
@@ -6083,5 +6127,5 @@
     }
   ],
   "customerTips": [],
-  "last_updated": "2026-06-18T00:22:54Z"
+  "last_updated": "2026-06-19T01:33:22Z"
 }
