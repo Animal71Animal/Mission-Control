@@ -27,7 +27,7 @@
     },
     {
       "month": "June",
-      "amount": 1665,
+      "amount": 1668,
       "nights": 10
     }
   ],
@@ -4860,7 +4860,7 @@
       },
       {
         "date": "Thu Jun 18",
-        "total": 26,
+        "total": 29,
         "dancers": [
           {
             "name": "Berlin",
@@ -4873,6 +4873,10 @@
           {
             "name": "Sammie",
             "amount": 6
+          },
+          {
+            "name": "Sammie",
+            "amount": 3
           }
         ]
       }
@@ -6145,5 +6149,5 @@
     }
   ],
   "customerTips": [],
-  "last_updated": "2026-06-19T06:44:43.999528+00:00"
+  "last_updated": "2026-06-19T07:05:10.309661+00:00"
 }
