@@ -4706,7 +4706,7 @@
           },
           {
             "name": "Customer",
-            "amount": 15
+            "amount": 20
           },
           {
             "name": "Shae",
@@ -4730,10 +4730,6 @@
           },
           {
             "name": "Maria",
-            "amount": 5
-          },
-          {
-            "name": "Customer",
             "amount": 5
           },
           {
