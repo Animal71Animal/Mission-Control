@@ -27,8 +27,8 @@
     },
     {
       "month": "June",
-      "amount": 1639,
-      "nights": 9
+      "amount": 1644,
+      "nights": 10
     }
   ],
   "topTippers": [
@@ -4857,6 +4857,16 @@
             "amount": 5
           }
         ]
+      },
+      {
+        "date": "Thu Jun 18",
+        "total": 5,
+        "dancers": [
+          {
+            "name": "Berlin",
+            "amount": 5
+          }
+        ]
       }
     ]
   },
@@ -6127,5 +6137,5 @@
     }
   ],
   "customerTips": [],
-  "last_updated": "2026-06-19T01:33:22Z"
+  "last_updated": "2026-06-19T04:48:20.764806+00:00"
 }
