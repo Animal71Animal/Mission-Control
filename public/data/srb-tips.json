@@ -27,8 +27,8 @@
     },
     {
       "month": "June",
-      "amount": 1858,
-      "nights": 10
+      "amount": 2202,
+      "nights": 11
     }
   ],
   "topTippers": [
@@ -55,14 +55,14 @@
       "mar": 120,
       "apr": 60,
       "may": 80,
-      "jun": 125,
+      "jun": 225,
       "jul": 0,
       "aug": 0,
       "sep": 0,
       "oct": 0,
       "nov": 0,
       "dec": 0,
-      "total": 520
+      "total": 620
     },
     {
       "name": "Suki",
@@ -71,14 +71,30 @@
       "mar": 0,
       "apr": 86,
       "may": 150,
-      "jun": 20,
+      "jun": 30,
       "jul": 0,
       "aug": 0,
       "sep": 0,
       "oct": 0,
       "nov": 0,
       "dec": 0,
-      "total": 516
+      "total": 526
+    },
+    {
+      "name": "Kendall",
+      "jan": 20,
+      "feb": 15,
+      "mar": 50,
+      "apr": 20,
+      "may": 80,
+      "jun": 260,
+      "jul": 0,
+      "aug": 0,
+      "sep": 0,
+      "oct": 0,
+      "nov": 0,
+      "dec": 0,
+      "total": 445
     },
     {
       "name": "Allie",
@@ -87,14 +103,14 @@
       "mar": 87,
       "apr": 46,
       "may": 100,
-      "jun": 45,
+      "jun": 65,
       "jul": 0,
       "aug": 0,
       "sep": 0,
       "oct": 0,
       "nov": 0,
       "dec": 0,
-      "total": 393
+      "total": 413
     },
     {
       "name": "Genesis",
@@ -113,36 +129,20 @@
       "total": 393
     },
     {
-      "name": "Kendall",
-      "jan": 20,
-      "feb": 15,
-      "mar": 50,
-      "apr": 20,
-      "may": 80,
-      "jun": 160,
-      "jul": 0,
-      "aug": 0,
-      "sep": 0,
-      "oct": 0,
-      "nov": 0,
-      "dec": 0,
-      "total": 345
-    },
-    {
       "name": "Amity",
       "jan": 35,
       "feb": 35,
       "mar": 196,
       "apr": 0,
       "may": 65,
-      "jun": 10,
+      "jun": 20,
       "jul": 0,
       "aug": 0,
       "sep": 0,
       "oct": 0,
       "nov": 0,
       "dec": 0,
-      "total": 341
+      "total": 351
     },
     {
       "name": "Nala",
@@ -321,6 +321,22 @@
       "total": 189
     },
     {
+      "name": "Skylar",
+      "jan": 0,
+      "feb": 10,
+      "mar": 89,
+      "apr": 40,
+      "may": 40,
+      "jun": 8,
+      "jul": 0,
+      "aug": 0,
+      "sep": 0,
+      "oct": 0,
+      "nov": 0,
+      "dec": 0,
+      "total": 187
+    },
+    {
       "name": "Adelia",
       "jan": 60,
       "feb": 20,
@@ -335,22 +351,6 @@
       "nov": 0,
       "dec": 0,
       "total": 185
-    },
-    {
-      "name": "Skylar",
-      "jan": 0,
-      "feb": 10,
-      "mar": 89,
-      "apr": 40,
-      "may": 40,
-      "jun": 0,
-      "jul": 0,
-      "aug": 0,
-      "sep": 0,
-      "oct": 0,
-      "nov": 0,
-      "dec": 0,
-      "total": 179
     },
     {
       "name": "Kody",
@@ -433,6 +433,22 @@
       "total": 165
     },
     {
+      "name": "Macy",
+      "jan": 20,
+      "feb": 0,
+      "mar": 30,
+      "apr": 40,
+      "may": 20,
+      "jun": 35,
+      "jul": 0,
+      "aug": 0,
+      "sep": 0,
+      "oct": 0,
+      "nov": 0,
+      "dec": 0,
+      "total": 145
+    },
+    {
       "name": "Quinn",
       "jan": 10,
       "feb": 14,
@@ -481,20 +497,20 @@
       "total": 128
     },
     {
-      "name": "Macy",
+      "name": "Dior",
       "jan": 20,
-      "feb": 0,
-      "mar": 30,
-      "apr": 40,
-      "may": 20,
-      "jun": 15,
+      "feb": 15,
+      "mar": 15,
+      "apr": 33,
+      "may": 18,
+      "jun": 27,
       "jul": 0,
       "aug": 0,
       "sep": 0,
       "oct": 0,
       "nov": 0,
       "dec": 0,
-      "total": 125
+      "total": 128
     },
     {
       "name": "Lilly",
@@ -543,22 +559,6 @@
       "nov": 0,
       "dec": 0,
       "total": 120
-    },
-    {
-      "name": "Dior",
-      "jan": 20,
-      "feb": 15,
-      "mar": 15,
-      "apr": 33,
-      "may": 18,
-      "jun": 17,
-      "jul": 0,
-      "aug": 0,
-      "sep": 0,
-      "oct": 0,
-      "nov": 0,
-      "dec": 0,
-      "total": 118
     },
     {
       "name": "Effie",
@@ -657,6 +657,22 @@
       "total": 85
     },
     {
+      "name": "Baby",
+      "jan": 34,
+      "feb": 5,
+      "mar": 7,
+      "apr": 0,
+      "may": 20,
+      "jun": 6,
+      "jul": 0,
+      "aug": 0,
+      "sep": 0,
+      "oct": 0,
+      "nov": 0,
+      "dec": 0,
+      "total": 72
+    },
+    {
       "name": "Erica",
       "jan": 0,
       "feb": 0,
@@ -673,20 +689,20 @@
       "total": 70
     },
     {
-      "name": "Baby",
-      "jan": 34,
+      "name": "Jamira",
+      "jan": 0,
       "feb": 5,
-      "mar": 7,
+      "mar": 10,
       "apr": 0,
-      "may": 20,
-      "jun": 0,
+      "may": 15,
+      "jun": 40,
       "jul": 0,
       "aug": 0,
       "sep": 0,
       "oct": 0,
       "nov": 0,
       "dec": 0,
-      "total": 66
+      "total": 70
     },
     {
       "name": "Brittany",
@@ -721,22 +737,6 @@
       "total": 60
     },
     {
-      "name": "Jamira",
-      "jan": 0,
-      "feb": 5,
-      "mar": 10,
-      "apr": 0,
-      "may": 15,
-      "jun": 25,
-      "jul": 0,
-      "aug": 0,
-      "sep": 0,
-      "oct": 0,
-      "nov": 0,
-      "dec": 0,
-      "total": 55
-    },
-    {
       "name": "Kitty",
       "jan": 14,
       "feb": 0,
@@ -767,6 +767,38 @@
       "nov": 0,
       "dec": 0,
       "total": 50
+    },
+    {
+      "name": "Poppy",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 10,
+      "jun": 40,
+      "jul": 0,
+      "aug": 0,
+      "sep": 0,
+      "oct": 0,
+      "nov": 0,
+      "dec": 0,
+      "total": 50
+    },
+    {
+      "name": "Cassandra",
+      "jan": 18,
+      "feb": 0,
+      "mar": 8,
+      "apr": 5,
+      "may": 0,
+      "jun": 18,
+      "jul": 0,
+      "aug": 0,
+      "sep": 0,
+      "oct": 0,
+      "nov": 0,
+      "dec": 0,
+      "total": 49
     },
     {
       "name": "Mixie",
@@ -833,22 +865,6 @@
       "total": 40
     },
     {
-      "name": "Cassandra",
-      "jan": 18,
-      "feb": 0,
-      "mar": 8,
-      "apr": 5,
-      "may": 0,
-      "jun": 8,
-      "jul": 0,
-      "aug": 0,
-      "sep": 0,
-      "oct": 0,
-      "nov": 0,
-      "dec": 0,
-      "total": 39
-    },
-    {
       "name": "Shiiva",
       "jan": 3,
       "feb": 10,
@@ -897,6 +913,22 @@
       "total": 35
     },
     {
+      "name": "Ava",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 24,
+      "may": 0,
+      "jun": 10,
+      "jul": 0,
+      "aug": 0,
+      "sep": 0,
+      "oct": 0,
+      "nov": 0,
+      "dec": 0,
+      "total": 34
+    },
+    {
       "name": "Ruby",
       "jan": 29,
       "feb": 4,
@@ -913,6 +945,22 @@
       "total": 33
     },
     {
+      "name": "Taylor",
+      "jan": 0,
+      "feb": 5,
+      "mar": 0,
+      "apr": 5,
+      "may": 16,
+      "jun": 5,
+      "jul": 0,
+      "aug": 0,
+      "sep": 0,
+      "oct": 0,
+      "nov": 0,
+      "dec": 0,
+      "total": 31
+    },
+    {
       "name": "Nadia",
       "jan": 0,
       "feb": 0,
@@ -920,22 +968,6 @@
       "apr": 10,
       "may": 20,
       "jun": 0,
-      "jul": 0,
-      "aug": 0,
-      "sep": 0,
-      "oct": 0,
-      "nov": 0,
-      "dec": 0,
-      "total": 30
-    },
-    {
-      "name": "Poppy",
-      "jan": 0,
-      "feb": 0,
-      "mar": 0,
-      "apr": 0,
-      "may": 10,
-      "jun": 20,
       "jul": 0,
       "aug": 0,
       "sep": 0,
@@ -959,22 +991,6 @@
       "nov": 0,
       "dec": 0,
       "total": 27
-    },
-    {
-      "name": "Taylor",
-      "jan": 0,
-      "feb": 5,
-      "mar": 0,
-      "apr": 5,
-      "may": 16,
-      "jun": 0,
-      "jul": 0,
-      "aug": 0,
-      "sep": 0,
-      "oct": 0,
-      "nov": 0,
-      "dec": 0,
-      "total": 26
     },
     {
       "name": "Val",
@@ -1007,22 +1023,6 @@
       "nov": 0,
       "dec": 0,
       "total": 25
-    },
-    {
-      "name": "Ava",
-      "jan": 0,
-      "feb": 0,
-      "mar": 0,
-      "apr": 24,
-      "may": 0,
-      "jun": 0,
-      "jul": 0,
-      "aug": 0,
-      "sep": 0,
-      "oct": 0,
-      "nov": 0,
-      "dec": 0,
-      "total": 24
     },
     {
       "name": "Lola",
@@ -4899,6 +4899,68 @@
             "amount": 10
           }
         ]
+      },
+      {
+        "date": "Sat Jun 20",
+        "total": 344,
+        "dancers": [
+          {
+            "name": "Ava",
+            "amount": 10
+          },
+          {
+            "name": "Skylar",
+            "amount": 8
+          },
+          {
+            "name": "Poppy",
+            "amount": 20
+          },
+          {
+            "name": "Dior",
+            "amount": 10
+          },
+          {
+            "name": "Taylor",
+            "amount": 5
+          },
+          {
+            "name": "Allie",
+            "amount": 20
+          },
+          {
+            "name": "Cassandra",
+            "amount": 10
+          },
+          {
+            "name": "Jamira",
+            "amount": 15
+          },
+          {
+            "name": "Macy",
+            "amount": 20
+          },
+          {
+            "name": "Kendall",
+            "amount": 100
+          },
+          {
+            "name": "Hunter",
+            "amount": 100
+          },
+          {
+            "name": "Suki",
+            "amount": 10
+          },
+          {
+            "name": "Baby",
+            "amount": 6
+          },
+          {
+            "name": "Amity",
+            "amount": 10
+          }
+        ]
       }
     ]
   },
@@ -4926,14 +4988,14 @@
       "mar": 120.0,
       "apr": 60.0,
       "may": 80.0,
-      "jun": 125.0,
+      "jun": 225.0,
       "jul": 0.0,
       "aug": 0.0,
       "sep": 0.0,
       "oct": 0.0,
       "nov": 0.0,
       "dec": 0.0,
-      "total": 520.0
+      "total": 620.0
     },
     {
       "name": "Suki",
@@ -4942,14 +5004,30 @@
       "mar": 0.0,
       "apr": 86.0,
       "may": 150.0,
-      "jun": 20.0,
+      "jun": 30.0,
       "jul": 0.0,
       "aug": 0.0,
       "sep": 0.0,
       "oct": 0.0,
       "nov": 0.0,
       "dec": 0.0,
-      "total": 516.0
+      "total": 526.0
+    },
+    {
+      "name": "Kendall",
+      "jan": 20.0,
+      "feb": 15.0,
+      "mar": 50.0,
+      "apr": 20.0,
+      "may": 80.0,
+      "jun": 260.0,
+      "jul": 0.0,
+      "aug": 0.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 445.0
     },
     {
       "name": "Allie",
@@ -4958,14 +5036,14 @@
       "mar": 87.0,
       "apr": 46.0,
       "may": 100.0,
-      "jun": 45.0,
+      "jun": 65.0,
       "jul": 0.0,
       "aug": 0.0,
       "sep": 0.0,
       "oct": 0.0,
       "nov": 0.0,
       "dec": 0.0,
-      "total": 393.0
+      "total": 413.0
     },
     {
       "name": "Genesis",
@@ -4984,36 +5062,20 @@
       "total": 393.0
     },
     {
-      "name": "Kendall",
-      "jan": 20.0,
-      "feb": 15.0,
-      "mar": 50.0,
-      "apr": 20.0,
-      "may": 80.0,
-      "jun": 160.0,
-      "jul": 0.0,
-      "aug": 0.0,
-      "sep": 0.0,
-      "oct": 0.0,
-      "nov": 0.0,
-      "dec": 0.0,
-      "total": 345.0
-    },
-    {
       "name": "Amity",
       "jan": 35.0,
       "feb": 35.0,
       "mar": 196.0,
       "apr": 0.0,
       "may": 65.0,
-      "jun": 10.0,
+      "jun": 20.0,
       "jul": 0.0,
       "aug": 0.0,
       "sep": 0.0,
       "oct": 0.0,
       "nov": 0.0,
       "dec": 0.0,
-      "total": 341.0
+      "total": 351.0
     },
     {
       "name": "Nala",
@@ -5192,6 +5254,22 @@
       "total": 189.0
     },
     {
+      "name": "Skylar",
+      "jan": 0.0,
+      "feb": 10.0,
+      "mar": 89.0,
+      "apr": 40.0,
+      "may": 40.0,
+      "jun": 8.0,
+      "jul": 0.0,
+      "aug": 0.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 187.0
+    },
+    {
       "name": "Adelia",
       "jan": 60.0,
       "feb": 20.0,
@@ -5206,22 +5284,6 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 185.0
-    },
-    {
-      "name": "Skylar",
-      "jan": 0.0,
-      "feb": 10.0,
-      "mar": 89.0,
-      "apr": 40.0,
-      "may": 40.0,
-      "jun": 0.0,
-      "jul": 0.0,
-      "aug": 0.0,
-      "sep": 0.0,
-      "oct": 0.0,
-      "nov": 0.0,
-      "dec": 0.0,
-      "total": 179.0
     },
     {
       "name": "Kody",
@@ -5304,6 +5366,22 @@
       "total": 165.0
     },
     {
+      "name": "Macy",
+      "jan": 20.0,
+      "feb": 0.0,
+      "mar": 30.0,
+      "apr": 40.0,
+      "may": 20.0,
+      "jun": 35.0,
+      "jul": 0.0,
+      "aug": 0.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 145.0
+    },
+    {
       "name": "Quinn",
       "jan": 10.0,
       "feb": 14.0,
@@ -5352,20 +5430,20 @@
       "total": 128.0
     },
     {
-      "name": "Macy",
+      "name": "Dior",
       "jan": 20.0,
-      "feb": 0.0,
-      "mar": 30.0,
-      "apr": 40.0,
-      "may": 20.0,
-      "jun": 15.0,
+      "feb": 15.0,
+      "mar": 15.0,
+      "apr": 33.0,
+      "may": 18.0,
+      "jun": 27.0,
       "jul": 0.0,
       "aug": 0.0,
       "sep": 0.0,
       "oct": 0.0,
       "nov": 0.0,
       "dec": 0.0,
-      "total": 125.0
+      "total": 128.0
     },
     {
       "name": "Lilly",
@@ -5414,22 +5492,6 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 120.0
-    },
-    {
-      "name": "Dior",
-      "jan": 20.0,
-      "feb": 15.0,
-      "mar": 15.0,
-      "apr": 33.0,
-      "may": 18.0,
-      "jun": 17.0,
-      "jul": 0.0,
-      "aug": 0.0,
-      "sep": 0.0,
-      "oct": 0.0,
-      "nov": 0.0,
-      "dec": 0.0,
-      "total": 118.0
     },
     {
       "name": "Effie",
@@ -5528,6 +5590,22 @@
       "total": 85.0
     },
     {
+      "name": "Baby",
+      "jan": 34.0,
+      "feb": 5.0,
+      "mar": 7.0,
+      "apr": 0.0,
+      "may": 20.0,
+      "jun": 6.0,
+      "jul": 0.0,
+      "aug": 0.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 72.0
+    },
+    {
       "name": "Erica",
       "jan": 0.0,
       "feb": 0.0,
@@ -5544,20 +5622,20 @@
       "total": 70.0
     },
     {
-      "name": "Baby",
-      "jan": 34.0,
+      "name": "Jamira",
+      "jan": 0.0,
       "feb": 5.0,
-      "mar": 7.0,
+      "mar": 10.0,
       "apr": 0.0,
-      "may": 20.0,
-      "jun": 0.0,
+      "may": 15.0,
+      "jun": 40.0,
       "jul": 0.0,
       "aug": 0.0,
       "sep": 0.0,
       "oct": 0.0,
       "nov": 0.0,
       "dec": 0.0,
-      "total": 66.0
+      "total": 70.0
     },
     {
       "name": "Brittany",
@@ -5592,22 +5670,6 @@
       "total": 60.0
     },
     {
-      "name": "Jamira",
-      "jan": 0.0,
-      "feb": 5.0,
-      "mar": 10.0,
-      "apr": 0.0,
-      "may": 15.0,
-      "jun": 25.0,
-      "jul": 0.0,
-      "aug": 0.0,
-      "sep": 0.0,
-      "oct": 0.0,
-      "nov": 0.0,
-      "dec": 0.0,
-      "total": 55.0
-    },
-    {
       "name": "Kitty",
       "jan": 14.0,
       "feb": 0.0,
@@ -5638,6 +5700,38 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 50.0
+    },
+    {
+      "name": "Poppy",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 10.0,
+      "jun": 40.0,
+      "jul": 0.0,
+      "aug": 0.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 50.0
+    },
+    {
+      "name": "Cassandra",
+      "jan": 18.0,
+      "feb": 0.0,
+      "mar": 8.0,
+      "apr": 5.0,
+      "may": 0.0,
+      "jun": 18.0,
+      "jul": 0.0,
+      "aug": 0.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 49.0
     },
     {
       "name": "Mixie",
@@ -5704,22 +5798,6 @@
       "total": 40.0
     },
     {
-      "name": "Cassandra",
-      "jan": 18.0,
-      "feb": 0.0,
-      "mar": 8.0,
-      "apr": 5.0,
-      "may": 0.0,
-      "jun": 8.0,
-      "jul": 0.0,
-      "aug": 0.0,
-      "sep": 0.0,
-      "oct": 0.0,
-      "nov": 0.0,
-      "dec": 0.0,
-      "total": 39.0
-    },
-    {
       "name": "Shiiva",
       "jan": 3.0,
       "feb": 10.0,
@@ -5768,6 +5846,22 @@
       "total": 35.0
     },
     {
+      "name": "Ava",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 24.0,
+      "may": 0.0,
+      "jun": 10.0,
+      "jul": 0.0,
+      "aug": 0.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 34.0
+    },
+    {
       "name": "Ruby",
       "jan": 29.0,
       "feb": 4.0,
@@ -5784,6 +5878,22 @@
       "total": 33.0
     },
     {
+      "name": "Taylor",
+      "jan": 0.0,
+      "feb": 5.0,
+      "mar": 0.0,
+      "apr": 5.0,
+      "may": 16.0,
+      "jun": 5.0,
+      "jul": 0.0,
+      "aug": 0.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 31.0
+    },
+    {
       "name": "Nadia",
       "jan": 0.0,
       "feb": 0.0,
@@ -5791,22 +5901,6 @@
       "apr": 10.0,
       "may": 20.0,
       "jun": 0.0,
-      "jul": 0.0,
-      "aug": 0.0,
-      "sep": 0.0,
-      "oct": 0.0,
-      "nov": 0.0,
-      "dec": 0.0,
-      "total": 30.0
-    },
-    {
-      "name": "Poppy",
-      "jan": 0.0,
-      "feb": 0.0,
-      "mar": 0.0,
-      "apr": 0.0,
-      "may": 10.0,
-      "jun": 20.0,
       "jul": 0.0,
       "aug": 0.0,
       "sep": 0.0,
@@ -5830,22 +5924,6 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 27.0
-    },
-    {
-      "name": "Taylor",
-      "jan": 0.0,
-      "feb": 5.0,
-      "mar": 0.0,
-      "apr": 5.0,
-      "may": 16.0,
-      "jun": 0.0,
-      "jul": 0.0,
-      "aug": 0.0,
-      "sep": 0.0,
-      "oct": 0.0,
-      "nov": 0.0,
-      "dec": 0.0,
-      "total": 26.0
     },
     {
       "name": "Val",
@@ -5878,22 +5956,6 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 25.0
-    },
-    {
-      "name": "Ava",
-      "jan": 0.0,
-      "feb": 0.0,
-      "mar": 0.0,
-      "apr": 24.0,
-      "may": 0.0,
-      "jun": 0.0,
-      "jul": 0.0,
-      "aug": 0.0,
-      "sep": 0.0,
-      "oct": 0.0,
-      "nov": 0.0,
-      "dec": 0.0,
-      "total": 24.0
     },
     {
       "name": "Lola",
@@ -6169,5 +6231,5 @@
     }
   ],
   "customerTips": [],
-  "last_updated": "2026-06-19T09:28:32.825407+00:00"
+  "last_updated": "2026-06-21T09:25:30.067842+00:00"
 }
