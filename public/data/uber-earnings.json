@@ -217,7 +217,47 @@
       "netPayout": 158.21,
       "basefare": 134.96,
       "promotions": 0.0,
-      "expenses": 0.0
+      "expenses": 0.0,
+      "tripDetail": [
+        {
+          "time": "3:40 PM",
+          "amount": 5.57,
+          "service": "UberX",
+          "notes": "$1.75 surge"
+        },
+        {
+          "time": "4:04 PM",
+          "amount": 20.92,
+          "service": "UberX",
+          "notes": "$3.75 surge"
+        },
+        {
+          "time": "9:27 PM",
+          "amount": 16.56,
+          "service": "UberX",
+          "notes": ""
+        },
+        {
+          "time": "9:50 PM",
+          "amount": 36.95,
+          "service": "Comfort",
+          "notes": "$10.00 tip, Boost+"
+        },
+        {
+          "time": "10:25 PM",
+          "amount": 12.26,
+          "service": "UberX",
+          "notes": "$5.75 surge"
+        },
+        {
+          "time": "10:42 PM",
+          "amount": 7.11,
+          "service": "UberX",
+          "notes": "Increased"
+        }
+      ],
+      "tripsInScreenshots": 6,
+      "screenshotTotal": 99.37
     },
     {
       "date": "2026-06-16",
@@ -232,7 +272,83 @@
       "netPayout": 97.69,
       "basefare": 82.69,
       "promotions": 0.0,
-      "expenses": 0.0
+      "expenses": 0.0,
+      "tripDetail": [
+        {
+          "time": "2:08 AM",
+          "amount": 5.82,
+          "service": "UberX",
+          "notes": "$2.00 tip"
+        },
+        {
+          "time": "2:13 AM",
+          "amount": 8.82,
+          "service": "UberX",
+          "notes": "$5.00 tip"
+        },
+        {
+          "time": "2:20 AM",
+          "amount": 3.82,
+          "service": "UberX",
+          "notes": ""
+        },
+        {
+          "time": "2:42 AM",
+          "amount": 8.17,
+          "service": "UberX",
+          "notes": "$4.00 tip \u2014 may be Jun 17"
+        },
+        {
+          "time": "1:57 PM",
+          "amount": 18.7,
+          "service": "UberX",
+          "notes": ""
+        },
+        {
+          "time": "2:16 PM",
+          "amount": 6.33,
+          "service": "UberX",
+          "notes": "$2.00 tip"
+        },
+        {
+          "time": "2:19 PM",
+          "amount": 11.95,
+          "service": "UberX",
+          "notes": "$3.00 tip"
+        },
+        {
+          "time": "3:18 PM",
+          "amount": 11.79,
+          "service": "Comfort",
+          "notes": ""
+        },
+        {
+          "time": "3:20 PM",
+          "amount": 10.96,
+          "service": "Comfort",
+          "notes": ""
+        },
+        {
+          "time": "11:02 PM",
+          "amount": 11.53,
+          "service": "UberX",
+          "notes": "Increased"
+        },
+        {
+          "time": "11:40 PM",
+          "amount": 10.55,
+          "service": "UberX Priority",
+          "notes": "$5.00 tip"
+        },
+        {
+          "time": "11:52 PM",
+          "amount": 6.78,
+          "service": "UberX",
+          "notes": "Increased"
+        }
+      ],
+      "tripsInScreenshots": 12,
+      "screenshotTotal": 115.22
     },
     {
       "date": "2026-06-17",
@@ -247,7 +363,77 @@
       "netPayout": 87.99,
       "basefare": 71.49,
       "promotions": 0.0,
-      "expenses": 0.0
+      "expenses": 0.0,
+      "tripDetail": [
+        {
+          "time": "12:38 PM",
+          "amount": null,
+          "service": "UberX Priority",
+          "notes": "amount not visible in screenshot"
+        },
+        {
+          "time": "12:59 PM",
+          "amount": 3.63,
+          "service": "UberX",
+          "notes": "customer canceled \u2014 still paid"
+        },
+        {
+          "time": "1:05 PM",
+          "amount": 4.76,
+          "service": "UberX",
+          "notes": ""
+        },
+        {
+          "time": "1:15 PM",
+          "amount": 17.14,
+          "service": "Comfort",
+          "notes": "$7.00 tip"
+        },
+        {
+          "time": "1:31 PM",
+          "amount": 7.82,
+          "service": "UberX",
+          "notes": "$4.00 tip"
+        },
+        {
+          "time": "3:28 PM",
+          "amount": 10.44,
+          "service": "UberX",
+          "notes": "$1.00 surge"
+        },
+        {
+          "time": "3:49 PM",
+          "amount": 10.84,
+          "service": "UberX Priority",
+          "notes": ""
+        },
+        {
+          "time": "4:06 PM",
+          "amount": 4.82,
+          "service": "UberX",
+          "notes": "$1.00 tip"
+        },
+        {
+          "time": "4:15 PM",
+          "amount": 6.05,
+          "service": "UberX",
+          "notes": "$2.00 tip"
+        },
+        {
+          "time": "4:19 PM",
+          "amount": 6.1,
+          "service": "UberX",
+          "notes": "$1.50 surge"
+        },
+        {
+          "time": "4:55 PM",
+          "amount": 6.06,
+          "service": "UberX Priority",
+          "notes": ""
+        }
+      ],
+      "tripsInScreenshots": 11,
+      "screenshotTotal": 77.66
     },
     {
       "date": "2026-06-18",
@@ -263,7 +449,53 @@
       "basefare": 60.76,
       "promotions": 2.25,
       "expenses": 0.0,
-      "note": "Partial \u2014 afternoon only from screenshots (may have evening trips)"
+      "note": "Partial \u2014 afternoon only from screenshots (may have evening trips)",
+      "tripDetail": [
+        {
+          "time": "2:41 PM",
+          "amount": 4.91,
+          "service": "UberX",
+          "notes": ""
+        },
+        {
+          "time": "2:55 PM",
+          "amount": 4.04,
+          "service": "UberX",
+          "notes": ""
+        },
+        {
+          "time": "3:04 PM",
+          "amount": 9.1,
+          "service": "UberX",
+          "notes": ""
+        },
+        {
+          "time": "3:25 PM",
+          "amount": 18.44,
+          "service": "Comfort",
+          "notes": "$7.00 tip"
+        },
+        {
+          "time": "3:51 PM",
+          "amount": 19.44,
+          "service": "Comfort",
+          "notes": "$7.00 tip"
+        },
+        {
+          "time": "4:09 PM",
+          "amount": 8.73,
+          "service": "UberX",
+          "notes": "$2.25 delayed ride guarantee"
+        },
+        {
+          "time": "4:18 PM",
+          "amount": 10.1,
+          "service": "UberX",
+          "notes": ""
+        }
+      ],
+      "tripsInScreenshots": 7,
+      "screenshotTotal": 74.76
     },
     {
       "date": "2026-06-19",
@@ -279,7 +511,23 @@
       "basefare": 7.64,
       "promotions": 2.01,
       "expenses": 0.0,
-      "note": "Partial \u2014 late evening only (9:54-9:59 PM), more trips likely earlier in day"
+      "note": "Partial \u2014 late evening only (9:54-9:59 PM), more trips likely earlier in day",
+      "tripDetail": [
+        {
+          "time": "9:54 PM",
+          "amount": 3.82,
+          "service": "UberX",
+          "notes": ""
+        },
+        {
+          "time": "9:59 PM",
+          "amount": 5.83,
+          "service": "UberX",
+          "notes": "$2.01 delayed ride guarantee"
+        }
+      ],
+      "tripsInScreenshots": 2,
+      "screenshotTotal": 9.65
     }
   ],
   "monthlyTotals": {
@@ -357,5 +605,6 @@
     "scrape_method": "manual_entry_from_pdf_statements",
     "last_scrape_attempt": "2026-06-03T22:00:00Z"
   },
-  "last_updated": "2026-06-24T07:42:00Z"
+  "last_updated": "2026-06-24T07:46:10Z",
+  "dedup_method": "trip_level: compare date+time+amount before adding any new trip"
 }
