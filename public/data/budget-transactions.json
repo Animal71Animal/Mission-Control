@@ -4580,17 +4580,6 @@
       "is_business": false,
       "status": "Posted",
       "note": "Gross $1,140.30 | Net $843.00 | 76.02 hrs | Tipped Regular + $550 tips"
-    },
-    {
-      "id": "b86d56200199",
-      "date": "06/25/2026",
-      "description": "SRB DECLARED TIPS - Paycheck V32442219",
-      "amount": 550.0,
-      "category": "Income",
-      "subcategory": "SRB Tips (Actual)",
-      "is_business": false,
-      "status": "Posted",
-      "note": "Declared tips for period 6/1-6/15 from official paystub"
     }
   ],
   "monthly_summaries": {
