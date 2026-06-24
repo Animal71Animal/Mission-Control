@@ -618,10 +618,10 @@
           "tip": 0
         },
         {
-          "time": "unknown",
+          "time": "11:50 PM",
           "amount": 23.19,
-          "service": "UberX",
-          "notes": "$9.00 tip \u2014 W Main St, Boise \u2192 E Radiant Ridge Dr, Meridian (header cut off in screenshot)",
+          "service": "UberX Priority",
+          "notes": "$9.00 tip \u2014 W Main St, Boise \u2192 E Radiant Ridge Dr, Meridian",
           "miles": 11.84,
           "tip": 9.0
         }
@@ -742,6 +742,6 @@
     "scrape_method": "manual_entry_from_pdf_statements",
     "last_scrape_attempt": "2026-06-03T22:00:00Z"
   },
-  "last_updated": "2026-06-24T07:59:31Z",
+  "last_updated": "2026-06-24T08:01:54Z",
   "dedup_method": "trip_level: compare date+time+amount before adding any new trip"
 }
