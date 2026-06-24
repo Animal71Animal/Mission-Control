@@ -96,18 +96,18 @@
       "week_start": "2026-06-15T04:00:00",
       "week_end": "2026-06-22T04:00:00",
       "label": "Jun 15 \u2013 Jun 21",
-      "total_earnings": 428.3,
-      "trips": 42,
-      "tips": 55.0,
+      "total_earnings": 691.13,
+      "trips": 60,
+      "tips": 75.0,
       "fare": 289.14,
       "surge": 13.75,
       "pro_perk": 0.0,
       "boost_plus": 0.0,
       "expenses": 0.0,
       "prev_week_events": 0.0,
-      "net_payout": 428.3,
+      "net_payout": 691.13,
       "source": "partial_manual",
-      "note": "Jun 15\u201319 partial captured \u2014 week in progress"
+      "note": "Jun 15\u201321 captured (Jun 18 afternoon partial, Jun 20\u201321 partial)"
     },
     {
       "week_start": "2026-06-22T04:00:00",
@@ -516,19 +516,19 @@
     },
     {
       "date": "2026-06-19",
-      "earnings": 9.65,
-      "gross": 9.65,
-      "trips": 2,
-      "miles": 5.36,
-      "tips": 0.0,
+      "earnings": 151.21,
+      "gross": 151.21,
+      "trips": 12,
+      "miles": 85.39,
+      "tips": 7.0,
       "surge": 0.0,
       "pro_perk": 0.0,
       "charging_cost": 0.0,
-      "netPayout": 9.65,
+      "netPayout": 151.21,
       "basefare": 7.64,
       "promotions": 2.01,
       "expenses": 0.0,
-      "note": "Partial \u2014 late evening only (9:54-9:59 PM), more trips likely earlier in day",
+      "note": "evening + overnight captured",
       "tripDetail": [
         {
           "time": "9:54 PM",
@@ -541,10 +541,90 @@
           "amount": 5.83,
           "service": "UberX",
           "notes": "$2.01 delayed ride guarantee"
+        },
+        {
+          "time": "10:11 PM",
+          "amount": 13.37,
+          "service": "UberX",
+          "miles": 9.54,
+          "tip": 0,
+          "notes": "W Grove St, Boise \u2192 S Steichen Way, Boise"
+        },
+        {
+          "time": "10:35 PM",
+          "amount": 6.12,
+          "service": "UberX Priority",
+          "miles": 3.43,
+          "tip": 0,
+          "notes": "Increased \u2014 S Loder Pl \u2192 E Broadway Ave, Meridian"
+        },
+        {
+          "time": "10:54 PM",
+          "amount": 12.39,
+          "service": "Comfort",
+          "miles": 4.3,
+          "tip": 3.0,
+          "notes": "$3.00 tip \u2014 N Eagle Rd, Meridian \u2192 W Maple Hill Dr, Boise"
+        },
+        {
+          "time": "11:33 PM",
+          "amount": 11.76,
+          "service": "Comfort",
+          "miles": 4.12,
+          "tip": 0,
+          "notes": "$0.56 pro perk \u2014 E Idaho Ave \u2192 N Cougar Flat Ct, Meridian"
+        },
+        {
+          "time": "11:37 PM",
+          "amount": 14.95,
+          "service": "UberX",
+          "miles": 10.03,
+          "tip": 4.0,
+          "notes": "$4.00 tip \u2014 W Riva Capri St \u2192 S Veneto Pl, Meridian"
+        },
+        {
+          "time": "11:50 PM",
+          "amount": 18.82,
+          "service": "Comfort",
+          "miles": 10.71,
+          "tip": 0,
+          "notes": "$0.90 pro perk \u2014 Idaho Center Blvd, Nampa \u2192 E Pine Ave, Meridian"
+        },
+        {
+          "time": "1:47 AM",
+          "amount": 16.61,
+          "service": "UberX Priority",
+          "miles": 4.27,
+          "tip": 0,
+          "notes": "$0.79 pro perk \u2014 E Idaho Ave \u2192 S Silverstone Way, Meridian"
+        },
+        {
+          "time": "1:57 AM",
+          "amount": 12.23,
+          "service": "UberX",
+          "miles": 10.14,
+          "tip": 0,
+          "notes": "$0.58 pro perk \u2014 E Lanark St, Meridian \u2192 N Barger St, Nampa"
+        },
+        {
+          "time": "3:00 AM",
+          "amount": 22.44,
+          "service": "UberX",
+          "miles": 13.06,
+          "tip": 0,
+          "notes": "Meadowbrook Dr, Nampa \u2192 S Canvasback Way, Meridian"
+        },
+        {
+          "time": "3:32 AM",
+          "amount": 12.87,
+          "service": "UberX",
+          "miles": 10.43,
+          "tip": 0,
+          "notes": "$0.61 pro perk \u2014 Cherry Ln, Nampa \u2192 N Papago Pl, Boise"
         }
       ],
-      "tripsInScreenshots": 2,
-      "screenshotTotal": 9.65
+      "tripsInScreenshots": 12,
+      "screenshotTotal": 151.21
     },
     {
       "date": "2026-06-23",
@@ -665,6 +745,108 @@
       "tripsInScreenshots": 2,
       "screenshotTotal": 20.98,
       "note": "Partial \u2014 early AM only (continuation of Jun 23 night shift). More trips may exist later in day."
+    },
+    {
+      "date": "2026-06-20",
+      "earnings": 15.92,
+      "gross": 15.92,
+      "trips": 1,
+      "miles": 4.26,
+      "tips": 5.0,
+      "surge": 0.0,
+      "pro_perk": 0.0,
+      "charging_cost": 0.0,
+      "netPayout": 15.92,
+      "basefare": 10.92,
+      "promotions": 0.0,
+      "expenses": 0.0,
+      "tripDetail": [
+        {
+          "time": "4:30 AM",
+          "amount": 15.92,
+          "service": "UberX",
+          "miles": 4.26,
+          "tip": 5.0,
+          "notes": "$5.00 tip \u2014 W Grove St \u2192 W Airport Way, Boise"
+        }
+      ],
+      "tripsInScreenshots": 1,
+      "screenshotTotal": 15.92
+    },
+    {
+      "date": "2026-06-21",
+      "earnings": 105.35,
+      "gross": 105.35,
+      "trips": 7,
+      "miles": 36.98,
+      "tips": 8.0,
+      "surge": 0.0,
+      "pro_perk": 0.0,
+      "charging_cost": 0.0,
+      "netPayout": 105.35,
+      "basefare": 97.35,
+      "promotions": 0.0,
+      "expenses": 0.0,
+      "tripDetail": [
+        {
+          "time": "3:28 PM",
+          "amount": 24.73,
+          "service": "UberX Priority",
+          "miles": 7.99,
+          "tip": 5.0,
+          "notes": "$5.00 tip \u2014 W Brogan Dr \u2192 3573 E Longwing Ln, Meridian"
+        },
+        {
+          "time": "3:53 PM",
+          "amount": 25.71,
+          "service": "Comfort",
+          "miles": 7.58,
+          "tip": 0,
+          "notes": "$1.75 surge \u2014 Westfield Pl \u2192 E Braemere Rd, Boise"
+        },
+        {
+          "time": "4:35 PM",
+          "amount": 7.89,
+          "service": "UberX",
+          "miles": 2.84,
+          "tip": 0,
+          "notes": "N 11th St \u2192 W Warren St, Boise"
+        },
+        {
+          "time": "4:56 PM",
+          "amount": 11.47,
+          "service": "UberX",
+          "miles": 7.51,
+          "tip": 0,
+          "notes": "S Apple St \u2192 n lakeharbor ln, Boise"
+        },
+        {
+          "time": "5:21 PM",
+          "amount": 11.73,
+          "service": "UberX",
+          "miles": 6.31,
+          "tip": 0,
+          "notes": "N Whitewater Park Blvd \u2192 S Federal Way, Boise"
+        },
+        {
+          "time": "5:30 PM",
+          "amount": 13.39,
+          "service": "UberX",
+          "miles": 3.33,
+          "tip": 3.0,
+          "notes": "$3.00 tip + Boost+ \u2014 W Airport Way \u2192 W Royal Blvd, Boise"
+        },
+        {
+          "time": "11:02 PM",
+          "amount": 10.43,
+          "service": "Comfort",
+          "miles": 1.42,
+          "tip": 0,
+          "notes": "$1.00 surge \u2014 W Overland Rd \u2192 Catalina Rd, Boise"
+        }
+      ],
+      "tripsInScreenshots": 7,
+      "screenshotTotal": 105.35
     }
   ],
   "monthlyTotals": {
@@ -724,10 +906,10 @@
       "source": "uber_tax_summary"
     },
     "2026-06": {
-      "total_earnings": 1042.77,
-      "total_net": 1042.77,
-      "total_trips": 96,
-      "total_tips": 150.0,
+      "total_earnings": 1305.6,
+      "total_net": 1305.6,
+      "total_trips": 114,
+      "total_tips": 170.0,
       "total_fare": 720.53,
       "total_surge": 20.5,
       "total_pro_perk": 15.38,
@@ -742,6 +924,6 @@
     "scrape_method": "manual_entry_from_pdf_statements",
     "last_scrape_attempt": "2026-06-03T22:00:00Z"
   },
-  "last_updated": "2026-06-24T08:01:54Z",
+  "last_updated": "2026-06-24T08:05:29Z",
   "dedup_method": "trip_level: compare date+time+amount before adding any new trip"
 }
