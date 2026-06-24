@@ -96,8 +96,8 @@
       "week_start": "2026-06-15T04:00:00",
       "week_end": "2026-06-22T04:00:00",
       "label": "Jun 15 \u2013 Jun 21",
-      "total_earnings": 343.89,
-      "trips": 33,
+      "total_earnings": 428.3,
+      "trips": 42,
       "tips": 41.0,
       "fare": 289.14,
       "surge": 13.75,
@@ -107,7 +107,7 @@
       "prev_week_events": 0.0,
       "net_payout": 343.89,
       "source": "partial_manual",
-      "note": "Jun 15\u201317 captured \u2014 week in progress"
+      "note": "Jun 15\u201319 partially captured \u2014 Jun 18 afternoon only, Jun 19 evening only, Jun 20\u201321 pending"
     }
   ],
   "dailySummaries": [
@@ -248,6 +248,38 @@
       "basefare": 71.49,
       "promotions": 0.0,
       "expenses": 0.0
+    },
+    {
+      "date": "2026-06-18",
+      "earnings": 74.76,
+      "gross": 74.76,
+      "trips": 7,
+      "miles": 36.53,
+      "tips": 14.0,
+      "surge": 0.0,
+      "pro_perk": 0.0,
+      "charging_cost": 0.0,
+      "netPayout": 74.76,
+      "basefare": 60.76,
+      "promotions": 2.25,
+      "expenses": 0.0,
+      "note": "Partial \u2014 afternoon only from screenshots (may have evening trips)"
+    },
+    {
+      "date": "2026-06-19",
+      "earnings": 9.65,
+      "gross": 9.65,
+      "trips": 2,
+      "miles": 5.36,
+      "tips": 0.0,
+      "surge": 0.0,
+      "pro_perk": 0.0,
+      "charging_cost": 0.0,
+      "netPayout": 9.65,
+      "basefare": 7.64,
+      "promotions": 2.01,
+      "expenses": 0.0,
+      "note": "Partial \u2014 late evening only (9:54-9:59 PM), more trips likely earlier in day"
     }
   ],
   "monthlyTotals": {
@@ -307,10 +339,10 @@
       "source": "uber_tax_summary"
     },
     "2026-06": {
-      "total_earnings": 874.74,
-      "total_net": 874.74,
-      "total_trips": 77,
-      "total_tips": 125.0,
+      "total_earnings": 959.15,
+      "total_net": 959.15,
+      "total_trips": 86,
+      "total_tips": 139.0,
       "total_fare": 720.53,
       "total_surge": 20.5,
       "total_pro_perk": 15.38,
@@ -325,5 +357,5 @@
     "scrape_method": "manual_entry_from_pdf_statements",
     "last_scrape_attempt": "2026-06-03T22:00:00Z"
   },
-  "last_updated": "2026-06-18T02:35:29Z"
+  "last_updated": "2026-06-24T07:34:02Z"
 }
