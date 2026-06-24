@@ -108,6 +108,23 @@
       "net_payout": 428.3,
       "source": "partial_manual",
       "note": "Jun 15\u201319 partial captured \u2014 week in progress"
+    },
+    {
+      "week_start": "2026-06-22T04:00:00",
+      "week_end": "2026-06-29T04:00:00",
+      "label": "Jun 22 \u2013 Jun 28",
+      "total_earnings": 83.62,
+      "trips": 10,
+      "tips": 11.0,
+      "fare": 72.62,
+      "surge": 0.0,
+      "pro_perk": 0.0,
+      "boost_plus": 0.0,
+      "expenses": 0.0,
+      "prev_week_events": 0.0,
+      "net_payout": 83.62,
+      "source": "partial_manual",
+      "note": "Jun 23\u201324 partial captured \u2014 week in progress"
     }
   ],
   "dailySummaries": [
@@ -528,6 +545,126 @@
       ],
       "tripsInScreenshots": 2,
       "screenshotTotal": 9.65
+    },
+    {
+      "date": "2026-06-23",
+      "earnings": 62.64,
+      "gross": 62.64,
+      "trips": 8,
+      "miles": 26.99,
+      "tips": 11.0,
+      "surge": 0.0,
+      "pro_perk": 0.0,
+      "charging_cost": 0.0,
+      "netPayout": 62.64,
+      "basefare": 51.64,
+      "promotions": 0.0,
+      "expenses": 0.0,
+      "tripDetail": [
+        {
+          "time": "8:33 PM",
+          "amount": 6.02,
+          "service": "UberX",
+          "notes": "$2.00 tip \u2014 W Jefferson St \u2192 N Bogus Basin Rd, Boise",
+          "miles": 1.75,
+          "tip": 2.0
+        },
+        {
+          "time": "8:48 PM",
+          "amount": 3.82,
+          "service": "UberX",
+          "notes": "N 12th St \u2192 202 S 6th St, Boise",
+          "miles": 1.17,
+          "tip": 0
+        },
+        {
+          "time": "9:00 PM",
+          "amount": 3.82,
+          "service": "UberX",
+          "notes": "W Grove St \u2192 N Whitewater Park Blvd, Boise",
+          "miles": 2.19,
+          "tip": 0
+        },
+        {
+          "time": "9:07 PM",
+          "amount": 7.94,
+          "service": "UberX",
+          "notes": "Recalculated unusual activity \u2014 W Grove St \u2192 E Windsong Dr, Boise",
+          "miles": 5.05,
+          "tip": 0
+        },
+        {
+          "time": "9:25 PM",
+          "amount": 3.82,
+          "service": "UberX",
+          "notes": "Short dropoff \u2014 E Park Blvd \u2192 E Park Blvd, Boise (0.01 mi)",
+          "miles": 0.01,
+          "tip": 0
+        },
+        {
+          "time": "10:05 PM",
+          "amount": 6.31,
+          "service": "UberX",
+          "notes": "N Milwaukee St \u2192 S Workland Ln, Boise",
+          "miles": 1.5,
+          "tip": 0
+        },
+        {
+          "time": "10:14 PM",
+          "amount": 7.72,
+          "service": "UberX",
+          "notes": "N Wildwood Way, Boise \u2192 E Oakcrest Dr, Meridian",
+          "miles": 3.48,
+          "tip": 0
+        },
+        {
+          "time": "unknown",
+          "amount": 23.19,
+          "service": "UberX",
+          "notes": "$9.00 tip \u2014 W Main St, Boise \u2192 E Radiant Ridge Dr, Meridian (header cut off in screenshot)",
+          "miles": 11.84,
+          "tip": 9.0
+        }
+      ],
+      "tripsInScreenshots": 8,
+      "screenshotTotal": 62.64,
+      "note": "Partial \u2014 evening only (8:33-10:14 PM + 1 trip with unknown time). More trips may exist earlier in day."
+    },
+    {
+      "date": "2026-06-24",
+      "earnings": 20.98,
+      "gross": 20.98,
+      "trips": 2,
+      "miles": 19.25,
+      "tips": 0,
+      "surge": 0.0,
+      "pro_perk": 0.0,
+      "charging_cost": 0.0,
+      "netPayout": 20.98,
+      "basefare": 20.98,
+      "promotions": 0.0,
+      "expenses": 0.0,
+      "tripDetail": [
+        {
+          "time": "12:12 AM",
+          "amount": 15.38,
+          "service": "UberX",
+          "notes": "E Bower St, Meridian \u2192 Caldwell Blvd, Nampa",
+          "miles": 14.34,
+          "tip": 0
+        },
+        {
+          "time": "12:33 AM",
+          "amount": 5.6,
+          "service": "UberX",
+          "notes": "2nd St S \u2192 Stamm Ln, Nampa",
+          "miles": 4.91,
+          "tip": 0
+        }
+      ],
+      "tripsInScreenshots": 2,
+      "screenshotTotal": 20.98,
+      "note": "Partial \u2014 early AM only (continuation of Jun 23 night shift). More trips may exist later in day."
     }
   ],
   "monthlyTotals": {
@@ -587,10 +724,10 @@
       "source": "uber_tax_summary"
     },
     "2026-06": {
-      "total_earnings": 959.15,
-      "total_net": 959.15,
-      "total_trips": 86,
-      "total_tips": 139.0,
+      "total_earnings": 1042.77,
+      "total_net": 1042.77,
+      "total_trips": 96,
+      "total_tips": 150.0,
       "total_fare": 720.53,
       "total_surge": 20.5,
       "total_pro_perk": 15.38,
@@ -605,6 +742,6 @@
     "scrape_method": "manual_entry_from_pdf_statements",
     "last_scrape_attempt": "2026-06-03T22:00:00Z"
   },
-  "last_updated": "2026-06-24T07:46:10Z",
+  "last_updated": "2026-06-24T07:59:31Z",
   "dedup_method": "trip_level: compare date+time+amount before adding any new trip"
 }
