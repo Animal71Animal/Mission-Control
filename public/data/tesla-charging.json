@@ -938,14 +938,64 @@
       "rate_per_kwh": 0.2,
       "cost": 14.07,
       "duration_min": 38
+    },
+    {
+      "date": "2026-06-18",
+      "location": "Boise, ID - North Orchard St",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 64.4961,
+      "rate_per_kwh": 0.43,
+      "cost": 27.73,
+      "duration_min": 32
+    },
+    {
+      "date": "2026-06-20",
+      "location": "Boise, ID - South Entertainment Ave",
+      "address": "1426 South Entertainment Ave, Boise, ID 83709",
+      "type": "Supercharging",
+      "kwh": 67.0481,
+      "rate_per_kwh": 0.19,
+      "cost": 12.73,
+      "duration_min": 39
+    },
+    {
+      "date": "2026-06-21",
+      "location": "Boise, ID - North Orchard St",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 75.2103,
+      "rate_per_kwh": 0.2,
+      "cost": 15.04,
+      "duration_min": 49
+    },
+    {
+      "date": "2026-06-23",
+      "location": "Boise, ID - South Entertainment Ave",
+      "address": "1426 South Entertainment Ave, Boise, ID 83709",
+      "type": "Supercharging",
+      "kwh": 21.0117,
+      "rate_per_kwh": 0.43,
+      "cost": 9.03,
+      "duration_min": 11
+    },
+    {
+      "date": "2026-06-23",
+      "location": "Boise, ID - North Orchard St",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 72.21,
+      "rate_per_kwh": 0.2,
+      "cost": 14.44,
+      "duration_min": 37
     }
   ],
-  "last_updated": "2026-06-18T02:20:01Z",
+  "last_updated": "2026-06-24T07:18:50Z",
   "totals": {
-    "total_sessions": 92,
-    "total_cost": 1443.91,
-    "total_kwh": 5012.4639,
-    "avg_cost_per_session": 15.69
+    "total_sessions": 97,
+    "total_cost": 1522.88,
+    "total_kwh": 5312.4401,
+    "avg_cost_per_session": 15.7
   },
   "monthlyTotals": {
     "2025-12": {
@@ -985,10 +1035,10 @@
       "avg_cost_per_session": 14.15
     },
     "2026-06": {
-      "sessions": 10,
-      "cost": 176.05,
-      "kwh": 521.4853,
-      "avg_cost_per_session": 17.61
+      "sessions": 15,
+      "cost": 255.02,
+      "kwh": 821.4615,
+      "avg_cost_per_session": 17.0
     }
   }
 }
