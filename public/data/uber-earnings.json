@@ -113,18 +113,18 @@
       "week_start": "2026-06-22T04:00:00",
       "week_end": "2026-06-29T04:00:00",
       "label": "Jun 22 \u2013 Jun 28",
-      "total_earnings": 83.62,
-      "trips": 10,
-      "tips": 11.0,
+      "total_earnings": 185.67,
+      "trips": 20,
+      "tips": 24.0,
       "fare": 72.62,
       "surge": 0.0,
       "pro_perk": 0.0,
       "boost_plus": 0.0,
       "expenses": 0.0,
       "prev_week_events": 0.0,
-      "net_payout": 83.62,
+      "net_payout": 185.67,
       "source": "partial_manual",
-      "note": "Jun 23\u201324 partial captured \u2014 week in progress"
+      "note": "Jun 22\u201324 partial captured \u2014 week in progress"
     }
   ],
   "dailySummaries": [
@@ -847,6 +847,106 @@
       ],
       "tripsInScreenshots": 7,
       "screenshotTotal": 105.35
+    },
+    {
+      "date": "2026-06-22",
+      "earnings": 102.05,
+      "gross": 102.05,
+      "trips": 10,
+      "miles": 60.23,
+      "tips": 13.0,
+      "surge": 0.0,
+      "pro_perk": 0.0,
+      "charging_cost": 0.0,
+      "netPayout": 102.05,
+      "basefare": 89.05,
+      "promotions": 0.0,
+      "expenses": 0.0,
+      "tripDetail": [
+        {
+          "time": "4:42 PM",
+          "amount": 14.1,
+          "service": "UberX",
+          "miles": 10.26,
+          "tip": 0,
+          "notes": "W Overland Rd, Boise \u2192 W Divide Creek St, Meridian"
+        },
+        {
+          "time": "5:35 PM",
+          "amount": 19.08,
+          "service": "UberX",
+          "miles": 10.5,
+          "tip": 2.0,
+          "notes": "$2.00 tip \u2014 N Lakegrove Ln, Boise \u2192 E Franklin Rd, Nampa"
+        },
+        {
+          "time": "6:19 PM",
+          "amount": 6.27,
+          "service": "UberX",
+          "miles": 3.16,
+          "tip": 0,
+          "notes": "Municipal Dr \u2192 3rd St S, Nampa"
+        },
+        {
+          "time": "6:34 PM",
+          "amount": 7.46,
+          "service": "UberX Priority",
+          "miles": 2.45,
+          "tip": 0,
+          "notes": "E Comstock Ave \u2192 Franklin Rd, Nampa"
+        },
+        {
+          "time": "6:49 PM",
+          "amount": 3.88,
+          "service": "UberX",
+          "miles": 1.91,
+          "tip": 0,
+          "notes": "Stamm Ln \u2192 e franklin rd, Nampa"
+        },
+        {
+          "time": "7:04 PM",
+          "amount": 12.96,
+          "service": "UberX",
+          "miles": 15.51,
+          "tip": 4.0,
+          "notes": "$4.00 tip \u2014 E Franklin Rd \u2192 N Marketplace Blvd, Nampa"
+        },
+        {
+          "time": "7:05 PM",
+          "amount": 10.63,
+          "service": "UberX",
+          "miles": 3.99,
+          "tip": 5.0,
+          "notes": "$5.00 tip \u2014 I-84-BL \u2192 Meander Creek Way, Nampa"
+        },
+        {
+          "time": "7:39 PM",
+          "amount": 7.55,
+          "service": "UberX",
+          "miles": 2.19,
+          "tip": 2.0,
+          "notes": "$2.00 tip \u2014 N Market Place Blvd \u2192 Crystal Ridge Dr, Nampa"
+        },
+        {
+          "time": "8:14 PM",
+          "amount": 9.34,
+          "service": "UberX",
+          "miles": 4.67,
+          "tip": 0,
+          "notes": "W Fairview Ave \u2192 N 19th St, Boise"
+        },
+        {
+          "time": "8:41 PM",
+          "amount": 10.78,
+          "service": "Uber Pet",
+          "miles": 5.59,
+          "tip": 0,
+          "notes": "N Whitewater Park Blvd \u2192 Linfield Dr, Boise"
+        }
+      ],
+      "tripsInScreenshots": 10,
+      "screenshotTotal": 102.05,
+      "note": "Evening shift 4:42\u20138:41 PM captured"
     }
   ],
   "monthlyTotals": {
@@ -906,10 +1006,10 @@
       "source": "uber_tax_summary"
     },
     "2026-06": {
-      "total_earnings": 1305.6,
-      "total_net": 1305.6,
-      "total_trips": 114,
-      "total_tips": 170.0,
+      "total_earnings": 1407.65,
+      "total_net": 1407.65,
+      "total_trips": 124,
+      "total_tips": 183.0,
       "total_fare": 720.53,
       "total_surge": 20.5,
       "total_pro_perk": 15.38,
@@ -924,6 +1024,6 @@
     "scrape_method": "manual_entry_from_pdf_statements",
     "last_scrape_attempt": "2026-06-03T22:00:00Z"
   },
-  "last_updated": "2026-06-24T08:05:29Z",
+  "last_updated": "2026-06-24T08:07:41Z",
   "dedup_method": "trip_level: compare date+time+amount before adding any new trip"
 }
