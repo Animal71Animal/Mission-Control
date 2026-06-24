@@ -4569,6 +4569,28 @@
       "subcategory": "Entertainment - Audible",
       "is_business": false,
       "status": "Posted"
+    },
+    {
+      "id": "88a9cb13b6f5",
+      "date": "06/25/2026",
+      "description": "SRB PAYCHECK - V32442219 - Period 6/1-6/15",
+      "amount": 843.0,
+      "category": "Income",
+      "subcategory": "SRB Paycheck",
+      "is_business": false,
+      "status": "Posted",
+      "note": "Gross $1,140.30 | Net $843.00 | 76.02 hrs | Tipped Regular + $550 tips"
+    },
+    {
+      "id": "b86d56200199",
+      "date": "06/25/2026",
+      "description": "SRB DECLARED TIPS - Paycheck V32442219",
+      "amount": 550.0,
+      "category": "Income",
+      "subcategory": "SRB Tips (Actual)",
+      "is_business": false,
+      "status": "Posted",
+      "note": "Declared tips for period 6/1-6/15 from official paystub"
     }
   ],
   "monthly_summaries": {
@@ -4776,7 +4798,7 @@
       "transaction_count": 1
     }
   },
-  "last_updated": "2026-05-27T21:14:37.000Z",
+  "last_updated": "2026-06-25T00:00:00.000Z",
   "source": "Wells Fargo Checking - Card 5484",
   "dave_summary": {
     "march": {
