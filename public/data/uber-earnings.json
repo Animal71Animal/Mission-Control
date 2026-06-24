@@ -96,16 +96,16 @@
       "week_start": "2026-06-15T04:00:00",
       "week_end": "2026-06-22T04:00:00",
       "label": "Jun 15 \u2013 Jun 21",
-      "total_earnings": 691.13,
-      "trips": 60,
-      "tips": 75.0,
+      "total_earnings": 725.56,
+      "trips": 63,
+      "tips": 83.0,
       "fare": 289.14,
       "surge": 13.75,
       "pro_perk": 0.0,
       "boost_plus": 0.0,
       "expenses": 0.0,
       "prev_week_events": 0.0,
-      "net_payout": 691.13,
+      "net_payout": 725.56,
       "source": "partial_manual",
       "note": "Jun 15\u201321 captured (Jun 18 afternoon partial, Jun 20\u201321 partial)"
     },
@@ -113,16 +113,16 @@
       "week_start": "2026-06-22T04:00:00",
       "week_end": "2026-06-29T04:00:00",
       "label": "Jun 22 \u2013 Jun 28",
-      "total_earnings": 185.67,
-      "trips": 20,
-      "tips": 24.0,
+      "total_earnings": 265.52,
+      "trips": 26,
+      "tips": 31.0,
       "fare": 72.62,
       "surge": 0.0,
       "pro_perk": 0.0,
       "boost_plus": 0.0,
       "expenses": 0.0,
       "prev_week_events": 0.0,
-      "net_payout": 185.67,
+      "net_payout": 265.52,
       "source": "partial_manual",
       "note": "Jun 22\u201324 partial captured \u2014 week in progress"
     }
@@ -775,15 +775,15 @@
     },
     {
       "date": "2026-06-21",
-      "earnings": 105.35,
-      "gross": 105.35,
-      "trips": 7,
-      "miles": 36.98,
-      "tips": 8.0,
+      "earnings": 139.78,
+      "gross": 139.78,
+      "trips": 10,
+      "miles": 53.59,
+      "tips": 16.0,
       "surge": 0.0,
       "pro_perk": 0.0,
       "charging_cost": 0.0,
-      "netPayout": 105.35,
+      "netPayout": 139.78,
       "basefare": 97.35,
       "promotions": 0.0,
       "expenses": 0.0,
@@ -843,6 +843,30 @@
           "miles": 1.42,
           "tip": 0,
           "notes": "$1.00 surge \u2014 W Overland Rd \u2192 Catalina Rd, Boise"
+        },
+        {
+          "time": "11:09 PM",
+          "amount": 12.78,
+          "service": "UberX",
+          "miles": 2.69,
+          "tip": 5.0,
+          "notes": "$5.00 tip \u2014 S Hervey St \u2192 S 6th St, Boise"
+        },
+        {
+          "time": "11:13 PM",
+          "amount": 10.55,
+          "service": "UberX",
+          "miles": 6.55,
+          "tip": 3.0,
+          "notes": "$3.00 tip \u2014 N 10th St \u2192 E Nahuatl Dr, Boise"
+        },
+        {
+          "time": "11:42 PM",
+          "amount": 11.1,
+          "service": "UberX",
+          "miles": 7.37,
+          "tip": 0,
+          "notes": "S Orchard St \u2192 N Hacienda Ave, Boise"
         }
       ],
       "tripsInScreenshots": 7,
@@ -850,15 +874,15 @@
     },
     {
       "date": "2026-06-22",
-      "earnings": 102.05,
-      "gross": 102.05,
-      "trips": 10,
-      "miles": 60.23,
-      "tips": 13.0,
+      "earnings": 181.9,
+      "gross": 181.9,
+      "trips": 16,
+      "miles": 85.57,
+      "tips": 20.0,
       "surge": 0.0,
       "pro_perk": 0.0,
       "charging_cost": 0.0,
-      "netPayout": 102.05,
+      "netPayout": 181.9,
       "basefare": 89.05,
       "promotions": 0.0,
       "expenses": 0.0,
@@ -942,6 +966,54 @@
           "miles": 5.59,
           "tip": 0,
           "notes": "N Whitewater Park Blvd \u2192 Linfield Dr, Boise"
+        },
+        {
+          "time": "12:00 AM",
+          "amount": 8.33,
+          "service": "UberX",
+          "miles": 5.47,
+          "tip": 0,
+          "notes": "$0.40 promo \u2014 W Alameda St \u2192 W Targee St, Boise"
+        },
+        {
+          "time": "12:09 AM",
+          "amount": 16.35,
+          "service": "UberX",
+          "miles": 4.21,
+          "tip": 5.0,
+          "notes": "$5.00 tip + $2.93 promo \u2014 W Airport Way \u2192 S 13th St, Boise"
+        },
+        {
+          "time": "12:29 AM",
+          "amount": 14.36,
+          "service": "UberX",
+          "miles": 5.49,
+          "tip": 0,
+          "notes": "$4.22 promo \u2014 W Airport Way \u2192 E Warm Springs Ave, Boise"
+        },
+        {
+          "time": "12:39 AM",
+          "amount": 11.48,
+          "service": "UberX",
+          "miles": 3.94,
+          "tip": 0,
+          "notes": "$3.68 promo \u2014 W Airport Way \u2192 S Division Ave, Boise"
+        },
+        {
+          "time": "3:55 PM",
+          "amount": 11.03,
+          "service": "UberX",
+          "miles": 1.21,
+          "tip": 2.0,
+          "notes": "$2.00 tip \u2014 N Milwaukee St \u2192 W Brookview Dr, Boise"
+        },
+        {
+          "time": "4:10 PM",
+          "amount": 18.3,
+          "service": "UberX",
+          "miles": 5.02,
+          "tip": 0,
+          "notes": "Increased 5+ min delay \u2014 W Galileo Ct \u2192 S Hadley Ave, Boise"
         }
       ],
       "tripsInScreenshots": 10,
@@ -1006,10 +1078,10 @@
       "source": "uber_tax_summary"
     },
     "2026-06": {
-      "total_earnings": 1407.65,
-      "total_net": 1407.65,
-      "total_trips": 124,
-      "total_tips": 183.0,
+      "total_earnings": 1521.93,
+      "total_net": 1521.93,
+      "total_trips": 133,
+      "total_tips": 198.0,
       "total_fare": 720.53,
       "total_surge": 20.5,
       "total_pro_perk": 15.38,
@@ -1024,6 +1096,6 @@
     "scrape_method": "manual_entry_from_pdf_statements",
     "last_scrape_attempt": "2026-06-03T22:00:00Z"
   },
-  "last_updated": "2026-06-24T08:07:41Z",
+  "last_updated": "2026-06-24T08:13:32Z",
   "dedup_method": "trip_level: compare date+time+amount before adding any new trip"
 }
