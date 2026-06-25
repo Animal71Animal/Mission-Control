@@ -27,7 +27,7 @@
     },
     {
       "month": "June",
-      "amount": 2222,
+      "amount": 2242,
       "nights": 12
     }
   ],
@@ -295,14 +295,14 @@
       "mar": 35,
       "apr": 10,
       "may": 53,
-      "jun": 20,
+      "jun": 40,
       "jul": 0,
       "aug": 0,
       "sep": 0,
       "oct": 0,
       "nov": 0,
       "dec": 0,
-      "total": 191
+      "total": 211
     },
     {
       "name": "Indie",
@@ -4964,10 +4964,14 @@
       },
       {
         "date": "Wed Jun 24",
-        "total": 20,
+        "total": 40,
         "dancers": [
           {
             "name": "Customers",
+            "amount": 20
+          },
+          {
+            "name": "Berlin",
             "amount": 20
           }
         ]
@@ -6241,5 +6245,5 @@
     }
   ],
   "customerTips": [],
-  "last_updated": "2026-06-25T01:14:34.122781+00:00"
+  "last_updated": "2026-06-25T05:18:38Z"
 }
