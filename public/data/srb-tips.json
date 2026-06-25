@@ -27,7 +27,7 @@
     },
     {
       "month": "June",
-      "amount": 2247,
+      "amount": 2282,
       "nights": 12
     }
   ],
@@ -103,14 +103,14 @@
       "mar": 87,
       "apr": 46,
       "may": 100,
-      "jun": 65,
+      "jun": 75,
       "jul": 0,
       "aug": 0,
       "sep": 0,
       "oct": 0,
       "nov": 0,
       "dec": 0,
-      "total": 413
+      "total": 423
     },
     {
       "name": "Genesis",
@@ -455,14 +455,14 @@
       "mar": 50,
       "apr": 33,
       "may": 31,
-      "jun": 0,
+      "jun": 5,
       "jul": 0,
       "aug": 0,
       "sep": 0,
       "oct": 0,
       "nov": 0,
       "dec": 0,
-      "total": 138
+      "total": 143
     },
     {
       "name": "Noelle",
@@ -567,14 +567,14 @@
       "mar": 10,
       "apr": 22,
       "may": 5,
-      "jun": 30,
+      "jun": 50,
       "jul": 0,
       "aug": 0,
       "sep": 0,
       "oct": 0,
       "nov": 0,
       "dec": 0,
-      "total": 107
+      "total": 127
     },
     {
       "name": "Kiki",
@@ -4964,7 +4964,7 @@
       },
       {
         "date": "Wed Jun 24",
-        "total": 45,
+        "total": 80,
         "dancers": [
           {
             "name": "Customers",
@@ -4977,6 +4977,18 @@
           {
             "name": "Zara",
             "amount": 5
+          },
+          {
+            "name": "Quinn",
+            "amount": 5
+          },
+          {
+            "name": "Allie",
+            "amount": 10
+          },
+          {
+            "name": "Effie",
+            "amount": 20
           }
         ]
       }
@@ -6249,5 +6261,5 @@
     }
   ],
   "customerTips": [],
-  "last_updated": "2026-06-25T07:43:34Z"
+  "last_updated": "2026-06-25T08:24:43Z"
 }
