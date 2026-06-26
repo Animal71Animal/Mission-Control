@@ -870,15 +870,15 @@
       "feb": 10,
       "mar": 20,
       "apr": 0,
-      "may": 5,
-      "jun": 0,
+      "may": 10,
+      "jun": 13,
       "jul": 0,
       "aug": 0,
       "sep": 0,
       "oct": 0,
       "nov": 0,
       "dec": 0,
-      "total": 38
+      "total": 56
     },
     {
       "name": "Kimberly",
@@ -1071,22 +1071,6 @@
       "nov": 0,
       "dec": 0,
       "total": 20
-    },
-    {
-      "name": "Shiva",
-      "jan": 0,
-      "feb": 0,
-      "mar": 0,
-      "apr": 0,
-      "may": 5,
-      "jun": 13,
-      "jul": 0,
-      "aug": 0,
-      "sep": 0,
-      "oct": 0,
-      "nov": 0,
-      "dec": 0,
-      "total": 18
     },
     {
       "name": "Karina",
@@ -4148,7 +4132,7 @@
             "amount": 20
           },
           {
-            "name": "Shiva",
+            "name": "Shiiva",
             "amount": 5
           },
           {
@@ -4506,7 +4490,7 @@
             "amount": 20
           },
           {
-            "name": "Shiva",
+            "name": "Shiiva",
             "amount": 13
           },
           {
@@ -6319,5 +6303,5 @@
     }
   ],
   "customerTips": [],
-  "last_updated": "2026-06-26T08:37:41Z"
+  "last_updated": "2026-06-26T08:40:22Z"
 }
