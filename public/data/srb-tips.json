@@ -27,8 +27,8 @@
     },
     {
       "month": "June",
-      "amount": 2319,
-      "nights": 12
+      "amount": 2419,
+      "nights": 13
     }
   ],
   "topTippers": [
@@ -39,14 +39,14 @@
       "mar": 154,
       "apr": 68,
       "may": 541,
-      "jun": 146,
+      "jun": 166,
       "jul": 0,
       "aug": 0,
       "sep": 0,
       "oct": 0,
       "nov": 0,
       "dec": 0,
-      "total": 1411
+      "total": 1431
     },
     {
       "name": "Hunter",
@@ -231,14 +231,14 @@
       "mar": 0,
       "apr": 0,
       "may": 117,
-      "jun": 110,
+      "jun": 160,
       "jul": 0,
       "aug": 0,
       "sep": 0,
       "oct": 0,
       "nov": 0,
       "dec": 0,
-      "total": 227
+      "total": 277
     },
     {
       "name": "Milan",
@@ -391,14 +391,14 @@
       "mar": 35,
       "apr": 35,
       "may": 25,
-      "jun": 15,
+      "jun": 25,
       "jul": 0,
       "aug": 0,
       "sep": 0,
       "oct": 0,
       "nov": 0,
       "dec": 0,
-      "total": 170
+      "total": 180
     },
     {
       "name": "Zara",
@@ -775,14 +775,14 @@
       "mar": 0,
       "apr": 0,
       "may": 10,
-      "jun": 40,
+      "jun": 60,
       "jul": 0,
       "aug": 0,
       "sep": 0,
       "oct": 0,
       "nov": 0,
       "dec": 0,
-      "total": 50
+      "total": 70
     },
     {
       "name": "Cassandra",
@@ -4999,6 +4999,28 @@
             "amount": 27
           }
         ]
+      },
+      {
+        "date": "Thu Jun 25",
+        "total": 100,
+        "dancers": [
+          {
+            "name": "Customers",
+            "amount": 20
+          },
+          {
+            "name": "Ari",
+            "amount": 50
+          },
+          {
+            "name": "Poppy",
+            "amount": 20
+          },
+          {
+            "name": "Nova",
+            "amount": 10
+          }
+        ]
       }
     ]
   },
@@ -6269,5 +6291,5 @@
     }
   ],
   "customerTips": [],
-  "last_updated": "2026-06-25T08:53:09Z"
+  "last_updated": "2026-06-26T07:35:44Z"
 }
