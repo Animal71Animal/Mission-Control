@@ -27,7 +27,7 @@
     },
     {
       "month": "June",
-      "amount": 2442,
+      "amount": 2492,
       "nights": 13
     }
   ],
@@ -119,14 +119,14 @@
       "mar": 138,
       "apr": 20,
       "may": 113,
-      "jun": 0,
+      "jun": 25,
       "jul": 0,
       "aug": 0,
       "sep": 0,
       "oct": 0,
       "nov": 0,
       "dec": 0,
-      "total": 393
+      "total": 418
     },
     {
       "name": "Amity",
@@ -215,14 +215,14 @@
       "mar": 4,
       "apr": 38,
       "may": 53,
-      "jun": 20,
+      "jun": 25,
       "jul": 0,
       "aug": 0,
       "sep": 0,
       "oct": 0,
       "nov": 0,
       "dec": 0,
-      "total": 231
+      "total": 236
     },
     {
       "name": "Ari",
@@ -535,14 +535,14 @@
       "mar": 28,
       "apr": 35,
       "may": 40,
-      "jun": 10,
+      "jun": 30,
       "jul": 0,
       "aug": 0,
       "sep": 0,
       "oct": 0,
       "nov": 0,
       "dec": 0,
-      "total": 120
+      "total": 140
     },
     {
       "name": "Maria",
@@ -5002,7 +5002,7 @@
       },
       {
         "date": "Thu Jun 25",
-        "total": 123,
+        "total": 173,
         "dancers": [
           {
             "name": "Customers",
@@ -5023,6 +5023,18 @@
           {
             "name": "Athena",
             "amount": 23
+          },
+          {
+            "name": "Mia",
+            "amount": 5
+          },
+          {
+            "name": "Genesis",
+            "amount": 25
+          },
+          {
+            "name": "Tiana",
+            "amount": 20
           }
         ]
       }
@@ -6295,5 +6307,5 @@
     }
   ],
   "customerTips": [],
-  "last_updated": "2026-06-26T07:58:01Z"
+  "last_updated": "2026-06-26T08:21:25Z"
 }
