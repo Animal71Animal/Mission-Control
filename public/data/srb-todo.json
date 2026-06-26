@@ -242,7 +242,7 @@
     },
     {
       "id": "srb-1778831170842",
-      "completed": false,
+      "completed": true,
       "text": "Print Featured Entertainment flyer",
       "category": "Media",
       "priority": "high",
@@ -257,5 +257,5 @@
       "due_date": "2026-06-04"
     }
   ],
-  "last_updated": "2026-05-30T06:12:27.290Z"
+  "last_updated": "2026-06-26T17:25:15.254Z"
 }
