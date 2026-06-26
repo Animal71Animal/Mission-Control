@@ -712,15 +712,15 @@
     },
     {
       "date": "2026-06-24",
-      "earnings": 20.98,
-      "gross": 20.98,
-      "trips": 2,
-      "miles": 19.25,
-      "tips": 0,
+      "earnings": 51.57,
+      "gross": 51.57,
+      "trips": 6,
+      "miles": 30.51,
+      "tips": 7.0,
       "surge": 0.0,
       "pro_perk": 0.0,
       "charging_cost": 0.0,
-      "netPayout": 20.98,
+      "netPayout": 51.57,
       "basefare": 20.98,
       "promotions": 0.0,
       "expenses": 0.0,
@@ -740,11 +740,43 @@
           "notes": "2nd St S \u2192 Stamm Ln, Nampa",
           "miles": 4.91,
           "tip": 0
+        },
+        {
+          "time": "2:31 PM",
+          "amount": 6.63,
+          "service": "UberX",
+          "miles": 1.08,
+          "tip": 2.0,
+          "notes": "$2.00 tip \u2014 S 13th St \u2192 W State St, Boise"
+        },
+        {
+          "time": "2:38 PM",
+          "amount": 8.15,
+          "service": "Comfort",
+          "miles": 1.9,
+          "tip": 2.0,
+          "notes": "$2.00 tip \u2014 N 17th St \u2192 W Fairview Ave, Boise"
+        },
+        {
+          "time": "2:47 PM",
+          "amount": 6.42,
+          "service": "UberX",
+          "miles": 3.66,
+          "tip": 0,
+          "notes": "W State St \u2192 N Liberty St, Boise"
+        },
+        {
+          "time": "3:01 PM",
+          "amount": 9.39,
+          "service": "UberX",
+          "miles": 4.62,
+          "tip": 3.0,
+          "notes": "$3.00 tip \u2014 W Emerald St \u2192 W Targee St, Boise"
         }
       ],
-      "tripsInScreenshots": 2,
-      "screenshotTotal": 20.98,
-      "note": "Partial \u2014 early AM only (continuation of Jun 23 night shift). More trips may exist later in day."
+      "tripsInScreenshots": 6,
+      "screenshotTotal": 51.57,
+      "note": "Early AM + afternoon shift (2:31\u20133:01 PM)"
     },
     {
       "date": "2026-06-20",
@@ -1078,10 +1110,10 @@
       "source": "uber_tax_summary"
     },
     "2026-06": {
-      "total_earnings": 1521.93,
-      "total_net": 1521.93,
-      "total_trips": 133,
-      "total_tips": 198.0,
+      "total_earnings": 1552.52,
+      "total_net": 1552.52,
+      "total_trips": 137,
+      "total_tips": 205.0,
       "source": "manual_screenshots"
     }
   },
@@ -1091,6 +1123,6 @@
     "scrape_method": "manual_entry_from_pdf_statements",
     "last_scrape_attempt": "2026-06-03T22:00:00Z"
   },
-  "last_updated": "2026-06-24T08:32:06Z",
+  "last_updated": "2026-06-26T08:47:19Z",
   "dedup_method": "trip_level: compare date+time+amount before adding any new trip"
 }
