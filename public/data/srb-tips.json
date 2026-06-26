@@ -913,7 +913,7 @@
       "total": 35
     },
     {
-      "name": "Ava",
+      "name": "Eva",
       "jan": 0,
       "feb": 0,
       "mar": 0,
@@ -3367,7 +3367,7 @@
           {
             "dancer": "Ava",
             "amount": 14,
-            "name": "Ava"
+            "name": "Eva"
           },
           {
             "dancer": "Natasha",
@@ -3654,7 +3654,7 @@
           {
             "dancer": "Ava",
             "amount": 10,
-            "name": "Ava"
+            "name": "Eva"
           },
           {
             "dancer": "Macy",
@@ -4889,7 +4889,7 @@
         "total": 344,
         "dancers": [
           {
-            "name": "Ava",
+            "name": "Eva",
             "amount": 10
           },
           {
@@ -5029,7 +5029,7 @@
             "amount": 20
           },
           {
-            "name": "Ava",
+            "name": "Eva",
             "amount": 5
           }
         ]
@@ -6303,5 +6303,5 @@
     }
   ],
   "customerTips": [],
-  "last_updated": "2026-06-26T08:40:22Z"
+  "last_updated": "2026-06-26T08:41:00Z"
 }
