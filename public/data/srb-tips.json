@@ -27,7 +27,7 @@
     },
     {
       "month": "June",
-      "amount": 2532,
+      "amount": 2537,
       "nights": 13
     }
   ],
@@ -919,14 +919,14 @@
       "mar": 0,
       "apr": 24,
       "may": 0,
-      "jun": 15,
+      "jun": 20,
       "jul": 0,
       "aug": 0,
       "sep": 0,
       "oct": 0,
       "nov": 0,
       "dec": 0,
-      "total": 39
+      "total": 44
     },
     {
       "name": "Ruby",
@@ -4986,7 +4986,7 @@
       },
       {
         "date": "Thu Jun 25",
-        "total": 213,
+        "total": 218,
         "dancers": [
           {
             "name": "Customers",
@@ -5027,6 +5027,10 @@
           {
             "name": "Amy",
             "amount": 20
+          },
+          {
+            "name": "Eva",
+            "amount": 5
           },
           {
             "name": "Eva",
@@ -6303,5 +6307,5 @@
     }
   ],
   "customerTips": [],
-  "last_updated": "2026-06-26T08:41:00Z"
+  "last_updated": "2026-06-26T08:41:18Z"
 }
