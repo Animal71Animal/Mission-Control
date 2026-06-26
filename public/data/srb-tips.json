@@ -27,7 +27,7 @@
     },
     {
       "month": "June",
-      "amount": 2537,
+      "amount": 2569,
       "nights": 13
     }
   ],
@@ -1279,6 +1279,22 @@
       "nov": 0,
       "dec": 0,
       "total": 0
+    },
+    {
+      "name": "Roxie",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 0,
+      "jun": 32,
+      "jul": 0,
+      "aug": 0,
+      "sep": 0,
+      "oct": 0,
+      "nov": 0,
+      "dec": 0,
+      "total": 32
     }
   ],
   "nightlyData": {
@@ -4986,7 +5002,7 @@
       },
       {
         "date": "Thu Jun 25",
-        "total": 218,
+        "total": 250,
         "dancers": [
           {
             "name": "Customers",
@@ -5035,6 +5051,10 @@
           {
             "name": "Eva",
             "amount": 5
+          },
+          {
+            "name": "Roxie",
+            "amount": 32
           }
         ]
       }
@@ -6307,5 +6327,5 @@
     }
   ],
   "customerTips": [],
-  "last_updated": "2026-06-26T08:41:18Z"
+  "last_updated": "2026-06-26T08:42:45Z"
 }
