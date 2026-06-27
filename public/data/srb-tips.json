@@ -27,7 +27,7 @@
     },
     {
       "month": "June",
-      "amount": 2924,
+      "amount": 2934,
       "nights": 14
     }
   ],
@@ -5064,7 +5064,7 @@
       },
       {
         "date": "Fri Jun 26",
-        "total": 255,
+        "total": 265,
         "partial": true,
         "dancers": [
           {
@@ -5121,6 +5121,10 @@
           },
           {
             "name": "Customers",
+            "amount": 10
+          },
+          {
+            "name": "Skylar",
             "amount": 10
           }
         ]
