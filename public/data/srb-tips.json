@@ -27,7 +27,7 @@
     },
     {
       "month": "June",
-      "amount": 2674,
+      "amount": 2724,
       "nights": 14
     }
   ],
@@ -5064,12 +5064,20 @@
       },
       {
         "date": "Fri Jun 26",
-        "total": 5,
+        "total": 55,
         "partial": true,
         "dancers": [
           {
             "name": "Ava",
             "amount": 5
+          },
+          {
+            "name": "Nala",
+            "amount": 40
+          },
+          {
+            "name": "Berlin",
+            "amount": 10
           }
         ]
       }
