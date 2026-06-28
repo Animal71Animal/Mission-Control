@@ -27,7 +27,7 @@
     },
     {
       "month": "June",
-      "amount": 3014,
+      "amount": 3019,
       "nights": 15
     }
   ],
@@ -933,6 +933,24 @@
       "badge": "bronze"
     },
     {
+      "name": "Eva",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 24.0,
+      "may": 0.0,
+      "jun": 25.0,
+      "jul": 0.0,
+      "aug": 0.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 49.0,
+      "rank": 51,
+      "badge": "bronze"
+    },
+    {
       "name": "Shae",
       "jan": 0.0,
       "feb": 0.0,
@@ -947,7 +965,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 46.0,
-      "rank": 51,
+      "rank": 52,
       "badge": "bronze"
     },
     {
@@ -965,24 +983,6 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 45.0,
-      "rank": 52,
-      "badge": "bronze"
-    },
-    {
-      "name": "Eva",
-      "jan": 0.0,
-      "feb": 0.0,
-      "mar": 0.0,
-      "apr": 24.0,
-      "may": 0.0,
-      "jun": 20.0,
-      "jul": 0.0,
-      "aug": 0.0,
-      "sep": 0.0,
-      "oct": 0.0,
-      "nov": 0.0,
-      "dec": 0.0,
-      "total": 44.0,
       "rank": 53,
       "badge": "bronze"
     },
@@ -5361,7 +5361,7 @@
       },
       {
         "date": "Sat Jun 27",
-        "total": 80,
+        "total": 85,
         "partial": true,
         "dancers": [
           {
@@ -5371,6 +5371,10 @@
           {
             "name": "Customers",
             "amount": 40
+          },
+          {
+            "name": "Eva",
+            "amount": 5
           }
         ]
       }
@@ -6178,6 +6182,22 @@
       "total": 49.0
     },
     {
+      "name": "Eva",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 24.0,
+      "may": 0.0,
+      "jun": 25.0,
+      "jul": 0.0,
+      "aug": 0.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 49.0
+    },
+    {
       "name": "Shae",
       "jan": 0.0,
       "feb": 0.0,
@@ -6208,22 +6228,6 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 45.0
-    },
-    {
-      "name": "Eva",
-      "jan": 0.0,
-      "feb": 0.0,
-      "mar": 0.0,
-      "apr": 24.0,
-      "may": 0.0,
-      "jun": 20.0,
-      "jul": 0.0,
-      "aug": 0.0,
-      "sep": 0.0,
-      "oct": 0.0,
-      "nov": 0.0,
-      "dec": 0.0,
-      "total": 44.0
     },
     {
       "name": "Gemini",
@@ -6707,5 +6711,5 @@
     }
   ],
   "customerTips": [],
-  "last_updated": "2026-06-28T03:40:43.569662+00:00"
+  "last_updated": "2026-06-28T03:55:23.044679+00:00"
 }
