@@ -27,8 +27,8 @@
     },
     {
       "month": "June",
-      "amount": 2934,
-      "nights": 14
+      "amount": 2974,
+      "nights": 15
     }
   ],
   "topTippers": [
@@ -111,14 +111,14 @@
       "mar": 87.0,
       "apr": 46.0,
       "may": 100.0,
-      "jun": 95.0,
+      "jun": 135.0,
       "jul": 0.0,
       "aug": 0.0,
       "sep": 0.0,
       "oct": 0.0,
       "nov": 0.0,
       "dec": 0.0,
-      "total": 443.0,
+      "total": 483.0,
       "rank": 5,
       "badge": "silver"
     },
@@ -5358,6 +5358,17 @@
             "amount": 10
           }
         ]
+      },
+      {
+        "date": "Sat Jun 27",
+        "total": 40,
+        "partial": true,
+        "dancers": [
+          {
+            "name": "Allie",
+            "amount": 40
+          }
+        ]
       }
     ]
   },
@@ -5433,14 +5444,14 @@
       "mar": 87.0,
       "apr": 46.0,
       "may": 100.0,
-      "jun": 95.0,
+      "jun": 135.0,
       "jul": 0.0,
       "aug": 0.0,
       "sep": 0.0,
       "oct": 0.0,
       "nov": 0.0,
       "dec": 0.0,
-      "total": 443.0
+      "total": 483.0
     },
     {
       "name": "Genesis",
@@ -6692,5 +6703,5 @@
     }
   ],
   "customerTips": [],
-  "last_updated": "2026-06-27"
+  "last_updated": "2026-06-28T01:43:53.138861+00:00"
 }
