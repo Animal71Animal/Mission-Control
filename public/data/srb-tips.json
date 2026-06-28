@@ -27,7 +27,7 @@
     },
     {
       "month": "June",
-      "amount": 3175,
+      "amount": 3232,
       "nights": 15
     }
   ],
@@ -69,6 +69,24 @@
       "badge": "gold"
     },
     {
+      "name": "Suki",
+      "jan": 200.0,
+      "feb": 60.0,
+      "mar": 0.0,
+      "apr": 86.0,
+      "may": 150.0,
+      "jun": 75.0,
+      "jul": 0.0,
+      "aug": 0.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 571.0,
+      "rank": 3,
+      "badge": "silver"
+    },
+    {
       "name": "Kendall",
       "jan": 20.0,
       "feb": 15.0,
@@ -83,24 +101,6 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 545.0,
-      "rank": 3,
-      "badge": "silver"
-    },
-    {
-      "name": "Suki",
-      "jan": 200.0,
-      "feb": 60.0,
-      "mar": 0.0,
-      "apr": 86.0,
-      "may": 150.0,
-      "jun": 45.0,
-      "jul": 0.0,
-      "aug": 0.0,
-      "sep": 0.0,
-      "oct": 0.0,
-      "nov": 0.0,
-      "dec": 0.0,
-      "total": 541.0,
       "rank": 4,
       "badge": "silver"
     },
@@ -447,6 +447,24 @@
       "badge": "bronze"
     },
     {
+      "name": "Shiiva",
+      "jan": 3.0,
+      "feb": 10.0,
+      "mar": 20.0,
+      "apr": 0.0,
+      "may": 10.0,
+      "jun": 135.0,
+      "jul": 0.0,
+      "aug": 0.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 178.0,
+      "rank": 24,
+      "badge": "bronze"
+    },
+    {
       "name": "Shelby",
       "jan": 25.0,
       "feb": 5.0,
@@ -461,24 +479,6 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 175.0,
-      "rank": 24,
-      "badge": "bronze"
-    },
-    {
-      "name": "Shiiva",
-      "jan": 3.0,
-      "feb": 10.0,
-      "mar": 20.0,
-      "apr": 0.0,
-      "may": 10.0,
-      "jun": 123.0,
-      "jul": 0.0,
-      "aug": 0.0,
-      "sep": 0.0,
-      "oct": 0.0,
-      "nov": 0.0,
-      "dec": 0.0,
-      "total": 166.0,
       "rank": 25,
       "badge": "bronze"
     },
@@ -507,14 +507,14 @@
       "mar": 30.0,
       "apr": 40.0,
       "may": 20.0,
-      "jun": 35.0,
+      "jun": 45.0,
       "jul": 0.0,
       "aug": 0.0,
       "sep": 0.0,
       "oct": 0.0,
       "nov": 0.0,
       "dec": 0.0,
-      "total": 145.0,
+      "total": 155.0,
       "rank": 27,
       "badge": "bronze"
     },
@@ -807,6 +807,24 @@
       "badge": "bronze"
     },
     {
+      "name": "Jamira",
+      "jan": 0.0,
+      "feb": 5.0,
+      "mar": 10.0,
+      "apr": 0.0,
+      "may": 15.0,
+      "jun": 45.0,
+      "jul": 0.0,
+      "aug": 0.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 75.0,
+      "rank": 44,
+      "badge": "bronze"
+    },
+    {
       "name": "Baby",
       "jan": 34.0,
       "feb": 5.0,
@@ -821,24 +839,6 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 72.0,
-      "rank": 44,
-      "badge": "bronze"
-    },
-    {
-      "name": "Jamira",
-      "jan": 0.0,
-      "feb": 5.0,
-      "mar": 10.0,
-      "apr": 0.0,
-      "may": 15.0,
-      "jun": 40.0,
-      "jul": 0.0,
-      "aug": 0.0,
-      "sep": 0.0,
-      "oct": 0.0,
-      "nov": 0.0,
-      "dec": 0.0,
-      "total": 70.0,
       "rank": 45,
       "badge": "bronze"
     },
@@ -5379,7 +5379,7 @@
       },
       {
         "date": "Sat Jun 27",
-        "total": 241,
+        "total": 298,
         "dancers": [
           {
             "name": "Allie",
@@ -5420,6 +5420,22 @@
           {
             "name": "Nala",
             "amount": 40
+          },
+          {
+            "name": "Shiiva",
+            "amount": 12
+          },
+          {
+            "name": "Jamira",
+            "amount": 5
+          },
+          {
+            "name": "Suki",
+            "amount": 30
+          },
+          {
+            "name": "Macy",
+            "amount": 10
           }
         ]
       }
@@ -5459,6 +5475,22 @@
       "total": 740.0
     },
     {
+      "name": "Suki",
+      "jan": 200.0,
+      "feb": 60.0,
+      "mar": 0.0,
+      "apr": 86.0,
+      "may": 150.0,
+      "jun": 75.0,
+      "jul": 0.0,
+      "aug": 0.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 571.0
+    },
+    {
       "name": "Kendall",
       "jan": 20.0,
       "feb": 15.0,
@@ -5473,22 +5505,6 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 545.0
-    },
-    {
-      "name": "Suki",
-      "jan": 200.0,
-      "feb": 60.0,
-      "mar": 0.0,
-      "apr": 86.0,
-      "may": 150.0,
-      "jun": 45.0,
-      "jul": 0.0,
-      "aug": 0.0,
-      "sep": 0.0,
-      "oct": 0.0,
-      "nov": 0.0,
-      "dec": 0.0,
-      "total": 541.0
     },
     {
       "name": "Allie",
@@ -5795,6 +5811,22 @@
       "total": 180.0
     },
     {
+      "name": "Shiiva",
+      "jan": 3.0,
+      "feb": 10.0,
+      "mar": 20.0,
+      "apr": 0.0,
+      "may": 10.0,
+      "jun": 135.0,
+      "jul": 0.0,
+      "aug": 0.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 178.0
+    },
+    {
       "name": "Shelby",
       "jan": 25.0,
       "feb": 5.0,
@@ -5809,22 +5841,6 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 175.0
-    },
-    {
-      "name": "Shiiva",
-      "jan": 3.0,
-      "feb": 10.0,
-      "mar": 20.0,
-      "apr": 0.0,
-      "may": 10.0,
-      "jun": 123.0,
-      "jul": 0.0,
-      "aug": 0.0,
-      "sep": 0.0,
-      "oct": 0.0,
-      "nov": 0.0,
-      "dec": 0.0,
-      "total": 166.0
     },
     {
       "name": "Giovanna",
@@ -5849,14 +5865,14 @@
       "mar": 30.0,
       "apr": 40.0,
       "may": 20.0,
-      "jun": 35.0,
+      "jun": 45.0,
       "jul": 0.0,
       "aug": 0.0,
       "sep": 0.0,
       "oct": 0.0,
       "nov": 0.0,
       "dec": 0.0,
-      "total": 145.0
+      "total": 155.0
     },
     {
       "name": "Quinn",
@@ -6115,6 +6131,22 @@
       "total": 85.0
     },
     {
+      "name": "Jamira",
+      "jan": 0.0,
+      "feb": 5.0,
+      "mar": 10.0,
+      "apr": 0.0,
+      "may": 15.0,
+      "jun": 45.0,
+      "jul": 0.0,
+      "aug": 0.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 75.0
+    },
+    {
       "name": "Baby",
       "jan": 34.0,
       "feb": 5.0,
@@ -6129,22 +6161,6 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 72.0
-    },
-    {
-      "name": "Jamira",
-      "jan": 0.0,
-      "feb": 5.0,
-      "mar": 10.0,
-      "apr": 0.0,
-      "may": 15.0,
-      "jun": 40.0,
-      "jul": 0.0,
-      "aug": 0.0,
-      "sep": 0.0,
-      "oct": 0.0,
-      "nov": 0.0,
-      "dec": 0.0,
-      "total": 70.0
     },
     {
       "name": "Roxie",
@@ -6772,5 +6788,5 @@
     }
   ],
   "customerTips": [],
-  "last_updated": "2026-06-28T08:58:59Z"
+  "last_updated": "2026-06-28T09:19:15Z"
 }
