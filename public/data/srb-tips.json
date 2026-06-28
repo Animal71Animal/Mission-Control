@@ -27,7 +27,7 @@
     },
     {
       "month": "June",
-      "amount": 2974,
+      "amount": 2994,
       "nights": 15
     }
   ],
@@ -39,14 +39,14 @@
       "mar": 154.0,
       "apr": 68.0,
       "may": 541.0,
-      "jun": 216.0,
+      "jun": 236.0,
       "jul": 0.0,
       "aug": 0.0,
       "sep": 0.0,
       "oct": 0.0,
       "nov": 0.0,
       "dec": 0.0,
-      "total": 1481.0,
+      "total": 1501.0,
       "rank": 1,
       "badge": "gold"
     },
@@ -5361,12 +5361,16 @@
       },
       {
         "date": "Sat Jun 27",
-        "total": 40,
+        "total": 60,
         "partial": true,
         "dancers": [
           {
             "name": "Allie",
             "amount": 40
+          },
+          {
+            "name": "Customers",
+            "amount": 20
           }
         ]
       }
@@ -5380,14 +5384,14 @@
       "mar": 154.0,
       "apr": 68.0,
       "may": 541.0,
-      "jun": 216.0,
+      "jun": 236.0,
       "jul": 0.0,
       "aug": 0.0,
       "sep": 0.0,
       "oct": 0.0,
       "nov": 0.0,
       "dec": 0.0,
-      "total": 1481.0
+      "total": 1501.0
     },
     {
       "name": "Hunter",
@@ -6703,5 +6707,5 @@
     }
   ],
   "customerTips": [],
-  "last_updated": "2026-06-28T01:43:53.138861+00:00"
+  "last_updated": "2026-06-28T03:26:26.870540+00:00"
 }
