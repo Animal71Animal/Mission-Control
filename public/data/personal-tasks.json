@@ -111,7 +111,7 @@
   {
     "id": "T11",
     "title": "Fix Google Drive integration (GOG malfunction?)",
-    "notes": "Google Drive tab not working — GOG auth issue suspected.",
+    "notes": "Google Drive tab not working \u2014 GOG auth issue suspected.",
     "category": "WLP",
     "priority": "low",
     "due_date": null,
@@ -228,6 +228,17 @@
     "due_date": null,
     "completed": false,
     "created_at": "2026-06-29T01:07:00Z",
+    "completed_at": null
+  },
+  {
+    "id": "pt-1782695468148-t005",
+    "title": "Put together rest of Amity show",
+    "notes": null,
+    "category": "Work",
+    "priority": "high",
+    "due_date": null,
+    "completed": false,
+    "created_at": "2026-06-29T01:15:00Z",
     "completed_at": null
   }
 ]
