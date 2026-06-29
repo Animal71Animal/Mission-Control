@@ -111,7 +111,7 @@
   {
     "id": "T11",
     "title": "Fix Google Drive integration (GOG malfunction?)",
-    "notes": "Google Drive tab not working — GOG auth issue suspected.",
+    "notes": "Google Drive tab not working \u2014 GOG auth issue suspected.",
     "category": "WLP",
     "priority": "low",
     "due_date": null,
@@ -196,5 +196,49 @@
     "completed": true,
     "created_at": "2026-05-31T19:12:11.648Z",
     "completed_at": "2026-05-31T22:32:10.166Z"
+  },
+  {
+    "id": "pt-1782695260990-t001",
+    "title": "Drop off cable equipment",
+    "notes": null,
+    "category": "Personal",
+    "priority": "medium",
+    "due_date": null,
+    "completed": false,
+    "created_at": "2026-06-29T01:07:00Z",
+    "completed_at": null
+  },
+  {
+    "id": "pt-1782695260991-t002",
+    "title": "Finish showtime videos",
+    "notes": null,
+    "category": "Work",
+    "priority": "high",
+    "due_date": null,
+    "completed": false,
+    "created_at": "2026-06-29T01:07:00Z",
+    "completed_at": null
+  },
+  {
+    "id": "pt-1782695260992-t003",
+    "title": "Continue with debt resolution",
+    "notes": null,
+    "category": "Finance",
+    "priority": "high",
+    "due_date": null,
+    "completed": false,
+    "created_at": "2026-06-29T01:07:00Z",
+    "completed_at": null
+  },
+  {
+    "id": "pt-1782695260993-t004",
+    "title": "Transfer all data to new HD, set the other up as Time Machine",
+    "notes": null,
+    "category": "Personal",
+    "priority": "medium",
+    "due_date": null,
+    "completed": false,
+    "created_at": "2026-06-29T01:07:00Z",
+    "completed_at": null
   }
 ]
