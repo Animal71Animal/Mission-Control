@@ -111,7 +111,7 @@
   {
     "id": "T11",
     "title": "Fix Google Drive integration (GOG malfunction?)",
-    "notes": "Google Drive tab not working \u2014 GOG auth issue suspected.",
+    "notes": "Google Drive tab not working — GOG auth issue suspected.",
     "category": "WLP",
     "priority": "low",
     "due_date": null,
@@ -147,8 +147,8 @@
     "title": "Music Streaming Site?",
     "notes": "Build my own site for streaming mixsets",
     "category": "Personal",
-    "priority": "high",
-    "due_date": null,
+    "priority": "low",
+    "due_date": "2026-06-28",
     "completed": false,
     "created_at": "2026-05-30T06:00:21.874Z",
     "completed_at": null
