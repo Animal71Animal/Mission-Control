@@ -165,17 +165,6 @@
     "completed_at": "2026-05-31T22:32:13.326Z"
   },
   {
-    "id": "pt-1780253210809-4yu0y",
-    "title": "Buy sharps",
-    "notes": null,
-    "category": "Personal",
-    "priority": "medium",
-    "due_date": null,
-    "completed": false,
-    "created_at": "2026-05-31T18:46:50.809Z",
-    "completed_at": null
-  },
-  {
     "id": "pt-1780253220036-7h391",
     "title": "Order Peptides",
     "notes": null,
