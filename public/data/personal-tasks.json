@@ -191,7 +191,7 @@
     "title": "Drop off cable equipment",
     "notes": null,
     "category": "Personal",
-    "priority": "medium",
+    "priority": "high",
     "due_date": null,
     "completed": false,
     "created_at": "2026-06-29T01:07:00Z",
