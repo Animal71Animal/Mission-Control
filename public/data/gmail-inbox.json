@@ -1,21 +1,8 @@
 {
   "fetchedAt": "2026-06-30T18:04:29.568098+00:00",
-  "count": 25,
-  "unreadCount": 25,
+  "count": 24,
+  "unreadCount": 24,
   "messages": [
-    {
-      "id": "19f19b29a01a63eb",
-      "threadId": "19f19b29a01a63eb",
-      "from": "The Information <hello@theinformation.com>",
-      "subject": "Kalshi’s IPO talks, OpenAI’s cash burn and the next public debuts",
-      "date": "Tue, 30 Jun 2026 18:02:39 +0000",
-      "snippet": "Subscribe now for $749 and save 25% on the first year ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
-      "unread": true,
-      "fetchedAt": "2026-06-30T18:04:20.733653+00:00",
-      "category": "newsletter",
-      "categoryReason": "Promotional subscription offer from The Information; informational newsletter-style content.",
-      "actionable": false
-    },
     {
       "id": "19f19a2f4864364d",
       "threadId": "19f19a2f4864364d",
@@ -27,7 +14,9 @@
       "fetchedAt": "2026-06-30T18:04:20.836975+00:00",
       "category": "newsletter",
       "categoryReason": "Substack live video announcement; info-only notification about content.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f199f9537ea25f",
@@ -40,7 +29,9 @@
       "fetchedAt": "2026-06-30T18:04:20.964887+00:00",
       "category": "spam",
       "categoryReason": "Marketing/promotion for car insurance discounts from CAR SHIELD with suspicious sender domain.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f199c04227aa3e",
@@ -53,7 +44,9 @@
       "fetchedAt": "2026-06-30T18:04:21.081896+00:00",
       "category": "newsletter",
       "categoryReason": "Substack live video announcement; info-only notification about content.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f196cd49d9c6bf",
@@ -66,7 +59,9 @@
       "fetchedAt": "2026-06-30T18:04:21.195655+00:00",
       "category": "newsletter",
       "categoryReason": "Techpresso roundup/newsletter about AI topics; no direct request for action.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f19609add3b15b",
@@ -79,7 +74,9 @@
       "fetchedAt": "2026-06-30T18:04:21.291192+00:00",
       "category": "spam",
       "categoryReason": "Travel deal promotion email; unsolicited marketing.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f195b3af75125c",
@@ -92,7 +89,9 @@
       "fetchedAt": "2026-06-30T18:04:21.414853+00:00",
       "category": "spam",
       "categoryReason": "Canva product/feature promotional email; no direct action for DJ/label.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f1957586d3bad1",
@@ -105,7 +104,9 @@
       "fetchedAt": "2026-06-30T18:04:21.514545+00:00",
       "category": "newsletter",
       "categoryReason": "Beehiiv AI round-up newsletter; informational digest.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f19536b3cd61f5",
@@ -118,7 +119,9 @@
       "fetchedAt": "2026-06-30T18:04:21.658513+00:00",
       "category": "newsletter",
       "categoryReason": "Beehiiv creator/agency article newsletter; informational only.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f194a489691551",
@@ -131,7 +134,9 @@
       "fetchedAt": "2026-06-30T18:04:21.766112+00:00",
       "category": "newsletter",
       "categoryReason": "Beehiiv-style reading list email; content digest, not a request.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f193fba602af87",
@@ -144,7 +149,9 @@
       "fetchedAt": "2026-06-30T18:04:21.878111+00:00",
       "category": "spam",
       "categoryReason": "GetFPV promotional/sales email about batteries and restocks; unsolicited marketing.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f193c144fad97d",
@@ -157,7 +164,9 @@
       "fetchedAt": "2026-06-30T18:04:21.996356+00:00",
       "category": "spam",
       "categoryReason": "Return-address/automated car-shield style discounts message; likely spam/marketing.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f192286e779ea4",
@@ -170,7 +179,9 @@
       "fetchedAt": "2026-06-30T18:04:22.126559+00:00",
       "category": "newsletter",
       "categoryReason": "The Information subscription offer with business/AI stories; newsletter-style informational content.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f1918b4ba1b1b5",
@@ -183,7 +194,9 @@
       "fetchedAt": "2026-06-30T18:04:22.254985+00:00",
       "category": "spam",
       "categoryReason": "Particle For Men limited-time savings promotional email.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f190ffcd325c48",
@@ -196,7 +209,9 @@
       "fetchedAt": "2026-06-30T18:04:22.364577+00:00",
       "category": "newsletter",
       "categoryReason": "Mindstream AI newsletter with question prompt; informational updates.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f1907db16734f7",
@@ -209,7 +224,9 @@
       "fetchedAt": "2026-06-30T18:04:22.475810+00:00",
       "category": "newsletter",
       "categoryReason": "Beehiiv AI Business Insights newsletter; informational only.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f19070f0de6d9d",
@@ -222,7 +239,9 @@
       "fetchedAt": "2026-06-30T18:04:22.579991+00:00",
       "category": "spam",
       "categoryReason": "MasterClass Certificates marketing email; promotional.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f18fdca9d7a1f2",
@@ -235,7 +254,9 @@
       "fetchedAt": "2026-06-30T18:04:22.698319+00:00",
       "category": "personal",
       "categoryReason": "Naseem Eissa Boise real estate update; not clearly work/label/payment/dj, appears personal/local newsletter.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f18f22ce7719f1",
@@ -248,7 +269,9 @@
       "fetchedAt": "2026-06-30T18:04:22.819636+00:00",
       "category": "spam",
       "categoryReason": "Adobe Acrobat Pro promotional/security feature email; marketing.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f18dc9f285720f",
@@ -261,7 +284,9 @@
       "fetchedAt": "2026-06-30T18:04:22.940273+00:00",
       "category": "newsletter",
       "categoryReason": "Washington Post subscription sale offer; informational/newsletter marketing.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f18db2b6e52a84",
@@ -274,7 +299,9 @@
       "fetchedAt": "2026-06-30T18:04:23.044540+00:00",
       "category": "newsletter",
       "categoryReason": "The Information AI Agenda update; informational newsletter-style.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f18c142683f0e9",
@@ -287,7 +314,9 @@
       "fetchedAt": "2026-06-30T18:04:23.143328+00:00",
       "category": "newsletter",
       "categoryReason": "The Information business/tech article notification with subscription offer; informational.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f18bdf23f49a6b",
@@ -300,7 +329,9 @@
       "fetchedAt": "2026-06-30T18:04:23.257796+00:00",
       "category": "newsletter",
       "categoryReason": "SiriusXM announcement to participate/request songs; notification/promo rather than scheduling DJ/payment.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f18b53aae8a670",
@@ -313,7 +344,9 @@
       "fetchedAt": "2026-06-30T18:04:23.368830+00:00",
       "category": "newsletter",
       "categoryReason": "Skool notification about new video; informational alert.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f18a29d62033eb",
@@ -326,7 +359,9 @@
       "fetchedAt": "2026-06-30T18:04:23.496539+00:00",
       "category": "spam",
       "categoryReason": "Found GLP-1 care pricing promotion; unsolicited lead-gen/marketing.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     }
   ]
 }
