@@ -1,9 +1,138 @@
 {
+<<<<<<< Updated upstream
   "fetchedAt": "2026-06-30T18:04:29.568098+00:00",
   "count": 24,
   "unreadCount": 24,
   "messages": [
     {
+=======
+  "fetchedAt": "2026-06-30T19:04:34.785208+00:00",
+  "count": 25,
+  "unreadCount": 25,
+  "messages": [
+    {
+      "id": "19f19dd8d96dd6b2",
+      "threadId": "19f19dd8d96dd6b2",
+      "from": "Universal Studios Hollywood <email@email.universalstudioshollywood.com>",
+      "subject": "Hellraiser’s Tormenting Terror is Coming",
+      "date": "Tue, 30 Jun 2026 11:43:19 -0600",
+      "snippet": "Eternity awaits. Tickets and packages are on sale now. View Online Universal Studios Hollywood Halloween Horror Nights An illustration of Pinhead from “HELLRAISER” with a gold puzzle box, chains and",
+      "unread": true,
+      "fetchedAt": "2026-06-30T19:04:23.696461+00:00",
+      "category": "spam",
+      "categoryReason": "Promotional ticket/package marketing from Universal Studios; not related to your work and typically auto-generated.",
+      "actionable": false
+    },
+    {
+      "id": "19f19d893ad5ce2c",
+      "threadId": "19f19d893ad5ce2c",
+      "from": "Marty Schwartz <marty-schwartz@c.kajabimail.net>",
+      "subject": "Headliner Announcement for the Mountain Retreat",
+      "date": "Tue, 30 Jun 2026 18:44:10 +0000",
+      "snippet": "Pickless blues meets sacred steel this August... ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
+      "unread": true,
+      "fetchedAt": "2026-06-30T19:04:23.795659+00:00",
+      "category": "newsletter",
+      "categoryReason": "Looks like an event/artist announcement newsletter (“Headliner Announcement…”); informational and no clear request from a venue.",
+      "actionable": false
+    },
+    {
+      "id": "19f19d5a05c02e6f",
+      "threadId": "19f19d5a05c02e6f",
+      "from": "InDebted <customersupport-us@indebted.co>",
+      "subject": "Let’s revisit this, Eric",
+      "date": "Tue, 30 Jun 2026 18:40:57 +0000 (UTC)",
+      "snippet": "Your Klarna balance needs action now We&#39;re here to help you resolve this We&#39;re working with Klarna to help you resolve your outstanding account. Hi Eric, You&#39;re receiving this message",
+      "unread": true,
+      "fetchedAt": "2026-06-30T19:04:23.922722+00:00",
+      "category": "payment",
+      "categoryReason": "Klarna balance resolution/payment assistance message referencing an outstanding account and asking for action.",
+      "actionable": true,
+      "actionExtracted": false
+    },
+    {
+      "id": "19f19d117b3c365f",
+      "threadId": "19f19d117b3c365f",
+      "from": "Thumbtack <do-not-reply@customer.thumbtack.com>",
+      "subject": "Get your home celebration-ready ✨",
+      "date": "Tue, 30 Jun 2026 18:35:59 +0000 (UTC)",
+      "snippet": "Prep for an epic 4th of July party. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
+      "unread": true,
+      "fetchedAt": "2026-06-30T19:04:24.019550+00:00",
+      "category": "spam",
+      "categoryReason": "Promotional coupon-style message for a 4th of July celebration from Thumbtack (marketing, not a direct business request).",
+      "actionable": false
+    },
+    {
+      "id": "19f19ca475267db5",
+      "threadId": "19f19ca475267db5",
+      "from": "Abbie Auer <abbie.auer@cashlantic.com>",
+      "subject": "Next steps to confirm your info",
+      "date": "Tue, 30 Jun 2026 18:28:34 +0000",
+      "snippet": "You are Ready to Continue Hi there, Thanks for your application. Our team has finished review of your application and would like to let you know that your account is live. Log on to your account and",
+      "unread": true,
+      "fetchedAt": "2026-06-30T19:04:24.118186+00:00",
+      "category": "payment",
+      "categoryReason": "Application/application-review follow-up asking you to confirm next steps and log into an account (could require action).",
+      "actionable": true,
+      "actionExtracted": false
+    },
+    {
+      "id": "19f19ca1c2c4bba7",
+      "threadId": "19f19ca1c2c4bba7",
+      "from": "Capital One <capitalone@notification.capitalone.com>",
+      "subject": "Did you sign in from a new device?",
+      "date": "Tue, 30 Jun 2026 18:28:23 +0000",
+      "snippet": "Help us protect your account. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
+      "unread": true,
+      "fetchedAt": "2026-06-30T19:04:24.233690+00:00",
+      "category": "spam",
+      "categoryReason": "Capital One security alert about signing in from a new device; may require you to verify—high importance though likely automated.",
+      "actionable": true,
+      "actionExtracted": false
+    },
+    {
+      "id": "19f19c92cb55cac1",
+      "threadId": "19f19c92cb55cac1",
+      "from": "Capital One <capitalone@notification.capitalone.com>",
+      "subject": "Your new device is registered for mobile app verification",
+      "date": "Tue, 30 Jun 2026 18:27:21 +0000",
+      "snippet": "Here&#39;s why that&#39;s important. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
+      "unread": true,
+      "fetchedAt": "2026-06-30T19:04:24.347481+00:00",
+      "category": "spam",
+      "categoryReason": "Capital One alert about new device registration for mobile app verification; likely requires confirmation.",
+      "actionable": true,
+      "actionExtracted": false
+    },
+    {
+      "id": "19f19c8a0c640b60",
+      "threadId": "19f19c8a0c640b60",
+      "from": "SpareRoom <news@spareroom.com>",
+      "subject": "New roommate hotspots",
+      "date": "Tue, 30 Jun 2026 16:59:10 +0000 (UTC)",
+      "snippet": "Where renters are heading ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
+      "unread": true,
+      "fetchedAt": "2026-06-30T19:04:24.440770+00:00",
+      "category": "newsletter",
+      "categoryReason": "Rental/roommate market content (“New roommate hotspots”) appears to be informational marketing/newsletter.",
+      "actionable": false
+    },
+    {
+      "id": "19f19c72c0384557",
+      "threadId": "19f19c72c0384557",
+      "from": "Applied AI <hello@theinformation.com>",
+      "subject": "Exclusive: Anthropic Preps Claude Agent in Microsoft Teams",
+      "date": "Tue, 30 Jun 2026 18:25:10 +0000 (UTC)",
+      "snippet": "Salesforce and Microsoft may be worried about threats posed by AI upstarts like Anthropic to their core enterprise apps, but they&#39;re taking a conciliatory approach. Even though the two incumbents",
+      "unread": true,
+      "fetchedAt": "2026-06-30T19:04:24.553784+00:00",
+      "category": "label-business",
+      "categoryReason": "AI/agent industry news (Anthropic/C​​laude, Microsoft Teams) from an AI publication; not a direct label/royalty request.",
+      "actionable": false
+    },
+    {
+>>>>>>> Stashed changes
       "id": "19f19a2f4864364d",
       "threadId": "19f19a2f4864364d",
       "from": "Substack <no-reply@substack.com>",
@@ -11,8 +140,9 @@
       "date": "Tue, 30 Jun 2026 17:45:37 +0000",
       "snippet": "Legal AF is live on Substack now: &quot;PopokPop Up: Supreme Court Holy S Edition&quot; ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-06-30T18:04:20.836975+00:00",
+      "fetchedAt": "2026-06-30T19:04:24.664468+00:00",
       "category": "newsletter",
+<<<<<<< Updated upstream
       "categoryReason": "Substack live video announcement; info-only notification about content.",
       "actionable": false,
       "starred": false,
@@ -32,6 +162,10 @@
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Substack live video notification; info-only broadcast without a business/payout request.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19f199c04227aa3e",
@@ -41,12 +175,17 @@
       "date": "Tue, 30 Jun 2026 17:38:01 +0000",
       "snippet": "Steve Vladeck is live with Jessica Yellin on Substack now: &quot;Breaking News: Supreme Court Term, Breakdown With Steve Vladeck &quot; ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-06-30T18:04:21.081896+00:00",
+      "fetchedAt": "2026-06-30T19:04:24.777079+00:00",
       "category": "newsletter",
+<<<<<<< Updated upstream
       "categoryReason": "Substack live video announcement; info-only notification about content.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Substack live video notification; informational update with no direct action for Eric.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19f196cd49d9c6bf",
@@ -56,12 +195,17 @@
       "date": "Tue, 30 Jun 2026 16:46:11 +0000 (UTC)",
       "snippet": "China&#39;s homegrown AI chips, Meta&#39;s mind-reading text, and more. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-06-30T18:04:21.195655+00:00",
+      "fetchedAt": "2026-06-30T19:04:24.906840+00:00",
       "category": "newsletter",
+<<<<<<< Updated upstream
       "categoryReason": "Techpresso roundup/newsletter about AI topics; no direct request for action.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Tech/AI news roundup from Techpresso; appears as a digest (no direct request).",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19f19609add3b15b",
@@ -71,12 +215,17 @@
       "date": "Tue, 30 Jun 2026 16:33:08 +0000 (UTC)",
       "snippet": "For a limited time only, enjoy $300 off per person on all escorted tours and river cruises.͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌",
       "unread": true,
-      "fetchedAt": "2026-06-30T18:04:21.291192+00:00",
+      "fetchedAt": "2026-06-30T19:04:25.019735+00:00",
       "category": "spam",
+<<<<<<< Updated upstream
       "categoryReason": "Travel deal promotion email; unsolicited marketing.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Travel discount promotion from KAYAK/Gate 1; promotional/marketing content.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19f195b3af75125c",
@@ -86,12 +235,17 @@
       "date": "Tue, 30 Jun 2026 16:27:15 +0000 (UTC)",
       "snippet": "Start creating faster with a template ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏",
       "unread": true,
-      "fetchedAt": "2026-06-30T18:04:21.414853+00:00",
+      "fetchedAt": "2026-06-30T19:04:25.132897+00:00",
       "category": "spam",
+<<<<<<< Updated upstream
       "categoryReason": "Canva product/feature promotional email; no direct action for DJ/label.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Canva product marketing email about starting designs faster; promotional.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19f1957586d3bad1",
@@ -101,12 +255,17 @@
       "date": "Tue, 30 Jun 2026 16:23:02 +0000",
       "snippet": "Open for the top AI breakthroughs, launches, tools, &amp; happenings of the month ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-06-30T18:04:21.514545+00:00",
+      "fetchedAt": "2026-06-30T19:04:25.267061+00:00",
       "category": "newsletter",
+<<<<<<< Updated upstream
       "categoryReason": "Beehiiv AI round-up newsletter; informational digest.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Beehiiv “June AI Round Up” digest; informational newsletter.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19f19536b3cd61f5",
@@ -116,12 +275,17 @@
       "date": "Tue, 30 Jun 2026 16:13:17 +0000",
       "snippet": "Plus, a few notes on landing and retaining B2B brand deals at tech companies like Anthropic, Lovable, and Notion. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-06-30T18:04:21.658513+00:00",
+      "fetchedAt": "2026-06-30T19:04:25.387631+00:00",
       "category": "newsletter",
+<<<<<<< Updated upstream
       "categoryReason": "Beehiiv creator/agency article newsletter; informational only.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Beehiiv newsletter about building a B2B creator agency; info-only.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19f194a489691551",
@@ -131,12 +295,17 @@
       "date": "Tue, 30 Jun 2026 16:04:11 +0000",
       "snippet": "Great books give you superpowers ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-06-30T18:04:21.766112+00:00",
+      "fetchedAt": "2026-06-30T19:04:25.504120+00:00",
       "category": "newsletter",
+<<<<<<< Updated upstream
       "categoryReason": "Beehiiv-style reading list email; content digest, not a request.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Beehiiv-style content (“A spy’s secret reading list”) appears as an informational newsletter.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19f193fba602af87",
@@ -146,12 +315,17 @@
       "date": "Tue, 30 Jun 2026 15:57:13 +0000 (UTC)",
       "snippet": "Meet the new Lumenier NAV 21700 Li-Ion batteries, plus fresh DJI restocks and Summer Sale savings. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-06-30T18:04:21.878111+00:00",
+      "fetchedAt": "2026-06-30T19:04:25.602246+00:00",
       "category": "spam",
+<<<<<<< Updated upstream
       "categoryReason": "GetFPV promotional/sales email about batteries and restocks; unsolicited marketing.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "GetFPV promotion about flight time/batteries/restocks and sale; marketing.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19f193c144fad97d",
@@ -161,12 +335,17 @@
       "date": "Tue, 30 Jun 2026 11:33:38 -0400 (EDT)",
       "snippet": "🚨 Exclusive Auto Coverage Savings for you! ✨&lt;",
       "unread": true,
-      "fetchedAt": "2026-06-30T18:04:21.996356+00:00",
+      "fetchedAt": "2026-06-30T19:04:25.693378+00:00",
       "category": "spam",
+<<<<<<< Updated upstream
       "categoryReason": "Return-address/automated car-shield style discounts message; likely spam/marketing.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Auto coverage/discount eligibility promotion (“CAR SHIELD SAVINGS…”); likely unsolicited marketing.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19f192286e779ea4",
@@ -176,12 +355,17 @@
       "date": "Tue, 30 Jun 2026 15:25:21 +0000",
       "snippet": "Subscribe for $299 (25% off) for the first year. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-06-30T18:04:22.126559+00:00",
+      "fetchedAt": "2026-06-30T19:04:25.790157+00:00",
       "category": "newsletter",
+<<<<<<< Updated upstream
       "categoryReason": "The Information subscription offer with business/AI stories; newsletter-style informational content.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "The Information subscription/marketing email with discount offer; informational but promotional, not a business request.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19f1918b4ba1b1b5",
@@ -191,12 +375,17 @@
       "date": "Tue, 30 Jun 2026 15:14:35 +0000 (UTC)",
       "snippet": "Limited-time savings on our entire lineup. 25% off everything this July 4th.͏ ͏ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ͏ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-06-30T18:04:22.254985+00:00",
+      "fetchedAt": "2026-06-30T19:04:25.914282+00:00",
       "category": "spam",
+<<<<<<< Updated upstream
       "categoryReason": "Particle For Men limited-time savings promotional email.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Particle For Men limited-time savings promotion; retail marketing.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19f190ffcd325c48",
@@ -206,12 +395,17 @@
       "date": "Tue, 30 Jun 2026 15:03:32 +0000 (UTC)",
       "snippet": "+ Would you let AI train on your music? ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-06-30T18:04:22.364577+00:00",
+      "fetchedAt": "2026-06-30T19:04:26.012907+00:00",
       "category": "newsletter",
+<<<<<<< Updated upstream
       "categoryReason": "Mindstream AI newsletter with question prompt; informational updates.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Mindstream news email about Chinese AI keeps getting better; reads like an info/update newsletter (no clear action).",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19f1907db16734f7",
@@ -221,12 +415,17 @@
       "date": "Tue, 30 Jun 2026 14:56:11 +0000",
       "snippet": "Stop dragging boxes in PowerPoint ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-06-30T18:04:22.475810+00:00",
+      "fetchedAt": "2026-06-30T19:04:26.117352+00:00",
       "category": "newsletter",
+<<<<<<< Updated upstream
       "categoryReason": "Beehiiv AI Business Insights newsletter; informational only.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Beehiiv-style AI Business Insights tips/email; informational.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19f19070f0de6d9d",
@@ -236,12 +435,19 @@
       "date": "Tue, 30 Jun 2026 14:55:20 +0000",
       "snippet": "From pay to scope to job title, confidently ask for more using tools honed by top dealmakers. ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌",
       "unread": true,
+<<<<<<< Updated upstream
       "fetchedAt": "2026-06-30T18:04:22.579991+00:00",
       "category": "spam",
       "categoryReason": "MasterClass Certificates marketing email; promotional.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "fetchedAt": "2026-06-30T19:04:26.216925+00:00",
+      "category": "newsletter",
+      "categoryReason": "MasterClass negotiation value email; informational course marketing.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19f18fdca9d7a1f2",
@@ -251,8 +457,9 @@
       "date": "Tue, 30 Jun 2026 14:45:12 +0000",
       "snippet": "&quot;A home should grow from the ground.&quot; -Frank Lloyd Wright. 📅 June Is Ending Here Is What It Means for the Boise Market As June comes to a close, the Boise real estate market is entering one",
       "unread": true,
-      "fetchedAt": "2026-06-30T18:04:22.698319+00:00",
+      "fetchedAt": "2026-06-30T19:04:26.334495+00:00",
       "category": "personal",
+<<<<<<< Updated upstream
       "categoryReason": "Naseem Eissa Boise real estate update; not clearly work/label/payment/dj, appears personal/local newsletter.",
       "actionable": false,
       "starred": false,
@@ -362,6 +569,10 @@
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Boise real estate market update from a local agent/business; personal/local newsletter rather than DJ/label/payment.",
+      "actionable": false
+>>>>>>> Stashed changes
     }
   ]
 }
