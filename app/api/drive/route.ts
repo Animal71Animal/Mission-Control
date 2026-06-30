@@ -36,16 +36,19 @@ export async function GET() {
     const auth = getAuth();
     const drive = google.drive({ version: "v3", auth });
 
-    // Enumerate all folders in Drive root that the service account can see.
+    // List every folder the service account can see (it may not have root-level access,
+    // only individual folder shares), then filter client-side to those with root as parent.
     // This auto-reflects any folder Eric creates/renames/deletes — no hardcoded IDs.
     const listResponse = await drive.files.list({
-      q: "'root' in parents and mimeType='application/vnd.google-apps.folder' and trashed=false",
-      fields: "files(id, name, mimeType, modifiedTime, webViewLink, shared, owners)",
-      pageSize: 100,
+      q: "mimeType='application/vnd.google-apps.folder' and trashed=false",
+      fields: "files(id, name, mimeType, modifiedTime, webViewLink, shared, owners, parents)",
+      pageSize: 1000,
       orderBy: "name",
     });
 
-    const allFiles: DriveFileData[] = (listResponse.data.files || []) as DriveFileData[];
+    const allFiles: DriveFileData[] = ((listResponse.data.files || []) as DriveFileData[]).filter(
+      (f: any) => Array.isArray(f.parents) && f.parents.includes("root")
+    );
 
     // Transform to our format
     const transformed = allFiles.map((f) => ({
