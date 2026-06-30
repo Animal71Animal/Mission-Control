@@ -36,12 +36,11 @@ export async function GET() {
     const auth = getAuth();
     const drive = google.drive({ version: "v3", auth });
 
-    // DEBUG: temporary unfiltered listing to see what SA can access
+    // DEBUG 2: just root-level folders
     const listResponse = await drive.files.list({
-      q: "trashed=false",
+      q: "'root' in parents and mimeType='application/vnd.google-apps.folder' and trashed=false",
       fields: "files(id, name, mimeType, parents, shared, owners(emailAddress,displayName))",
-      pageSize: 1000,
-      orderBy: "name",
+      pageSize: 100,
     });
 
     const allFiles: DriveFileData[] = (listResponse.data.files || []) as DriveFileData[];
@@ -58,7 +57,6 @@ export async function GET() {
       owner: f.owners?.[0]?.displayName || f.owners?.[0]?.emailAddress || "Unknown",
     }));
 
-    // DEBUG: return raw visibility for diagnosis
     return NextResponse.json({
       debugRawCount: allFiles.length,
       debugRaw: allFiles.map((f: any) => ({
