@@ -1,8 +1,60 @@
 {
-  "fetchedAt": "2026-06-30T13:04:33.102608+00:00",
+  "fetchedAt": "2026-06-30T14:04:36.665589+00:00",
   "count": 25,
-  "unreadCount": 14,
+  "unreadCount": 18,
   "messages": [
+    {
+      "id": "19f18c142683f0e9",
+      "threadId": "19f18c142683f0e9",
+      "from": "The Information <hello@theinformation.com>",
+      "subject": "New KKR Venture Hunts for Deals to Clear Data Center Logjam",
+      "date": "Tue, 30 Jun 2026 13:39:05 +0000",
+      "snippet": "Read the latest article from The Information. Subscribe today and save 25% on all of our business, tech and finance reporting. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
+      "unread": true,
+      "fetchedAt": "2026-06-30T14:04:21.645840+00:00",
+      "category": "newsletter",
+      "categoryReason": "Info-only subscription/newsletter promotional content from The Information; not asking for a specific action.",
+      "actionable": false
+    },
+    {
+      "id": "19f18bdf23f49a6b",
+      "threadId": "19f18bdf23f49a6b",
+      "from": "SiriusXM <noreply@mc.siriusxm.com>",
+      "subject": "Introducing a new way to be featured on air",
+      "date": "Tue, 30 Jun 2026 07:35:24 -0600",
+      "snippet": "Share your favorite stories, hottest takes, or request a song. View in a web browser SiriusXM Be a part of the show Send a voice message to your favorite show and be featured on the air! Find Your Show",
+      "unread": true,
+      "fetchedAt": "2026-06-30T14:04:21.757220+00:00",
+      "category": "newsletter",
+      "categoryReason": "SiriusXM feature request/announcement email; informational prompt rather than a direct booking/payment/label action.",
+      "actionable": false
+    },
+    {
+      "id": "19f18b53aae8a670",
+      "threadId": "19f18b53aae8a670",
+      "from": "\"AI Automation Society (Skool)\" <noreply@skool.com>",
+      "subject": "1 new notification since 7:21 am (Jun 29, 2026)",
+      "date": "Tue, 30 Jun 2026 13:25:57 +0000 (UTC)",
+      "snippet": "AI Automation Society skool logo 1 new notification Nate Herk (following) posted: 🚀New Video : Stanford&#39;s Method Turns Claude Into a PHD Level Research Team Stanford&#39;s STORM research method",
+      "unread": true,
+      "fetchedAt": "2026-06-30T14:04:21.853079+00:00",
+      "category": "newsletter",
+      "categoryReason": "Skool notification/update; an informational notification without asking Eric to take work-related action.",
+      "actionable": false
+    },
+    {
+      "id": "19f18a29d62033eb",
+      "threadId": "19f18a29d62033eb",
+      "from": "Found <support@mail.joinfound.com>",
+      "subject": "Get the lowest prices on expert GLP-1 care",
+      "date": "Tue, 30 Jun 2026 13:05:37 +0000 (UTC)",
+      "snippet": "Insurance or not, both paths are more affordable than most alternatives ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌",
+      "unread": true,
+      "fetchedAt": "2026-06-30T14:04:22.028633+00:00",
+      "category": "spam",
+      "categoryReason": "GLP-1 care promotional/lead-gen style email with no clear relationship to Eric’s work; looks like marketing spam.",
+      "actionable": false
+    },
     {
       "id": "19f189ef3b0c3369",
       "threadId": "19f189ef3b0c3369",
@@ -11,9 +63,9 @@
       "date": "Tue, 30 Jun 2026 13:01:37 +0000 (UTC)",
       "snippet": "Checking emails seems like a good reason! ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ FIND A STORE MERCH GIFT CARDS CAREERS FIND A STORE MERCH GIFT CARDS CAREERS ORDER NOW Instagram Facebook tiktok Twitter",
       "unread": true,
-      "fetchedAt": "2026-06-30T13:04:22.392352+00:00",
+      "fetchedAt": "2026-06-30T14:04:22.150883+00:00",
       "category": "spam",
-      "categoryReason": "Promotional content from a retailer (Five Guys) with no work/payment request.",
+      "categoryReason": "Five Guys promotional offer email; marketing content not related to Eric’s DJ/label/business needs.",
       "actionable": false
     },
     {
@@ -24,9 +76,9 @@
       "date": "Tue, 30 Jun 2026 12:56:33 +0000 (UTC)",
       "snippet": "The best way to open doors, get people&#39;s attention, and create new business ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-06-30T13:04:22.522917+00:00",
+      "fetchedAt": "2026-06-30T14:04:22.310459+00:00",
       "category": "spam",
-      "categoryReason": "Likely unsolicited sales/business pitch; no clear request for DJ or label work.",
+      "categoryReason": "Cold outreach/business pitch email without clear affiliation; likely unsolicited sales/marketing.",
       "actionable": false
     },
     {
@@ -37,9 +89,9 @@
       "date": "Tue, 30 Jun 2026 12:44:32 +0000",
       "snippet": "Create a plan that fits your budget. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-06-30T13:04:22.667919+00:00",
+      "fetchedAt": "2026-06-30T14:04:22.420585+00:00",
       "category": "spam",
-      "categoryReason": "Bank/lending marketing message about an auto loan rate/payment plan; unsolicited notification-style.",
+      "categoryReason": "Automated financial/billing notification about auto loan payment; not payment-related for Eric Mills directly.",
       "actionable": false
     },
     {
@@ -50,9 +102,9 @@
       "date": "Tue, 30 Jun 2026 12:04:32 +0000 (UTC)",
       "snippet": "Video: The new rules shaping frontier AI ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-06-30T13:04:22.787713+00:00",
+      "fetchedAt": "2026-06-30T14:04:22.589565+00:00",
       "category": "newsletter",
-      "categoryReason": "AI industry/newsletter update (Claude gets pricier, gold rush) delivered as info-only.",
+      "categoryReason": "Forward Future newsletter/article summary; info-only industry update.",
       "actionable": false
     },
     {
@@ -63,9 +115,9 @@
       "date": "Tue, 30 Jun 2026 12:02:21 +0000",
       "snippet": "Use code START for 20% off your first month of Revid.ai. 24-hour creator offer Create more for 20% less A quick thank-you for trying Revid: use code START for 20% off your first month and get more",
       "unread": true,
-      "fetchedAt": "2026-06-30T13:04:22.895736+00:00",
+      "fetchedAt": "2026-06-30T14:04:22.771751+00:00",
       "category": "spam",
-      "categoryReason": "Promotional/discount offer for a tool (Revid.ai) with coupon code.",
+      "categoryReason": "Promotional discount offer for Revid.ai with coupon code; marketing spam.",
       "actionable": false
     },
     {
@@ -76,9 +128,9 @@
       "date": "Tue, 30 Jun 2026 11:13:29 +0000",
       "snippet": "Strategy Says It May Sell Up to $1.25 Billion of Bitcoin -- Uber, Waymo End Robotaxi Partnership in Phoenix -- Rocket Lab announces deal to buy satellite company Iridium -- Supermicro Office Raided in",
       "unread": true,
-      "fetchedAt": "2026-06-30T13:04:23.009734+00:00",
+      "fetchedAt": "2026-06-30T14:04:22.947562+00:00",
       "category": "newsletter",
-      "categoryReason": "Media newsletter/update roundup (The Information) listing multiple headlines.",
+      "categoryReason": "The Information morning/AM update; informational digest.",
       "actionable": false
     },
     {
@@ -89,11 +141,10 @@
       "date": "Tue, 30 Jun 2026 10:51:25 +0000",
       "snippet": "Catch up in minutes ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-06-30T13:04:23.148658+00:00",
+      "fetchedAt": "2026-06-30T14:04:23.062506+00:00",
       "category": "newsletter",
-      "categoryReason": "Facebook Viewpoints task reminder asking you to complete a study task; requires action to proceed.",
-      "actionable": true,
-      "actionExtracted": false
+      "categoryReason": "Washington Post newsletter/digest style email; info-only recap.",
+      "actionable": false
     },
     {
       "id": "19f182510adf38b9",
@@ -103,10 +154,11 @@
       "date": "Tue, 30 Jun 2026 03:48:25 -0700",
       "snippet": "Hi Eric, As a reminder, you have a new task available in the Study program on Viewpoints. You can earn 85 points for completing the task. Get started now! This invitation will expire soon. Go to app",
       "unread": true,
-      "fetchedAt": "2026-06-30T13:04:23.338635+00:00",
-      "category": "newsletter",
-      "categoryReason": "Newsletter-style update from The Hustle (info-only).",
-      "actionable": false
+      "fetchedAt": "2026-06-30T14:04:23.262921+00:00",
+      "category": "personal",
+      "categoryReason": "Facebook Viewpoints account/task reminder; requires Eric’s attention to complete a task in an app.",
+      "actionable": true,
+      "actionExtracted": false
     },
     {
       "id": "19f18201d73d33a1",
@@ -116,9 +168,9 @@
       "date": "Tue, 30 Jun 2026 06:43:05 -0400",
       "snippet": "GLP-1s land jobs, the fastest way to board a plane, and more. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-06-30T13:04:23.480133+00:00",
-      "category": "payment",
-      "categoryReason": "Purchase confirmation/receipt indicating payment completed and subscription details.",
+      "fetchedAt": "2026-06-30T14:04:23.386326+00:00",
+      "category": "newsletter",
+      "categoryReason": "The Hustle newsletter-style update; info-only with industry items.",
       "actionable": false
     },
     {
@@ -129,9 +181,9 @@
       "date": "Sat, 27 Jun 2026 13:38:31 +0000 (UTC)",
       "snippet": "Purchase Confirmation — Payment confirmed — here are your subscription details. Payment Confirmed Thanks for subscribing! Here&#39;s your receipt. Plan Premium — Quarterly Billing Period Jun 27 – Sep",
       "unread": false,
-      "fetchedAt": "2026-06-30T13:04:23.655458+00:00",
-      "category": "spam",
-      "categoryReason": "Unsolicited health/medication checkout/approval page; likely scam or unwanted marketing.",
+      "fetchedAt": "2026-06-30T14:04:23.614500+00:00",
+      "category": "payment",
+      "categoryReason": "Purchase confirmation for Candy AI with receipt/details; payment-related notification.",
       "actionable": false
     },
     {
@@ -142,9 +194,9 @@
       "date": "Sat, 27 Jun 2026 13:11:41 +0000",
       "snippet": "Fast-acting 4-in-1 formula. Finish checkout to get QUAD delivered discreetly. MEDVi Personalized health, delivered discreetly You are approved for QUAD If you want the world&#39;s best ED medication,",
       "unread": true,
-      "fetchedAt": "2026-06-30T13:04:23.795648+00:00",
-      "category": "payment",
-      "categoryReason": "Order confirmation from BETAFPV; shipping preparation notification.",
+      "fetchedAt": "2026-06-30T14:04:23.875197+00:00",
+      "category": "spam",
+      "categoryReason": "Unsolicited health/ED medication approval/discreet delivery pitch; likely spam/scam.",
       "actionable": false
     },
     {
@@ -155,9 +207,9 @@
       "date": "Wed, 24 Jun 2026 19:58:54 +0000 (UTC)",
       "snippet": "BETAFPV Order #217444 Thank you for your purchase! Hi Eric, we&#39;re getting your order ready to be shipped. We will notify you when it has been sent. View your order or Visit our store Order summary",
       "unread": true,
-      "fetchedAt": "2026-06-30T13:04:23.913946+00:00",
+      "fetchedAt": "2026-06-30T14:04:24.042691+00:00",
       "category": "payment",
-      "categoryReason": "Google Fi monthly statement with total and autopayment schedule.",
+      "categoryReason": "BETAFPV order confirmation and shipping readiness; purchase/payment notification.",
       "actionable": false
     },
     {
@@ -168,9 +220,9 @@
       "date": "Sun, 21 Jun 2026 09:14:50 -0700",
       "snippet": "Google Fi Your monthly statement Here&#39;s a quick summary of your June 20 statement: Your total is $88.90 Auto-payment is scheduled for July 1, 2026. No need to remember to pay – just make sure your",
       "unread": false,
-      "fetchedAt": "2026-06-30T13:04:24.061733+00:00",
-      "category": "spam",
-      "categoryReason": "Vehicle registration renewal reminder for online payment; unsolicited/automated notification.",
+      "fetchedAt": "2026-06-30T14:04:24.325542+00:00",
+      "category": "payment",
+      "categoryReason": "Google Payments/Google Fi monthly statement and auto-payment schedule; payment-related statement.",
       "actionable": false
     },
     {
@@ -181,11 +233,10 @@
       "date": "Tue, 09 Jun 2026 22:07:15 +1000",
       "snippet": "Save time and renew online with myNCDMV! ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": false,
-      "fetchedAt": "2026-06-30T13:04:24.206501+00:00",
-      "category": "label-business",
-      "categoryReason": "HeyGen message about completing a first video; might relate to label/AI content workflow and prompts next action (make another video).",
-      "actionable": true,
-      "actionExtracted": false
+      "fetchedAt": "2026-06-30T14:04:24.466846+00:00",
+      "category": "spam",
+      "categoryReason": "Vehicle registration due renewal notice appears automated/marketing-like; not tied to Eric’s DJ/label needs.",
+      "actionable": false
     },
     {
       "id": "19e8d281564c6ed3",
@@ -195,9 +246,9 @@
       "date": "Wed, 03 Jun 2026 11:04:34 +0000",
       "snippet": "HeyGen Hi Eric &#39;Animal&#39;, Congrats on making your first video 🎉 That&#39;s always the hardest step. Make your next video → Now here are some fun things you can try next: Use Video Agent to",
       "unread": false,
-      "fetchedAt": "2026-06-30T13:04:24.347412+00:00",
-      "category": "payment",
-      "categoryReason": "VirtualDJ receipt and subscription renewal charge details.",
+      "fetchedAt": "2026-06-30T14:04:24.658780+00:00",
+      "category": "newsletter",
+      "categoryReason": "HeyGen product onboarding/progress email; notification about completing a video.",
       "actionable": false
     },
     {
@@ -208,9 +259,9 @@
       "date": "Sun, 31 May 2026 23:45:52 +0000",
       "snippet": "Payment Support Hello Eric Mills, Thank you for your purchase. Manage Your Orders Your Order VirtualDJ Pro Subscription renews every 1 month. Next charge: 6/30/26 ($19.00). Full Terms and Subscription",
       "unread": false,
-      "fetchedAt": "2026-06-30T13:04:24.487266+00:00",
+      "fetchedAt": "2026-06-30T14:04:24.792936+00:00",
       "category": "payment",
-      "categoryReason": "VirtualDJ license confirmation for a purchase with auto-renew details.",
+      "categoryReason": "VirtualDJ receipt and subscription charge/next charge info; payment/transaction notification.",
       "actionable": false
     },
     {
@@ -221,9 +272,9 @@
       "date": "Sun, 31 May 2026 23:45:52 +0000",
       "snippet": "Thank you for your purchase on VirtualDJ.com Your order reference ID is VIR260531-7254-63762 Your subscription will be automatically renewed every month. You can stop it at any time by visiting https:/",
       "unread": true,
-      "fetchedAt": "2026-06-30T13:04:24.601360+00:00",
-      "category": "personal",
-      "categoryReason": "VirtualDJ account security alert about new computer authorization (no direct business request).",
+      "fetchedAt": "2026-06-30T14:04:24.903256+00:00",
+      "category": "payment",
+      "categoryReason": "VirtualDJ license purchase/confirmation with renewal details; payment-related notification.",
       "actionable": false
     },
     {
@@ -234,10 +285,11 @@
       "date": "Sun, 31 May 2026 23:26:38 +0000",
       "snippet": "Hello Eric Mills, A new computer Rhino&#39;s Mac mini has been activated on your account. If it wasn&#39;t you, please contact us immediately. ___ Thank you, VirtualDJ Team",
       "unread": true,
-      "fetchedAt": "2026-06-30T13:04:24.781859+00:00",
-      "category": "newsletter",
-      "categoryReason": "Impact Theory marketing/newsletter content (viral content system) without a direct work request.",
-      "actionable": false
+      "fetchedAt": "2026-06-30T14:04:25.016923+00:00",
+      "category": "personal",
+      "categoryReason": "Security/account activity notice (computer authorized) instructing contact if it wasn’t Eric; potentially needs action.",
+      "actionable": true,
+      "actionExtracted": false
     },
     {
       "id": "19e65e3eb86e8abc",
@@ -247,9 +299,9 @@
       "date": "Tue, 26 May 2026 13:04:55 -0700",
       "snippet": "here&#39;s my system for viral content ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-06-30T13:04:24.907146+00:00",
-      "category": "label-business",
-      "categoryReason": "Severance Productions email is feedback/discussion about a strategy/investor brief—business-related but not explicit label ops; keep as label-business.",
+      "fetchedAt": "2026-06-30T14:04:25.164087+00:00",
+      "category": "newsletter",
+      "categoryReason": "Tom Bilyeu/Impact Theory marketing/newsletter content about viral algorithm; info-only.",
       "actionable": false
     },
     {
@@ -260,9 +312,9 @@
       "date": "Tue, 26 May 2026 15:55:00 -0400",
       "snippet": "Sorry man… I did not check my email for a bit… here are some things to think about. First it looks like NC is a bit better for taxes… but nothing huge over ID or WY. Just covering all bases. It looks",
       "unread": false,
-      "fetchedAt": "2026-06-30T13:04:25.017860+00:00",
-      "category": "label-business",
-      "categoryReason": "Severance Productions strategic roadmap/executive summary—business development content.",
+      "fetchedAt": "2026-06-30T14:04:25.353812+00:00",
+      "category": "personal",
+      "categoryReason": "Re: phone call follow-up from Severance Productions; personal/work-related discussion but no clear booking/payment request.",
       "actionable": false
     },
     {
@@ -273,62 +325,10 @@
       "date": "Thu, 14 May 2026 17:33:55 -0400",
       "snippet": "Business Development and Strategic Roadmap Briefing Executive Summary The following document synthesizes a strategic discussion regarding the development, structure, and market entry of a technology",
       "unread": false,
-      "fetchedAt": "2026-06-30T13:04:25.142440+00:00",
-      "category": "label-business",
-      "categoryReason": "Feedback on investor brief discussing AI—business-related.",
+      "fetchedAt": "2026-06-30T14:04:25.468207+00:00",
+      "category": "personal",
+      "categoryReason": "Strategic roadmap/business development document from Severance Productions; looks like internal business planning rather than DJ/label/payment action.",
       "actionable": false
-    },
-    {
-      "id": "19d9ec339b0172e6",
-      "threadId": "19d9ec339b0172e6",
-      "from": "Severance Productions <Dave@severanceproductions.com>",
-      "subject": "Feedback on investor brief",
-      "date": "Sat, 18 Apr 2026 00:04:37 -0400",
-      "snippet": "Yo… good job on this man… here are some of my thoughts. Thanks for including me on this. I think there is big potential for it! It will be a long road but clearly worth it. When you talk about the ai",
-      "unread": false,
-      "fetchedAt": "2026-06-30T13:04:25.242069+00:00",
-      "category": "personal",
-      "categoryReason": "Tenant referral letter; personal administrative document.",
-      "actionable": false
-    },
-    {
-      "id": "19d1a0382cc1faac",
-      "threadId": "19d1a0382cc1faac",
-      "from": "\"jewels .\" <jewels@stockyardsecurity.com>",
-      "subject": "Tenant referral letter",
-      "date": "Mon, 23 Mar 2026 09:25:19 +0000 (UTC)",
-      "snippet": "",
-      "unread": false,
-      "fetchedAt": "2026-06-30T13:04:25.375566+00:00",
-      "category": "personal",
-      "categoryReason": "Personal music/song exchange thread with another person, including a link to a track; likely requires replying/acknowledging.",
-      "actionable": true,
-      "actionExtracted": false
-    },
-    {
-      "id": "19cf7b8d351a13d0",
-      "threadId": "19afaa48dd8ac13e",
-      "from": "Sydnie Knepper <sydnieknepper54@gmail.com>",
-      "subject": "Re: Some songs to check out...",
-      "date": "Mon, 16 Mar 2026 10:36:39 -0700",
-      "snippet": "Oh I LOVE this On Mon, Mar 16, 2026 at 10:35 AM Sydnie Knepper &lt;sydnieknepper54@gmail.com&gt; wrote: Yay! On Mon, Mar 16, 2026 at 4:27 AM Eric &#39;Animal&#39; Mills &lt;ericmills71@gmail.com&gt;",
-      "unread": false,
-      "fetchedAt": "2026-06-30T13:04:25.485605+00:00",
-      "category": "personal",
-      "categoryReason": "Follow-up in the same personal thread providing a new music link; likely requires response or action to listen/share.",
-      "actionable": true,
-      "actionExtracted": true,
-      "actionTitle": "Reply to song recommendation"
-    },
-    {
-      "id": "19cf7b82194746c5",
-      "threadId": "19afaa48dd8ac13e",
-      "from": "Sydnie Knepper <sydnieknepper54@gmail.com>",
-      "subject": "Re: Some songs to check out...",
-      "date": "Mon, 16 Mar 2026 10:35:52 -0700",
-      "snippet": "Yay! On Mon, Mar 16, 2026 at 4:27 AM Eric &#39;Animal&#39; Mills &lt;ericmills71@gmail.com&gt; wrote: New one!! https://drive.google.com/file/d/1qi43oq2vz5gv-RtI_oBjb1xseUrMBJr6/view?usp=drive_link",
-      "unread": false,
-      "fetchedAt": "2026-06-30T13:04:25.578698+00:00"
     }
   ]
 }
