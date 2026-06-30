@@ -14,26 +14,31 @@ const SHOWS: Show[] = [
   { key: "amityville-horrors", label: "Amityville Horrors", icon: "👻", url: "https://amityvillehorrors.abacusai.app", height: 800 },
 ];
 
-export default function FeatureShows() {
+export default function FeatureShowsPage() {
   const [activeShow, setActiveShow] = useState<string>(SHOWS[0]?.key ?? "");
   const show = SHOWS.find((s) => s.key === activeShow);
 
   return (
-    <div>
+    <div className="page-container">
+      <div style={{ marginBottom: 24 }}>
+        <h1 style={{ fontSize: "1.5rem", fontWeight: 700, margin: 0, color: "var(--text)" }}>🎭 Feature Shows</h1>
+        <p style={{ color: "var(--muted)", marginTop: 4, fontSize: "0.85rem" }}>Themed experiences and special-event portals for Spearmint Rhino.</p>
+      </div>
+
       {/* Feature Shows Subtab Nav */}
-      <div style={{ display: "flex", gap: 0, marginBottom: 20, borderBottom: "1px solid var(--border)" }}>
+      <div style={{ display: "flex", gap: 0, marginBottom: 28, borderBottom: "1px solid var(--border)" }}>
         {SHOWS.map((s) => (
           <button
             key={s.key}
             onClick={() => setActiveShow(s.key)}
             style={{
-              padding: "8px 18px",
+              padding: "10px 22px",
               background: "transparent",
               border: "none",
               borderBottom: activeShow === s.key ? "2px solid var(--accent)" : "2px solid transparent",
               color: activeShow === s.key ? "var(--accent2)" : "var(--muted)",
               fontWeight: activeShow === s.key ? 700 : 400,
-              fontSize: "0.85rem",
+              fontSize: "0.9rem",
               cursor: "pointer",
               transition: "all 0.15s",
             }}
@@ -51,7 +56,7 @@ export default function FeatureShows() {
               {show.icon} {show.label}
             </h2>
             <p style={{ color: "var(--muted)", marginTop: 4, fontSize: "0.8rem" }}>
-              Embedded experience — {show.url}
+              Embedded experience — <a href={show.url} target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent2)" }}>{show.url}</a>
             </p>
           </div>
           <div

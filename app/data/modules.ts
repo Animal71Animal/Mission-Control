@@ -21,6 +21,7 @@ export const modules: Module[] = [
   { href: "/calendar", icon: "📅", title: "Calendar", desc: "Gigs, studio sessions, meetings, and deadlines.", status: "active", group: "business" },
   { href: "/srb-tips", icon: "💰", title: "SRB Tips", desc: "Spearmint Rhino tip tracking — monthly totals, top tippers, dancer stats.", status: "active", group: "business" },
   { href: "/tasks", icon: "📋", title: "Action Items", desc: "All action items — SRB club operations and personal tasks in one hub.", status: "active", group: "business" },
+  { href: "/feature-shows", icon: "🎭", title: "Feature Shows", desc: "Themed experiences and special-event portals for Spearmint Rhino.", status: "active", group: "business" },
 
   { href: "/ableton", icon: "🎛️", title: "Ableton", desc: "Ableton Live setup, plugin inventory, and session notes.", status: "active", group: "creative" },
 
