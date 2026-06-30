@@ -36,13 +36,11 @@ export async function GET() {
     const auth = getAuth();
     const drive = google.drive({ version: "v3", auth });
 
-    // Enumerate all folders in Drive root. Auto-reflects any folder Eric
-    // creates/renames/deletes — no hardcoded IDs. Requires service account
-    // to have root-level access (or "anyone with link can view" + shares).
+    // DEBUG: temporary unfiltered listing to see what SA can access
     const listResponse = await drive.files.list({
-      q: "'root' in parents and mimeType='application/vnd.google-apps.folder' and trashed=false",
-      fields: "files(id, name, mimeType, modifiedTime, webViewLink, shared, owners)",
-      pageSize: 100,
+      q: "trashed=false",
+      fields: "files(id, name, mimeType, parents, shared, owners(emailAddress,displayName))",
+      pageSize: 1000,
       orderBy: "name",
     });
 
@@ -60,7 +58,17 @@ export async function GET() {
       owner: f.owners?.[0]?.displayName || f.owners?.[0]?.emailAddress || "Unknown",
     }));
 
+    // DEBUG: return raw visibility for diagnosis
     return NextResponse.json({
+      debugRawCount: allFiles.length,
+      debugRaw: allFiles.map((f: any) => ({
+        id: f.id,
+        name: f.name,
+        mimeType: f.mimeType,
+        parents: f.parents,
+        ownerEmail: f.owners?.[0]?.emailAddress,
+        ownerName: f.owners?.[0]?.displayName,
+      })),
       files: transformed,
       count: transformed.length,
     });
