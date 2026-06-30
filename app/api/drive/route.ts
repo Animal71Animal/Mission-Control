@@ -12,6 +12,7 @@ interface DriveFileData {
   webViewLink?: string | null;
   shared?: boolean | null;
   owners?: Array<{ displayName?: string | null; emailAddress?: string | null }> | null;
+  parents?: string[] | null;
 }
 
 // Initialize auth with service account
@@ -36,18 +37,26 @@ export async function GET() {
     const auth = getAuth();
     const drive = google.drive({ version: "v3", auth });
 
-    // DEBUG 3: get all folders with parents, plus about.get to find rootFolderId
+    // Enumerate all folders the service account can see, then keep only those
+    // at Drive root (parents is empty/missing — for personal Drive this is how
+    // the API represents top-level folders, NOT the literal string "root").
+    // Auto-reflects any folder Eric creates/renames/deletes — no hardcoded IDs.
     const listResponse = await drive.files.list({
       q: "mimeType='application/vnd.google-apps.folder' and trashed=false",
-      fields: "files(id, name, mimeType, parents, shared, owners(emailAddress,displayName), driveId)",
+      fields: "files(id, name, mimeType, modifiedTime, webViewLink, shared, owners, parents)",
       pageSize: 1000,
+      orderBy: "name",
     });
-    const aboutResp = await drive.about.get({ fields: "user, storageQuota, rootFolderId, driveId" }).catch(() => null);
 
     const allFiles: DriveFileData[] = (listResponse.data.files || []) as DriveFileData[];
 
+    // Root-level folders: those with no parents array.
+    const rootFolders = allFiles.filter(
+      (f: any) => !Array.isArray(f.parents) || f.parents.length === 0
+    );
+
     // Transform to our format
-    const transformed = allFiles.map((f) => ({
+    const transformed = rootFolders.map((f) => ({
       id: f.id,
       name: f.name,
       type: "folder",
@@ -59,17 +68,6 @@ export async function GET() {
     }));
 
     return NextResponse.json({
-      debugRawCount: allFiles.length,
-      debugRaw: allFiles.map((f: any) => ({
-        id: f.id,
-        name: f.name,
-        mimeType: f.mimeType,
-        parents: f.parents,
-        driveId: f.driveId,
-        ownerEmail: f.owners?.[0]?.emailAddress,
-        ownerName: f.owners?.[0]?.displayName,
-      })),
-      about: aboutResp?.data || null,
       files: transformed,
       count: transformed.length,
     });
