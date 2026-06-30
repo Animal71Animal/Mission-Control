@@ -40,14 +40,16 @@ export async function GET() {
     // only individual folder shares), then filter client-side to those with root as parent.
     // This auto-reflects any folder Eric creates/renames/deletes — no hardcoded IDs.
     const listResponse = await drive.files.list({
-      q: "mimeType='application/vnd.google-apps.folder' and trashed=false",
       fields: "files(id, name, mimeType, modifiedTime, webViewLink, shared, owners, parents)",
       pageSize: 1000,
-      orderBy: "name",
     });
 
     const allFiles: DriveFileData[] = ((listResponse.data.files || []) as DriveFileData[]).filter(
-      (f: any) => Array.isArray(f.parents) && f.parents.includes("root")
+      (f: any) =>
+        Array.isArray(f.parents) &&
+        f.parents.includes("root") &&
+        f.mimeType === "application/vnd.google-apps.folder" &&
+        !f.name?.startsWith(".") // safety
     );
 
     // Transform to our format
