@@ -1,7 +1,7 @@
 {
   "fetchedAt": "2026-06-30T05:04:31.919137+00:00",
   "count": 25,
-  "unreadCount": 14,
+  "unreadCount": 13,
   "messages": [
     {
       "id": "19f16e97caae8109",
@@ -10,11 +10,17 @@
       "subject": "✈ Discount Tuesday is here",
       "date": "Mon, 29 Jun 2026 23:03:47 -0600",
       "snippet": "Low Fares Found. Book Today. FlightHub logo DISCOUNT TUESDAY Find Flights Sale ends June 29, 2026. Take advantage of low Tuesday prices BETTER DEALS MAY BE AVAILABLE, CALL US AT: 1‑855‑496‑0954 *",
-      "unread": true,
+      "unread": false,
       "fetchedAt": "2026-06-30T05:04:21.475693+00:00",
       "category": "spam",
       "categoryReason": "Automated flight discount promotion with sales pitch and no work/payment/label relevance.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": true,
+      "labelIds": [
+        "CATEGORY_PROMOTIONS",
+        "TRASH"
+      ]
     },
     {
       "id": "19f16c06d5932b7a",
@@ -27,7 +33,9 @@
       "fetchedAt": "2026-06-30T05:04:21.594502+00:00",
       "category": "newsletter",
       "categoryReason": "Product/company update presented as a newsletter; informational content not asking Eric to act.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f16b148867187b",
@@ -41,7 +49,9 @@
       "category": "payment",
       "categoryReason": "System notification about failed production deployments; requires attention to fix the issue.",
       "actionable": true,
-      "actionExtracted": false
+      "actionExtracted": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f16aee6de396a7",
@@ -55,7 +65,9 @@
       "category": "payment",
       "categoryReason": "Build/workflow failure notification for a deployment to Vercel; needs investigation/action.",
       "actionable": true,
-      "actionExtracted": false
+      "actionExtracted": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f167a60d793228",
@@ -68,7 +80,9 @@
       "fetchedAt": "2026-06-30T05:04:21.919559+00:00",
       "category": "personal",
       "categoryReason": "Instagram activity recap/notifications; personal account update.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f094dab9bb76c5",
@@ -81,7 +95,9 @@
       "fetchedAt": "2026-06-30T05:04:22.056276+00:00",
       "category": "payment",
       "categoryReason": "Purchase confirmation and receipt for a subscription/plan; not requesting further action.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19f09351553328a1",
@@ -94,7 +110,9 @@
       "fetchedAt": "2026-06-30T05:04:22.171344+00:00",
       "category": "spam",
       "categoryReason": "Unsolicited medical/ED medication approval/checkout message likely promotional/scam; not legitimate work payment.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19efb36d326c54af",
@@ -107,7 +125,9 @@
       "fetchedAt": "2026-06-30T05:04:22.346697+00:00",
       "category": "payment",
       "categoryReason": "Order confirmation from an online store indicating shipment is being prepared; transactional email.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19eeaf69eecbc070",
@@ -120,7 +140,9 @@
       "fetchedAt": "2026-06-30T05:04:22.488332+00:00",
       "category": "payment",
       "categoryReason": "Google Fi monthly statement with autopayment scheduled; informational billing notice.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19eac47f66d0ba27",
@@ -133,7 +155,9 @@
       "fetchedAt": "2026-06-30T05:04:22.625553+00:00",
       "category": "spam",
       "categoryReason": "Vehicle registration renewal due notice; looks like government/payment phishing or generic notice without clear legitimacy in context.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19e8d281564c6ed3",
@@ -147,7 +171,9 @@
       "category": "label-business",
       "categoryReason": "HeyGen account milestone about completing a first video and prompts next steps; relates to media/video workflow.",
       "actionable": true,
-      "actionExtracted": false
+      "actionExtracted": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19e87d97ba6936f0",
@@ -160,7 +186,9 @@
       "fetchedAt": "2026-06-30T05:04:22.947982+00:00",
       "category": "payment",
       "categoryReason": "Order shipped notification with tracking; transactional status update.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19e806dfea4f7613",
@@ -173,7 +201,9 @@
       "fetchedAt": "2026-06-30T05:04:23.099221+00:00",
       "category": "payment",
       "categoryReason": "VirtualDJ receipt and subscription renewal charge details; payment/receipt info.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19e806dfcde5132a",
@@ -186,7 +216,9 @@
       "fetchedAt": "2026-06-30T05:04:23.200076+00:00",
       "category": "payment",
       "categoryReason": "VirtualDJ license purchase confirmation and auto-renewal info; transactional email.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19e805c623a5a3e1",
@@ -200,7 +232,9 @@
       "category": "payment",
       "categoryReason": "Notification that a computer was authorized on the VirtualDJ account; may require action if not expected.",
       "actionable": true,
-      "actionExtracted": false
+      "actionExtracted": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19e7a182d0e8f8e4",
@@ -213,7 +247,9 @@
       "fetchedAt": "2026-06-30T05:04:23.484418+00:00",
       "category": "payment",
       "categoryReason": "Order confirmation stating payment processed successfully; transactional receipt info.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19e65e3eb86e8abc",
@@ -226,7 +262,9 @@
       "fetchedAt": "2026-06-30T05:04:23.637026+00:00",
       "category": "newsletter",
       "categoryReason": "Marketing/content email about viral algorithms; info-only newsletter-style message.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19e65db0486148b9",
@@ -240,7 +278,9 @@
       "category": "personal",
       "categoryReason": "Direct reply email discussing phone call and logistics/taxes; requires follow-up conversation.",
       "actionable": true,
-      "actionExtracted": false
+      "actionExtracted": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19e286947c7c7e75",
@@ -254,7 +294,9 @@
       "category": "label-business",
       "categoryReason": "Business development/strategic roadmap briefing document; relevant to label/tech/business planning and needs review.",
       "actionable": true,
-      "actionExtracted": false
+      "actionExtracted": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19d9ec339b0172e6",
@@ -268,7 +310,9 @@
       "category": "label-business",
       "categoryReason": "Feedback on investor brief about AI; business/label-related content likely requiring response or review.",
       "actionable": true,
-      "actionExtracted": false
+      "actionExtracted": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19d1a0382cc1faac",
@@ -281,7 +325,9 @@
       "fetchedAt": "2026-06-30T05:04:24.166420+00:00",
       "category": "personal",
       "categoryReason": "Tenant referral letter—administrative personal document.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19cf7b8d351a13d0",
@@ -294,7 +340,9 @@
       "fetchedAt": "2026-06-30T05:04:24.305791+00:00",
       "category": "personal",
       "categoryReason": "Friend/associate email thread about songs to check out; personal engagement.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19cf7b82194746c5",
@@ -307,7 +355,9 @@
       "fetchedAt": "2026-06-30T05:04:24.418627+00:00",
       "category": "personal",
       "categoryReason": "Follow-up in the same songs thread with a Google Drive link; personal content sharing.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19cf1b856d481cdc",
@@ -320,7 +370,9 @@
       "fetchedAt": "2026-06-30T05:04:24.536939+00:00",
       "category": "personal",
       "categoryReason": "Personal email about assistant/inbox setup and invoices; friend/admin chatter.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     },
     {
       "id": "19c3a2a0f91b866f",
@@ -333,7 +385,9 @@
       "fetchedAt": "2026-06-30T05:04:24.645628+00:00",
       "category": "newsletter",
       "categoryReason": "Impact Theory business/marketing lesson email; content-only newsletter style.",
-      "actionable": false
+      "actionable": false,
+      "starred": false,
+      "archived": false
     }
   ]
 }
