@@ -68,6 +68,13 @@ export async function GET() {
     }));
 
     return NextResponse.json({
+      debugAllCount: allFiles.length,
+      debugRootCount: rootFolders.length,
+      debugSample: allFiles.slice(0, 5).map((f: any) => ({
+        name: f.name,
+        parents: f.parents,
+        parentsType: typeof f.parents,
+      })),
       files: transformed,
       count: transformed.length,
     });
