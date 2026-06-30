@@ -1,28 +1,8 @@
 {
   "fetchedAt": "2026-06-30T05:04:31.919137+00:00",
-  "count": 25,
-  "unreadCount": 14,
+  "count": 24,
+  "unreadCount": 13,
   "messages": [
-    {
-      "id": "19f16e97caae8109",
-      "threadId": "19f16e97caae8109",
-      "from": "FlightHub <flighthub@email.myflighthub.com>",
-      "subject": "✈ Discount Tuesday is here",
-      "date": "Mon, 29 Jun 2026 23:03:47 -0600",
-      "snippet": "Low Fares Found. Book Today. FlightHub logo DISCOUNT TUESDAY Find Flights Sale ends June 29, 2026. Take advantage of low Tuesday prices BETTER DEALS MAY BE AVAILABLE, CALL US AT: 1‑855‑496‑0954 *",
-      "unread": true,
-      "fetchedAt": "2026-06-30T05:04:21.475693+00:00",
-      "category": "spam",
-      "categoryReason": "Automated flight discount promotion with sales pitch and no work/payment/label relevance.",
-      "actionable": false,
-      "starred": false,
-      "archived": true,
-      "labelIds": [
-        "CATEGORY_PROMOTIONS",
-        "UNREAD",
-        "TRASH"
-      ]
-    },
     {
       "id": "19f16c06d5932b7a",
       "threadId": "19f16c06d5932b7a",
