@@ -67,25 +67,25 @@ export async function GET() {
       owner: f.owners?.[0]?.displayName || f.owners?.[0]?.emailAddress || "Unknown",
     }));
 
-    // DEBUG: look for known hardcoded folder IDs in the listing
-      const knownIds = [
-        "1OeQqwHkzqjCdPUdnpDPerBNtQF6_mwVn",
-        "1j6mhfRzmeOQ3ythpSviOy9pvddzi8luQ",
-        "1ZwRJm6JfDi57AJIrIw3SPuY6LYFOAews",
-        "1kiRnlbHMtiE2QbuskK_1zZBtVzRVLY6W",
-        "19h18hd2BTcbYx2rtInuOoL1H2jqoTjf_",
-        "12L03abGuMhUZGwDMJnf_A3122xJIIjih",
-        "185b-bn37rILVnN36no-40qfJnnHyw5ex",
-        "1HRSsWa7rmST9uBYYl756FAx0ZDEiFiVr",
-      ];
-      const knownFound = allFiles.filter((f: any) => knownIds.includes(f.id));
+    // Try alternative: list with different corpora settings
+      const listResponse2 = await drive.files.list({
+        q: "'root' in parents and mimeType='application/vnd.google-apps.folder' and trashed=false",
+        fields: "files(id, name, mimeType, modifiedTime, webViewLink, shared, owners, parents)",
+        pageSize: 100,
+        orderBy: "name",
+        corpora: "user",
+      });
+      const listResponse3 = await drive.files.list({
+        q: "'root' in parents and mimeType='application/vnd.google-apps.folder' and trashed=false",
+        fields: "files(id, name, parents)",
+        pageSize: 100,
+      }).catch((e) => ({ data: { files: [], error: e.message } }));
       return NextResponse.json({
         debugAllCount: allFiles.length,
-        debugKnownFound: knownFound.map((f: any) => ({
-          id: f.id,
-          name: f.name,
-          parents: f.parents,
-        })),
+        debugCorporaUser: listResponse2.data.files?.length || 0,
+        debugCorporaUserSample: (listResponse2.data.files || []).slice(0, 5).map((f: any) => ({ id: f.id, name: f.name, parents: f.parents })),
+        debugPlainRoot: listResponse3.data.files?.length || 0,
+        debugPlainRootSample: (listResponse3.data.files || []).slice(0, 5).map((f: any) => ({ id: f.id, name: f.name, parents: f.parents })),
         files: transformed,
         count: transformed.length,
       });
