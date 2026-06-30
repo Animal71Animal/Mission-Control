@@ -268,5 +268,21 @@
     "source_subject": "Quick favor Eric?",
     "source_url": "https://mail.google.com/mail/u/0/#inbox/19be917b08a33f73",
     "completed_at": "2026-06-30T02:29:21.149Z"
+  },
+  {
+    "id": "pt-email-1782817469867-0",
+    "title": "Complete Viewpoints study task",
+    "notes": "you have a new task available in the Study program",
+    "category": "Personal",
+    "priority": "medium",
+    "due_date": null,
+    "completed": false,
+    "created_at": "2026-06-30T11:04:29.867100+00:00",
+    "owner": "animal",
+    "source": "gmail",
+    "source_gmail_id": "19f182510adf38b9",
+    "source_from": "Facebook Viewpoints <viewpoints@facebookmail.com>",
+    "source_subject": "Reminder: new task available",
+    "source_url": "https://mail.google.com/mail/u/0/#inbox/19f182510adf38b9"
   }
 ]
