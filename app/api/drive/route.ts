@@ -30,27 +30,65 @@ function getAuth() {
   });
 }
 
+function getServiceAccountEmail(): string | null {
+  try {
+    const json = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
+    if (!json) return null;
+    return JSON.parse(json).client_email || null;
+  } catch {
+    return null;
+  }
+}
+
 // GET /api/drive
 export async function GET() {
   try {
     const auth = getAuth();
     const drive = google.drive({ version: "v3", auth });
 
-    // List every folder the service account can see (it may not have root-level access,
-    // only individual folder shares), then filter client-side to those with root as parent.
-    // This auto-reflects any folder Eric creates/renames/deletes — no hardcoded IDs.
-    const listResponse = await drive.files.list({
-      fields: "files(id, name, mimeType, modifiedTime, webViewLink, shared, owners, parents)",
-      pageSize: 1000,
-    });
+    // Folders Eric has explicitly shared with the service account.
+    // Service account has files.get access but no Drive-wide visibility,
+    // so we fetch each known folder directly. To see more folders in MC,
+    // share the missing folder (or the whole Drive root) with the service
+    // account email returned in `serviceAccountEmail` below.
+    const targetFolderIds = [
+      "1OeQqwHkzqjCdPUdnpDPerBNtQF6_mwVn", // DJ Library
+      "1j6mhfRzmeOQ3ythpSviOy9pvddzi8luQ", // Wicked Liquid Productions Business
+      "1ZwRJm6JfDi57AJIrIw3SPuY6LYFOAews", // Education & Resources
+      "1kiRnlbHMtiE2QbuskK_1zZBtVzRVLY6W", // Headshots
+      "19h18hd2BTcbYx2rtInuOoL1H2jqoTjf_", // Live Sets & Mixes
+      "12L03abGuMhUZGwDMJnf_A3122xJIIjih", // Micah
+      "185b-bn37rILVnN36no-40qfJnnHyw5ex", // OpenClaw Backup
+      "1HRSsWa7rmST9uBYYl756FAx0ZDEiFiVr", // Personal
+      "1xspZQ4pdkvXpcuU89dpD4tne_VZ76SKX", // Pics
+      "1CpzbBC9Fh7zf0oee_AIX0nbcUnvg7796", // Productions
+      "1nIw_tGmirbeqktx-s4nHBO_xeHCrg2gY", // Sample Packs
+      "1r9ES0o0Fb3FMJAuxlrQusMwrhXFOl8Bl", // Stuff to Move to Desktop
+      "1ziaxg_5-siAizY5MSqSd4v-7CR3-rMOD", // Tips
+      "1ChDveR3dbX3aNzmtb4NT3u-PFNxgBJRR", // Venues & Events
+      "15EKT4q9sWQyM0yo4U1uA5WoAkz-aHttE", // Video & Promo
+    ];
 
-    const allFiles: DriveFileData[] = ((listResponse.data.files || []) as DriveFileData[]).filter(
-      (f: any) =>
-        Array.isArray(f.parents) &&
-        f.parents.includes("root") &&
-        f.mimeType === "application/vnd.google-apps.folder" &&
-        !f.name?.startsWith(".") // safety
-    );
+    // Fetch each folder by ID
+    const allFiles: DriveFileData[] = [];
+    const failed: string[] = [];
+    for (const folderId of targetFolderIds) {
+      try {
+        const response = await drive.files.get({
+          fileId: folderId,
+          fields: "id, name, mimeType, modifiedTime, size, webViewLink, shared, owners",
+        });
+        if (response.data) {
+          allFiles.push(response.data);
+        }
+      } catch {
+        // Folder might not be accessible, track for visibility
+        failed.push(folderId);
+      }
+    }
+
+    // Sort by name for stable display
+    allFiles.sort((a, b) => (a.name || "").localeCompare(b.name || ""));
 
     // Transform to our format
     const transformed = allFiles.map((f) => ({
@@ -67,6 +105,9 @@ export async function GET() {
     return NextResponse.json({
       files: transformed,
       count: transformed.length,
+      totalConfigured: targetFolderIds.length,
+      inaccessibleCount: failed.length,
+      serviceAccountEmail: getServiceAccountEmail(),
     });
   } catch (error) {
     console.error("Drive fetch error:", error);
