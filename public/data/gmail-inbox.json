@@ -1,8 +1,47 @@
 {
-  "fetchedAt": "2026-06-30T21:04:29.157725+00:00",
+  "fetchedAt": "2026-06-30T22:04:32.219617+00:00",
   "count": 25,
   "unreadCount": 25,
   "messages": [
+    {
+      "id": "19f1a84f7956160d",
+      "threadId": "19f1a84f7956160d",
+      "from": "\"Candy AI 🍭\" <info@emails.candy.ai>",
+      "subject": "🇺🇸 Things are happening tomorrow. Be ready",
+      "date": "Tue, 30 Jun 2026 21:52:19 +0000",
+      "snippet": "You are going to want to be here for this one. ͏͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏",
+      "unread": true,
+      "fetchedAt": "2026-06-30T22:04:22.538115+00:00",
+      "category": "spam",
+      "categoryReason": "Promotional/automated message (“Things are happening tomorrow…”) with no clear relevant business request for DJ/label/payment.",
+      "actionable": false
+    },
+    {
+      "id": "19f1a82b2a3eed9a",
+      "threadId": "19f1a82b2a3eed9a",
+      "from": "Coursera <Coursera@m.learn.coursera.org>",
+      "subject": "Your personalized recommendations are ready",
+      "date": "Tue, 30 Jun 2026 21:50:00 +0000",
+      "snippet": "Build career-relevant skills today ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌",
+      "unread": true,
+      "fetchedAt": "2026-06-30T22:04:22.676189+00:00",
+      "category": "newsletter",
+      "categoryReason": "Coursera info-only email about personalized recommendations; not requesting work or payments.",
+      "actionable": false
+    },
+    {
+      "id": "19f1a5f27833bea8",
+      "threadId": "19f1a5f27833bea8",
+      "from": "Agoda Price Alerts <no-reply@sg.newsletter.agoda-emails.com>",
+      "subject": "Eric , top price drops in New York (NY), selected for you!",
+      "date": "Tue, 30 Jun 2026 21:11:10 +0000 (UTC)",
+      "snippet": "Check out today&#39;s top price drops on Agoda! Agoda.com Hotels &amp; Homes Flights Deals Airport Transfer Activities Eric , experience the best of New York (NY) Your journey starts here! New York (NY",
+      "unread": true,
+      "fetchedAt": "2026-06-30T22:04:22.779928+00:00",
+      "category": "spam",
+      "categoryReason": "Agoda price alert marketing email promoting deals.",
+      "actionable": false
+    },
     {
       "id": "19f1a550f7d2de6e",
       "threadId": "19f1a550f7d2de6e",
@@ -11,9 +50,9 @@
       "date": "Tue, 30 Jun 2026 21:00:09 +0000",
       "snippet": "FINAL DAY — sale ends tonight. Save $54.89 on a year of DMP, just $184.99. DIGITAL MUSIC POOL Final Day · Sale Ends Tonight A Year Of DMP $239.88 $184.99 12 Months · Full Access You Save $54.89 Claim",
       "unread": true,
-      "fetchedAt": "2026-06-30T21:04:20.141666+00:00",
+      "fetchedAt": "2026-06-30T22:04:22.929022+00:00",
       "category": "spam",
-      "categoryReason": "Promotional sale email (“Final hours to save”) from a music-related service; not a transaction/payout request.",
+      "categoryReason": "Digital Music Pool promotional sale (“Final hours to save”).",
       "actionable": false
     },
     {
@@ -24,9 +63,9 @@
       "date": "Tue, 30 Jun 2026 20:56:28 +0000",
       "snippet": "Voices is now on your phone, and you get to try it first. ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿",
       "unread": true,
-      "fetchedAt": "2026-06-30T21:04:20.254577+00:00",
-      "category": "newsletter",
-      "categoryReason": "Product announcement from Suno encouraging trying a new feature (“Voices… on Mobile beta”).",
+      "fetchedAt": "2026-06-30T22:04:23.037285+00:00",
+      "category": "spam",
+      "categoryReason": "Suno product promotion/feature announcement (“Try Voices…”).",
       "actionable": false
     },
     {
@@ -37,9 +76,9 @@
       "date": "Tue, 30 Jun 2026 15:54:48 -0500 (CDT)",
       "snippet": "Plus, Harry Styles &amp; Zoë Kravitz talking &#39;wedding plans&#39; amid busy schedules‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-06-30T21:04:20.361806+00:00",
+      "fetchedAt": "2026-06-30T22:04:23.167204+00:00",
       "category": "newsletter",
-      "categoryReason": "Info-only entertainment news roundup from iHeart Daily.",
+      "categoryReason": "iHeart Daily entertainment/news digest; informational only.",
       "actionable": false
     },
     {
@@ -50,9 +89,9 @@
       "date": "Tue, 30 Jun 2026 20:51:34 +0000",
       "snippet": "Early Access tickets are expected to sell out very soon ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-06-30T21:04:20.460472+00:00",
+      "fetchedAt": "2026-06-30T22:04:23.278676+00:00",
       "category": "newsletter",
-      "categoryReason": "Event promotion announcement from The Information (ticketing info, not a DJ booking request).",
+      "categoryReason": "The Information event/ticket marketing email; informational/promotional without a direct work action request.",
       "actionable": false
     },
     {
@@ -63,9 +102,9 @@
       "date": "Tue, 30 Jun 2026 20:51:21 +0000",
       "snippet": "Desplacese hacia abajo para Español Hello Eric, Thank you for driving with Uber JourneyTV! Your latest performance summary is ready! Here&#39;s a snapshot of your current stats and progress. Drivers",
       "unread": true,
-      "fetchedAt": "2026-06-30T21:04:20.551551+00:00",
+      "fetchedAt": "2026-06-30T22:04:23.393315+00:00",
       "category": "personal",
-      "categoryReason": "Driver-related performance summary for Uber JourneyTV (no booking/payment instruction beyond app viewing).",
+      "categoryReason": "Uber/driver-related journey performance summary for Uber JourneyTV; informational and not a payment request.",
       "actionable": false
     },
     {
@@ -76,22 +115,9 @@
       "date": "Tue, 30 Jun 2026 20:43:53 +0000 (UTC)",
       "snippet": "The company plans to pay select &quot;coffee creators&quot; through a revenue-sharing model. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-06-30T21:04:20.667888+00:00",
+      "fetchedAt": "2026-06-30T22:04:23.536794+00:00",
       "category": "newsletter",
-      "categoryReason": "LinkedIn News editorial update about Starbucks; info-only.",
-      "actionable": false
-    },
-    {
-      "id": "19f1a408d97003b2",
-      "threadId": "19f1a408d97003b2",
-      "from": "WELCOME TO ENDURANCE AUTO AFFILIATES <donotreply@motleyfol.com>",
-      "subject": "EndurancePromo - $3OO off any NEWplan? S8YO                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             3sv64Hy7alTP4O2i7OXnHCuQ2Z1aZO2NjOxw0loLG5zPA38QIhZmkqm71WTZiYkkJQvEiFMX5FcpndXKbWD1p9943qs6Wbot1yqEQU9b6P9PIOMl8YZcpbNb8Gf3K1qv6xECb5M79y7EMyeFf5C60SZ3JNs7871fJaI5D6rd5T5j6qUM9CgfPI8Zod60CX4yNkMxiWdwfe790Tu4C7owHqIMsQsB2GeTZ4fbtl96nqa7Xe6Lii8RBGOciCRIA1k23X2pO7qYSyBiePi56                 []   _6J9UZ1sCXYU9rphZQcuXOZ8b5pppw35cUzxN0ONs1undvycB3b3Pe8alAgkgSWqHBnx2F2zfqo5o9B5IY3KArL6WWdph6FbUohUrOYD2680X8gnvK2O4Q2Pq1Q2z6vwmUIK7T7WxCeL427NWwE2JzJoYrnEbh9Dnh5F6Ua94a7LYbqNvCbad45Sx7ecOxw0loLG5zPA38QIhZmk                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           []              []",
-      "date": "Tue, 30 Jun 2026 16:30:30 -0400 (EDT)",
-      "snippet": "URGENT 🚨 LAST CALL: $3OO OFF VEHICLE PR0TECTI0N 💰",
-      "unread": true,
-      "fetchedAt": "2026-06-30T21:04:20.790324+00:00",
-      "category": "spam",
-      "categoryReason": "Car insurance promo with distorted text and “URGENT LAST CALL” style marketing; likely unsolicited.",
+      "categoryReason": "LinkedIn News briefing; info-only industry update.",
       "actionable": false
     },
     {
@@ -102,9 +128,9 @@
       "date": "Tue, 30 Jun 2026 20:35:13 +0000",
       "snippet": "Check your driver app to see your breakdown. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-06-30T21:04:20.900484+00:00",
+      "fetchedAt": "2026-06-30T22:04:23.637057+00:00",
       "category": "payment",
-      "categoryReason": "Uber weekly fare breakdown notification (driver earnings breakdown).",
+      "categoryReason": "Uber weekly fare breakdown available; relates to earnings/payout reporting.",
       "actionable": false
     },
     {
@@ -115,9 +141,9 @@
       "date": "Tue, 30 Jun 2026 16:58:02 +0000",
       "snippet": "Meet the 4 new Omni apps — Drone Cam, Hyperzoom, and more Artlist What&#39;s new on Artlist New models. New apps. More ways to create. Omni Flash Gemini Omni Flash is live Google&#39;s brand-new,",
       "unread": true,
-      "fetchedAt": "2026-06-30T21:04:21.008207+00:00",
-      "category": "label-business",
-      "categoryReason": "Artlist newsletter about new features/apps and availability; label-related tool/update.",
+      "fetchedAt": "2026-06-30T22:04:23.748942+00:00",
+      "category": "spam",
+      "categoryReason": "Artlist product announcement/marketing email (“new Omni apps are live”).",
       "actionable": false
     },
     {
@@ -128,9 +154,9 @@
       "date": "Tue, 30 Jun 2026 13:05:38 -0700",
       "snippet": "But there&#39;s still room for the best ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-06-30T21:04:21.152216+00:00",
+      "fetchedAt": "2026-06-30T22:04:23.887060+00:00",
       "category": "newsletter",
-      "categoryReason": "Impact Theory newsletter-style email about a topic (“AI killed the expert”); no direct action requested.",
+      "categoryReason": "Impact Theory email (“AI killed the expert”); informational newsletter-style content.",
       "actionable": false
     },
     {
@@ -141,9 +167,9 @@
       "date": "Tue, 30 Jun 2026 19:43:16 +0000",
       "snippet": "Trending now: Christmas lights SVG PNG vector bundle, I Just Want to Drink Hot Cocoa and Watch Christmas Movies &amp; more‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ Today&#39;s Top Picks for You",
       "unread": true,
-      "fetchedAt": "2026-06-30T21:04:21.286273+00:00",
-      "category": "newsletter",
-      "categoryReason": "Creative Fabrica free picks/trending bundle recommendation newsletter.",
+      "fetchedAt": "2026-06-30T22:04:23.988256+00:00",
+      "category": "spam",
+      "categoryReason": "Creative Fabrica promotional email with free picks.",
       "actionable": false
     },
     {
@@ -154,9 +180,9 @@
       "date": "Tue, 30 Jun 2026 19:36:16 +0000",
       "snippet": "View your payment details. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-06-30T21:04:21.414456+00:00",
+      "fetchedAt": "2026-06-30T22:04:24.101257+00:00",
       "category": "payment",
-      "categoryReason": "Capital One payment confirmation (“We’ve received your payment”).",
+      "categoryReason": "Capital One payment received notification; payment confirmation.",
       "actionable": false
     },
     {
@@ -167,10 +193,11 @@
       "date": "Tue, 30 Jun 2026 19:34:42 +0000 (GMT)",
       "snippet": "Hey Eric, If you missed today&#39;s class with SEIDS, don&#39;t worry. The session was packed with practical advice on how musicians can use social media to get more gigs, clients, and opportunities.",
       "unread": true,
-      "fetchedAt": "2026-06-30T21:04:21.527548+00:00",
-      "category": "newsletter",
-      "categoryReason": "Mastering.com social media masterclass promotional email for musicians; informational/marketing.",
-      "actionable": false
+      "fetchedAt": "2026-06-30T22:04:24.238182+00:00",
+      "category": "dj-booking",
+      "categoryReason": "Mastering.com social media masterclass mentions musicians using social to get gigs; could relate to DJ career opportunities (content offered, not a pure personal account).",
+      "actionable": true,
+      "actionExtracted": false
     },
     {
       "id": "19f1a069b3b8d0c7",
@@ -180,9 +207,9 @@
       "date": "Tue, 30 Jun 2026 19:34:25 +0000",
       "snippet": "Launched last week: The Godmother of AI reveals why what comes next for AI is more important than you think. ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌",
       "unread": true,
-      "fetchedAt": "2026-06-30T21:04:21.622145+00:00",
+      "fetchedAt": "2026-06-30T22:04:24.366116+00:00",
       "category": "newsletter",
-      "categoryReason": "MasterClass promotional content about an AI class; marketing/newsletter.",
+      "categoryReason": "MasterClass promotional newsletter about AI class; info-only.",
       "actionable": false
     },
     {
@@ -193,9 +220,9 @@
       "date": "Tue, 30 Jun 2026 19:32:04 +0000",
       "snippet": "Deposits may be delayed. ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏",
       "unread": true,
-      "fetchedAt": "2026-06-30T21:04:21.949777+00:00",
-      "category": "personal",
-      "categoryReason": "Bank holiday notice affecting deposits; not related to DJ/label actions.",
+      "fetchedAt": "2026-06-30T22:04:24.472102+00:00",
+      "category": "payment",
+      "categoryReason": "Atlas Mastercard notice about bank holiday potentially affecting deposits; payment-related account notification.",
       "actionable": false
     },
     {
@@ -206,9 +233,9 @@
       "date": "Tue, 30 Jun 2026 19:24:49 +0000",
       "snippet": "Get your first year for 50¢ a week. The Washington Post Exclusive Trump is using a $500M no-bid contract to build his White House ballroom The White House routed a $500 million no-bid contract through",
       "unread": true,
-      "fetchedAt": "2026-06-30T21:04:22.064170+00:00",
+      "fetchedAt": "2026-06-30T22:04:24.578178+00:00",
       "category": "newsletter",
-      "categoryReason": "Washington Post article/news alert; info-only.",
+      "categoryReason": "Washington Post promotional subscription/press email; informational marketing.",
       "actionable": false
     },
     {
@@ -219,9 +246,9 @@
       "date": "Tue, 30 Jun 2026 19:07:34 +0000",
       "snippet": "Save now: 50% off HY2ROGEN + an exclusive Latin Tech bundle offer | No images? Loopmasters Limited Unit 13, Level 6, New England House New England Street, Brighton, BN1 4GH, United Kingdom. All",
       "unread": true,
-      "fetchedAt": "2026-06-30T21:04:22.172933+00:00",
-      "category": "newsletter",
-      "categoryReason": "Loopmasters promotional email with discount for a sample pack/bundle.",
+      "fetchedAt": "2026-06-30T22:04:24.710925+00:00",
+      "category": "spam",
+      "categoryReason": "Loopmasters promotional discount/deal email.",
       "actionable": false
     },
     {
@@ -232,9 +259,9 @@
       "date": "Tue, 30 Jun 2026 11:43:19 -0600",
       "snippet": "Eternity awaits. Tickets and packages are on sale now. View Online Universal Studios Hollywood Halloween Horror Nights An illustration of Pinhead from “HELLRAISER” with a gold puzzle box, chains and",
       "unread": true,
-      "fetchedAt": "2026-06-30T21:04:22.296118+00:00",
-      "category": "newsletter",
-      "categoryReason": "Universal Studios Halloween Horror Nights ticket promotion.",
+      "fetchedAt": "2026-06-30T22:04:24.829833+00:00",
+      "category": "spam",
+      "categoryReason": "Universal Studios Hollywood ticket/package sale promotion.",
       "actionable": false
     },
     {
@@ -245,9 +272,9 @@
       "date": "Tue, 30 Jun 2026 18:44:10 +0000",
       "snippet": "Pickless blues meets sacred steel this August... ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-06-30T21:04:22.399682+00:00",
+      "fetchedAt": "2026-06-30T22:04:24.925452+00:00",
       "category": "dj-booking",
-      "categoryReason": "Email from Marty Schwartz about a “Mountain Retreat” headliner announcement; likely a performance booking opportunity.",
+      "categoryReason": "Headliner announcement for “Mountain Retreat” suggests an event booking/performance context; may require response/confirmation.",
       "actionable": true,
       "actionExtracted": false
     },
@@ -259,9 +286,9 @@
       "date": "Tue, 30 Jun 2026 18:40:57 +0000 (UTC)",
       "snippet": "Your Klarna balance needs action now We&#39;re here to help you resolve this We&#39;re working with Klarna to help you resolve your outstanding account. Hi Eric, You&#39;re receiving this message",
       "unread": true,
-      "fetchedAt": "2026-06-30T21:04:22.523022+00:00",
+      "fetchedAt": "2026-06-30T22:04:25.031072+00:00",
       "category": "spam",
-      "categoryReason": "Debt/collections-style message claiming “Klarna balance needs action now”; could be legitimate but is framed as urgent account action—treat as potential scam without verification.",
+      "categoryReason": "InDebted/collections-style message referencing Klarna balance needing action; likely urgent account action and could be phishing/needs verification.",
       "actionable": true,
       "actionExtracted": false
     },
@@ -273,9 +300,9 @@
       "date": "Tue, 30 Jun 2026 18:35:59 +0000 (UTC)",
       "snippet": "Prep for an epic 4th of July party. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-06-30T21:04:22.647768+00:00",
-      "category": "newsletter",
-      "categoryReason": "Thumbtack lead/marketing email about planning an event; not a direct booking request to DJ.",
+      "fetchedAt": "2026-06-30T22:04:25.161509+00:00",
+      "category": "spam",
+      "categoryReason": "Thumbtack promotional email about preparing for a party; marketing.",
       "actionable": false
     },
     {
@@ -286,9 +313,9 @@
       "date": "Tue, 30 Jun 2026 18:28:34 +0000",
       "snippet": "You are Ready to Continue Hi there, Thanks for your application. Our team has finished review of your application and would like to let you know that your account is live. Log on to your account and",
       "unread": true,
-      "fetchedAt": "2026-06-30T21:04:22.773669+00:00",
+      "fetchedAt": "2026-06-30T22:04:25.312440+00:00",
       "category": "personal",
-      "categoryReason": "Cashlantic account application “Next steps to confirm your info”; account onboarding/verification.",
+      "categoryReason": "Cashlantic account/application next steps; account verification process (non-dj, not label/payment notification from employer).",
       "actionable": true,
       "actionExtracted": false
     },
@@ -300,38 +327,11 @@
       "date": "Tue, 30 Jun 2026 18:28:23 +0000",
       "snippet": "Help us protect your account. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-06-30T21:04:22.870841+00:00",
-      "category": "spam",
-      "categoryReason": "Capital One security alert about signing in from a new device; may require action (verification) and should be treated cautiously.",
+      "fetchedAt": "2026-06-30T22:04:25.422627+00:00",
+      "category": "payment",
+      "categoryReason": "Capital One security alert about signing in from a new device; requires user action/verification.",
       "actionable": true,
       "actionExtracted": false
-    },
-    {
-      "id": "19f19c92cb55cac1",
-      "threadId": "19f19c92cb55cac1",
-      "from": "Capital One <capitalone@notification.capitalone.com>",
-      "subject": "Your new device is registered for mobile app verification",
-      "date": "Tue, 30 Jun 2026 18:27:21 +0000",
-      "snippet": "Here&#39;s why that&#39;s important. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
-      "unread": true,
-      "fetchedAt": "2026-06-30T21:04:22.993405+00:00",
-      "category": "spam",
-      "categoryReason": "Capital One verification notice for a new device; likely requires app verification and is security-sensitive.",
-      "actionable": true,
-      "actionExtracted": false
-    },
-    {
-      "id": "19f19c8a0c640b60",
-      "threadId": "19f19c8a0c640b60",
-      "from": "SpareRoom <news@spareroom.com>",
-      "subject": "New roommate hotspots",
-      "date": "Tue, 30 Jun 2026 16:59:10 +0000 (UTC)",
-      "snippet": "Where renters are heading ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
-      "unread": true,
-      "fetchedAt": "2026-06-30T21:04:23.092930+00:00",
-      "category": "personal",
-      "categoryReason": "SpareRoom roommate hotspot update; personal housing newsletter/info.",
-      "actionable": false
     }
   ]
 }
