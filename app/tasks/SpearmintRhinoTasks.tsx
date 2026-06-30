@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import FeatureShows from "./FeatureShows";
 
 interface Task {
   id: string;
@@ -34,6 +35,7 @@ export default function SpearmintRhinoTasks() {
   const [showModal, setShowModal] = useState(false);
   const [editTask, setEditTask] = useState<Task | null>(null);
   const [form, setForm] = useState({ text: "", category: "Setup", priority: "medium", due_date: "" });
+  const [subview, setSubview] = useState<"tasks" | "feature-shows">("tasks");
 
   useEffect(() => {
     fetch("/api/srb-todo").then(r => r.json()).then(data => {
@@ -121,6 +123,46 @@ export default function SpearmintRhinoTasks() {
 
   return (
     <div>
+      {/* SRB Subtab Nav: Tasks | Feature Shows */}
+      <div style={{ display: "flex", gap: 0, marginBottom: 20, borderBottom: "1px solid var(--border)" }}>
+        <button
+          onClick={() => setSubview("tasks")}
+          style={{
+            padding: "8px 18px",
+            background: "transparent",
+            border: "none",
+            borderBottom: subview === "tasks" ? "2px solid var(--accent)" : "2px solid transparent",
+            color: subview === "tasks" ? "var(--accent2)" : "var(--muted)",
+            fontWeight: subview === "tasks" ? 700 : 400,
+            fontSize: "0.85rem",
+            cursor: "pointer",
+            transition: "all 0.15s",
+          }}
+        >
+          📋 Club To-Do List
+        </button>
+        <button
+          onClick={() => setSubview("feature-shows")}
+          style={{
+            padding: "8px 18px",
+            background: "transparent",
+            border: "none",
+            borderBottom: subview === "feature-shows" ? "2px solid var(--accent)" : "2px solid transparent",
+            color: subview === "feature-shows" ? "var(--accent2)" : "var(--muted)",
+            fontWeight: subview === "feature-shows" ? 700 : 400,
+            fontSize: "0.85rem",
+            cursor: "pointer",
+            transition: "all 0.15s",
+          }}
+        >
+          🎭 Feature Shows
+        </button>
+      </div>
+
+      {subview === "feature-shows" && <FeatureShows />}
+
+      {subview === "tasks" && (
+      <>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
         <h2 style={{ fontSize: "1.2rem", fontWeight: 700, color: "var(--accent)", margin: 0 }}>Club To-Do List</h2>
         <span style={{ fontSize: "0.85rem", color: "var(--muted)" }}>{done} / {tasks.length} done {saving && "· saving..."}</span>
@@ -197,6 +239,9 @@ export default function SpearmintRhinoTasks() {
             );
           })}
         </div>
+      )}
+
+      </>
       )}
 
       {showModal && (
