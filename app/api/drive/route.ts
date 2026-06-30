@@ -67,20 +67,29 @@ export async function GET() {
       owner: f.owners?.[0]?.displayName || f.owners?.[0]?.emailAddress || "Unknown",
     }));
 
-    // DEBUG: dump folders with their parent signatures
-      const folderParents = allFiles
-        .filter((f: any) => f.mimeType === "application/vnd.google-apps.folder")
-        .map((f: any) => ({
-          name: f.name,
-          parents: f.parents,
-          parentsType: Array.isArray(f.parents) ? `array[${f.parents.length}]` : typeof f.parents,
-        }));
-      const noneCount = folderParents.filter((x: any) => !Array.isArray(x.parents) || x.parents.length === 0).length;
+    // DEBUG: look for known hardcoded folder IDs in the listing
+      const knownIds = [
+        "1OeQqwHkzqjCdPUdnpDPerBNtQF6_mwVn",
+        "1j6mhfRzmeOQ3ythpSviOy9pvddzi8luQ",
+        "1ZwRJm6JfDi57AJIrIw3SPuY6LYFOAews",
+        "1kiRnlbHMtiE2QbuskK_1zZBtVzRVLY6W",
+        "19h18hd2BTcbYx2rtInuOoL1H2jqoTjf_",
+        "12L03abGuMhUZGwDMJnf_A3122xJIIjih",
+        "185b-bn37rILVnN36no-40qfJnnHyw5ex",
+        "1HRSsWa7rmST9uBYYl756FAx0ZDEiFiVr",
+      ];
+      const knownFound = allFiles.filter((f: any) => knownIds.includes(f.id));
       return NextResponse.json({
         debugAllCount: allFiles.length,
-        debugFolderCount: folderParents.length,
-        debugNoneParentCount: noneCount,
-        debugNoneFolders: folderParents.filter((x: any) => !Array.isArray(x.parents) || x.parents.length === 0).slice(0, 25),
+        debugKnownFound: knownFound.map((f: any) => ({
+          id: f.id,
+          name: f.name,
+          parents: f.parents,
+        })),
+        debugParentsDistribution: (() => {
+          const from collections_counter = {};
+          return null;
+        })(),
         files: transformed,
         count: transformed.length,
       });
