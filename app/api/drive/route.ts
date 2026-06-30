@@ -86,10 +86,6 @@ export async function GET() {
           name: f.name,
           parents: f.parents,
         })),
-        debugParentsDistribution: (() => {
-          const from collections_counter = {};
-          return null;
-        })(),
         files: transformed,
         count: transformed.length,
       });
