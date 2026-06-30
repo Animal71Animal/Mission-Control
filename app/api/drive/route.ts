@@ -1,104 +1,124 @@
-import { NextResponse } from "next/server";
-import { google } from "googleapis";
+import { NextRequest, NextResponse } from 'next/server';
 
-const SCOPES = ["https://www.googleapis.com/auth/drive.readonly"];
+import { getDriveService } from '@/lib/drive-auth';
 
-interface DriveFileData {
-  id?: string | null;
-  name?: string | null;
-  mimeType?: string | null;
-  modifiedTime?: string | null;
-  size?: string | null;
-  webViewLink?: string | null;
-  shared?: boolean | null;
-  owners?: Array<{ displayName?: string | null; emailAddress?: string | null }> | null;
-  parents?: string[] | null;
+const FOLDER_MIME_TYPE = 'application/vnd.google-apps.folder';
+const DRIVE_FIELDS = 'files(id,name,mimeType,modifiedTime,webViewLink,shared,owners(displayName,emailAddress))';
+
+type GoogleApiError = {
+  code?: number;
+  status?: number;
+  message?: string;
+  response?: {
+    status?: number;
+    data?: unknown;
+  };
+};
+
+type DriveOwner = {
+  displayName?: string | null;
+  emailAddress?: string | null;
+};
+
+function redactErrorMessage(message: string) {
+  return message.replace(/\{[\s\S]*\}/g, '[redacted]');
 }
 
-// Initialize auth with service account
-function getAuth() {
-  const serviceAccountJson = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
+function getErrorCode(error: unknown) {
+  const typed = error as GoogleApiError | undefined;
+  return typed?.code ?? typed?.status ?? typed?.response?.status;
+}
 
-  if (!serviceAccountJson) {
-    throw new Error("GOOGLE_SERVICE_ACCOUNT_JSON environment variable not set");
+function isAuthError(error: unknown) {
+  const code = getErrorCode(error);
+  const message = error instanceof Error ? error.message : String(error ?? '');
+
+  return (
+    code === 401 ||
+    code === 403 ||
+    message.includes('DRIVE_TOKEN_JSON') ||
+    message.includes('invalid_grant') ||
+    message.includes('invalid_client') ||
+    message.includes('unauthorized')
+  );
+}
+
+function formatOwner(owner?: DriveOwner | null) {
+  const displayName = owner?.displayName?.trim();
+  const emailAddress = owner?.emailAddress?.trim();
+
+  if (displayName && emailAddress) {
+    return `${displayName} / ${emailAddress}`;
   }
 
-  const credentials = JSON.parse(serviceAccountJson);
-
-  return new google.auth.GoogleAuth({
-    credentials,
-    scopes: SCOPES,
-  });
+  return displayName || emailAddress || null;
 }
 
-// GET /api/drive
-export async function GET() {
+export async function GET(request: NextRequest) {
+  const folderId = request.nextUrl.searchParams.get('folderId') || 'root';
+
   try {
-    const auth = getAuth();
-    const drive = google.drive({ version: "v3", auth });
+    const drive = await getDriveService();
 
-    // Enumerate all folders the service account can see, then keep only those
-    // at Drive root (parents is empty/missing — for personal Drive this is how
-    // the API represents top-level folders, NOT the literal string "root").
-    // Auto-reflects any folder Eric creates/renames/deletes — no hardcoded IDs.
-    const listResponse = await drive.files.list({
-      q: "mimeType='application/vnd.google-apps.folder' and trashed=false",
-      fields: "files(id, name, mimeType, modifiedTime, webViewLink, shared, owners, parents)",
-      pageSize: 1000,
-      orderBy: "name",
-    });
+    if (folderId !== 'root') {
+      try {
+        const folderResponse = await drive.files.get({
+          fileId: folderId,
+          fields: 'id,name,mimeType',
+        });
 
-    const allFiles: DriveFileData[] = (listResponse.data.files || []) as DriveFileData[];
+        if (!folderResponse.data.id || folderResponse.data.mimeType !== FOLDER_MIME_TYPE) {
+          return NextResponse.json({ error: 'Folder not found' }, { status: 404 });
+        }
+      } catch (error) {
+        if (getErrorCode(error) === 404) {
+          return NextResponse.json({ error: 'Folder not found' }, { status: 404 });
+        }
 
-    // Root-level folders: those with no parents array.
-    const rootFolders = allFiles.filter(
-      (f: any) => !Array.isArray(f.parents) || f.parents.length === 0
+        throw error;
+      }
+    }
+
+    const response = await drive.files.list(
+      folderId === 'root'
+        ? {
+            q: `mimeType='${FOLDER_MIME_TYPE}' and trashed=false`,
+            corpora: 'user',
+            pageSize: 1000,
+            fields: DRIVE_FIELDS,
+            orderBy: 'name',
+          }
+        : {
+            q: `mimeType='${FOLDER_MIME_TYPE}' and trashed=false and '${folderId}' in parents`,
+            pageSize: 1000,
+            fields: DRIVE_FIELDS,
+            orderBy: 'name',
+          },
     );
 
-    // Transform to our format
-    const transformed = rootFolders.map((f) => ({
-      id: f.id,
-      name: f.name,
-      type: "folder",
-      mimeType: f.mimeType,
-      modifiedTime: f.modifiedTime,
-      webViewLink: f.webViewLink,
-      shared: f.shared,
-      owner: f.owners?.[0]?.displayName || f.owners?.[0]?.emailAddress || "Unknown",
+    const folders = (response.data.files || []).map((folder) => ({
+      id: folder.id || '',
+      name: folder.name || 'Untitled folder',
+      modifiedTime: folder.modifiedTime || null,
+      webViewLink: folder.webViewLink || null,
+      shared: Boolean(folder.shared),
+      owner: formatOwner(folder.owners?.[0]),
     }));
 
-    // Try alternative: list with different corpora settings
-      const listResponse2 = await drive.files.list({
-        q: "'root' in parents and mimeType='application/vnd.google-apps.folder' and trashed=false",
-        fields: "files(id, name, mimeType, modifiedTime, webViewLink, shared, owners, parents)",
-        pageSize: 100,
-        orderBy: "name",
-        corpora: "user",
-      });
-      const listResponse3 = await drive.files.list({
-        q: "'root' in parents and mimeType='application/vnd.google-apps.folder' and trashed=false",
-        fields: "files(id, name, parents)",
-        pageSize: 100,
-      }).catch((e) => ({ data: { files: [], error: e.message } }));
-      return NextResponse.json({
-        debugAllCount: allFiles.length,
-        debugCorporaUser: listResponse2.data.files?.length || 0,
-        debugCorporaUserSample: (listResponse2.data.files || []).slice(0, 5).map((f: any) => ({ id: f.id, name: f.name, parents: f.parents })),
-        debugPlainRoot: listResponse3.data.files?.length || 0,
-        debugPlainRootSample: (listResponse3.data.files || []).slice(0, 5).map((f: any) => ({ id: f.id, name: f.name, parents: f.parents })),
-        files: transformed,
-        count: transformed.length,
-      });
-  } catch (error) {
-    console.error("Drive fetch error:", error);
     return NextResponse.json({
-      error: "Failed to fetch Drive files",
-      details: error instanceof Error ? error.message : String(error),
-    }, { status: 500 });
-  }
-}
+      folders,
+      parentId: folderId,
+      source: 'drive',
+    });
+  } catch (error) {
+    const message = error instanceof Error
+      ? redactErrorMessage(error.message)
+      : 'Failed to fetch Drive folders';
 
-// POST /api/drive - Upload file (future)
-export async function POST() {
-  return NextResponse.json({ error: "Upload not implemented yet" }, { status: 501 });
+    if (isAuthError(error)) {
+      return NextResponse.json({ error: message }, { status: 401 });
+    }
+
+    return NextResponse.json({ error: message }, { status: 500 });
+  }
 }
