@@ -36,12 +36,13 @@ export async function GET() {
     const auth = getAuth();
     const drive = google.drive({ version: "v3", auth });
 
-    // DEBUG 2: just root-level folders
+    // DEBUG 3: get all folders with parents, plus about.get to find rootFolderId
     const listResponse = await drive.files.list({
-      q: "'root' in parents and mimeType='application/vnd.google-apps.folder' and trashed=false",
-      fields: "files(id, name, mimeType, parents, shared, owners(emailAddress,displayName))",
-      pageSize: 100,
+      q: "mimeType='application/vnd.google-apps.folder' and trashed=false",
+      fields: "files(id, name, mimeType, parents, shared, owners(emailAddress,displayName), driveId)",
+      pageSize: 1000,
     });
+    const aboutResp = await drive.about.get({ fields: "user, storageQuota, rootFolderId, driveId" }).catch(() => null);
 
     const allFiles: DriveFileData[] = (listResponse.data.files || []) as DriveFileData[];
 
@@ -64,9 +65,11 @@ export async function GET() {
         name: f.name,
         mimeType: f.mimeType,
         parents: f.parents,
+        driveId: f.driveId,
         ownerEmail: f.owners?.[0]?.emailAddress,
         ownerName: f.owners?.[0]?.displayName,
       })),
+      about: aboutResp?.data || null,
       files: transformed,
       count: transformed.length,
     });
