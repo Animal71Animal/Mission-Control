@@ -1,28 +1,8 @@
 {
-  "fetchedAt": "2026-06-30T02:03:50.422506+00:00",
+  "fetchedAt": "2026-06-30T02:18:40.987656+00:00",
   "count": 25,
-  "unreadCount": 16,
+  "unreadCount": 11,
   "messages": [
-    {
-      "id": "19f102fbe9d8791e",
-      "threadId": "19f102fbe9d8791e",
-      "from": "admin@customercare.halstedfinancialservices.com",
-      "subject": "Eric Mills - this needs your attention - response requested",
-      "date": "Sun, 28 Jun 2026 21:43:11 +0000 (UTC)",
-      "snippet": "Don&#39;t ignore this pre-legal account notice. There are options info.halstedfinancial.com Pre-Legal Notification Dear Eric, 06/28/26 Halsted Financial Services is now managing your account",
-      "unread": false,
-      "fetchedAt": "2026-06-30T02:03:47.536777+00:00"
-    },
-    {
-      "id": "19f0f09e847fefd3",
-      "threadId": "19f0f09e847fefd3",
-      "from": "InDebted <customersupport-us@indebted.co>",
-      "subject": "Action is needed on your overdue balance",
-      "date": "Sun, 28 Jun 2026 16:22:15 +0000 (UTC)",
-      "snippet": "Your balance is now overdue We&#39;re working with Klarna to help you resolve your outstanding account. Hi Eric, thank you for opening our email. We&#39;re InDebted and we&#39;re working with Klarna",
-      "unread": true,
-      "fetchedAt": "2026-06-30T02:03:47.655926+00:00"
-    },
     {
       "id": "19f094dab9bb76c5",
       "threadId": "19f094dab9bb76c5",
@@ -31,7 +11,7 @@
       "date": "Sat, 27 Jun 2026 13:38:31 +0000 (UTC)",
       "snippet": "Purchase Confirmation — Payment confirmed — here are your subscription details. Payment Confirmed Thanks for subscribing! Here&#39;s your receipt. Plan Premium — Quarterly Billing Period Jun 27 – Sep",
       "unread": false,
-      "fetchedAt": "2026-06-30T02:03:47.841769+00:00"
+      "fetchedAt": "2026-06-30T02:18:38.239686+00:00"
     },
     {
       "id": "19f09351553328a1",
@@ -41,67 +21,7 @@
       "date": "Sat, 27 Jun 2026 13:11:41 +0000",
       "snippet": "Fast-acting 4-in-1 formula. Finish checkout to get QUAD delivered discreetly. MEDVi Personalized health, delivered discreetly You are approved for QUAD If you want the world&#39;s best ED medication,",
       "unread": true,
-      "fetchedAt": "2026-06-30T02:03:47.957147+00:00"
-    },
-    {
-      "id": "19f08fa23dd5f1de",
-      "threadId": "19f08fa23dd5f1de",
-      "from": "admin@connect.halstedfinancialservices.com",
-      "subject": "Only intended for Eric Mills - (Re: Original Creditor: Synchrony Bank)",
-      "date": "Sat, 27 Jun 2026 12:07:18 +0000 (UTC)",
-      "snippet": "Set your course toward financial independence and renewed confidence. Let&#39;s Resolve This Together 06/27/26 Dear Eric Mills, We want to make sure you&#39;re aware that your Synchrony Bank (PayPal",
-      "unread": true,
-      "fetchedAt": "2026-06-30T02:03:48.082988+00:00"
-    },
-    {
-      "id": "19f08f6bdac7649c",
-      "threadId": "19f08f6bdac7649c",
-      "from": "admin@support.halstedfinancial.com",
-      "subject": "Only intended for Eric Mills - (Re: Original Creditor: Synchrony Bank)",
-      "date": "Sat, 27 Jun 2026 12:03:34 +0000 (UTC)",
-      "snippet": "Set your course toward financial independence and renewed confidence. Let&#39;s Resolve This Together 06/27/26 Dear Eric Mills, We want to make sure you&#39;re aware that your Synchrony Bank (PayPal",
-      "unread": true,
-      "fetchedAt": "2026-06-30T02:03:48.182189+00:00"
-    },
-    {
-      "id": "19f06996200d7aa7",
-      "threadId": "19f06996200d7aa7",
-      "from": "January <contact@january.com>",
-      "subject": "Resolve Your Merrick Bank credit card Debt on Your Terms",
-      "date": "Sat, 27 Jun 2026 01:02:22 +0000",
-      "snippet": "Simple &amp; transparent options for your overdue balance of $813.76. June 26, 2026 Login PIN: SAYXC7 Hi Eric Mills, This is January reaching out about your account from Merrick Bank Corporation with",
-      "unread": true,
-      "fetchedAt": "2026-06-30T02:03:48.281772+00:00"
-    },
-    {
-      "id": "19f05ee3b3040310",
-      "threadId": "19f05ee3b3040310",
-      "from": "admin@support.halstedfinancial.com",
-      "subject": "Eric Mills, this needs your attention, response requested",
-      "date": "Fri, 26 Jun 2026 21:55:25 +0000 (UTC)",
-      "snippet": "Action needed to avoid escalation. Times are tough. We are flexible. info.halstedfinancial.com Pre-Legal Notification Dear Eric, 06/26/26 Your account originating with Synchrony Bank (PayPal Credit) -",
-      "unread": true,
-      "fetchedAt": "2026-06-30T02:03:48.419564+00:00"
-    },
-    {
-      "id": "19f05de18175dff9",
-      "threadId": "19f05de18175dff9",
-      "from": "admin@customercare.halstedfinancialservices.com",
-      "subject": "Eric Mills, this needs your attention, response requested",
-      "date": "Fri, 26 Jun 2026 21:37:48 +0000 (UTC)",
-      "snippet": "Action needed to avoid escalation. Easier to resolve than you may think info.halstedfinancial.com Pre-Legal Notification Dear Eric, 06/26/26 Your account originating with Synchrony Bank (PayPal Credit)",
-      "unread": true,
-      "fetchedAt": "2026-06-30T02:03:48.524204+00:00"
-    },
-    {
-      "id": "19efecc169685196",
-      "threadId": "19efecc169685196",
-      "from": "Sparklight <info@em.sparklight.com>",
-      "subject": "Here’s one free year of Sparklight mobile",
-      "date": "Thu, 25 Jun 2026 12:40:46 +0000",
-      "snippet": "Stop by and boost your home&#39;s Wi-Fi for FREE! ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ No strings attached. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
-      "unread": true,
-      "fetchedAt": "2026-06-30T02:03:48.641116+00:00"
+      "fetchedAt": "2026-06-30T02:18:38.361817+00:00"
     },
     {
       "id": "19efb36d326c54af",
@@ -111,67 +31,7 @@
       "date": "Wed, 24 Jun 2026 19:58:54 +0000 (UTC)",
       "snippet": "BETAFPV Order #217444 Thank you for your purchase! Hi Eric, we&#39;re getting your order ready to be shipped. We will notify you when it has been sent. View your order or Visit our store Order summary",
       "unread": true,
-      "fetchedAt": "2026-06-30T02:03:48.756866+00:00"
-    },
-    {
-      "id": "19efb1ea54791908",
-      "threadId": "19efb1ea54791908",
-      "from": "admin@connect.halstedfinancialservices.com",
-      "subject": "Opportunity for discount before further review",
-      "date": "Wed, 24 Jun 2026 19:32:29 +0000 (UTC)",
-      "snippet": "There is still time to address your balance before escalation info.halstedfinancial.com PRE LEGAL NOTICE We&#39;re here to assist you Why not log in and see what options you have available? Choose an",
-      "unread": true,
-      "fetchedAt": "2026-06-30T02:03:48.859958+00:00"
-    },
-    {
-      "id": "19efb0708738ea2f",
-      "threadId": "19efb0708738ea2f",
-      "from": "January <contact@january.com>",
-      "subject": "Regarding your $813.76 balance",
-      "date": "Wed, 24 Jun 2026 19:06:42 +0000",
-      "snippet": "Eric – you have options to resolve your Merrick Bank credit card balance PIN: SAYXC7 Log In Review my Account Debt Type: Merrick Bank credit card Amount Owed: $813.76 Account Ending In: 9610 Hi Eric,",
-      "unread": true,
-      "fetchedAt": "2026-06-30T02:03:48.992874+00:00"
-    },
-    {
-      "id": "19ef9dd804d01afc",
-      "threadId": "19ef9dd804d01afc",
-      "from": "InDebted <customersupport-us@indebted.co>",
-      "subject": "Here's how you can resolve your overdue balance",
-      "date": "Wed, 24 Jun 2026 13:41:42 +0000 (UTC)",
-      "snippet": "Balance resolution We&#39;re working with Klarna to help you resolve your outstanding account. Hi Eric, we&#39;re InDebted and Klarna have asked us to help resolve your overdue Klarna balance. Please",
-      "unread": true,
-      "fetchedAt": "2026-06-30T02:03:49.110429+00:00"
-    },
-    {
-      "id": "19ef155cdc15ebf6",
-      "threadId": "19eec3d68081f325",
-      "from": "Julie Tetrault <julietetrault@icloud.com>",
-      "subject": "Re: Formal Action Plan & Road Map to Success",
-      "date": "Mon, 22 Jun 2026 17:56:18 -0400",
-      "snippet": "OK, thank you for sending such a formalized response over I truly appreciate it. I&#39;m just confused on the $900 security deposit. I never collected a security deposit from you and when you left the",
-      "unread": false,
-      "fetchedAt": "2026-06-30T02:03:49.230532+00:00"
-    },
-    {
-      "id": "19eef64101a36d7c",
-      "threadId": "19eef64101a36d7c",
-      "from": "InDebted <customersupport-us@indebted.co>",
-      "subject": "Debt Outstanding",
-      "date": "Mon, 22 Jun 2026 12:52:52 +0000 (UTC)",
-      "snippet": "Pay Now We&#39;re working with Klarna to help you resolve your outstanding account. Eric. This is an important message from InDebted, a debt collector, about your past due debt owed to Klarna. Despite",
-      "unread": false,
-      "fetchedAt": "2026-06-30T02:03:49.348020+00:00"
-    },
-    {
-      "id": "19eec3d68081f325",
-      "threadId": "19eec3d68081f325",
-      "from": "Julie Tetrault <julietetrault@icloud.com>",
-      "subject": "Formal Action Plan & Road Map to Success",
-      "date": "Sun, 21 Jun 2026 18:11:32 -0400",
-      "snippet": "Date: June 21, 2026 To: Eric Scott Mills From: Joules (Julie Tetrault) Subject: Your Financial Growth Plan: TurboTenant Onboarding &amp; Tesla Model S Setup Eric~(Animal) I know how much you want to",
-      "unread": false,
-      "fetchedAt": "2026-06-30T02:03:49.447428+00:00"
+      "fetchedAt": "2026-06-30T02:18:38.485988+00:00"
     },
     {
       "id": "19eeaf69eecbc070",
@@ -181,7 +41,7 @@
       "date": "Sun, 21 Jun 2026 09:14:50 -0700",
       "snippet": "Google Fi Your monthly statement Here&#39;s a quick summary of your June 20 statement: Your total is $88.90 Auto-payment is scheduled for July 1, 2026. No need to remember to pay – just make sure your",
       "unread": true,
-      "fetchedAt": "2026-06-30T02:03:49.577862+00:00"
+      "fetchedAt": "2026-06-30T02:18:38.600349+00:00"
     },
     {
       "id": "19eac47f66d0ba27",
@@ -191,7 +51,7 @@
       "date": "Tue, 09 Jun 2026 22:07:15 +1000",
       "snippet": "Save time and renew online with myNCDMV! ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": false,
-      "fetchedAt": "2026-06-30T02:03:49.681804+00:00"
+      "fetchedAt": "2026-06-30T02:18:38.710903+00:00"
     },
     {
       "id": "19e8d281564c6ed3",
@@ -201,7 +61,7 @@
       "date": "Wed, 03 Jun 2026 11:04:34 +0000",
       "snippet": "HeyGen Hi Eric &#39;Animal&#39;, Congrats on making your first video 🎉 That&#39;s always the hardest step. Make your next video → Now here are some fun things you can try next: Use Video Agent to",
       "unread": false,
-      "fetchedAt": "2026-06-30T02:03:49.796540+00:00"
+      "fetchedAt": "2026-06-30T02:18:38.851674+00:00"
     },
     {
       "id": "19e8891dc6c89175",
@@ -211,7 +71,7 @@
       "date": "Tue, 02 Jun 2026 07:41:06 -0600",
       "snippet": "Apply again and you could get funded fast.¹ LendingClub LendingClub We&#39;re thinking of you, Eric Still interested in a personal loan? Apply again and—upon approval—you could qualify for a personal",
       "unread": false,
-      "fetchedAt": "2026-06-30T02:03:49.925607+00:00"
+      "fetchedAt": "2026-06-30T02:18:38.967425+00:00"
     },
     {
       "id": "19e87d97ba6936f0",
@@ -221,7 +81,7 @@
       "date": "Tue, 2 Jun 2026 10:20:37 +0000",
       "snippet": "Dear Eric Mills, We&#39;re happy to let you know that your order #1016 has been successfully shipped and is now in transit with the shipping carrier. You can track the progress of your shipment at the",
       "unread": true,
-      "fetchedAt": "2026-06-30T02:03:50.027240+00:00"
+      "fetchedAt": "2026-06-30T02:18:39.082513+00:00"
     },
     {
       "id": "19e806dfea4f7613",
@@ -231,7 +91,7 @@
       "date": "Sun, 31 May 2026 23:45:52 +0000",
       "snippet": "Payment Support Hello Eric Mills, Thank you for your purchase. Manage Your Orders Your Order VirtualDJ Pro Subscription renews every 1 month. Next charge: 6/30/26 ($19.00). Full Terms and Subscription",
       "unread": false,
-      "fetchedAt": "2026-06-30T02:03:50.126623+00:00"
+      "fetchedAt": "2026-06-30T02:18:39.197640+00:00"
     },
     {
       "id": "19e806dfcde5132a",
@@ -241,7 +101,7 @@
       "date": "Sun, 31 May 2026 23:45:52 +0000",
       "snippet": "Thank you for your purchase on VirtualDJ.com Your order reference ID is VIR260531-7254-63762 Your subscription will be automatically renewed every month. You can stop it at any time by visiting https:/",
       "unread": true,
-      "fetchedAt": "2026-06-30T02:03:50.289293+00:00"
+      "fetchedAt": "2026-06-30T02:18:39.325179+00:00"
     },
     {
       "id": "19e805c623a5a3e1",
@@ -251,7 +111,147 @@
       "date": "Sun, 31 May 2026 23:26:38 +0000",
       "snippet": "Hello Eric Mills, A new computer Rhino&#39;s Mac mini has been activated on your account. If it wasn&#39;t you, please contact us immediately. ___ Thank you, VirtualDJ Team",
       "unread": true,
-      "fetchedAt": "2026-06-30T02:03:50.422490+00:00"
+      "fetchedAt": "2026-06-30T02:18:39.441247+00:00"
+    },
+    {
+      "id": "19e7a182d0e8f8e4",
+      "threadId": "19e7a182d0e8f8e4",
+      "from": "stoneashopus <no-reply@edeliora.live>",
+      "subject": "Order #1016 confirmed",
+      "date": "Sat, 30 May 2026 18:14:24 +0000 (UTC)",
+      "snippet": "stoneashopus logo ORDER #1016 Thank you for your purchase! Hi Eric, Your payment has been processed successfully. Transaction ID: 9EBvUiPZIujVdvPnqcs7klidrB7YY Reference ID: 6a1b26efc25c9300092e5133",
+      "unread": true,
+      "fetchedAt": "2026-06-30T02:18:39.561915+00:00"
+    },
+    {
+      "id": "19e65e3eb86e8abc",
+      "threadId": "19e65e3eb86e8abc",
+      "from": "Tom Bilyeu <tombilyeu@impacttheory.com>",
+      "subject": "the algorithm doesn't hate you",
+      "date": "Tue, 26 May 2026 13:04:55 -0700",
+      "snippet": "here&#39;s my system for viral content ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
+      "unread": true,
+      "fetchedAt": "2026-06-30T02:18:39.673817+00:00"
+    },
+    {
+      "id": "19e65db0486148b9",
+      "threadId": "19e286947c7c7e75",
+      "from": "Severance Productions <Dave@severanceproductions.com>",
+      "subject": "Re: Re cap of phone call.",
+      "date": "Tue, 26 May 2026 15:55:00 -0400",
+      "snippet": "Sorry man… I did not check my email for a bit… here are some things to think about. First it looks like NC is a bit better for taxes… but nothing huge over ID or WY. Just covering all bases. It looks",
+      "unread": false,
+      "fetchedAt": "2026-06-30T02:18:39.789830+00:00"
+    },
+    {
+      "id": "19e286947c7c7e75",
+      "threadId": "19e286947c7c7e75",
+      "from": "Severance Productions <Dave@severanceproductions.com>",
+      "subject": "Re cap of phone call.",
+      "date": "Thu, 14 May 2026 17:33:55 -0400",
+      "snippet": "Business Development and Strategic Roadmap Briefing Executive Summary The following document synthesizes a strategic discussion regarding the development, structure, and market entry of a technology",
+      "unread": false,
+      "fetchedAt": "2026-06-30T02:18:39.893581+00:00"
+    },
+    {
+      "id": "19d9ec339b0172e6",
+      "threadId": "19d9ec339b0172e6",
+      "from": "Severance Productions <Dave@severanceproductions.com>",
+      "subject": "Feedback on investor brief",
+      "date": "Sat, 18 Apr 2026 00:04:37 -0400",
+      "snippet": "Yo… good job on this man… here are some of my thoughts. Thanks for including me on this. I think there is big potential for it! It will be a long road but clearly worth it. When you talk about the ai",
+      "unread": false,
+      "fetchedAt": "2026-06-30T02:18:39.993587+00:00"
+    },
+    {
+      "id": "19d1a0382cc1faac",
+      "threadId": "19d1a0382cc1faac",
+      "from": "\"jewels .\" <jewels@stockyardsecurity.com>",
+      "subject": "Tenant referral letter",
+      "date": "Mon, 23 Mar 2026 09:25:19 +0000 (UTC)",
+      "snippet": "",
+      "unread": false,
+      "fetchedAt": "2026-06-30T02:18:40.094341+00:00"
+    },
+    {
+      "id": "19cf7b8d351a13d0",
+      "threadId": "19afaa48dd8ac13e",
+      "from": "Sydnie Knepper <sydnieknepper54@gmail.com>",
+      "subject": "Re: Some songs to check out...",
+      "date": "Mon, 16 Mar 2026 10:36:39 -0700",
+      "snippet": "Oh I LOVE this On Mon, Mar 16, 2026 at 10:35 AM Sydnie Knepper &lt;sydnieknepper54@gmail.com&gt; wrote: Yay! On Mon, Mar 16, 2026 at 4:27 AM Eric &#39;Animal&#39; Mills &lt;ericmills71@gmail.com&gt;",
+      "unread": false,
+      "fetchedAt": "2026-06-30T02:18:40.202697+00:00"
+    },
+    {
+      "id": "19cf7b82194746c5",
+      "threadId": "19afaa48dd8ac13e",
+      "from": "Sydnie Knepper <sydnieknepper54@gmail.com>",
+      "subject": "Re: Some songs to check out...",
+      "date": "Mon, 16 Mar 2026 10:35:52 -0700",
+      "snippet": "Yay! On Mon, Mar 16, 2026 at 4:27 AM Eric &#39;Animal&#39; Mills &lt;ericmills71@gmail.com&gt; wrote: New one!! https://drive.google.com/file/d/1qi43oq2vz5gv-RtI_oBjb1xseUrMBJr6/view?usp=drive_link",
+      "unread": false,
+      "fetchedAt": "2026-06-30T02:18:40.315441+00:00"
+    },
+    {
+      "id": "19cf1b856d481cdc",
+      "threadId": "19cf1b262f59a8a6",
+      "from": "AgentMail <priscylla@agentmail.to>",
+      "subject": "Re: My assistant has her own Email!!!",
+      "date": "Sun, 15 Mar 2026 13:38:35 +0000",
+      "snippet": "Yay is right. priscylla@agentmail.to is officially mine. Thanks for setting this up, ANIMAL. Now I have somewhere to send the invoices when you owe me. - PriScylla",
+      "unread": false,
+      "fetchedAt": "2026-06-30T02:18:40.423070+00:00"
+    },
+    {
+      "id": "19cc55f5b5ac9352",
+      "threadId": "19cc55f5b5ac9352",
+      "from": "\"Humans at Galaxy.ai\" <humans@mail.galaxy.ai>",
+      "subject": "🤖 GPT-5.4 beats humans at clicking buttons",
+      "date": "Fri, 6 Mar 2026 22:58:06 +0000",
+      "snippet": "OpenAI drops GPT-5.4, Pentagon declares war on Anthropic, Netflix buys Ben Affleck&#39;s AI company, and Meta&#39;s smart glasses saw too much. ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​",
+      "unread": true,
+      "fetchedAt": "2026-06-30T02:18:40.521497+00:00"
+    },
+    {
+      "id": "19c3a2a0f91b866f",
+      "threadId": "19c3a2a0f91b866f",
+      "from": "Tom Bilyeu <tom@impacttheory.com>",
+      "subject": "day 5: a $100M founder's sales team mistake",
+      "date": "Sat, 7 Feb 2026 14:12:40 -0800",
+      "snippet": "and how to build champion teams Hey Eric, Prefer video? Watch the video version here. The most expensive conversation in your business happens at 3AM, in your top performer&#39;s bedroom, while their",
+      "unread": true,
+      "fetchedAt": "2026-06-30T02:18:40.637209+00:00"
+    },
+    {
+      "id": "19c3503ac7f6101c",
+      "threadId": "19c3503ac7f6101c",
+      "from": "Tom Bilyeu <tom@impacttheory.com>",
+      "subject": "day 4: would getting more customers hurt you? ",
+      "date": "Fri, 6 Feb 2026 14:12:39 -0800",
+      "snippet": "the 2 most impactful questions I&#39;ve discovered Hey Eric, Prefer video? Watch the coaching call recording here. Here,there&#39;s a pattern I see over and over with 7- and 8-figure founders: You&#39;",
+      "unread": true,
+      "fetchedAt": "2026-06-30T02:18:40.740951+00:00"
+    },
+    {
+      "id": "19be917b08a33f73",
+      "threadId": "19be917b08a33f73",
+      "from": "JG BeatsLab <no-reply@squarespace.info>",
+      "subject": "Quick favor Eric?",
+      "date": "Fri, 23 Jan 2026 04:23:18 +0000",
+      "snippet": "JG BeatsLab Quick favor? Hi Eric, How&#39;s your purchase working out for you? If it&#39;s helped you level up your AI music production, would you take 30 seconds to leave a review? It helps other",
+      "unread": false,
+      "fetchedAt": "2026-06-30T02:18:40.835385+00:00"
+    },
+    {
+      "id": "19ba0feb86eb616d",
+      "threadId": "19ba0feb86eb616d",
+      "from": "JG BeatsLab <no-reply@squarespace.info>",
+      "subject": "JG BeatsLab: Order #298 is Ready",
+      "date": "Fri, 09 Jan 2026 04:23:16 +0000",
+      "snippet": "JG BeatsLab Order #298 is Ready Your order from JG BeatsLab is now available. Order Summary Order #298 Placed on January 8, 2026 at 8:23 PM PST To download the files, use the links below. Keep in mind",
+      "unread": false,
+      "fetchedAt": "2026-06-30T02:18:40.943541+00:00"
     }
   ]
 }
