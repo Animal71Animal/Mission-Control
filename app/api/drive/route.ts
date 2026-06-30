@@ -67,17 +67,23 @@ export async function GET() {
       owner: f.owners?.[0]?.displayName || f.owners?.[0]?.emailAddress || "Unknown",
     }));
 
-    return NextResponse.json({
-      debugAllCount: allFiles.length,
-      debugRootCount: rootFolders.length,
-      debugSample: allFiles.slice(0, 5).map((f: any) => ({
-        name: f.name,
-        parents: f.parents,
-        parentsType: typeof f.parents,
-      })),
-      files: transformed,
-      count: transformed.length,
-    });
+    // DEBUG: dump folders with their parent signatures
+      const folderParents = allFiles
+        .filter((f: any) => f.mimeType === "application/vnd.google-apps.folder")
+        .map((f: any) => ({
+          name: f.name,
+          parents: f.parents,
+          parentsType: Array.isArray(f.parents) ? `array[${f.parents.length}]` : typeof f.parents,
+        }));
+      const noneCount = folderParents.filter((x: any) => !Array.isArray(x.parents) || x.parents.length === 0).length;
+      return NextResponse.json({
+        debugAllCount: allFiles.length,
+        debugFolderCount: folderParents.length,
+        debugNoneParentCount: noneCount,
+        debugNoneFolders: folderParents.filter((x: any) => !Array.isArray(x.parents) || x.parents.length === 0).slice(0, 25),
+        files: transformed,
+        count: transformed.length,
+      });
   } catch (error) {
     console.error("Drive fetch error:", error);
     return NextResponse.json({
