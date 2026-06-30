@@ -1,23 +1,8 @@
 {
   "fetchedAt": "2026-06-30T05:04:31.919137+00:00",
-  "count": 24,
-  "unreadCount": 13,
+  "count": 23,
+  "unreadCount": 12,
   "messages": [
-    {
-      "id": "19f16c06d5932b7a",
-      "threadId": "19f16c06d5932b7a",
-      "from": "Glauber Costa <glauber@turso.tech>",
-      "subject": "New on Turso: connect your agent, bring a friend, and more",
-      "date": "Tue, 30 Jun 2026 03:11:24 +0000",
-      "snippet": "Newsletter · June 2026 June gave us a few things worth celebrating. 🎉 Fireship made a video about Turso, and the half a million developers who watched it got the same question we ask ourselves every",
-      "unread": true,
-      "fetchedAt": "2026-06-30T05:04:21.594502+00:00",
-      "category": "newsletter",
-      "categoryReason": "Product/company update presented as a newsletter; informational content not asking Eric to act.",
-      "actionable": false,
-      "starred": false,
-      "archived": false
-    },
     {
       "id": "19f16b148867187b",
       "threadId": "19f16b148867187b",
