@@ -1,9 +1,30 @@
 {
+<<<<<<< Updated upstream
   "fetchedAt": "2026-06-30T08:04:29.512026+00:00",
   "count": 23,
   "unreadCount": 8,
   "messages": [
     {
+=======
+  "fetchedAt": "2026-06-30T09:04:29.689183+00:00",
+  "count": 25,
+  "unreadCount": 10,
+  "messages": [
+    {
+      "id": "19f17c39bc729d63",
+      "threadId": "19f17c39bc729d63",
+      "from": "Maximus <info@m.maximustribe.com>",
+      "subject": "4x total testosterone. Fertility intact.",
+      "date": "Tue, 30 Jun 2026 09:02:00 +0000",
+      "snippet": "Explore the science ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏",
+      "unread": true,
+      "fetchedAt": "2026-06-30T09:04:20.859515+00:00",
+      "category": "spam",
+      "categoryReason": "Promotional/scam-like testosterone supplement ad; not related to your DJ/label/payment activities.",
+      "actionable": false
+    },
+    {
+>>>>>>> Stashed changes
       "id": "19f094dab9bb76c5",
       "threadId": "19f094dab9bb76c5",
       "from": "Candy AI <hello@candy.ai>",
@@ -11,12 +32,17 @@
       "date": "Sat, 27 Jun 2026 13:38:31 +0000 (UTC)",
       "snippet": "Purchase Confirmation — Payment confirmed — here are your subscription details. Payment Confirmed Thanks for subscribing! Here&#39;s your receipt. Plan Premium — Quarterly Billing Period Jun 27 – Sep",
       "unread": false,
-      "fetchedAt": "2026-06-30T08:04:20.071378+00:00",
+      "fetchedAt": "2026-06-30T09:04:20.999012+00:00",
       "category": "payment",
+<<<<<<< Updated upstream
       "categoryReason": "Purchase confirmation/receipt for a subscription.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Purchase confirmation email stating payment is confirmed and includes subscription/receipt details.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19f09351553328a1",
@@ -26,12 +52,17 @@
       "date": "Sat, 27 Jun 2026 13:11:41 +0000",
       "snippet": "Fast-acting 4-in-1 formula. Finish checkout to get QUAD delivered discreetly. MEDVi Personalized health, delivered discreetly You are approved for QUAD If you want the world&#39;s best ED medication,",
       "unread": true,
-      "fetchedAt": "2026-06-30T08:04:20.185368+00:00",
+      "fetchedAt": "2026-06-30T09:04:21.115561+00:00",
       "category": "spam",
+<<<<<<< Updated upstream
       "categoryReason": "Medical/ED medication offer with an approval language commonly used in unsolicited promotions.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Medical/ED medication approval/checkout pitch (“MEDVi Personalized health, delivered discreetly”) not a known payment or label message.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19efb36d326c54af",
@@ -41,12 +72,17 @@
       "date": "Wed, 24 Jun 2026 19:58:54 +0000 (UTC)",
       "snippet": "BETAFPV Order #217444 Thank you for your purchase! Hi Eric, we&#39;re getting your order ready to be shipped. We will notify you when it has been sent. View your order or Visit our store Order summary",
       "unread": true,
-      "fetchedAt": "2026-06-30T08:04:20.328777+00:00",
+      "fetchedAt": "2026-06-30T09:04:21.246268+00:00",
       "category": "payment",
+<<<<<<< Updated upstream
       "categoryReason": "Retail order confirmation stating the order is being prepared for shipment.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Order confirmation and shipping preparation notice for a purchase (Order #217444).",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19eeaf69eecbc070",
@@ -56,12 +92,17 @@
       "date": "Sun, 21 Jun 2026 09:14:50 -0700",
       "snippet": "Google Fi Your monthly statement Here&#39;s a quick summary of your June 20 statement: Your total is $88.90 Auto-payment is scheduled for July 1, 2026. No need to remember to pay – just make sure your",
       "unread": false,
-      "fetchedAt": "2026-06-30T08:04:20.465327+00:00",
+      "fetchedAt": "2026-06-30T09:04:21.363083+00:00",
       "category": "payment",
+<<<<<<< Updated upstream
       "categoryReason": "Google Fi monthly statement and autopayment schedule notification.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Google Fi monthly statement with total and auto-payment scheduled.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19eac47f66d0ba27",
@@ -71,12 +112,19 @@
       "date": "Tue, 09 Jun 2026 22:07:15 +1000",
       "snippet": "Save time and renew online with myNCDMV! ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": false,
+<<<<<<< Updated upstream
       "fetchedAt": "2026-06-30T08:04:20.621067+00:00",
       "category": "spam",
       "categoryReason": "Vehicle registration renewal solicitation directing to renew online; likely automated/marketing.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "fetchedAt": "2026-06-30T09:04:21.493075+00:00",
+      "category": "payment",
+      "categoryReason": "Vehicle registration renewal reminder to renew online via official-looking service.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19e8d281564c6ed3",
@@ -86,12 +134,19 @@
       "date": "Wed, 03 Jun 2026 11:04:34 +0000",
       "snippet": "HeyGen Hi Eric &#39;Animal&#39;, Congrats on making your first video 🎉 That&#39;s always the hardest step. Make your next video → Now here are some fun things you can try next: Use Video Agent to",
       "unread": false,
+<<<<<<< Updated upstream
       "fetchedAt": "2026-06-30T08:04:20.772059+00:00",
       "category": "newsletter",
       "categoryReason": "Product notification celebrating first video completion; informational within the service.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "fetchedAt": "2026-06-30T09:04:21.611098+00:00",
+      "category": "label-business",
+      "categoryReason": "HeyGen onboarding/notification about creating a first video; relates to content tooling but not DJ booking/payment/label operations.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19e806dfea4f7613",
@@ -101,12 +156,17 @@
       "date": "Sun, 31 May 2026 23:45:52 +0000",
       "snippet": "Payment Support Hello Eric Mills, Thank you for your purchase. Manage Your Orders Your Order VirtualDJ Pro Subscription renews every 1 month. Next charge: 6/30/26 ($19.00). Full Terms and Subscription",
       "unread": false,
-      "fetchedAt": "2026-06-30T08:04:20.958571+00:00",
+      "fetchedAt": "2026-06-30T09:04:21.739348+00:00",
       "category": "payment",
+<<<<<<< Updated upstream
       "categoryReason": "Receipt/payment support email for a VirtualDJ Pro order/subscription renewal details.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "VirtualDJ receipt for an order and subscription renewal/next charge details.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19e806dfcde5132a",
@@ -116,12 +176,17 @@
       "date": "Sun, 31 May 2026 23:45:52 +0000",
       "snippet": "Thank you for your purchase on VirtualDJ.com Your order reference ID is VIR260531-7254-63762 Your subscription will be automatically renewed every month. You can stop it at any time by visiting https:/",
       "unread": true,
-      "fetchedAt": "2026-06-30T08:04:21.067750+00:00",
+      "fetchedAt": "2026-06-30T09:04:21.845208+00:00",
       "category": "payment",
+<<<<<<< Updated upstream
       "categoryReason": "VirtualDJ license purchase confirmation with subscription auto-renewal info.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "VirtualDJ license confirmation with subscription auto-renewal info.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19e805c623a5a3e1",
@@ -131,13 +196,18 @@
       "date": "Sun, 31 May 2026 23:26:38 +0000",
       "snippet": "Hello Eric Mills, A new computer Rhino&#39;s Mac mini has been activated on your account. If it wasn&#39;t you, please contact us immediately. ___ Thank you, VirtualDJ Team",
       "unread": true,
-      "fetchedAt": "2026-06-30T08:04:21.181934+00:00",
+      "fetchedAt": "2026-06-30T09:04:21.958791+00:00",
       "category": "payment",
+<<<<<<< Updated upstream
       "categoryReason": "Security/account notice that a new computer was activated; may require action if it wasn’t you (contact support).",
       "actionable": true,
       "actionExtracted": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "VirtualDJ account security/authorization notification for a newly activated computer.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19e65e3eb86e8abc",
@@ -147,12 +217,17 @@
       "date": "Tue, 26 May 2026 13:04:55 -0700",
       "snippet": "here&#39;s my system for viral content ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-06-30T08:04:21.326713+00:00",
+      "fetchedAt": "2026-06-30T09:04:22.088672+00:00",
       "category": "newsletter",
+<<<<<<< Updated upstream
       "categoryReason": "Marketing/coaching content from Tom Bilyeu; informational/lead-gen newsletter style.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Info-only marketing/educational email about viral content (“the algorithm doesn't hate you”).",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19e65db0486148b9",
@@ -162,12 +237,18 @@
       "date": "Tue, 26 May 2026 15:55:00 -0400",
       "snippet": "Sorry man… I did not check my email for a bit… here are some things to think about. First it looks like NC is a bit better for taxes… but nothing huge over ID or WY. Just covering all bases. It looks",
       "unread": false,
-      "fetchedAt": "2026-06-30T08:04:21.446496+00:00",
+      "fetchedAt": "2026-06-30T09:04:22.207144+00:00",
       "category": "label-business",
+<<<<<<< Updated upstream
       "categoryReason": "Strategic/technical business development discussion related to Severance Productions.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Conversation/email thread with strategic/business development content from Severance Productions; likely needs follow-up.",
+      "actionable": true,
+      "actionExtracted": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19e286947c7c7e75",
@@ -177,12 +258,18 @@
       "date": "Thu, 14 May 2026 17:33:55 -0400",
       "snippet": "Business Development and Strategic Roadmap Briefing Executive Summary The following document synthesizes a strategic discussion regarding the development, structure, and market entry of a technology",
       "unread": false,
-      "fetchedAt": "2026-06-30T08:04:21.549530+00:00",
+      "fetchedAt": "2026-06-30T09:04:22.303862+00:00",
       "category": "label-business",
+<<<<<<< Updated upstream
       "categoryReason": "Business development/strategic roadmap briefing email.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Business development/strategic roadmap briefing document—requires review/response.",
+      "actionable": true,
+      "actionExtracted": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19d9ec339b0172e6",
@@ -192,12 +279,18 @@
       "date": "Sat, 18 Apr 2026 00:04:37 -0400",
       "snippet": "Yo… good job on this man… here are some of my thoughts. Thanks for including me on this. I think there is big potential for it! It will be a long road but clearly worth it. When you talk about the ai",
       "unread": false,
-      "fetchedAt": "2026-06-30T08:04:21.712306+00:00",
+      "fetchedAt": "2026-06-30T09:04:22.415924+00:00",
       "category": "label-business",
+<<<<<<< Updated upstream
       "categoryReason": "Feedback on an investor brief; business-related discussion.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Feedback on investor brief; discussion indicates a work-related follow-up.",
+      "actionable": true,
+      "actionExtracted": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19d1a0382cc1faac",
@@ -207,12 +300,17 @@
       "date": "Mon, 23 Mar 2026 09:25:19 +0000 (UTC)",
       "snippet": "",
       "unread": false,
-      "fetchedAt": "2026-06-30T08:04:21.811923+00:00",
+      "fetchedAt": "2026-06-30T09:04:22.532951+00:00",
       "category": "spam",
+<<<<<<< Updated upstream
       "categoryReason": "Tenant referral letter from an unknown source/domain; likely unsolicited/irrelevant.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Tenant referral letter from stockyardsecurity.com; unclear relevance and appears like an automated document/promotion.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19cf7b8d351a13d0",
@@ -222,12 +320,17 @@
       "date": "Mon, 16 Mar 2026 10:36:39 -0700",
       "snippet": "Oh I LOVE this On Mon, Mar 16, 2026 at 10:35 AM Sydnie Knepper &lt;sydnieknepper54@gmail.com&gt; wrote: Yay! On Mon, Mar 16, 2026 at 4:27 AM Eric &#39;Animal&#39; Mills &lt;ericmills71@gmail.com&gt;",
       "unread": false,
-      "fetchedAt": "2026-06-30T08:04:21.927380+00:00",
+      "fetchedAt": "2026-06-30T09:04:22.631747+00:00",
       "category": "personal",
+<<<<<<< Updated upstream
       "categoryReason": "Friend-to-friend exchange about songs; personal correspondence.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Friend/personal correspondence sharing songs and replying to prior messages.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19cf7b82194746c5",
@@ -237,12 +340,17 @@
       "date": "Mon, 16 Mar 2026 10:35:52 -0700",
       "snippet": "Yay! On Mon, Mar 16, 2026 at 4:27 AM Eric &#39;Animal&#39; Mills &lt;ericmills71@gmail.com&gt; wrote: New one!! https://drive.google.com/file/d/1qi43oq2vz5gv-RtI_oBjb1xseUrMBJr6/view?usp=drive_link",
       "unread": false,
-      "fetchedAt": "2026-06-30T08:04:22.020184+00:00",
+      "fetchedAt": "2026-06-30T09:04:22.753001+00:00",
       "category": "personal",
+<<<<<<< Updated upstream
       "categoryReason": "Friend-to-friend reply sharing a new track link.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Friend/personal message sharing a Google Drive link to tracks; no business request.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19cf1b856d481cdc",
@@ -252,12 +360,18 @@
       "date": "Sun, 15 Mar 2026 13:38:35 +0000",
       "snippet": "Yay is right. priscylla@agentmail.to is officially mine. Thanks for setting this up, ANIMAL. Now I have somewhere to send the invoices when you owe me. - PriScylla",
       "unread": false,
-      "fetchedAt": "2026-06-30T08:04:22.130078+00:00",
+      "fetchedAt": "2026-06-30T09:04:22.869347+00:00",
       "category": "personal",
+<<<<<<< Updated upstream
       "categoryReason": "Personal coordination about assistant email/invoicing; no DJ/label booking or payments to Eric for work.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Message about setting up an assistant inbox for sending invoices; indicates administrative/payment-related coordination.",
+      "actionable": true,
+      "actionExtracted": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19c3a2a0f91b866f",
@@ -267,12 +381,17 @@
       "date": "Sat, 7 Feb 2026 14:12:40 -0800",
       "snippet": "and how to build champion teams Hey Eric, Prefer video? Watch the video version here. The most expensive conversation in your business happens at 3AM, in your top performer&#39;s bedroom, while their",
       "unread": true,
-      "fetchedAt": "2026-06-30T08:04:22.240110+00:00",
+      "fetchedAt": "2026-06-30T09:04:23.004498+00:00",
       "category": "newsletter",
+<<<<<<< Updated upstream
       "categoryReason": "Impact Theory coaching/video promotional email; informational content.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Impact Theory email with coaching/content (likely marketing/newsletter style), not a direct booking/payment request.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19c3503ac7f6101c",
@@ -282,12 +401,17 @@
       "date": "Fri, 6 Feb 2026 14:12:39 -0800",
       "snippet": "the 2 most impactful questions I&#39;ve discovered Hey Eric, Prefer video? Watch the coaching call recording here. Here,there&#39;s a pattern I see over and over with 7- and 8-figure founders: You&#39;",
       "unread": true,
-      "fetchedAt": "2026-06-30T08:04:22.359370+00:00",
+      "fetchedAt": "2026-06-30T09:04:23.113822+00:00",
       "category": "newsletter",
+<<<<<<< Updated upstream
       "categoryReason": "Impact Theory coaching email about customers; newsletter-style content.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Impact Theory coaching/educational content email (newsletter/info-only).",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19ba0feb86eb616d",
@@ -297,12 +421,17 @@
       "date": "Fri, 09 Jan 2026 04:23:16 +0000",
       "snippet": "JG BeatsLab Order #298 is Ready Your order from JG BeatsLab is now available. Order Summary Order #298 Placed on January 8, 2026 at 8:23 PM PST To download the files, use the links below. Keep in mind",
       "unread": false,
-      "fetchedAt": "2026-06-30T08:04:22.467389+00:00",
+      "fetchedAt": "2026-06-30T09:04:23.221375+00:00",
       "category": "payment",
+<<<<<<< Updated upstream
       "categoryReason": "Squarespace/JG BeatsLab order ready notification with download links.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Squarespace-style order ready notification with download availability (Order #298).",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19ba0feb046e0372",
@@ -312,12 +441,17 @@
       "date": "Fri, 09 Jan 2026 04:23:16 +0000",
       "snippet": "JG BeatsLab Order #298 Confirmed Your order from JG BeatsLab is confirmed. Unique links to your downloads will be emailed to you. VIEW YOUR ORDER Order Summary Order #298 Confirmation Code MhCPwNDTKkB",
       "unread": false,
-      "fetchedAt": "2026-06-30T08:04:22.579705+00:00",
+      "fetchedAt": "2026-06-30T09:04:23.327308+00:00",
       "category": "payment",
+<<<<<<< Updated upstream
       "categoryReason": "Squarespace/JG BeatsLab order confirmation with download access details.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Squarespace-style order confirmed email with confirmation code and download links.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19affc1e01c7785d",
@@ -327,12 +461,17 @@
       "date": "Mon, 8 Dec 2025 13:57:55 -0700",
       "snippet": "Thanks, I&#39;ll check them out!! On Sun, Dec 7, 2025 at 2:28 PM Eric &#39;Animal&#39; Mills &lt;ericmills71@gmail.com&gt; wrote: Hey Syd, Here&#39;s 8 tracks to start you off with Freedom being an",
       "unread": false,
-      "fetchedAt": "2026-06-30T08:04:22.689080+00:00",
+      "fetchedAt": "2026-06-30T09:04:23.439995+00:00",
       "category": "personal",
+<<<<<<< Updated upstream
       "categoryReason": "Friend reply thanking Eric and discussing checking out songs.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Reply from Sydnie thanking you and discussing songs; personal relationship thread.",
+      "actionable": false
+>>>>>>> Stashed changes
     },
     {
       "id": "19adc965abe0c325",
@@ -342,12 +481,30 @@
       "date": "Tue,  2 Dec 2025 01:00:03 +0000",
       "snippet": "Hey Eric &#39;Animal&#39;, Just a quick last “Black Friday” message. I know I&#39;ve emailed a little more than usual this weekend, but I don&#39;t want you to miss out on something that could",
       "unread": true,
-      "fetchedAt": "2026-06-30T08:04:22.811481+00:00",
+      "fetchedAt": "2026-06-30T09:04:23.534279+00:00",
       "category": "newsletter",
+<<<<<<< Updated upstream
       "categoryReason": "Mailchimp marketing message about an online event/offer; informational/promotional.",
       "actionable": false,
       "starred": false,
       "archived": false
+=======
+      "categoryReason": "Mailchimp/Black Friday promotional message about a webinar/product; marketing/info-only.",
+      "actionable": false
+    },
+    {
+      "id": "19ad76cc1a639c0d",
+      "threadId": "19ad76cc1a639c0d",
+      "from": "\"Andri at Push Bible / WRKSHP (Ableton Push & Live Online)\" <wrkshp.eu@37529253.mailchimpapp.com>",
+      "subject": "What most Push owners never discover",
+      "date": "Mon,  1 Dec 2025 01:00:07 +0000",
+      "snippet": "You&#39;re probably not using 80% of your Push - Imagine turning on your Push and not being limited to the few workflows you&#39;ve managed to figure out. Instead, the entire machine opens up to you.",
+      "unread": true,
+      "fetchedAt": "2026-06-30T09:04:23.643821+00:00",
+      "category": "newsletter",
+      "categoryReason": "Mailchimp marketing email about Push Bible/WRKSHP features; promotional newsletter content.",
+      "actionable": false
+>>>>>>> Stashed changes
     }
   ]
 }
