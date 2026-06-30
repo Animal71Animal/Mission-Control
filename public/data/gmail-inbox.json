@@ -1,23 +1,8 @@
 {
   "fetchedAt": "2026-06-30T08:04:29.512026+00:00",
-  "count": 24,
-  "unreadCount": 9,
+  "count": 23,
+  "unreadCount": 8,
   "messages": [
-    {
-      "id": "19f1709230a53c1c",
-      "threadId": "19f1709230a53c1c",
-      "from": "Uber Pro Card App <uberprocard@info.branchapp.com>",
-      "subject": "Your transfer was successful",
-      "date": "Tue, 30 Jun 2026 05:38:21 +0000 (UTC)",
-      "snippet": "See email for details. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
-      "unread": true,
-      "fetchedAt": "2026-06-30T08:04:19.927482+00:00",
-      "category": "payment",
-      "categoryReason": "Uber Pro card app notification that a transfer was successful.",
-      "actionable": false,
-      "starred": false,
-      "archived": false
-    },
     {
       "id": "19f094dab9bb76c5",
       "threadId": "19f094dab9bb76c5",
