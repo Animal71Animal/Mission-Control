@@ -31,6 +31,7 @@ export const modules: Module[] = [
 
   { href: "/brief", icon: "☀️", title: "Morning Brief", desc: "Daily weather, news, and task rundown. Delivered at 10 AM.", status: "active", group: "external" },
   { href: "/drive", icon: "📁", title: "Google Drive", desc: "12-folder organized Drive. Snapshot + restore available.", status: "active", group: "external" },
+  { href: "/gmail", icon: "📧", title: "Gmail", desc: "Inbox at a glance. Read-only — AI manages nothing destructive.", status: "pending", group: "external" },
   { href: "/shared-links", icon: "🔗", title: "Shared Links", desc: "Password-protected links shared with partners, developers, and investors.", status: "active", group: "external" },
 ];
 
