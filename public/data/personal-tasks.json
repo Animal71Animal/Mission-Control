@@ -339,22 +339,6 @@
     "source_url": "https://mail.google.com/mail/u/0/#inbox/19f1d4b75b03a8e6"
   },
   {
-    "id": "pt-email-1782903872907-1",
-    "title": "Refill medication Quetiapine",
-    "notes": "Your medication Quetiapine is due for a refill. https://pharmacy.amazon.com/dashboard/",
-    "category": "Personal",
-    "priority": "high",
-    "due_date": null,
-    "completed": false,
-    "created_at": "2026-07-01T11:04:32.907180+00:00",
-    "owner": "animal",
-    "source": "gmail",
-    "source_gmail_id": "19f1d42017fc3e70",
-    "source_from": "Amazon Pharmacy <no-reply@pharmacy.amazon.com>",
-    "source_subject": "It's time to refill your medication",
-    "source_url": "https://mail.google.com/mail/u/0/#inbox/19f1d42017fc3e70"
-  },
-  {
     "id": "pt-email-1782903872907-2",
     "title": "Refill medication Bupropion",
     "notes": "Your medication Bupropion is due for a refill. https://pharmacy.amazon.com/dashboard/",
