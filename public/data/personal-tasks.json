@@ -307,22 +307,6 @@
     "source_url": "https://mail.google.com/mail/u/0/#inbox/19f1ab83b4d1c5d1"
   },
   {
-    "id": "pt-email-1782900288284-1",
-    "title": "Check and resolve Wells Fargo funds",
-    "notes": "Declined due to insufficient funds. Sign on to view available balance.",
-    "category": "Personal",
-    "priority": "high",
-    "due_date": null,
-    "completed": false,
-    "created_at": "2026-07-01T10:04:48.284251+00:00",
-    "owner": "animal",
-    "source": "gmail",
-    "source_gmail_id": "19f1d13412699a5b",
-    "source_from": "Wells Fargo Online <alerts@notify.wellsfargo.com>",
-    "source_subject": "Your Wells Fargo card was declined",
-    "source_url": "https://mail.google.com/mail/u/0/#inbox/19f1d13412699a5b"
-  },
-  {
     "id": "pt-email-1782903872907-0",
     "title": "Complete Viewpoints study task",
     "notes": "You have a new task available in the Study program on Viewpoints.",
