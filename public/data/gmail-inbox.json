@@ -1,8 +1,52 @@
 {
-  "fetchedAt": "2026-07-01T09:04:47.415653+00:00",
+  "fetchedAt": "2026-07-01T10:04:48.284655+00:00",
   "count": 25,
   "unreadCount": 25,
   "messages": [
+    {
+      "id": "19f1d15aaf38715b",
+      "threadId": "19f1d15aaf38715b",
+      "from": "Google Payments <payments-noreply@google.com>",
+      "subject": "Google Fi: Payment was declined for nova/16057207666778425535",
+      "date": "Wed, 01 Jul 2026 02:49:46 -0700",
+      "snippet": "Google Fi Your financial institution declined a payment from your Visa • • • • 5484 associated with the Google Fi account for nova/16057207666778425535 on Jul 1, 2026. They provided the following",
+      "unread": true,
+      "fetchedAt": "2026-07-01T10:04:22.114024+00:00",
+      "category": "payment",
+      "categoryReason": "Google Fi notification that an automatic payment was declined for a specific Google Fi account.",
+      "actionable": true,
+      "actionExtracted": false
+    },
+    {
+      "id": "19f1d14d1f95a8e9",
+      "threadId": "19f1d14d1f95a8e9",
+      "from": "Google Fi Wireless <googlefi-noreply@google.com>",
+      "subject": "Payment not received",
+      "date": "Wed, 01 Jul 2026 02:48:50 -0700",
+      "snippet": "Your payment didn&#39;t go through Google Fi couldn&#39;t process your most recent automatic payment. To keep your service active, make sure to resolve any issues with your payment by Jul 4. Your",
+      "unread": true,
+      "fetchedAt": "2026-07-01T10:04:22.214261+00:00",
+      "category": "payment",
+      "categoryReason": "Google Fi notice that the most recent automatic payment failed and needs to be resolved to keep service active.",
+      "actionable": true,
+      "actionExtracted": true,
+      "actionTitle": "Resolve payment issue for Google Fi"
+    },
+    {
+      "id": "19f1d13412699a5b",
+      "threadId": "19f1d13412699a5b",
+      "from": "Wells Fargo Online <alerts@notify.wellsfargo.com>",
+      "subject": "Your Wells Fargo card was declined",
+      "date": "Wed, 1 Jul 2026 02:47:08 -0700 (PDT)",
+      "snippet": "Wells Fargo Home Your card was declined A transaction made using your Wells Fargo Debit Card was declined. Card ending in 5484 Declined due to insufficient funds. Sign on to view available balance and",
+      "unread": true,
+      "fetchedAt": "2026-07-01T10:04:22.312659+00:00",
+      "category": "payment",
+      "categoryReason": "Wells Fargo alert stating a debit card transaction was declined due to insufficient funds.",
+      "actionable": true,
+      "actionExtracted": true,
+      "actionTitle": "Check and resolve Wells Fargo funds"
+    },
     {
       "id": "19f1b48a62143de1",
       "threadId": "19f1b48a62143de1",
@@ -11,9 +55,9 @@
       "date": "Wed, 1 Jul 2026 01:26:13 +0000 (UTC)",
       "snippet": "We have multiple Glenwood South venues that offer a fun atmosphere, great drinks, and room for your team to connect. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T09:04:22.397511+00:00",
+      "fetchedAt": "2026-07-01T10:04:22.440718+00:00",
       "category": "dj-booking",
-      "categoryReason": "LinkedIn message about adding a person and promoting Glenwood South venues; appears like a networking/venue outreach but not a direct DJ gig request or scheduling details.",
+      "categoryReason": "LinkedIn message pitching multiple venues and requesting connection; not explicitly a DJ booking request but venue lead.",
       "actionable": false
     },
     {
@@ -24,9 +68,9 @@
       "date": "Wed, 1 Jul 2026 01:02:38 +0000",
       "snippet": "Simple &amp; transparent options for your overdue balance of $813.76. June 30, 2026 Login PIN: SAYXC7 Hi Eric Mills, This is January reaching out about your account from Merrick Bank Corporation with",
       "unread": true,
-      "fetchedAt": "2026-07-01T09:04:22.525444+00:00",
+      "fetchedAt": "2026-07-01T10:04:22.565368+00:00",
       "category": "spam",
-      "categoryReason": "Debt/credit card resolution pitch with a login PIN; looks like a scam/phishing attempt.",
+      "categoryReason": "Debt relief offer for a credit card balance; unsolicited promotional/possibly scammy collection messaging.",
       "actionable": false
     },
     {
@@ -37,9 +81,9 @@
       "date": "Wed, 01 Jul 2026 00:51:22 +0000 (UTC)",
       "snippet": "Plus Atreyu, Daughtry and more! header Upcoming events near you artist image 1 artist image 2 Tue, Nov 3 Tue, Oct 13 Motionless In White Ladrones Lenovo Center, Raleigh Red Hat Amphitheater, Raleigh",
       "unread": true,
-      "fetchedAt": "2026-07-01T09:04:22.632071+00:00",
+      "fetchedAt": "2026-07-01T10:04:22.669729+00:00",
       "category": "newsletter",
-      "categoryReason": "Spotify personalized concert recommendations; informational/marketing style.",
+      "categoryReason": "Spotify concert recommendations / upcoming events notification; informational personalization.",
       "actionable": false
     },
     {
@@ -50,9 +94,9 @@
       "date": "Wed, 1 Jul 2026 00:17:30 +0000 (UTC)",
       "snippet": "See who reached out, Eric 🤝 ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T09:04:22.754328+00:00",
+      "fetchedAt": "2026-07-01T10:04:22.790095+00:00",
       "category": "newsletter",
-      "categoryReason": "LinkedIn notification about new invitations; info-only.",
+      "categoryReason": "LinkedIn system notification about having new invitations; not a direct action request beyond viewing.",
       "actionable": false
     },
     {
@@ -63,11 +107,10 @@
       "date": "Wed, 01 Jul 2026 00:16:14 +0000",
       "snippet": "You&#39;ve been mentioned in a post in &quot;AI Control Room&quot; Hey Eric Mills Nick Ponte mentioned you and others in a post in &quot;AI Control Room&quot; Nick Ponte The Follow-Up Closed This Deal.",
       "unread": true,
-      "fetchedAt": "2026-07-01T09:04:22.879314+00:00",
+      "fetchedAt": "2026-07-01T10:04:22.889581+00:00",
       "category": "label-business",
-      "categoryReason": "Tagged in a post by Nick Ponte in an AI-related context; could involve label/AI-artist brand mentions, worth checking.",
-      "actionable": true,
-      "actionExtracted": false
+      "categoryReason": "AI/label-related contact (nickponte.ai) mentioning being tagged in an AI-related post; implies involvement but not a direct business operation request.",
+      "actionable": false
     },
     {
       "id": "19f1afdbe0028c4d",
@@ -77,9 +120,9 @@
       "date": "Wed, 1 Jul 2026 00:04:22 +0000",
       "snippet": "Weaponized News is live on Substack now: &quot;WARFORCE, US Troops on the ground in Lebanon, MK-Ultra Congress &amp; The War is Never Over &quot; ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T09:04:22.995369+00:00",
-      "category": "spam",
-      "categoryReason": "Weaponized News political content via Substack; likely unsolicited promotional/newsletter.",
+      "fetchedAt": "2026-07-01T10:04:22.995103+00:00",
+      "category": "newsletter",
+      "categoryReason": "Substack live video promotional update; informational/marketing rather than a direct request.",
       "actionable": false
     },
     {
@@ -90,9 +133,9 @@
       "date": "Tue, 30 Jun 2026 23:35:37 +0000",
       "snippet": "The Information has a simple mission: deliver important, deeply reported stories about the technology business you won&#39;t find elsewhere. The Information The Information Jun 30, 2026 Join high-",
       "unread": true,
-      "fetchedAt": "2026-07-01T09:04:23.096822+00:00",
+      "fetchedAt": "2026-07-01T10:04:23.119089+00:00",
       "category": "newsletter",
-      "categoryReason": "The Information subscriber digest/top posts; informational newsletter.",
+      "categoryReason": "The Information digest of top posts for subscribers; info-only newsletter.",
       "actionable": false
     },
     {
@@ -103,9 +146,9 @@
       "date": "Tue, 30 Jun 2026 23:04:08 +0000 (UTC)",
       "snippet": "Take 25% off your Particle essentials before demand peaks.͏ ͏ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ͏ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-07-01T09:04:23.208248+00:00",
+      "fetchedAt": "2026-07-01T10:04:23.240298+00:00",
       "category": "spam",
-      "categoryReason": "E-commerce promo/restock window with discount; unsolicited marketing.",
+      "categoryReason": "Retail restock sale promotion for Particle For Men; unsolicited marketing.",
       "actionable": false
     },
     {
@@ -116,9 +159,9 @@
       "date": "Tue, 30 Jun 2026 17:00:44 -0600",
       "snippet": "Your guide to new onsales and upcoming events is here Ticketmaster View in browser Concerts • Sports • Theater • Comedy • Family JUST ANNOUNCED Wicked (Touring) Wicked (Touring) Nov 18, 2026 •",
       "unread": true,
-      "fetchedAt": "2026-07-01T09:04:23.317026+00:00",
+      "fetchedAt": "2026-07-01T10:04:23.394592+00:00",
       "category": "newsletter",
-      "categoryReason": "Ticketmaster event/onsale guide; promotional newsletter.",
+      "categoryReason": "Ticketmaster event/onsale guide email; informational event marketing.",
       "actionable": false
     },
     {
@@ -129,9 +172,9 @@
       "date": "Tue, 30 Jun 2026 22:49:49 +0000",
       "snippet": "Your paycheck could land up to 2 days early with Atlas ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T09:04:23.438232+00:00",
+      "fetchedAt": "2026-07-01T10:04:23.569022+00:00",
       "category": "spam",
-      "categoryReason": "“Get paid early” financial promotion; unsolicited marketing (not a payout confirmation).",
+      "categoryReason": "Atlas Mastercard promotional email about getting paid early; likely unsolicited marketing.",
       "actionable": false
     },
     {
@@ -142,9 +185,9 @@
       "date": "Tue, 30 Jun 2026 15:48:25 -0700",
       "snippet": "Hi Eric, As a reminder, you have a new task available in the Study program on Viewpoints. You can earn 85 points for completing the task. Get started now! This invitation will expire soon. Go to app",
       "unread": true,
-      "fetchedAt": "2026-07-01T09:04:23.546518+00:00",
-      "category": "newsletter",
-      "categoryReason": "Facebook Viewpoints reminder about a task; notification-style, no direct business need.",
+      "fetchedAt": "2026-07-01T10:04:23.695457+00:00",
+      "category": "spam",
+      "categoryReason": "Facebook Viewpoints task reminder to earn points; unsolicited program notification.",
       "actionable": false
     },
     {
@@ -155,9 +198,9 @@
       "date": "Tue, 30 Jun 2026 22:13:53 +0000 (UTC)",
       "snippet": "LinkedIn puzzles are heating up. 10 connections finished. 🔥 ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T09:04:23.653415+00:00",
+      "fetchedAt": "2026-07-01T10:04:23.845278+00:00",
       "category": "newsletter",
-      "categoryReason": "LinkedIn notification about a new skill/puzzle solving; informational.",
+      "categoryReason": "LinkedIn notification about a new skill available/puzzle solving; informational platform update.",
       "actionable": false
     },
     {
@@ -168,9 +211,9 @@
       "date": "Tue, 30 Jun 2026 22:07:04 +0000",
       "snippet": "Meta types from your brainwaves, SpaceX buys Cursor for $60B (??), South Korea&#39;s trillion-dollar chip gamble, AI bots are hiring each other, and TIDAL cancels robot music. ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏​ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T09:04:23.851455+00:00",
-      "category": "label-business",
-      "categoryReason": "AI-tech news roundup email (“Meta reads your mind now”); related to label/AI industry but presented as info-only.",
+      "fetchedAt": "2026-07-01T10:04:23.972717+00:00",
+      "category": "newsletter",
+      "categoryReason": "GalaxyAI Humans at Magica email summarizing news; newsletter-style informational content.",
       "actionable": false
     },
     {
@@ -181,9 +224,9 @@
       "date": "Tue, 30 Jun 2026 22:05:08 +0000 (UTC)",
       "snippet": "Plus branding for musicians, the tube sound secret, and MIDI editing tips. ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿",
       "unread": true,
-      "fetchedAt": "2026-07-01T09:04:23.957411+00:00",
+      "fetchedAt": "2026-07-01T10:04:24.101384+00:00",
       "category": "label-business",
-      "categoryReason": "Splice offering free presets/plugins; music creation tool promo rather than label ops, but not payment/dj booking.",
+      "categoryReason": "Splice promotional email for free presets/plugins and MIDI tips; music production tool marketing (not label ops but music-tech related).",
       "actionable": false
     },
     {
@@ -194,9 +237,9 @@
       "date": "Tue, 30 Jun 2026 21:52:19 +0000",
       "snippet": "You are going to want to be here for this one. ͏͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T09:04:24.075684+00:00",
+      "fetchedAt": "2026-07-01T10:04:24.215670+00:00",
       "category": "spam",
-      "categoryReason": "Candy AI promotional/urgency email; unsolicited marketing that likely aims to get you to click.",
+      "categoryReason": "Candy AI promotional email urging readiness for upcoming event; unsolicited marketing.",
       "actionable": false
     },
     {
@@ -207,9 +250,9 @@
       "date": "Tue, 30 Jun 2026 21:50:00 +0000",
       "snippet": "Build career-relevant skills today ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌",
       "unread": true,
-      "fetchedAt": "2026-07-01T09:04:24.208795+00:00",
+      "fetchedAt": "2026-07-01T10:04:24.334677+00:00",
       "category": "newsletter",
-      "categoryReason": "Coursera personalized recommendations; informational newsletter.",
+      "categoryReason": "Coursera personalized recommendations notification; informational learning platform update.",
       "actionable": false
     },
     {
@@ -220,9 +263,9 @@
       "date": "Tue, 30 Jun 2026 21:11:10 +0000 (UTC)",
       "snippet": "Check out today&#39;s top price drops on Agoda! Agoda.com Hotels &amp; Homes Flights Deals Airport Transfer Activities Eric , experience the best of New York (NY) Your journey starts here! New York (NY",
       "unread": true,
-      "fetchedAt": "2026-07-01T09:04:24.325457+00:00",
-      "category": "spam",
-      "categoryReason": "Agoda price alerts with travel deals; promotional marketing.",
+      "fetchedAt": "2026-07-01T10:04:24.465811+00:00",
+      "category": "newsletter",
+      "categoryReason": "Agoda price alert newsletter about top price drops in a location; informational promotional email.",
       "actionable": false
     },
     {
@@ -233,9 +276,9 @@
       "date": "Tue, 30 Jun 2026 21:00:09 +0000",
       "snippet": "FINAL DAY — sale ends tonight. Save $54.89 on a year of DMP, just $184.99. DIGITAL MUSIC POOL Final Day · Sale Ends Tonight A Year Of DMP $239.88 $184.99 12 Months · Full Access You Save $54.89 Claim",
       "unread": true,
-      "fetchedAt": "2026-07-01T09:04:24.438225+00:00",
+      "fetchedAt": "2026-07-01T10:04:24.554674+00:00",
       "category": "spam",
-      "categoryReason": "Digital Music Pool sale/discount; promotional marketing.",
+      "categoryReason": "Digital Music Pool sale promotion/discount email; unsolicited marketing.",
       "actionable": false
     },
     {
@@ -246,9 +289,9 @@
       "date": "Tue, 30 Jun 2026 20:56:28 +0000",
       "snippet": "Voices is now on your phone, and you get to try it first. ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿ ͏ ‌ ﻿",
       "unread": true,
-      "fetchedAt": "2026-07-01T09:04:24.549653+00:00",
+      "fetchedAt": "2026-07-01T10:04:24.670675+00:00",
       "category": "label-business",
-      "categoryReason": "Suno creator feature/Beta announcement; music-tech promo (not a direct label transaction).",
+      "categoryReason": "Suno creator product update invitation to try Voices; music creation tool notification.",
       "actionable": false
     },
     {
@@ -259,9 +302,9 @@
       "date": "Tue, 30 Jun 2026 15:54:48 -0500 (CDT)",
       "snippet": "Plus, Harry Styles &amp; Zoë Kravitz talking &#39;wedding plans&#39; amid busy schedules‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-07-01T09:04:24.682505+00:00",
+      "fetchedAt": "2026-07-01T10:04:24.789796+00:00",
       "category": "newsletter",
-      "categoryReason": "iHeart Daily music/news roundup; informational newsletter.",
+      "categoryReason": "iHeart Daily entertainment news update; informational newsletter.",
       "actionable": false
     },
     {
@@ -272,9 +315,9 @@
       "date": "Tue, 30 Jun 2026 20:51:34 +0000",
       "snippet": "Early Access tickets are expected to sell out very soon ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T09:04:24.800135+00:00",
+      "fetchedAt": "2026-07-01T10:04:24.897636+00:00",
       "category": "newsletter",
-      "categoryReason": "The Information invite to WTF 2026; marketing/event info without DJ/label transaction details.",
+      "categoryReason": "The Information event invite (WTF 2026) with early access ticket info; promotional newsletter.",
       "actionable": false
     },
     {
@@ -285,49 +328,11 @@
       "date": "Tue, 30 Jun 2026 20:51:21 +0000",
       "snippet": "Desplacese hacia abajo para Español Hello Eric, Thank you for driving with Uber JourneyTV! Your latest performance summary is ready! Here&#39;s a snapshot of your current stats and progress. Drivers",
       "unread": true,
-      "fetchedAt": "2026-07-01T09:04:24.920623+00:00",
-      "category": "payment",
-      "categoryReason": "Play Octopus JourneyTV performance summary for Uber drivers; status/reporting rather than label ops.",
-      "actionable": false
-    },
-    {
-      "id": "19f1a4628449615e",
-      "threadId": "19f1a4628449615e",
-      "from": "LinkedIn News <editors-noreply@linkedin.com>",
-      "subject": "Starbucks tests influencer network",
-      "date": "Tue, 30 Jun 2026 20:43:53 +0000 (UTC)",
-      "snippet": "The company plans to pay select &quot;coffee creators&quot; through a revenue-sharing model. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
-      "unread": true,
-      "fetchedAt": "2026-07-01T09:04:25.036873+00:00",
-      "category": "newsletter",
-      "categoryReason": "LinkedIn News editorial update; info-only newsletter.",
-      "actionable": false
-    },
-    {
-      "id": "19f1a3e3a89ec563",
-      "threadId": "19f1a3e3a89ec563",
-      "from": "Uber <uber@uber.com>",
-      "subject": "Eric, your weekly fare breakdown is available",
-      "date": "Tue, 30 Jun 2026 20:35:13 +0000",
-      "snippet": "Check your driver app to see your breakdown. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
-      "unread": true,
-      "fetchedAt": "2026-07-01T09:04:25.245304+00:00",
-      "category": "payment",
-      "categoryReason": "Uber weekly fare breakdown notification; reporting/statement-style.",
-      "actionable": false
-    },
-    {
-      "id": "19f1a2582de4b059",
-      "threadId": "19f1a2582de4b059",
-      "from": "Artlist <team@newsletter.artlist.io>",
-      "subject": "Gemini Omni Flash & Nano Banana 2 Lite are live on Artlist!",
-      "date": "Tue, 30 Jun 2026 16:58:02 +0000",
-      "snippet": "Meet the 4 new Omni apps — Drone Cam, Hyperzoom, and more Artlist What&#39;s new on Artlist New models. New apps. More ways to create. Omni Flash Gemini Omni Flash is live Google&#39;s brand-new,",
-      "unread": true,
-      "fetchedAt": "2026-07-01T09:04:25.369361+00:00",
-      "category": "newsletter",
-      "categoryReason": "Artlist product update email about new apps/models; informational marketing.",
-      "actionable": false
+      "fetchedAt": "2026-07-01T10:04:25.000181+00:00",
+      "category": "dj-booking",
+      "categoryReason": "Uber driver JourneyTV performance summary intended for the driver; actionable insofar as reviewing stats/progress.",
+      "actionable": true,
+      "actionExtracted": false
     }
   ]
 }
