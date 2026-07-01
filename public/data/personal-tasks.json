@@ -563,22 +563,6 @@
     "source_url": "https://mail.google.com/mail/u/0/#inbox/19f1d13412699a5b"
   },
   {
-    "id": "pt-email-1782914678474-0",
-    "title": "Resolve declined Google Fi payment",
-    "notes": "payment was declined ... on Jul 1, 2026.",
-    "category": "Personal",
-    "priority": "high",
-    "due_date": "2026-07-01",
-    "completed": false,
-    "created_at": "2026-07-01T14:04:38.474760+00:00",
-    "owner": "animal",
-    "source": "gmail",
-    "source_gmail_id": "19f1d15aaf38715b",
-    "source_from": "Google Payments <payments-noreply@google.com>",
-    "source_subject": "Google Fi: Payment was declined for nova/16057207666778425535",
-    "source_url": "https://mail.google.com/mail/u/0/#inbox/19f1d15aaf38715b"
-  },
-  {
     "id": "pt-email-1782914678474-1",
     "title": "Fix payment issue to keep service",
     "notes": "make sure to resolve any issues with your payment by Jul 4.",
