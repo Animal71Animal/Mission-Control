@@ -609,5 +609,37 @@
     "source_from": "Wells Fargo Online <alerts@notify.wellsfargo.com>",
     "source_subject": "Your Wells Fargo card was declined",
     "source_url": "https://mail.google.com/mail/u/0/#inbox/19f1d13412699a5b"
+  },
+  {
+    "id": "pt-email-1782918295879-0",
+    "title": "Review updated Google Play terms",
+    "notes": "On July 22, 2026, we're making some changes to our Google Play Terms of Service.",
+    "category": "Personal",
+    "priority": "medium",
+    "due_date": "2026-07-22",
+    "completed": false,
+    "created_at": "2026-07-01T15:04:55.879662+00:00",
+    "owner": "animal",
+    "source": "gmail",
+    "source_gmail_id": "19f1d78dbf1a2c2b",
+    "source_from": "Google Play <googleplay-noreply@google.com>",
+    "source_subject": "Updates to Google Play Terms of Service",
+    "source_url": "https://mail.google.com/mail/u/0/#inbox/19f1d78dbf1a2c2b"
+  },
+  {
+    "id": "pt-email-1782918295879-1",
+    "title": "Refill medication via Amazon Pharmacy",
+    "notes": "Your medication Quetiapine is due for a refill.",
+    "category": "Personal",
+    "priority": "high",
+    "due_date": null,
+    "completed": false,
+    "created_at": "2026-07-01T15:04:55.879662+00:00",
+    "owner": "animal",
+    "source": "gmail",
+    "source_gmail_id": "19f1d42017fc3e70",
+    "source_from": "Amazon Pharmacy <no-reply@pharmacy.amazon.com>",
+    "source_subject": "It's time to refill your medication",
+    "source_url": "https://mail.google.com/mail/u/0/#inbox/19f1d42017fc3e70"
   }
 ]
