@@ -1,8 +1,60 @@
 {
-  "fetchedAt": "2026-07-01T21:04:31.686553+00:00",
+  "fetchedAt": "2026-07-01T22:04:31.914650+00:00",
   "count": 25,
   "unreadCount": 25,
   "messages": [
+    {
+      "id": "19f1fa79debebbc3",
+      "threadId": "19f1fa79debebbc3",
+      "from": "LinkedIn News <editors-noreply@linkedin.com>",
+      "subject": "The latest Silverstone updates",
+      "date": "Wed, 1 Jul 2026 21:48:24 +0000 (UTC)",
+      "snippet": "McLaren&#39;s CEO posted a look at the team&#39;s livery ahead of its home race. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
+      "unread": true,
+      "fetchedAt": "2026-07-01T22:04:21.223555+00:00",
+      "category": "newsletter",
+      "categoryReason": "LinkedIn News info-only update about Silverstone; no request for action.",
+      "actionable": false
+    },
+    {
+      "id": "19f1fa3ba3375739",
+      "threadId": "19f1fa3ba3375739",
+      "from": "\"Candy AI 🍭\" <info@emails.candy.ai>",
+      "subject": "Your all American girl is here 🇺🇸",
+      "date": "Wed, 01 Jul 2026 21:44:11 +0000",
+      "snippet": "I only do this once a year. Do not miss it. ͏͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿",
+      "unread": true,
+      "fetchedAt": "2026-07-01T22:04:21.337394+00:00",
+      "category": "spam",
+      "categoryReason": "Promotional marketing message (\"Candy AI\") with sales-style copy; unsolicited.",
+      "actionable": false
+    },
+    {
+      "id": "19f1f9b2e78e39f1",
+      "threadId": "19f1f9b2e78e39f1",
+      "from": "Kroll Settlement Administration LLC <wispclasssettlement@e.emailksa.com>",
+      "subject": "Reminder Notice — Claims Deadline Approaching for Class Action Settlement",
+      "date": "Wed,  1 Jul 2026 17:33:51 -0400",
+      "snippet": "REMINDER NOTICE OF PROPOSED CLASS ACTION SETTLEMENT Sophin v. WISP, Inc., Case No. CACE26001543 (Circuit Court of the 17th Judicial Circuit, Broward County, Florida) Our Records Indicate You Purchased",
+      "unread": true,
+      "fetchedAt": "2026-07-01T22:04:21.450473+00:00",
+      "category": "spam",
+      "categoryReason": "Class action settlement claim deadline reminder—commonly unsolicited/automated outreach; no clear legitimate action from you.",
+      "actionable": false
+    },
+    {
+      "id": "19f1f82fdac17b9c",
+      "threadId": "19f1f82fdac17b9c",
+      "from": "The Information <hello@theinformation.com>",
+      "subject": "More scoops on the money behind AI: Meet Dakin Campbell",
+      "date": "Wed, 01 Jul 2026 21:08:25 +0000",
+      "snippet": "The Information has tracked the private financials behind AI&#39;s biggest rivalry for years. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
+      "unread": true,
+      "fetchedAt": "2026-07-01T22:04:21.592140+00:00",
+      "category": "newsletter",
+      "categoryReason": "The Information editorial/feature about money behind AI; informational newsletter.",
+      "actionable": false
+    },
     {
       "id": "19f1f79605d734f2",
       "threadId": "19f1f79605d734f2",
@@ -11,9 +63,9 @@
       "date": "Wed, 1 Jul 2026 15:56:24 -0500 (CDT)",
       "snippet": "Plus, Jennifer Lopez explains why &#39;breakups are not a failure&#39;‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-07-01T21:04:21.135478+00:00",
+      "fetchedAt": "2026-07-01T22:04:21.711972+00:00",
       "category": "newsletter",
-      "categoryReason": "Automated iHeart Daily entertainment news newsletter; info-only, not asking for action.",
+      "categoryReason": "iHeart Daily entertainment/news newsletter; no direct request or action needed.",
       "actionable": false
     },
     {
@@ -24,9 +76,9 @@
       "date": "Wed, 1 Jul 2026 16:42:44 -0400",
       "snippet": "Plus: Support groups for AI psychosis are now a thing — and they&#39;re finding new members every week. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T21:04:21.242679+00:00",
+      "fetchedAt": "2026-07-01T22:04:21.820847+00:00",
       "category": "newsletter",
-      "categoryReason": "The Hustle special newsletter; general content/info with no direct request.",
+      "categoryReason": "The Hustle newsletter; industry/info content without a task for you.",
       "actionable": false
     },
     {
@@ -37,9 +89,9 @@
       "date": "Wed, 01 Jul 2026 20:10:19 +0000 (UTC)",
       "snippet": "A Claude Code income system, a $40k custom AI build win, and Fable 5 and Sonnet 5&#39;s big week. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-07-01T21:04:21.338274+00:00",
+      "fetchedAt": "2026-07-01T22:04:21.957579+00:00",
       "category": "label-business",
-      "categoryReason": "AI automation/income system content from an AI-related sender; aligns with label/AI business context but not asking for direct action.",
+      "categoryReason": "AI monetization/build story that relates to AI business/label-adjacent ecosystem, not a booking/payment request.",
       "actionable": false
     },
     {
@@ -50,9 +102,9 @@
       "date": "Wed, 01 Jul 2026 19:58:30 +0000",
       "snippet": "XNOVA Performance Motors ad featuring drone motors in a factory setting. A carbon fiber drone frame sits on a glowing blue platform with a colorful circuit board background. facebook instagram No",
       "unread": true,
-      "fetchedAt": "2026-07-01T21:04:21.500697+00:00",
+      "fetchedAt": "2026-07-01T22:04:22.060790+00:00",
       "category": "spam",
-      "categoryReason": "Promotional “New Arrivals + Limited Restocks” from a vendor; likely unsolicited marketing.",
+      "categoryReason": "Pyrodrone promotion for new arrivals/restocks; unsolicited marketing.",
       "actionable": false
     },
     {
@@ -63,11 +115,12 @@
       "date": "Wed, 01 Jul 2026 19:56:13 +0000 (UTC)",
       "snippet": "Resolve your debt today We&#39;re working with Klarna to help you resolve your outstanding account. Hi Eric. Please resolve your overdue Klarna account. Paying your balance with InDebted is secure,",
       "unread": true,
-      "fetchedAt": "2026-07-01T21:04:21.617279+00:00",
-      "category": "spam",
-      "categoryReason": "Urgent overdue balance/payment demand referencing Klarna with “resolve today”; typical phishing/scam-style debt collection.",
+      "fetchedAt": "2026-07-01T22:04:22.165243+00:00",
+      "category": "payment",
+      "categoryReason": "Urgent notice about an overdue Klarna balance requesting payment/settlement.",
       "actionable": true,
-      "actionExtracted": false
+      "actionExtracted": true,
+      "actionTitle": "Pay overdue Klarna balance"
     },
     {
       "id": "19f1f37844a2d52e",
@@ -77,9 +130,9 @@
       "date": "Wed, 01 Jul 2026 19:45:58 +0000 (UTC)",
       "snippet": "Plus, get up to three drum plugins free in our Summer Software Sale BFD Drums BFD Summer Sale Studio-Grade Drum Plugins Up to 80% Off + Up to 3 Plugins Free The pristine sound of professionally",
       "unread": true,
-      "fetchedAt": "2026-07-01T21:04:21.730443+00:00",
+      "fetchedAt": "2026-07-01T22:04:22.285757+00:00",
       "category": "spam",
-      "categoryReason": "Promotional sale for drums/plugins; unsolicited marketing.",
+      "categoryReason": "BFD Drums sale promotion with discounts/plugins; unsolicited marketing.",
       "actionable": false
     },
     {
@@ -90,9 +143,9 @@
       "date": "Wed, 01 Jul 2026 12:18:05 -0600",
       "snippet": "The best summer day in LA View Online Wicked merch Wicked Merch Step into the world of Oz with Wicked merch at Mega Movie Summer! Our clothing and hats will help you defy gravity and make your wardrobe",
       "unread": true,
-      "fetchedAt": "2026-07-01T21:04:21.844303+00:00",
-      "category": "dj-booking",
-      "categoryReason": "Universal Studios Hollywood “Wicked merch” email for a themed promotion; not a DJ booking request.",
+      "fetchedAt": "2026-07-01T22:04:22.402306+00:00",
+      "category": "personal",
+      "categoryReason": "Universal Studios Hollywood promotional email about Wicked merch; not directly business/label ops.",
       "actionable": false
     },
     {
@@ -103,9 +156,9 @@
       "date": "Wed, 1 Jul 2026 19:33:15 +0000",
       "snippet": "Tara Setmayer is live on Substack now: &quot;BREAKING NEWS: Trump&#39;s Corruption Exposed, America 250 Fail &amp; More&quot; ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T21:04:21.952285+00:00",
+      "fetchedAt": "2026-07-01T22:04:22.512093+00:00",
       "category": "newsletter",
-      "categoryReason": "Substack update/newsletter-style email about a live video; informational subscription content.",
+      "categoryReason": "Substack live video/industry political content; informational feed, not a direct request.",
       "actionable": false
     },
     {
@@ -116,9 +169,9 @@
       "date": "Wed, 01 Jul 2026 18:45:29 +0000",
       "snippet": "Settling your loan is still an option. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T21:04:22.061792+00:00",
-      "category": "spam",
-      "categoryReason": "Capital One settlement-plan offer with large savings; looks like a potentially unsolicited financial offer notification.",
+      "fetchedAt": "2026-07-01T22:04:22.625802+00:00",
+      "category": "payment",
+      "categoryReason": "Capital One settlement plan notification; payment/financial related notice.",
       "actionable": false
     },
     {
@@ -129,9 +182,9 @@
       "date": "Wed, 01 Jul 2026 18:11:02 +0000",
       "snippet": "Subscribe now for $749 and save 25% on the first year ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T21:04:22.159602+00:00",
+      "fetchedAt": "2026-07-01T22:04:22.756661+00:00",
       "category": "newsletter",
-      "categoryReason": "The Information subscription marketing email; informational/marketing, not requesting DJ/label action.",
+      "categoryReason": "The Information subscription/feature offer; informational newsletter content.",
       "actionable": false
     },
     {
@@ -142,9 +195,9 @@
       "date": "Wed, 01 Jul 2026 11:05:28 -0700",
       "snippet": "[Animal71Animal/Mission-Control] Deploy to Vercel workflow run Deploy to Vercel: All jobs have failed View workflow run Status Job Annotations Deploy to Vercel / deploy Failed in 28 seconds annotations",
       "unread": true,
-      "fetchedAt": "2026-07-01T21:04:22.256453+00:00",
-      "category": "personal",
-      "categoryReason": "GitHub workflow failure notification; not related to DJ/label work decisions for Eric personally.",
+      "fetchedAt": "2026-07-01T22:04:22.887369+00:00",
+      "category": "label-business",
+      "categoryReason": "GitHub Actions workflow failure notice for a project; technical ops but not label payout/payment.",
       "actionable": false
     },
     {
@@ -155,9 +208,9 @@
       "date": "Wed, 1 Jul 2026 18:01:18 +0000",
       "snippet": "Hello Eric, Just a gentle note from FlicksZone. There is a little information available for your request. You can view it whenever you have a moment. View Note Thank you, FlicksZone Support Email:",
       "unread": true,
-      "fetchedAt": "2026-07-01T21:04:22.365471+00:00",
+      "fetchedAt": "2026-07-01T22:04:23.002123+00:00",
       "category": "personal",
-      "categoryReason": "FlicksZone support-style note about viewing information; no clear actionable work request.",
+      "categoryReason": "FlicksZone support-style message about viewing a note for a prior request; personal/one-off notification.",
       "actionable": false
     },
     {
@@ -168,9 +221,9 @@
       "date": "Wed, 1 Jul 2026 14:00:16 -0400",
       "snippet": "Your marketing cheat code: Templates, prompts, playbooks — all free. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T21:04:22.458903+00:00",
+      "fetchedAt": "2026-07-01T22:04:23.126835+00:00",
       "category": "newsletter",
-      "categoryReason": "The Hustle marketing/content email (“Your whole job, done for you”); info-only.",
+      "categoryReason": "The Hustle content about marketing automation/templates; newsletter/info-only.",
       "actionable": false
     },
     {
@@ -181,9 +234,9 @@
       "date": "Wed, 01 Jul 2026 17:04:16 +0000",
       "snippet": "Get your money earlier. No monthly fees. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-07-01T21:04:22.570392+00:00",
-      "category": "newsletter",
-      "categoryReason": "Credit Karma Money notification/ad explaining features; informational marketing, no direct action request.",
+      "fetchedAt": "2026-07-01T22:04:23.234667+00:00",
+      "category": "payment",
+      "categoryReason": "Credit Karma Money marketing notification; financial app onboarding/feature update.",
       "actionable": false
     },
     {
@@ -194,9 +247,9 @@
       "date": "Wed, 01 Jul 2026 10:25:58 -0700",
       "snippet": "[Animal71Animal/Mission-Control] Deploy to Vercel workflow run Deploy to Vercel: All jobs have failed View workflow run Status Job Annotations Deploy to Vercel / deploy Failed in 30 seconds annotations",
       "unread": true,
-      "fetchedAt": "2026-07-01T21:04:22.688595+00:00",
-      "category": "personal",
-      "categoryReason": "GitHub deployment workflow failure notification; system alert rather than a business action request.",
+      "fetchedAt": "2026-07-01T22:04:23.346017+00:00",
+      "category": "label-business",
+      "categoryReason": "GitHub Actions workflow run failed deployment notification; technical ops related to a system.",
       "actionable": false
     },
     {
@@ -207,9 +260,9 @@
       "date": "Wed, 01 Jul 2026 10:25:53 -0700",
       "snippet": "[Animal71Animal/Mission-Control] Deploy to Vercel workflow run Deploy to Vercel: All jobs have failed View workflow run Status Job Annotations Deploy to Vercel / deploy Failed in 44 seconds annotations",
       "unread": true,
-      "fetchedAt": "2026-07-01T21:04:22.811528+00:00",
-      "category": "personal",
-      "categoryReason": "GitHub deployment workflow failure notification; system alert rather than a business action request.",
+      "fetchedAt": "2026-07-01T22:04:23.457144+00:00",
+      "category": "label-business",
+      "categoryReason": "GitHub Actions workflow run failed deployment notification; technical ops related to a system.",
       "actionable": false
     },
     {
@@ -220,9 +273,9 @@
       "date": "Wed, 01 Jul 2026 10:25:52 -0700",
       "snippet": "[Animal71Animal/Mission-Control] Deploy to Vercel workflow run Deploy to Vercel: All jobs have failed View workflow run Status Job Annotations Deploy to Vercel / deploy Failed in 27 seconds annotations",
       "unread": true,
-      "fetchedAt": "2026-07-01T21:04:22.986872+00:00",
-      "category": "personal",
-      "categoryReason": "GitHub deployment workflow failure notification; system alert rather than a business action request.",
+      "fetchedAt": "2026-07-01T22:04:23.585649+00:00",
+      "category": "label-business",
+      "categoryReason": "GitHub Actions workflow run failed deployment notification; technical ops related to a system.",
       "actionable": false
     },
     {
@@ -233,9 +286,9 @@
       "date": "Wed, 01 Jul 2026 10:25:52 -0700",
       "snippet": "[Animal71Animal/Mission-Control] Deploy to Vercel workflow run Deploy to Vercel: All jobs have failed View workflow run Status Job Annotations Deploy to Vercel / deploy Failed in 26 seconds annotations",
       "unread": true,
-      "fetchedAt": "2026-07-01T21:04:23.112337+00:00",
-      "category": "personal",
-      "categoryReason": "GitHub deployment workflow failure notification; system alert rather than a business action request.",
+      "fetchedAt": "2026-07-01T22:04:23.702584+00:00",
+      "category": "label-business",
+      "categoryReason": "GitHub Actions workflow run failed deployment notification; technical ops related to a system.",
       "actionable": false
     },
     {
@@ -246,9 +299,9 @@
       "date": "Wed, 01 Jul 2026 10:25:42 -0700",
       "snippet": "[Animal71Animal/Mission-Control] Deploy to Vercel workflow run Deploy to Vercel: All jobs have failed View workflow run Status Job Annotations Deploy to Vercel / deploy Failed in 27 seconds annotations",
       "unread": true,
-      "fetchedAt": "2026-07-01T21:04:23.235325+00:00",
-      "category": "personal",
-      "categoryReason": "GitHub deployment workflow failure notification; system alert rather than a business action request.",
+      "fetchedAt": "2026-07-01T22:04:23.811774+00:00",
+      "category": "label-business",
+      "categoryReason": "GitHub Actions workflow run failed deployment notification; technical ops related to a system.",
       "actionable": false
     },
     {
@@ -259,9 +312,9 @@
       "date": "Wed, 01 Jul 2026 10:25:41 -0700",
       "snippet": "[Animal71Animal/Mission-Control] Deploy to Vercel workflow run Deploy to Vercel: All jobs have failed View workflow run Status Job Annotations Deploy to Vercel / deploy Failed in 29 seconds annotations",
       "unread": true,
-      "fetchedAt": "2026-07-01T21:04:23.342949+00:00",
-      "category": "personal",
-      "categoryReason": "GitHub deployment workflow failure notification; system alert rather than a business action request.",
+      "fetchedAt": "2026-07-01T22:04:23.918222+00:00",
+      "category": "label-business",
+      "categoryReason": "GitHub Actions workflow run failed deployment notification; technical ops related to a system.",
       "actionable": false
     },
     {
@@ -272,61 +325,9 @@
       "date": "Wed, 01 Jul 2026 10:25:35 -0700",
       "snippet": "[Animal71Animal/Mission-Control] Deploy to Vercel workflow run Deploy to Vercel: All jobs have failed View workflow run Status Job Annotations Deploy to Vercel / deploy Failed in 25 seconds annotations",
       "unread": true,
-      "fetchedAt": "2026-07-01T21:04:23.450076+00:00",
-      "category": "personal",
-      "categoryReason": "GitHub deployment workflow failure notification; system alert rather than a business action request.",
-      "actionable": false
-    },
-    {
-      "id": "19f1eb6f7667c2ee",
-      "threadId": "19f1eb6f7667c2ee",
-      "from": "Animal71Animal <notifications@github.com>",
-      "subject": "[Animal71Animal/Mission-Control] Run failed: Deploy to Vercel - main (b77c709)",
-      "date": "Wed, 01 Jul 2026 10:25:34 -0700",
-      "snippet": "[Animal71Animal/Mission-Control] Deploy to Vercel workflow run Deploy to Vercel: All jobs have failed View workflow run Status Job Annotations Deploy to Vercel / deploy Failed in 30 seconds annotations",
-      "unread": true,
-      "fetchedAt": "2026-07-01T21:04:23.562354+00:00",
-      "category": "personal",
-      "categoryReason": "GitHub deployment workflow failure notification; system alert rather than a business action request.",
-      "actionable": false
-    },
-    {
-      "id": "19f1eb6e1223db2d",
-      "threadId": "19f1eb6e1223db2d",
-      "from": "Animal71Animal <notifications@github.com>",
-      "subject": "[Animal71Animal/Mission-Control] Run failed: Deploy to Vercel - main (378b6dd)",
-      "date": "Wed, 01 Jul 2026 10:25:28 -0700",
-      "snippet": "[Animal71Animal/Mission-Control] Deploy to Vercel workflow run Deploy to Vercel: All jobs have failed View workflow run Status Job Annotations Deploy to Vercel / deploy Failed in 27 seconds annotations",
-      "unread": true,
-      "fetchedAt": "2026-07-01T21:04:23.662232+00:00",
-      "category": "personal",
-      "categoryReason": "GitHub deployment workflow failure notification; system alert rather than a business action request.",
-      "actionable": false
-    },
-    {
-      "id": "19f1eb6df4e0e4fe",
-      "threadId": "19f1eb6df4e0e4fe",
-      "from": "Animal71Animal <notifications@github.com>",
-      "subject": "[Animal71Animal/Mission-Control] Run failed: Deploy to Vercel - main (29c5bfa)",
-      "date": "Wed, 01 Jul 2026 10:25:28 -0700",
-      "snippet": "[Animal71Animal/Mission-Control] Deploy to Vercel workflow run Deploy to Vercel: All jobs have failed View workflow run Status Job Annotations Deploy to Vercel / deploy Failed in 28 seconds annotations",
-      "unread": true,
-      "fetchedAt": "2026-07-01T21:04:23.766599+00:00",
-      "category": "personal",
-      "categoryReason": "GitHub deployment workflow failure notification; system alert rather than a business action request.",
-      "actionable": false
-    },
-    {
-      "id": "19f1eb6d8db5a905",
-      "threadId": "19f1eb6d8db5a905",
-      "from": "Animal71Animal <notifications@github.com>",
-      "subject": "[Animal71Animal/Mission-Control] Run failed: Deploy to Vercel - main (748d926)",
-      "date": "Wed, 01 Jul 2026 10:25:26 -0700",
-      "snippet": "[Animal71Animal/Mission-Control] Deploy to Vercel workflow run Deploy to Vercel: All jobs have failed View workflow run Status Job Annotations Deploy to Vercel / deploy Failed in 26 seconds annotations",
-      "unread": true,
-      "fetchedAt": "2026-07-01T21:04:23.899376+00:00",
-      "category": "personal",
-      "categoryReason": "GitHub deployment workflow failure notification; system alert rather than a business action request.",
+      "fetchedAt": "2026-07-01T22:04:24.028880+00:00",
+      "category": "label-business",
+      "categoryReason": "GitHub Actions workflow run failed deployment notification; technical ops related to a system.",
       "actionable": false
     }
   ]
