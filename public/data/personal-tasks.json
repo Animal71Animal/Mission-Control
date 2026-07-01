@@ -346,14 +346,15 @@
     "category": "Personal",
     "priority": "medium",
     "due_date": null,
-    "completed": false,
+    "completed": true,
     "created_at": "2026-07-01T11:04:32.907180+00:00",
     "owner": "animal",
     "source": "gmail",
     "source_gmail_id": "19f1d13412699a5b",
     "source_from": "Wells Fargo Online <alerts@notify.wellsfargo.com>",
     "source_subject": "Your Wells Fargo card was declined",
-    "source_url": "https://mail.google.com/mail/u/0/#inbox/19f1d13412699a5b"
+    "source_url": "https://mail.google.com/mail/u/0/#inbox/19f1d13412699a5b",
+    "completed_at": "2026-07-01T17:24:45.198Z"
   },
   {
     "id": "pt-email-1782907485033-0",
