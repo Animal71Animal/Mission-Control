@@ -1,8 +1,74 @@
 {
-  "fetchedAt": "2026-07-01T16:04:33.593070+00:00",
+  "fetchedAt": "2026-07-01T17:04:29.767828+00:00",
   "count": 25,
   "unreadCount": 25,
   "messages": [
+    {
+      "id": "19f1e982825a5237",
+      "threadId": "19f1e982825a5237",
+      "from": "Techpresso <techpresso@dupple.com>",
+      "subject": "☕️ Anthropic unveils Claude Sonnet 5",
+      "date": "Wed, 01 Jul 2026 16:51:48 +0000 (UTC)",
+      "snippet": "Trump lifts Anthropic export ban, Meta rents AI power, and more. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
+      "unread": true,
+      "fetchedAt": "2026-07-01T17:04:19.852886+00:00",
+      "category": "newsletter",
+      "categoryReason": "Info-only industry update/news style content about AI models (no request or transaction).",
+      "actionable": false
+    },
+    {
+      "id": "19f1e96d33b58f95",
+      "threadId": "19f1e96d33b58f95",
+      "from": "The Information <hello@theinformation.com>",
+      "subject": "Share your insights: The real costs of scaling AI",
+      "date": "Wed, 01 Jul 2026 16:50:27 +0000",
+      "snippet": "Hi Eric, While AI promises massive operational gains, the path to full implementation is forcing organizations to completely rethink their technology budgets. From fluctuating token fees and",
+      "unread": true,
+      "fetchedAt": "2026-07-01T17:04:19.980124+00:00",
+      "category": "newsletter",
+      "categoryReason": "Asks the recipient to share insights; involves engagement/action.",
+      "actionable": true,
+      "actionExtracted": false
+    },
+    {
+      "id": "19f1e9252f5adc54",
+      "threadId": "19f1e9252f5adc54",
+      "from": "CAR SHIELD SAVINGS <notifications@burgisignal.com>",
+      "subject": "Congrats! You're eligible for 2026 Discounts! 6GZS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             61u1BdIORCzCxId19cTgjmo8rvFFuESp663UCBZssJKhu768m4j1ZfcafQxUmdmLIE8U4JGW1lB6PxY35bLl77xdVNbszGqYCXDfGkKg8kvD0nNLz1Pr5Fw8GoPw7TfChqRSbWh4cq5Fxxfq2o612vxhlMBjx7YL9SS3RNFIBjn6wVWjl2PvShZcglEg8enHYYsc5942Q7PClkghT2QRmZY5KpsmE24D7i0Iy1ryl9l84M2f1EMZX7m199R3PD3LqEgWM2v4ROTkEeuaM                 []   _iiC4tRfBONfjAG2cOdj3G2JiQ1jNWqLrfakIfKyj42weBMEU63OOiRl2T1I4jzF87X62RL5SeYa9E3I6kwve1w9MOcnOC0vQvno5OQQUFh559a8XpQrDj92Pcv1uql45nhmHLfkajUDObNaLS4gp3GB3XEexR6nPCN46Y5B7Zi3uIKEHX1O2Xpjs2WX63UCBZssJKhu768m4j1Z                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           []              []",
+      "date": "Wed, 01 Jul 2026 12:11:48 -0400 (EDT)",
+      "snippet": "",
+      "unread": true,
+      "fetchedAt": "2026-07-01T17:04:20.093402+00:00",
+      "category": "spam",
+      "categoryReason": "Promotional discount notification with no clear reputable context; likely automated marketing.",
+      "actionable": false
+    },
+    {
+      "id": "19f1e7e23fd1ba2d",
+      "threadId": "19f1e7e23fd1ba2d",
+      "from": "\"What's Up in AI\" <whatsupinai@mail.beehiiv.com>",
+      "subject": "Claude's latest model: Sonnet 5 is here ⚡ ",
+      "date": "Wed, 1 Jul 2026 16:17:36 +0000",
+      "snippet": "Anthropic brings back Fable 5 &amp; Mythos, the new models are cheaper and smarter ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
+      "unread": true,
+      "fetchedAt": "2026-07-01T17:04:20.219003+00:00",
+      "category": "newsletter",
+      "categoryReason": "Beehiiv newsletter update about Claude’s latest model; informational.",
+      "actionable": false
+    },
+    {
+      "id": "19f1e77721bb1df6",
+      "threadId": "19f1e77721bb1df6",
+      "from": "EverydaySpy <everydayspynl@mail.beehiiv.com>",
+      "subject": "How to lose a tail on the street",
+      "date": "Wed, 1 Jul 2026 16:02:59 +0000",
+      "snippet": "Spot bad guys before they get close ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
+      "unread": true,
+      "fetchedAt": "2026-07-01T17:04:20.325832+00:00",
+      "category": "spam",
+      "categoryReason": "Clickbait-style safety advice email from a newsletter sender; not related to work and likely promotional/content marketing.",
+      "actionable": false
+    },
     {
       "id": "19f1e5d3889c200a",
       "threadId": "19f1e5d3889c200a",
@@ -11,9 +77,9 @@
       "date": "Wed, 01 Jul 2026 15:47:33 +0000",
       "snippet": "The Information has tracked the private financials behind AI&#39;s biggest rivalry for years. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T16:04:20.919205+00:00",
+      "fetchedAt": "2026-07-01T17:04:20.451647+00:00",
       "category": "newsletter",
-      "categoryReason": "Info-only newsletter headline about OpenAI vs Anthropic and an IPO race.",
+      "categoryReason": "Newsletter/article announcement about OpenAI vs. Anthropic; subscription prompt.",
       "actionable": false
     },
     {
@@ -24,11 +90,10 @@
       "date": "Wed, 01 Jul 2026 15:41:24 +0000 (UTC)",
       "snippet": "Cairo • Aswan • luxury Nile cruise • Luxor • 5-star stay • limited seats • flash sale.͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌ ͏‌",
       "unread": true,
-      "fetchedAt": "2026-07-01T16:04:21.045781+00:00",
+      "fetchedAt": "2026-07-01T17:04:20.557149+00:00",
       "category": "spam",
-      "categoryReason": "Promotional travel/flash sale offer from KAYAK with aggressive pricing; unsolicited marketing.",
-      "actionable": true,
-      "actionExtracted": false
+      "categoryReason": "Travel deal/flash sale promotion; unsolicited marketing.",
+      "actionable": false
     },
     {
       "id": "19f1e4b00dfbe2d8",
@@ -38,11 +103,10 @@
       "date": "Wed, 01 Jul 2026 15:27:12 +0000",
       "snippet": "Tonight is the night. The party is live ͏͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿ ͏ ﻿",
       "unread": true,
-      "fetchedAt": "2026-07-01T16:04:21.154154+00:00",
+      "fetchedAt": "2026-07-01T17:04:20.660094+00:00",
       "category": "spam",
-      "categoryReason": "Marketing/promo message about a celebration (“The party is live”) from an AI-themed sender.",
-      "actionable": true,
-      "actionExtracted": false
+      "categoryReason": "Promotional/celebratory campaign from “Candy AI”; marketing email.",
+      "actionable": false
     },
     {
       "id": "19f1e3b98d9bb336",
@@ -52,9 +116,9 @@
       "date": "Wed, 1 Jul 2026 15:10:49 +0000",
       "snippet": "From Weaponized News, Legal AF, Steve Vladeck, and Steven Hyden ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T16:04:21.278179+00:00",
+      "fetchedAt": "2026-07-01T17:04:20.770689+00:00",
       "category": "newsletter",
-      "categoryReason": "Substack digest of news topics; informational newsletter-style email.",
+      "categoryReason": "Substack digest/list of stories; informational newsletter.",
       "actionable": false
     },
     {
@@ -65,11 +129,10 @@
       "date": "Wed, 01 Jul 2026 15:05:32 +0000 (UTC)",
       "snippet": "25% off everything you need - your code is ready and waiting.͏ ͏ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ͏ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-07-01T16:04:21.453244+00:00",
+      "fetchedAt": "2026-07-01T17:04:20.893357+00:00",
       "category": "spam",
-      "categoryReason": "Retail promotional email (“4th of July Sale Is Live” with discount/code).",
-      "actionable": true,
-      "actionExtracted": false
+      "categoryReason": "Retail promotion (“4th of July Sale Is Live”) with discount code/offer.",
+      "actionable": false
     },
     {
       "id": "19f1e34c578a944b",
@@ -79,9 +142,9 @@
       "date": "Wed, 01 Jul 2026 15:03:20 +0000 (UTC)",
       "snippet": "+ Humans are replacing AI!? ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-07-01T16:04:21.630277+00:00",
+      "fetchedAt": "2026-07-01T17:04:21.016762+00:00",
       "category": "newsletter",
-      "categoryReason": "Update/announcement style email about GPT-5.6; informational rather than an ask for action tied to Eric’s work.",
+      "categoryReason": "Promotional newsletter content about GPT-5.6; info-only marketing.",
       "actionable": false
     },
     {
@@ -92,9 +155,9 @@
       "date": "Wed, 01 Jul 2026 15:00:50 +0000",
       "snippet": "Get The Information&#39;s in-depth coverage at our best rate—subscribe now. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T16:04:21.744728+00:00",
+      "fetchedAt": "2026-07-01T17:04:21.115448+00:00",
       "category": "newsletter",
-      "categoryReason": "Subscription offer / best rate promotion for The Information; marketing but not label/dj-related.",
+      "categoryReason": "Explicit subscription offer/discount call-to-action to unlock best rate.",
       "actionable": true,
       "actionExtracted": false
     },
@@ -106,9 +169,9 @@
       "date": "Wed, 1 Jul 2026 14:14:40 +0000",
       "snippet": "I used to retype the same speech every single chat ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-07-01T16:04:21.988731+00:00",
+      "fetchedAt": "2026-07-01T17:04:21.233019+00:00",
       "category": "newsletter",
-      "categoryReason": "AI Business Insights newsletter tip/prompt (wording suggests informational guidance).",
+      "categoryReason": "Beehiiv newsletter post with advice/tips; informational.",
       "actionable": false
     },
     {
@@ -119,11 +182,10 @@
       "date": "Wed, 01 Jul 2026 08:14:29 -0600",
       "snippet": "Honoring 250 years of freedom, progress, and American innovation. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T16:04:22.117182+00:00",
+      "fetchedAt": "2026-07-01T17:04:21.350135+00:00",
       "category": "spam",
-      "categoryReason": "Automotive marketing/celebration announcement (“Join us in celebrating 250 years of America.”).",
-      "actionable": true,
-      "actionExtracted": false
+      "categoryReason": "Company promotional email (celebrating 250 years); marketing.",
+      "actionable": false
     },
     {
       "id": "19f1dfcfcb19cf02",
@@ -133,9 +195,9 @@
       "date": "Wed, 01 Jul 2026 14:02:25 +0000 (UTC)",
       "snippet": "Software developers are starting to combine the two most successful uses of large language models: coding and customer support.͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T16:04:22.278208+00:00",
+      "fetchedAt": "2026-07-01T17:04:21.477687+00:00",
       "category": "newsletter",
-      "categoryReason": "The Information AI Agenda article/topic about coding+customer support; informational.",
+      "categoryReason": "The Information AI Agenda content update; informational.",
       "actionable": false
     },
     {
@@ -146,11 +208,10 @@
       "date": "Wed, 01 Jul 2026 13:39:20 +0000",
       "snippet": "Read the latest article from The Information. Subscribe today and save 25% on all of our business, tech and finance reporting. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T16:04:22.377474+00:00",
+      "fetchedAt": "2026-07-01T17:04:21.585235+00:00",
       "category": "newsletter",
-      "categoryReason": "The Information article promotion with subscription discount; informational/news marketing.",
-      "actionable": true,
-      "actionExtracted": false
+      "categoryReason": "Article notification with subscribe/save offer; newsletter marketing.",
+      "actionable": false
     },
     {
       "id": "19f1dc528ed85a48",
@@ -160,11 +221,10 @@
       "date": "Wed, 01 Jul 2026 13:01:04 +0000 (UTC)",
       "snippet": "Low stimulus, strange creatures, and a world that keeps unfolding. Email not displaying correctly? View it in your browser. FloatVR - A New Path to Wellness header image Hi, We just added a new Float",
       "unread": true,
-      "fetchedAt": "2026-07-01T16:04:22.492878+00:00",
+      "fetchedAt": "2026-07-01T17:04:21.689410+00:00",
       "category": "newsletter",
-      "categoryReason": "FloatVR announcement of a new experience in their lab; product update/notification.",
-      "actionable": true,
-      "actionExtracted": false
+      "categoryReason": "Product/news update email from FloatVR; informational about a new feature/world.",
+      "actionable": false
     },
     {
       "id": "19f1dc5233ce8ab1",
@@ -174,9 +234,9 @@
       "date": "Wed, 01 Jul 2026 13:01:21 +0000",
       "snippet": "weird story Aloha Eric, Recently one of my projects has been doing some landscaping around my house to get a bit more privacy for me and the family. So I&#39;ve been planting hedges and other plants so",
       "unread": true,
-      "fetchedAt": "2026-07-01T16:04:22.592320+00:00",
+      "fetchedAt": "2026-07-01T17:04:21.789294+00:00",
       "category": "personal",
-      "categoryReason": "Personal-sounding note from “Nick Ponte” about a landscaping/house project; appears unrelated to dj/label ops.",
+      "categoryReason": "Personal-style message from a named individual with an anecdotal story; not label/dj/payment oriented.",
       "actionable": false
     },
     {
@@ -187,10 +247,11 @@
       "date": "Wed, 01 Jul 2026 12:21:48 +0000",
       "snippet": "Hits, Deep Cuts, Redrums &amp; More! ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T16:04:22.688409+00:00",
+      "fetchedAt": "2026-07-01T17:04:21.914395+00:00",
       "category": "dj-booking",
-      "categoryReason": "DJ Mighty Moves email about “Frank Ocean Edits!”—relevant to DJ content, not a booking request.",
-      "actionable": false
+      "categoryReason": "DJ-curated content from a DJ service; likely could involve performance interests or outreach to confirm availability.",
+      "actionable": true,
+      "actionExtracted": false
     },
     {
       "id": "19f1d93e604abe4c",
@@ -200,9 +261,9 @@
       "date": "Wed, 01 Jul 2026 12:07:39 +0000",
       "snippet": "... ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T16:04:22.810198+00:00",
+      "fetchedAt": "2026-07-01T17:04:22.071459+00:00",
       "category": "newsletter",
-      "categoryReason": "Patreon tier update notification (“Tier 2 - June 2026”); subscription/newsletter-style.",
+      "categoryReason": "Patreon tier update notification; creator subscription/service update.",
       "actionable": false
     },
     {
@@ -213,11 +274,10 @@
       "date": "Wed, 01 Jul 2026 12:04:48 +0000",
       "snippet": "Create a plan that fits your budget. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T16:04:22.926762+00:00",
+      "fetchedAt": "2026-07-01T17:04:22.182073+00:00",
       "category": "payment",
-      "categoryReason": "Capital One notification about settling an auto loan payment amount ($113.96/month).",
-      "actionable": true,
-      "actionExtracted": false
+      "categoryReason": "Bank notification about settling an auto loan payment amount.",
+      "actionable": false
     },
     {
       "id": "19f1d909fb7f7454",
@@ -227,11 +287,10 @@
       "date": "Wed, 01 Jul 2026 12:04:04 +0000 (UTC)",
       "snippet": "Video: add skills and automate with Hermes ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-07-01T16:04:23.037648+00:00",
+      "fetchedAt": "2026-07-01T17:04:22.303178+00:00",
       "category": "newsletter",
-      "categoryReason": "Forward Future update/announcement for “Sonnet 5” with a video link; informational product/news.",
-      "actionable": true,
-      "actionExtracted": false
+      "categoryReason": "AI-themed update/announcement with a video; informational newsletter.",
+      "actionable": false
     },
     {
       "id": "19f1d8f2d33e85be",
@@ -241,11 +300,10 @@
       "date": "Wed, 01 Jul 2026 12:02:13 +0000",
       "snippet": "Real creator results from people making short-form videos with Revid.ai. creator results &quot;10 videos in 30 minutes&quot; A few real notes from creators who use Revid to move faster without learning",
       "unread": true,
-      "fetchedAt": "2026-07-01T16:04:23.147324+00:00",
+      "fetchedAt": "2026-07-01T17:04:22.403590+00:00",
       "category": "spam",
-      "categoryReason": "Promotional pitch for Revid.ai creator results (“10 videos in 30 minutes”)—marketing automation.",
-      "actionable": true,
-      "actionExtracted": false
+      "categoryReason": "Sales/marketing pitch for creator tooling (“Real creator results”); unsolicited promotion.",
+      "actionable": false
     },
     {
       "id": "19f1d8e1a69db5ba",
@@ -255,9 +313,9 @@
       "date": "Wed, 01 Jul 2026 12:00:45 +0000",
       "snippet": "how it finally started running without me. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T16:04:23.329947+00:00",
-      "category": "spam",
-      "categoryReason": "Case-study/pitch style email about burning $25k/month; likely a sales/prospecting message.",
+      "fetchedAt": "2026-07-01T17:04:22.522116+00:00",
+      "category": "newsletter",
+      "categoryReason": "Business/ops story email from an individual/brand; informational, not a transaction request.",
       "actionable": false
     },
     {
@@ -268,79 +326,10 @@
       "date": "Wed, 01 Jul 2026 05:41:09 -0600",
       "snippet": "Good online or in store.* Get saving. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-07-01T16:04:23.445052+00:00",
+      "fetchedAt": "2026-07-01T17:04:22.642335+00:00",
       "category": "spam",
-      "categoryReason": "Retail coupon/offer email from CVS ExtraCare (“$5 Off When You Shop…”).",
-      "actionable": true,
-      "actionExtracted": false
-    },
-    {
-      "id": "19f1d78dbf1a2c2b",
-      "threadId": "19f1d78dbf1a2c2b",
-      "from": "Google Play <googleplay-noreply@google.com>",
-      "subject": "Updates to Google Play Terms of Service",
-      "date": "Wed, 01 Jul 2026 04:38:07 -0700",
-      "snippet": "On July 22, 2026, we&#39;re making some changes to our Google Play Terms of Service. You can review the new terms here. At a glance, here&#39;s what this update means for you: • Third-Party Fees: We",
-      "unread": true,
-      "fetchedAt": "2026-07-01T16:04:23.558154+00:00",
-      "category": "newsletter",
-      "categoryReason": "Google Play Terms of Service update notice; informational compliance update.",
+      "categoryReason": "Retail coupon/promo from CVS ExtraCare; marketing email.",
       "actionable": false
-    },
-    {
-      "id": "19f1d5fa73254732",
-      "threadId": "19f1d5fa73254732",
-      "from": "The Information AM <hello@theinformation.com>",
-      "subject": "U.S. Eases Export Curbs on Anthropic’s Fable Model",
-      "date": "Wed, 01 Jul 2026 11:10:32 +0000",
-      "snippet": "Exclusive: Nvidia Funds Security Firm Verkada -- Amazon Web Services Creates Forward Deployed Engineer Organization -- Anthropic Backtracks Spyware Targeting Chinese Users After Controversy --",
-      "unread": true,
-      "fetchedAt": "2026-07-01T16:04:23.697345+00:00",
-      "category": "newsletter",
-      "categoryReason": "The Information AM article/topic about U.S. easing export curbs; informational newsletter.",
-      "actionable": false
-    },
-    {
-      "id": "19f1d502989aa276",
-      "threadId": "19f1d502989aa276",
-      "from": "The Washington Post <info@nl.mail.washingtonpost.com>",
-      "subject": "The 7: Supreme Court takeaways; city-by-city heat forecast; ocean of stars; and more",
-      "date": "Wed, 01 Jul 2026 10:53:40 +0000",
-      "snippet": "Catch up in minutes. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
-      "unread": true,
-      "fetchedAt": "2026-07-01T16:04:23.827190+00:00",
-      "category": "newsletter",
-      "categoryReason": "Washington Post brief/digest (“Catch up in minutes”)—informational roundup.",
-      "actionable": false
-    },
-    {
-      "id": "19f1d4b75b03a8e6",
-      "threadId": "19f1d4b75b03a8e6",
-      "from": "Facebook Viewpoints <viewpoints@facebookmail.com>",
-      "subject": "Reminder: new task available",
-      "date": "Wed, 1 Jul 2026 03:48:26 -0700",
-      "snippet": "Hi Eric, As a reminder, you have a new task available in the Study program on Viewpoints. You can earn 85 points for completing the task. Get started now! This invitation will expire soon. Go to app",
-      "unread": true,
-      "fetchedAt": "2026-07-01T16:04:23.923608+00:00",
-      "category": "newsletter",
-      "categoryReason": "Facebook Viewpoints task reminder with points and link to complete a study task.",
-      "actionable": true,
-      "actionExtracted": true,
-      "actionTitle": "Complete Viewpoints task"
-    },
-    {
-      "id": "19f1d470ffe79078",
-      "threadId": "19f1d470ffe79078",
-      "from": "Dennis Gorelik <smartjobalert@postjobfree.com>",
-      "subject": "Traveling with has Customer Service Representative job in San Francisco, CA",
-      "date": "Wed, 1 Jul 2026 10:43:43 +0000",
-      "snippet": "Customer Service Representative Traveling with Michaila - San Francisco, CA About the job Customer Service Representative We&#39;re looking for a customer-focused and detail-driven Customer Service",
-      "unread": true,
-      "fetchedAt": "2026-07-01T16:04:24.032885+00:00",
-      "category": "spam",
-      "categoryReason": "Job posting/alert from a suspicious source (“postjobfree.com”) asking to apply/engage—likely lead-gen spam.",
-      "actionable": true,
-      "actionExtracted": false
     }
   ]
 }
