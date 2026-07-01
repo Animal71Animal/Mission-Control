@@ -234,7 +234,7 @@
     },
     {
       "id": "srb-flyers-008",
-      "completed": false,
+      "completed": true,
       "text": "Design flyer for Animal House (Monthly — 4th Saturday)",
       "category": "Marketing",
       "priority": "medium",
@@ -257,5 +257,5 @@
       "due_date": "2026-06-04"
     }
   ],
-  "last_updated": "2026-07-01T23:30:11.847Z"
+  "last_updated": "2026-07-01T23:30:15.671Z"
 }
