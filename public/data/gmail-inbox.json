@@ -1,8 +1,34 @@
 {
-  "fetchedAt": "2026-07-01T13:04:32.015443+00:00",
+  "fetchedAt": "2026-07-01T14:04:38.475327+00:00",
   "count": 25,
   "unreadCount": 25,
   "messages": [
+    {
+      "id": "19f1dfcfcb19cf02",
+      "threadId": "19f1dfcfcb19cf02",
+      "from": "The Information AI Agenda <hello@theinformation.com>",
+      "subject": "Customer Support Tickets That Code",
+      "date": "Wed, 01 Jul 2026 14:02:25 +0000 (UTC)",
+      "snippet": "Software developers are starting to combine the two most successful uses of large language models: coding and customer support.͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏",
+      "unread": true,
+      "fetchedAt": "2026-07-01T14:04:20.825401+00:00",
+      "category": "newsletter",
+      "categoryReason": "Info-only newsletter/article offering about AI and customer support; no request for action.",
+      "actionable": false
+    },
+    {
+      "id": "19f1de7db00c3b0d",
+      "threadId": "19f1de7db00c3b0d",
+      "from": "The Information <hello@theinformation.com>",
+      "subject": "Tesla Deepens SpaceX Ties to Support Chip Ambitions",
+      "date": "Wed, 01 Jul 2026 13:39:20 +0000",
+      "snippet": "Read the latest article from The Information. Subscribe today and save 25% on all of our business, tech and finance reporting. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
+      "unread": true,
+      "fetchedAt": "2026-07-01T14:04:20.951687+00:00",
+      "category": "newsletter",
+      "categoryReason": "Subscription/marketing for a business/tech news article; info-only.",
+      "actionable": false
+    },
     {
       "id": "19f1dc528ed85a48",
       "threadId": "19f1dc528ed85a48",
@@ -11,9 +37,9 @@
       "date": "Wed, 01 Jul 2026 13:01:04 +0000 (UTC)",
       "snippet": "Low stimulus, strange creatures, and a world that keeps unfolding. Email not displaying correctly? View it in your browser. FloatVR - A New Path to Wellness header image Hi, We just added a new Float",
       "unread": true,
-      "fetchedAt": "2026-07-01T13:04:19.942855+00:00",
-      "category": "spam",
-      "categoryReason": "Automated marketing newsletter for FloatVR (“New in Float Lab”); not related to your work and appears promotional.",
+      "fetchedAt": "2026-07-01T14:04:21.168424+00:00",
+      "category": "newsletter",
+      "categoryReason": "Product update email from FloatVR; promotional/info content without a direct action request.",
       "actionable": false
     },
     {
@@ -24,9 +50,9 @@
       "date": "Wed, 01 Jul 2026 13:01:21 +0000",
       "snippet": "weird story Aloha Eric, Recently one of my projects has been doing some landscaping around my house to get a bit more privacy for me and the family. So I&#39;ve been planting hedges and other plants so",
       "unread": true,
-      "fetchedAt": "2026-07-01T13:04:20.056782+00:00",
+      "fetchedAt": "2026-07-01T14:04:21.534404+00:00",
       "category": "spam",
-      "categoryReason": "Promotional/solicitation-style email with an unrelated subject about landscaping; likely marketing/sales.",
+      "categoryReason": "Unsolicited personal-sounding pitch/marketing (“watching grass grow can make you rich”) with no clear legitimate work/label/payout purpose.",
       "actionable": false
     },
     {
@@ -37,9 +63,9 @@
       "date": "Wed, 01 Jul 2026 12:21:48 +0000",
       "snippet": "Hits, Deep Cuts, Redrums &amp; More! ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T13:04:20.216657+00:00",
-      "category": "spam",
-      "categoryReason": "Promotional email about “Frank Ocean Edits!” from a DJ-branded sender; looks like marketing rather than a booking inquiry.",
+      "fetchedAt": "2026-07-01T14:04:21.782307+00:00",
+      "category": "newsletter",
+      "categoryReason": "DJ mixtape/edits promotional email; not a booking request.",
       "actionable": false
     },
     {
@@ -50,9 +76,9 @@
       "date": "Wed, 01 Jul 2026 12:07:39 +0000",
       "snippet": "... ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T13:04:20.371933+00:00",
+      "fetchedAt": "2026-07-01T14:04:22.068570+00:00",
       "category": "newsletter",
-      "categoryReason": "Patreon notification for “Tier 2 - June 2026”; informational update from a creator platform.",
+      "categoryReason": "Patreon tier update (“Tier 2 - June 2026”); membership notification rather than a work/label request.",
       "actionable": false
     },
     {
@@ -63,9 +89,9 @@
       "date": "Wed, 01 Jul 2026 12:04:48 +0000",
       "snippet": "Create a plan that fits your budget. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T13:04:20.481193+00:00",
+      "fetchedAt": "2026-07-01T14:04:22.219663+00:00",
       "category": "spam",
-      "categoryReason": "Bank/billing themed auto-loan payment solicitation from Capital One notification domain; not a payout/receipt you expect (likely phishing/marketing).",
+      "categoryReason": "Likely scam/phishing-style auto-loan settlement offer for a specific monthly amount without context.",
       "actionable": false
     },
     {
@@ -76,9 +102,9 @@
       "date": "Wed, 01 Jul 2026 12:04:04 +0000 (UTC)",
       "snippet": "Video: add skills and automate with Hermes ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-07-01T13:04:20.597255+00:00",
-      "category": "spam",
-      "categoryReason": "AI/automation product announcement (“Sonnet 5 is coming for Opus”); marketing info rather than a label/dj-related request.",
+      "fetchedAt": "2026-07-01T14:04:22.482204+00:00",
+      "category": "newsletter",
+      "categoryReason": "Automated/AI tool update notice (video about Sonnet 5/Opus); not asking you to book/pay.",
       "actionable": false
     },
     {
@@ -89,9 +115,9 @@
       "date": "Wed, 01 Jul 2026 12:02:13 +0000",
       "snippet": "Real creator results from people making short-form videos with Revid.ai. creator results &quot;10 videos in 30 minutes&quot; A few real notes from creators who use Revid to move faster without learning",
       "unread": true,
-      "fetchedAt": "2026-07-01T13:04:20.726578+00:00",
+      "fetchedAt": "2026-07-01T14:04:22.644564+00:00",
       "category": "spam",
-      "categoryReason": "AI video tool promotion (“10 videos in 30 minutes”); unsolicited marketing.",
+      "categoryReason": "Promotional marketing for a creator tool (“10 videos in 30 minutes”); looks like unsolicited sales outreach.",
       "actionable": false
     },
     {
@@ -102,9 +128,9 @@
       "date": "Wed, 01 Jul 2026 12:00:45 +0000",
       "snippet": "how it finally started running without me. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T13:04:20.832360+00:00",
-      "category": "spam",
-      "categoryReason": "Unsolicited business/marketing story pitch (“burning $25k/month”); not label/payment/dj related.",
+      "fetchedAt": "2026-07-01T14:04:22.837853+00:00",
+      "category": "label-business",
+      "categoryReason": "Brand/new product or tooling update about business operations; not directly DJ booking/payment, but not clearly label-royalty either—closest fit is label/business category.",
       "actionable": false
     },
     {
@@ -115,9 +141,9 @@
       "date": "Wed, 01 Jul 2026 05:41:09 -0600",
       "snippet": "Good online or in store.* Get saving. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-07-01T13:04:20.944424+00:00",
+      "fetchedAt": "2026-07-01T14:04:22.974297+00:00",
       "category": "spam",
-      "categoryReason": "Retail coupon/offer email from CVS ExtraCare; promotional.",
+      "categoryReason": "Retail promotion email ($5 off); unsolicited marketing.",
       "actionable": false
     },
     {
@@ -128,9 +154,9 @@
       "date": "Wed, 01 Jul 2026 04:38:07 -0700",
       "snippet": "On July 22, 2026, we&#39;re making some changes to our Google Play Terms of Service. You can review the new terms here. At a glance, here&#39;s what this update means for you: • Third-Party Fees: We",
       "unread": true,
-      "fetchedAt": "2026-07-01T13:04:21.060239+00:00",
+      "fetchedAt": "2026-07-01T14:04:23.217533+00:00",
       "category": "newsletter",
-      "categoryReason": "Service policy update email from Google Play (“Updates to Google Play Terms of Service”); informational.",
+      "categoryReason": "Service terms update notification from Google Play; info-only.",
       "actionable": false
     },
     {
@@ -141,9 +167,9 @@
       "date": "Wed, 01 Jul 2026 11:10:32 +0000",
       "snippet": "Exclusive: Nvidia Funds Security Firm Verkada -- Amazon Web Services Creates Forward Deployed Engineer Organization -- Anthropic Backtracks Spyware Targeting Chinese Users After Controversy --",
       "unread": true,
-      "fetchedAt": "2026-07-01T13:04:21.175348+00:00",
+      "fetchedAt": "2026-07-01T14:04:23.507563+00:00",
       "category": "newsletter",
-      "categoryReason": "The Information industry news roundup (exclusive story list); informational digest.",
+      "categoryReason": "Business/tech news article digest from The Information; info-only.",
       "actionable": false
     },
     {
@@ -154,9 +180,9 @@
       "date": "Wed, 01 Jul 2026 10:53:40 +0000",
       "snippet": "Catch up in minutes. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-07-01T13:04:21.317575+00:00",
+      "fetchedAt": "2026-07-01T14:04:23.727161+00:00",
       "category": "newsletter",
-      "categoryReason": "Washington Post newsletter/digest (“Catch up in minutes”); info-only.",
+      "categoryReason": "Washington Post roundup email; newsletter-style and informational.",
       "actionable": false
     },
     {
@@ -167,11 +193,12 @@
       "date": "Wed, 1 Jul 2026 03:48:26 -0700",
       "snippet": "Hi Eric, As a reminder, you have a new task available in the Study program on Viewpoints. You can earn 85 points for completing the task. Get started now! This invitation will expire soon. Go to app",
       "unread": true,
-      "fetchedAt": "2026-07-01T13:04:21.429547+00:00",
-      "category": "personal",
-      "categoryReason": "Facebook Viewpoints reminder that a task is available and asks you to go complete it (action needed).",
+      "fetchedAt": "2026-07-01T14:04:23.992138+00:00",
+      "category": "newsletter",
+      "categoryReason": "Notification about a new task in a study program; action may be required to complete it.",
       "actionable": true,
-      "actionExtracted": false
+      "actionExtracted": true,
+      "actionTitle": "Complete Viewpoints study task"
     },
     {
       "id": "19f1d470ffe79078",
@@ -181,9 +208,9 @@
       "date": "Wed, 1 Jul 2026 10:43:43 +0000",
       "snippet": "Customer Service Representative Traveling with Michaila - San Francisco, CA About the job Customer Service Representative We&#39;re looking for a customer-focused and detail-driven Customer Service",
       "unread": true,
-      "fetchedAt": "2026-07-01T13:04:21.555430+00:00",
+      "fetchedAt": "2026-07-01T14:04:24.205247+00:00",
       "category": "spam",
-      "categoryReason": "Job listing alert email from postjobfree (“Traveling with… job”); unsolicited lead-gen spam style.",
+      "categoryReason": "Job listing promotion via postjobfree; not related to DJ/label/payment and reads like automated job lead.",
       "actionable": false
     },
     {
@@ -194,9 +221,9 @@
       "date": "Wed, 1 Jul 2026 10:38:12 +0000",
       "snippet": "Hi ANIMAL, Your medication Quetiapine is due for a refill. https://pharmacy.amazon.com/dashboard/ Stay well, Your Amazon Pharmacy TeamThis email was sent from a notification-only address that cannot",
       "unread": true,
-      "fetchedAt": "2026-07-01T13:04:21.712684+00:00",
+      "fetchedAt": "2026-07-01T14:04:24.447552+00:00",
       "category": "personal",
-      "categoryReason": "Amazon Pharmacy refill notification requesting you to refill medication (action needed).",
+      "categoryReason": "Medication refill notification from Amazon Pharmacy; actionable to manage prescription.",
       "actionable": true,
       "actionExtracted": true,
       "actionTitle": "Refill Quetiapine medication"
@@ -209,9 +236,9 @@
       "date": "Wed, 1 Jul 2026 06:36:46 -0400",
       "snippet": "Plus: FIFA&#39;s branding ban, share your good mood, and more. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T13:04:21.995854+00:00",
+      "fetchedAt": "2026-07-01T14:04:24.681516+00:00",
       "category": "newsletter",
-      "categoryReason": "The Hustle newsletter issue (“3D-printed smiles”); informational marketing/content digest.",
+      "categoryReason": "The Hustle newsletter edition; informational digest.",
       "actionable": false
     },
     {
@@ -222,9 +249,9 @@
       "date": "Wed, 1 Jul 2026 10:24:48 +0000",
       "snippet": "Hi ANIMAL, Your medication Bupropion is due for a refill. https://pharmacy.amazon.com/dashboard/ Stay well, Your Amazon Pharmacy TeamThis email was sent from a notification-only address that cannot",
       "unread": true,
-      "fetchedAt": "2026-07-01T13:04:22.127917+00:00",
+      "fetchedAt": "2026-07-01T14:04:24.861270+00:00",
       "category": "personal",
-      "categoryReason": "Amazon Pharmacy refill notification for a medication; requires action to refill.",
+      "categoryReason": "Medication refill notification from Amazon Pharmacy; actionable to manage prescription.",
       "actionable": true,
       "actionExtracted": true,
       "actionTitle": "Refill Bupropion medication"
@@ -237,9 +264,9 @@
       "date": "Wed, 1 Jul 2026 10:19:20 +0000",
       "snippet": "Anthropic&#39;s newly released AI model Claude Sonnet 5 delivers near flagship performance at mid-tier prices. The model is aimed at giving ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌",
       "unread": true,
-      "fetchedAt": "2026-07-01T13:04:22.232360+00:00",
+      "fetchedAt": "2026-07-01T14:04:25.036012+00:00",
       "category": "newsletter",
-      "categoryReason": "TLDR newsletter/digest summarizing topics (Claude Sonnet 5, Meta Kalshi, etc.); info-only.",
+      "categoryReason": "TLDR newsletter digest about AI models and news; info-only.",
       "actionable": false
     },
     {
@@ -250,12 +277,12 @@
       "date": "Wed, 01 Jul 2026 02:49:46 -0700",
       "snippet": "Google Fi Your financial institution declined a payment from your Visa • • • • 5484 associated with the Google Fi account for nova/16057207666778425535 on Jul 1, 2026. They provided the following",
       "unread": true,
-      "fetchedAt": "2026-07-01T13:04:22.377632+00:00",
+      "fetchedAt": "2026-07-01T14:04:25.213503+00:00",
       "category": "payment",
-      "categoryReason": "Google Payments notification: payment declined for Google Fi; relates to a failed payment that needs resolution.",
+      "categoryReason": "Google Payments/Google Fi payment declined notice; action may be needed to resolve the declined payment.",
       "actionable": true,
       "actionExtracted": true,
-      "actionTitle": "Resolve Google Fi payment decline"
+      "actionTitle": "Resolve declined Google Fi payment"
     },
     {
       "id": "19f1d14d1f95a8e9",
@@ -265,12 +292,12 @@
       "date": "Wed, 01 Jul 2026 02:48:50 -0700",
       "snippet": "Your payment didn&#39;t go through Google Fi couldn&#39;t process your most recent automatic payment. To keep your service active, make sure to resolve any issues with your payment by Jul 4. Your",
       "unread": true,
-      "fetchedAt": "2026-07-01T13:04:22.594174+00:00",
+      "fetchedAt": "2026-07-01T14:04:25.547607+00:00",
       "category": "payment",
-      "categoryReason": "Google Fi notification: automatic payment not received; asks you to resolve payment issues to keep service active.",
+      "categoryReason": "Google Fi payment not received/automatic payment failed; action needed to keep service active.",
       "actionable": true,
       "actionExtracted": true,
-      "actionTitle": "Fix Google Fi payment to keep service"
+      "actionTitle": "Fix payment issue to keep service"
     },
     {
       "id": "19f1d13412699a5b",
@@ -280,12 +307,12 @@
       "date": "Wed, 1 Jul 2026 02:47:08 -0700 (PDT)",
       "snippet": "Wells Fargo Home Your card was declined A transaction made using your Wells Fargo Debit Card was declined. Card ending in 5484 Declined due to insufficient funds. Sign on to view available balance and",
       "unread": true,
-      "fetchedAt": "2026-07-01T13:04:22.787571+00:00",
+      "fetchedAt": "2026-07-01T14:04:25.749866+00:00",
       "category": "payment",
-      "categoryReason": "Wells Fargo alert: your card was declined due to insufficient funds; payment status update needing attention.",
+      "categoryReason": "Wells Fargo alert that a card transaction was declined; action may be required to resolve.",
       "actionable": true,
       "actionExtracted": true,
-      "actionTitle": "Check Wells Fargo card decline"
+      "actionTitle": "Review card decline and balance"
     },
     {
       "id": "19f1b48a62143de1",
@@ -295,9 +322,9 @@
       "date": "Wed, 1 Jul 2026 01:26:13 +0000 (UTC)",
       "snippet": "We have multiple Glenwood South venues that offer a fun atmosphere, great drinks, and room for your team to connect. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
       "unread": true,
-      "fetchedAt": "2026-07-01T13:04:22.916138+00:00",
-      "category": "spam",
-      "categoryReason": "LinkedIn message-style email that appears mismatched/irrelevant and includes promotional venue text; likely spam outreach.",
+      "fetchedAt": "2026-07-01T14:04:25.939959+00:00",
+      "category": "dj-booking",
+      "categoryReason": "LinkedIn message requesting to add a person; could be networking, but content doesn’t clearly request a DJ booking.",
       "actionable": false
     },
     {
@@ -308,35 +335,9 @@
       "date": "Wed, 1 Jul 2026 01:02:38 +0000",
       "snippet": "Simple &amp; transparent options for your overdue balance of $813.76. June 30, 2026 Login PIN: SAYXC7 Hi Eric Mills, This is January reaching out about your account from Merrick Bank Corporation with",
       "unread": true,
-      "fetchedAt": "2026-07-01T13:04:23.025882+00:00",
+      "fetchedAt": "2026-07-01T14:04:26.064112+00:00",
       "category": "spam",
-      "categoryReason": "Debt-relief/credit-card collection pitch from “January” about Merrick Bank; unsolicited and likely scam/lead-gen.",
-      "actionable": false
-    },
-    {
-      "id": "19f1b28c0e68b3a9",
-      "threadId": "19f1b28c0e68b3a9",
-      "from": "Spotify <no-reply@spotify.com>",
-      "subject": "Motionless In White, Ladrones live: personalized concert recommendations near you",
-      "date": "Wed, 01 Jul 2026 00:51:22 +0000 (UTC)",
-      "snippet": "Plus Atreyu, Daughtry and more! header Upcoming events near you artist image 1 artist image 2 Tue, Nov 3 Tue, Oct 13 Motionless In White Ladrones Lenovo Center, Raleigh Red Hat Amphitheater, Raleigh",
-      "unread": true,
-      "fetchedAt": "2026-07-01T13:04:23.142849+00:00",
-      "category": "newsletter",
-      "categoryReason": "Spotify personalized concert recommendation email; informational notification (no direct business action for you).",
-      "actionable": false
-    },
-    {
-      "id": "19f1b09baf555f21",
-      "threadId": "19f1b09baf555f21",
-      "from": "LinkedIn <notifications-noreply@linkedin.com>",
-      "subject": "You have 6 new invitations",
-      "date": "Wed, 1 Jul 2026 00:17:30 +0000 (UTC)",
-      "snippet": "See who reached out, Eric 🤝 ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
-      "unread": true,
-      "fetchedAt": "2026-07-01T13:04:23.246701+00:00",
-      "category": "newsletter",
-      "categoryReason": "LinkedIn notification: “You have 6 new invitations”; informational platform update, no direct action required beyond viewing.",
+      "categoryReason": "Credit card debt resolution solicitation with suspicious branding/details; likely unsolicited/scam.",
       "actionable": false
     }
   ]
