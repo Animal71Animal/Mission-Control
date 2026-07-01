@@ -416,14 +416,15 @@
     "category": "Personal",
     "priority": "high",
     "due_date": null,
-    "completed": false,
+    "completed": true,
     "created_at": "2026-07-01T13:04:32.014904+00:00",
     "owner": "animal",
     "source": "gmail",
     "source_gmail_id": "19f1d15aaf38715b",
     "source_from": "Google Payments <payments-noreply@google.com>",
     "source_subject": "Google Fi: Payment was declined for nova/16057207666778425535",
-    "source_url": "https://mail.google.com/mail/u/0/#inbox/19f1d15aaf38715b"
+    "source_url": "https://mail.google.com/mail/u/0/#inbox/19f1d15aaf38715b",
+    "completed_at": "2026-07-01T23:30:26.436Z"
   },
   {
     "id": "pt-email-1782911072014-3",
