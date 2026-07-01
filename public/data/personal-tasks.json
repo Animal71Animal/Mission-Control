@@ -371,22 +371,6 @@
     "source_url": "https://mail.google.com/mail/u/0/#inbox/19f1d4b75b03a8e6"
   },
   {
-    "id": "pt-email-1782907485033-2",
-    "title": "Check Wells Fargo declined card",
-    "notes": "Your card was declined due to insufficient funds. Sign on to view available balance.",
-    "category": "Work",
-    "priority": "high",
-    "due_date": null,
-    "completed": false,
-    "created_at": "2026-07-01T12:04:45.033677+00:00",
-    "owner": "animal",
-    "source": "gmail",
-    "source_gmail_id": "19f1d13412699a5b",
-    "source_from": "Wells Fargo Online <alerts@notify.wellsfargo.com>",
-    "source_subject": "Your Wells Fargo card was declined",
-    "source_url": "https://mail.google.com/mail/u/0/#inbox/19f1d13412699a5b"
-  },
-  {
     "id": "pt-email-1782911072014-0",
     "title": "Refill Quetiapine medication",
     "notes": "Your medication Quetiapine is due for a refill.",
