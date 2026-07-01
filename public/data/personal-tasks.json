@@ -542,5 +542,21 @@
     "source_subject": "Reminder: new task available",
     "source_url": "https://mail.google.com/mail/u/0/#inbox/19f1d4b75b03a8e6",
     "completed_at": "2026-07-01T17:25:01.368Z"
+  },
+  {
+    "id": "pt-email-1782943471914-0",
+    "title": "Pay overdue Klarna balance",
+    "notes": "Please resolve your overdue Klarna account.",
+    "category": "Personal",
+    "priority": "high",
+    "due_date": null,
+    "completed": false,
+    "created_at": "2026-07-01T22:04:31.914022+00:00",
+    "owner": "animal",
+    "source": "gmail",
+    "source_gmail_id": "19f1f40e17180caf",
+    "source_from": "InDebted <customersupport-us@indebted.co>",
+    "source_subject": "Urgent - action is needed for your overdue Klarna balance",
+    "source_url": "https://mail.google.com/mail/u/0/#inbox/19f1f40e17180caf"
   }
 ]
