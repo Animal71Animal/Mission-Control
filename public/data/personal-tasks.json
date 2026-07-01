@@ -363,14 +363,15 @@
     "category": "Personal",
     "priority": "medium",
     "due_date": null,
-    "completed": false,
+    "completed": true,
     "created_at": "2026-07-01T12:04:45.033677+00:00",
     "owner": "animal",
     "source": "gmail",
     "source_gmail_id": "19f1d4b75b03a8e6",
     "source_from": "Facebook Viewpoints <viewpoints@facebookmail.com>",
     "source_subject": "Reminder: new task available",
-    "source_url": "https://mail.google.com/mail/u/0/#inbox/19f1d4b75b03a8e6"
+    "source_url": "https://mail.google.com/mail/u/0/#inbox/19f1d4b75b03a8e6",
+    "completed_at": "2026-07-01T17:24:46.473Z"
   },
   {
     "id": "pt-email-1782911072014-0",
