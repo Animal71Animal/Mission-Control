@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANIMAL — Torch Lounge Pitch Deck</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Helvetica Neue', Arial, sans-serif; background: #0a0a0a; color: #fff; }
+  .slide { width: 100vw; height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 60px 80px; position: relative; overflow: hidden; }
+  .slide-number { position: absolute; bottom: 24px; right: 40px; font-size: 13px; color: #555; }
+  .slide-label { position: absolute; top: 28px; left: 40px; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #e5097f; font-weight: 600; }
+  h1 { font-size: 52px; font-weight: 700; line-height: 1.1; margin-bottom: 16px; }
+  h2 { font-size: 38px; font-weight: 700; margin-bottom: 28px; line-height: 1.15; }
+  h3 { font-size: 22px; font-weight: 600; color: #e5097f; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 1px; }
+  p { font-size: 20px; line-height: 1.6; color: #ccc; max-width: 900px; }
+  ul { list-style: none; padding: 0; }
+  ul li { font-size: 18px; line-height: 1.7; color: #ccc; padding: 6px 0; padding-left: 24px; position: relative; }
+  ul li::before { content: '—'; position: absolute; left: 0; color: #e5097f; font-weight: bold; }
+  .accent { color: #e5097f; }
+  .white { color: #fff; }
+  .muted { color: #777; font-size: 16px; }
+  .divider { width: 60px; height: 3px; background: #e5097f; margin: 20px 0; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; }
+  .card { background: #161616; border: 1px solid #222; border-radius: 8px; padding: 24px; }
+  .card h4 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 10px; }
+  .card p { font-size: 15px; color: #999; line-height: 1.5; }
+  .tag { display: inline-block; background: #e5097f22; color: #e5097f; border: 1px solid #e5097f44; border-radius: 4px; padding: 4px 12px; font-size: 13px; font-weight: 600; margin-right: 8px; margin-bottom: 8px; }
+  .four-col { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .kpi-box { background: #111; border: 1px solid #333; border-radius: 6px; padding: 20px; text-align: center; }
+  .kpi-box .num { font-size: 32px; font-weight: 800; color: #e5097f; }
+  .kpi-box .label { font-size: 13px; color: #888; margin-top: 6px; text-transform: uppercase; letter-spacing: 1px; }
+  .program-row { display: flex; align-items: center; gap: 20px; padding: 14px 0; border-bottom: 1px solid #222; }
+  .program-row .day { font-size: 14px; font-weight: 700; color: #e5097f; width: 140px; flex-shrink: 0; text-transform: uppercase; letter-spacing: 1px; }
+  .program-row .desc { font-size: 16px; color: #ccc; }
+  .program-row .tag { margin-bottom: 0; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .big-num { font-size: 120px; font-weight: 800; color: #e5097f; line-height: 1; }
+  .section-title { font-size: 14px; letter-spacing: 3px; text-transform: uppercase; color: #e5097f; margin-bottom: 12px; }
+  .logo-line { font-size: 13px; letter-spacing: 4px; text-transform: uppercase; color: #555; margin-bottom: 40px; }
+  .stmt { font-size: 28px; font-weight: 700; color: #fff; line-height: 1.3; margin-bottom: 24px; }
+  .stmt sub { font-size: 18px; font-weight: 400; color: #888; }
+  .pill-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+  .pill { background: #1a1a1a; border: 1px solid #333; border-radius: 20px; padding: 8px 18px; font-size: 14px; color: #aaa; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  table th { text-align: left; color: #e5097f; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; padding: 10px 16px; border-bottom: 2px solid #e5097f; }
+  table td { padding: 12px 16px; color: #ccc; border-bottom: 1px solid #222; vertical-align: top; }
+  table tr:last-child td { border-bottom: none; }
+  .highlight-box { background: linear-gradient(135deg, #e5097f22, #e5097f08); border-left: 3px solid #e5097f; padding: 20px 24px; margin: 16px 0; }
+  .highlight-box p { color: #ddd; font-size: 17px; }
+  .two-col-text { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .two-col-text p { font-size: 17px; }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: Title -->
+<div class="slide" style="background:#0a0a0a; text-align:center; justify-content:center;">
+  <div class="logo-line">Torch Lounge — Strategic Partnership Proposal</div>
+  <h1 style="font-size:64px; margin-bottom:8px;">ANIMAL</h1>
+  <p style="font-size:22px; color:#888; letter-spacing:2px; text-transform:uppercase; margin-bottom:40px;">Entertainment Director & Brand Operator</p>
+  <div class="divider" style="margin:0 auto 40px;"></div>
+  <p style="color:#666; font-size:16px;">Eric Mills · 25-year nightlife operator, DJ, brand director</p>
+  <p style="color:#555; font-size:14px; margin-top:8px;">ericmills71@gmail.com · +1 (561) 666-2109</p>
+  <div class="slide-number">1</div>
+</div>
+
+<!-- SLIDE 2: Executive Summary -->
+<div class="slide" style="background:#0a0a0a;">
+  <div class="slide-label">Executive Summary</div>
+  <h2 style="margin-bottom:32px;">More revenue. Better experiences.<br>Stronger brand. Easier operations.</h2>
+  <div class="divider"></div>
+  <div class="two-col-text" style="margin-top:28px;">
+    <div>
+      <p style="margin-bottom:20px;">The Torch is a Best of Boise legacy brand with two locations and a 16-hour daily operation that most operators would envy.</p>
+      <p>What's missing is the <span class="accent">programming layer</span> underneath the brand — the fully produced themed entertainment, the consistent operating standards across both venues, the media engine that compounds over time, and the in-house A/V expertise that protects margins.</p>
+    </div>
+    <div>
+      <p style="margin-bottom:16px;">Four areas where I add immediate value:</p>
+      <ul>
+        <li>Theatrical stage direction that lifts per-ticket spend</li>
+        <li>Operational systems that make your day easier</li>
+        <li>Media infrastructure that builds brand outside the four walls</li>
+        <li>Technical A/V asset management that eliminates contractor costs</li>
+      </ul>
+      <p style="margin-top:20px; font-size:16px; color:#888;">Most of this work can be implemented with <span class="accent">little to no additional capital investment</span> — leveraging staff, talent, and infrastructure already in place.</p>
+    </div>
+  </div>
+  <div class="slide-number">2</div>
+</div>
+
+<!-- SLIDE 3: Why Me -->
+<div class="slide" style="background:#0a0a0a;">
+  <div class="slide-label">Why Me</div>
+  <h2>35+ Years of Entertainment & Performance Experience</h2>
+  <div class="pill-row" style="margin-top:8px; margin-bottom:28px;">
+    <span class="pill">Event Producer</span><span class="pill">Show Director</span><span class="pill">Artist Development</span><span class="pill">Marketing & Promotion</span><span class="pill">Audience Engagement</span><span class="pill">Professional DJ</span><span class="pill">Radio Personality</span>
+  </div>
+  <div class="grid-2">
+    <div>
+      <h3>Credibility Markers</h3>
+      <ul>
+        <li>25 years elite pedigree — Miami, Atlanta, Raleigh; major-market residencies</li>
+        <li>Head DJ for multi-venue brands — consistency and scale across locations</li>
+        <li>Playboy Mansion, Groove Cruise, high-end private events</li>
+        <li>In-house audio/visual engineering — measurable contractor cost reduction</li>
+        <li>Custom DMX lighting scene design synchronized to emotional arc of music</li>
+        <li>Digital rotation & SOP implementation — eliminates backstage friction</li>
+      </ul>
+    </div>
+    <div>
+      <h3>What I Actually Deliver</h3>
+      <ul>
+        <li>Theatrical stage direction & pacing — music and lighting as a revenue lever</li>
+        <li>Late-night industry capture — turns "after 2 AM" into a high-margin anchor</li>
+        <li>Signature annual events — turnkey concepts with clear ROI and risk controls</li>
+        <li>Entertainer music request system — weekly structured input improving retention</li>
+        <li>Media engine — content, podcast, and influencer systems building brand</li>
+        <li>A/V coverage across both locations — eliminates contractor dependency</li>
+      </ul>
+    </div>
+  </div>
+  <div class="slide-number">3</div>
+</div>
+
+<!-- SLIDE 4: Why This Matters -->
+<div class="slide" style="background:#0a0a0a;">
+  <div class="slide-label">Why This Matters</div>
+  <h2>DJing Is Only a Small Part of the Value I Bring</h2>
+  <div class="highlight-box">
+    <p>Bob, you already have a DJ rotation that runs every night across both venues. What this proposal is about is the layer underneath — the <span class="accent">systems, programming, marketing, and operational design</span> that turns a working club into a destination venue.</p>
+  </div>
+  <div class="grid-3" style="margin-top:24px;">
+    <div class="card">
+      <h4 style="color:#e5097f;">Marketing & Promotion</h4>
+      <p>Brand building, social strategy, event marketing, audience acquisition — the engine that fills the room before the doors open.</p>
+    </div>
+    <div class="card">
+      <h4 style="color:#e5097f;">Event Development & Production</h4>
+      <p>Themed nights, special events, structured shows, recurring programming — the calendar that gives every night a reason to be there.</p>
+    </div>
+    <div class="card">
+      <h4 style="color:#e5097f;">Show Direction & Programming</h4>
+      <p>Entertainer management, stage direction, DJ set curation, crowd engagement — the layer that makes the experience feel alive.</p>
+    </div>
+  </div>
+  <p style="margin-top:28px; text-align:center; color:#666; font-size:16px;">These three pillars are what separate a club that runs on autopilot from a club that runs on <span class="accent">systems</span>.</p>
+  <div class="slide-number">4</div>
+</div>
+
+<!-- SLIDE 5: About The Torch -->
+<div class="slide" style="background:#0a0a0a;">
+  <div class="slide-label">The Vision</div>
+  <h2>A Club That Always Has Something Happening.</h2>
+  <div class="divider"></div>
+  <div class="grid-2" style="margin-top:24px;">
+    <div>
+      <h3>What I've Learned</h3>
+      <ul>
+        <li>Two locations, one operator — Torch (1826 W Main St, since 1997) + Torch 2 (610 S Vista Ave)</li>
+        <li>16-hour daily operation — 2 PM to 3 AM, 13 hours of floor per location</li>
+        <li>Annual signature nights prove the audience can be activated</li>
+        <li>Roll Call on the website — nightly entertainer roster is already a media asset</li>
+        <li>Best of Boise branding — strong top-of-funnel recognition</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Where I See Gaps</h3>
+      <ul>
+        <li>Middle-of-week programming is mostly absent — branded drink nights exist, themed entertainment doesn't</li>
+        <li>No unified weekly cadence across both venues — each does its own thing</li>
+        <li>Media engine is light — second venue and daytime hours aren't being captured</li>
+        <li>Only 4–5 signature annual events — calendar has room for headliner nights</li>
+        <li>A/V infrastructure — contractor costs are a predictable cost line I can attack</li>
+      </ul>
+    </div>
+  </div>
+  <div class="slide-number">5</div>
+</div>
+
+<!-- SLIDE 6: Revenue Benchmark -->
+<div class="slide" style="background:#0a0a0a;">
+  <div class="slide-label">Revenue Opportunity</div>
+  <h2>Per-Location Annual Revenue Benchmark</h2>
+  <div class="highlight-box">
+    <p>The Torch sits squarely in the <span class="accent">top operating tier</span> — 16-hour daily schedule, two-location footprint, established brand. A <span class="accent">+15–25%</span> revenue lift is a reasonable target from layered programming, in-house A/V coverage, and theatrical pacing.</p>
+  </div>
+  <div class="four-col" style="margin-top:40px;">
+    <div class="kpi-box">
+      <div class="num">16hr</div>
+      <div class="label">Daily Operation</div>
+      <p style="font-size:13px; color:#666; margin-top:8px;">2 PM – 3 AM across both locations</p>
+    </div>
+    <div class="kpi-box">
+      <div class="num">2</div>
+      <div class="label">Locations</div>
+      <p style="font-size:13px; color:#666; margin-top:8px;">One brand, one operator</p>
+    </div>
+    <div class="kpi-box">
+      <div class="num">+15-25%</div>
+      <div class="label">Revenue Target</div>
+      <p style="font-size:13px; color:#666; margin-top:8px;">From programming, A/V, and theatrical pacing</p>
+    </div>
+    <div class="kpi-box">
+      <div class="num">$0</div>
+      <div class="label">Capital Required</div>
+      <p style="font-size:13px; color:#666; margin-top:8px;">Leverages existing staff, talent, infrastructure</p>
+    </div>
+  </div>
+  <div class="slide-number">6</div>
+</div>
+
+<!-- SLIDE 7: Strategic Pillars -->
+<div class="slide" style="background:#0a0a0a;">
+  <div class="slide-label">Strategic Pillars</div>
+  <h2 style="margin-bottom:32px;">Four Areas of Focus</h2>
+  <div class="four-col">
+    <div class="card">
+      <div style="font-size:32px; margin-bottom:12px;">💰</div>
+      <h4>I. Revenue & Talent</h4>
+      <p>Theatrical stage direction increases tipping and VIP bookings. Late-night industry anchor captures the after-hours crowd. Talent development acts as a magnet for high-quality auditions. Custom audio branding drives FOMO and upsells.</p>
+    </div>
+    <div class="card">
+      <div style="font-size:32px; margin-bottom:12px;">⚙️</div>
+      <h4>II. Operational Excellence</h4>
+      <p>Digital rotation system eliminates backstage confusion. Entertainer music collaboration keeps the vibe fresh. SOP infrastructure ensures brand consistency across both locations. Featured Entertainer Program builds a roster of headliners.</p>
+    </div>
+    <div class="card">
+      <div style="font-size:32px; margin-bottom:12px;">📱</div>
+      <h4>III. Brand Media Engine</h4>
+      <p>The Dancer Podcast positions The Torch as Boise's adult-entertainment authority. Daily content capture builds brand outside the four walls. Influencer + street team program activates the local nightlife ecosystem.</p>
+    </div>
+    <div class="card">
+      <div style="font-size:32px; margin-bottom:12px;">🎛️</div>
+      <h4>IV. Technical Asset Management</h4>
+      <p>Audio engineering protects the investment. Lighting programming syncs to emotional arc. In-house coverage eliminates contractor calls across both venues — 16 hours × 2 locations × contractor avoidance.</p>
+    </div>
+  </div>
+  <div class="slide-number">7</div>
+</div>
+
+<!-- SLIDE 8: Weekly Programming -->
+<div class="slide" style="background:#0a0a0a;">
+  <div class="slide-label">Programming Library</div>
+  <h2>Weekly Coverage — Current vs. Systems Applied</h2>
+  <p style="margin-bottom:24px;">The branded drink nights already exist on the website — what's missing is the <span class="accent">fully-produced themed night underneath them</span>.</p>
+  <div>
+    <div class="program-row" style="border-bottom:2px solid #333;">
+      <div class="day">Monday</div><div class="tag">Mug Love Mondays</div><div class="desc">Industry Night — service workers, bartenders, entertainers. No cover with paystub.</div>
+    </div>
+    <div class="program-row">
+      <div class="day">Tuesday</div><div class="tag">Tequila Titties Tuesdays</div><div class="desc">No Limit — poker 7–10 PM, upscale swinger atmosphere after 10 PM.</div>
+    </div>
+    <div class="program-row">
+      <div class="day">Wednesday</div><div class="tag">Level Up</div><div class="desc">Mario Kart vs. Entertainer on the LED screen. High-energy, college-night energy.</div>
+    </div>
+    <div class="program-row">
+      <div class="day">Thursday</div><div class="tag">Chicks 'n' Kicks</div><div class="desc">Sneaker culture night — trivia, fresh kicks costuming, throwback music pre-2010.</div>
+    </div>
+    <div class="program-row">
+      <div class="day">Friday</div><div class="tag">Femme Fatale</div><div class="desc">High-glamour night — Featured Entertainer showcase at midnight. Showtime Showcase.</div>
+    </div>
+    <div class="program-row">
+      <div class="day">Saturday</div><div class="tag">AFTER DARK</div><div class="desc">Late-night anchor — full kitchen past 2 AM, guest DJs, after-hours crowd capture.</div>
+    </div>
+  </div>
+  <div class="slide-number">8</div>
+</div>
+
+<!-- SLIDE 9: Signature Annual Events -->
+<div class="slide" style="background:#0a0a0a;">
+  <div class="slide-label">Signature Events</div>
+  <h2>Eight Headline Nights Across the Calendar</h2>
+  <div class="grid-2" style="margin-top:20px;">
+    <div>
+      <div class="card" style="margin-bottom:14px;">
+        <h4 style="color:#e5097f;">Psycho Circus — Halloween</h4>
+        <p>Carnival / Freak Show with drummers, aerialists, poi/LED performers, choreographed dancers. Logical upgrade of the existing Halloween activation.</p>
+      </div>
+      <div class="card" style="margin-bottom:14px;">
+        <h4 style="color:#e5097f;">NYE Gala — December 31</h4>
+        <p>Premium open bar packages, champagne toast at midnight, countdown celebration. Higher cover, VIP tables, formal attire.</p>
+      </div>
+      <div class="card" style="margin-bottom:14px;">
+        <h4 style="color:#e5097f;">Valentine's Special — February 14</h4>
+        <p>Couples packages, singles mingle games, romantic decor. Special couples dances and VIP experiences.</p>
+      </div>
+      <div class="card">
+        <h4 style="color:#e5097f;">St. Patrick's Day — March 17</h4>
+        <p>Full green decor, Irish whiskey specials, green beer. Best green outfit contest. Green mandatory.</p>
+      </div>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:14px;">
+        <h4 style="color:#e5097f;">Tailgate & Touchdown — Labor Day</h4>
+        <p>Daytime parking-lot tailgate — beer tubs, food trucks, lawn games, jersey raffles. Moves inside after dark.</p>
+      </div>
+      <div class="card" style="margin-bottom:14px;">
+        <h4 style="color:#e5097f;">Blacklight Party — Flexible</h4>
+        <p>Full UV/blacklight transformation. Neon body paint station, glow sticks, white clothing. EDM and hip-hop.</p>
+      </div>
+      <div class="card" style="margin-bottom:14px;">
+        <h4 style="color:#e5097f;">SneakerBall — Major Sports Weekend</h4>
+        <p>Vendor booths, live art, fashion shows, sneaker culture showcase. Tied to high-traffic media window. The Torch's own signature.</p>
+      </div>
+      <div class="card">
+        <h4 style="color:#e5097f;">Pole Competition — Flexible</h4>
+        <p>Multi-round pole dancing competition with judges panel. Amateur and pro divisions. Positions venue as serious platform for performance art.</p>
+      </div>
+    </div>
+  </div>
+  <div class="slide-number">9</div>
+</div>
+
+<!-- SLIDE 10: The Dancer Podcast -->
+<div class="slide" style="background:#0a0a0a;">
+  <div class="slide-label">Media Engine</div>
+  <h2>The Dancer Podcast</h2>
+  <p style="font-size:20px; margin-bottom:24px;">A monthly broadcast positioning The Torch as Boise's definitive adult-entertainment authority.</p>
+  <div class="divider"></div>
+  <div class="grid-2" style="margin-top:24px;">
+    <div>
+      <h3>Episode Format (~60 min)</h3>
+      <ul>
+        <li><span class="accent">Roll Call Spotlight</span> — 2–3 entertainers, interview + their signature tracks</li>
+        <li><span class="accent">Behind the Booth</span> — DJ interview and playlist breakdown</li>
+        <li><span class="accent">The Industry Talk</span> — what's happening in adult entertainment nationally</li>
+        <li><span class="accent">Track Highlight Reel</span> — peak-hour selections from the previous Saturday</li>
+      </ul>
+      <p style="margin-top:16px; font-size:15px; color:#888;">Distribution: Mixcloud (primary) · Spotify · Apple Podcasts</p>
+    </div>
+    <div>
+      <h3>Why It Works Here</h3>
+      <ul>
+        <li>The website already publishes Roll Call daily — that infrastructure exists</li>
+        <li>The Dancer Podcast extends that same data into a monthly audio asset</li>
+        <li>Every episode is searchable content that drives discovery for months</li>
+        <li>The Torch stops being a place people go and starts being a brand people follow</li>
+        <li>Compounds with every episode — the flywheel gets stronger over time</li>
+      </ul>
+    </div>
+  </div>
+  <div class="highlight-box" style="margin-top:20px;">
+    <p>The podcast pilot launches within the first <span class="accent">90 days</span>.</p>
+  </div>
+  <div class="slide-number">10</div>
+</div>
+
+<!-- SLIDE 11: KPI Scorecard -->
+<div class="slide" style="background:#0a0a0a;">
+  <div class="slide-label">Measurement</div>
+  <h2>How Success Is Measured</h2>
+  <p style="margin-bottom:28px;">Six observable KPIs — the scoreboard that drives every decision in this proposal.</p>
+  <table>
+    <thead>
+      <tr>
+        <th>KPI</th>
+        <th>Definition</th>
+        <th>Source</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="color:#fff; font-weight:600;">Attendance Growth</td>
+        <td>Night-over-night headcount</td>
+        <td>Door counts, cover logs</td>
+      </tr>
+      <tr>
+        <td style="color:#fff; font-weight:600;">Revenue</td>
+        <td>Bar, cover, and event-driven sales</td>
+        <td>POS exports, daily close</td>
+      </tr>
+      <tr>
+        <td style="color:#fff; font-weight:600;">VIP Sales</td>
+        <td>Bottle service and premium package sales</td>
+        <td>VIP manifest</td>
+      </tr>
+      <tr>
+        <td style="color:#fff; font-weight:600;">Guest Retention</td>
+        <td>Repeat visits and loyalty per quarter</td>
+        <td>Email/SMS list engagement, return rate</td>
+      </tr>
+      <tr>
+        <td style="color:#fff; font-weight:600;">Entertainer Participation</td>
+        <td>Show buy-in and consistency</td>
+        <td>Roll Call + showtime manifest</td>
+      </tr>
+      <tr>
+        <td style="color:#fff; font-weight:600;">Social Engagement</td>
+        <td>Reach, shares, and organic attendance growth</td>
+        <td>IG + TikTok analytics, weekly review</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="slide-number">11</div>
+</div>
+
+<!-- SLIDE 12: Implementation -->
+<div class="slide" style="background:#0a0a0a;">
+  <div class="slide-label">Implementation</div>
+  <h2>Test · Measure · Scale</h2>
+  <div class="grid-3" style="margin-top:24px;">
+    <div class="card">
+      <div style="font-size:40px; font-weight:800; color:#e5097f; margin-bottom:12px;">Phase 1</div>
+      <h4 style="margin-bottom:10px;">Test</h4>
+      <p>Pilot select events and programming with minimal overhead. Validate what resonates. Bob and I review together after 30 days.</p>
+      <p style="margin-top:10px; color:#e5097f; font-size:13px; font-weight:600;">Week 1 — Week 4</p>
+    </div>
+    <div class="card">
+      <div style="font-size:40px; font-weight:800; color:#e5097f; margin-bottom:12px;">Phase 2</div>
+      <h4 style="margin-bottom:10px;">Measure</h4>
+      <p>Track the six KPIs. Compare against pre-pilot baseline. Identify which concepts are driving movement on the scoreboard.</p>
+      <p style="margin-top:10px; color:#e5097f; font-size:13px; font-weight:600;">Month 2 — Month 3</p>
+    </div>
+    <div class="card">
+      <div style="font-size:40px; font-weight:800; color:#e5097f; margin-bottom:12px;">Phase 3</div>
+      <h4 style="margin-bottom:10px;">Scale</h4>
+      <p>Double down on what works. Expand proven concepts across the calendar. Signature Events Calendar becomes the operating target.</p>
+      <p style="margin-top:10px; color:#e5097f; font-size:13px; font-weight:600;">Month 4+</p>
+    </div>
+  </div>
+  <div class="highlight-box" style="margin-top:28px;">
+    <p>Phase 1 begins week one. The first signature event lands inside the first <span class="accent">60 days</span>. The Dancer Podcast pilot launches within the first <span class="accent">90 days</span>.</p>
+  </div>
+  <div class="slide-number">12</div>
+</div>
+
+<!-- SLIDE 13: Why The Torch -->
+<div class="slide" style="background:#0a0a0a;">
+  <div class="slide-label">Why The Torch</div>
+  <h2>Why The Torch Specifically</h2>
+  <div class="grid-3" style="margin-top:28px;">
+    <div class="card">
+      <div style="font-size:36px; margin-bottom:16px;">📋</div>
+      <h4>The Roll Call Infrastructure</h4>
+      <p>Most operators have to build their nightly entertainer roster from scratch. The Torch already publishes it. The Dancer Podcast plugs directly into that existing asset — no build required.</p>
+    </div>
+    <div class="card">
+      <div style="font-size:36px; margin-bottom:16px;">🏢</div>
+      <h4>Two Locations, One Operator</h4>
+      <p>My value compounds at scale. The same DJ SOPs, lighting scenes, branded drink nights, and marketing engine — implemented once, deployed twice. My operating model is built for exactly that.</p>
+    </div>
+    <div class="card">
+      <div style="font-size:36px; margin-bottom:16px;">⏰</div>
+      <h4>The Hours Are the Lever</h4>
+      <p>16-hour daily operations, two locations, 365 days a year. The middle-of-the-week and daytime programming opportunity at The Torch is significantly larger than at a 9 PM – 2 AM single-location venue.</p>
+    </div>
+  </div>
+  <p style="margin-top:32px; text-align:center; font-size:18px; color:#888;">This is what I do best — <span class="accent">fill the underused hours with programming that sells</span>.</p>
+  <div class="slide-number">13</div>
+</div>
+
+<!-- SLIDE 14: Projected Impact -->
+<div class="slide" style="background:#0a0a0a;">
+  <div class="slide-label">Projected Impact</div>
+  <h2>Conservative Estimates Based on Industry Benchmarks</h2>
+  <div class="four-col" style="margin-top:32px;">
+    <div class="kpi-box">
+      <div class="num">+15%</div>
+      <div class="label">Attendance Lift</div>
+    </div>
+    <div class="kpi-box">
+      <div class="num">+22%</div>
+      <div class="label">VIP Revenue</div>
+    </div>
+    <div class="kpi-box">
+      <div class="num">-40%</div>
+      <div class="label">A/V Contractor Costs</div>
+    </div>
+    <div class="kpi-box">
+      <div class="num">3x</div>
+      <div class="label">Social Engagement</div>
+    </div>
+  </div>
+  <p style="text-align:center; margin-top:24px; font-size:14px; color:#555;">Actual lifts depend on execution pacing. All are measurable against current performance baseline.</p>
+  <div class="slide-number">14</div>
+</div>
+
+<!-- SLIDE 15: Closing -->
+<div class="slide" style="background:#0a0a0a; text-align:center; justify-content:center;">
+  <div class="logo-line">Eric Mills — ANIMAL</div>
+  <p class="stmt" style="max-width:700px; margin:0 auto 32px;">More revenue. Better experiences.<br>Stronger brand. Easier operations.</p>
+  <div class="divider" style="margin:0 auto 32px;"></div>
+  <p style="font-size:18px; color:#aaa; max-width:600px; margin:0 auto 32px;">I'd really enjoy the opportunity to work together. The goal is straightforward: add value aligned with how The Torch is already being run — steady, professional, and results-driven.</p>
+  <div style="display:flex; gap:40px; justify-content:center; margin-top:16px;">
+    <div>
+      <p style="font-size:15px; color:#e5097f; font-weight:600;">Email</p>
+      <p style="font-size:15px; color:#888;">ericmills71@gmail.com</p>
+    </div>
+    <div>
+      <p style="font-size:15px; color:#e5097f; font-weight:600;">Phone</p>
+      <p style="font-size:15px; color:#888;">+1 (561) 666-2109</p>
+    </div>
+  </div>
+  <div class="slide-number">15</div>
+</div>
+
+</body>
+</html>
