@@ -1284,7 +1284,12 @@
       "total_incentives": 401.02,
       "total_expenses": 1255.92,
       "trip_earnings": 2790.22,
-      "source": "uber_tax_summary"
+      "source": "uber_tax_summary",
+      "service_fee": 1154.72,
+      "booking_fee": 6.5,
+      "insurance": 25.95,
+      "airport_city_fees": 68.75,
+      "note": "Official Uber Tax Summary PDF (May 2026) \u2014 matches existing MC values. Expense fee-by-fee breakdown added 2026-07-05 for schema parity with June."
     },
     "2026-06": {
       "total_gross": 3084.66,
@@ -1309,6 +1314,6 @@
     "scrape_method": "manual_entry_from_pdf_statements",
     "last_scrape_attempt": "2026-06-03T22:00:00Z"
   },
-  "last_updated": "2026-07-05T13:53:26.765144Z",
+  "last_updated": "2026-07-05T14:08:37.089404Z",
   "dedup_method": "trip_level: compare date+time+amount before adding any new trip"
 }
