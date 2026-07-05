@@ -1287,15 +1287,20 @@
       "source": "uber_tax_summary"
     },
     "2026-06": {
-      "total_gross": 1827.45,
-      "total_net": 1885.3,
-      "total_trips": 163,
-      "total_tips": 245.0,
-      "total_incentives": 65.84,
-      "total_expenses": 22.15,
-      "trip_earnings": 1516.61,
-      "source": "uber_statement",
-      "note": "From 5 weekly statements (Jun 1-8, Jun 8-15, Jun 15-22, Jun 22-29, Jun 29-Jul 2). Excludes $41.20 prev-week tips from May work. Final Uber tax summary may differ slightly when published."
+      "total_gross": 3084.66,
+      "total_net": 1926.5,
+      "total_trips": 164,
+      "online_miles": 1762,
+      "total_tips": 286.2,
+      "total_incentives": 336.96,
+      "total_expenses": 1158.16,
+      "trip_earnings": 2461.5,
+      "service_fee": 996.76,
+      "booking_fee": 87.0,
+      "insurance": 22.15,
+      "airport_city_fees": 52.25,
+      "source": "uber_tax_summary",
+      "note": "Official Uber Tax Summary PDF (Jun 2026). Daily shift log hidden on page for tax-summary months."
     }
   },
   "metadata": {
@@ -1304,6 +1309,6 @@
     "scrape_method": "manual_entry_from_pdf_statements",
     "last_scrape_attempt": "2026-06-03T22:00:00Z"
   },
-  "last_updated": "2026-07-02T10:28:30.853107+00:00",
+  "last_updated": "2026-07-05T13:53:26.765144Z",
   "dedup_method": "trip_level: compare date+time+amount before adding any new trip"
 }
