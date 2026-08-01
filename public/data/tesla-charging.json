@@ -669,22 +669,22 @@
       "location": "Boise, ID - North Orchard St",
       "address": "851 N Orchard St, Boise, ID 83706",
       "type": "Supercharging",
-      "kwh": 44.6324,
-      "rate_per_kwh": 0.4,
-      "cost": 17.85,
+      "kwh": 57.603,
+      "rate_per_kwh": 0.19,
+      "cost": 10.94,
       "duration_min": 0,
-      "id": "3000P0306440132"
+      "id": "3000P0306198179"
     },
     {
       "date": "2026-05-12",
       "location": "Boise, ID - North Orchard St",
       "address": "851 N Orchard St, Boise, ID 83706",
       "type": "Supercharging",
-      "kwh": 57.603,
-      "rate_per_kwh": 0.19,
-      "cost": 10.94,
+      "kwh": 44.6324,
+      "rate_per_kwh": 0.4,
+      "cost": 17.85,
       "duration_min": 0,
-      "id": "3000P0306198179"
+      "id": "3000P0306440132"
     },
     {
       "date": "2026-05-13",
@@ -1020,6 +1020,17 @@
       "duration_min": 61
     },
     {
+      "date": "2026-07-02",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 75.0189,
+      "rate_per_kwh": 0.42,
+      "cost": 31.5,
+      "duration_min": 0,
+      "id": "3000P0328255749"
+    },
+    {
       "date": "2026-07-04",
       "location": "Boise, ID - North Orchard St",
       "address": "851 N Orchard St, Boise, ID 83706",
@@ -1028,14 +1039,355 @@
       "rate_per_kwh": 0.21,
       "cost": 11.55,
       "duration_min": 25
+    },
+    {
+      "date": "2026-07-04",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 55.0014,
+      "rate_per_kwh": 0.21,
+      "cost": 11.55,
+      "duration_min": 0,
+      "id": "3000P0329274082"
+    },
+    {
+      "date": "2026-07-05",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 36.0651,
+      "rate_per_kwh": 0.42,
+      "cost": 15.14,
+      "duration_min": 0,
+      "id": "3000P0329789377"
+    },
+    {
+      "date": "2026-07-06",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 78.937,
+      "rate_per_kwh": 0.21,
+      "cost": 16.57,
+      "duration_min": 0,
+      "id": "3000P0329866546"
+    },
+    {
+      "date": "2026-07-07",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 35.8575,
+      "rate_per_kwh": 0.42,
+      "cost": 15.06,
+      "duration_min": 0,
+      "id": "3000P0330453273"
+    },
+    {
+      "date": "2026-07-07",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 53.9397,
+      "rate_per_kwh": 0.21,
+      "cost": 11.32,
+      "duration_min": 0,
+      "id": "3000P0330659623"
+    },
+    {
+      "date": "2026-07-08",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 23.8623,
+      "rate_per_kwh": 0.42,
+      "cost": 10.02,
+      "duration_min": 0,
+      "id": "3000P0331034222"
+    },
+    {
+      "date": "2026-07-09",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 55.6176,
+      "rate_per_kwh": 0.21,
+      "cost": 11.67,
+      "duration_min": 0,
+      "id": "3000P0331095633"
+    },
+    {
+      "date": "2026-07-10",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 24.1965,
+      "rate_per_kwh": 0.42,
+      "cost": 10.16,
+      "duration_min": 0,
+      "id": "3000P0331614593"
+    },
+    {
+      "date": "2026-07-10",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 70.8025,
+      "rate_per_kwh": 0.21,
+      "cost": 14.86,
+      "duration_min": 0,
+      "id": "3000P0331977699"
+    },
+    {
+      "date": "2026-07-11",
+      "location": "Boise, ID - South Entertainment Ave",
+      "address": "1426 South Entertainment Ave, Boise, ID 83709",
+      "type": "Supercharging",
+      "kwh": 36.2402,
+      "rate_per_kwh": 0.43,
+      "cost": 15.58,
+      "duration_min": 0,
+      "id": "3000P0332442775"
+    },
+    {
+      "date": "2026-07-12",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 70.4055,
+      "rate_per_kwh": 0.21,
+      "cost": 14.78,
+      "duration_min": 0,
+      "id": "3000P0332517791"
+    },
+    {
+      "date": "2026-07-13",
+      "location": "Boise, ID - South Entertainment Ave",
+      "address": "1426 South Entertainment Ave, Boise, ID 83709",
+      "type": "Supercharging",
+      "kwh": 10.9407,
+      "rate_per_kwh": 0.43,
+      "cost": 4.7,
+      "duration_min": 0,
+      "id": "3000P0333102969"
+    },
+    {
+      "date": "2026-07-13",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 67.2949,
+      "rate_per_kwh": 0.21,
+      "cost": 14.13,
+      "duration_min": 0,
+      "id": "3000P0333364264"
+    },
+    {
+      "date": "2026-07-15",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 74.4104,
+      "rate_per_kwh": 0.21,
+      "cost": 15.62,
+      "duration_min": 0,
+      "id": "3000P0333834137"
+    },
+    {
+      "date": "2026-07-16",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 69.0031,
+      "rate_per_kwh": 0.21,
+      "cost": 14.49,
+      "duration_min": 0,
+      "id": "3000P0334253394"
+    },
+    {
+      "date": "2026-07-17",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 73.4747,
+      "rate_per_kwh": 0.21,
+      "cost": 15.42,
+      "duration_min": 0,
+      "id": "3000P0334684024"
+    },
+    {
+      "date": "2026-07-18",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 42.6985,
+      "rate_per_kwh": 0.42,
+      "cost": 17.93,
+      "duration_min": 0,
+      "id": "3000P0335519896"
+    },
+    {
+      "date": "2026-07-19",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 23.9592,
+      "rate_per_kwh": 0.42,
+      "cost": 10.06,
+      "duration_min": 0,
+      "id": "3000P0335903586"
+    },
+    {
+      "date": "2026-07-19",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 32.2898,
+      "rate_per_kwh": 0.42,
+      "cost": 13.56,
+      "duration_min": 0,
+      "id": "3000P0336076683"
+    },
+    {
+      "date": "2026-07-20",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 41.0214,
+      "rate_per_kwh": 0.42,
+      "cost": 17.22,
+      "duration_min": 0,
+      "id": "3000P0336270005"
+    },
+    {
+      "date": "2026-07-20",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 65.1275,
+      "rate_per_kwh": 0.21,
+      "cost": 13.67,
+      "duration_min": 0,
+      "id": "3000P0336544034"
+    },
+    {
+      "date": "2026-07-22",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 41.2678,
+      "rate_per_kwh": 0.42,
+      "cost": 17.33,
+      "duration_min": 0,
+      "id": "3000P0337096704"
+    },
+    {
+      "date": "2026-07-23",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 56.6094,
+      "rate_per_kwh": 0.42,
+      "cost": 23.77,
+      "duration_min": 0,
+      "id": "3000P0337660402"
+    },
+    {
+      "date": "2026-07-24",
+      "location": "Boise, ID - South Entertainment Ave",
+      "address": "1426 South Entertainment Ave, Boise, ID 83709",
+      "type": "Supercharging",
+      "kwh": 63.0808,
+      "rate_per_kwh": 0.43,
+      "cost": 27.12,
+      "duration_min": 0,
+      "id": "3000P0338099494"
+    },
+    {
+      "date": "2026-07-25",
+      "location": "Boise, ID - South Entertainment Ave",
+      "address": "1426 South Entertainment Ave, Boise, ID 83709",
+      "type": "Supercharging",
+      "kwh": 53.6965,
+      "rate_per_kwh": 0.19,
+      "cost": 10.2,
+      "duration_min": 0,
+      "id": "3000P0338362639"
+    },
+    {
+      "date": "2026-07-26",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 25.9513,
+      "rate_per_kwh": 0.21,
+      "cost": 5.44,
+      "duration_min": 0,
+      "id": "3000P0338855264"
+    },
+    {
+      "date": "2026-07-26",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 59.4457,
+      "rate_per_kwh": 0.21,
+      "cost": 12.48,
+      "duration_min": 0,
+      "id": "3000P0338876078"
+    },
+    {
+      "date": "2026-07-27",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 75.1233,
+      "rate_per_kwh": 0.21,
+      "cost": 15.77,
+      "duration_min": 0,
+      "id": "3000P0339370031"
+    },
+    {
+      "date": "2026-07-27",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 82.331,
+      "rate_per_kwh": 0.21,
+      "cost": 17.28,
+      "duration_min": 0,
+      "id": "3000P0339764267"
+    },
+    {
+      "date": "2026-07-29",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 50.7515,
+      "rate_per_kwh": 0.42,
+      "cost": 21.31,
+      "duration_min": 0,
+      "id": "3000P0340459803"
+    },
+    {
+      "date": "2026-07-31",
+      "location": "Boise, ID - North Orchard Street",
+      "address": "851 N Orchard St, Boise, ID 83706",
+      "type": "Supercharging",
+      "kwh": 67.3243,
+      "rate_per_kwh": 0.42,
+      "cost": 28.27,
+      "duration_min": 0,
+      "id": "3000P0341234974"
     }
   ],
-  "last_updated": "2026-07-05T04:37:07.603854Z",
+  "last_updated": "2026-08-01T09:52:52.977803Z",
   "totals": {
-    "total_sessions": 101,
-    "total_cost": 1601.36,
-    "total_kwh": 5529.6944,
-    "avg_cost_per_session": 15.86
+    "total_sessions": 133,
+    "total_cost": 2095.34,
+    "total_kwh": 7221.4404,
+    "avg_cost_per_session": 15.75
   },
   "monthlyTotals": {
     "2025-12": {
@@ -1081,10 +1433,10 @@
       "avg_cost_per_session": 17.09
     },
     "2026-07": {
-      "sessions": 2,
-      "cost": 43.05,
-      "kwh": 130.0203,
-      "avg_cost_per_session": 21.52
+      "sessions": 34,
+      "cost": 537.03,
+      "kwh": 1821.7663,
+      "avg_cost_per_session": 15.79
     }
   }
 }
