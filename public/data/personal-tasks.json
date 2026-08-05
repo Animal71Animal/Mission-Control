@@ -537,13 +537,14 @@
     "category": "Personal",
     "priority": "high",
     "due_date": null,
-    "completed": false,
+    "completed": true,
     "created_at": "2026-07-01T22:04:31.914022+00:00",
     "owner": "animal",
     "source": "gmail",
     "source_gmail_id": "19f1f40e17180caf",
     "source_from": "InDebted <customersupport-us@indebted.co>",
     "source_subject": "Urgent - action is needed for your overdue Klarna balance",
-    "source_url": "https://mail.google.com/mail/u/0/#inbox/19f1f40e17180caf"
+    "source_url": "https://mail.google.com/mail/u/0/#inbox/19f1f40e17180caf",
+    "completed_at": "2026-08-05T04:17:28.183Z"
   }
 ]
