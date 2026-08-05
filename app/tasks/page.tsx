@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import TorchTasks from "./TorchTasks";
 import PersonalTasks from "./PersonalTasks";
