@@ -1,0 +1,103 @@
+{
+  "club": "The Torch",
+  "started": "2026-08-03",
+  "monthlyTotals": [
+    {
+      "month": "August",
+      "amount": 30,
+      "nights": 1
+    }
+  ],
+  "topTippers": [
+    {
+      "name": "Autumn",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 0,
+      "jun": 0,
+      "jul": 0,
+      "aug": 20,
+      "sep": 0,
+      "oct": 0,
+      "nov": 0,
+      "dec": 0,
+      "total": 20,
+      "rank": 1,
+      "badge": "bronze"
+    },
+    {
+      "name": "Ariel",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 0,
+      "jun": 0,
+      "jul": 0,
+      "aug": 10,
+      "sep": 0,
+      "oct": 0,
+      "nov": 0,
+      "dec": 0,
+      "total": 10,
+      "rank": 2,
+      "badge": "bronze"
+    }
+  ],
+  "nightlyData": {
+    "August": [
+      {
+        "date": "Sun Aug 3",
+        "total": 30,
+        "dancers": [
+          {
+            "name": "Autumn",
+            "amount": 20
+          },
+          {
+            "name": "Ariel",
+            "amount": 10
+          }
+        ]
+      }
+    ]
+  },
+  "allDancers": [
+    {
+      "name": "Autumn",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 0,
+      "jun": 0,
+      "jul": 0,
+      "aug": 20,
+      "sep": 0,
+      "oct": 0,
+      "nov": 0,
+      "dec": 0,
+      "total": 20
+    },
+    {
+      "name": "Ariel",
+      "jan": 0,
+      "feb": 0,
+      "mar": 0,
+      "apr": 0,
+      "may": 0,
+      "jun": 0,
+      "jul": 0,
+      "aug": 10,
+      "sep": 0,
+      "oct": 0,
+      "nov": 0,
+      "dec": 0,
+      "total": 10
+    }
+  ],
+  "customerTips": [],
+  "last_updated": "2026-08-05T04:00:00Z"
+}
