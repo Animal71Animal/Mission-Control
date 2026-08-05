@@ -5,8 +5,8 @@ import Card from "@/components/Card";
 
 interface TorchTipsData {
   monthlyTotals: { month: string; amount: number; nights: number }[];
-  topTippers: { rank: number; name: string; jan: number; feb: number; mar: number; apr?: number; may?: number; jun?: number; total: number; badge: string | null }[];
-  allDancers: { name: string; jan: number; feb: number; mar: number; apr?: number; may?: number; jun?: number; total?: number }[];
+  topTippers: { rank: number; name: string; jul: number; aug: number; sep: number; oct?: number; nov?: number; dec?: number; total: number; badge: string | null }[];
+  allDancers: { name: string; jul: number; aug: number; sep: number; oct?: number; nov?: number; dec?: number; total?: number }[];
   customerTips: { month: string; amount: number; topNight: string }[];
   dailyTips?: { date: string; amount: number; dancers: { name: string; amount: number }[] }[];
   nightlyData?: Record<string, { date: string; total: number; dancers: { name: string; amount: number }[] }[]>;
@@ -16,12 +16,9 @@ interface MonthDetail {
   month: string;
   amount: number;
   nights: number;
-  weeklyBreakdown: { week: string; amount: number }[];
   entertainers: { name: string; amount: number }[];
   top10: { rank: number; name: string; amount: number; badge: string | null }[];
 }
-
-
 
 export default function TorchTipsPage() {
   const [data, setData] = useState<TorchTipsData | null>(null);
@@ -38,12 +35,10 @@ export default function TorchTipsPage() {
       .then((res) => res.json())
       .then((data) => {
         if (data && data.monthlyTotals && data.monthlyTotals.length > 0) {
-          // Ensure months are in chronological order
-          const monthOrder = ['January', 'February', 'March', 'April', 'May', 'June'];
+          const monthOrder = ['July', 'August', 'September', 'October', 'November', 'December'];
           data.monthlyTotals.sort((a: any, b: any) => monthOrder.indexOf(a.month) - monthOrder.indexOf(b.month));
           setData(data);
         } else {
-          // Fallback to local JSON if API returns empty/error
           fetch("/data/torch-tips.json")
             .then((r) => r.json())
             .then((localData) => setData(localData))
@@ -76,7 +71,7 @@ export default function TorchTipsPage() {
               🕯️ Torch Tips
             </h1>
             <p style={{ color: "var(--muted)", marginTop: 6, fontSize: "0.9rem" }}>
-              The Torch Boise tip tracking · Aug 2026 onwards
+              The Torch Boise tip tracking · Q3 2026 onwards
             </p>
           </div>
         </div>
@@ -85,39 +80,37 @@ export default function TorchTipsPage() {
     );
   }
 
-  const { monthlyTotals, topTippers, allDancers = [], nightlyData = {} } = data;
-  
-  // Q1 = January, February, March
-  const q1Months = monthlyTotals.filter(m => ['January', 'February', 'March'].includes(m.month));
-  const q1Nights = q1Months.reduce((sum, m) => sum + m.nights, 0);
-  const quarterTotal = q1Months.reduce((sum, m) => sum + m.amount, 0);
-  
-  // Calculate Q2 total (April, May, June)
-  const q2Months = monthlyTotals.filter(m => ['April', 'May', 'June'].includes(m.month));
-  const q2Total = q2Months.reduce((sum, m) => sum + m.amount, 0);
-  const q2Nights = q2Months.reduce((sum, m) => sum + m.nights, 0);
-  
-  // Calculate May total from daily data
-  const mayNights = nightlyData?.['May'] || [];
-  const mayTotal = mayNights.reduce((sum, n) => sum + n.total, 0);
-  const mayNightsCount = mayNights.length;
+  const { monthlyTotals, allDancers = [], nightlyData = {} } = data;
+
+  // Q3 = July, August, September
+  const q3Months = monthlyTotals.filter(m => ['July', 'August', 'September'].includes(m.month));
+  const q3Nights = q3Months.reduce((sum, m) => sum + m.nights, 0);
+  const q3Total = q3Months.reduce((sum, m) => sum + m.amount, 0);
+
+  // Q4 = October, November, December
+  const q4Months = monthlyTotals.filter(m => ['October', 'November', 'December'].includes(m.month));
+  const q4Total = q4Months.reduce((sum, m) => sum + m.amount, 0);
+  const q4Nights = q4Months.reduce((sum, m) => sum + m.nights, 0);
 
   // Generate month details from data
   const getMonthDetails = (month: string): MonthDetail | null => {
-    if (month === "Q1" || month === "Q2") return null;
-    
-    const monthKey = month.toLowerCase().slice(0, 3) as 'jan' | 'feb' | 'mar' | 'apr' | 'may' | 'jun';
+    if (month === "Q3" || month === "Q4" || month === "H2") return null;
+
+    const monthKeyMap: Record<string, 'jul' | 'aug' | 'sep' | 'oct' | 'nov' | 'dec'> = {
+      July: 'jul', August: 'aug', September: 'sep',
+      October: 'oct', November: 'nov', December: 'dec',
+    };
+    const monthKey = monthKeyMap[month];
+    if (!monthKey) return null;
+
     const monthData = monthlyTotals.find(m => m.month === month);
-    
     if (!monthData) return null;
-    
-    // Sort entertainers by this month's tips
+
     const entertainers = allDancers
       .map(d => ({ name: d.name, amount: (d as any)[monthKey] || 0 }))
       .filter(d => d.amount > 0)
       .sort((a, b) => b.amount - a.amount);
-    
-    // Top 10 for this month
+
     const top10 = entertainers.slice(0, 10).map((e, i) => ({
       rank: i + 1,
       name: e.name,
@@ -125,14 +118,10 @@ export default function TorchTipsPage() {
       badge: i === 0 ? "gold" : i === 1 ? "gold" : i === 2 ? "silver" : i < 5 ? "silver" : "bronze",
     }));
 
-    // Weekly breakdown removed per user request
-    const weeklyBreakdown: { week: string; amount: number }[] = [];
-
     return {
       month,
       amount: monthData.amount,
       nights: monthData.nights,
-      weeklyBreakdown,
       entertainers,
       top10,
     };
@@ -141,33 +130,33 @@ export default function TorchTipsPage() {
   // Get dancer totals based on search and date range
   const getDancerTotals = () => {
     if (!searchName) return null;
-    
-    const dancer = allDancers.find(d => 
+
+    const dancer = allDancers.find(d =>
       d.name.toLowerCase().includes(searchName.toLowerCase())
     );
-    
+
     if (!dancer) return null;
 
-    let jan = dancer.jan || 0;
-    let feb = dancer.feb || 0;
-    let mar = dancer.mar || 0;
-    let apr = (dancer as any).apr || 0;
-    let may = (dancer as any).may || 0;
-    let jun = (dancer as any).jun || 0;
+    let jul = dancer.jul || 0;
+    let aug = dancer.aug || 0;
+    let sep = dancer.sep || 0;
+    let oct = (dancer as any).oct || 0;
+    let nov = (dancer as any).nov || 0;
+    let dec = (dancer as any).dec || 0;
 
     // Apply date range filter
-    if (dateRange === "jan") { feb = 0; mar = 0; apr = 0; may = 0; jun = 0; }
-    else if (dateRange === "feb") { jan = 0; mar = 0; apr = 0; may = 0; jun = 0; }
-    else if (dateRange === "mar") { jan = 0; feb = 0; apr = 0; may = 0; jun = 0; }
-    else if (dateRange === "q1") { apr = 0; may = 0; jun = 0; }
-    else if (dateRange === "apr") { jan = 0; feb = 0; mar = 0; may = 0; jun = 0; }
-    else if (dateRange === "may") { jan = 0; feb = 0; mar = 0; apr = 0; jun = 0; }
-    else if (dateRange === "jun") { jan = 0; feb = 0; mar = 0; apr = 0; may = 0; }
-    else if (dateRange === "q2") { jan = 0; feb = 0; mar = 0; }
+    if (dateRange === "jul") { aug = 0; sep = 0; oct = 0; nov = 0; dec = 0; }
+    else if (dateRange === "aug") { jul = 0; sep = 0; oct = 0; nov = 0; dec = 0; }
+    else if (dateRange === "sep") { jul = 0; aug = 0; oct = 0; nov = 0; dec = 0; }
+    else if (dateRange === "q3") { oct = 0; nov = 0; dec = 0; }
+    else if (dateRange === "oct") { jul = 0; aug = 0; sep = 0; nov = 0; dec = 0; }
+    else if (dateRange === "nov") { jul = 0; aug = 0; sep = 0; oct = 0; dec = 0; }
+    else if (dateRange === "dec") { jul = 0; aug = 0; sep = 0; oct = 0; nov = 0; }
+    else if (dateRange === "q4") { jul = 0; aug = 0; sep = 0; }
 
-    const total = jan + feb + mar + apr + may + jun;
-    
-    return { name: dancer.name, jan, feb, mar, apr, may, jun, total };
+    const total = jul + aug + sep + oct + nov + dec;
+
+    return { name: dancer.name, jul, aug, sep, oct, nov, dec, total };
   };
 
   const toggleMonth = (month: string) => {
@@ -210,17 +199,17 @@ export default function TorchTipsPage() {
             🕯️ Torch Tips
           </h1>
           <p style={{ color: "var(--muted)", marginTop: 6, fontSize: "0.9rem" }}>
-            The Torch Boise tip tracking · Aug 2026 onwards
+            The Torch Boise tip tracking · Q3 2026 onwards
           </p>
         </div>
       </div>
 
       {/* Monthly Stats - Clickable */}
-      <div style={{ 
-        display: "grid", 
-        gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", 
+      <div style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
         gap: 16,
-        marginBottom: 28 
+        marginBottom: 28
       }}>
         {monthlyTotals.map((m) => (
           <button
@@ -245,67 +234,67 @@ export default function TorchTipsPage() {
             </div>
           </button>
         ))}
-        
-        {/* Q1 Total */}
+
+        {/* Q3 Total */}
         <button
-          onClick={() => setSelectedMonth("Q1")}
+          onClick={() => setSelectedMonth("Q3")}
           style={{
-            background: selectedMonth === "Q1" ? "linear-gradient(135deg, var(--torch-glow-1), var(--torch-glow-2))" : "linear-gradient(135deg, var(--torch-glow-1), var(--torch-glow-2))",
-            border: selectedMonth === "Q1" ? "1px solid var(--torch-pink)" : "1px solid var(--torch-pink)",
+            background: selectedMonth === "Q3" ? "linear-gradient(135deg, var(--torch-glow-1), var(--torch-glow-2))" : "linear-gradient(135deg, var(--torch-glow-1), var(--torch-glow-2))",
+            border: selectedMonth === "Q3" ? "1px solid var(--torch-pink)" : "1px solid var(--torch-pink)",
             borderRadius: 12,
             padding: 20,
             cursor: "pointer",
             textAlign: "left",
           }}
         >
-          <div style={{ fontSize: "0.8rem", color: "var(--torch-pink)", marginBottom: 4 }}>Q1 2026 Total</div>
+          <div style={{ fontSize: "0.8rem", color: "var(--torch-pink)", marginBottom: 4 }}>Q3 2026 Total</div>
           <div style={{ fontSize: "1.8rem", fontWeight: 700, color: "var(--torch-pink)" }}>
-            ${quarterTotal.toLocaleString()}
+            ${q3Total.toLocaleString()}
           </div>
           <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 4 }}>
-            Jan-Mar 2026
+            Jul–Sep 2026 · {q3Nights} nights
           </div>
         </button>
 
-        {/* Q2 Total */}
+        {/* Q4 Total */}
         <button
-          onClick={() => setSelectedMonth("Q2")}
+          onClick={() => setSelectedMonth("Q4")}
           style={{
-            background: selectedMonth === "Q2" ? "linear-gradient(135deg, rgba(0,200,124,0.4), rgba(0,255,157,0.4))" : "linear-gradient(135deg, rgba(0,200,124,0.2), rgba(0,255,157,0.2))",
-            border: selectedMonth === "Q2" ? "1px solid #00c87c" : "1px solid #00c87c",
+            background: selectedMonth === "Q4" ? "linear-gradient(135deg, rgba(0,200,124,0.4), rgba(0,255,157,0.4))" : "linear-gradient(135deg, rgba(0,200,124,0.2), rgba(0,255,157,0.2))",
+            border: selectedMonth === "Q4" ? "1px solid #00c87c" : "1px solid #00c87c",
             borderRadius: 12,
             padding: 20,
             cursor: "pointer",
             textAlign: "left",
           }}
         >
-          <div style={{ fontSize: "0.8rem", color: "#00c87c", marginBottom: 4 }}>Q2 2026 Total</div>
+          <div style={{ fontSize: "0.8rem", color: "#00c87c", marginBottom: 4 }}>Q4 2026 Total</div>
           <div style={{ fontSize: "1.8rem", fontWeight: 700, color: "#00c87c" }}>
-            ${q2Total.toLocaleString()}
+            ${q4Total.toLocaleString()}
           </div>
           <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 4 }}>
-            Apr-Jun 2026 · {q2Nights} nights
+            Oct–Dec 2026 · {q4Nights} nights
           </div>
         </button>
 
-        {/* 2026 Annual Total */}
+        {/* H2 2026 Annual Total */}
         <button
-          onClick={() => setSelectedMonth("2026")}
+          onClick={() => setSelectedMonth("H2")}
           style={{
-            background: selectedMonth === "2026" ? "linear-gradient(135deg, rgba(255,204,0,0.4), rgba(255,230,0,0.4))" : "linear-gradient(135deg, rgba(255,204,0,0.2), rgba(255,230,0,0.2))",
-            border: selectedMonth === "2026" ? "1px solid #ffcc00" : "1px solid #ffcc00",
+            background: selectedMonth === "H2" ? "linear-gradient(135deg, rgba(255,204,0,0.4), rgba(255,230,0,0.4))" : "linear-gradient(135deg, rgba(255,204,0,0.2), rgba(255,230,0,0.2))",
+            border: selectedMonth === "H2" ? "1px solid #ffcc00" : "1px solid #ffcc00",
             borderRadius: 12,
             padding: 20,
             cursor: "pointer",
             textAlign: "left",
           }}
         >
-          <div style={{ fontSize: "0.8rem", color: "#ffcc00", marginBottom: 4 }}>2026 Annual Total</div>
+          <div style={{ fontSize: "0.8rem", color: "#ffcc00", marginBottom: 4 }}>H2 2026 Total</div>
           <div style={{ fontSize: "1.8rem", fontWeight: 700, color: "#ffcc00" }}>
-            ${(quarterTotal + q2Total).toLocaleString()}
+            ${(q3Total + q4Total).toLocaleString()}
           </div>
           <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 4 }}>
-            Jan–Jun 2026 · {q1Nights + q2Nights} nights
+            Jul–Dec 2026 · {q3Nights + q4Nights} nights
           </div>
         </button>
       </div>
@@ -363,9 +352,9 @@ export default function TorchTipsPage() {
             <h3 style={{ fontSize: "0.85rem", color: "var(--muted)", marginBottom: 12, textTransform: "uppercase", letterSpacing: "0.05em" }}>
               All Entertainers — {monthDetail.month}
             </h3>
-            <div style={{ 
-              display: "grid", 
-              gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))", 
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))",
               gap: 10,
               maxHeight: "200px",
               overflowY: "auto",
@@ -388,12 +377,12 @@ export default function TorchTipsPage() {
         </Card>
       )}
 
-      {/* Q2 Summary View */}
-      {selectedMonth === "Q2" && (
+      {/* Q4 Summary View */}
+      {selectedMonth === "Q4" && (
         <Card style={{ marginBottom: 24 }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
             <h2 style={{ fontSize: "1.2rem", fontWeight: 600, margin: 0, color: "var(--text)" }}>
-              Q2 2026 Summary
+              Q4 2026 Summary
             </h2>
             <button
               onClick={() => setSelectedMonth(null)}
@@ -410,7 +399,7 @@ export default function TorchTipsPage() {
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16, marginBottom: 20 }}>
-            {q2Months.map((m) => (
+            {q4Months.map((m) => (
               <div key={m.month} style={{
                 background: "var(--bg)",
                 border: "1px solid var(--border)",
@@ -426,16 +415,16 @@ export default function TorchTipsPage() {
           </div>
 
           <h3 style={{ fontSize: "0.85rem", color: "var(--muted)", marginBottom: 12, textTransform: "uppercase", letterSpacing: "0.05em" }}>
-            🏆 Q2 Top Entertainers
+            🏆 Q4 Top Entertainers
           </h3>
           <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
             {[...allDancers]
-              .map(d => ({ 
-                name: d.name, 
-                total: (d.apr || 0) + (d.may || 0) + (d.jun || 0),
-                apr: d.apr || 0,
-                may: d.may || 0,
-                jun: d.jun || 0
+              .map(d => ({
+                name: d.name,
+                total: (d.oct || 0) + (d.nov || 0) + (d.dec || 0),
+                oct: d.oct || 0,
+                nov: d.nov || 0,
+                dec: d.dec || 0
               }))
               .filter(d => (d.total ?? 0) > 0)
               .sort((a, b) => (b.total ?? 0) - (a.total ?? 0))
@@ -453,7 +442,7 @@ export default function TorchTipsPage() {
                     {i + 1}
                   </span>
                   <span style={{ flex: 1 }}>{t.name}</span>
-                  <span style={{ color: "var(--muted)", fontSize: "0.75rem" }}>A:${t.apr} M:${t.may} J:${t.jun}</span>
+                  <span style={{ color: "var(--muted)", fontSize: "0.75rem" }}>O:${t.oct} N:${t.nov} D:${t.dec}</span>
                   <span style={{ fontWeight: 600, minWidth: 50, textAlign: "right" }}>${t.total}</span>
                 </div>
               ))}
@@ -461,12 +450,12 @@ export default function TorchTipsPage() {
         </Card>
       )}
 
-      {/* Q1 Summary View */}
-      {selectedMonth === "Q1" && (
+      {/* Q3 Summary View */}
+      {selectedMonth === "Q3" && (
         <Card style={{ marginBottom: 24 }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
             <h2 style={{ fontSize: "1.2rem", fontWeight: 600, margin: 0, color: "var(--text)" }}>
-              Q1 2026 Summary
+              Q3 2026 Summary
             </h2>
             <button
               onClick={() => setSelectedMonth(null)}
@@ -483,7 +472,7 @@ export default function TorchTipsPage() {
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16, marginBottom: 20 }}>
-            {monthlyTotals.filter(m => ['January', 'February', 'March'].includes(m.month)).map((m) => (
+            {monthlyTotals.filter(m => ['July', 'August', 'September'].includes(m.month)).map((m) => (
               <div key={m.month} style={{
                 background: "var(--bg)",
                 border: "1px solid var(--border)",
@@ -499,39 +488,47 @@ export default function TorchTipsPage() {
           </div>
 
           <h3 style={{ fontSize: "0.85rem", color: "var(--muted)", marginBottom: 12, textTransform: "uppercase", letterSpacing: "0.05em" }}>
-            🏆 Q1 Top 10 Overall
+            🏆 Q3 Top 10 Overall
           </h3>
           <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-            {[...topTippers].map(t => ({
-              ...t,
-              q1Total: (t.jan || 0) + (t.feb || 0) + (t.mar || 0)
-            })).sort((a, b) => b.q1Total - a.q1Total).slice(0, 10).map((t, i) => (
-              <div key={t.name} style={{ display: "flex", alignItems: "center", gap: 8, padding: "6px 0", borderBottom: "1px solid var(--border)" }}>
-                <span style={{
-                  display: "inline-block",
-                  padding: "1px 6px",
-                  borderRadius: 4,
-                  fontSize: "0.65rem",
-                  fontWeight: 700,
-                  ...badgeStyle(t.badge),
-                }}>
-                  {i + 1}
-                </span>
-                <span style={{ flex: 1 }}>{t.name}</span>
-                <span style={{ color: "var(--muted)", fontSize: "0.75rem" }}>J:${t.jan || 0} F:${t.feb || 0} M:${t.mar || 0}</span>
-                <span style={{ fontWeight: 600, minWidth: 50, textAlign: "right" }}>${t.q1Total}</span>
-              </div>
-            ))}
+            {[...allDancers]
+              .map(d => ({
+                name: d.name,
+                total: (d.jul || 0) + (d.aug || 0) + (d.sep || 0),
+                jul: d.jul || 0,
+                aug: d.aug || 0,
+                sep: d.sep || 0
+              }))
+              .filter(d => d.total > 0)
+              .sort((a, b) => b.total - a.total)
+              .slice(0, 10)
+              .map((t, i) => (
+                <div key={t.name} style={{ display: "flex", alignItems: "center", gap: 8, padding: "6px 0", borderBottom: "1px solid var(--border)" }}>
+                  <span style={{
+                    display: "inline-block",
+                    padding: "1px 6px",
+                    borderRadius: 4,
+                    fontSize: "0.65rem",
+                    fontWeight: 700,
+                    ...badgeStyle(i === 0 ? "gold" : i === 1 ? "gold" : i === 2 ? "silver" : i < 5 ? "silver" : "bronze"),
+                  }}>
+                    {i + 1}
+                  </span>
+                  <span style={{ flex: 1 }}>{t.name}</span>
+                  <span style={{ color: "var(--muted)", fontSize: "0.75rem" }}>J:${t.jul} A:${t.aug} S:${t.sep}</span>
+                  <span style={{ fontWeight: 600, minWidth: 50, textAlign: "right" }}>${t.total}</span>
+                </div>
+              ))}
           </div>
         </Card>
       )}
 
-      {/* 2026 Annual Summary View */}
-      {selectedMonth === "2026" && (
+      {/* H2 Annual Summary View */}
+      {selectedMonth === "H2" && (
         <Card style={{ marginBottom: 24 }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
             <h2 style={{ fontSize: "1.2rem", fontWeight: 600, margin: 0, color: "var(--text)" }}>
-              2026 Annual Summary
+              H2 2026 (Q3 + Q4) Summary
             </h2>
             <button
               onClick={() => setSelectedMonth(null)}
@@ -547,7 +544,7 @@ export default function TorchTipsPage() {
             </button>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 16, marginBottom: 20 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: 12, marginBottom: 20 }}>
             {monthlyTotals.map((m) => (
               <div key={m.month} style={{
                 background: "var(--bg)",
@@ -563,25 +560,25 @@ export default function TorchTipsPage() {
             ))}
           </div>
 
-          <div style={{ 
-            background: "linear-gradient(135deg, rgba(255,204,0,0.2), rgba(255,230,0,0.1))", 
-            border: "1px solid #ffcc00", 
-            borderRadius: 12, 
+          <div style={{
+            background: "linear-gradient(135deg, rgba(255,204,0,0.2), rgba(255,230,0,0.1))",
+            border: "1px solid #ffcc00",
+            borderRadius: 12,
             padding: 24,
             textAlign: "center",
             marginBottom: 20,
           }}>
-            <div style={{ fontSize: "0.8rem", color: "#ffcc00", marginBottom: 4 }}>2026 TOTAL (Jan–Jun)</div>
+            <div style={{ fontSize: "0.8rem", color: "#ffcc00", marginBottom: 4 }}>H2 2026 TOTAL (Jul–Dec)</div>
             <div style={{ fontSize: "2.5rem", fontWeight: 700, color: "#ffcc00" }}>
-              ${(quarterTotal + q2Total).toLocaleString()}
+              ${(q3Total + q4Total).toLocaleString()}
             </div>
             <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 4 }}>
-              {q1Nights + q2Nights} total nights
+              {q3Nights + q4Nights} total nights
             </div>
           </div>
 
           <h3 style={{ fontSize: "0.85rem", color: "var(--muted)", marginBottom: 12, textTransform: "uppercase", letterSpacing: "0.05em" }}>
-            🏆 2026 Top Entertainers
+            🏆 Top Entertainers (H2 YTD)
           </h3>
           <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
             {allDancers.filter(d => (d.total ?? 0) > 0).sort((a, b) => (b.total ?? 0) - (a.total ?? 0)).slice(0, 10).map((d, i) => {
@@ -600,7 +597,7 @@ export default function TorchTipsPage() {
                     {i + 1}
                   </span>
                   <span style={{ flex: 1 }}>{d.name}</span>
-                  <span style={{ color: "var(--muted)", fontSize: "0.75rem" }}>J:${d.jan || 0} F:${d.feb || 0} M:${d.mar || 0} A:${d.apr || 0} M:${d.may || 0} J:${(d as any).jun || 0}</span>
+                  <span style={{ color: "var(--muted)", fontSize: "0.75rem" }}>J:${d.jul || 0} A:${d.aug || 0} S:${d.sep || 0} O:${d.oct || 0} N:${d.nov || 0} D:${d.dec || 0}</span>
                   <span style={{ fontWeight: 600, minWidth: 50, textAlign: "right" }}>${d.total}</span>
                 </div>
               );
@@ -629,7 +626,7 @@ export default function TorchTipsPage() {
         {monthlyTotals.map((month) => {
           const isExpanded = expandedMonths[month.month];
           const nights = nightlyData?.[month.month] || [];
-          
+
           return (
             <div key={month.month} style={{ borderBottom: "1px solid var(--border)" }}>
               <button
@@ -650,14 +647,14 @@ export default function TorchTipsPage() {
                 }}
               >
                 <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                  <span style={{ 
+                  <span style={{
                     transform: isExpanded ? "rotate(90deg)" : "rotate(0deg)",
                     transition: "transform 0.2s",
                     fontSize: "0.8rem",
                   }}>▶</span>
                   <span>{month.month} 2026</span>
-                  <span style={{ 
-                    fontSize: "0.75rem", 
+                  <span style={{
+                    fontSize: "0.75rem",
                     color: "var(--muted)",
                     fontWeight: 400,
                   }}>
@@ -670,14 +667,14 @@ export default function TorchTipsPage() {
               </button>
 
               {isExpanded && (
-                <div style={{ 
+                <div style={{
                   background: "var(--bg)",
                   borderTop: "1px solid var(--border)",
                 }}>
                   {nights.map((night) => {
                     const nightKey = `${month.month}-${night.date}`;
                     const isNightExpanded = expandedNights[nightKey];
-                    
+
                     return (
                       <div key={night.date} style={{ borderBottom: "1px solid var(--border)" }}>
                         <button
@@ -697,7 +694,7 @@ export default function TorchTipsPage() {
                           }}
                         >
                           <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                            <span style={{ 
+                            <span style={{
                               transform: isNightExpanded ? "rotate(90deg)" : "rotate(0deg)",
                               transition: "transform 0.2s",
                               fontSize: "0.7rem",
@@ -711,7 +708,7 @@ export default function TorchTipsPage() {
                         </button>
 
                         {isNightExpanded && night.dancers.length > 0 && (
-                          <div style={{ 
+                          <div style={{
                             padding: "8px 20px 12px 68px",
                             display: "grid",
                             gridTemplateColumns: "repeat(auto-fill, minmax(120px, 1fr))",
@@ -737,7 +734,7 @@ export default function TorchTipsPage() {
                         )}
 
                         {isNightExpanded && night.dancers.length === 0 && (
-                          <div style={{ 
+                          <div style={{
                             padding: "8px 20px 12px 68px",
                             fontSize: "0.8rem",
                             color: "var(--muted)",
@@ -781,12 +778,12 @@ export default function TorchTipsPage() {
           }}
         >
           <span>🎭 Entertainer Totals</span>
-          <span style={{ 
+          <span style={{
             transform: entertainerTotalsOpen ? "rotate(180deg)" : "rotate(0deg)",
             transition: "transform 0.2s",
           }}>▼</span>
         </button>
-        
+
         {entertainerTotalsOpen && (
           <div style={{ padding: "0 20px 20px", animation: "fadeIn 0.2s ease" }}>
             <style>{`
@@ -795,7 +792,7 @@ export default function TorchTipsPage() {
                 to { opacity: 1; transform: translateY(0); }
               }
             `}</style>
-            
+
             {/* Search & Filter */}
             <div style={{ display: "flex", gap: 12, marginBottom: 16, flexWrap: "wrap" }}>
               <input
@@ -828,15 +825,15 @@ export default function TorchTipsPage() {
                   cursor: "pointer",
                 }}
               >
-                <option value="all">All Months YTD</option>
-                <option value="q1">Q1 Total (Jan–Mar)</option>
-                <option value="jan">January Only</option>
-                <option value="feb">February Only</option>
-                <option value="mar">March Only</option>
-                <option value="q2">Q2 Total (Apr–Jun)</option>
-                <option value="apr">April Only</option>
-                <option value="may">May Only</option>
-                <option value="jun">June Only</option>
+                <option value="all">All Months (H2 YTD)</option>
+                <option value="q3">Q3 Total (Jul–Sep)</option>
+                <option value="jul">July Only</option>
+                <option value="aug">August Only</option>
+                <option value="sep">September Only</option>
+                <option value="q4">Q4 Total (Oct–Dec)</option>
+                <option value="oct">October Only</option>
+                <option value="nov">November Only</option>
+                <option value="dec">December Only</option>
               </select>
             </div>
 
@@ -851,44 +848,44 @@ export default function TorchTipsPage() {
                 <h3 style={{ margin: "0 0 16px", fontSize: "1.1rem", color: "var(--text)" }}>
                   {dancerResult.name}
                 </h3>
-                <div style={{ display: "grid", gridTemplateColumns: dateRange === "q1" || dateRange === "q2" ? "repeat(3, 1fr)" : "repeat(4, 1fr)", gap: 16, textAlign: "center" }}>
-                  {dateRange === "q1" ? (
+                <div style={{ display: "grid", gridTemplateColumns: dateRange === "q3" || dateRange === "q4" ? "repeat(3, 1fr)" : "repeat(4, 1fr)", gap: 16, textAlign: "center" }}>
+                  {dateRange === "q3" ? (
                     <>
                       <div>
-                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>January</div>
-                        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.jan}</div>
+                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>July</div>
+                        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.jul}</div>
                       </div>
                       <div>
-                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>February</div>
-                        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.feb}</div>
+                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>August</div>
+                        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.aug}</div>
                       </div>
                       <div>
-                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>March</div>
-                        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.mar}</div>
+                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>September</div>
+                        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.sep}</div>
                       </div>
                     </>
-                  ) : dateRange === "q2" ? (
+                  ) : dateRange === "q4" ? (
                     <>
                       <div>
-                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>April</div>
-                        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.apr}</div>
+                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>October</div>
+                        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.oct}</div>
                       </div>
                       <div>
-                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>May</div>
-                        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.may}</div>
+                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>November</div>
+                        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.nov}</div>
                       </div>
                       <div>
-                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>June</div>
-                        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${(dancerResult as any).jun || 0}</div>
+                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>December</div>
+                        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.dec || 0}</div>
                       </div>
                     </>
                   ) : (
                     <div style={{ gridColumn: "span 3" }}>
                       <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>
-                        {dateRange === "jan" ? "January" : dateRange === "feb" ? "February" : dateRange === "mar" ? "March" : dateRange === "apr" ? "April" : dateRange === "jun" ? "June" : "May"}
+                        {dateRange === "jul" ? "July" : dateRange === "aug" ? "August" : dateRange === "sep" ? "September" : dateRange === "oct" ? "October" : dateRange === "nov" ? "November" : "December"}
                       </div>
                       <div style={{ fontSize: "2rem", fontWeight: 700, color: "var(--torch-pink)" }}>
-                        ${dateRange === "jan" ? dancerResult.jan : dateRange === "feb" ? dancerResult.feb : dateRange === "mar" ? dancerResult.mar : dateRange === "apr" ? dancerResult.apr : dateRange === "jun" ? (dancerResult as any).jun || 0 : dancerResult.may}
+                        ${dateRange === "jul" ? dancerResult.jul : dateRange === "aug" ? dancerResult.aug : dateRange === "sep" ? dancerResult.sep : dateRange === "oct" ? dancerResult.oct : dateRange === "nov" ? dancerResult.nov : dancerResult.dec || 0}
                       </div>
                     </div>
                   )}
