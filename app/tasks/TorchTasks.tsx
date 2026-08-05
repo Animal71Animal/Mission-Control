@@ -121,17 +121,26 @@ export default function TorchTasks() {
 
   return (
     <div>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
-        <h2 style={{ fontSize: "1.2rem", fontWeight: 700, color: "var(--accent)", margin: 0 }}>Club To-Do List</h2>
+      {/* Header with torch logo */}
+      <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 16, padding: "12px 16px", background: "linear-gradient(135deg, rgba(236, 72, 153, 0.06), rgba(239, 68, 68, 0.06))", border: "1px solid rgba(236, 72, 153, 0.25)", borderRadius: 12 }}>
+        <img src="/torch-logo-clean.png" alt="The Torch" style={{ height: 56, width: "auto", filter: "drop-shadow(0 0 8px rgba(236, 72, 153, 0.25))" }} />
+        <div style={{ flex: 1 }}>
+          <h2 style={{
+            fontSize: "1.2rem", fontWeight: 700, margin: 0,
+            background: "linear-gradient(135deg, var(--torch-pink), var(--torch-red))",
+            WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
+          }}>Club To-Do List</h2>
+          <span style={{ fontSize: "0.75rem", color: "var(--muted)" }}>The Torch · Boise, ID</span>
+        </div>
         <span style={{ fontSize: "0.85rem", color: "var(--muted)" }}>{done} / {tasks.length} done {saving && "· saving..."}</span>
       </div>
 
       <div style={{ height: 6, background: "var(--border)", borderRadius: 3, marginBottom: 20, overflow: "hidden" }}>
-        <div style={{ height: "100%", width: `${progress}%`, background: "linear-gradient(90deg, var(--accent), var(--accent2))", borderRadius: 3, transition: "width 0.3s" }} />
+        <div style={{ height: "100%", width: `${progress}%`, background: "linear-gradient(90deg, var(--torch-pink), var(--torch-red))", borderRadius: 3, transition: "width 0.3s" }} />
       </div>
 
       <button onClick={openAdd} style={{
-        padding: "8px 18px", borderRadius: 8, background: "var(--accent)", border: "none",
+        padding: "8px 18px", borderRadius: 8, background: "var(--torch-pink)", border: "none",
         color: "#000", fontWeight: 700, fontSize: "0.9rem", cursor: "pointer", marginBottom: 20,
       }}>+ Add Task</button>
 
@@ -139,7 +148,7 @@ export default function TorchTasks() {
         {CATEGORIES.map(c => (
           <button key={c} onClick={() => setFilter(c)} style={{
             padding: "5px 14px", borderRadius: 20, fontSize: "0.8rem", cursor: "pointer",
-            background: filter === c ? "var(--accent)" : "var(--card)",
+            background: filter === c ? "var(--torch-pink)" : "var(--card)",
             border: "1px solid var(--border)",
             color: filter === c ? "#000" : "var(--text)",
             fontWeight: filter === c ? 700 : 400,
@@ -163,8 +172,8 @@ export default function TorchTasks() {
                 opacity: task.completed ? 0.5 : 1,
               }}>
                 <div onClick={() => toggle(task.id)} style={{
-                  width: 20, height: 20, borderRadius: 4, border: "2px solid var(--accent)",
-                  background: task.completed ? "var(--accent)" : "transparent",
+                  width: 20, height: 20, borderRadius: 4, border: "2px solid var(--torch-pink)",
+                  background: task.completed ? "var(--torch-pink)" : "transparent",
                   display: "flex", alignItems: "center", justifyContent: "center",
                   flexShrink: 0, cursor: "pointer",
                 }}>
@@ -190,7 +199,7 @@ export default function TorchTasks() {
                   </div>
                 </div>
                 <div style={{ display: "flex", gap: 6 }}>
-                  <button onClick={() => openEdit(task)} style={{ width: 32, height: 32, borderRadius: 6, background: "var(--bg)", border: "1px solid var(--border)", cursor: "pointer", color: "var(--accent2)", fontSize: "0.8rem" }}>✏️</button>
+                  <button onClick={() => openEdit(task)} style={{ width: 32, height: 32, borderRadius: 6, background: "var(--bg)", border: "1px solid var(--border)", cursor: "pointer", color: "var(--torch-pink)", fontSize: "0.8rem" }}>✏️</button>
                   <button onClick={() => deleteTask(task.id)} style={{ width: 32, height: 32, borderRadius: 6, background: "var(--bg)", border: "1px solid var(--border)", cursor: "pointer", color: "#ef4444", fontSize: "0.8rem" }}>🗑</button>
                 </div>
               </div>
@@ -233,7 +242,7 @@ export default function TorchTasks() {
             </div>
             <div style={{ display: "flex", gap: 10, marginTop: 24, justifyContent: "flex-end" }}>
               <button onClick={() => setShowModal(false)} style={{ padding: "9px 20px", borderRadius: 8, background: "var(--bg)", border: "1px solid var(--border)", color: "var(--muted)", cursor: "pointer" }}>Cancel</button>
-              <button onClick={submitForm} style={{ padding: "9px 20px", borderRadius: 8, background: "var(--accent)", border: "none", color: "#000", fontWeight: 700, cursor: "pointer" }}>{editTask ? "Save Changes" : "Add Task"}</button>
+              <button onClick={submitForm} style={{ padding: "9px 20px", borderRadius: 8, background: "var(--torch-pink)", border: "none", color: "#000", fontWeight: 700, cursor: "pointer" }}>{editTask ? "Save Changes" : "Add Task"}</button>
             </div>
           </div>
         </div>
@@ -249,7 +258,7 @@ export default function TorchTasks() {
             <div style={{ display: "flex", flexDirection: "column", gap: 8, marginTop: 10 }}>
               {completedTasks.map(task => (
                 <div key={task.id} style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 10, padding: "12px 16px", display: "flex", alignItems: "center", gap: 12, opacity: 0.45 }}>
-                  <div onClick={() => toggle(task.id)} style={{ width: 20, height: 20, borderRadius: 4, border: "2px solid var(--accent)", background: "var(--accent)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, cursor: "pointer" }}>
+                  <div onClick={() => toggle(task.id)} style={{ width: 20, height: 20, borderRadius: 4, border: "2px solid var(--torch-pink)", background: "var(--torch-pink)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, cursor: "pointer" }}>
                     <span style={{ color: "#000", fontSize: 12 }}>✓</span>
                   </div>
                   <div style={{ flex: 1, fontSize: "0.9rem", color: "var(--text)", textDecoration: "line-through" }}>{task.text}</div>

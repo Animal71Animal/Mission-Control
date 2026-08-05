@@ -65,7 +65,21 @@ export default function TorchTipsPage() {
   if (loading || !data) {
     return (
       <div>
-        <h1 style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text)" }}>🕯️ Torch Tips</h1>
+        <div style={{ display: "flex", alignItems: "center", gap: 20, marginBottom: 28 }}>
+          <img src="/torch-logo-clean.png" alt="The Torch" style={{ height: 72, width: "auto", filter: "drop-shadow(0 0 12px rgba(236, 72, 153, 0.35))" }} />
+          <div>
+            <h1 style={{
+              fontSize: "1.8rem", fontWeight: 700, margin: 0,
+              background: "linear-gradient(135deg, var(--torch-pink), var(--torch-red))",
+              WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
+            }}>
+              🕯️ Torch Tips
+            </h1>
+            <p style={{ color: "var(--muted)", marginTop: 6, fontSize: "0.9rem" }}>
+              The Torch Boise tip tracking · Aug 2026 onwards
+            </p>
+          </div>
+        </div>
         <p style={{ color: "var(--muted)", marginTop: 20 }}>Loading...</p>
       </div>
     );
@@ -177,17 +191,28 @@ export default function TorchTipsPage() {
   return (
     <div>
       {/* Header */}
-      <div style={{ marginBottom: 28 }}>
-        <h1 style={{
-          fontSize: "1.8rem", fontWeight: 700, margin: 0,
-          background: "linear-gradient(135deg, #9b5de5, #c77dff)",
-          WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
-        }}>
-          🕯️ Torch Tips
-        </h1>
-        <p style={{ color: "var(--muted)", marginTop: 6, fontSize: "0.9rem" }}>
-          The Torch Boise tip tracking · Aug 2026 onwards
-        </p>
+      <div style={{ display: "flex", alignItems: "center", gap: 20, marginBottom: 28 }}>
+        <img
+          src="/torch-logo-clean.png"
+          alt="The Torch"
+          style={{
+            height: 72,
+            width: "auto",
+            filter: "drop-shadow(0 0 12px rgba(236, 72, 153, 0.35))",
+          }}
+        />
+        <div>
+          <h1 style={{
+            fontSize: "1.8rem", fontWeight: 700, margin: 0,
+            background: "linear-gradient(135deg, var(--torch-pink), var(--torch-red))",
+            WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
+          }}>
+            🕯️ Torch Tips
+          </h1>
+          <p style={{ color: "var(--muted)", marginTop: 6, fontSize: "0.9rem" }}>
+            The Torch Boise tip tracking · Aug 2026 onwards
+          </p>
+        </div>
       </div>
 
       {/* Monthly Stats - Clickable */}
@@ -202,8 +227,8 @@ export default function TorchTipsPage() {
             key={m.month}
             onClick={() => setSelectedMonth(m.month)}
             style={{
-              background: selectedMonth === m.month ? "linear-gradient(135deg, rgba(155,93,229,0.3), rgba(199,125,255,0.3))" : "var(--card)",
-              border: selectedMonth === m.month ? "1px solid var(--accent)" : "1px solid var(--border)",
+              background: selectedMonth === m.month ? "linear-gradient(135deg, var(--torch-glow-1), var(--torch-glow-2))" : "var(--card)",
+              border: selectedMonth === m.month ? "1px solid var(--torch-pink)" : "1px solid var(--border)",
               borderRadius: 12,
               padding: 20,
               cursor: "pointer",
@@ -225,16 +250,16 @@ export default function TorchTipsPage() {
         <button
           onClick={() => setSelectedMonth("Q1")}
           style={{
-            background: selectedMonth === "Q1" ? "linear-gradient(135deg, rgba(155,93,229,0.4), rgba(199,125,255,0.4))" : "linear-gradient(135deg, rgba(155,93,229,0.2), rgba(199,125,255,0.2))",
-            border: selectedMonth === "Q1" ? "1px solid var(--accent)" : "1px solid var(--accent)",
+            background: selectedMonth === "Q1" ? "linear-gradient(135deg, var(--torch-glow-1), var(--torch-glow-2))" : "linear-gradient(135deg, var(--torch-glow-1), var(--torch-glow-2))",
+            border: selectedMonth === "Q1" ? "1px solid var(--torch-pink)" : "1px solid var(--torch-pink)",
             borderRadius: 12,
             padding: 20,
             cursor: "pointer",
             textAlign: "left",
           }}
         >
-          <div style={{ fontSize: "0.8rem", color: "var(--accent2)", marginBottom: 4 }}>Q1 2026 Total</div>
-          <div style={{ fontSize: "1.8rem", fontWeight: 700, color: "var(--accent2)" }}>
+          <div style={{ fontSize: "0.8rem", color: "var(--torch-pink)", marginBottom: 4 }}>Q1 2026 Total</div>
+          <div style={{ fontSize: "1.8rem", fontWeight: 700, color: "var(--torch-pink)" }}>
             ${quarterTotal.toLocaleString()}
           </div>
           <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 4 }}>
@@ -355,7 +380,7 @@ export default function TorchTipsPage() {
                   justifyContent: "space-between",
                 }}>
                   <span style={{ fontSize: "0.8rem" }}>{e.name}</span>
-                  <span style={{ fontSize: "0.8rem", fontWeight: 600, color: "var(--accent2)" }}>${e.amount}</span>
+                  <span style={{ fontSize: "0.8rem", fontWeight: 600, color: "var(--torch-pink)" }}>${e.amount}</span>
                 </div>
               ))}
             </div>
@@ -615,7 +640,7 @@ export default function TorchTipsPage() {
                   justifyContent: "space-between",
                   width: "100%",
                   padding: "14px 20px",
-                  background: isExpanded ? "rgba(155,93,229,0.1)" : "transparent",
+                  background: isExpanded ? "rgba(236, 72, 153, 0.1)" : "transparent",
                   border: "none",
                   color: "var(--text)",
                   fontSize: "0.95rem",
@@ -639,7 +664,7 @@ export default function TorchTipsPage() {
                     ${month.amount.toLocaleString()} · {month.nights} nights
                   </span>
                 </div>
-                <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "var(--accent2)" }}>
+                <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "var(--torch-pink)" }}>
                   ${month.amount.toLocaleString()}
                 </span>
               </button>
@@ -680,7 +705,7 @@ export default function TorchTipsPage() {
                             }}>▶</span>
                             <span>{night.date}</span>
                           </div>
-                          <span style={{ fontWeight: 600, color: "var(--accent2)" }}>
+                          <span style={{ fontWeight: 600, color: "var(--torch-pink)" }}>
                             ${night.total}
                           </span>
                         </button>
@@ -818,8 +843,8 @@ export default function TorchTipsPage() {
             {/* Search Result */}
             {dancerResult ? (
               <div style={{
-                background: "linear-gradient(135deg, rgba(155,93,229,0.1), rgba(199,125,255,0.1))",
-                border: "1px solid var(--accent)",
+                background: "linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(239, 68, 68, 0.1))",
+                border: "1px solid var(--torch-pink)",
                 borderRadius: 12,
                 padding: 20,
               }}>
@@ -862,14 +887,14 @@ export default function TorchTipsPage() {
                       <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>
                         {dateRange === "jan" ? "January" : dateRange === "feb" ? "February" : dateRange === "mar" ? "March" : dateRange === "apr" ? "April" : dateRange === "jun" ? "June" : "May"}
                       </div>
-                      <div style={{ fontSize: "2rem", fontWeight: 700, color: "var(--accent2)" }}>
+                      <div style={{ fontSize: "2rem", fontWeight: 700, color: "var(--torch-pink)" }}>
                         ${dateRange === "jan" ? dancerResult.jan : dateRange === "feb" ? dancerResult.feb : dateRange === "mar" ? dancerResult.mar : dateRange === "apr" ? dancerResult.apr : dateRange === "jun" ? (dancerResult as any).jun || 0 : dancerResult.may}
                       </div>
                     </div>
                   )}
                   <div>
-                    <div style={{ fontSize: "0.75rem", color: "var(--accent2)" }}>Total</div>
-                    <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--accent2)" }}>${dancerResult.total}</div>
+                    <div style={{ fontSize: "0.75rem", color: "var(--torch-pink)" }}>Total</div>
+                    <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--torch-pink)" }}>${dancerResult.total}</div>
                   </div>
                 </div>
               </div>

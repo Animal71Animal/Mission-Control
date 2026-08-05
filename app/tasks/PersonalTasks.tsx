@@ -134,6 +134,20 @@ export default function PersonalTasks() {
 
   return (
     <div>
+      {/* ANIMAL Header */}
+      <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 16, padding: "12px 16px", background: "linear-gradient(135deg, rgba(0,0,0,0.6), rgba(155,93,229,0.18))", border: "1px solid rgba(155,93,229,0.4)", borderRadius: 12 }}>
+        <img src="/logos/animal-logo.png" alt="ANIMAL" style={{ height: 64, width: "auto", filter: "drop-shadow(0 0 8px rgba(155,93,229,0.5))" }} />
+        <div style={{ flex: 1 }}>
+          <h2 style={{
+            fontSize: "1.2rem", fontWeight: 700, margin: 0,
+            background: "linear-gradient(135deg, #9b5de5, #c77dff)",
+            WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
+          }}>🦞 ANIMAL Personal Tasks</h2>
+          <span style={{ fontSize: "0.75rem", color: "var(--muted)" }}>Eric Mills · Wicked Liquid Productions</span>
+        </div>
+        <span style={{ fontSize: "0.85rem", color: "var(--muted)" }}>{openCount} open · {doneCount} done</span>
+      </div>
+
       {/* Stats */}
       <div style={{ display: "flex", gap: 12, marginBottom: 20, flexWrap: "wrap" }}>
         {[{ label: "Open", value: openCount, color: "var(--text)" }, { label: "Done", value: doneCount, color: "#00c87c" }, { label: "Total", value: tasks.length, color: "var(--muted)" }].map(s => (

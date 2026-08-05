@@ -8,6 +8,13 @@
   --accent2: #c77dff;
   --text: #e8e8e8;
   --muted: #6a6a8a;
+
+  /* The Torch — pink and red (matches torch-logo-clean.png) */
+  --torch-pink: #ec4899;
+  --torch-red: #ef4444;
+  --torch-glow-1: rgba(236, 72, 153, 0.30);
+  --torch-glow-2: rgba(239, 68, 68, 0.30);
+
   --sidebar-width: 220px;
 }
 

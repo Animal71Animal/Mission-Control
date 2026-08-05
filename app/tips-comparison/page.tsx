@@ -139,7 +139,13 @@ export default function TipsComparisonPage() {
             <img
               src={logoSrc}
               alt={`${name} logo`}
-              style={{ height: 56, width: "auto", maxWidth: 140, objectFit: "contain" }}
+              style={{
+                height: 56,
+                width: "auto",
+                maxWidth: 140,
+                objectFit: "contain",
+                filter: `drop-shadow(0 0 10px ${accent}55)`,
+              }}
             />
           ) : (
             <div
@@ -249,20 +255,28 @@ export default function TipsComparisonPage() {
   return (
     <div>
       {/* Page header */}
-      <div style={{ marginBottom: 28 }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 20, marginBottom: 28, flexWrap: "wrap" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 12px", background: "rgba(155,93,229,0.10)", border: "1px solid rgba(155,93,229,0.3)", borderRadius: 12 }}>
+          <span style={{ fontSize: "1.6rem" }}>🦏</span>
+          <span style={{ fontSize: "0.85rem", fontWeight: 600, color: "#c77dff" }}>SRB</span>
+        </div>
         <h1
           style={{
             fontSize: "1.8rem",
             fontWeight: 700,
             margin: 0,
-            background: "linear-gradient(135deg, #9b5de5, #ff4dd2)",
+            background: "linear-gradient(135deg, #9b5de5, #ec4899, #ef4444)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}
         >
           📊 Tips Comparison
         </h1>
-        <p style={{ color: "var(--muted)", marginTop: 6, fontSize: "0.9rem" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 12px", background: "rgba(236,72,153,0.10)", border: "1px solid rgba(236,72,153,0.3)", borderRadius: 12 }}>
+          <img src="/torch-logo-clean.png" alt="The Torch" style={{ height: 28, width: "auto", filter: "drop-shadow(0 0 6px rgba(236,72,153,0.4))" }} />
+          <span style={{ fontSize: "0.85rem", fontWeight: 600, color: "#ec4899" }}>The Torch</span>
+        </div>
+        <p style={{ color: "var(--muted)", marginTop: 6, fontSize: "0.9rem", flexBasis: "100%" }}>
           Spearmint Rhino Boise vs The Torch — YTD totals, averages, and top earners side by side.
         </p>
       </div>
@@ -289,7 +303,7 @@ export default function TipsComparisonPage() {
           "The Torch",
           null,
           "/torch-logo-clean.png",
-          "#ff4dd2",
+          "#ec4899",
           "New program · tracking from launch"
         )}
       </div>
@@ -297,7 +311,7 @@ export default function TipsComparisonPage() {
       {/* Combined summary card */}
       <div
         style={{
-          background: "linear-gradient(135deg, rgba(155,93,229,0.10), rgba(255,77,210,0.10))",
+          background: "linear-gradient(135deg, rgba(155,93,229,0.10), rgba(236,72,153,0.10), rgba(239,68,68,0.10))",
           border: "1px solid var(--border)",
           borderRadius: 14,
           padding: 24,
