@@ -25,7 +25,7 @@ function isOverdue(due: string | null | undefined) {
   return new Date(due + "T12:00:00") < new Date();
 }
 
-export default function SpearmintRhinoTasks() {
+export default function TorchTasks() {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [filter, setFilter] = useState("All");
   const [loading, setLoading] = useState(true);

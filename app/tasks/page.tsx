@@ -1,16 +1,14 @@
-"use client";
-
 import { useState } from "react";
-import SpearmintRhinoTasks from "./SpearmintRhinoTasks";
+import TorchTasks from "./TorchTasks";
 import PersonalTasks from "./PersonalTasks";
 
 const TABS = [
-  { key: "srb", label: "🦏 Spearmint Rhino", desc: "Club operations & venue tasks" },
+  { key: "torch", label: "🕯️ The Torch", desc: "Club operations & venue tasks" },
   { key: "personal", label: "✅ Personal", desc: "Personal & WLP tasks" },
 ];
 
 export default function TasksPage() {
-  const [active, setActive] = useState<"srb" | "personal">("srb");
+  const [active, setActive] = useState<"torch" | "personal">("torch");
 
   return (
     <div className="page-container">
@@ -24,7 +22,7 @@ export default function TasksPage() {
         {TABS.map((tab) => (
           <button
             key={tab.key}
-            onClick={() => setActive(tab.key as "srb" | "personal")}
+              onClick={() => setActive(tab.key as "torch" | "personal")}
             style={{
               padding: "10px 22px",
               background: "transparent",
@@ -43,7 +41,7 @@ export default function TasksPage() {
       </div>
 
       {/* Tab Content */}
-      {active === "srb" && <SpearmintRhinoTasks />}
+      {active === "torch" && <TorchTasks />}
       {active === "personal" && <PersonalTasks />}
     </div>
   );
