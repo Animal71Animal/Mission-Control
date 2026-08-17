@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import RootLayoutWrapper from "@/components/RootLayoutWrapper";
 import AnimatedBackground from "@/components/AnimatedBackground";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Mission Control — WLP",
@@ -45,6 +46,7 @@ export default function RootLayout({
             }
           }
         `}</style>
+        <SpeedInsights />
       </body>
     </html>
   );
