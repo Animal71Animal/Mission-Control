@@ -391,6 +391,12 @@
   "nightlyData": {
     "August": [
       {
+        "date": "Mon Aug 17",
+        "total": 120,
+        "dancers": [],
+        "mgrTip": 120
+      },
+      {
         "date": "Sat Aug 15",
         "total": 197,
         "dancers": [
@@ -831,11 +837,5 @@
     }
   ],
   "customerTips": [],
-  "mgrTips": {
-    "entries": [
-      { "date": "2026-08-17", "amount": 120 }
-    ],
-    "total": 120
-  },
-  "last_updated": "2026-08-18T11:43:00.000000+00:00"
+  "last_updated": "2026-08-18T11:46:00.000000+00:00"
 }
