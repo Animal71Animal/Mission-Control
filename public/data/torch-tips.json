@@ -831,5 +831,9 @@
     }
   ],
   "customerTips": [],
+  "misc": {
+    "categories": [],
+    "grandTotal": 0
+  },
   "last_updated": "2026-08-17T04:51:54.397483+00:00"
 }
