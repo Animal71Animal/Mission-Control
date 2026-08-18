@@ -701,19 +701,6 @@ export default function TorchTipsPage() {
                               color: "var(--muted)",
                             }}>▶</span>
                             <span>{night.date}</span>
-                            {(night.mgrTip ?? 0) > 0 && (
-                              <span style={{
-                                fontSize: "0.65rem",
-                                padding: "1px 6px",
-                                borderRadius: 4,
-                                background: "rgba(255, 204, 0, 0.15)",
-                                border: "1px solid #ffcc00",
-                                color: "#ffcc00",
-                                fontWeight: 600,
-                              }}>
-                                mgr ${night.mgrTip}
-                              </span>
-                            )}
                           </div>
                           <span style={{ fontWeight: 600, color: "var(--torch-pink)" }}>
                             ${night.total}
