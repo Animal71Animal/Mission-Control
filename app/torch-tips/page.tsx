@@ -3,11 +3,6 @@
 import { useEffect, useState } from "react";
 import Card from "@/components/Card";
 
-interface MiscCategory {
-  name: string;
-  monthlyTotals: { month: string; amount: number; nights: number }[];
-}
-
 interface TorchTipsData {
   monthlyTotals: { month: string; amount: number; nights: number }[];
   topTippers: { rank: number; name: string; jul: number; aug: number; sep: number; oct?: number; nov?: number; dec?: number; total: number; badge: string | null }[];
@@ -15,7 +10,7 @@ interface TorchTipsData {
   customerTips: { month: string; amount: number; topNight: string }[];
   dailyTips?: { date: string; amount: number; dancers: { name: string; amount: number }[] }[];
   nightlyData?: Record<string, { date: string; total: number; dancers: { name: string; amount: number }[] }[]>;
-  misc?: { categories: MiscCategory[]; grandTotal: number };
+  mgrTips?: { entries: { date: string; amount: number }[]; total: number };
 }
 
 interface MonthDetail {
@@ -612,62 +607,60 @@ export default function TorchTipsPage() {
         </Card>
       )}
 
-      {/* Misc Categories - Non-entertainer tip buckets (DJ share, bar, door, etc.) */}
+      {/* Mgr Tips - Manager / non-entertainer tip allocations by date */}
       <Card style={{ marginBottom: 24 }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
           <div>
             <h2 style={{ fontSize: "1.1rem", fontWeight: 600, margin: 0, color: "var(--text)" }}>
-              🎒 Misc Tips
+              👔 Mgr Tips
             </h2>
             <p style={{ fontSize: "0.75rem", color: "var(--muted)", margin: "4px 0 0" }}>
-              Non-entertainer tip categories (DJ share, bar, door, security, etc.)
+              Manager / floor tip allocations — tracked by date
             </p>
           </div>
-          {data.misc && data.misc.grandTotal > 0 && (
+          {data.mgrTips && data.mgrTips.total > 0 && (
             <div style={{ textAlign: "right" }}>
-              <div style={{ fontSize: "0.7rem", color: "var(--muted)" }}>Grand Total</div>
+              <div style={{ fontSize: "0.7rem", color: "var(--muted)" }}>Total</div>
               <div style={{ fontSize: "1.3rem", fontWeight: 700, color: "var(--torch-pink)" }}>
-                ${data.misc.grandTotal.toLocaleString()}
+                ${data.mgrTips.total.toLocaleString()}
               </div>
             </div>
           )}
         </div>
 
-        {data.misc && data.misc.categories.length > 0 ? (
+        {data.mgrTips && data.mgrTips.entries.length > 0 ? (
           <div style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
-            gap: 12,
+            gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))",
+            gap: 10,
           }}>
-            {data.misc.categories.map((cat) => {
-              const catTotal = cat.monthlyTotals.reduce((s, m) => s + m.amount, 0);
-              const catNights = Math.max(...cat.monthlyTotals.map(m => m.nights), 0);
-              return (
-                <div key={cat.name} style={{
-                  background: "var(--bg)",
-                  border: "1px solid var(--border)",
-                  borderRadius: 8,
-                  padding: 14,
-                }}>
-                  <div style={{ fontSize: "0.7rem", color: "var(--muted)", marginBottom: 4, textTransform: "uppercase", letterSpacing: "0.04em" }}>
-                    {cat.name}
-                  </div>
-                  <div style={{ fontSize: "1.2rem", fontWeight: 700, color: "var(--text)" }}>
-                    ${catTotal.toLocaleString()}
-                  </div>
-                  {cat.monthlyTotals.length > 0 && (
-                    <div style={{ marginTop: 10, display: "flex", flexDirection: "column", gap: 3 }}>
-                      {cat.monthlyTotals.map((m) => (
-                        <div key={m.month} style={{ display: "flex", justifyContent: "space-between", fontSize: "0.72rem", color: "var(--muted)" }}>
-                          <span>{m.month}</span>
-                          <span style={{ fontWeight: 600, color: "var(--text)" }}>${m.amount}</span>
-                        </div>
-                      ))}
+            {[...data.mgrTips.entries]
+              .sort((a, b) => b.date.localeCompare(a.date))
+              .map((e) => {
+                // Format YYYY-MM-DD → "Mon Aug 17"
+                const d = new Date(e.date + "T00:00:00");
+                const weekday = d.toLocaleDateString("en-US", { weekday: "short", timeZone: "America/Boise" });
+                const monthDay = d.toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "America/Boise" });
+                return (
+                  <div key={e.date} style={{
+                    background: "var(--bg)",
+                    border: "1px solid var(--border)",
+                    borderRadius: 8,
+                    padding: "10px 14px",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}>
+                    <div>
+                      <div style={{ fontSize: "0.7rem", color: "var(--muted)" }}>{weekday}</div>
+                      <div style={{ fontSize: "0.9rem", color: "var(--text)", fontWeight: 600 }}>{monthDay}</div>
                     </div>
-                  )}
-                </div>
-              );
-            })}
+                    <div style={{ fontSize: "1.15rem", fontWeight: 700, color: "var(--torch-pink)" }}>
+                      ${e.amount}
+                    </div>
+                  </div>
+                );
+              })}
           </div>
         ) : (
           <div style={{
@@ -678,9 +671,9 @@ export default function TorchTipsPage() {
             textAlign: "center",
             color: "var(--muted)",
           }}>
-            <div style={{ fontSize: "0.9rem", marginBottom: 6 }}>No misc categories yet</div>
+            <div style={{ fontSize: "0.9rem", marginBottom: 6 }}>No mgr tip entries yet</div>
             <div style={{ fontSize: "0.75rem" }}>
-              Add <code style={{ background: "var(--card)", padding: "1px 5px", borderRadius: 3, color: "var(--text)" }}>misc.categories</code> to <code style={{ background: "var(--card)", padding: "1px 5px", borderRadius: 3, color: "var(--text)" }}>public/data/torch-tips.json</code>:
+              Add <code style={{ background: "var(--card)", padding: "1px 5px", borderRadius: 3, color: "var(--text)" }}>mgrTips.entries</code> to <code style={{ background: "var(--card)", padding: "1px 5px", borderRadius: 3, color: "var(--text)" }}>public/data/torch-tips.json</code>:
             </div>
             <pre style={{
               marginTop: 10,
@@ -693,16 +686,11 @@ export default function TorchTipsPage() {
               textAlign: "left",
               overflowX: "auto",
               fontFamily: "monospace",
-            }}>{`"misc": {
-  "categories": [
-    {
-      "name": "DJ Share",
-      "monthlyTotals": [
-        { "month": "August", "amount": 100, "nights": 2 }
-      ]
-    }
+            }}>{`"mgrTips": {
+  "entries": [
+    { "date": "2026-08-17", "amount": 120 }
   ],
-  "grandTotal": 100
+  "total": 120
 }`}</pre>
           </div>
         )}

@@ -831,9 +831,11 @@
     }
   ],
   "customerTips": [],
-  "misc": {
-    "categories": [],
-    "grandTotal": 0
+  "mgrTips": {
+    "entries": [
+      { "date": "2026-08-17", "amount": 120 }
+    ],
+    "total": 120
   },
-  "last_updated": "2026-08-17T04:51:54.397483+00:00"
+  "last_updated": "2026-08-18T11:43:00.000000+00:00"
 }
