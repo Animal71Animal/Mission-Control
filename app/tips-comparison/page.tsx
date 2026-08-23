@@ -8,7 +8,6 @@ interface ClubTipsData {
   topTippers?: { name: string; total: number; badge?: string }[];
   allDancers?: { name: string; total: number }[];
   nightlyData?: Record<string, { date: string; total: number }[]>;
-  settlements?: number;
   last_updated?: string;
   lastUpdated?: string;
 }
@@ -123,7 +122,6 @@ export default function TipsComparisonPage() {
     const total = sumAmount(data);
     const nights = sumNights(data);
     const avg = nights > 0 ? total / nights : 0;
-    const settlements = data?.settlements ?? 0;
     const topTippers = (data?.topTippers || []).slice(0, 5);
     const started = data?.started;
     const lastUpdate = clubLastUpdated(data);
@@ -198,36 +196,6 @@ export default function TipsComparisonPage() {
             </div>
           </div>
         </div>
-
-        {/* Settlements */}
-        {settlements > 0 && (
-          <div
-            style={{
-              padding: "10px 14px",
-              background: "rgba(34, 197, 94, 0.10)",
-              border: "1px solid rgba(34, 197, 94, 0.3)",
-              borderRadius: 10,
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
-          >
-            <span
-              style={{
-                fontSize: "0.75rem",
-                color: "#22c55e",
-                fontWeight: 700,
-                textTransform: "uppercase",
-                letterSpacing: 0.5,
-              }}
-            >
-              💵 Settlements
-            </span>
-            <span style={{ fontSize: "1.1rem", fontWeight: 700, color: "#22c55e" }}>
-              ${settlements.toLocaleString()}
-            </span>
-          </div>
-        )}
 
         {/* Top Tippers */}
         <div>

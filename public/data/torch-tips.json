@@ -10,6 +10,24 @@
   ],
   "topTippers": [
     {
+      "name": "Settlements",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 286.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 286.0,
+      "rank": 1,
+      "badge": "gold"
+    },
+    {
       "name": "Autumn",
       "jan": 0.0,
       "feb": 0.0,
@@ -24,7 +42,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 60.0,
-      "rank": 1,
+      "rank": 2,
       "badge": "gold"
     },
     {
@@ -42,8 +60,8 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 32.0,
-      "rank": 2,
-      "badge": "gold"
+      "rank": 3,
+      "badge": "silver"
     },
     {
       "name": "Jezebel",
@@ -60,7 +78,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 30.0,
-      "rank": 3,
+      "rank": 4,
       "badge": "silver"
     },
     {
@@ -78,7 +96,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 29.0,
-      "rank": 4,
+      "rank": 5,
       "badge": "silver"
     },
     {
@@ -96,8 +114,8 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 26.0,
-      "rank": 5,
-      "badge": "silver"
+      "rank": 6,
+      "badge": "bronze"
     },
     {
       "name": "Crystal",
@@ -114,7 +132,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 25.0,
-      "rank": 6,
+      "rank": 7,
       "badge": "bronze"
     },
     {
@@ -132,7 +150,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 22.0,
-      "rank": 7,
+      "rank": 8,
       "badge": "bronze"
     },
     {
@@ -150,7 +168,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 20.0,
-      "rank": 8,
+      "rank": 9,
       "badge": "bronze"
     },
     {
@@ -168,7 +186,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 20.0,
-      "rank": 9,
+      "rank": 10,
       "badge": "bronze"
     },
     {
@@ -186,7 +204,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 20.0,
-      "rank": 10,
+      "rank": 11,
       "badge": "bronze"
     },
     {
@@ -204,7 +222,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 20.0,
-      "rank": 11,
+      "rank": 12,
       "badge": "bronze"
     },
     {
@@ -222,7 +240,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 17.0,
-      "rank": 12,
+      "rank": 13,
       "badge": "bronze"
     },
     {
@@ -240,7 +258,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 15.0,
-      "rank": 13,
+      "rank": 14,
       "badge": "bronze"
     },
     {
@@ -258,7 +276,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 15.0,
-      "rank": 14,
+      "rank": 15,
       "badge": "bronze"
     },
     {
@@ -276,7 +294,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 15.0,
-      "rank": 15,
+      "rank": 16,
       "badge": "bronze"
     },
     {
@@ -294,7 +312,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 15.0,
-      "rank": 16,
+      "rank": 17,
       "badge": "bronze"
     },
     {
@@ -312,7 +330,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 13.0,
-      "rank": 17,
+      "rank": 18,
       "badge": "bronze"
     },
     {
@@ -330,7 +348,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 10.0,
-      "rank": 18,
+      "rank": 19,
       "badge": "bronze"
     },
     {
@@ -348,7 +366,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 10.0,
-      "rank": 19,
+      "rank": 20,
       "badge": "bronze"
     },
     {
@@ -366,7 +384,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 10.0,
-      "rank": 20,
+      "rank": 21,
       "badge": "bronze"
     },
     {
@@ -384,7 +402,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 10.0,
-      "rank": 21,
+      "rank": 22,
       "badge": "bronze"
     },
     {
@@ -402,7 +420,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 10.0,
-      "rank": 22,
+      "rank": 23,
       "badge": "bronze"
     },
     {
@@ -420,7 +438,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 10.0,
-      "rank": 23,
+      "rank": 24,
       "badge": "bronze"
     },
     {
@@ -438,7 +456,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 10.0,
-      "rank": 24,
+      "rank": 25,
       "badge": "bronze"
     },
     {
@@ -456,7 +474,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 10.0,
-      "rank": 25,
+      "rank": 26,
       "badge": "bronze"
     },
     {
@@ -474,7 +492,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 10.0,
-      "rank": 26,
+      "rank": 27,
       "badge": "bronze"
     },
     {
@@ -492,7 +510,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 9.0,
-      "rank": 27,
+      "rank": 28,
       "badge": "bronze"
     },
     {
@@ -510,7 +528,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 8.0,
-      "rank": 28,
+      "rank": 29,
       "badge": "bronze"
     },
     {
@@ -528,7 +546,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 7.0,
-      "rank": 29,
+      "rank": 30,
       "badge": "bronze"
     },
     {
@@ -546,7 +564,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 5.0,
-      "rank": 30,
+      "rank": 31,
       "badge": "bronze"
     },
     {
@@ -564,7 +582,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 5.0,
-      "rank": 31,
+      "rank": 32,
       "badge": "bronze"
     },
     {
@@ -582,7 +600,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 5.0,
-      "rank": 32,
+      "rank": 33,
       "badge": "bronze"
     }
   ],
@@ -812,6 +830,22 @@
     ]
   },
   "allDancers": [
+    {
+      "name": "Settlements",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 286.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 286.0
+    },
     {
       "name": "Autumn",
       "jan": 0.0,
@@ -1326,6 +1360,6 @@
     }
   ],
   "customerTips": [],
-  "last_updated": "2026-08-23T12:07:44.275279+00:00",
+  "last_updated": "2026-08-23T12:10:53.131512+00:00",
   "settlements": 286.0
 }
