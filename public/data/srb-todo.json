@@ -115,7 +115,7 @@
     {
       "id": "15",
       "text": "Prepare Ableton sample bank",
-      "completed": false,
+      "completed": true,
       "category": "Music",
       "priority": "medium",
       "due_date": null
@@ -257,5 +257,5 @@
       "due_date": "2026-08-06"
     }
   ],
-  "last_updated": "2026-08-23T12:29:34.863Z"
+  "last_updated": "2026-08-23T12:29:36.443Z"
 }
