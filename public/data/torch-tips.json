@@ -4,7 +4,7 @@
   "monthlyTotals": [
     {
       "month": "August",
-      "amount": 764,
+      "amount": 809,
       "nights": 5
     }
   ],
@@ -622,7 +622,7 @@
       },
       {
         "date": "Sat Aug 15",
-        "total": 197,
+        "total": 242,
         "dancers": [
           {
             "name": "Mafia",
@@ -704,7 +704,8 @@
             "name": "Sophie",
             "amount": 10
           }
-        ]
+        ],
+        "settlement": 45
       },
       {
         "date": "Mon Aug 17",
@@ -1359,5 +1360,5 @@
     }
   ],
   "customerTips": [],
-  "last_updated": "2026-08-23T11:25:27.354655+00:00"
+  "last_updated": "2026-08-23T11:28:52.174911+00:00"
 }
