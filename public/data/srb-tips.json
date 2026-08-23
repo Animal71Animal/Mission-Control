@@ -29,6 +29,16 @@
       "month": "June",
       "amount": 3232,
       "nights": 15
+    },
+    {
+      "month": "July",
+      "amount": 0,
+      "nights": 0
+    },
+    {
+      "month": "August",
+      "amount": 331,
+      "nights": 1
     }
   ],
   "topTippers": [
@@ -41,12 +51,12 @@
       "may": 541.0,
       "jun": 256.0,
       "jul": 0.0,
-      "aug": 0.0,
+      "aug": 107.0,
       "sep": 0.0,
       "oct": 0.0,
       "nov": 0.0,
       "dec": 0.0,
-      "total": 1521.0,
+      "total": 1628.0,
       "rank": 1,
       "badge": "gold"
     },
@@ -275,12 +285,12 @@
       "may": 35.0,
       "jun": 70.0,
       "jul": 0.0,
-      "aug": 0.0,
+      "aug": 5.0,
       "sep": 0.0,
       "oct": 0.0,
       "nov": 0.0,
       "dec": 0.0,
-      "total": 239.0,
+      "total": 244.0,
       "rank": 14,
       "badge": "bronze"
     },
@@ -393,6 +403,24 @@
       "badge": "bronze"
     },
     {
+      "name": "Nova",
+      "jan": 20.0,
+      "feb": 40.0,
+      "mar": 35.0,
+      "apr": 35.0,
+      "may": 25.0,
+      "jun": 25.0,
+      "jul": 0.0,
+      "aug": 10.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 190.0,
+      "rank": 21,
+      "badge": "bronze"
+    },
+    {
       "name": "Adelia",
       "jan": 60.0,
       "feb": 20.0,
@@ -407,7 +435,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 185.0,
-      "rank": 21,
+      "rank": 22,
       "badge": "bronze"
     },
     {
@@ -425,24 +453,6 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 182.0,
-      "rank": 22,
-      "badge": "bronze"
-    },
-    {
-      "name": "Nova",
-      "jan": 20.0,
-      "feb": 40.0,
-      "mar": 35.0,
-      "apr": 35.0,
-      "may": 25.0,
-      "jun": 25.0,
-      "jul": 0.0,
-      "aug": 0.0,
-      "sep": 0.0,
-      "oct": 0.0,
-      "nov": 0.0,
-      "dec": 0.0,
-      "total": 180.0,
       "rank": 23,
       "badge": "bronze"
     },
@@ -987,6 +997,24 @@
       "badge": "bronze"
     },
     {
+      "name": "Raven",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 5.0,
+      "jun": 30.0,
+      "jul": 0.0,
+      "aug": 10.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 45.0,
+      "rank": 54,
+      "badge": "bronze"
+    },
+    {
       "name": "Gemini",
       "jan": 0.0,
       "feb": 0.0,
@@ -1001,7 +1029,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 43.0,
-      "rank": 54,
+      "rank": 55,
       "badge": "bronze"
     },
     {
@@ -1019,7 +1047,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 40.0,
-      "rank": 55,
+      "rank": 56,
       "badge": "bronze"
     },
     {
@@ -1037,24 +1065,6 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 36.0,
-      "rank": 56,
-      "badge": "bronze"
-    },
-    {
-      "name": "Raven",
-      "jan": 0.0,
-      "feb": 0.0,
-      "mar": 0.0,
-      "apr": 0.0,
-      "may": 5.0,
-      "jun": 30.0,
-      "jul": 0.0,
-      "aug": 0.0,
-      "sep": 0.0,
-      "oct": 0.0,
-      "nov": 0.0,
-      "dec": 0.0,
-      "total": 35.0,
       "rank": 57,
       "badge": "bronze"
     },
@@ -1185,6 +1195,24 @@
       "badge": "bronze"
     },
     {
+      "name": "Autumn",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 25.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 25.0,
+      "rank": 65,
+      "badge": "bronze"
+    },
+    {
       "name": "Lola",
       "jan": 0.0,
       "feb": 0.0,
@@ -1199,7 +1227,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 23.0,
-      "rank": 65,
+      "rank": 66,
       "badge": "bronze"
     },
     {
@@ -1217,7 +1245,43 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 20.0,
-      "rank": 66,
+      "rank": 67,
+      "badge": "bronze"
+    },
+    {
+      "name": "Sabbath",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 20.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 20.0,
+      "rank": 68,
+      "badge": "bronze"
+    },
+    {
+      "name": "Skye",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 20.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 20.0,
+      "rank": 69,
       "badge": "bronze"
     },
     {
@@ -1235,7 +1299,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 18.0,
-      "rank": 67,
+      "rank": 70,
       "badge": "bronze"
     },
     {
@@ -1253,7 +1317,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 17.0,
-      "rank": 68,
+      "rank": 71,
       "badge": "bronze"
     },
     {
@@ -1271,7 +1335,43 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 17.0,
-      "rank": 69,
+      "rank": 72,
+      "badge": "bronze"
+    },
+    {
+      "name": "Stassi",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 17.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 17.0,
+      "rank": 73,
+      "badge": "bronze"
+    },
+    {
+      "name": "Sativa",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 17.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 17.0,
+      "rank": 74,
       "badge": "bronze"
     },
     {
@@ -1289,7 +1389,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 15.0,
-      "rank": 70,
+      "rank": 75,
       "badge": "bronze"
     },
     {
@@ -1307,7 +1407,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 14.0,
-      "rank": 71,
+      "rank": 76,
       "badge": "bronze"
     },
     {
@@ -1325,7 +1425,25 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 13.0,
-      "rank": 72,
+      "rank": 77,
+      "badge": "bronze"
+    },
+    {
+      "name": "Shiloh",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 13.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 13.0,
+      "rank": 78,
       "badge": "bronze"
     },
     {
@@ -1343,7 +1461,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 10.0,
-      "rank": 73,
+      "rank": 79,
       "badge": "bronze"
     },
     {
@@ -1361,7 +1479,115 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 10.0,
-      "rank": 74,
+      "rank": 80,
+      "badge": "bronze"
+    },
+    {
+      "name": "Molly",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 10.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 10.0,
+      "rank": 81,
+      "badge": "bronze"
+    },
+    {
+      "name": "Hannah",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 10.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 10.0,
+      "rank": 82,
+      "badge": "bronze"
+    },
+    {
+      "name": "Jezebel",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 10.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 10.0,
+      "rank": 83,
+      "badge": "bronze"
+    },
+    {
+      "name": "Lana",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 10.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 10.0,
+      "rank": 84,
+      "badge": "bronze"
+    },
+    {
+      "name": "Josie",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 10.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 10.0,
+      "rank": 85,
+      "badge": "bronze"
+    },
+    {
+      "name": "Nina",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 10.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 10.0,
+      "rank": 86,
       "badge": "bronze"
     },
     {
@@ -1379,7 +1605,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 9.0,
-      "rank": 75,
+      "rank": 87,
       "badge": "bronze"
     },
     {
@@ -1397,7 +1623,25 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 7.0,
-      "rank": 76,
+      "rank": 88,
+      "badge": "bronze"
+    },
+    {
+      "name": "Selene",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 7.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 7.0,
+      "rank": 89,
       "badge": "bronze"
     },
     {
@@ -1415,7 +1659,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 6.0,
-      "rank": 77,
+      "rank": 90,
       "badge": "bronze"
     },
     {
@@ -1433,7 +1677,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 6.0,
-      "rank": 78,
+      "rank": 91,
       "badge": "bronze"
     },
     {
@@ -1451,7 +1695,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 5.0,
-      "rank": 79,
+      "rank": 92,
       "badge": "bronze"
     },
     {
@@ -1469,7 +1713,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 5.0,
-      "rank": 80,
+      "rank": 93,
       "badge": "bronze"
     },
     {
@@ -1487,7 +1731,79 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 5.0,
-      "rank": 81,
+      "rank": 94,
+      "badge": "bronze"
+    },
+    {
+      "name": "Belle",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 5.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 5.0,
+      "rank": 95,
+      "badge": "bronze"
+    },
+    {
+      "name": "Snoh",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 5.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 5.0,
+      "rank": 96,
+      "badge": "bronze"
+    },
+    {
+      "name": "Crystal",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 5.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 5.0,
+      "rank": 97,
+      "badge": "bronze"
+    },
+    {
+      "name": "Dahlia",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 5.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 5.0,
+      "rank": 98,
       "badge": "bronze"
     },
     {
@@ -1505,7 +1821,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 3.0,
-      "rank": 82,
+      "rank": 99,
       "badge": "bronze"
     },
     {
@@ -1523,7 +1839,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 0.0,
-      "rank": 83,
+      "rank": 100,
       "badge": "bronze"
     },
     {
@@ -1541,7 +1857,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 0.0,
-      "rank": 84,
+      "rank": 101,
       "badge": "bronze"
     }
   ],
@@ -5439,6 +5755,99 @@
           }
         ]
       }
+    ],
+    "July": [],
+    "August": [
+      {
+        "date": "Sat Aug 22",
+        "total": 331,
+        "dancers": [
+          {
+            "name": "Molly",
+            "amount": 10
+          },
+          {
+            "name": "Stassi",
+            "amount": 17
+          },
+          {
+            "name": "Belle",
+            "amount": 5
+          },
+          {
+            "name": "Hannah",
+            "amount": 10
+          },
+          {
+            "name": "Sativa",
+            "amount": 17
+          },
+          {
+            "name": "Snoh",
+            "amount": 5
+          },
+          {
+            "name": "Crystal",
+            "amount": 5
+          },
+          {
+            "name": "Nova",
+            "amount": 10
+          },
+          {
+            "name": "Jezebel",
+            "amount": 10
+          },
+          {
+            "name": "Lana",
+            "amount": 10
+          },
+          {
+            "name": "Josie",
+            "amount": 10
+          },
+          {
+            "name": "Nina",
+            "amount": 10
+          },
+          {
+            "name": "Raven",
+            "amount": 10
+          },
+          {
+            "name": "Shiloh",
+            "amount": 13
+          },
+          {
+            "name": "Selene",
+            "amount": 7
+          },
+          {
+            "name": "Dahlia",
+            "amount": 5
+          },
+          {
+            "name": "Sabbath",
+            "amount": 20
+          },
+          {
+            "name": "Zara",
+            "amount": 5
+          },
+          {
+            "name": "Autumn",
+            "amount": 25
+          },
+          {
+            "name": "Skye",
+            "amount": 20
+          },
+          {
+            "name": "Customers",
+            "amount": 107
+          }
+        ]
+      }
     ]
   },
   "allDancers": [
@@ -5451,12 +5860,12 @@
       "may": 541.0,
       "jun": 256.0,
       "jul": 0.0,
-      "aug": 0.0,
+      "aug": 107.0,
       "sep": 0.0,
       "oct": 0.0,
       "nov": 0.0,
       "dec": 0.0,
-      "total": 1521.0
+      "total": 1628.0
     },
     {
       "name": "Hunter",
@@ -5659,12 +6068,12 @@
       "may": 35.0,
       "jun": 70.0,
       "jul": 0.0,
-      "aug": 0.0,
+      "aug": 5.0,
       "sep": 0.0,
       "oct": 0.0,
       "nov": 0.0,
       "dec": 0.0,
-      "total": 239.0
+      "total": 244.0
     },
     {
       "name": "Mia",
@@ -5763,6 +6172,22 @@
       "total": 195.0
     },
     {
+      "name": "Nova",
+      "jan": 20.0,
+      "feb": 40.0,
+      "mar": 35.0,
+      "apr": 35.0,
+      "may": 25.0,
+      "jun": 25.0,
+      "jul": 0.0,
+      "aug": 10.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 190.0
+    },
+    {
       "name": "Adelia",
       "jan": 60.0,
       "feb": 20.0,
@@ -5793,22 +6218,6 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 182.0
-    },
-    {
-      "name": "Nova",
-      "jan": 20.0,
-      "feb": 40.0,
-      "mar": 35.0,
-      "apr": 35.0,
-      "may": 25.0,
-      "jun": 25.0,
-      "jul": 0.0,
-      "aug": 0.0,
-      "sep": 0.0,
-      "oct": 0.0,
-      "nov": 0.0,
-      "dec": 0.0,
-      "total": 180.0
     },
     {
       "name": "Shiiva",
@@ -6291,6 +6700,22 @@
       "total": 45.0
     },
     {
+      "name": "Raven",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 5.0,
+      "jun": 30.0,
+      "jul": 0.0,
+      "aug": 10.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 45.0
+    },
+    {
       "name": "Gemini",
       "jan": 0.0,
       "feb": 0.0,
@@ -6337,22 +6762,6 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 36.0
-    },
-    {
-      "name": "Raven",
-      "jan": 0.0,
-      "feb": 0.0,
-      "mar": 0.0,
-      "apr": 0.0,
-      "may": 5.0,
-      "jun": 30.0,
-      "jul": 0.0,
-      "aug": 0.0,
-      "sep": 0.0,
-      "oct": 0.0,
-      "nov": 0.0,
-      "dec": 0.0,
-      "total": 35.0
     },
     {
       "name": "Ruby",
@@ -6467,6 +6876,22 @@
       "total": 25.0
     },
     {
+      "name": "Autumn",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 25.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 25.0
+    },
+    {
       "name": "Lola",
       "jan": 0.0,
       "feb": 0.0,
@@ -6492,6 +6917,38 @@
       "jun": 0.0,
       "jul": 0.0,
       "aug": 0.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 20.0
+    },
+    {
+      "name": "Sabbath",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 20.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 20.0
+    },
+    {
+      "name": "Skye",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 20.0,
       "sep": 0.0,
       "oct": 0.0,
       "nov": 0.0,
@@ -6547,6 +7004,38 @@
       "total": 17.0
     },
     {
+      "name": "Stassi",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 17.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 17.0
+    },
+    {
+      "name": "Sativa",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 17.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 17.0
+    },
+    {
       "name": "Essence",
       "jan": 0.0,
       "feb": 0.0,
@@ -6595,6 +7084,22 @@
       "total": 13.0
     },
     {
+      "name": "Shiloh",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 13.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 13.0
+    },
+    {
       "name": "Dakota",
       "jan": 0.0,
       "feb": 0.0,
@@ -6627,6 +7132,102 @@
       "total": 10.0
     },
     {
+      "name": "Molly",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 10.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 10.0
+    },
+    {
+      "name": "Hannah",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 10.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 10.0
+    },
+    {
+      "name": "Jezebel",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 10.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 10.0
+    },
+    {
+      "name": "Lana",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 10.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 10.0
+    },
+    {
+      "name": "Josie",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 10.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 10.0
+    },
+    {
+      "name": "Nina",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 10.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 10.0
+    },
+    {
       "name": "Sammie",
       "jan": 0.0,
       "feb": 0.0,
@@ -6652,6 +7253,22 @@
       "jun": 7.0,
       "jul": 0.0,
       "aug": 0.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 7.0
+    },
+    {
+      "name": "Selene",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 7.0,
       "sep": 0.0,
       "oct": 0.0,
       "nov": 0.0,
@@ -6739,6 +7356,70 @@
       "total": 5.0
     },
     {
+      "name": "Belle",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 5.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 5.0
+    },
+    {
+      "name": "Snoh",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 5.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 5.0
+    },
+    {
+      "name": "Crystal",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 5.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 5.0
+    },
+    {
+      "name": "Dahlia",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 5.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 5.0
+    },
+    {
       "name": "Pyper",
       "jan": 0.0,
       "feb": 0.0,
@@ -6788,5 +7469,5 @@
     }
   ],
   "customerTips": [],
-  "last_updated": "2026-06-28T09:19:15Z"
+  "last_updated": "2026-08-23T11:17:41.388495+00:00"
 }
