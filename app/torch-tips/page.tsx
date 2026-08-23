@@ -9,7 +9,7 @@ interface TorchTipsData {
   allDancers: { name: string; jul: number; aug: number; sep: number; oct?: number; nov?: number; dec?: number; total?: number }[];
   customerTips: { month: string; amount: number; topNight: string }[];
   dailyTips?: { date: string; amount: number; dancers: { name: string; amount: number }[] }[];
-  nightlyData?: Record<string, { date: string; total: number; dancers: { name: string; amount: number }[]; mgrTip?: number; settlement?: number }[]>;
+  nightlyData?: Record<string, { date: string; total: number; dancers: { name: string; amount: number }[]; settlement?: number }[]>;
 }
 
 interface MonthDetail {
@@ -707,31 +707,6 @@ export default function TorchTipsPage() {
                           </span>
                         </button>
 
-                        {isNightExpanded && (night.mgrTip ?? 0) > 0 && (
-                          <div style={{
-                            padding: "8px 20px 4px 68px",
-                            display: "flex",
-                            alignItems: "center",
-                            gap: 8,
-                            fontSize: "0.78rem",
-                          }}>
-                            <span style={{
-                              display: "inline-block",
-                              padding: "2px 8px",
-                              borderRadius: 4,
-                              background: "rgba(255, 204, 0, 0.15)",
-                              border: "1px solid #ffcc00",
-                              color: "#ffcc00",
-                              fontWeight: 700,
-                            }}>
-                              👔 Mgr Tip
-                            </span>
-                            <span style={{ fontWeight: 700, color: "var(--torch-pink)" }}>
-                              ${night.mgrTip}
-                            </span>
-                          </div>
-                        )}
-
                         {isNightExpanded && (night.settlement ?? 0) > 0 && (
                           <div style={{
                             padding: "8px 20px 4px 68px",
@@ -749,7 +724,7 @@ export default function TorchTipsPage() {
                               color: "#22c55e",
                               fontWeight: 700,
                             }}>
-                              💵 Settlement
+                              💵 Settlement Payout
                             </span>
                             <span style={{ fontWeight: 700, color: "var(--torch-pink)" }}>
                               ${night.settlement}
@@ -783,7 +758,7 @@ export default function TorchTipsPage() {
                           </div>
                         )}
 
-                        {isNightExpanded && night.dancers.length === 0 && (night.mgrTip ?? 0) === 0 && (night.settlement ?? 0) === 0 && (
+                        {isNightExpanded && night.dancers.length === 0 && (night.settlement ?? 0) === 0 && (
                           <div style={{
                             padding: "8px 20px 12px 68px",
                             fontSize: "0.8rem",

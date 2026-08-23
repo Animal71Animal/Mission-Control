@@ -710,7 +710,7 @@
         "date": "Mon Aug 17",
         "total": 120,
         "dancers": [],
-        "mgrTip": 120
+        "settlement": 120
       },
       {
         "date": "Wed Aug 19",
@@ -822,12 +822,9 @@
           {
             "name": "Skye",
             "amount": 20
-          },
-          {
-            "name": "Customers",
-            "amount": 107
           }
-        ]
+        ],
+        "settlement": 107
       }
     ]
   },
@@ -1362,5 +1359,5 @@
     }
   ],
   "customerTips": [],
-  "last_updated": "2026-08-23T11:22:02.659936+00:00"
+  "last_updated": "2026-08-23T11:25:27.354655+00:00"
 }
