@@ -873,51 +873,65 @@ export default function TorchTipsPage() {
                 <h3 style={{ margin: "0 0 16px", fontSize: "1.1rem", color: "var(--text)" }}>
                   {dancerResult.name}
                 </h3>
-                <div style={{ display: "grid", gridTemplateColumns: dateRange === "q3" || dateRange === "q4" ? "repeat(3, 1fr)" : "repeat(4, 1fr)", gap: 16, textAlign: "center" }}>
-                  {dateRange === "q3" ? (
+                <div style={{
+                  display: "grid",
+                  gridTemplateColumns: dateRange === "all"
+                    ? "repeat(7, 1fr)"
+                    : dateRange === "q3" || dateRange === "q4"
+                      ? "repeat(4, 1fr)"
+                      : "repeat(2, 1fr)",
+                  gap: 12,
+                  textAlign: "center",
+                }}>
+                  {dateRange === "all" ? (
                     <>
+                      <div><div style={{ fontSize: "0.7rem", color: "var(--muted)" }}>Jul</div><div style={{ fontSize: "1.1rem", fontWeight: 700 }}>${dancerResult.jul}</div></div>
+                      <div><div style={{ fontSize: "0.7rem", color: "var(--muted)" }}>Aug</div><div style={{ fontSize: "1.1rem", fontWeight: 700 }}>${dancerResult.aug}</div></div>
+                      <div><div style={{ fontSize: "0.7rem", color: "var(--muted)" }}>Sep</div><div style={{ fontSize: "1.1rem", fontWeight: 700 }}>${dancerResult.sep}</div></div>
+                      <div><div style={{ fontSize: "0.7rem", color: "var(--muted)" }}>Oct</div><div style={{ fontSize: "1.1rem", fontWeight: 700 }}>${dancerResult.oct || 0}</div></div>
+                      <div><div style={{ fontSize: "0.7rem", color: "var(--muted)" }}>Nov</div><div style={{ fontSize: "1.1rem", fontWeight: 700 }}>${dancerResult.nov || 0}</div></div>
+                      <div><div style={{ fontSize: "0.7rem", color: "var(--muted)" }}>Dec</div><div style={{ fontSize: "1.1rem", fontWeight: 700 }}>${dancerResult.dec || 0}</div></div>
                       <div>
-                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>July</div>
-                        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.jul}</div>
+                        <div style={{ fontSize: "0.7rem", color: "var(--torch-pink)" }}>Total</div>
+                        <div style={{ fontSize: "1.4rem", fontWeight: 700, color: "var(--torch-pink)" }}>${dancerResult.total}</div>
                       </div>
+                    </>
+                  ) : dateRange === "q3" ? (
+                    <>
+                      <div><div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>July</div><div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.jul}</div></div>
+                      <div><div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>August</div><div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.aug}</div></div>
+                      <div><div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>September</div><div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.sep}</div></div>
                       <div>
-                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>August</div>
-                        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.aug}</div>
-                      </div>
-                      <div>
-                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>September</div>
-                        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.sep}</div>
+                        <div style={{ fontSize: "0.75rem", color: "var(--torch-pink)" }}>Total</div>
+                        <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--torch-pink)" }}>${dancerResult.total}</div>
                       </div>
                     </>
                   ) : dateRange === "q4" ? (
                     <>
+                      <div><div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>October</div><div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.oct}</div></div>
+                      <div><div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>November</div><div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.nov}</div></div>
+                      <div><div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>December</div><div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.dec || 0}</div></div>
                       <div>
-                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>October</div>
-                        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.oct}</div>
-                      </div>
-                      <div>
-                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>November</div>
-                        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.nov}</div>
-                      </div>
-                      <div>
-                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>December</div>
-                        <div style={{ fontSize: "1.2rem", fontWeight: 700 }}>${dancerResult.dec || 0}</div>
+                        <div style={{ fontSize: "0.75rem", color: "var(--torch-pink)" }}>Total</div>
+                        <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--torch-pink)" }}>${dancerResult.total}</div>
                       </div>
                     </>
                   ) : (
-                    <div style={{ gridColumn: "span 3" }}>
-                      <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>
-                        {dateRange === "jul" ? "July" : dateRange === "aug" ? "August" : dateRange === "sep" ? "September" : dateRange === "oct" ? "October" : dateRange === "nov" ? "November" : "December"}
+                    <>
+                      <div>
+                        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>
+                          {dateRange === "jul" ? "July" : dateRange === "aug" ? "August" : dateRange === "sep" ? "September" : dateRange === "oct" ? "October" : dateRange === "nov" ? "November" : "December"}
+                        </div>
+                        <div style={{ fontSize: "1.8rem", fontWeight: 700, color: "var(--torch-pink)" }}>
+                          ${dateRange === "jul" ? dancerResult.jul : dateRange === "aug" ? dancerResult.aug : dateRange === "sep" ? dancerResult.sep : dateRange === "oct" ? dancerResult.oct : dateRange === "nov" ? dancerResult.nov : dancerResult.dec || 0}
+                        </div>
                       </div>
-                      <div style={{ fontSize: "2rem", fontWeight: 700, color: "var(--torch-pink)" }}>
-                        ${dateRange === "jul" ? dancerResult.jul : dateRange === "aug" ? dancerResult.aug : dateRange === "sep" ? dancerResult.sep : dateRange === "oct" ? dancerResult.oct : dateRange === "nov" ? dancerResult.nov : dancerResult.dec || 0}
+                      <div>
+                        <div style={{ fontSize: "0.75rem", color: "var(--torch-pink)" }}>Total</div>
+                        <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--torch-pink)" }}>${dancerResult.total}</div>
                       </div>
-                    </div>
+                    </>
                   )}
-                  <div>
-                    <div style={{ fontSize: "0.75rem", color: "var(--torch-pink)" }}>Total</div>
-                    <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--torch-pink)" }}>${dancerResult.total}</div>
-                  </div>
                 </div>
               </div>
             ) : searchName ? (
