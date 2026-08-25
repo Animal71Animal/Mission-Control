@@ -4,8 +4,8 @@
   "monthlyTotals": [
     {
       "month": "August",
-      "amount": 809,
-      "nights": 5
+      "amount": 978,
+      "nights": 7
     }
   ],
   "topTippers": [
@@ -18,12 +18,12 @@
       "may": 0.0,
       "jun": 0.0,
       "jul": 0.0,
-      "aug": 286.0,
+      "aug": 437.0,
       "sep": 0.0,
       "oct": 0.0,
       "nov": 0.0,
       "dec": 0.0,
-      "total": 286.0,
+      "total": 437.0,
       "rank": 1,
       "badge": "gold"
     },
@@ -334,7 +334,7 @@
       "badge": "bronze"
     },
     {
-      "name": "Ariel",
+      "name": "Scarlett",
       "jan": 0.0,
       "feb": 0.0,
       "mar": 0.0,
@@ -342,17 +342,17 @@
       "may": 0.0,
       "jun": 0.0,
       "jul": 0.0,
-      "aug": 10.0,
+      "aug": 13.0,
       "sep": 0.0,
       "oct": 0.0,
       "nov": 0.0,
       "dec": 0.0,
-      "total": 10.0,
+      "total": 13.0,
       "rank": 19,
       "badge": "bronze"
     },
     {
-      "name": "Foxy",
+      "name": "Ariel",
       "jan": 0.0,
       "feb": 0.0,
       "mar": 0.0,
@@ -370,7 +370,7 @@
       "badge": "bronze"
     },
     {
-      "name": "Belle",
+      "name": "Foxy",
       "jan": 0.0,
       "feb": 0.0,
       "mar": 0.0,
@@ -388,7 +388,7 @@
       "badge": "bronze"
     },
     {
-      "name": "Arcana",
+      "name": "Belle",
       "jan": 0.0,
       "feb": 0.0,
       "mar": 0.0,
@@ -406,7 +406,7 @@
       "badge": "bronze"
     },
     {
-      "name": "Sophie",
+      "name": "Arcana",
       "jan": 0.0,
       "feb": 0.0,
       "mar": 0.0,
@@ -424,7 +424,7 @@
       "badge": "bronze"
     },
     {
-      "name": "Ivy",
+      "name": "Sophie",
       "jan": 0.0,
       "feb": 0.0,
       "mar": 0.0,
@@ -442,7 +442,7 @@
       "badge": "bronze"
     },
     {
-      "name": "Hannah",
+      "name": "Ivy",
       "jan": 0.0,
       "feb": 0.0,
       "mar": 0.0,
@@ -460,7 +460,7 @@
       "badge": "bronze"
     },
     {
-      "name": "Nina",
+      "name": "Hannah",
       "jan": 0.0,
       "feb": 0.0,
       "mar": 0.0,
@@ -478,7 +478,7 @@
       "badge": "bronze"
     },
     {
-      "name": "Raven",
+      "name": "Nina",
       "jan": 0.0,
       "feb": 0.0,
       "mar": 0.0,
@@ -496,6 +496,42 @@
       "badge": "bronze"
     },
     {
+      "name": "Raven",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 10.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 10.0,
+      "rank": 28,
+      "badge": "bronze"
+    },
+    {
+      "name": "Zara",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 10.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 10.0,
+      "rank": 29,
+      "badge": "bronze"
+    },
+    {
       "name": "Snoh",
       "jan": 0.0,
       "feb": 0.0,
@@ -510,7 +546,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 9.0,
-      "rank": 28,
+      "rank": 30,
       "badge": "bronze"
     },
     {
@@ -528,7 +564,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 8.0,
-      "rank": 29,
+      "rank": 31,
       "badge": "bronze"
     },
     {
@@ -546,7 +582,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 7.0,
-      "rank": 30,
+      "rank": 32,
       "badge": "bronze"
     },
     {
@@ -564,7 +600,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 5.0,
-      "rank": 31,
+      "rank": 33,
       "badge": "bronze"
     },
     {
@@ -582,25 +618,7 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 5.0,
-      "rank": 32,
-      "badge": "bronze"
-    },
-    {
-      "name": "Zara",
-      "jan": 0.0,
-      "feb": 0.0,
-      "mar": 0.0,
-      "apr": 0.0,
-      "may": 0.0,
-      "jun": 0.0,
-      "jul": 0.0,
-      "aug": 5.0,
-      "sep": 0.0,
-      "oct": 0.0,
-      "nov": 0.0,
-      "dec": 0.0,
-      "total": 5.0,
-      "rank": 33,
+      "rank": 34,
       "badge": "bronze"
     }
   ],
@@ -826,6 +844,27 @@
           }
         ],
         "settlement": 107
+      },
+      {
+        "date": "Sun Aug 23",
+        "total": 85,
+        "dancers": [],
+        "settlement": 85
+      },
+      {
+        "date": "Mon Aug 24",
+        "total": 84,
+        "dancers": [
+          {
+            "name": "Zara",
+            "amount": 5
+          },
+          {
+            "name": "Scarlett",
+            "amount": 13
+          }
+        ],
+        "settlement": 66
       }
     ]
   },
@@ -839,12 +878,12 @@
       "may": 0.0,
       "jun": 0.0,
       "jul": 0.0,
-      "aug": 286.0,
+      "aug": 437.0,
       "sep": 0.0,
       "oct": 0.0,
       "nov": 0.0,
       "dec": 0.0,
-      "total": 286.0
+      "total": 437.0
     },
     {
       "name": "Autumn",
@@ -1119,6 +1158,22 @@
       "total": 13.0
     },
     {
+      "name": "Scarlett",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 13.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 13.0
+    },
+    {
       "name": "Ariel",
       "jan": 0.0,
       "feb": 0.0,
@@ -1263,6 +1318,22 @@
       "total": 10.0
     },
     {
+      "name": "Zara",
+      "jan": 0.0,
+      "feb": 0.0,
+      "mar": 0.0,
+      "apr": 0.0,
+      "may": 0.0,
+      "jun": 0.0,
+      "jul": 0.0,
+      "aug": 10.0,
+      "sep": 0.0,
+      "oct": 0.0,
+      "nov": 0.0,
+      "dec": 0.0,
+      "total": 10.0
+    },
+    {
       "name": "Snoh",
       "jan": 0.0,
       "feb": 0.0,
@@ -1341,25 +1412,9 @@
       "nov": 0.0,
       "dec": 0.0,
       "total": 5.0
-    },
-    {
-      "name": "Zara",
-      "jan": 0.0,
-      "feb": 0.0,
-      "mar": 0.0,
-      "apr": 0.0,
-      "may": 0.0,
-      "jun": 0.0,
-      "jul": 0.0,
-      "aug": 5.0,
-      "sep": 0.0,
-      "oct": 0.0,
-      "nov": 0.0,
-      "dec": 0.0,
-      "total": 5.0
     }
   ],
   "customerTips": [],
-  "last_updated": "2026-08-23T12:10:53.131512+00:00",
-  "settlements": 286.0
+  "last_updated": "2026-08-25T08:54:20.760854+00:00",
+  "settlements": 437.0
 }
