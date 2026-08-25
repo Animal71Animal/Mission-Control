@@ -1306,6 +1306,22 @@
       "airport_city_fees": 52.25,
       "source": "uber_tax_summary",
       "note": "Official Uber Tax Summary PDF (Jun 2026). Daily shift log hidden on page for tax-summary months."
+    },
+    "2026-07": {
+      "total_gross": 7212.6,
+      "total_net": 4606.82,
+      "total_trips": 406,
+      "online_miles": 4245,
+      "total_tips": 759.81,
+      "total_incentives": 554.06,
+      "total_expenses": 2605.78,
+      "trip_earnings": 5898.73,
+      "service_fee": 2318.81,
+      "booking_fee": 20.5,
+      "insurance": 54.72,
+      "airport_city_fees": 211.75,
+      "source": "uber_tax_summary",
+      "note": "Official Uber Tax Summary PDF (Jul 2026) \u2014 added 2026-08-25."
     }
   },
   "metadata": {
@@ -1314,6 +1330,6 @@
     "scrape_method": "manual_entry_from_pdf_statements",
     "last_scrape_attempt": "2026-06-03T22:00:00Z"
   },
-  "last_updated": "2026-07-05T14:08:37.089404Z",
+  "last_updated": "2026-08-25T10:24:16.452881+00:00",
   "dedup_method": "trip_level: compare date+time+amount before adding any new trip"
 }
