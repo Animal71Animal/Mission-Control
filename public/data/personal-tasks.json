@@ -171,9 +171,9 @@
     "category": "Personal",
     "priority": "medium",
     "due_date": null,
-    "completed": false,
+    "completed": true,
     "created_at": "2026-05-31T18:47:00.036Z",
-    "completed_at": null
+    "completed_at": "2026-09-15T23:31:38.609Z"
   },
   {
     "id": "pt-1780254731648-50no9",
