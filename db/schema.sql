@@ -55,17 +55,6 @@ CREATE TABLE IF NOT EXISTS youtube_episodes (
   processed_at TEXT
 );
 
--- SRB Tips data
-CREATE TABLE IF NOT EXISTS srb_tips (
-  id TEXT PRIMARY KEY,
-  date TEXT NOT NULL,
-  dancer_name TEXT,
-  amount REAL NOT NULL,
-  shift TEXT,
-  notes TEXT,
-  created_at TEXT NOT NULL
-);
-
 -- Insert existing Tesla data
 INSERT OR IGNORE INTO charging_sessions (id, date, time, duration_minutes, rate_per_kwh, cost, kwh, location, notes, created_at)
 VALUES 
@@ -74,7 +63,6 @@ VALUES
 -- Insert existing tasks
 INSERT OR IGNORE INTO tasks (id, title, notes, owner, status, priority, created_at)
 VALUES 
-  ('T1', 'Fill weekly tip data from Google Sheets to SRB Tips', NULL, 'animal', 'pending', 'medium', datetime('now')),
   ('T3', 'Install NI plugins (Kontakt, Reaktor, Massive)', NULL, 'animal', 'pending', 'medium', datetime('now')),
   ('T4', 'Download free plugins (MJUCjr, TAL NoiseMaker, Bass Station, DrumTROOP)', NULL, 'animal', 'pending', 'low', datetime('now')),
   ('T5', 'TikTok handles / Postiz setup (5 accounts)', 'Strategy doc ready: wlp/projects/ai-artists/tiktok-social-strategy.md — Eric needs to create accounts', 'animal', 'pending', 'medium', datetime('now')),

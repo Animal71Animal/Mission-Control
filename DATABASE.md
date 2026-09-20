@@ -32,5 +32,4 @@ Source JSON files are in `public/data/`:
 - `tasks.json` → `tasks` table (29 rows)
 - `personal-tasks.json` → `personal_tasks` table (empty)
 - `tesla-charging.json` → `tesla_sessions` table (45 rows)
-- `srb-tips-data.json` → `srb_nights` + `srb_entries` tables (43 nights, 440 entries)
 - Artist assets → seeded from hardcoded list (16 rows)
